@@ -1,0 +1,5 @@
+{"_id":{"artist":"Beyonce","track":"Halo"},"release":{"$date":"2008-01-01"},"popularity":120000,"lfm_playcount":50000,"genre":"pop","features":{"lexical":{"line_count":30,"token_count":300},"emotion":{"positive":0.7}}}
+{"_id":{"artist":"ACDC","track":"Thunderstruck"},"release":{"$date":"1990-01-01"},"popularity":90000,"lfm_playcount":70000,"genre":"rock","features":{"lexical":{"line_count":25,"token_count":250},"emotion":{"positive":0.6}}}
+{"_id":{"artist":"Example Artist","track":"Song (Live)"},"release":{"$date":"2011-01-01"},"popularity":100,"lfm_playcount":200,"genre":"rock","features":{"lexical":{"line_count":20,"token_count":150},"emotion":{"positive":0.4}}}
+{"_id":{"artist":"Shared","track":"Same Title"},"release":{"$date":"2021-01-01"},"popularity":500,"lfm_playcount":800,"genre":"pop","features":{"lexical":{"line_count":18,"token_count":140},"emotion":{"positive":0.5}}}
+

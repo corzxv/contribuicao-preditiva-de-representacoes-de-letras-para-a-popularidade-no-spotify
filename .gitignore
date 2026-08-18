@@ -31,6 +31,8 @@ data/rejected/**
 *.jsonl
 *.json.gz
 *.zip
+!tests/fixtures/*.csv
+!tests/fixtures/*.jsonl
 
 # Relatórios gerados e logs volumosos
 reports/figures/*.png

@@ -1,0 +1,7 @@
+index,artist_name,track_name,track_id,popularity,year,genre,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration_ms,time_signature
+0,Beyoncé,Halo,AAAAAAAAAAAAAAAAAAAAAA,80,2008,pop,0.50,0.70,1,-5.0,1,0.04,0.20,0.00,0.10,0.60,90.0,240000,4
+1,AC/DC,Thunderstruck,BBBBBBBBBBBBBBBBBBBBBB,75,2010,rock,0.45,0.85,4,-4.0,1,0.05,0.05,0.02,0.15,0.70,110.0,292000,4
+2,Example Artist,Song - 2011 Remaster,CCCCCCCCCCCCCCCCCCCCCC,30,2011,rock,0.60,0.60,5,-7.0,1,0.08,0.30,0.00,0.12,0.50,100.0,200000,4
+3,Shared,Same Title,DDDDDDDDDDDDDDDDDDDDDD,0,2021,pop,0.70,0.50,2,-8.0,0,0.10,0.50,0.00,0.20,0.40,95.0,180000,4
+4,Different Artist,Same Title,EEEEEEEEEEEEEEEEEEEEEE,10,2021,pop,1.20,0.40,2,-8.0,0,0.10,0.50,0.00,0.20,0.40,95.0,180000,4
+
