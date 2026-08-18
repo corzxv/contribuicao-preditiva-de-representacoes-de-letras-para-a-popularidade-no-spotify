@@ -1,0 +1,3856 @@
+{
+  "timestamp": "2026-08-18T01:51:39.821761+00:00",
+  "code_version": "0.1.0",
+  "git_commit": "b19e854bff7cd2555dd22327bbab204fa9ff03ba",
+  "input_hashes": {
+    "spotify": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
+    "lfm2b": "0a7c3d52584c4f726fb4e06e62ce36f00ff1b428811561409e6941df8428d106"
+  },
+  "records_by_stage": {
+    "acquire": null,
+    "normalize_spotify": null,
+    "normalize_lfm2b": 582759,
+    "audit_spotify": 1159764,
+    "audit_lfm2b": 582759,
+    "match": 1159764,
+    "match_by_status": {
+      "ambiguous": 8178,
+      "accepted_high_confidence": 99418,
+      "accepted_with_rules": 12340,
+      "candidate_for_review": 3024
+    },
+    "selection_bias": null,
+    "database": null,
+    "report": null
+  },
+  "duration_seconds": 11.908697,
+  "stages": {
+    "acquire": {
+      "status": "completed",
+      "duration_seconds": 0.989217,
+      "result": {
+        "spotify": {
+          "status": "available",
+          "metadata": {
+            "logical_name": "spotify_1million_tracks",
+            "source_page": "https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks",
+            "identifier": "amitanshjoshi/spotify-1million-tracks",
+            "local_path": "data/raw/spotify/spotify_data.csv",
+            "size_bytes": 175822041,
+            "sha256": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
+            "obtained_or_verified_at": "2026-08-18T01:51:28.193501+00:00",
+            "license_observed": "Database: Open Database; Contents: © Original Authors",
+            "license_url": "https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks",
+            "verification_status": "file_present_hash_computed",
+            "schema_observed": null,
+            "record_count": null,
+            "acquisition_method": "reused_existing_configured_file"
+          }
+        },
+        "lfm2b": {
+          "status": "available",
+          "metadata": {
+            "logical_name": "lfm2b_lyrics_descriptor_analyses",
+            "source_page": "https://zenodo.org/records/10938615",
+            "identifier": "10.5281/zenodo.10938615",
+            "local_path": "data/raw/lfm2b/full_dataset.json.gz",
+            "size_bytes": 690455174,
+            "sha256": "0a7c3d52584c4f726fb4e06e62ce36f00ff1b428811561409e6941df8428d106",
+            "obtained_or_verified_at": "2026-08-18T01:51:28.976604+00:00",
+            "license_observed": "CC-BY-4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+            "verification_status": "file_present_hash_computed",
+            "schema_observed": null,
+            "record_count": null,
+            "acquisition_method": "zenodo_direct:reused_existing"
+          }
+        }
+      }
+    },
+    "normalize_spotify": {
+      "status": "completed",
+      "duration_seconds": 0.002244,
+      "result": {
+        "status": "reused",
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_tracks.parquet"
+      }
+    },
+    "normalize_lfm2b": {
+      "status": "completed",
+      "duration_seconds": 0.017721,
+      "result": {
+        "status": "reused",
+        "rows": 582759,
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\lfm2b_tracks.parquet"
+      }
+    },
+    "audit_spotify": {
+      "status": "completed",
+      "duration_seconds": 4.420532,
+      "result": {
+        "generated_at": "2026-08-18T01:51:31.791274+00:00",
+        "observed": {
+          "rows": 1159764,
+          "columns": 61,
+          "artists_distinct": 64159,
+          "titles_distinct": 882361,
+          "track_ids_distinct": 1159764,
+          "year_min": 2000,
+          "year_max": 2023
+        },
+        "schema": {
+          "spotify_row_id": "UInt32",
+          "artist_name": "String",
+          "track_name": "String",
+          "track_id": "String",
+          "year": "Int64",
+          "genre": "String",
+          "danceability": "Float64",
+          "energy": "Float64",
+          "key": "Int64",
+          "loudness": "Float64",
+          "mode": "Int64",
+          "speechiness": "Float64",
+          "acousticness": "Float64",
+          "instrumentalness": "Float64",
+          "liveness": "Float64",
+          "valence": "Float64",
+          "tempo": "Float64",
+          "duration_ms": "Int64",
+          "time_signature": "Int64",
+          "artist_name_raw": "String",
+          "track_name_raw": "String",
+          "spotify_popularity": "Float64",
+          "temporal_cohort": "String",
+          "artist_unicode": "String",
+          "artist_strict": "String",
+          "artist_conservative": "String",
+          "artist_primary": "String",
+          "artist_collaborators_json": "String",
+          "title_unicode": "String",
+          "title_strict": "String",
+          "title_conservative": "String",
+          "title_base": "String",
+          "remaster": "Boolean",
+          "remix": "Boolean",
+          "live": "Boolean",
+          "acoustic": "Boolean",
+          "radio_edit": "Boolean",
+          "mono_stereo": "Boolean",
+          "instrumental": "Boolean",
+          "demo": "Boolean",
+          "year_mentioned": "Int64",
+          "version_tags": "List(String)",
+          "composition_key": "String",
+          "normalization_version": "String",
+          "qf_track_id_invalid": "Boolean",
+          "qf_spotify_popularity_out_of_range": "Boolean",
+          "qf_year_implausible": "Boolean",
+          "qf_duration_nonpositive": "Boolean",
+          "qf_tempo_nonpositive": "Boolean",
+          "qf_danceability_out_of_range": "Boolean",
+          "qf_energy_out_of_range": "Boolean",
+          "qf_speechiness_out_of_range": "Boolean",
+          "qf_acousticness_out_of_range": "Boolean",
+          "qf_instrumentalness_out_of_range": "Boolean",
+          "qf_liveness_out_of_range": "Boolean",
+          "qf_valence_out_of_range": "Boolean",
+          "qf_key_invalid": "Boolean",
+          "qf_mode_invalid": "Boolean",
+          "qf_time_signature_invalid": "Boolean",
+          "qf_any": "Boolean",
+          "qf_track_id_duplicate": "Boolean"
+        },
+        "safe_sample": [
+          {
+            "track_id": "53QF56cjZA9RTuuMZDrSA6",
+            "artist_name_raw": "Jason Mraz",
+            "track_name_raw": "I Won't Give Up",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 68.0
+          },
+          {
+            "track_id": "1s8tP3jP4GZcyHDsjvw218",
+            "artist_name_raw": "Jason Mraz",
+            "track_name_raw": "93 Million Miles",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 50.0
+          },
+          {
+            "track_id": "7BRCa8MPiyuvr2VU3O9W0F",
+            "artist_name_raw": "Joshua Hyslop",
+            "track_name_raw": "Do Not Let Me Go",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 57.0
+          },
+          {
+            "track_id": "63wsZUhUZLlh1OsyrZq7sz",
+            "artist_name_raw": "Boyce Avenue",
+            "track_name_raw": "Fast Car",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 58.0
+          },
+          {
+            "track_id": "6nXIYClvJAfi6ujLiKqEq8",
+            "artist_name_raw": "Andrew Belle",
+            "track_name_raw": "Sky's Still Blue",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 54.0
+          },
+          {
+            "track_id": "24NvptbNKGs6sPy1Vh1O0v",
+            "artist_name_raw": "Chris Smither",
+            "track_name_raw": "What They Say",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 48.0
+          },
+          {
+            "track_id": "0BP7hSvLAG3URGrEvNNbGM",
+            "artist_name_raw": "Matt Wertz",
+            "track_name_raw": "Walking in a Winter Wonderland",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 48.0
+          },
+          {
+            "track_id": "3Y6BuzQCg9p4yH347Nn8OW",
+            "artist_name_raw": "Green River Ordinance",
+            "track_name_raw": "Dancing Shoes",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 45.0
+          },
+          {
+            "track_id": "3ce7k1L4EkZppZPz1EJWTS",
+            "artist_name_raw": "Jason Mraz",
+            "track_name_raw": "Living in the Moment",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 44.0
+          },
+          {
+            "track_id": "2EKxmYmUdAVXlaHCnnW13o",
+            "artist_name_raw": "Boyce Avenue",
+            "track_name_raw": "Heaven",
+            "year": 2012,
+            "genre": "acoustic",
+            "spotify_popularity": 58.0
+          }
+        ],
+        "missing": {
+          "spotify_row_id": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "artist_name": {
+            "count": 15,
+            "percent": 0.001293
+          },
+          "track_name": {
+            "count": 1,
+            "percent": 8.6e-05
+          },
+          "track_id": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "year": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "genre": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "danceability": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "energy": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "key": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "loudness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "mode": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "speechiness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "acousticness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "instrumentalness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "liveness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "valence": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "tempo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "duration_ms": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "time_signature": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "artist_name_raw": {
+            "count": 15,
+            "percent": 0.001293
+          },
+          "track_name_raw": {
+            "count": 1,
+            "percent": 8.6e-05
+          },
+          "spotify_popularity": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "temporal_cohort": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "artist_unicode": {
+            "count": 15,
+            "percent": 0.001293
+          },
+          "artist_strict": {
+            "count": 15,
+            "percent": 0.001293
+          },
+          "artist_conservative": {
+            "count": 15,
+            "percent": 0.001293
+          },
+          "artist_primary": {
+            "count": 15,
+            "percent": 0.001293
+          },
+          "artist_collaborators_json": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "title_unicode": {
+            "count": 1,
+            "percent": 8.6e-05
+          },
+          "title_strict": {
+            "count": 1,
+            "percent": 8.6e-05
+          },
+          "title_conservative": {
+            "count": 1,
+            "percent": 8.6e-05
+          },
+          "title_base": {
+            "count": 1,
+            "percent": 8.6e-05
+          },
+          "remaster": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "remix": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "live": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "acoustic": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "radio_edit": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "mono_stereo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "instrumental": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "demo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "year_mentioned": {
+            "count": 1133959,
+            "percent": 97.774978
+          },
+          "version_tags": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "composition_key": {
+            "count": 145,
+            "percent": 0.012503
+          },
+          "normalization_version": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_track_id_invalid": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_spotify_popularity_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_year_implausible": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_duration_nonpositive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_tempo_nonpositive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_danceability_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_energy_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_speechiness_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_acousticness_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_instrumentalness_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_liveness_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_valence_out_of_range": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_key_invalid": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_mode_invalid": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_time_signature_invalid": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_any": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "qf_track_id_duplicate": {
+            "count": 0,
+            "percent": 0.0
+          }
+        },
+        "cardinality": {
+          "spotify_row_id": 1159764,
+          "artist_name": 64159,
+          "track_name": 882361,
+          "track_id": 1159764,
+          "year": 24,
+          "genre": 82,
+          "danceability": 1364,
+          "energy": 3116,
+          "key": 12,
+          "loudness": 37368,
+          "mode": 2,
+          "speechiness": 1655,
+          "acousticness": 5398,
+          "instrumentalness": 5402,
+          "liveness": 1816,
+          "valence": 2177,
+          "tempo": 135697,
+          "duration_ms": 258021,
+          "time_signature": 5,
+          "artist_name_raw": 64159,
+          "track_name_raw": 882361,
+          "spotify_popularity": 98,
+          "temporal_cohort": 3,
+          "artist_unicode": 64159,
+          "artist_strict": 64051,
+          "artist_conservative": 63989,
+          "artist_primary": 64153,
+          "artist_collaborators_json": 13,
+          "title_unicode": 881555,
+          "title_strict": 853537,
+          "title_conservative": 838630,
+          "title_base": 788600,
+          "remaster": 2,
+          "remix": 2,
+          "live": 2,
+          "acoustic": 2,
+          "radio_edit": 2,
+          "mono_stereo": 2,
+          "instrumental": 2,
+          "demo": 2,
+          "year_mentioned": 167,
+          "version_tags": 49,
+          "composition_key": 1075470,
+          "normalization_version": 1,
+          "qf_track_id_invalid": 1,
+          "qf_spotify_popularity_out_of_range": 1,
+          "qf_year_implausible": 1,
+          "qf_duration_nonpositive": 1,
+          "qf_tempo_nonpositive": 2,
+          "qf_danceability_out_of_range": 1,
+          "qf_energy_out_of_range": 1,
+          "qf_speechiness_out_of_range": 1,
+          "qf_acousticness_out_of_range": 1,
+          "qf_instrumentalness_out_of_range": 1,
+          "qf_liveness_out_of_range": 1,
+          "qf_valence_out_of_range": 1,
+          "qf_key_invalid": 1,
+          "qf_mode_invalid": 1,
+          "qf_time_signature_invalid": 1,
+          "qf_any": 2,
+          "qf_track_id_duplicate": 1
+        },
+        "duplicate_complete_rows_excluding_row_id": 0,
+        "duplicate_track_id_rows": 0,
+        "duplicate_artist_title_rows": 0,
+        "composition_keys_with_multiple_rows": 56380,
+        "by_year": [
+          {
+            "year": 2018,
+            "len": 56572
+          },
+          {
+            "year": 2017,
+            "len": 56241
+          },
+          {
+            "year": 2019,
+            "len": 55793
+          },
+          {
+            "year": 2020,
+            "len": 55066
+          },
+          {
+            "year": 2012,
+            "len": 54797
+          },
+          {
+            "year": 2022,
+            "len": 53692
+          },
+          {
+            "year": 2021,
+            "len": 53566
+          },
+          {
+            "year": 2013,
+            "len": 53216
+          },
+          {
+            "year": 2014,
+            "len": 53179
+          },
+          {
+            "year": 2015,
+            "len": 51607
+          },
+          {
+            "year": 2008,
+            "len": 47432
+          },
+          {
+            "year": 2009,
+            "len": 46869
+          },
+          {
+            "year": 2010,
+            "len": 46868
+          },
+          {
+            "year": 2011,
+            "len": 46444
+          },
+          {
+            "year": 2007,
+            "len": 46001
+          },
+          {
+            "year": 2006,
+            "len": 45474
+          },
+          {
+            "year": 2000,
+            "len": 44034
+          },
+          {
+            "year": 2005,
+            "len": 43780
+          },
+          {
+            "year": 2004,
+            "len": 43390
+          },
+          {
+            "year": 2003,
+            "len": 42368
+          },
+          {
+            "year": 2001,
+            "len": 42351
+          },
+          {
+            "year": 2002,
+            "len": 42102
+          },
+          {
+            "year": 2016,
+            "len": 40273
+          },
+          {
+            "year": 2023,
+            "len": 38649
+          }
+        ],
+        "by_cohort": [
+          {
+            "temporal_cohort": "2010-2019",
+            "len": 514990
+          },
+          {
+            "temporal_cohort": "2000-2009",
+            "len": 443801
+          },
+          {
+            "temporal_cohort": "2020-2023",
+            "len": 200973
+          }
+        ],
+        "by_genre": [
+          {
+            "genre": "black-metal",
+            "len": 21852
+          },
+          {
+            "genre": "gospel",
+            "len": 21621
+          },
+          {
+            "genre": "ambient",
+            "len": 21389
+          },
+          {
+            "genre": "acoustic",
+            "len": 21097
+          },
+          {
+            "genre": "alt-rock",
+            "len": 20918
+          },
+          {
+            "genre": "emo",
+            "len": 20845
+          },
+          {
+            "genre": "indian",
+            "len": 20583
+          },
+          {
+            "genre": "k-pop",
+            "len": 20004
+          },
+          {
+            "genre": "new-age",
+            "len": 19911
+          },
+          {
+            "genre": "blues",
+            "len": 19682
+          },
+          {
+            "genre": "forro",
+            "len": 19379
+          },
+          {
+            "genre": "comedy",
+            "len": 19334
+          },
+          {
+            "genre": "spanish",
+            "len": 19158
+          },
+          {
+            "genre": "chill",
+            "len": 18906
+          },
+          {
+            "genre": "dancehall",
+            "len": 18788
+          },
+          {
+            "genre": "dub",
+            "len": 18785
+          },
+          {
+            "genre": "samba",
+            "len": 18599
+          },
+          {
+            "genre": "french",
+            "len": 18519
+          },
+          {
+            "genre": "classical",
+            "len": 18259
+          },
+          {
+            "genre": "death-metal",
+            "len": 18038
+          },
+          {
+            "genre": "deep-house",
+            "len": 17896
+          },
+          {
+            "genre": "country",
+            "len": 17883
+          },
+          {
+            "genre": "sleep",
+            "len": 17851
+          },
+          {
+            "genre": "sertanejo",
+            "len": 17566
+          },
+          {
+            "genre": "salsa",
+            "len": 17501
+          },
+          {
+            "genre": "goth",
+            "len": 17381
+          },
+          {
+            "genre": "guitar",
+            "len": 17266
+          },
+          {
+            "genre": "dance",
+            "len": 17212
+          },
+          {
+            "genre": "power-pop",
+            "len": 17161
+          },
+          {
+            "genre": "garage",
+            "len": 17123
+          },
+          {
+            "genre": "disco",
+            "len": 16987
+          },
+          {
+            "genre": "pop-film",
+            "len": 16907
+          },
+          {
+            "genre": "german",
+            "len": 16417
+          },
+          {
+            "genre": "folk",
+            "len": 16170
+          },
+          {
+            "genre": "hardcore",
+            "len": 15993
+          },
+          {
+            "genre": "jazz",
+            "len": 15943
+          },
+          {
+            "genre": "rock-n-roll",
+            "len": 15891
+          },
+          {
+            "genre": "cantopop",
+            "len": 15773
+          },
+          {
+            "genre": "hip-hop",
+            "len": 15703
+          },
+          {
+            "genre": "industrial",
+            "len": 15245
+          },
+          {
+            "genre": "minimal-techno",
+            "len": 15198
+          },
+          {
+            "genre": "funk",
+            "len": 15136
+          },
+          {
+            "genre": "opera",
+            "len": 15079
+          },
+          {
+            "genre": "tango",
+            "len": 15069
+          },
+          {
+            "genre": "heavy-metal",
+            "len": 14862
+          },
+          {
+            "genre": "club",
+            "len": 14678
+          },
+          {
+            "genre": "drum-and-bass",
+            "len": 14591
+          },
+          {
+            "genre": "grindcore",
+            "len": 14509
+          },
+          {
+            "genre": "singer-songwriter",
+            "len": 14035
+          },
+          {
+            "genre": "hard-rock",
+            "len": 13800
+          },
+          {
+            "genre": "piano",
+            "len": 13784
+          },
+          {
+            "genre": "ska",
+            "len": 13776
+          },
+          {
+            "genre": "groove",
+            "len": 13366
+          },
+          {
+            "genre": "psych-rock",
+            "len": 12789
+          },
+          {
+            "genre": "hardstyle",
+            "len": 12420
+          },
+          {
+            "genre": "afrobeat",
+            "len": 12395
+          },
+          {
+            "genre": "breakbeat",
+            "len": 12256
+          },
+          {
+            "genre": "swedish",
+            "len": 11616
+          },
+          {
+            "genre": "electro",
+            "len": 11406
+          },
+          {
+            "genre": "trip-hop",
+            "len": 11285
+          },
+          {
+            "genre": "show-tunes",
+            "len": 11101
+          },
+          {
+            "genre": "edm",
+            "len": 10671
+          },
+          {
+            "genre": "progressive-house",
+            "len": 10589
+          },
+          {
+            "genre": "indie-pop",
+            "len": 10022
+          },
+          {
+            "genre": "trance",
+            "len": 9592
+          },
+          {
+            "genre": "party",
+            "len": 9548
+          },
+          {
+            "genre": "electronic",
+            "len": 9369
+          },
+          {
+            "genre": "soul",
+            "len": 8974
+          },
+          {
+            "genre": "techno",
+            "len": 7898
+          },
+          {
+            "genre": "punk-rock",
+            "len": 7086
+          },
+          {
+            "genre": "metal",
+            "len": 7020
+          },
+          {
+            "genre": "romance",
+            "len": 6518
+          },
+          {
+            "genre": "metalcore",
+            "len": 6267
+          },
+          {
+            "genre": "pop",
+            "len": 6235
+          },
+          {
+            "genre": "punk",
+            "len": 6197
+          },
+          {
+            "genre": "sad",
+            "len": 6086
+          },
+          {
+            "genre": "house",
+            "len": 5233
+          },
+          {
+            "genre": "chicago-house",
+            "len": 5170
+          },
+          {
+            "genre": "dubstep",
+            "len": 4774
+          },
+          {
+            "genre": "detroit-techno",
+            "len": 3920
+          },
+          {
+            "genre": "rock",
+            "len": 3319
+          },
+          {
+            "genre": "songwriter",
+            "len": 589
+          }
+        ],
+        "popularity": {
+          "count": 1159764,
+          "mean": 18.38312277325387,
+          "median": 15.0,
+          "min": 0.0,
+          "max": 100.0,
+          "quantiles": {
+            "0.01": 0.0,
+            "0.05": 0.0,
+            "0.25": 5.0,
+            "0.5": 15.0,
+            "0.75": 29.0,
+            "0.95": 49.0,
+            "0.99": 62.0
+          },
+          "zero_count": 158391,
+          "zero_percent": 13.657175
+        },
+        "acoustic_summary": {
+          "danceability": {
+            "mean": 0.5374382319161484,
+            "median": 0.55,
+            "min": 0.0,
+            "max": 0.993
+          },
+          "energy": {
+            "mean": 0.639669899314257,
+            "median": 0.694,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "loudness": {
+            "mean": -8.981352824367715,
+            "median": -7.45,
+            "min": -58.1,
+            "max": 6.172
+          },
+          "speechiness": {
+            "mean": 0.09281476791830062,
+            "median": 0.0507,
+            "min": 0.0,
+            "max": 0.971
+          },
+          "acousticness": {
+            "mean": 0.32153695752021966,
+            "median": 0.147,
+            "min": 0.0,
+            "max": 0.996
+          },
+          "instrumentalness": {
+            "mean": 0.2523488886741268,
+            "median": 0.00176,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "liveness": {
+            "mean": 0.22301887352944222,
+            "median": 0.134,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "valence": {
+            "mean": 0.45556359603419316,
+            "median": 0.438,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "tempo": {
+            "mean": 121.37713723309227,
+            "median": 121.931,
+            "min": 0.0,
+            "max": 249.993
+          },
+          "duration_ms": {
+            "mean": 249561.78122359377,
+            "median": 225744.0,
+            "min": 2073.0,
+            "max": 6000495.0
+          }
+        },
+        "descriptive_correlations_non_causal": [
+          {
+            "spotify_popularity": 1.0,
+            "danceability": 0.0985326407131331,
+            "energy": 0.00940139761838347,
+            "loudness": 0.10409653192967813,
+            "speechiness": -0.024700490932065906,
+            "acousticness": -0.05918052861828134,
+            "instrumentalness": -0.15289291166851646,
+            "liveness": -0.05696845810655382,
+            "valence": -0.018070226313803214,
+            "tempo": 0.00256618565298109,
+            "duration_ms": -0.1184840090780789
+          },
+          {
+            "spotify_popularity": 0.0985326407131331,
+            "danceability": 1.0,
+            "energy": 0.13926746766801554,
+            "loudness": 0.25717419839716127,
+            "speechiness": 0.08653619781288378,
+            "acousticness": -0.1764556155885704,
+            "instrumentalness": -0.1691219724460007,
+            "liveness": -0.11967145355012734,
+            "valence": 0.5198999113323384,
+            "tempo": -0.016157029171593278,
+            "duration_ms": -0.025873739970259664
+          },
+          {
+            "spotify_popularity": 0.00940139761838347,
+            "danceability": 0.13926746766801557,
+            "energy": 1.0,
+            "loudness": 0.781005656561051,
+            "speechiness": 0.11417636492767685,
+            "acousticness": -0.7526617580488321,
+            "instrumentalness": -0.18433136354482985,
+            "liveness": 0.18911722105693435,
+            "valence": 0.24796790171520958,
+            "tempo": 0.2651668176563364,
+            "duration_ms": 0.012422163208584677
+          },
+          {
+            "spotify_popularity": 0.10409653192967812,
+            "danceability": 0.25717419839716127,
+            "energy": 0.7810056565610511,
+            "loudness": 1.0,
+            "speechiness": 0.02312584692177226,
+            "acousticness": -0.6216982659169921,
+            "instrumentalness": -0.4035747986283193,
+            "liveness": 0.09077939940412251,
+            "valence": 0.29491196595930497,
+            "tempo": 0.23402718320875346,
+            "duration_ms": -0.04847393408743467
+          },
+          {
+            "spotify_popularity": -0.024700490932065906,
+            "danceability": 0.08653619781288378,
+            "energy": 0.11417636492767685,
+            "loudness": 0.02312584692177226,
+            "speechiness": 1.0,
+            "acousticness": 0.031638434577285664,
+            "instrumentalness": -0.14241714882663778,
+            "liveness": 0.282482429192337,
+            "valence": 0.039348694098875384,
+            "tempo": -0.03194522399334212,
+            "duration_ms": -0.062395804378038634
+          },
+          {
+            "spotify_popularity": -0.05918052861828133,
+            "danceability": -0.17645561558857042,
+            "energy": -0.752661758048832,
+            "loudness": -0.621698265916992,
+            "speechiness": 0.031638434577285664,
+            "acousticness": 1.0,
+            "instrumentalness": 0.09428135009774752,
+            "liveness": -0.0305361908158407,
+            "valence": -0.10328512657179535,
+            "tempo": -0.24086076181927768,
+            "duration_ms": -0.06420455473776866
+          },
+          {
+            "spotify_popularity": -0.15289291166851646,
+            "danceability": -0.1691219724460007,
+            "energy": -0.18433136354482985,
+            "loudness": -0.40357479862831935,
+            "speechiness": -0.14241714882663778,
+            "acousticness": 0.09428135009774753,
+            "instrumentalness": 0.9999999999999999,
+            "liveness": -0.12997614492556644,
+            "valence": -0.3151999944477283,
+            "tempo": -0.03174476949144192,
+            "duration_ms": 0.16286991051577465
+          },
+          {
+            "spotify_popularity": -0.05696845810655383,
+            "danceability": -0.11967145355012734,
+            "energy": 0.18911722105693432,
+            "loudness": 0.0907793994041225,
+            "speechiness": 0.282482429192337,
+            "acousticness": -0.0305361908158407,
+            "instrumentalness": -0.12997614492556647,
+            "liveness": 0.9999999999999999,
+            "valence": 0.007963655602315932,
+            "tempo": -0.0028089568455481714,
+            "duration_ms": -0.007671928569770321
+          },
+          {
+            "spotify_popularity": -0.018070226313803214,
+            "danceability": 0.5198999113323384,
+            "energy": 0.24796790171520955,
+            "loudness": 0.29491196595930497,
+            "speechiness": 0.039348694098875384,
+            "acousticness": -0.10328512657179534,
+            "instrumentalness": -0.3151999944477283,
+            "liveness": 0.007963655602315932,
+            "valence": 1.0,
+            "tempo": 0.0830339884858316,
+            "duration_ms": -0.1314787990978108
+          },
+          {
+            "spotify_popularity": 0.0025661856529810905,
+            "danceability": -0.016157029171593278,
+            "energy": 0.2651668176563364,
+            "loudness": 0.23402718320875346,
+            "speechiness": -0.03194522399334212,
+            "acousticness": -0.24086076181927768,
+            "instrumentalness": -0.03174476949144192,
+            "liveness": -0.0028089568455481714,
+            "valence": 0.08303398848583159,
+            "tempo": 1.0,
+            "duration_ms": 0.010518426053856516
+          },
+          {
+            "spotify_popularity": -0.1184840090780789,
+            "danceability": -0.025873739970259668,
+            "energy": 0.012422163208584676,
+            "loudness": -0.048473934087434674,
+            "speechiness": -0.06239580437803865,
+            "acousticness": -0.06420455473776866,
+            "instrumentalness": 0.16286991051577465,
+            "liveness": -0.007671928569770322,
+            "valence": -0.1314787990978108,
+            "tempo": 0.010518426053856517,
+            "duration_ms": 1.0
+          }
+        ],
+        "quality_flags": {
+          "qf_track_id_invalid": 0,
+          "qf_spotify_popularity_out_of_range": 0,
+          "qf_year_implausible": 0,
+          "qf_duration_nonpositive": 0,
+          "qf_tempo_nonpositive": 1199,
+          "qf_danceability_out_of_range": 0,
+          "qf_energy_out_of_range": 0,
+          "qf_speechiness_out_of_range": 0,
+          "qf_acousticness_out_of_range": 0,
+          "qf_instrumentalness_out_of_range": 0,
+          "qf_liveness_out_of_range": 0,
+          "qf_valence_out_of_range": 0,
+          "qf_key_invalid": 0,
+          "qf_mode_invalid": 0,
+          "qf_time_signature_invalid": 0,
+          "qf_any": 1199,
+          "qf_track_id_duplicate": 0
+        },
+        "genre_balance_investigation": {
+          "coefficient_of_variation": 0.3601603619951421,
+          "share_categories_at_modal_count": 0.012195121951219513,
+          "possible_artificial_balance_signal": false,
+          "interpretation": "Heurística descritiva; não comprova o mecanismo de amostragem."
+        },
+        "benchmarks_supplied_not_observed": {
+          "rows": 1159764,
+          "track_ids_distinct": 1159764,
+          "artists_distinct": 64158,
+          "genres_distinct": 82,
+          "popularity_zero_percent": 13.66,
+          "popularity_mean": 18.38,
+          "popularity_median": 15.0
+        },
+        "benchmark_differences_observed_minus_benchmark": {
+          "rows_difference": 0,
+          "track_ids_difference": 0,
+          "artists_difference": 1,
+          "genres_difference": 0,
+          "popularity_zero_percentage_points_difference": -0.0028249999999996334,
+          "popularity_mean_difference": 0.003122773253871003,
+          "popularity_median_difference": 0.0
+        }
+      }
+    },
+    "audit_lfm2b": {
+      "status": "completed",
+      "duration_seconds": 1.778801,
+      "result": {
+        "generated_at": "2026-08-18T01:51:35.167626+00:00",
+        "rows": 582759,
+        "columns": 242,
+        "schema": {
+          "artist_name_raw": "VARCHAR",
+          "genius_lyrics_views": "BIGINT",
+          "lfm_affective_afinn_negativescore": "DOUBLE",
+          "lfm_affective_afinn_positivescore": "DOUBLE",
+          "lfm_affective_bingliu_negative": "DOUBLE",
+          "lfm_affective_bingliu_positive": "DOUBLE",
+          "lfm_affective_labmt_happiness": "DOUBLE",
+          "lfm_affective_liwc_achieve": "DOUBLE",
+          "lfm_affective_liwc_adverb": "DOUBLE",
+          "lfm_affective_liwc_affect": "DOUBLE",
+          "lfm_affective_liwc_anger": "DOUBLE",
+          "lfm_affective_liwc_anx": "DOUBLE",
+          "lfm_affective_liwc_apostro": "DOUBLE",
+          "lfm_affective_liwc_article": "DOUBLE",
+          "lfm_affective_liwc_assent": "DOUBLE",
+          "lfm_affective_liwc_auxverb": "DOUBLE",
+          "lfm_affective_liwc_avg_sentence_length": "DOUBLE",
+          "lfm_affective_liwc_bio": "DOUBLE",
+          "lfm_affective_liwc_body": "DOUBLE",
+          "lfm_affective_liwc_cause": "DOUBLE",
+          "lfm_affective_liwc_certain": "DOUBLE",
+          "lfm_affective_liwc_cogmech": "DOUBLE",
+          "lfm_affective_liwc_colon": "DOUBLE",
+          "lfm_affective_liwc_comma": "DOUBLE",
+          "lfm_affective_liwc_conj": "DOUBLE",
+          "lfm_affective_liwc_dash": "DOUBLE",
+          "lfm_affective_liwc_death": "DOUBLE",
+          "lfm_affective_liwc_dictionary_words": "DOUBLE",
+          "lfm_affective_liwc_discrep": "DOUBLE",
+          "lfm_affective_liwc_excl": "DOUBLE",
+          "lfm_affective_liwc_exclam": "DOUBLE",
+          "lfm_affective_liwc_family": "DOUBLE",
+          "lfm_affective_liwc_feel": "DOUBLE",
+          "lfm_affective_liwc_filler": "DOUBLE",
+          "lfm_affective_liwc_friend": "DOUBLE",
+          "lfm_affective_liwc_funct": "DOUBLE",
+          "lfm_affective_liwc_future": "DOUBLE",
+          "lfm_affective_liwc_health": "DOUBLE",
+          "lfm_affective_liwc_hear": "DOUBLE",
+          "lfm_affective_liwc_home": "DOUBLE",
+          "lfm_affective_liwc_humans": "DOUBLE",
+          "lfm_affective_liwc_i": "DOUBLE",
+          "lfm_affective_liwc_incl": "DOUBLE",
+          "lfm_affective_liwc_ingest": "DOUBLE",
+          "lfm_affective_liwc_inhib": "DOUBLE",
+          "lfm_affective_liwc_insight": "DOUBLE",
+          "lfm_affective_liwc_ipron": "DOUBLE",
+          "lfm_affective_liwc_leisure": "DOUBLE",
+          "lfm_affective_liwc_money": "DOUBLE",
+          "lfm_affective_liwc_motion": "DOUBLE",
+          "lfm_affective_liwc_negate": "DOUBLE",
+          "lfm_affective_liwc_negemo": "DOUBLE",
+          "lfm_affective_liwc_nonfl": "DOUBLE",
+          "lfm_affective_liwc_number": "DOUBLE",
+          "lfm_affective_liwc_numerals": "DOUBLE",
+          "lfm_affective_liwc_otherp": "DOUBLE",
+          "lfm_affective_liwc_parenth": "DOUBLE",
+          "lfm_affective_liwc_past": "DOUBLE",
+          "lfm_affective_liwc_percept": "DOUBLE",
+          "lfm_affective_liwc_period": "DOUBLE",
+          "lfm_affective_liwc_posemo": "DOUBLE",
+          "lfm_affective_liwc_ppron": "DOUBLE",
+          "lfm_affective_liwc_preps": "DOUBLE",
+          "lfm_affective_liwc_present": "DOUBLE",
+          "lfm_affective_liwc_pronoun": "DOUBLE",
+          "lfm_affective_liwc_qmark": "DOUBLE",
+          "lfm_affective_liwc_quant": "DOUBLE",
+          "lfm_affective_liwc_quote": "DOUBLE",
+          "lfm_affective_liwc_relativ": "DOUBLE",
+          "lfm_affective_liwc_relig": "DOUBLE",
+          "lfm_affective_liwc_sad": "DOUBLE",
+          "lfm_affective_liwc_see": "DOUBLE",
+          "lfm_affective_liwc_semic": "DOUBLE",
+          "lfm_affective_liwc_sexual": "DOUBLE",
+          "lfm_affective_liwc_shehe": "DOUBLE",
+          "lfm_affective_liwc_six_letter_words": "DOUBLE",
+          "lfm_affective_liwc_social": "DOUBLE",
+          "lfm_affective_liwc_space": "DOUBLE",
+          "lfm_affective_liwc_swear": "DOUBLE",
+          "lfm_affective_liwc_tentat": "DOUBLE",
+          "lfm_affective_liwc_they": "DOUBLE",
+          "lfm_affective_liwc_time": "DOUBLE",
+          "lfm_affective_liwc_total_word_count": "DOUBLE",
+          "lfm_affective_liwc_verb": "DOUBLE",
+          "lfm_affective_liwc_we": "DOUBLE",
+          "lfm_affective_liwc_work": "DOUBLE",
+          "lfm_affective_liwc_you": "DOUBLE",
+          "lfm_affective_mpqa_negative": "DOUBLE",
+          "lfm_affective_mpqa_positive": "DOUBLE",
+          "lfm_affective_negation_count": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_anger": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_anticipation": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_disgust": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_fear": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_joy": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_negative": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_positive": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_sadness": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_surprise": "DOUBLE",
+          "lfm_affective_nrcaffectintensity_trust": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_anger": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_anticipation": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_disgust": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_fear": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_joy": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_negative": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_positive": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_sadness": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_surprise": "DOUBLE",
+          "lfm_affective_nrcemotionwordlevel_trust": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_anger": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_anticipation": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_disgust": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_fear": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_joy": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_negative": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_positive": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_sadness": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_surprise": "DOUBLE",
+          "lfm_affective_nrcexpandedemotion_trust": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_anger": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_anticipation": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_disgust": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_fear": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_joy": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_negative": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_positive": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_sadness": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_surprise": "DOUBLE",
+          "lfm_affective_nrchashtagemotion_trust": "DOUBLE",
+          "lfm_affective_nrchashtagsentiment_negativescore": "DOUBLE",
+          "lfm_affective_nrchashtagsentiment_positivescore": "DOUBLE",
+          "lfm_affective_sentiment140_negativescore": "DOUBLE",
+          "lfm_affective_sentiment140_positivescore": "DOUBLE",
+          "lfm_affective_sentiwordnet_negativescore": "DOUBLE",
+          "lfm_affective_sentiwordnet_positivescore": "DOUBLE",
+          "lfm_compression_ratio": "DOUBLE",
+          "lfm_entropy": "DOUBLE",
+          "lfm_genre": "VARCHAR",
+          "lfm_lexical_average_token_length": "DOUBLE",
+          "lfm_lexical_average_tokens_per_line": "DOUBLE",
+          "lfm_lexical_blank_line_count": "BIGINT",
+          "lfm_lexical_blank_line_ratio": "DOUBLE",
+          "lfm_lexical_character_count": "BIGINT",
+          "lfm_lexical_colon_count": "BIGINT",
+          "lfm_lexical_comma_count": "BIGINT",
+          "lfm_lexical_digit_count": "BIGINT",
+          "lfm_lexical_digit_ratio": "DOUBLE",
+          "lfm_lexical_dis_legomenon_ratio": "DOUBLE",
+          "lfm_lexical_dot_count": "BIGINT",
+          "lfm_lexical_dugast": "DOUBLE",
+          "lfm_lexical_exclamation_mark_count": "BIGINT",
+          "lfm_lexical_hapax_legomenon_ratio": "DOUBLE",
+          "lfm_lexical_herdan": "DOUBLE",
+          "lfm_lexical_hyphen_count": "BIGINT",
+          "lfm_lexical_line_count": "BIGINT",
+          "lfm_lexical_maas": "DOUBLE",
+          "lfm_lexical_mtld": "DOUBLE",
+          "lfm_lexical_parens_count": "BIGINT",
+          "lfm_lexical_past_tense_ratio": "DOUBLE",
+          "lfm_lexical_pronoun_frequency": "DOUBLE",
+          "lfm_lexical_punctuation_count": "BIGINT",
+          "lfm_lexical_punctuation_ratio": "DOUBLE",
+          "lfm_lexical_question_mark_count": "BIGINT",
+          "lfm_lexical_quote_count": "BIGINT",
+          "lfm_lexical_repeated_line_ratio": "DOUBLE",
+          "lfm_lexical_repeated_token_ratio": "DOUBLE",
+          "lfm_lexical_semicolon_count": "BIGINT",
+          "lfm_lexical_stop_word_count": "BIGINT",
+          "lfm_lexical_stop_word_ratio": "DOUBLE",
+          "lfm_lexical_stop_words_per_line": "DOUBLE",
+          "lfm_lexical_summer": "DOUBLE",
+          "lfm_lexical_token_count": "BIGINT",
+          "lfm_lexical_tris_legomenon_ratio": "DOUBLE",
+          "lfm_lexical_unique_bigram_ratio": "DOUBLE",
+          "lfm_lexical_unique_line_count": "BIGINT",
+          "lfm_lexical_unique_tokens_per_line": "DOUBLE",
+          "lfm_lexical_unique_trigram_ratio": "DOUBLE",
+          "lfm_playcount": "BIGINT",
+          "lfm_readability_automated_readability_index": "DOUBLE",
+          "lfm_readability_coleman_liau_index": "DOUBLE",
+          "lfm_readability_crawford": "DOUBLE",
+          "lfm_readability_dale_chall_readability_score": "DOUBLE",
+          "lfm_readability_difficult_words": "BIGINT",
+          "lfm_readability_fernandez_huerta": "DOUBLE",
+          "lfm_readability_flesch_kincaid_grade": "DOUBLE",
+          "lfm_readability_flesch_reading_ease": "DOUBLE",
+          "lfm_readability_gunning_fog": "DOUBLE",
+          "lfm_readability_gutierrez_polini": "DOUBLE",
+          "lfm_readability_linsear_write_formula": "DOUBLE",
+          "lfm_readability_smog": "DOUBLE",
+          "lfm_readability_szigriszt_pazos": "DOUBLE",
+          "lfm_record_key": "VARCHAR",
+          "lfm_release_date": "VARCHAR",
+          "lfm_release_date_numberlong": "VARCHAR",
+          "lfm_release_year": "BIGINT",
+          "lfm_rhyme_alliterations_len_2": "BIGINT",
+          "lfm_rhyme_alliterations_len_3": "BIGINT",
+          "lfm_rhyme_alliterations_len_4_plus": "BIGINT",
+          "lfm_rhyme_num_alternating": "BIGINT",
+          "lfm_rhyme_num_clerihews": "BIGINT",
+          "lfm_rhyme_num_couplets": "BIGINT",
+          "lfm_rhyme_num_nested": "BIGINT",
+          "lfm_rhyme_rhyme_percent": "DOUBLE",
+          "lfm_rhyme_unique_rhyme_words": "BIGINT",
+          "lfm_source_row_number": "BIGINT",
+          "lfm_structure_chorus_repetitions": "BIGINT",
+          "lfm_structure_ends_with_two_chorus_repetitions": "BOOLEAN",
+          "lfm_structure_number_of_sections": "BIGINT",
+          "lfm_structure_number_of_verses": "BIGINT",
+          "lfm_structure_pattern_two_choruses_at_least_one_verse": "BOOLEAN",
+          "lfm_structure_pattern_two_verses_at_least_one_chorus": "BOOLEAN",
+          "lfm_structure_pattern_verse_chorus_alternating": "BOOLEAN",
+          "lfm_structure_ratio_chorus_sections": "DOUBLE",
+          "lfm_structure_ratio_verses_sections": "DOUBLE",
+          "lfm_structure_starts_with_chorus": "BOOLEAN",
+          "lfm_structure_title_occurrences": "BIGINT",
+          "lfm_temporal_cohort": "VARCHAR",
+          "lfm_uncommon_words_ratio": "DOUBLE",
+          "track_name_raw": "VARCHAR",
+          "lfm_artist_unicode": "VARCHAR",
+          "lfm_artist_strict": "VARCHAR",
+          "lfm_artist_conservative": "VARCHAR",
+          "lfm_artist_primary": "VARCHAR",
+          "lfm_artist_collaborators_json": "VARCHAR",
+          "lfm_title_unicode": "VARCHAR",
+          "lfm_title_strict": "VARCHAR",
+          "lfm_title_conservative": "VARCHAR",
+          "lfm_title_base": "VARCHAR",
+          "lfm_remaster": "BOOLEAN",
+          "lfm_remix": "BOOLEAN",
+          "lfm_live": "BOOLEAN",
+          "lfm_acoustic": "BOOLEAN",
+          "lfm_radio_edit": "BOOLEAN",
+          "lfm_mono_stereo": "BOOLEAN",
+          "lfm_instrumental": "BOOLEAN",
+          "lfm_demo": "BOOLEAN",
+          "lfm_year_mentioned": "BIGINT",
+          "lfm_version_tags": "VARCHAR[]",
+          "lfm_composition_key": "VARCHAR",
+          "lfm_normalization_version": "VARCHAR",
+          "lfm_qf_release_year_implausible": "BOOLEAN"
+        },
+        "missing": {
+          "artist_name_raw": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "genius_lyrics_views": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_afinn_negativescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_afinn_positivescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_bingliu_negative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_bingliu_positive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_labmt_happiness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_achieve": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_adverb": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_affect": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_anger": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_anx": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_apostro": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_article": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_assent": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_auxverb": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_avg_sentence_length": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_bio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_body": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_cause": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_certain": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_cogmech": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_colon": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_comma": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_conj": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_dash": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_death": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_dictionary_words": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_discrep": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_excl": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_exclam": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_family": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_feel": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_filler": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_friend": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_funct": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_future": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_health": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_hear": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_home": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_humans": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_i": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_incl": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_ingest": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_inhib": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_insight": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_ipron": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_leisure": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_money": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_motion": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_negate": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_negemo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_nonfl": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_number": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_numerals": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_otherp": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_parenth": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_past": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_percept": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_period": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_posemo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_ppron": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_preps": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_present": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_pronoun": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_qmark": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_quant": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_quote": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_relativ": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_relig": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_sad": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_see": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_semic": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_sexual": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_shehe": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_six_letter_words": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_social": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_space": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_swear": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_tentat": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_they": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_time": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_total_word_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_verb": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_we": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_work": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_liwc_you": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_mpqa_negative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_mpqa_positive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_negation_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_anger": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_anticipation": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_disgust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_fear": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_joy": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_negative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_positive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_sadness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_surprise": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcaffectintensity_trust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_anger": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_anticipation": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_disgust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_fear": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_joy": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_negative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_positive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_sadness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_surprise": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcemotionwordlevel_trust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_anger": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_anticipation": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_disgust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_fear": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_joy": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_negative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_positive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_sadness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_surprise": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrcexpandedemotion_trust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_anger": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_anticipation": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_disgust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_fear": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_joy": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_negative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_positive": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_sadness": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_surprise": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagemotion_trust": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagsentiment_negativescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_nrchashtagsentiment_positivescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_sentiment140_negativescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_sentiment140_positivescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_sentiwordnet_negativescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_affective_sentiwordnet_positivescore": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_compression_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_entropy": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_genre": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_average_token_length": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_average_tokens_per_line": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_blank_line_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_blank_line_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_character_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_colon_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_comma_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_digit_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_digit_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_dis_legomenon_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_dot_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_dugast": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_exclamation_mark_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_hapax_legomenon_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_herdan": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_hyphen_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_line_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_maas": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_mtld": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_parens_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_past_tense_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_pronoun_frequency": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_punctuation_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_punctuation_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_question_mark_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_quote_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_repeated_line_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_repeated_token_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_semicolon_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_stop_word_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_stop_word_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_stop_words_per_line": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_summer": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_token_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_tris_legomenon_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_unique_bigram_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_unique_line_count": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_unique_tokens_per_line": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_lexical_unique_trigram_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_playcount": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_automated_readability_index": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_coleman_liau_index": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_crawford": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_dale_chall_readability_score": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_difficult_words": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_fernandez_huerta": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_flesch_kincaid_grade": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_flesch_reading_ease": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_gunning_fog": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_gutierrez_polini": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_linsear_write_formula": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_smog": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_readability_szigriszt_pazos": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_record_key": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_release_date": {
+            "count": 8930,
+            "percent": 1.532366
+          },
+          "lfm_release_date_numberlong": {
+            "count": 573829,
+            "percent": 98.467634
+          },
+          "lfm_release_year": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_alliterations_len_2": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_alliterations_len_3": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_alliterations_len_4_plus": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_num_alternating": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_num_clerihews": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_num_couplets": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_num_nested": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_rhyme_percent": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_rhyme_unique_rhyme_words": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_source_row_number": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_structure_chorus_repetitions": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_ends_with_two_chorus_repetitions": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_number_of_sections": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_number_of_verses": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_pattern_two_choruses_at_least_one_verse": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_pattern_two_verses_at_least_one_chorus": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_pattern_verse_chorus_alternating": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_ratio_chorus_sections": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_ratio_verses_sections": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_starts_with_chorus": {
+            "count": 224995,
+            "percent": 38.608584
+          },
+          "lfm_structure_title_occurrences": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_temporal_cohort": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_uncommon_words_ratio": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "track_name_raw": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_artist_unicode": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_artist_strict": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_artist_conservative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_artist_primary": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_artist_collaborators_json": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_title_unicode": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_title_strict": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_title_conservative": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_title_base": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_remaster": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_remix": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_live": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_acoustic": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_radio_edit": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_mono_stereo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_instrumental": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_demo": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_year_mentioned": {
+            "count": 574373,
+            "percent": 98.560983
+          },
+          "lfm_version_tags": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_composition_key": {
+            "count": 140,
+            "percent": 0.024024
+          },
+          "lfm_normalization_version": {
+            "count": 0,
+            "percent": 0.0
+          },
+          "lfm_qf_release_year_implausible": {
+            "count": 0,
+            "percent": 0.0
+          }
+        },
+        "duplicate_original_key_excess_rows": 0,
+        "duplicate_artist_title_excess_rows": 0,
+        "release_year_min_max": [
+          1,
+          2022
+        ],
+        "by_cohort": [
+          {
+            "cohort": "2010-2019",
+            "count": 360506
+          },
+          {
+            "cohort": "2000-2009",
+            "count": 114078
+          },
+          {
+            "cohort": "outside_main_period",
+            "count": 97638
+          },
+          {
+            "cohort": "2020-2023",
+            "count": 10537
+          }
+        ],
+        "by_genre": [
+          {
+            "genre": "rock",
+            "count": 226287
+          },
+          {
+            "genre": "pop",
+            "count": 200392
+          },
+          {
+            "genre": "rap",
+            "count": 99688
+          },
+          {
+            "genre": "r-b",
+            "count": 28713
+          },
+          {
+            "genre": "country",
+            "count": 19362
+          },
+          {
+            "genre": "non-music",
+            "count": 8119
+          },
+          {
+            "genre": "denmark",
+            "count": 193
+          },
+          {
+            "genre": "varnell-15-16-12th",
+            "count": 5
+          }
+        ],
+        "popularity_metrics": {
+          "genius_lyrics_views": {
+            "non_null": 582759,
+            "numeric": 582759,
+            "negative": 0,
+            "minimum": 0.0,
+            "median": 794.0,
+            "mean": 15392.635005207985,
+            "maximum": 17263469.0
+          },
+          "lfm_playcount": {
+            "non_null": 582759,
+            "numeric": 582759,
+            "negative": 0,
+            "minimum": 11.0,
+            "median": 75.0,
+            "mean": 426.17088024380575,
+            "maximum": 110933.0
+          }
+        },
+        "quality_flags": {
+          "lfm_qf_release_year_implausible": 127
+        },
+        "descriptor_count": 210,
+        "descriptor_names": [
+          "lfm_affective_afinn_negativescore",
+          "lfm_affective_afinn_positivescore",
+          "lfm_affective_bingliu_negative",
+          "lfm_affective_bingliu_positive",
+          "lfm_affective_labmt_happiness",
+          "lfm_affective_liwc_achieve",
+          "lfm_affective_liwc_adverb",
+          "lfm_affective_liwc_affect",
+          "lfm_affective_liwc_anger",
+          "lfm_affective_liwc_anx",
+          "lfm_affective_liwc_apostro",
+          "lfm_affective_liwc_article",
+          "lfm_affective_liwc_assent",
+          "lfm_affective_liwc_auxverb",
+          "lfm_affective_liwc_avg_sentence_length",
+          "lfm_affective_liwc_bio",
+          "lfm_affective_liwc_body",
+          "lfm_affective_liwc_cause",
+          "lfm_affective_liwc_certain",
+          "lfm_affective_liwc_cogmech",
+          "lfm_affective_liwc_colon",
+          "lfm_affective_liwc_comma",
+          "lfm_affective_liwc_conj",
+          "lfm_affective_liwc_dash",
+          "lfm_affective_liwc_death",
+          "lfm_affective_liwc_dictionary_words",
+          "lfm_affective_liwc_discrep",
+          "lfm_affective_liwc_excl",
+          "lfm_affective_liwc_exclam",
+          "lfm_affective_liwc_family",
+          "lfm_affective_liwc_feel",
+          "lfm_affective_liwc_filler",
+          "lfm_affective_liwc_friend",
+          "lfm_affective_liwc_funct",
+          "lfm_affective_liwc_future",
+          "lfm_affective_liwc_health",
+          "lfm_affective_liwc_hear",
+          "lfm_affective_liwc_home",
+          "lfm_affective_liwc_humans",
+          "lfm_affective_liwc_i",
+          "lfm_affective_liwc_incl",
+          "lfm_affective_liwc_ingest",
+          "lfm_affective_liwc_inhib",
+          "lfm_affective_liwc_insight",
+          "lfm_affective_liwc_ipron",
+          "lfm_affective_liwc_leisure",
+          "lfm_affective_liwc_money",
+          "lfm_affective_liwc_motion",
+          "lfm_affective_liwc_negate",
+          "lfm_affective_liwc_negemo",
+          "lfm_affective_liwc_nonfl",
+          "lfm_affective_liwc_number",
+          "lfm_affective_liwc_numerals",
+          "lfm_affective_liwc_otherp",
+          "lfm_affective_liwc_parenth",
+          "lfm_affective_liwc_past",
+          "lfm_affective_liwc_percept",
+          "lfm_affective_liwc_period",
+          "lfm_affective_liwc_posemo",
+          "lfm_affective_liwc_ppron",
+          "lfm_affective_liwc_preps",
+          "lfm_affective_liwc_present",
+          "lfm_affective_liwc_pronoun",
+          "lfm_affective_liwc_qmark",
+          "lfm_affective_liwc_quant",
+          "lfm_affective_liwc_quote",
+          "lfm_affective_liwc_relativ",
+          "lfm_affective_liwc_relig",
+          "lfm_affective_liwc_sad",
+          "lfm_affective_liwc_see",
+          "lfm_affective_liwc_semic",
+          "lfm_affective_liwc_sexual",
+          "lfm_affective_liwc_shehe",
+          "lfm_affective_liwc_six_letter_words",
+          "lfm_affective_liwc_social",
+          "lfm_affective_liwc_space",
+          "lfm_affective_liwc_swear",
+          "lfm_affective_liwc_tentat",
+          "lfm_affective_liwc_they",
+          "lfm_affective_liwc_time",
+          "lfm_affective_liwc_total_word_count",
+          "lfm_affective_liwc_verb",
+          "lfm_affective_liwc_we",
+          "lfm_affective_liwc_work",
+          "lfm_affective_liwc_you",
+          "lfm_affective_mpqa_negative",
+          "lfm_affective_mpqa_positive",
+          "lfm_affective_negation_count",
+          "lfm_affective_nrcaffectintensity_anger",
+          "lfm_affective_nrcaffectintensity_anticipation",
+          "lfm_affective_nrcaffectintensity_disgust",
+          "lfm_affective_nrcaffectintensity_fear",
+          "lfm_affective_nrcaffectintensity_joy",
+          "lfm_affective_nrcaffectintensity_negative",
+          "lfm_affective_nrcaffectintensity_positive",
+          "lfm_affective_nrcaffectintensity_sadness",
+          "lfm_affective_nrcaffectintensity_surprise",
+          "lfm_affective_nrcaffectintensity_trust",
+          "lfm_affective_nrcemotionwordlevel_anger",
+          "lfm_affective_nrcemotionwordlevel_anticipation",
+          "lfm_affective_nrcemotionwordlevel_disgust",
+          "lfm_affective_nrcemotionwordlevel_fear",
+          "lfm_affective_nrcemotionwordlevel_joy",
+          "lfm_affective_nrcemotionwordlevel_negative",
+          "lfm_affective_nrcemotionwordlevel_positive",
+          "lfm_affective_nrcemotionwordlevel_sadness",
+          "lfm_affective_nrcemotionwordlevel_surprise",
+          "lfm_affective_nrcemotionwordlevel_trust",
+          "lfm_affective_nrcexpandedemotion_anger",
+          "lfm_affective_nrcexpandedemotion_anticipation",
+          "lfm_affective_nrcexpandedemotion_disgust",
+          "lfm_affective_nrcexpandedemotion_fear",
+          "lfm_affective_nrcexpandedemotion_joy",
+          "lfm_affective_nrcexpandedemotion_negative",
+          "lfm_affective_nrcexpandedemotion_positive",
+          "lfm_affective_nrcexpandedemotion_sadness",
+          "lfm_affective_nrcexpandedemotion_surprise",
+          "lfm_affective_nrcexpandedemotion_trust",
+          "lfm_affective_nrchashtagemotion_anger",
+          "lfm_affective_nrchashtagemotion_anticipation",
+          "lfm_affective_nrchashtagemotion_disgust",
+          "lfm_affective_nrchashtagemotion_fear",
+          "lfm_affective_nrchashtagemotion_joy",
+          "lfm_affective_nrchashtagemotion_negative",
+          "lfm_affective_nrchashtagemotion_positive",
+          "lfm_affective_nrchashtagemotion_sadness",
+          "lfm_affective_nrchashtagemotion_surprise",
+          "lfm_affective_nrchashtagemotion_trust",
+          "lfm_affective_nrchashtagsentiment_negativescore",
+          "lfm_affective_nrchashtagsentiment_positivescore",
+          "lfm_affective_sentiment140_negativescore",
+          "lfm_affective_sentiment140_positivescore",
+          "lfm_affective_sentiwordnet_negativescore",
+          "lfm_affective_sentiwordnet_positivescore",
+          "lfm_compression_ratio",
+          "lfm_entropy",
+          "lfm_lexical_average_token_length",
+          "lfm_lexical_average_tokens_per_line",
+          "lfm_lexical_blank_line_count",
+          "lfm_lexical_blank_line_ratio",
+          "lfm_lexical_character_count",
+          "lfm_lexical_colon_count",
+          "lfm_lexical_comma_count",
+          "lfm_lexical_digit_count",
+          "lfm_lexical_digit_ratio",
+          "lfm_lexical_dis_legomenon_ratio",
+          "lfm_lexical_dot_count",
+          "lfm_lexical_dugast",
+          "lfm_lexical_exclamation_mark_count",
+          "lfm_lexical_hapax_legomenon_ratio",
+          "lfm_lexical_herdan",
+          "lfm_lexical_hyphen_count",
+          "lfm_lexical_line_count",
+          "lfm_lexical_maas",
+          "lfm_lexical_mtld",
+          "lfm_lexical_parens_count",
+          "lfm_lexical_past_tense_ratio",
+          "lfm_lexical_pronoun_frequency",
+          "lfm_lexical_punctuation_count",
+          "lfm_lexical_punctuation_ratio",
+          "lfm_lexical_question_mark_count",
+          "lfm_lexical_quote_count",
+          "lfm_lexical_repeated_line_ratio",
+          "lfm_lexical_repeated_token_ratio",
+          "lfm_lexical_semicolon_count",
+          "lfm_lexical_stop_word_count",
+          "lfm_lexical_stop_word_ratio",
+          "lfm_lexical_stop_words_per_line",
+          "lfm_lexical_summer",
+          "lfm_lexical_token_count",
+          "lfm_lexical_tris_legomenon_ratio",
+          "lfm_lexical_unique_bigram_ratio",
+          "lfm_lexical_unique_line_count",
+          "lfm_lexical_unique_tokens_per_line",
+          "lfm_lexical_unique_trigram_ratio",
+          "lfm_readability_automated_readability_index",
+          "lfm_readability_coleman_liau_index",
+          "lfm_readability_crawford",
+          "lfm_readability_dale_chall_readability_score",
+          "lfm_readability_difficult_words",
+          "lfm_readability_fernandez_huerta",
+          "lfm_readability_flesch_kincaid_grade",
+          "lfm_readability_flesch_reading_ease",
+          "lfm_readability_gunning_fog",
+          "lfm_readability_gutierrez_polini",
+          "lfm_readability_linsear_write_formula",
+          "lfm_readability_smog",
+          "lfm_readability_szigriszt_pazos",
+          "lfm_rhyme_alliterations_len_2",
+          "lfm_rhyme_alliterations_len_3",
+          "lfm_rhyme_alliterations_len_4_plus",
+          "lfm_rhyme_num_alternating",
+          "lfm_rhyme_num_clerihews",
+          "lfm_rhyme_num_couplets",
+          "lfm_rhyme_num_nested",
+          "lfm_rhyme_rhyme_percent",
+          "lfm_rhyme_unique_rhyme_words",
+          "lfm_structure_chorus_repetitions",
+          "lfm_structure_ends_with_two_chorus_repetitions",
+          "lfm_structure_number_of_sections",
+          "lfm_structure_number_of_verses",
+          "lfm_structure_pattern_two_choruses_at_least_one_verse",
+          "lfm_structure_pattern_two_verses_at_least_one_chorus",
+          "lfm_structure_pattern_verse_chorus_alternating",
+          "lfm_structure_ratio_chorus_sections",
+          "lfm_structure_ratio_verses_sections",
+          "lfm_structure_starts_with_chorus",
+          "lfm_structure_title_occurrences",
+          "lfm_uncommon_words_ratio",
+          "lfm_qf_release_year_implausible"
+        ],
+        "semantic_note": {
+          "genius_lyrics_views": "Campo original popularity; visualizações da letra no Genius segundo Zenodo/artigo.",
+          "lfm_playcount": "Contagem de eventos de escuta na base LFM-2b; mantida separada."
+        }
+      }
+    },
+    "match": {
+      "status": "completed",
+      "duration_seconds": 0.001087,
+      "result": {
+        "status": "reused",
+        "generated_at": "2026-08-18T01:47:09.135332+00:00",
+        "spotify_rows": 1159764,
+        "fuzzy_candidate_rows": 3457,
+        "unique_spotify_tracks_by_candidate_status": {
+          "ambiguous": 8178,
+          "accepted_high_confidence": 99418,
+          "accepted_with_rules": 12340,
+          "candidate_for_review": 3024
+        },
+        "by_method_and_status": [
+          {
+            "method": "base_title_version_compatible",
+            "status": "accepted_with_rules",
+            "candidate_rows": 3308,
+            "spotify_tracks": 3308,
+            "percent_of_spotify_tracks": 0.28523
+          },
+          {
+            "method": "base_title_version_compatible",
+            "status": "ambiguous",
+            "candidate_rows": 8062,
+            "spotify_tracks": 5755,
+            "percent_of_spotify_tracks": 0.496222
+          },
+          {
+            "method": "conservative_normalized",
+            "status": "accepted_with_rules",
+            "candidate_rows": 9032,
+            "spotify_tracks": 9032,
+            "percent_of_spotify_tracks": 0.778779
+          },
+          {
+            "method": "conservative_normalized",
+            "status": "ambiguous",
+            "candidate_rows": 1531,
+            "spotify_tracks": 1442,
+            "percent_of_spotify_tracks": 0.124336
+          },
+          {
+            "method": "fuzzy_candidate",
+            "status": "candidate_for_review",
+            "candidate_rows": 3457,
+            "spotify_tracks": 3024,
+            "percent_of_spotify_tracks": 0.260743
+          },
+          {
+            "method": "raw_exact",
+            "status": "accepted_high_confidence",
+            "candidate_rows": 79740,
+            "spotify_tracks": 79740,
+            "percent_of_spotify_tracks": 6.875537
+          },
+          {
+            "method": "raw_exact",
+            "status": "ambiguous",
+            "candidate_rows": 1688,
+            "spotify_tracks": 1688,
+            "percent_of_spotify_tracks": 0.145547
+          },
+          {
+            "method": "strict_normalized",
+            "status": "accepted_high_confidence",
+            "candidate_rows": 19678,
+            "spotify_tracks": 19678,
+            "percent_of_spotify_tracks": 1.696725
+          },
+          {
+            "method": "strict_normalized",
+            "status": "ambiguous",
+            "candidate_rows": 854,
+            "spotify_tracks": 848,
+            "percent_of_spotify_tracks": 0.073118
+          }
+        ],
+        "deterministic_multiplicity": [
+          {
+            "mapping_type": "many_spotify_to_one_lfm",
+            "candidate_rows": 5509,
+            "spotify_tracks": 5509,
+            "lfm_records": 1916
+          },
+          {
+            "mapping_type": "many_to_many",
+            "candidate_rows": 4183,
+            "spotify_tracks": 1563,
+            "lfm_records": 1167
+          },
+          {
+            "mapping_type": "one_spotify_to_many_lfm",
+            "candidate_rows": 2443,
+            "spotify_tracks": 1121,
+            "lfm_records": 2443
+          },
+          {
+            "mapping_type": "one_to_one",
+            "candidate_rows": 111758,
+            "spotify_tracks": 111758,
+            "lfm_records": 111758
+          }
+        ],
+        "outputs": {
+          "all": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_all_candidates.parquet",
+          "matches": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_matches.parquet",
+          "ambiguous": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_ambiguous.parquet",
+          "review": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_candidates_review.parquet",
+          "rejected": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_rejected.parquet",
+          "unmatched": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_unmatched.parquet",
+          "status": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_tracks_with_match_status.parquet",
+          "modeling": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\modeling_base_lfm_v0_1.parquet",
+          "sample": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_review_sample.parquet"
+        }
+      }
+    },
+    "selection_bias": {
+      "status": "completed",
+      "duration_seconds": 1.401766,
+      "result": {
+        "generated_at": "2026-08-18T01:51:36.579772+00:00",
+        "total_spotify": 1159764,
+        "matched": 111758,
+        "match_rate_percent": 9.636270827513183,
+        "by_dimension": {
+          "year": [
+            {
+              "year": 2000,
+              "total": 44034,
+              "matched": 2619,
+              "match_rate_percent": 5.947676795203706
+            },
+            {
+              "year": 2001,
+              "total": 42351,
+              "matched": 2714,
+              "match_rate_percent": 6.408349271563836
+            },
+            {
+              "year": 2002,
+              "total": 42102,
+              "matched": 2787,
+              "match_rate_percent": 6.619638021946701
+            },
+            {
+              "year": 2003,
+              "total": 42368,
+              "matched": 3207,
+              "match_rate_percent": 7.569391993957704
+            },
+            {
+              "year": 2004,
+              "total": 43390,
+              "matched": 2998,
+              "match_rate_percent": 6.90942613505416
+            },
+            {
+              "year": 2005,
+              "total": 43780,
+              "matched": 3179,
+              "match_rate_percent": 7.261306532663316
+            },
+            {
+              "year": 2006,
+              "total": 45474,
+              "matched": 3238,
+              "match_rate_percent": 7.1205524035712715
+            },
+            {
+              "year": 2007,
+              "total": 46001,
+              "matched": 3439,
+              "match_rate_percent": 7.475924436425295
+            },
+            {
+              "year": 2008,
+              "total": 47432,
+              "matched": 3818,
+              "match_rate_percent": 8.049418114353179
+            },
+            {
+              "year": 2009,
+              "total": 46869,
+              "matched": 3939,
+              "match_rate_percent": 8.404275747295653
+            },
+            {
+              "year": 2010,
+              "total": 46868,
+              "matched": 4005,
+              "match_rate_percent": 8.545276094563455
+            },
+            {
+              "year": 2011,
+              "total": 46444,
+              "matched": 4310,
+              "match_rate_percent": 9.279993109981914
+            },
+            {
+              "year": 2012,
+              "total": 54797,
+              "matched": 5497,
+              "match_rate_percent": 10.031571071409019
+            },
+            {
+              "year": 2013,
+              "total": 53216,
+              "matched": 5921,
+              "match_rate_percent": 11.126352976548407
+            },
+            {
+              "year": 2014,
+              "total": 53179,
+              "matched": 7265,
+              "match_rate_percent": 13.661407698527615
+            },
+            {
+              "year": 2015,
+              "total": 51607,
+              "matched": 7464,
+              "match_rate_percent": 14.463154223264286
+            },
+            {
+              "year": 2016,
+              "total": 40273,
+              "matched": 8457,
+              "match_rate_percent": 20.999180592456483
+            },
+            {
+              "year": 2017,
+              "total": 56241,
+              "matched": 10922,
+              "match_rate_percent": 19.419996088263012
+            },
+            {
+              "year": 2018,
+              "total": 56572,
+              "matched": 11173,
+              "match_rate_percent": 19.750053029767376
+            },
+            {
+              "year": 2019,
+              "total": 55793,
+              "matched": 11014,
+              "match_rate_percent": 19.740827702399944
+            },
+            {
+              "year": 2020,
+              "total": 55066,
+              "matched": 2706,
+              "match_rate_percent": 4.91410307630843
+            },
+            {
+              "year": 2021,
+              "total": 53566,
+              "matched": 477,
+              "match_rate_percent": 0.8904902363439495
+            },
+            {
+              "year": 2022,
+              "total": 53692,
+              "matched": 277,
+              "match_rate_percent": 0.5159055352752738
+            },
+            {
+              "year": 2023,
+              "total": 38649,
+              "matched": 332,
+              "match_rate_percent": 0.8590131698103444
+            }
+          ],
+          "temporal_cohort": [
+            {
+              "temporal_cohort": "2000-2009",
+              "total": 443801,
+              "matched": 31938,
+              "match_rate_percent": 7.1964686875423896
+            },
+            {
+              "temporal_cohort": "2010-2019",
+              "total": 514990,
+              "matched": 76028,
+              "match_rate_percent": 14.76300510689528
+            },
+            {
+              "temporal_cohort": "2020-2023",
+              "total": 200973,
+              "matched": 3792,
+              "match_rate_percent": 1.8868206176949143
+            }
+          ],
+          "genre": [
+            {
+              "genre": "acoustic",
+              "total": 21097,
+              "matched": 2935,
+              "match_rate_percent": 13.911930606247333
+            },
+            {
+              "genre": "afrobeat",
+              "total": 12395,
+              "matched": 65,
+              "match_rate_percent": 0.5244050020169423
+            },
+            {
+              "genre": "alt-rock",
+              "total": 20918,
+              "matched": 6661,
+              "match_rate_percent": 31.843388469260923
+            },
+            {
+              "genre": "ambient",
+              "total": 21389,
+              "matched": 824,
+              "match_rate_percent": 3.8524475197531443
+            },
+            {
+              "genre": "black-metal",
+              "total": 21852,
+              "matched": 3408,
+              "match_rate_percent": 15.595826468973092
+            },
+            {
+              "genre": "blues",
+              "total": 19682,
+              "matched": 2599,
+              "match_rate_percent": 13.204958845645768
+            },
+            {
+              "genre": "breakbeat",
+              "total": 12256,
+              "matched": 104,
+              "match_rate_percent": 0.8485639686684073
+            },
+            {
+              "genre": "cantopop",
+              "total": 15773,
+              "matched": 15,
+              "match_rate_percent": 0.09509922018639447
+            },
+            {
+              "genre": "chicago-house",
+              "total": 5170,
+              "matched": 12,
+              "match_rate_percent": 0.23210831721470018
+            },
+            {
+              "genre": "chill",
+              "total": 18906,
+              "matched": 2557,
+              "match_rate_percent": 13.524806939595896
+            },
+            {
+              "genre": "classical",
+              "total": 18259,
+              "matched": 450,
+              "match_rate_percent": 2.464538036037023
+            },
+            {
+              "genre": "club",
+              "total": 14678,
+              "matched": 710,
+              "match_rate_percent": 4.8371712767407
+            },
+            {
+              "genre": "comedy",
+              "total": 19334,
+              "matched": 370,
+              "match_rate_percent": 1.9137271128581772
+            },
+            {
+              "genre": "country",
+              "total": 17883,
+              "matched": 5495,
+              "match_rate_percent": 30.727506570485936
+            },
+            {
+              "genre": "dance",
+              "total": 17212,
+              "matched": 4226,
+              "match_rate_percent": 24.552637694631652
+            },
+            {
+              "genre": "dancehall",
+              "total": 18788,
+              "matched": 1033,
+              "match_rate_percent": 5.498190334255908
+            },
+            {
+              "genre": "death-metal",
+              "total": 18038,
+              "matched": 5048,
+              "match_rate_percent": 27.985364231067745
+            },
+            {
+              "genre": "deep-house",
+              "total": 17896,
+              "matched": 653,
+              "match_rate_percent": 3.6488600804649085
+            },
+            {
+              "genre": "detroit-techno",
+              "total": 3920,
+              "matched": 5,
+              "match_rate_percent": 0.12755102040816327
+            },
+            {
+              "genre": "disco",
+              "total": 16987,
+              "matched": 1185,
+              "match_rate_percent": 6.9759227644669455
+            },
+            {
+              "genre": "drum-and-bass",
+              "total": 14591,
+              "matched": 485,
+              "match_rate_percent": 3.32396682886711
+            },
+            {
+              "genre": "dub",
+              "total": 18785,
+              "matched": 996,
+              "match_rate_percent": 5.302102741549108
+            },
+            {
+              "genre": "dubstep",
+              "total": 4774,
+              "matched": 85,
+              "match_rate_percent": 1.7804775869291998
+            },
+            {
+              "genre": "edm",
+              "total": 10671,
+              "matched": 1231,
+              "match_rate_percent": 11.53593852497423
+            },
+            {
+              "genre": "electro",
+              "total": 11406,
+              "matched": 1930,
+              "match_rate_percent": 16.92091881465895
+            },
+            {
+              "genre": "electronic",
+              "total": 9369,
+              "matched": 915,
+              "match_rate_percent": 9.766250400256164
+            },
+            {
+              "genre": "emo",
+              "total": 20845,
+              "matched": 6525,
+              "match_rate_percent": 31.302470616454784
+            },
+            {
+              "genre": "folk",
+              "total": 16170,
+              "matched": 4004,
+              "match_rate_percent": 24.761904761904763
+            },
+            {
+              "genre": "forro",
+              "total": 19379,
+              "matched": 0,
+              "match_rate_percent": 0.0
+            },
+            {
+              "genre": "french",
+              "total": 18519,
+              "matched": 751,
+              "match_rate_percent": 4.055294562341379
+            },
+            {
+              "genre": "funk",
+              "total": 15136,
+              "matched": 2213,
+              "match_rate_percent": 14.620771670190274
+            },
+            {
+              "genre": "garage",
+              "total": 17123,
+              "matched": 3406,
+              "match_rate_percent": 19.891374175086142
+            },
+            {
+              "genre": "german",
+              "total": 16417,
+              "matched": 858,
+              "match_rate_percent": 5.226289821526467
+            },
+            {
+              "genre": "gospel",
+              "total": 21621,
+              "matched": 587,
+              "match_rate_percent": 2.7149530549003282
+            },
+            {
+              "genre": "goth",
+              "total": 17381,
+              "matched": 2325,
+              "match_rate_percent": 13.376675680340602
+            },
+            {
+              "genre": "grindcore",
+              "total": 14509,
+              "matched": 892,
+              "match_rate_percent": 6.147908194913502
+            },
+            {
+              "genre": "groove",
+              "total": 13366,
+              "matched": 1094,
+              "match_rate_percent": 8.184946880143649
+            },
+            {
+              "genre": "guitar",
+              "total": 17266,
+              "matched": 47,
+              "match_rate_percent": 0.27221128228889147
+            },
+            {
+              "genre": "hard-rock",
+              "total": 13800,
+              "matched": 3224,
+              "match_rate_percent": 23.36231884057971
+            },
+            {
+              "genre": "hardcore",
+              "total": 15993,
+              "matched": 4708,
+              "match_rate_percent": 29.43787907209404
+            },
+            {
+              "genre": "hardstyle",
+              "total": 12420,
+              "matched": 221,
+              "match_rate_percent": 1.7793880837359097
+            },
+            {
+              "genre": "heavy-metal",
+              "total": 14862,
+              "matched": 492,
+              "match_rate_percent": 3.310456197012515
+            },
+            {
+              "genre": "hip-hop",
+              "total": 15703,
+              "matched": 3775,
+              "match_rate_percent": 24.039992358148126
+            },
+            {
+              "genre": "house",
+              "total": 5233,
+              "matched": 414,
+              "match_rate_percent": 7.91133193197019
+            },
+            {
+              "genre": "indian",
+              "total": 20583,
+              "matched": 222,
+              "match_rate_percent": 1.0785599766797842
+            },
+            {
+              "genre": "indie-pop",
+              "total": 10022,
+              "matched": 3239,
+              "match_rate_percent": 32.31889842346837
+            },
+            {
+              "genre": "industrial",
+              "total": 15245,
+              "matched": 2037,
+              "match_rate_percent": 13.361757953427354
+            },
+            {
+              "genre": "jazz",
+              "total": 15943,
+              "matched": 888,
+              "match_rate_percent": 5.56984256413473
+            },
+            {
+              "genre": "k-pop",
+              "total": 20004,
+              "matched": 870,
+              "match_rate_percent": 4.349130173965207
+            },
+            {
+              "genre": "metal",
+              "total": 7020,
+              "matched": 2312,
+              "match_rate_percent": 32.934472934472936
+            },
+            {
+              "genre": "metalcore",
+              "total": 6267,
+              "matched": 1623,
+              "match_rate_percent": 25.897558640497845
+            },
+            {
+              "genre": "minimal-techno",
+              "total": 15198,
+              "matched": 84,
+              "match_rate_percent": 0.5527043031977892
+            },
+            {
+              "genre": "new-age",
+              "total": 19911,
+              "matched": 104,
+              "match_rate_percent": 0.5223243433278087
+            },
+            {
+              "genre": "opera",
+              "total": 15079,
+              "matched": 245,
+              "match_rate_percent": 1.624776178791697
+            },
+            {
+              "genre": "party",
+              "total": 9548,
+              "matched": 15,
+              "match_rate_percent": 0.15710096355257647
+            },
+            {
+              "genre": "piano",
+              "total": 13784,
+              "matched": 962,
+              "match_rate_percent": 6.979106210098665
+            },
+            {
+              "genre": "pop",
+              "total": 6235,
+              "matched": 1194,
+              "match_rate_percent": 19.149959903769044
+            },
+            {
+              "genre": "pop-film",
+              "total": 16907,
+              "matched": 11,
+              "match_rate_percent": 0.06506180871828236
+            },
+            {
+              "genre": "power-pop",
+              "total": 17161,
+              "matched": 2431,
+              "match_rate_percent": 14.165841151448051
+            },
+            {
+              "genre": "progressive-house",
+              "total": 10589,
+              "matched": 501,
+              "match_rate_percent": 4.7313249598640095
+            },
+            {
+              "genre": "psych-rock",
+              "total": 12789,
+              "matched": 1689,
+              "match_rate_percent": 13.206661975134882
+            },
+            {
+              "genre": "punk",
+              "total": 6197,
+              "matched": 1947,
+              "match_rate_percent": 31.418428271744393
+            },
+            {
+              "genre": "punk-rock",
+              "total": 7086,
+              "matched": 1212,
+              "match_rate_percent": 17.10414902624894
+            },
+            {
+              "genre": "rock",
+              "total": 3319,
+              "matched": 785,
+              "match_rate_percent": 23.651702319975897
+            },
+            {
+              "genre": "rock-n-roll",
+              "total": 15891,
+              "matched": 328,
+              "match_rate_percent": 2.064061418412938
+            },
+            {
+              "genre": "romance",
+              "total": 6518,
+              "matched": 0,
+              "match_rate_percent": 0.0
+            },
+            {
+              "genre": "sad",
+              "total": 6086,
+              "matched": 159,
+              "match_rate_percent": 2.6125534012487677
+            },
+            {
+              "genre": "salsa",
+              "total": 17501,
+              "matched": 4,
+              "match_rate_percent": 0.02285583680932518
+            },
+            {
+              "genre": "samba",
+              "total": 18599,
+              "matched": 25,
+              "match_rate_percent": 0.13441582880800043
+            },
+            {
+              "genre": "sertanejo",
+              "total": 17566,
+              "matched": 4,
+              "match_rate_percent": 0.022771262666514858
+            },
+            {
+              "genre": "show-tunes",
+              "total": 11101,
+              "matched": 655,
+              "match_rate_percent": 5.900369336095848
+            },
+            {
+              "genre": "singer-songwriter",
+              "total": 14035,
+              "matched": 2288,
+              "match_rate_percent": 16.3021018881368
+            },
+            {
+              "genre": "ska",
+              "total": 13776,
+              "matched": 1626,
+              "match_rate_percent": 11.803135888501743
+            },
+            {
+              "genre": "sleep",
+              "total": 17851,
+              "matched": 1,
+              "match_rate_percent": 0.005601927062909641
+            },
+            {
+              "genre": "songwriter",
+              "total": 589,
+              "matched": 50,
+              "match_rate_percent": 8.488964346349745
+            },
+            {
+              "genre": "soul",
+              "total": 8974,
+              "matched": 2607,
+              "match_rate_percent": 29.050590595052373
+            },
+            {
+              "genre": "spanish",
+              "total": 19158,
+              "matched": 125,
+              "match_rate_percent": 0.652468942478338
+            },
+            {
+              "genre": "swedish",
+              "total": 11616,
+              "matched": 1241,
+              "match_rate_percent": 10.68353994490358
+            },
+            {
+              "genre": "tango",
+              "total": 15069,
+              "matched": 0,
+              "match_rate_percent": 0.0
+            },
+            {
+              "genre": "techno",
+              "total": 7898,
+              "matched": 118,
+              "match_rate_percent": 1.494049126361104
+            },
+            {
+              "genre": "trance",
+              "total": 9592,
+              "matched": 306,
+              "match_rate_percent": 3.190158465387823
+            },
+            {
+              "genre": "trip-hop",
+              "total": 11285,
+              "matched": 317,
+              "match_rate_percent": 2.809038546743465
+            }
+          ]
+        },
+        "by_popularity_band": [
+          {
+            "band": "01-10",
+            "total": 295373,
+            "matched": 12613,
+            "match_rate_percent": 4.270193958147833
+          },
+          {
+            "band": "11-25",
+            "total": 352954,
+            "matched": 41251,
+            "match_rate_percent": 11.687358692634168
+          },
+          {
+            "band": "26-50",
+            "total": 305348,
+            "matched": 49612,
+            "match_rate_percent": 16.247691158939965
+          },
+          {
+            "band": "51-75",
+            "total": 46537,
+            "matched": 7331,
+            "match_rate_percent": 15.753056707566023
+          },
+          {
+            "band": "76-100",
+            "total": 1161,
+            "matched": 169,
+            "match_rate_percent": 14.556416881998278
+          },
+          {
+            "band": "zero",
+            "total": 158391,
+            "matched": 782,
+            "match_rate_percent": 0.4937149206709977
+          }
+        ],
+        "numeric_comparison": {
+          "spotify_popularity": {
+            "matched_mean": 27.16410458311709,
+            "matched_median": 26.0,
+            "unmatched_mean": 17.44673026681145,
+            "unmatched_median": 14.0,
+            "standardized_mean_difference": 0.6443588434614561
+          },
+          "danceability": {
+            "matched_mean": 0.5092540498219357,
+            "matched_median": 0.511,
+            "unmatched_mean": 0.5404437565242941,
+            "unmatched_median": 0.555,
+            "standardized_mean_difference": -0.17539159833182835
+          },
+          "energy": {
+            "matched_mean": 0.7155542876044658,
+            "matched_median": 0.769,
+            "unmatched_mean": 0.6315776866107682,
+            "unmatched_median": 0.685,
+            "standardized_mean_difference": 0.3318853846090047
+          },
+          "loudness": {
+            "matched_mean": -6.793124912757924,
+            "matched_median": -6.068,
+            "unmatched_mean": -9.214702609527038,
+            "unmatched_median": -7.633,
+            "standardized_mean_difference": 0.5123029325422511
+          },
+          "speechiness": {
+            "matched_mean": 0.08759720556917637,
+            "matched_median": 0.053,
+            "unmatched_mean": 0.0933711619971607,
+            "unmatched_median": 0.0505,
+            "standardized_mean_difference": -0.05189710867243355
+          },
+          "acousticness": {
+            "matched_mean": 0.18924673594794128,
+            "matched_median": 0.0337,
+            "unmatched_mean": 0.33564421509553094,
+            "unmatched_median": 0.17,
+            "standardized_mean_difference": -0.45619251744537376
+          },
+          "instrumentalness": {
+            "matched_mean": 0.1241976291378695,
+            "matched_median": 0.000266,
+            "unmatched_mean": 0.26601477270842744,
+            "unmatched_median": 0.0023750000000000004,
+            "standardized_mean_difference": -0.442425839372347
+          },
+          "liveness": {
+            "matched_mean": 0.2125789400311393,
+            "matched_median": 0.14,
+            "unmatched_mean": 0.22413217449136708,
+            "unmatched_median": 0.133,
+            "standardized_mean_difference": -0.06116373808797651
+          },
+          "valence": {
+            "matched_mean": 0.4206118210776861,
+            "matched_median": 0.395,
+            "unmatched_mean": 0.45929080796388416,
+            "unmatched_median": 0.444,
+            "standardized_mean_difference": -0.15209954666163716
+          },
+          "tempo": {
+            "matched_mean": 124.25252576101944,
+            "matched_median": 122.045,
+            "unmatched_mean": 121.0705095314337,
+            "unmatched_median": 121.88,
+            "standardized_mean_difference": 0.10662005743523982
+          },
+          "duration_ms": {
+            "matched_mean": 231251.66465935324,
+            "matched_median": 220002.5,
+            "unmatched_mean": 251514.34829571587,
+            "unmatched_median": 226560.0,
+            "standardized_mean_difference": -0.16154496027926082
+          }
+        },
+        "spotify_popularity_zero_percent": {
+          "matched": 0.6997261940979617,
+          "unmatched": 15.038940616752194
+        },
+        "warning": "O subconjunto encontrado não deve ser tratado como aleatório ou representativo. As diferenças descrevem cobertura do cruzamento e não sustentam explicação nem causalidade."
+      }
+    },
+    "database": {
+      "status": "completed",
+      "duration_seconds": 0.261336,
+      "result": {
+        "generated_at": "2026-08-18T01:51:36.861111+00:00",
+        "database": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\music_tcc.duckdb",
+        "datasets": {
+          "spotify_tracks": {
+            "status": "view_created",
+            "path": "data/processed/spotify_tracks.parquet",
+            "grain": "uma linha por registro Spotify",
+            "rows": 1159764
+          },
+          "lfm2b_tracks": {
+            "status": "view_created",
+            "path": "data/processed/lfm2b_tracks.parquet",
+            "grain": "uma linha por registro LFM2b",
+            "rows": 582759
+          },
+          "spotify_lfm_all_candidates": {
+            "status": "view_created",
+            "path": "data/processed/spotify_lfm_all_candidates.parquet",
+            "grain": "uma linha por par candidato",
+            "rows": 127350
+          },
+          "spotify_lfm_matches": {
+            "status": "view_created",
+            "path": "data/processed/spotify_lfm_matches.parquet",
+            "grain": "uma linha por par aceito",
+            "rows": 111758
+          },
+          "spotify_lfm_ambiguous": {
+            "status": "view_created",
+            "path": "data/processed/spotify_lfm_ambiguous.parquet",
+            "grain": "uma linha por par ambíguo",
+            "rows": 12135
+          },
+          "spotify_lfm_candidates_review": {
+            "status": "view_created",
+            "path": "data/processed/spotify_lfm_candidates_review.parquet",
+            "grain": "uma linha por candidato fuzzy pendente",
+            "rows": 3457
+          },
+          "spotify_lfm_rejected": {
+            "status": "view_created",
+            "path": "data/processed/spotify_lfm_rejected.parquet",
+            "grain": "uma linha por candidato rejeitado",
+            "rows": 0
+          },
+          "spotify_lfm_unmatched": {
+            "status": "view_created",
+            "path": "data/processed/spotify_lfm_unmatched.parquet",
+            "grain": "uma linha por registro Spotify sem candidato",
+            "rows": 1036804
+          },
+          "spotify_tracks_with_match_status": {
+            "status": "view_created",
+            "path": "data/processed/spotify_tracks_with_match_status.parquet",
+            "grain": "uma linha por registro Spotify",
+            "rows": 1159764
+          },
+          "modeling_base_lfm_v0_1": {
+            "status": "view_created",
+            "path": "data/processed/modeling_base_lfm_v0_1.parquet",
+            "grain": "uma linha por par Spotify-LFM2b aceito",
+            "rows": 111758
+          }
+        }
+      }
+    },
+    "report": {
+      "status": "completed",
+      "duration_seconds": 2.957512,
+      "result": {
+        "figures": [
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_tracks_by_year.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_tracks_by_cohort.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_zero_popularity_by_cohort.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_popularity_distribution.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_top_genres.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_missingness.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\matching_funnel.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\temporal_matched_unmatched.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\match_rate_by_year.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\match_rate_by_genre.png",
+          "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\popularity_matched_unmatched.png"
+        ],
+        "data_audit": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\data_audit.md",
+        "matching_report": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\matching_report.md",
+        "data_dictionary": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\data_dictionary.md"
+      }
+    }
+  },
+  "warnings": [
+    "Popularidade Spotify é observada no snapshot da fonte e não mede necessariamente sucesso futuro.",
+    "genius_lyrics_views, lfm_playcount e spotify_popularity são métricas distintas.",
+    "Matches fuzzy nunca são aceitos automaticamente."
+  ],
+  "failures": [],
+  "status": "complete",
+  "products": {
+    "data/interim/spotify_normalized.parquet": {
+      "status": "available",
+      "size_bytes": 161816417
+    },
+    "data/interim/lfm2b_normalized.parquet": {
+      "status": "available",
+      "size_bytes": 365167978
+    },
+    "data/processed/spotify_tracks.parquet": {
+      "status": "available",
+      "size_bytes": 161816417
+    },
+    "data/processed/lfm2b_tracks.parquet": {
+      "status": "available",
+      "size_bytes": 365167978
+    },
+    "data/processed/spotify_lfm_matches.parquet": {
+      "status": "available",
+      "size_bytes": 6260268
+    },
+    "data/processed/spotify_lfm_ambiguous.parquet": {
+      "status": "available",
+      "size_bytes": 404713
+    },
+    "data/processed/spotify_lfm_candidates_review.parquet": {
+      "status": "available",
+      "size_bytes": 200608
+    },
+    "data/processed/spotify_lfm_unmatched.parquet": {
+      "status": "available",
+      "size_bytes": 143726034
+    },
+    "data/processed/modeling_base_lfm_v0_1.parquet": {
+      "status": "available",
+      "size_bytes": 83112084
+    },
+    "data/processed/music_tcc.duckdb": {
+      "status": "available",
+      "size_bytes": 798720
+    },
+    "reports/data_audit.md": {
+      "status": "available",
+      "size_bytes": 3484
+    },
+    "reports/matching_report.md": {
+      "status": "available",
+      "size_bytes": 2680
+    }
+  },
+  "normalization_version": "v0.1.0",
+  "matching_version": "v0.1.0"
+}

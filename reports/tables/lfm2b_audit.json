@@ -1,0 +1,1517 @@
+{
+  "generated_at": "2026-08-18T01:51:35.167626+00:00",
+  "rows": 582759,
+  "columns": 242,
+  "schema": {
+    "artist_name_raw": "VARCHAR",
+    "genius_lyrics_views": "BIGINT",
+    "lfm_affective_afinn_negativescore": "DOUBLE",
+    "lfm_affective_afinn_positivescore": "DOUBLE",
+    "lfm_affective_bingliu_negative": "DOUBLE",
+    "lfm_affective_bingliu_positive": "DOUBLE",
+    "lfm_affective_labmt_happiness": "DOUBLE",
+    "lfm_affective_liwc_achieve": "DOUBLE",
+    "lfm_affective_liwc_adverb": "DOUBLE",
+    "lfm_affective_liwc_affect": "DOUBLE",
+    "lfm_affective_liwc_anger": "DOUBLE",
+    "lfm_affective_liwc_anx": "DOUBLE",
+    "lfm_affective_liwc_apostro": "DOUBLE",
+    "lfm_affective_liwc_article": "DOUBLE",
+    "lfm_affective_liwc_assent": "DOUBLE",
+    "lfm_affective_liwc_auxverb": "DOUBLE",
+    "lfm_affective_liwc_avg_sentence_length": "DOUBLE",
+    "lfm_affective_liwc_bio": "DOUBLE",
+    "lfm_affective_liwc_body": "DOUBLE",
+    "lfm_affective_liwc_cause": "DOUBLE",
+    "lfm_affective_liwc_certain": "DOUBLE",
+    "lfm_affective_liwc_cogmech": "DOUBLE",
+    "lfm_affective_liwc_colon": "DOUBLE",
+    "lfm_affective_liwc_comma": "DOUBLE",
+    "lfm_affective_liwc_conj": "DOUBLE",
+    "lfm_affective_liwc_dash": "DOUBLE",
+    "lfm_affective_liwc_death": "DOUBLE",
+    "lfm_affective_liwc_dictionary_words": "DOUBLE",
+    "lfm_affective_liwc_discrep": "DOUBLE",
+    "lfm_affective_liwc_excl": "DOUBLE",
+    "lfm_affective_liwc_exclam": "DOUBLE",
+    "lfm_affective_liwc_family": "DOUBLE",
+    "lfm_affective_liwc_feel": "DOUBLE",
+    "lfm_affective_liwc_filler": "DOUBLE",
+    "lfm_affective_liwc_friend": "DOUBLE",
+    "lfm_affective_liwc_funct": "DOUBLE",
+    "lfm_affective_liwc_future": "DOUBLE",
+    "lfm_affective_liwc_health": "DOUBLE",
+    "lfm_affective_liwc_hear": "DOUBLE",
+    "lfm_affective_liwc_home": "DOUBLE",
+    "lfm_affective_liwc_humans": "DOUBLE",
+    "lfm_affective_liwc_i": "DOUBLE",
+    "lfm_affective_liwc_incl": "DOUBLE",
+    "lfm_affective_liwc_ingest": "DOUBLE",
+    "lfm_affective_liwc_inhib": "DOUBLE",
+    "lfm_affective_liwc_insight": "DOUBLE",
+    "lfm_affective_liwc_ipron": "DOUBLE",
+    "lfm_affective_liwc_leisure": "DOUBLE",
+    "lfm_affective_liwc_money": "DOUBLE",
+    "lfm_affective_liwc_motion": "DOUBLE",
+    "lfm_affective_liwc_negate": "DOUBLE",
+    "lfm_affective_liwc_negemo": "DOUBLE",
+    "lfm_affective_liwc_nonfl": "DOUBLE",
+    "lfm_affective_liwc_number": "DOUBLE",
+    "lfm_affective_liwc_numerals": "DOUBLE",
+    "lfm_affective_liwc_otherp": "DOUBLE",
+    "lfm_affective_liwc_parenth": "DOUBLE",
+    "lfm_affective_liwc_past": "DOUBLE",
+    "lfm_affective_liwc_percept": "DOUBLE",
+    "lfm_affective_liwc_period": "DOUBLE",
+    "lfm_affective_liwc_posemo": "DOUBLE",
+    "lfm_affective_liwc_ppron": "DOUBLE",
+    "lfm_affective_liwc_preps": "DOUBLE",
+    "lfm_affective_liwc_present": "DOUBLE",
+    "lfm_affective_liwc_pronoun": "DOUBLE",
+    "lfm_affective_liwc_qmark": "DOUBLE",
+    "lfm_affective_liwc_quant": "DOUBLE",
+    "lfm_affective_liwc_quote": "DOUBLE",
+    "lfm_affective_liwc_relativ": "DOUBLE",
+    "lfm_affective_liwc_relig": "DOUBLE",
+    "lfm_affective_liwc_sad": "DOUBLE",
+    "lfm_affective_liwc_see": "DOUBLE",
+    "lfm_affective_liwc_semic": "DOUBLE",
+    "lfm_affective_liwc_sexual": "DOUBLE",
+    "lfm_affective_liwc_shehe": "DOUBLE",
+    "lfm_affective_liwc_six_letter_words": "DOUBLE",
+    "lfm_affective_liwc_social": "DOUBLE",
+    "lfm_affective_liwc_space": "DOUBLE",
+    "lfm_affective_liwc_swear": "DOUBLE",
+    "lfm_affective_liwc_tentat": "DOUBLE",
+    "lfm_affective_liwc_they": "DOUBLE",
+    "lfm_affective_liwc_time": "DOUBLE",
+    "lfm_affective_liwc_total_word_count": "DOUBLE",
+    "lfm_affective_liwc_verb": "DOUBLE",
+    "lfm_affective_liwc_we": "DOUBLE",
+    "lfm_affective_liwc_work": "DOUBLE",
+    "lfm_affective_liwc_you": "DOUBLE",
+    "lfm_affective_mpqa_negative": "DOUBLE",
+    "lfm_affective_mpqa_positive": "DOUBLE",
+    "lfm_affective_negation_count": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_anger": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_anticipation": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_disgust": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_fear": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_joy": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_negative": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_positive": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_sadness": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_surprise": "DOUBLE",
+    "lfm_affective_nrcaffectintensity_trust": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_anger": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_anticipation": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_disgust": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_fear": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_joy": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_negative": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_positive": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_sadness": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_surprise": "DOUBLE",
+    "lfm_affective_nrcemotionwordlevel_trust": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_anger": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_anticipation": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_disgust": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_fear": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_joy": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_negative": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_positive": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_sadness": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_surprise": "DOUBLE",
+    "lfm_affective_nrcexpandedemotion_trust": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_anger": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_anticipation": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_disgust": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_fear": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_joy": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_negative": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_positive": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_sadness": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_surprise": "DOUBLE",
+    "lfm_affective_nrchashtagemotion_trust": "DOUBLE",
+    "lfm_affective_nrchashtagsentiment_negativescore": "DOUBLE",
+    "lfm_affective_nrchashtagsentiment_positivescore": "DOUBLE",
+    "lfm_affective_sentiment140_negativescore": "DOUBLE",
+    "lfm_affective_sentiment140_positivescore": "DOUBLE",
+    "lfm_affective_sentiwordnet_negativescore": "DOUBLE",
+    "lfm_affective_sentiwordnet_positivescore": "DOUBLE",
+    "lfm_compression_ratio": "DOUBLE",
+    "lfm_entropy": "DOUBLE",
+    "lfm_genre": "VARCHAR",
+    "lfm_lexical_average_token_length": "DOUBLE",
+    "lfm_lexical_average_tokens_per_line": "DOUBLE",
+    "lfm_lexical_blank_line_count": "BIGINT",
+    "lfm_lexical_blank_line_ratio": "DOUBLE",
+    "lfm_lexical_character_count": "BIGINT",
+    "lfm_lexical_colon_count": "BIGINT",
+    "lfm_lexical_comma_count": "BIGINT",
+    "lfm_lexical_digit_count": "BIGINT",
+    "lfm_lexical_digit_ratio": "DOUBLE",
+    "lfm_lexical_dis_legomenon_ratio": "DOUBLE",
+    "lfm_lexical_dot_count": "BIGINT",
+    "lfm_lexical_dugast": "DOUBLE",
+    "lfm_lexical_exclamation_mark_count": "BIGINT",
+    "lfm_lexical_hapax_legomenon_ratio": "DOUBLE",
+    "lfm_lexical_herdan": "DOUBLE",
+    "lfm_lexical_hyphen_count": "BIGINT",
+    "lfm_lexical_line_count": "BIGINT",
+    "lfm_lexical_maas": "DOUBLE",
+    "lfm_lexical_mtld": "DOUBLE",
+    "lfm_lexical_parens_count": "BIGINT",
+    "lfm_lexical_past_tense_ratio": "DOUBLE",
+    "lfm_lexical_pronoun_frequency": "DOUBLE",
+    "lfm_lexical_punctuation_count": "BIGINT",
+    "lfm_lexical_punctuation_ratio": "DOUBLE",
+    "lfm_lexical_question_mark_count": "BIGINT",
+    "lfm_lexical_quote_count": "BIGINT",
+    "lfm_lexical_repeated_line_ratio": "DOUBLE",
+    "lfm_lexical_repeated_token_ratio": "DOUBLE",
+    "lfm_lexical_semicolon_count": "BIGINT",
+    "lfm_lexical_stop_word_count": "BIGINT",
+    "lfm_lexical_stop_word_ratio": "DOUBLE",
+    "lfm_lexical_stop_words_per_line": "DOUBLE",
+    "lfm_lexical_summer": "DOUBLE",
+    "lfm_lexical_token_count": "BIGINT",
+    "lfm_lexical_tris_legomenon_ratio": "DOUBLE",
+    "lfm_lexical_unique_bigram_ratio": "DOUBLE",
+    "lfm_lexical_unique_line_count": "BIGINT",
+    "lfm_lexical_unique_tokens_per_line": "DOUBLE",
+    "lfm_lexical_unique_trigram_ratio": "DOUBLE",
+    "lfm_playcount": "BIGINT",
+    "lfm_readability_automated_readability_index": "DOUBLE",
+    "lfm_readability_coleman_liau_index": "DOUBLE",
+    "lfm_readability_crawford": "DOUBLE",
+    "lfm_readability_dale_chall_readability_score": "DOUBLE",
+    "lfm_readability_difficult_words": "BIGINT",
+    "lfm_readability_fernandez_huerta": "DOUBLE",
+    "lfm_readability_flesch_kincaid_grade": "DOUBLE",
+    "lfm_readability_flesch_reading_ease": "DOUBLE",
+    "lfm_readability_gunning_fog": "DOUBLE",
+    "lfm_readability_gutierrez_polini": "DOUBLE",
+    "lfm_readability_linsear_write_formula": "DOUBLE",
+    "lfm_readability_smog": "DOUBLE",
+    "lfm_readability_szigriszt_pazos": "DOUBLE",
+    "lfm_record_key": "VARCHAR",
+    "lfm_release_date": "VARCHAR",
+    "lfm_release_date_numberlong": "VARCHAR",
+    "lfm_release_year": "BIGINT",
+    "lfm_rhyme_alliterations_len_2": "BIGINT",
+    "lfm_rhyme_alliterations_len_3": "BIGINT",
+    "lfm_rhyme_alliterations_len_4_plus": "BIGINT",
+    "lfm_rhyme_num_alternating": "BIGINT",
+    "lfm_rhyme_num_clerihews": "BIGINT",
+    "lfm_rhyme_num_couplets": "BIGINT",
+    "lfm_rhyme_num_nested": "BIGINT",
+    "lfm_rhyme_rhyme_percent": "DOUBLE",
+    "lfm_rhyme_unique_rhyme_words": "BIGINT",
+    "lfm_source_row_number": "BIGINT",
+    "lfm_structure_chorus_repetitions": "BIGINT",
+    "lfm_structure_ends_with_two_chorus_repetitions": "BOOLEAN",
+    "lfm_structure_number_of_sections": "BIGINT",
+    "lfm_structure_number_of_verses": "BIGINT",
+    "lfm_structure_pattern_two_choruses_at_least_one_verse": "BOOLEAN",
+    "lfm_structure_pattern_two_verses_at_least_one_chorus": "BOOLEAN",
+    "lfm_structure_pattern_verse_chorus_alternating": "BOOLEAN",
+    "lfm_structure_ratio_chorus_sections": "DOUBLE",
+    "lfm_structure_ratio_verses_sections": "DOUBLE",
+    "lfm_structure_starts_with_chorus": "BOOLEAN",
+    "lfm_structure_title_occurrences": "BIGINT",
+    "lfm_temporal_cohort": "VARCHAR",
+    "lfm_uncommon_words_ratio": "DOUBLE",
+    "track_name_raw": "VARCHAR",
+    "lfm_artist_unicode": "VARCHAR",
+    "lfm_artist_strict": "VARCHAR",
+    "lfm_artist_conservative": "VARCHAR",
+    "lfm_artist_primary": "VARCHAR",
+    "lfm_artist_collaborators_json": "VARCHAR",
+    "lfm_title_unicode": "VARCHAR",
+    "lfm_title_strict": "VARCHAR",
+    "lfm_title_conservative": "VARCHAR",
+    "lfm_title_base": "VARCHAR",
+    "lfm_remaster": "BOOLEAN",
+    "lfm_remix": "BOOLEAN",
+    "lfm_live": "BOOLEAN",
+    "lfm_acoustic": "BOOLEAN",
+    "lfm_radio_edit": "BOOLEAN",
+    "lfm_mono_stereo": "BOOLEAN",
+    "lfm_instrumental": "BOOLEAN",
+    "lfm_demo": "BOOLEAN",
+    "lfm_year_mentioned": "BIGINT",
+    "lfm_version_tags": "VARCHAR[]",
+    "lfm_composition_key": "VARCHAR",
+    "lfm_normalization_version": "VARCHAR",
+    "lfm_qf_release_year_implausible": "BOOLEAN"
+  },
+  "missing": {
+    "artist_name_raw": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "genius_lyrics_views": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_afinn_negativescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_afinn_positivescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_bingliu_negative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_bingliu_positive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_labmt_happiness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_achieve": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_adverb": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_affect": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_anger": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_anx": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_apostro": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_article": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_assent": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_auxverb": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_avg_sentence_length": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_bio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_body": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_cause": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_certain": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_cogmech": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_colon": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_comma": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_conj": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_dash": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_death": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_dictionary_words": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_discrep": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_excl": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_exclam": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_family": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_feel": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_filler": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_friend": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_funct": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_future": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_health": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_hear": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_home": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_humans": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_i": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_incl": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_ingest": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_inhib": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_insight": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_ipron": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_leisure": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_money": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_motion": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_negate": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_negemo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_nonfl": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_number": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_numerals": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_otherp": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_parenth": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_past": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_percept": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_period": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_posemo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_ppron": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_preps": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_present": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_pronoun": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_qmark": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_quant": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_quote": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_relativ": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_relig": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_sad": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_see": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_semic": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_sexual": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_shehe": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_six_letter_words": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_social": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_space": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_swear": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_tentat": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_they": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_time": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_total_word_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_verb": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_we": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_work": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_liwc_you": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_mpqa_negative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_mpqa_positive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_negation_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_anger": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_anticipation": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_disgust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_fear": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_joy": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_negative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_positive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_sadness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_surprise": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcaffectintensity_trust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_anger": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_anticipation": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_disgust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_fear": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_joy": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_negative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_positive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_sadness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_surprise": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcemotionwordlevel_trust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_anger": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_anticipation": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_disgust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_fear": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_joy": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_negative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_positive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_sadness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_surprise": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrcexpandedemotion_trust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_anger": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_anticipation": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_disgust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_fear": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_joy": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_negative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_positive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_sadness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_surprise": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagemotion_trust": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagsentiment_negativescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_nrchashtagsentiment_positivescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_sentiment140_negativescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_sentiment140_positivescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_sentiwordnet_negativescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_affective_sentiwordnet_positivescore": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_compression_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_entropy": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_genre": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_average_token_length": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_average_tokens_per_line": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_blank_line_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_blank_line_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_character_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_colon_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_comma_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_digit_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_digit_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_dis_legomenon_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_dot_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_dugast": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_exclamation_mark_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_hapax_legomenon_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_herdan": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_hyphen_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_line_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_maas": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_mtld": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_parens_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_past_tense_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_pronoun_frequency": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_punctuation_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_punctuation_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_question_mark_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_quote_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_repeated_line_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_repeated_token_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_semicolon_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_stop_word_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_stop_word_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_stop_words_per_line": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_summer": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_token_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_tris_legomenon_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_unique_bigram_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_unique_line_count": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_unique_tokens_per_line": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_lexical_unique_trigram_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_playcount": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_automated_readability_index": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_coleman_liau_index": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_crawford": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_dale_chall_readability_score": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_difficult_words": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_fernandez_huerta": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_flesch_kincaid_grade": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_flesch_reading_ease": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_gunning_fog": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_gutierrez_polini": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_linsear_write_formula": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_smog": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_readability_szigriszt_pazos": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_record_key": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_release_date": {
+      "count": 8930,
+      "percent": 1.532366
+    },
+    "lfm_release_date_numberlong": {
+      "count": 573829,
+      "percent": 98.467634
+    },
+    "lfm_release_year": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_alliterations_len_2": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_alliterations_len_3": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_alliterations_len_4_plus": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_num_alternating": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_num_clerihews": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_num_couplets": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_num_nested": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_rhyme_percent": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_rhyme_unique_rhyme_words": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_source_row_number": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_structure_chorus_repetitions": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_ends_with_two_chorus_repetitions": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_number_of_sections": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_number_of_verses": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_pattern_two_choruses_at_least_one_verse": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_pattern_two_verses_at_least_one_chorus": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_pattern_verse_chorus_alternating": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_ratio_chorus_sections": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_ratio_verses_sections": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_starts_with_chorus": {
+      "count": 224995,
+      "percent": 38.608584
+    },
+    "lfm_structure_title_occurrences": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_temporal_cohort": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_uncommon_words_ratio": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "track_name_raw": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_artist_unicode": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_artist_strict": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_artist_conservative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_artist_primary": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_artist_collaborators_json": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_title_unicode": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_title_strict": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_title_conservative": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_title_base": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_remaster": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_remix": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_live": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_acoustic": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_radio_edit": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_mono_stereo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_instrumental": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_demo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_year_mentioned": {
+      "count": 574373,
+      "percent": 98.560983
+    },
+    "lfm_version_tags": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_composition_key": {
+      "count": 140,
+      "percent": 0.024024
+    },
+    "lfm_normalization_version": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "lfm_qf_release_year_implausible": {
+      "count": 0,
+      "percent": 0.0
+    }
+  },
+  "duplicate_original_key_excess_rows": 0,
+  "duplicate_artist_title_excess_rows": 0,
+  "release_year_min_max": [
+    1,
+    2022
+  ],
+  "by_cohort": [
+    {
+      "cohort": "2010-2019",
+      "count": 360506
+    },
+    {
+      "cohort": "2000-2009",
+      "count": 114078
+    },
+    {
+      "cohort": "outside_main_period",
+      "count": 97638
+    },
+    {
+      "cohort": "2020-2023",
+      "count": 10537
+    }
+  ],
+  "by_genre": [
+    {
+      "genre": "rock",
+      "count": 226287
+    },
+    {
+      "genre": "pop",
+      "count": 200392
+    },
+    {
+      "genre": "rap",
+      "count": 99688
+    },
+    {
+      "genre": "r-b",
+      "count": 28713
+    },
+    {
+      "genre": "country",
+      "count": 19362
+    },
+    {
+      "genre": "non-music",
+      "count": 8119
+    },
+    {
+      "genre": "denmark",
+      "count": 193
+    },
+    {
+      "genre": "varnell-15-16-12th",
+      "count": 5
+    }
+  ],
+  "popularity_metrics": {
+    "genius_lyrics_views": {
+      "non_null": 582759,
+      "numeric": 582759,
+      "negative": 0,
+      "minimum": 0.0,
+      "median": 794.0,
+      "mean": 15392.635005207985,
+      "maximum": 17263469.0
+    },
+    "lfm_playcount": {
+      "non_null": 582759,
+      "numeric": 582759,
+      "negative": 0,
+      "minimum": 11.0,
+      "median": 75.0,
+      "mean": 426.17088024380575,
+      "maximum": 110933.0
+    }
+  },
+  "quality_flags": {
+    "lfm_qf_release_year_implausible": 127
+  },
+  "descriptor_count": 210,
+  "descriptor_names": [
+    "lfm_affective_afinn_negativescore",
+    "lfm_affective_afinn_positivescore",
+    "lfm_affective_bingliu_negative",
+    "lfm_affective_bingliu_positive",
+    "lfm_affective_labmt_happiness",
+    "lfm_affective_liwc_achieve",
+    "lfm_affective_liwc_adverb",
+    "lfm_affective_liwc_affect",
+    "lfm_affective_liwc_anger",
+    "lfm_affective_liwc_anx",
+    "lfm_affective_liwc_apostro",
+    "lfm_affective_liwc_article",
+    "lfm_affective_liwc_assent",
+    "lfm_affective_liwc_auxverb",
+    "lfm_affective_liwc_avg_sentence_length",
+    "lfm_affective_liwc_bio",
+    "lfm_affective_liwc_body",
+    "lfm_affective_liwc_cause",
+    "lfm_affective_liwc_certain",
+    "lfm_affective_liwc_cogmech",
+    "lfm_affective_liwc_colon",
+    "lfm_affective_liwc_comma",
+    "lfm_affective_liwc_conj",
+    "lfm_affective_liwc_dash",
+    "lfm_affective_liwc_death",
+    "lfm_affective_liwc_dictionary_words",
+    "lfm_affective_liwc_discrep",
+    "lfm_affective_liwc_excl",
+    "lfm_affective_liwc_exclam",
+    "lfm_affective_liwc_family",
+    "lfm_affective_liwc_feel",
+    "lfm_affective_liwc_filler",
+    "lfm_affective_liwc_friend",
+    "lfm_affective_liwc_funct",
+    "lfm_affective_liwc_future",
+    "lfm_affective_liwc_health",
+    "lfm_affective_liwc_hear",
+    "lfm_affective_liwc_home",
+    "lfm_affective_liwc_humans",
+    "lfm_affective_liwc_i",
+    "lfm_affective_liwc_incl",
+    "lfm_affective_liwc_ingest",
+    "lfm_affective_liwc_inhib",
+    "lfm_affective_liwc_insight",
+    "lfm_affective_liwc_ipron",
+    "lfm_affective_liwc_leisure",
+    "lfm_affective_liwc_money",
+    "lfm_affective_liwc_motion",
+    "lfm_affective_liwc_negate",
+    "lfm_affective_liwc_negemo",
+    "lfm_affective_liwc_nonfl",
+    "lfm_affective_liwc_number",
+    "lfm_affective_liwc_numerals",
+    "lfm_affective_liwc_otherp",
+    "lfm_affective_liwc_parenth",
+    "lfm_affective_liwc_past",
+    "lfm_affective_liwc_percept",
+    "lfm_affective_liwc_period",
+    "lfm_affective_liwc_posemo",
+    "lfm_affective_liwc_ppron",
+    "lfm_affective_liwc_preps",
+    "lfm_affective_liwc_present",
+    "lfm_affective_liwc_pronoun",
+    "lfm_affective_liwc_qmark",
+    "lfm_affective_liwc_quant",
+    "lfm_affective_liwc_quote",
+    "lfm_affective_liwc_relativ",
+    "lfm_affective_liwc_relig",
+    "lfm_affective_liwc_sad",
+    "lfm_affective_liwc_see",
+    "lfm_affective_liwc_semic",
+    "lfm_affective_liwc_sexual",
+    "lfm_affective_liwc_shehe",
+    "lfm_affective_liwc_six_letter_words",
+    "lfm_affective_liwc_social",
+    "lfm_affective_liwc_space",
+    "lfm_affective_liwc_swear",
+    "lfm_affective_liwc_tentat",
+    "lfm_affective_liwc_they",
+    "lfm_affective_liwc_time",
+    "lfm_affective_liwc_total_word_count",
+    "lfm_affective_liwc_verb",
+    "lfm_affective_liwc_we",
+    "lfm_affective_liwc_work",
+    "lfm_affective_liwc_you",
+    "lfm_affective_mpqa_negative",
+    "lfm_affective_mpqa_positive",
+    "lfm_affective_negation_count",
+    "lfm_affective_nrcaffectintensity_anger",
+    "lfm_affective_nrcaffectintensity_anticipation",
+    "lfm_affective_nrcaffectintensity_disgust",
+    "lfm_affective_nrcaffectintensity_fear",
+    "lfm_affective_nrcaffectintensity_joy",
+    "lfm_affective_nrcaffectintensity_negative",
+    "lfm_affective_nrcaffectintensity_positive",
+    "lfm_affective_nrcaffectintensity_sadness",
+    "lfm_affective_nrcaffectintensity_surprise",
+    "lfm_affective_nrcaffectintensity_trust",
+    "lfm_affective_nrcemotionwordlevel_anger",
+    "lfm_affective_nrcemotionwordlevel_anticipation",
+    "lfm_affective_nrcemotionwordlevel_disgust",
+    "lfm_affective_nrcemotionwordlevel_fear",
+    "lfm_affective_nrcemotionwordlevel_joy",
+    "lfm_affective_nrcemotionwordlevel_negative",
+    "lfm_affective_nrcemotionwordlevel_positive",
+    "lfm_affective_nrcemotionwordlevel_sadness",
+    "lfm_affective_nrcemotionwordlevel_surprise",
+    "lfm_affective_nrcemotionwordlevel_trust",
+    "lfm_affective_nrcexpandedemotion_anger",
+    "lfm_affective_nrcexpandedemotion_anticipation",
+    "lfm_affective_nrcexpandedemotion_disgust",
+    "lfm_affective_nrcexpandedemotion_fear",
+    "lfm_affective_nrcexpandedemotion_joy",
+    "lfm_affective_nrcexpandedemotion_negative",
+    "lfm_affective_nrcexpandedemotion_positive",
+    "lfm_affective_nrcexpandedemotion_sadness",
+    "lfm_affective_nrcexpandedemotion_surprise",
+    "lfm_affective_nrcexpandedemotion_trust",
+    "lfm_affective_nrchashtagemotion_anger",
+    "lfm_affective_nrchashtagemotion_anticipation",
+    "lfm_affective_nrchashtagemotion_disgust",
+    "lfm_affective_nrchashtagemotion_fear",
+    "lfm_affective_nrchashtagemotion_joy",
+    "lfm_affective_nrchashtagemotion_negative",
+    "lfm_affective_nrchashtagemotion_positive",
+    "lfm_affective_nrchashtagemotion_sadness",
+    "lfm_affective_nrchashtagemotion_surprise",
+    "lfm_affective_nrchashtagemotion_trust",
+    "lfm_affective_nrchashtagsentiment_negativescore",
+    "lfm_affective_nrchashtagsentiment_positivescore",
+    "lfm_affective_sentiment140_negativescore",
+    "lfm_affective_sentiment140_positivescore",
+    "lfm_affective_sentiwordnet_negativescore",
+    "lfm_affective_sentiwordnet_positivescore",
+    "lfm_compression_ratio",
+    "lfm_entropy",
+    "lfm_lexical_average_token_length",
+    "lfm_lexical_average_tokens_per_line",
+    "lfm_lexical_blank_line_count",
+    "lfm_lexical_blank_line_ratio",
+    "lfm_lexical_character_count",
+    "lfm_lexical_colon_count",
+    "lfm_lexical_comma_count",
+    "lfm_lexical_digit_count",
+    "lfm_lexical_digit_ratio",
+    "lfm_lexical_dis_legomenon_ratio",
+    "lfm_lexical_dot_count",
+    "lfm_lexical_dugast",
+    "lfm_lexical_exclamation_mark_count",
+    "lfm_lexical_hapax_legomenon_ratio",
+    "lfm_lexical_herdan",
+    "lfm_lexical_hyphen_count",
+    "lfm_lexical_line_count",
+    "lfm_lexical_maas",
+    "lfm_lexical_mtld",
+    "lfm_lexical_parens_count",
+    "lfm_lexical_past_tense_ratio",
+    "lfm_lexical_pronoun_frequency",
+    "lfm_lexical_punctuation_count",
+    "lfm_lexical_punctuation_ratio",
+    "lfm_lexical_question_mark_count",
+    "lfm_lexical_quote_count",
+    "lfm_lexical_repeated_line_ratio",
+    "lfm_lexical_repeated_token_ratio",
+    "lfm_lexical_semicolon_count",
+    "lfm_lexical_stop_word_count",
+    "lfm_lexical_stop_word_ratio",
+    "lfm_lexical_stop_words_per_line",
+    "lfm_lexical_summer",
+    "lfm_lexical_token_count",
+    "lfm_lexical_tris_legomenon_ratio",
+    "lfm_lexical_unique_bigram_ratio",
+    "lfm_lexical_unique_line_count",
+    "lfm_lexical_unique_tokens_per_line",
+    "lfm_lexical_unique_trigram_ratio",
+    "lfm_readability_automated_readability_index",
+    "lfm_readability_coleman_liau_index",
+    "lfm_readability_crawford",
+    "lfm_readability_dale_chall_readability_score",
+    "lfm_readability_difficult_words",
+    "lfm_readability_fernandez_huerta",
+    "lfm_readability_flesch_kincaid_grade",
+    "lfm_readability_flesch_reading_ease",
+    "lfm_readability_gunning_fog",
+    "lfm_readability_gutierrez_polini",
+    "lfm_readability_linsear_write_formula",
+    "lfm_readability_smog",
+    "lfm_readability_szigriszt_pazos",
+    "lfm_rhyme_alliterations_len_2",
+    "lfm_rhyme_alliterations_len_3",
+    "lfm_rhyme_alliterations_len_4_plus",
+    "lfm_rhyme_num_alternating",
+    "lfm_rhyme_num_clerihews",
+    "lfm_rhyme_num_couplets",
+    "lfm_rhyme_num_nested",
+    "lfm_rhyme_rhyme_percent",
+    "lfm_rhyme_unique_rhyme_words",
+    "lfm_structure_chorus_repetitions",
+    "lfm_structure_ends_with_two_chorus_repetitions",
+    "lfm_structure_number_of_sections",
+    "lfm_structure_number_of_verses",
+    "lfm_structure_pattern_two_choruses_at_least_one_verse",
+    "lfm_structure_pattern_two_verses_at_least_one_chorus",
+    "lfm_structure_pattern_verse_chorus_alternating",
+    "lfm_structure_ratio_chorus_sections",
+    "lfm_structure_ratio_verses_sections",
+    "lfm_structure_starts_with_chorus",
+    "lfm_structure_title_occurrences",
+    "lfm_uncommon_words_ratio",
+    "lfm_qf_release_year_implausible"
+  ],
+  "semantic_note": {
+    "genius_lyrics_views": "Campo original popularity; visualizações da letra no Genius segundo Zenodo/artigo.",
+    "lfm_playcount": "Contagem de eventos de escuta na base LFM-2b; mantida separada."
+  }
+}

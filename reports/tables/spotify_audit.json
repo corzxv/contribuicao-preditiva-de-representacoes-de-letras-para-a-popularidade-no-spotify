@@ -1,0 +1,1180 @@
+{
+  "generated_at": "2026-08-18T01:51:31.791274+00:00",
+  "observed": {
+    "rows": 1159764,
+    "columns": 61,
+    "artists_distinct": 64159,
+    "titles_distinct": 882361,
+    "track_ids_distinct": 1159764,
+    "year_min": 2000,
+    "year_max": 2023
+  },
+  "schema": {
+    "spotify_row_id": "UInt32",
+    "artist_name": "String",
+    "track_name": "String",
+    "track_id": "String",
+    "year": "Int64",
+    "genre": "String",
+    "danceability": "Float64",
+    "energy": "Float64",
+    "key": "Int64",
+    "loudness": "Float64",
+    "mode": "Int64",
+    "speechiness": "Float64",
+    "acousticness": "Float64",
+    "instrumentalness": "Float64",
+    "liveness": "Float64",
+    "valence": "Float64",
+    "tempo": "Float64",
+    "duration_ms": "Int64",
+    "time_signature": "Int64",
+    "artist_name_raw": "String",
+    "track_name_raw": "String",
+    "spotify_popularity": "Float64",
+    "temporal_cohort": "String",
+    "artist_unicode": "String",
+    "artist_strict": "String",
+    "artist_conservative": "String",
+    "artist_primary": "String",
+    "artist_collaborators_json": "String",
+    "title_unicode": "String",
+    "title_strict": "String",
+    "title_conservative": "String",
+    "title_base": "String",
+    "remaster": "Boolean",
+    "remix": "Boolean",
+    "live": "Boolean",
+    "acoustic": "Boolean",
+    "radio_edit": "Boolean",
+    "mono_stereo": "Boolean",
+    "instrumental": "Boolean",
+    "demo": "Boolean",
+    "year_mentioned": "Int64",
+    "version_tags": "List(String)",
+    "composition_key": "String",
+    "normalization_version": "String",
+    "qf_track_id_invalid": "Boolean",
+    "qf_spotify_popularity_out_of_range": "Boolean",
+    "qf_year_implausible": "Boolean",
+    "qf_duration_nonpositive": "Boolean",
+    "qf_tempo_nonpositive": "Boolean",
+    "qf_danceability_out_of_range": "Boolean",
+    "qf_energy_out_of_range": "Boolean",
+    "qf_speechiness_out_of_range": "Boolean",
+    "qf_acousticness_out_of_range": "Boolean",
+    "qf_instrumentalness_out_of_range": "Boolean",
+    "qf_liveness_out_of_range": "Boolean",
+    "qf_valence_out_of_range": "Boolean",
+    "qf_key_invalid": "Boolean",
+    "qf_mode_invalid": "Boolean",
+    "qf_time_signature_invalid": "Boolean",
+    "qf_any": "Boolean",
+    "qf_track_id_duplicate": "Boolean"
+  },
+  "safe_sample": [
+    {
+      "track_id": "53QF56cjZA9RTuuMZDrSA6",
+      "artist_name_raw": "Jason Mraz",
+      "track_name_raw": "I Won't Give Up",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 68.0
+    },
+    {
+      "track_id": "1s8tP3jP4GZcyHDsjvw218",
+      "artist_name_raw": "Jason Mraz",
+      "track_name_raw": "93 Million Miles",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 50.0
+    },
+    {
+      "track_id": "7BRCa8MPiyuvr2VU3O9W0F",
+      "artist_name_raw": "Joshua Hyslop",
+      "track_name_raw": "Do Not Let Me Go",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 57.0
+    },
+    {
+      "track_id": "63wsZUhUZLlh1OsyrZq7sz",
+      "artist_name_raw": "Boyce Avenue",
+      "track_name_raw": "Fast Car",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 58.0
+    },
+    {
+      "track_id": "6nXIYClvJAfi6ujLiKqEq8",
+      "artist_name_raw": "Andrew Belle",
+      "track_name_raw": "Sky's Still Blue",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 54.0
+    },
+    {
+      "track_id": "24NvptbNKGs6sPy1Vh1O0v",
+      "artist_name_raw": "Chris Smither",
+      "track_name_raw": "What They Say",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 48.0
+    },
+    {
+      "track_id": "0BP7hSvLAG3URGrEvNNbGM",
+      "artist_name_raw": "Matt Wertz",
+      "track_name_raw": "Walking in a Winter Wonderland",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 48.0
+    },
+    {
+      "track_id": "3Y6BuzQCg9p4yH347Nn8OW",
+      "artist_name_raw": "Green River Ordinance",
+      "track_name_raw": "Dancing Shoes",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 45.0
+    },
+    {
+      "track_id": "3ce7k1L4EkZppZPz1EJWTS",
+      "artist_name_raw": "Jason Mraz",
+      "track_name_raw": "Living in the Moment",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 44.0
+    },
+    {
+      "track_id": "2EKxmYmUdAVXlaHCnnW13o",
+      "artist_name_raw": "Boyce Avenue",
+      "track_name_raw": "Heaven",
+      "year": 2012,
+      "genre": "acoustic",
+      "spotify_popularity": 58.0
+    }
+  ],
+  "missing": {
+    "spotify_row_id": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "artist_name": {
+      "count": 15,
+      "percent": 0.001293
+    },
+    "track_name": {
+      "count": 1,
+      "percent": 8.6e-05
+    },
+    "track_id": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "year": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "genre": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "danceability": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "energy": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "key": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "loudness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "mode": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "speechiness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "acousticness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "instrumentalness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "liveness": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "valence": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "tempo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "duration_ms": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "time_signature": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "artist_name_raw": {
+      "count": 15,
+      "percent": 0.001293
+    },
+    "track_name_raw": {
+      "count": 1,
+      "percent": 8.6e-05
+    },
+    "spotify_popularity": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "temporal_cohort": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "artist_unicode": {
+      "count": 15,
+      "percent": 0.001293
+    },
+    "artist_strict": {
+      "count": 15,
+      "percent": 0.001293
+    },
+    "artist_conservative": {
+      "count": 15,
+      "percent": 0.001293
+    },
+    "artist_primary": {
+      "count": 15,
+      "percent": 0.001293
+    },
+    "artist_collaborators_json": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "title_unicode": {
+      "count": 1,
+      "percent": 8.6e-05
+    },
+    "title_strict": {
+      "count": 1,
+      "percent": 8.6e-05
+    },
+    "title_conservative": {
+      "count": 1,
+      "percent": 8.6e-05
+    },
+    "title_base": {
+      "count": 1,
+      "percent": 8.6e-05
+    },
+    "remaster": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "remix": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "live": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "acoustic": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "radio_edit": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "mono_stereo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "instrumental": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "demo": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "year_mentioned": {
+      "count": 1133959,
+      "percent": 97.774978
+    },
+    "version_tags": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "composition_key": {
+      "count": 145,
+      "percent": 0.012503
+    },
+    "normalization_version": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_track_id_invalid": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_spotify_popularity_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_year_implausible": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_duration_nonpositive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_tempo_nonpositive": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_danceability_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_energy_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_speechiness_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_acousticness_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_instrumentalness_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_liveness_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_valence_out_of_range": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_key_invalid": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_mode_invalid": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_time_signature_invalid": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_any": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "qf_track_id_duplicate": {
+      "count": 0,
+      "percent": 0.0
+    }
+  },
+  "cardinality": {
+    "spotify_row_id": 1159764,
+    "artist_name": 64159,
+    "track_name": 882361,
+    "track_id": 1159764,
+    "year": 24,
+    "genre": 82,
+    "danceability": 1364,
+    "energy": 3116,
+    "key": 12,
+    "loudness": 37368,
+    "mode": 2,
+    "speechiness": 1655,
+    "acousticness": 5398,
+    "instrumentalness": 5402,
+    "liveness": 1816,
+    "valence": 2177,
+    "tempo": 135697,
+    "duration_ms": 258021,
+    "time_signature": 5,
+    "artist_name_raw": 64159,
+    "track_name_raw": 882361,
+    "spotify_popularity": 98,
+    "temporal_cohort": 3,
+    "artist_unicode": 64159,
+    "artist_strict": 64051,
+    "artist_conservative": 63989,
+    "artist_primary": 64153,
+    "artist_collaborators_json": 13,
+    "title_unicode": 881555,
+    "title_strict": 853537,
+    "title_conservative": 838630,
+    "title_base": 788600,
+    "remaster": 2,
+    "remix": 2,
+    "live": 2,
+    "acoustic": 2,
+    "radio_edit": 2,
+    "mono_stereo": 2,
+    "instrumental": 2,
+    "demo": 2,
+    "year_mentioned": 167,
+    "version_tags": 49,
+    "composition_key": 1075470,
+    "normalization_version": 1,
+    "qf_track_id_invalid": 1,
+    "qf_spotify_popularity_out_of_range": 1,
+    "qf_year_implausible": 1,
+    "qf_duration_nonpositive": 1,
+    "qf_tempo_nonpositive": 2,
+    "qf_danceability_out_of_range": 1,
+    "qf_energy_out_of_range": 1,
+    "qf_speechiness_out_of_range": 1,
+    "qf_acousticness_out_of_range": 1,
+    "qf_instrumentalness_out_of_range": 1,
+    "qf_liveness_out_of_range": 1,
+    "qf_valence_out_of_range": 1,
+    "qf_key_invalid": 1,
+    "qf_mode_invalid": 1,
+    "qf_time_signature_invalid": 1,
+    "qf_any": 2,
+    "qf_track_id_duplicate": 1
+  },
+  "duplicate_complete_rows_excluding_row_id": 0,
+  "duplicate_track_id_rows": 0,
+  "duplicate_artist_title_rows": 0,
+  "composition_keys_with_multiple_rows": 56380,
+  "by_year": [
+    {
+      "year": 2018,
+      "len": 56572
+    },
+    {
+      "year": 2017,
+      "len": 56241
+    },
+    {
+      "year": 2019,
+      "len": 55793
+    },
+    {
+      "year": 2020,
+      "len": 55066
+    },
+    {
+      "year": 2012,
+      "len": 54797
+    },
+    {
+      "year": 2022,
+      "len": 53692
+    },
+    {
+      "year": 2021,
+      "len": 53566
+    },
+    {
+      "year": 2013,
+      "len": 53216
+    },
+    {
+      "year": 2014,
+      "len": 53179
+    },
+    {
+      "year": 2015,
+      "len": 51607
+    },
+    {
+      "year": 2008,
+      "len": 47432
+    },
+    {
+      "year": 2009,
+      "len": 46869
+    },
+    {
+      "year": 2010,
+      "len": 46868
+    },
+    {
+      "year": 2011,
+      "len": 46444
+    },
+    {
+      "year": 2007,
+      "len": 46001
+    },
+    {
+      "year": 2006,
+      "len": 45474
+    },
+    {
+      "year": 2000,
+      "len": 44034
+    },
+    {
+      "year": 2005,
+      "len": 43780
+    },
+    {
+      "year": 2004,
+      "len": 43390
+    },
+    {
+      "year": 2003,
+      "len": 42368
+    },
+    {
+      "year": 2001,
+      "len": 42351
+    },
+    {
+      "year": 2002,
+      "len": 42102
+    },
+    {
+      "year": 2016,
+      "len": 40273
+    },
+    {
+      "year": 2023,
+      "len": 38649
+    }
+  ],
+  "by_cohort": [
+    {
+      "temporal_cohort": "2010-2019",
+      "len": 514990
+    },
+    {
+      "temporal_cohort": "2000-2009",
+      "len": 443801
+    },
+    {
+      "temporal_cohort": "2020-2023",
+      "len": 200973
+    }
+  ],
+  "by_genre": [
+    {
+      "genre": "black-metal",
+      "len": 21852
+    },
+    {
+      "genre": "gospel",
+      "len": 21621
+    },
+    {
+      "genre": "ambient",
+      "len": 21389
+    },
+    {
+      "genre": "acoustic",
+      "len": 21097
+    },
+    {
+      "genre": "alt-rock",
+      "len": 20918
+    },
+    {
+      "genre": "emo",
+      "len": 20845
+    },
+    {
+      "genre": "indian",
+      "len": 20583
+    },
+    {
+      "genre": "k-pop",
+      "len": 20004
+    },
+    {
+      "genre": "new-age",
+      "len": 19911
+    },
+    {
+      "genre": "blues",
+      "len": 19682
+    },
+    {
+      "genre": "forro",
+      "len": 19379
+    },
+    {
+      "genre": "comedy",
+      "len": 19334
+    },
+    {
+      "genre": "spanish",
+      "len": 19158
+    },
+    {
+      "genre": "chill",
+      "len": 18906
+    },
+    {
+      "genre": "dancehall",
+      "len": 18788
+    },
+    {
+      "genre": "dub",
+      "len": 18785
+    },
+    {
+      "genre": "samba",
+      "len": 18599
+    },
+    {
+      "genre": "french",
+      "len": 18519
+    },
+    {
+      "genre": "classical",
+      "len": 18259
+    },
+    {
+      "genre": "death-metal",
+      "len": 18038
+    },
+    {
+      "genre": "deep-house",
+      "len": 17896
+    },
+    {
+      "genre": "country",
+      "len": 17883
+    },
+    {
+      "genre": "sleep",
+      "len": 17851
+    },
+    {
+      "genre": "sertanejo",
+      "len": 17566
+    },
+    {
+      "genre": "salsa",
+      "len": 17501
+    },
+    {
+      "genre": "goth",
+      "len": 17381
+    },
+    {
+      "genre": "guitar",
+      "len": 17266
+    },
+    {
+      "genre": "dance",
+      "len": 17212
+    },
+    {
+      "genre": "power-pop",
+      "len": 17161
+    },
+    {
+      "genre": "garage",
+      "len": 17123
+    },
+    {
+      "genre": "disco",
+      "len": 16987
+    },
+    {
+      "genre": "pop-film",
+      "len": 16907
+    },
+    {
+      "genre": "german",
+      "len": 16417
+    },
+    {
+      "genre": "folk",
+      "len": 16170
+    },
+    {
+      "genre": "hardcore",
+      "len": 15993
+    },
+    {
+      "genre": "jazz",
+      "len": 15943
+    },
+    {
+      "genre": "rock-n-roll",
+      "len": 15891
+    },
+    {
+      "genre": "cantopop",
+      "len": 15773
+    },
+    {
+      "genre": "hip-hop",
+      "len": 15703
+    },
+    {
+      "genre": "industrial",
+      "len": 15245
+    },
+    {
+      "genre": "minimal-techno",
+      "len": 15198
+    },
+    {
+      "genre": "funk",
+      "len": 15136
+    },
+    {
+      "genre": "opera",
+      "len": 15079
+    },
+    {
+      "genre": "tango",
+      "len": 15069
+    },
+    {
+      "genre": "heavy-metal",
+      "len": 14862
+    },
+    {
+      "genre": "club",
+      "len": 14678
+    },
+    {
+      "genre": "drum-and-bass",
+      "len": 14591
+    },
+    {
+      "genre": "grindcore",
+      "len": 14509
+    },
+    {
+      "genre": "singer-songwriter",
+      "len": 14035
+    },
+    {
+      "genre": "hard-rock",
+      "len": 13800
+    },
+    {
+      "genre": "piano",
+      "len": 13784
+    },
+    {
+      "genre": "ska",
+      "len": 13776
+    },
+    {
+      "genre": "groove",
+      "len": 13366
+    },
+    {
+      "genre": "psych-rock",
+      "len": 12789
+    },
+    {
+      "genre": "hardstyle",
+      "len": 12420
+    },
+    {
+      "genre": "afrobeat",
+      "len": 12395
+    },
+    {
+      "genre": "breakbeat",
+      "len": 12256
+    },
+    {
+      "genre": "swedish",
+      "len": 11616
+    },
+    {
+      "genre": "electro",
+      "len": 11406
+    },
+    {
+      "genre": "trip-hop",
+      "len": 11285
+    },
+    {
+      "genre": "show-tunes",
+      "len": 11101
+    },
+    {
+      "genre": "edm",
+      "len": 10671
+    },
+    {
+      "genre": "progressive-house",
+      "len": 10589
+    },
+    {
+      "genre": "indie-pop",
+      "len": 10022
+    },
+    {
+      "genre": "trance",
+      "len": 9592
+    },
+    {
+      "genre": "party",
+      "len": 9548
+    },
+    {
+      "genre": "electronic",
+      "len": 9369
+    },
+    {
+      "genre": "soul",
+      "len": 8974
+    },
+    {
+      "genre": "techno",
+      "len": 7898
+    },
+    {
+      "genre": "punk-rock",
+      "len": 7086
+    },
+    {
+      "genre": "metal",
+      "len": 7020
+    },
+    {
+      "genre": "romance",
+      "len": 6518
+    },
+    {
+      "genre": "metalcore",
+      "len": 6267
+    },
+    {
+      "genre": "pop",
+      "len": 6235
+    },
+    {
+      "genre": "punk",
+      "len": 6197
+    },
+    {
+      "genre": "sad",
+      "len": 6086
+    },
+    {
+      "genre": "house",
+      "len": 5233
+    },
+    {
+      "genre": "chicago-house",
+      "len": 5170
+    },
+    {
+      "genre": "dubstep",
+      "len": 4774
+    },
+    {
+      "genre": "detroit-techno",
+      "len": 3920
+    },
+    {
+      "genre": "rock",
+      "len": 3319
+    },
+    {
+      "genre": "songwriter",
+      "len": 589
+    }
+  ],
+  "popularity": {
+    "count": 1159764,
+    "mean": 18.38312277325387,
+    "median": 15.0,
+    "min": 0.0,
+    "max": 100.0,
+    "quantiles": {
+      "0.01": 0.0,
+      "0.05": 0.0,
+      "0.25": 5.0,
+      "0.5": 15.0,
+      "0.75": 29.0,
+      "0.95": 49.0,
+      "0.99": 62.0
+    },
+    "zero_count": 158391,
+    "zero_percent": 13.657175
+  },
+  "acoustic_summary": {
+    "danceability": {
+      "mean": 0.5374382319161484,
+      "median": 0.55,
+      "min": 0.0,
+      "max": 0.993
+    },
+    "energy": {
+      "mean": 0.639669899314257,
+      "median": 0.694,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "loudness": {
+      "mean": -8.981352824367715,
+      "median": -7.45,
+      "min": -58.1,
+      "max": 6.172
+    },
+    "speechiness": {
+      "mean": 0.09281476791830062,
+      "median": 0.0507,
+      "min": 0.0,
+      "max": 0.971
+    },
+    "acousticness": {
+      "mean": 0.32153695752021966,
+      "median": 0.147,
+      "min": 0.0,
+      "max": 0.996
+    },
+    "instrumentalness": {
+      "mean": 0.2523488886741268,
+      "median": 0.00176,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "liveness": {
+      "mean": 0.22301887352944222,
+      "median": 0.134,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "valence": {
+      "mean": 0.45556359603419316,
+      "median": 0.438,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "tempo": {
+      "mean": 121.37713723309227,
+      "median": 121.931,
+      "min": 0.0,
+      "max": 249.993
+    },
+    "duration_ms": {
+      "mean": 249561.78122359377,
+      "median": 225744.0,
+      "min": 2073.0,
+      "max": 6000495.0
+    }
+  },
+  "descriptive_correlations_non_causal": [
+    {
+      "spotify_popularity": 1.0,
+      "danceability": 0.0985326407131331,
+      "energy": 0.00940139761838347,
+      "loudness": 0.10409653192967813,
+      "speechiness": -0.024700490932065906,
+      "acousticness": -0.05918052861828134,
+      "instrumentalness": -0.15289291166851646,
+      "liveness": -0.05696845810655382,
+      "valence": -0.018070226313803214,
+      "tempo": 0.00256618565298109,
+      "duration_ms": -0.1184840090780789
+    },
+    {
+      "spotify_popularity": 0.0985326407131331,
+      "danceability": 1.0,
+      "energy": 0.13926746766801554,
+      "loudness": 0.25717419839716127,
+      "speechiness": 0.08653619781288378,
+      "acousticness": -0.1764556155885704,
+      "instrumentalness": -0.1691219724460007,
+      "liveness": -0.11967145355012734,
+      "valence": 0.5198999113323384,
+      "tempo": -0.016157029171593278,
+      "duration_ms": -0.025873739970259664
+    },
+    {
+      "spotify_popularity": 0.00940139761838347,
+      "danceability": 0.13926746766801557,
+      "energy": 1.0,
+      "loudness": 0.781005656561051,
+      "speechiness": 0.11417636492767685,
+      "acousticness": -0.7526617580488321,
+      "instrumentalness": -0.18433136354482985,
+      "liveness": 0.18911722105693435,
+      "valence": 0.24796790171520958,
+      "tempo": 0.2651668176563364,
+      "duration_ms": 0.012422163208584677
+    },
+    {
+      "spotify_popularity": 0.10409653192967812,
+      "danceability": 0.25717419839716127,
+      "energy": 0.7810056565610511,
+      "loudness": 1.0,
+      "speechiness": 0.02312584692177226,
+      "acousticness": -0.6216982659169921,
+      "instrumentalness": -0.4035747986283193,
+      "liveness": 0.09077939940412251,
+      "valence": 0.29491196595930497,
+      "tempo": 0.23402718320875346,
+      "duration_ms": -0.04847393408743467
+    },
+    {
+      "spotify_popularity": -0.024700490932065906,
+      "danceability": 0.08653619781288378,
+      "energy": 0.11417636492767685,
+      "loudness": 0.02312584692177226,
+      "speechiness": 1.0,
+      "acousticness": 0.031638434577285664,
+      "instrumentalness": -0.14241714882663778,
+      "liveness": 0.282482429192337,
+      "valence": 0.039348694098875384,
+      "tempo": -0.03194522399334212,
+      "duration_ms": -0.062395804378038634
+    },
+    {
+      "spotify_popularity": -0.05918052861828133,
+      "danceability": -0.17645561558857042,
+      "energy": -0.752661758048832,
+      "loudness": -0.621698265916992,
+      "speechiness": 0.031638434577285664,
+      "acousticness": 1.0,
+      "instrumentalness": 0.09428135009774752,
+      "liveness": -0.0305361908158407,
+      "valence": -0.10328512657179535,
+      "tempo": -0.24086076181927768,
+      "duration_ms": -0.06420455473776866
+    },
+    {
+      "spotify_popularity": -0.15289291166851646,
+      "danceability": -0.1691219724460007,
+      "energy": -0.18433136354482985,
+      "loudness": -0.40357479862831935,
+      "speechiness": -0.14241714882663778,
+      "acousticness": 0.09428135009774753,
+      "instrumentalness": 0.9999999999999999,
+      "liveness": -0.12997614492556644,
+      "valence": -0.3151999944477283,
+      "tempo": -0.03174476949144192,
+      "duration_ms": 0.16286991051577465
+    },
+    {
+      "spotify_popularity": -0.05696845810655383,
+      "danceability": -0.11967145355012734,
+      "energy": 0.18911722105693432,
+      "loudness": 0.0907793994041225,
+      "speechiness": 0.282482429192337,
+      "acousticness": -0.0305361908158407,
+      "instrumentalness": -0.12997614492556647,
+      "liveness": 0.9999999999999999,
+      "valence": 0.007963655602315932,
+      "tempo": -0.0028089568455481714,
+      "duration_ms": -0.007671928569770321
+    },
+    {
+      "spotify_popularity": -0.018070226313803214,
+      "danceability": 0.5198999113323384,
+      "energy": 0.24796790171520955,
+      "loudness": 0.29491196595930497,
+      "speechiness": 0.039348694098875384,
+      "acousticness": -0.10328512657179534,
+      "instrumentalness": -0.3151999944477283,
+      "liveness": 0.007963655602315932,
+      "valence": 1.0,
+      "tempo": 0.0830339884858316,
+      "duration_ms": -0.1314787990978108
+    },
+    {
+      "spotify_popularity": 0.0025661856529810905,
+      "danceability": -0.016157029171593278,
+      "energy": 0.2651668176563364,
+      "loudness": 0.23402718320875346,
+      "speechiness": -0.03194522399334212,
+      "acousticness": -0.24086076181927768,
+      "instrumentalness": -0.03174476949144192,
+      "liveness": -0.0028089568455481714,
+      "valence": 0.08303398848583159,
+      "tempo": 1.0,
+      "duration_ms": 0.010518426053856516
+    },
+    {
+      "spotify_popularity": -0.1184840090780789,
+      "danceability": -0.025873739970259668,
+      "energy": 0.012422163208584676,
+      "loudness": -0.048473934087434674,
+      "speechiness": -0.06239580437803865,
+      "acousticness": -0.06420455473776866,
+      "instrumentalness": 0.16286991051577465,
+      "liveness": -0.007671928569770322,
+      "valence": -0.1314787990978108,
+      "tempo": 0.010518426053856517,
+      "duration_ms": 1.0
+    }
+  ],
+  "quality_flags": {
+    "qf_track_id_invalid": 0,
+    "qf_spotify_popularity_out_of_range": 0,
+    "qf_year_implausible": 0,
+    "qf_duration_nonpositive": 0,
+    "qf_tempo_nonpositive": 1199,
+    "qf_danceability_out_of_range": 0,
+    "qf_energy_out_of_range": 0,
+    "qf_speechiness_out_of_range": 0,
+    "qf_acousticness_out_of_range": 0,
+    "qf_instrumentalness_out_of_range": 0,
+    "qf_liveness_out_of_range": 0,
+    "qf_valence_out_of_range": 0,
+    "qf_key_invalid": 0,
+    "qf_mode_invalid": 0,
+    "qf_time_signature_invalid": 0,
+    "qf_any": 1199,
+    "qf_track_id_duplicate": 0
+  },
+  "genre_balance_investigation": {
+    "coefficient_of_variation": 0.3601603619951421,
+    "share_categories_at_modal_count": 0.012195121951219513,
+    "possible_artificial_balance_signal": false,
+    "interpretation": "Heurística descritiva; não comprova o mecanismo de amostragem."
+  },
+  "benchmarks_supplied_not_observed": {
+    "rows": 1159764,
+    "track_ids_distinct": 1159764,
+    "artists_distinct": 64158,
+    "genres_distinct": 82,
+    "popularity_zero_percent": 13.66,
+    "popularity_mean": 18.38,
+    "popularity_median": 15.0
+  },
+  "benchmark_differences_observed_minus_benchmark": {
+    "rows_difference": 0,
+    "track_ids_difference": 0,
+    "artists_difference": 1,
+    "genres_difference": 0,
+    "popularity_zero_percentage_points_difference": -0.0028249999999996334,
+    "popularity_mean_difference": 0.003122773253871003,
+    "popularity_median_difference": 0.0
+  }
+}

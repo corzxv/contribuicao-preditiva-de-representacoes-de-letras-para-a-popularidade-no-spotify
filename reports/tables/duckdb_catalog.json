@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-08-18T01:51:36.861111+00:00",
+  "database": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\music_tcc.duckdb",
+  "datasets": {
+    "spotify_tracks": {
+      "status": "view_created",
+      "path": "data/processed/spotify_tracks.parquet",
+      "grain": "uma linha por registro Spotify",
+      "rows": 1159764
+    },
+    "lfm2b_tracks": {
+      "status": "view_created",
+      "path": "data/processed/lfm2b_tracks.parquet",
+      "grain": "uma linha por registro LFM2b",
+      "rows": 582759
+    },
+    "spotify_lfm_all_candidates": {
+      "status": "view_created",
+      "path": "data/processed/spotify_lfm_all_candidates.parquet",
+      "grain": "uma linha por par candidato",
+      "rows": 127350
+    },
+    "spotify_lfm_matches": {
+      "status": "view_created",
+      "path": "data/processed/spotify_lfm_matches.parquet",
+      "grain": "uma linha por par aceito",
+      "rows": 111758
+    },
+    "spotify_lfm_ambiguous": {
+      "status": "view_created",
+      "path": "data/processed/spotify_lfm_ambiguous.parquet",
+      "grain": "uma linha por par ambíguo",
+      "rows": 12135
+    },
+    "spotify_lfm_candidates_review": {
+      "status": "view_created",
+      "path": "data/processed/spotify_lfm_candidates_review.parquet",
+      "grain": "uma linha por candidato fuzzy pendente",
+      "rows": 3457
+    },
+    "spotify_lfm_rejected": {
+      "status": "view_created",
+      "path": "data/processed/spotify_lfm_rejected.parquet",
+      "grain": "uma linha por candidato rejeitado",
+      "rows": 0
+    },
+    "spotify_lfm_unmatched": {
+      "status": "view_created",
+      "path": "data/processed/spotify_lfm_unmatched.parquet",
+      "grain": "uma linha por registro Spotify sem candidato",
+      "rows": 1036804
+    },
+    "spotify_tracks_with_match_status": {
+      "status": "view_created",
+      "path": "data/processed/spotify_tracks_with_match_status.parquet",
+      "grain": "uma linha por registro Spotify",
+      "rows": 1159764
+    },
+    "modeling_base_lfm_v0_1": {
+      "status": "view_created",
+      "path": "data/processed/modeling_base_lfm_v0_1.parquet",
+      "grain": "uma linha por par Spotify-LFM2b aceito",
+      "rows": 111758
+    }
+  }
+}

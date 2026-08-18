@@ -1,0 +1,1836 @@
+{
+  "generated_at": "2026-08-18T01:33:47.493635+00:00",
+  "valid_rows": 582759,
+  "invalid_rows": 0,
+  "chunks": 24,
+  "paths": {
+    "_id.artist": {
+      "types": {
+        "str": 582759
+      },
+      "final_name": "artist_name_raw"
+    },
+    "_id.track": {
+      "types": {
+        "str": 582759
+      },
+      "final_name": "track_name_raw"
+    },
+    "affective.AFINN.NegativeScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_afinn_negativescore"
+    },
+    "affective.AFINN.PositiveScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_afinn_positivescore"
+    },
+    "affective.BingLiu.negative": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_bingliu_negative"
+    },
+    "affective.BingLiu.positive": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_bingliu_positive"
+    },
+    "affective.LIWC.>six_letter_words": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_six_letter_words"
+    },
+    "affective.LIWC.Apostro": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_apostro"
+    },
+    "affective.LIWC.Colon": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_colon"
+    },
+    "affective.LIWC.Comma": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_comma"
+    },
+    "affective.LIWC.Dash": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_dash"
+    },
+    "affective.LIWC.Exclam": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_exclam"
+    },
+    "affective.LIWC.OtherP": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_otherp"
+    },
+    "affective.LIWC.Parenth": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_parenth"
+    },
+    "affective.LIWC.Period": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_period"
+    },
+    "affective.LIWC.QMark": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_qmark"
+    },
+    "affective.LIWC.Quote": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_quote"
+    },
+    "affective.LIWC.SemiC": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_semic"
+    },
+    "affective.LIWC.achieve": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_achieve"
+    },
+    "affective.LIWC.adverb": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_adverb"
+    },
+    "affective.LIWC.affect": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_affect"
+    },
+    "affective.LIWC.anger": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_anger"
+    },
+    "affective.LIWC.anx": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_anx"
+    },
+    "affective.LIWC.article": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_article"
+    },
+    "affective.LIWC.assent": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_assent"
+    },
+    "affective.LIWC.auxverb": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_auxverb"
+    },
+    "affective.LIWC.avg_sentence_length": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_avg_sentence_length"
+    },
+    "affective.LIWC.bio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_bio"
+    },
+    "affective.LIWC.body": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_body"
+    },
+    "affective.LIWC.cause": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_cause"
+    },
+    "affective.LIWC.certain": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_certain"
+    },
+    "affective.LIWC.cogmech": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_cogmech"
+    },
+    "affective.LIWC.conj": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_conj"
+    },
+    "affective.LIWC.death": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_death"
+    },
+    "affective.LIWC.dictionary_words": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_dictionary_words"
+    },
+    "affective.LIWC.discrep": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_discrep"
+    },
+    "affective.LIWC.excl": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_excl"
+    },
+    "affective.LIWC.family": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_family"
+    },
+    "affective.LIWC.feel": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_feel"
+    },
+    "affective.LIWC.filler": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_filler"
+    },
+    "affective.LIWC.friend": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_friend"
+    },
+    "affective.LIWC.funct": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_funct"
+    },
+    "affective.LIWC.future": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_future"
+    },
+    "affective.LIWC.health": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_health"
+    },
+    "affective.LIWC.hear": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_hear"
+    },
+    "affective.LIWC.home": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_home"
+    },
+    "affective.LIWC.humans": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_humans"
+    },
+    "affective.LIWC.i": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_i"
+    },
+    "affective.LIWC.incl": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_incl"
+    },
+    "affective.LIWC.ingest": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_ingest"
+    },
+    "affective.LIWC.inhib": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_inhib"
+    },
+    "affective.LIWC.insight": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_insight"
+    },
+    "affective.LIWC.ipron": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_ipron"
+    },
+    "affective.LIWC.leisure": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_leisure"
+    },
+    "affective.LIWC.money": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_money"
+    },
+    "affective.LIWC.motion": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_motion"
+    },
+    "affective.LIWC.negate": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_negate"
+    },
+    "affective.LIWC.negemo": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_negemo"
+    },
+    "affective.LIWC.nonfl": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_nonfl"
+    },
+    "affective.LIWC.number": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_number"
+    },
+    "affective.LIWC.numerals": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_numerals"
+    },
+    "affective.LIWC.past": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_past"
+    },
+    "affective.LIWC.percept": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_percept"
+    },
+    "affective.LIWC.posemo": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_posemo"
+    },
+    "affective.LIWC.ppron": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_ppron"
+    },
+    "affective.LIWC.preps": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_preps"
+    },
+    "affective.LIWC.present": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_present"
+    },
+    "affective.LIWC.pronoun": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_pronoun"
+    },
+    "affective.LIWC.quant": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_quant"
+    },
+    "affective.LIWC.relativ": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_relativ"
+    },
+    "affective.LIWC.relig": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_relig"
+    },
+    "affective.LIWC.sad": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_sad"
+    },
+    "affective.LIWC.see": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_see"
+    },
+    "affective.LIWC.sexual": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_sexual"
+    },
+    "affective.LIWC.shehe": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_shehe"
+    },
+    "affective.LIWC.social": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_social"
+    },
+    "affective.LIWC.space": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_space"
+    },
+    "affective.LIWC.swear": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_swear"
+    },
+    "affective.LIWC.tentat": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_tentat"
+    },
+    "affective.LIWC.they": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_they"
+    },
+    "affective.LIWC.time": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_time"
+    },
+    "affective.LIWC.total_word_count": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_total_word_count"
+    },
+    "affective.LIWC.verb": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_verb"
+    },
+    "affective.LIWC.we": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_we"
+    },
+    "affective.LIWC.work": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_work"
+    },
+    "affective.LIWC.you": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_liwc_you"
+    },
+    "affective.LabMT.happiness": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_labmt_happiness"
+    },
+    "affective.MPQA.negative": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_mpqa_negative"
+    },
+    "affective.MPQA.positive": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_mpqa_positive"
+    },
+    "affective.NRCAffectIntensity.Anger": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_anger"
+    },
+    "affective.NRCAffectIntensity.Anticipation": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_anticipation"
+    },
+    "affective.NRCAffectIntensity.Disgust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_disgust"
+    },
+    "affective.NRCAffectIntensity.Fear": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_fear"
+    },
+    "affective.NRCAffectIntensity.Joy": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_joy"
+    },
+    "affective.NRCAffectIntensity.Negative": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_negative"
+    },
+    "affective.NRCAffectIntensity.Positive": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_positive"
+    },
+    "affective.NRCAffectIntensity.Sadness": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_sadness"
+    },
+    "affective.NRCAffectIntensity.Surprise": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_surprise"
+    },
+    "affective.NRCAffectIntensity.Trust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcaffectintensity_trust"
+    },
+    "affective.NRCEmotionWordlevel.Anger": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_anger"
+    },
+    "affective.NRCEmotionWordlevel.Anticipation": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_anticipation"
+    },
+    "affective.NRCEmotionWordlevel.Disgust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_disgust"
+    },
+    "affective.NRCEmotionWordlevel.Fear": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_fear"
+    },
+    "affective.NRCEmotionWordlevel.Joy": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_joy"
+    },
+    "affective.NRCEmotionWordlevel.Negative": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_negative"
+    },
+    "affective.NRCEmotionWordlevel.Positive": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_positive"
+    },
+    "affective.NRCEmotionWordlevel.Sadness": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_sadness"
+    },
+    "affective.NRCEmotionWordlevel.Surprise": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_surprise"
+    },
+    "affective.NRCEmotionWordlevel.Trust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcemotionwordlevel_trust"
+    },
+    "affective.NRCExpandedEmotion.Anger": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_anger"
+    },
+    "affective.NRCExpandedEmotion.Anticipation": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_anticipation"
+    },
+    "affective.NRCExpandedEmotion.Disgust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_disgust"
+    },
+    "affective.NRCExpandedEmotion.Fear": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_fear"
+    },
+    "affective.NRCExpandedEmotion.Joy": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_joy"
+    },
+    "affective.NRCExpandedEmotion.Negative": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_negative"
+    },
+    "affective.NRCExpandedEmotion.Positive": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_positive"
+    },
+    "affective.NRCExpandedEmotion.Sadness": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_sadness"
+    },
+    "affective.NRCExpandedEmotion.Surprise": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_surprise"
+    },
+    "affective.NRCExpandedEmotion.Trust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrcexpandedemotion_trust"
+    },
+    "affective.NRCHashtagEmotion.Anger": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_anger"
+    },
+    "affective.NRCHashtagEmotion.Anticipation": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_anticipation"
+    },
+    "affective.NRCHashtagEmotion.Disgust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_disgust"
+    },
+    "affective.NRCHashtagEmotion.Fear": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_fear"
+    },
+    "affective.NRCHashtagEmotion.Joy": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_joy"
+    },
+    "affective.NRCHashtagEmotion.Negative": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_negative"
+    },
+    "affective.NRCHashtagEmotion.Positive": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_positive"
+    },
+    "affective.NRCHashtagEmotion.Sadness": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_sadness"
+    },
+    "affective.NRCHashtagEmotion.Surprise": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_surprise"
+    },
+    "affective.NRCHashtagEmotion.Trust": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagemotion_trust"
+    },
+    "affective.NRCHashtagSentiment.NegativeScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagsentiment_negativescore"
+    },
+    "affective.NRCHashtagSentiment.PositiveScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_nrchashtagsentiment_positivescore"
+    },
+    "affective.Negation.count": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_negation_count"
+    },
+    "affective.SentiWordNet.NegativeScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_sentiwordnet_negativescore"
+    },
+    "affective.SentiWordNet.PositiveScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_sentiwordnet_positivescore"
+    },
+    "affective.Sentiment140.NegativeScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_sentiment140_negativescore"
+    },
+    "affective.Sentiment140.PositiveScore": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_affective_sentiment140_positivescore"
+    },
+    "features.compression_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_compression_ratio"
+    },
+    "features.entropy": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_entropy"
+    },
+    "features.lexical.average_token_length": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_average_token_length"
+    },
+    "features.lexical.average_tokens_per_line": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_average_tokens_per_line"
+    },
+    "features.lexical.blank_line_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_blank_line_count"
+    },
+    "features.lexical.blank_line_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_blank_line_ratio"
+    },
+    "features.lexical.character_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_character_count"
+    },
+    "features.lexical.colon_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_colon_count"
+    },
+    "features.lexical.comma_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_comma_count"
+    },
+    "features.lexical.digit_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_digit_count"
+    },
+    "features.lexical.digit_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_digit_ratio"
+    },
+    "features.lexical.dis_legomenon_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_dis_legomenon_ratio"
+    },
+    "features.lexical.dot_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_dot_count"
+    },
+    "features.lexical.dugast": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_dugast"
+    },
+    "features.lexical.exclamation_mark_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_exclamation_mark_count"
+    },
+    "features.lexical.hapax_legomenon_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_hapax_legomenon_ratio"
+    },
+    "features.lexical.herdan": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_herdan"
+    },
+    "features.lexical.hyphen_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_hyphen_count"
+    },
+    "features.lexical.line_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_line_count"
+    },
+    "features.lexical.maas": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_maas"
+    },
+    "features.lexical.mtld": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_mtld"
+    },
+    "features.lexical.parens_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_parens_count"
+    },
+    "features.lexical.past_tense_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_past_tense_ratio"
+    },
+    "features.lexical.pronoun_frequency": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_pronoun_frequency"
+    },
+    "features.lexical.punctuation_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_punctuation_count"
+    },
+    "features.lexical.punctuation_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_punctuation_ratio"
+    },
+    "features.lexical.question_mark_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_question_mark_count"
+    },
+    "features.lexical.quote_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_quote_count"
+    },
+    "features.lexical.repeated_line_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_repeated_line_ratio"
+    },
+    "features.lexical.repeated_token_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_repeated_token_ratio"
+    },
+    "features.lexical.semicolon_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_semicolon_count"
+    },
+    "features.lexical.stop_word_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_stop_word_count"
+    },
+    "features.lexical.stop_word_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_stop_word_ratio"
+    },
+    "features.lexical.stop_words_per_line": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_stop_words_per_line"
+    },
+    "features.lexical.summer": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_summer"
+    },
+    "features.lexical.token_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_token_count"
+    },
+    "features.lexical.tris_legomenon_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_tris_legomenon_ratio"
+    },
+    "features.lexical.unique_bigram_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_unique_bigram_ratio"
+    },
+    "features.lexical.unique_line_count": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_lexical_unique_line_count"
+    },
+    "features.lexical.unique_tokens_per_line": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_unique_tokens_per_line"
+    },
+    "features.lexical.unique_trigram_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_lexical_unique_trigram_ratio"
+    },
+    "features.readability.automated_readability_index": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_automated_readability_index"
+    },
+    "features.readability.coleman_liau_index": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_coleman_liau_index"
+    },
+    "features.readability.crawford": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_crawford"
+    },
+    "features.readability.dale_chall_readability_score": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_dale_chall_readability_score"
+    },
+    "features.readability.difficult_words": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_readability_difficult_words"
+    },
+    "features.readability.fernandez_huerta": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_fernandez_huerta"
+    },
+    "features.readability.flesch_kincaid_grade": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_flesch_kincaid_grade"
+    },
+    "features.readability.flesch_reading_ease": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_flesch_reading_ease"
+    },
+    "features.readability.gunning_fog": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_gunning_fog"
+    },
+    "features.readability.gutierrez_polini": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_gutierrez_polini"
+    },
+    "features.readability.linsear_write_formula": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_linsear_write_formula"
+    },
+    "features.readability.smog": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_smog"
+    },
+    "features.readability.szigriszt_pazos": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_readability_szigriszt_pazos"
+    },
+    "features.rhyme.alliterations_len_2": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_alliterations_len_2"
+    },
+    "features.rhyme.alliterations_len_3": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_alliterations_len_3"
+    },
+    "features.rhyme.alliterations_len_4_plus": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_alliterations_len_4_plus"
+    },
+    "features.rhyme.num_alternating": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_num_alternating"
+    },
+    "features.rhyme.num_clerihews": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_num_clerihews"
+    },
+    "features.rhyme.num_couplets": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_num_couplets"
+    },
+    "features.rhyme.num_nested": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_num_nested"
+    },
+    "features.rhyme.rhyme_percent": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_rhyme_rhyme_percent"
+    },
+    "features.rhyme.unique_rhyme_words": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_rhyme_unique_rhyme_words"
+    },
+    "features.structure.chorus_repetitions": {
+      "types": {
+        "int": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_chorus_repetitions"
+    },
+    "features.structure.ends_with_two_chorus_repetitions": {
+      "types": {
+        "bool": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_ends_with_two_chorus_repetitions"
+    },
+    "features.structure.number_of_sections": {
+      "types": {
+        "int": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_number_of_sections"
+    },
+    "features.structure.number_of_verses": {
+      "types": {
+        "int": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_number_of_verses"
+    },
+    "features.structure.pattern_two_choruses_at_least_one_verse": {
+      "types": {
+        "bool": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_pattern_two_choruses_at_least_one_verse"
+    },
+    "features.structure.pattern_two_verses_at_least_one_chorus": {
+      "types": {
+        "bool": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_pattern_two_verses_at_least_one_chorus"
+    },
+    "features.structure.pattern_verse_chorus_alternating": {
+      "types": {
+        "bool": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_pattern_verse_chorus_alternating"
+    },
+    "features.structure.ratio_chorus_sections": {
+      "types": {
+        "float": 325179,
+        "NoneType": 224995,
+        "int": 32585
+      },
+      "final_name": "lfm_structure_ratio_chorus_sections"
+    },
+    "features.structure.ratio_verses_sections": {
+      "types": {
+        "float": 325179,
+        "NoneType": 224995,
+        "int": 32585
+      },
+      "final_name": "lfm_structure_ratio_verses_sections"
+    },
+    "features.structure.starts_with_chorus": {
+      "types": {
+        "bool": 357764,
+        "NoneType": 224995
+      },
+      "final_name": "lfm_structure_starts_with_chorus"
+    },
+    "features.structure.title_occurrences": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_structure_title_occurrences"
+    },
+    "features.uncommon_words_ratio": {
+      "types": {
+        "float": 582759
+      },
+      "final_name": "lfm_uncommon_words_ratio"
+    },
+    "genre": {
+      "types": {
+        "str": 582759
+      },
+      "final_name": "lfm_genre"
+    },
+    "lfm_playcount": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "lfm_playcount"
+    },
+    "popularity": {
+      "types": {
+        "int": 582759
+      },
+      "final_name": "genius_lyrics_views"
+    },
+    "release.$date": {
+      "types": {
+        "str": 573829
+      },
+      "final_name": "lfm_release_date"
+    },
+    "release.$date.$numberLong": {
+      "types": {
+        "str": 8930
+      },
+      "final_name": "lfm_release_date_numberlong"
+    }
+  },
+  "schema_changes": {
+    "features.structure.chorus_repetitions": [
+      "NoneType",
+      "int"
+    ],
+    "features.structure.ends_with_two_chorus_repetitions": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.number_of_sections": [
+      "NoneType",
+      "int"
+    ],
+    "features.structure.number_of_verses": [
+      "NoneType",
+      "int"
+    ],
+    "features.structure.pattern_two_choruses_at_least_one_verse": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.pattern_two_verses_at_least_one_chorus": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.pattern_verse_chorus_alternating": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.ratio_chorus_sections": [
+      "NoneType",
+      "float",
+      "int"
+    ],
+    "features.structure.ratio_verses_sections": [
+      "NoneType",
+      "float",
+      "int"
+    ],
+    "features.structure.starts_with_chorus": [
+      "NoneType",
+      "bool"
+    ]
+  },
+  "final_schema": {
+    "artist_name_raw": "String",
+    "genius_lyrics_views": "Int64",
+    "lfm_affective_afinn_negativescore": "Float64",
+    "lfm_affective_afinn_positivescore": "Float64",
+    "lfm_affective_bingliu_negative": "Float64",
+    "lfm_affective_bingliu_positive": "Float64",
+    "lfm_affective_labmt_happiness": "Float64",
+    "lfm_affective_liwc_achieve": "Float64",
+    "lfm_affective_liwc_adverb": "Float64",
+    "lfm_affective_liwc_affect": "Float64",
+    "lfm_affective_liwc_anger": "Float64",
+    "lfm_affective_liwc_anx": "Float64",
+    "lfm_affective_liwc_apostro": "Float64",
+    "lfm_affective_liwc_article": "Float64",
+    "lfm_affective_liwc_assent": "Float64",
+    "lfm_affective_liwc_auxverb": "Float64",
+    "lfm_affective_liwc_avg_sentence_length": "Float64",
+    "lfm_affective_liwc_bio": "Float64",
+    "lfm_affective_liwc_body": "Float64",
+    "lfm_affective_liwc_cause": "Float64",
+    "lfm_affective_liwc_certain": "Float64",
+    "lfm_affective_liwc_cogmech": "Float64",
+    "lfm_affective_liwc_colon": "Float64",
+    "lfm_affective_liwc_comma": "Float64",
+    "lfm_affective_liwc_conj": "Float64",
+    "lfm_affective_liwc_dash": "Float64",
+    "lfm_affective_liwc_death": "Float64",
+    "lfm_affective_liwc_dictionary_words": "Float64",
+    "lfm_affective_liwc_discrep": "Float64",
+    "lfm_affective_liwc_excl": "Float64",
+    "lfm_affective_liwc_exclam": "Float64",
+    "lfm_affective_liwc_family": "Float64",
+    "lfm_affective_liwc_feel": "Float64",
+    "lfm_affective_liwc_filler": "Float64",
+    "lfm_affective_liwc_friend": "Float64",
+    "lfm_affective_liwc_funct": "Float64",
+    "lfm_affective_liwc_future": "Float64",
+    "lfm_affective_liwc_health": "Float64",
+    "lfm_affective_liwc_hear": "Float64",
+    "lfm_affective_liwc_home": "Float64",
+    "lfm_affective_liwc_humans": "Float64",
+    "lfm_affective_liwc_i": "Float64",
+    "lfm_affective_liwc_incl": "Float64",
+    "lfm_affective_liwc_ingest": "Float64",
+    "lfm_affective_liwc_inhib": "Float64",
+    "lfm_affective_liwc_insight": "Float64",
+    "lfm_affective_liwc_ipron": "Float64",
+    "lfm_affective_liwc_leisure": "Float64",
+    "lfm_affective_liwc_money": "Float64",
+    "lfm_affective_liwc_motion": "Float64",
+    "lfm_affective_liwc_negate": "Float64",
+    "lfm_affective_liwc_negemo": "Float64",
+    "lfm_affective_liwc_nonfl": "Float64",
+    "lfm_affective_liwc_number": "Float64",
+    "lfm_affective_liwc_numerals": "Float64",
+    "lfm_affective_liwc_otherp": "Float64",
+    "lfm_affective_liwc_parenth": "Float64",
+    "lfm_affective_liwc_past": "Float64",
+    "lfm_affective_liwc_percept": "Float64",
+    "lfm_affective_liwc_period": "Float64",
+    "lfm_affective_liwc_posemo": "Float64",
+    "lfm_affective_liwc_ppron": "Float64",
+    "lfm_affective_liwc_preps": "Float64",
+    "lfm_affective_liwc_present": "Float64",
+    "lfm_affective_liwc_pronoun": "Float64",
+    "lfm_affective_liwc_qmark": "Float64",
+    "lfm_affective_liwc_quant": "Float64",
+    "lfm_affective_liwc_quote": "Float64",
+    "lfm_affective_liwc_relativ": "Float64",
+    "lfm_affective_liwc_relig": "Float64",
+    "lfm_affective_liwc_sad": "Float64",
+    "lfm_affective_liwc_see": "Float64",
+    "lfm_affective_liwc_semic": "Float64",
+    "lfm_affective_liwc_sexual": "Float64",
+    "lfm_affective_liwc_shehe": "Float64",
+    "lfm_affective_liwc_six_letter_words": "Float64",
+    "lfm_affective_liwc_social": "Float64",
+    "lfm_affective_liwc_space": "Float64",
+    "lfm_affective_liwc_swear": "Float64",
+    "lfm_affective_liwc_tentat": "Float64",
+    "lfm_affective_liwc_they": "Float64",
+    "lfm_affective_liwc_time": "Float64",
+    "lfm_affective_liwc_total_word_count": "Float64",
+    "lfm_affective_liwc_verb": "Float64",
+    "lfm_affective_liwc_we": "Float64",
+    "lfm_affective_liwc_work": "Float64",
+    "lfm_affective_liwc_you": "Float64",
+    "lfm_affective_mpqa_negative": "Float64",
+    "lfm_affective_mpqa_positive": "Float64",
+    "lfm_affective_negation_count": "Float64",
+    "lfm_affective_nrcaffectintensity_anger": "Float64",
+    "lfm_affective_nrcaffectintensity_anticipation": "Float64",
+    "lfm_affective_nrcaffectintensity_disgust": "Float64",
+    "lfm_affective_nrcaffectintensity_fear": "Float64",
+    "lfm_affective_nrcaffectintensity_joy": "Float64",
+    "lfm_affective_nrcaffectintensity_negative": "Float64",
+    "lfm_affective_nrcaffectintensity_positive": "Float64",
+    "lfm_affective_nrcaffectintensity_sadness": "Float64",
+    "lfm_affective_nrcaffectintensity_surprise": "Float64",
+    "lfm_affective_nrcaffectintensity_trust": "Float64",
+    "lfm_affective_nrcemotionwordlevel_anger": "Float64",
+    "lfm_affective_nrcemotionwordlevel_anticipation": "Float64",
+    "lfm_affective_nrcemotionwordlevel_disgust": "Float64",
+    "lfm_affective_nrcemotionwordlevel_fear": "Float64",
+    "lfm_affective_nrcemotionwordlevel_joy": "Float64",
+    "lfm_affective_nrcemotionwordlevel_negative": "Float64",
+    "lfm_affective_nrcemotionwordlevel_positive": "Float64",
+    "lfm_affective_nrcemotionwordlevel_sadness": "Float64",
+    "lfm_affective_nrcemotionwordlevel_surprise": "Float64",
+    "lfm_affective_nrcemotionwordlevel_trust": "Float64",
+    "lfm_affective_nrcexpandedemotion_anger": "Float64",
+    "lfm_affective_nrcexpandedemotion_anticipation": "Float64",
+    "lfm_affective_nrcexpandedemotion_disgust": "Float64",
+    "lfm_affective_nrcexpandedemotion_fear": "Float64",
+    "lfm_affective_nrcexpandedemotion_joy": "Float64",
+    "lfm_affective_nrcexpandedemotion_negative": "Float64",
+    "lfm_affective_nrcexpandedemotion_positive": "Float64",
+    "lfm_affective_nrcexpandedemotion_sadness": "Float64",
+    "lfm_affective_nrcexpandedemotion_surprise": "Float64",
+    "lfm_affective_nrcexpandedemotion_trust": "Float64",
+    "lfm_affective_nrchashtagemotion_anger": "Float64",
+    "lfm_affective_nrchashtagemotion_anticipation": "Float64",
+    "lfm_affective_nrchashtagemotion_disgust": "Float64",
+    "lfm_affective_nrchashtagemotion_fear": "Float64",
+    "lfm_affective_nrchashtagemotion_joy": "Float64",
+    "lfm_affective_nrchashtagemotion_negative": "Float64",
+    "lfm_affective_nrchashtagemotion_positive": "Float64",
+    "lfm_affective_nrchashtagemotion_sadness": "Float64",
+    "lfm_affective_nrchashtagemotion_surprise": "Float64",
+    "lfm_affective_nrchashtagemotion_trust": "Float64",
+    "lfm_affective_nrchashtagsentiment_negativescore": "Float64",
+    "lfm_affective_nrchashtagsentiment_positivescore": "Float64",
+    "lfm_affective_sentiment140_negativescore": "Float64",
+    "lfm_affective_sentiment140_positivescore": "Float64",
+    "lfm_affective_sentiwordnet_negativescore": "Float64",
+    "lfm_affective_sentiwordnet_positivescore": "Float64",
+    "lfm_compression_ratio": "Float64",
+    "lfm_entropy": "Float64",
+    "lfm_genre": "String",
+    "lfm_lexical_average_token_length": "Float64",
+    "lfm_lexical_average_tokens_per_line": "Float64",
+    "lfm_lexical_blank_line_count": "Int64",
+    "lfm_lexical_blank_line_ratio": "Float64",
+    "lfm_lexical_character_count": "Int64",
+    "lfm_lexical_colon_count": "Int64",
+    "lfm_lexical_comma_count": "Int64",
+    "lfm_lexical_digit_count": "Int64",
+    "lfm_lexical_digit_ratio": "Float64",
+    "lfm_lexical_dis_legomenon_ratio": "Float64",
+    "lfm_lexical_dot_count": "Int64",
+    "lfm_lexical_dugast": "Float64",
+    "lfm_lexical_exclamation_mark_count": "Int64",
+    "lfm_lexical_hapax_legomenon_ratio": "Float64",
+    "lfm_lexical_herdan": "Float64",
+    "lfm_lexical_hyphen_count": "Int64",
+    "lfm_lexical_line_count": "Int64",
+    "lfm_lexical_maas": "Float64",
+    "lfm_lexical_mtld": "Float64",
+    "lfm_lexical_parens_count": "Int64",
+    "lfm_lexical_past_tense_ratio": "Float64",
+    "lfm_lexical_pronoun_frequency": "Float64",
+    "lfm_lexical_punctuation_count": "Int64",
+    "lfm_lexical_punctuation_ratio": "Float64",
+    "lfm_lexical_question_mark_count": "Int64",
+    "lfm_lexical_quote_count": "Int64",
+    "lfm_lexical_repeated_line_ratio": "Float64",
+    "lfm_lexical_repeated_token_ratio": "Float64",
+    "lfm_lexical_semicolon_count": "Int64",
+    "lfm_lexical_stop_word_count": "Int64",
+    "lfm_lexical_stop_word_ratio": "Float64",
+    "lfm_lexical_stop_words_per_line": "Float64",
+    "lfm_lexical_summer": "Float64",
+    "lfm_lexical_token_count": "Int64",
+    "lfm_lexical_tris_legomenon_ratio": "Float64",
+    "lfm_lexical_unique_bigram_ratio": "Float64",
+    "lfm_lexical_unique_line_count": "Int64",
+    "lfm_lexical_unique_tokens_per_line": "Float64",
+    "lfm_lexical_unique_trigram_ratio": "Float64",
+    "lfm_playcount": "Int64",
+    "lfm_readability_automated_readability_index": "Float64",
+    "lfm_readability_coleman_liau_index": "Float64",
+    "lfm_readability_crawford": "Float64",
+    "lfm_readability_dale_chall_readability_score": "Float64",
+    "lfm_readability_difficult_words": "Int64",
+    "lfm_readability_fernandez_huerta": "Float64",
+    "lfm_readability_flesch_kincaid_grade": "Float64",
+    "lfm_readability_flesch_reading_ease": "Float64",
+    "lfm_readability_gunning_fog": "Float64",
+    "lfm_readability_gutierrez_polini": "Float64",
+    "lfm_readability_linsear_write_formula": "Float64",
+    "lfm_readability_smog": "Float64",
+    "lfm_readability_szigriszt_pazos": "Float64",
+    "lfm_record_key": "String",
+    "lfm_release_date": "String",
+    "lfm_release_date_numberlong": "String",
+    "lfm_release_year": "Int64",
+    "lfm_rhyme_alliterations_len_2": "Int64",
+    "lfm_rhyme_alliterations_len_3": "Int64",
+    "lfm_rhyme_alliterations_len_4_plus": "Int64",
+    "lfm_rhyme_num_alternating": "Int64",
+    "lfm_rhyme_num_clerihews": "Int64",
+    "lfm_rhyme_num_couplets": "Int64",
+    "lfm_rhyme_num_nested": "Int64",
+    "lfm_rhyme_rhyme_percent": "Float64",
+    "lfm_rhyme_unique_rhyme_words": "Int64",
+    "lfm_source_row_number": "Int64",
+    "lfm_structure_chorus_repetitions": "Int64",
+    "lfm_structure_ends_with_two_chorus_repetitions": "Boolean",
+    "lfm_structure_number_of_sections": "Int64",
+    "lfm_structure_number_of_verses": "Int64",
+    "lfm_structure_pattern_two_choruses_at_least_one_verse": "Boolean",
+    "lfm_structure_pattern_two_verses_at_least_one_chorus": "Boolean",
+    "lfm_structure_pattern_verse_chorus_alternating": "Boolean",
+    "lfm_structure_ratio_chorus_sections": "Float64",
+    "lfm_structure_ratio_verses_sections": "Float64",
+    "lfm_structure_starts_with_chorus": "Boolean",
+    "lfm_structure_title_occurrences": "Int64",
+    "lfm_temporal_cohort": "String",
+    "lfm_uncommon_words_ratio": "Float64",
+    "track_name_raw": "String",
+    "lfm_artist_unicode": "String",
+    "lfm_artist_strict": "String",
+    "lfm_artist_conservative": "String",
+    "lfm_artist_primary": "String",
+    "lfm_artist_collaborators_json": "String",
+    "lfm_title_unicode": "String",
+    "lfm_title_strict": "String",
+    "lfm_title_conservative": "String",
+    "lfm_title_base": "String",
+    "lfm_remaster": "Boolean",
+    "lfm_remix": "Boolean",
+    "lfm_live": "Boolean",
+    "lfm_acoustic": "Boolean",
+    "lfm_radio_edit": "Boolean",
+    "lfm_mono_stereo": "Boolean",
+    "lfm_instrumental": "Boolean",
+    "lfm_demo": "Boolean",
+    "lfm_year_mentioned": "Int64",
+    "lfm_version_tags": "List(String)",
+    "lfm_composition_key": "String",
+    "lfm_normalization_version": "String"
+  },
+  "descriptor_columns": [
+    "lfm_acoustic",
+    "lfm_affective_afinn_negativescore",
+    "lfm_affective_afinn_positivescore",
+    "lfm_affective_bingliu_negative",
+    "lfm_affective_bingliu_positive",
+    "lfm_affective_labmt_happiness",
+    "lfm_affective_liwc_achieve",
+    "lfm_affective_liwc_adverb",
+    "lfm_affective_liwc_affect",
+    "lfm_affective_liwc_anger",
+    "lfm_affective_liwc_anx",
+    "lfm_affective_liwc_apostro",
+    "lfm_affective_liwc_article",
+    "lfm_affective_liwc_assent",
+    "lfm_affective_liwc_auxverb",
+    "lfm_affective_liwc_avg_sentence_length",
+    "lfm_affective_liwc_bio",
+    "lfm_affective_liwc_body",
+    "lfm_affective_liwc_cause",
+    "lfm_affective_liwc_certain",
+    "lfm_affective_liwc_cogmech",
+    "lfm_affective_liwc_colon",
+    "lfm_affective_liwc_comma",
+    "lfm_affective_liwc_conj",
+    "lfm_affective_liwc_dash",
+    "lfm_affective_liwc_death",
+    "lfm_affective_liwc_dictionary_words",
+    "lfm_affective_liwc_discrep",
+    "lfm_affective_liwc_excl",
+    "lfm_affective_liwc_exclam",
+    "lfm_affective_liwc_family",
+    "lfm_affective_liwc_feel",
+    "lfm_affective_liwc_filler",
+    "lfm_affective_liwc_friend",
+    "lfm_affective_liwc_funct",
+    "lfm_affective_liwc_future",
+    "lfm_affective_liwc_health",
+    "lfm_affective_liwc_hear",
+    "lfm_affective_liwc_home",
+    "lfm_affective_liwc_humans",
+    "lfm_affective_liwc_i",
+    "lfm_affective_liwc_incl",
+    "lfm_affective_liwc_ingest",
+    "lfm_affective_liwc_inhib",
+    "lfm_affective_liwc_insight",
+    "lfm_affective_liwc_ipron",
+    "lfm_affective_liwc_leisure",
+    "lfm_affective_liwc_money",
+    "lfm_affective_liwc_motion",
+    "lfm_affective_liwc_negate",
+    "lfm_affective_liwc_negemo",
+    "lfm_affective_liwc_nonfl",
+    "lfm_affective_liwc_number",
+    "lfm_affective_liwc_numerals",
+    "lfm_affective_liwc_otherp",
+    "lfm_affective_liwc_parenth",
+    "lfm_affective_liwc_past",
+    "lfm_affective_liwc_percept",
+    "lfm_affective_liwc_period",
+    "lfm_affective_liwc_posemo",
+    "lfm_affective_liwc_ppron",
+    "lfm_affective_liwc_preps",
+    "lfm_affective_liwc_present",
+    "lfm_affective_liwc_pronoun",
+    "lfm_affective_liwc_qmark",
+    "lfm_affective_liwc_quant",
+    "lfm_affective_liwc_quote",
+    "lfm_affective_liwc_relativ",
+    "lfm_affective_liwc_relig",
+    "lfm_affective_liwc_sad",
+    "lfm_affective_liwc_see",
+    "lfm_affective_liwc_semic",
+    "lfm_affective_liwc_sexual",
+    "lfm_affective_liwc_shehe",
+    "lfm_affective_liwc_six_letter_words",
+    "lfm_affective_liwc_social",
+    "lfm_affective_liwc_space",
+    "lfm_affective_liwc_swear",
+    "lfm_affective_liwc_tentat",
+    "lfm_affective_liwc_they",
+    "lfm_affective_liwc_time",
+    "lfm_affective_liwc_total_word_count",
+    "lfm_affective_liwc_verb",
+    "lfm_affective_liwc_we",
+    "lfm_affective_liwc_work",
+    "lfm_affective_liwc_you",
+    "lfm_affective_mpqa_negative",
+    "lfm_affective_mpqa_positive",
+    "lfm_affective_negation_count",
+    "lfm_affective_nrcaffectintensity_anger",
+    "lfm_affective_nrcaffectintensity_anticipation",
+    "lfm_affective_nrcaffectintensity_disgust",
+    "lfm_affective_nrcaffectintensity_fear",
+    "lfm_affective_nrcaffectintensity_joy",
+    "lfm_affective_nrcaffectintensity_negative",
+    "lfm_affective_nrcaffectintensity_positive",
+    "lfm_affective_nrcaffectintensity_sadness",
+    "lfm_affective_nrcaffectintensity_surprise",
+    "lfm_affective_nrcaffectintensity_trust",
+    "lfm_affective_nrcemotionwordlevel_anger",
+    "lfm_affective_nrcemotionwordlevel_anticipation",
+    "lfm_affective_nrcemotionwordlevel_disgust",
+    "lfm_affective_nrcemotionwordlevel_fear",
+    "lfm_affective_nrcemotionwordlevel_joy",
+    "lfm_affective_nrcemotionwordlevel_negative",
+    "lfm_affective_nrcemotionwordlevel_positive",
+    "lfm_affective_nrcemotionwordlevel_sadness",
+    "lfm_affective_nrcemotionwordlevel_surprise",
+    "lfm_affective_nrcemotionwordlevel_trust",
+    "lfm_affective_nrcexpandedemotion_anger",
+    "lfm_affective_nrcexpandedemotion_anticipation",
+    "lfm_affective_nrcexpandedemotion_disgust",
+    "lfm_affective_nrcexpandedemotion_fear",
+    "lfm_affective_nrcexpandedemotion_joy",
+    "lfm_affective_nrcexpandedemotion_negative",
+    "lfm_affective_nrcexpandedemotion_positive",
+    "lfm_affective_nrcexpandedemotion_sadness",
+    "lfm_affective_nrcexpandedemotion_surprise",
+    "lfm_affective_nrcexpandedemotion_trust",
+    "lfm_affective_nrchashtagemotion_anger",
+    "lfm_affective_nrchashtagemotion_anticipation",
+    "lfm_affective_nrchashtagemotion_disgust",
+    "lfm_affective_nrchashtagemotion_fear",
+    "lfm_affective_nrchashtagemotion_joy",
+    "lfm_affective_nrchashtagemotion_negative",
+    "lfm_affective_nrchashtagemotion_positive",
+    "lfm_affective_nrchashtagemotion_sadness",
+    "lfm_affective_nrchashtagemotion_surprise",
+    "lfm_affective_nrchashtagemotion_trust",
+    "lfm_affective_nrchashtagsentiment_negativescore",
+    "lfm_affective_nrchashtagsentiment_positivescore",
+    "lfm_affective_sentiment140_negativescore",
+    "lfm_affective_sentiment140_positivescore",
+    "lfm_affective_sentiwordnet_negativescore",
+    "lfm_affective_sentiwordnet_positivescore",
+    "lfm_artist_collaborators_json",
+    "lfm_artist_conservative",
+    "lfm_artist_primary",
+    "lfm_artist_strict",
+    "lfm_artist_unicode",
+    "lfm_composition_key",
+    "lfm_compression_ratio",
+    "lfm_demo",
+    "lfm_entropy",
+    "lfm_instrumental",
+    "lfm_lexical_average_token_length",
+    "lfm_lexical_average_tokens_per_line",
+    "lfm_lexical_blank_line_count",
+    "lfm_lexical_blank_line_ratio",
+    "lfm_lexical_character_count",
+    "lfm_lexical_colon_count",
+    "lfm_lexical_comma_count",
+    "lfm_lexical_digit_count",
+    "lfm_lexical_digit_ratio",
+    "lfm_lexical_dis_legomenon_ratio",
+    "lfm_lexical_dot_count",
+    "lfm_lexical_dugast",
+    "lfm_lexical_exclamation_mark_count",
+    "lfm_lexical_hapax_legomenon_ratio",
+    "lfm_lexical_herdan",
+    "lfm_lexical_hyphen_count",
+    "lfm_lexical_line_count",
+    "lfm_lexical_maas",
+    "lfm_lexical_mtld",
+    "lfm_lexical_parens_count",
+    "lfm_lexical_past_tense_ratio",
+    "lfm_lexical_pronoun_frequency",
+    "lfm_lexical_punctuation_count",
+    "lfm_lexical_punctuation_ratio",
+    "lfm_lexical_question_mark_count",
+    "lfm_lexical_quote_count",
+    "lfm_lexical_repeated_line_ratio",
+    "lfm_lexical_repeated_token_ratio",
+    "lfm_lexical_semicolon_count",
+    "lfm_lexical_stop_word_count",
+    "lfm_lexical_stop_word_ratio",
+    "lfm_lexical_stop_words_per_line",
+    "lfm_lexical_summer",
+    "lfm_lexical_token_count",
+    "lfm_lexical_tris_legomenon_ratio",
+    "lfm_lexical_unique_bigram_ratio",
+    "lfm_lexical_unique_line_count",
+    "lfm_lexical_unique_tokens_per_line",
+    "lfm_lexical_unique_trigram_ratio",
+    "lfm_live",
+    "lfm_mono_stereo",
+    "lfm_normalization_version",
+    "lfm_radio_edit",
+    "lfm_readability_automated_readability_index",
+    "lfm_readability_coleman_liau_index",
+    "lfm_readability_crawford",
+    "lfm_readability_dale_chall_readability_score",
+    "lfm_readability_difficult_words",
+    "lfm_readability_fernandez_huerta",
+    "lfm_readability_flesch_kincaid_grade",
+    "lfm_readability_flesch_reading_ease",
+    "lfm_readability_gunning_fog",
+    "lfm_readability_gutierrez_polini",
+    "lfm_readability_linsear_write_formula",
+    "lfm_readability_smog",
+    "lfm_readability_szigriszt_pazos",
+    "lfm_release_date_numberlong",
+    "lfm_remaster",
+    "lfm_remix",
+    "lfm_rhyme_alliterations_len_2",
+    "lfm_rhyme_alliterations_len_3",
+    "lfm_rhyme_alliterations_len_4_plus",
+    "lfm_rhyme_num_alternating",
+    "lfm_rhyme_num_clerihews",
+    "lfm_rhyme_num_couplets",
+    "lfm_rhyme_num_nested",
+    "lfm_rhyme_rhyme_percent",
+    "lfm_rhyme_unique_rhyme_words",
+    "lfm_structure_chorus_repetitions",
+    "lfm_structure_ends_with_two_chorus_repetitions",
+    "lfm_structure_number_of_sections",
+    "lfm_structure_number_of_verses",
+    "lfm_structure_pattern_two_choruses_at_least_one_verse",
+    "lfm_structure_pattern_two_verses_at_least_one_chorus",
+    "lfm_structure_pattern_verse_chorus_alternating",
+    "lfm_structure_ratio_chorus_sections",
+    "lfm_structure_ratio_verses_sections",
+    "lfm_structure_starts_with_chorus",
+    "lfm_structure_title_occurrences",
+    "lfm_title_base",
+    "lfm_title_conservative",
+    "lfm_title_strict",
+    "lfm_title_unicode",
+    "lfm_uncommon_words_ratio",
+    "lfm_version_tags",
+    "lfm_year_mentioned"
+  ]
+}

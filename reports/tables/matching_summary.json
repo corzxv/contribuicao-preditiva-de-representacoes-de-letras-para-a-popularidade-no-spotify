@@ -1,0 +1,114 @@
+{
+  "status": "created",
+  "generated_at": "2026-08-18T01:47:09.135332+00:00",
+  "spotify_rows": 1159764,
+  "fuzzy_candidate_rows": 3457,
+  "unique_spotify_tracks_by_candidate_status": {
+    "ambiguous": 8178,
+    "accepted_high_confidence": 99418,
+    "accepted_with_rules": 12340,
+    "candidate_for_review": 3024
+  },
+  "by_method_and_status": [
+    {
+      "method": "base_title_version_compatible",
+      "status": "accepted_with_rules",
+      "candidate_rows": 3308,
+      "spotify_tracks": 3308,
+      "percent_of_spotify_tracks": 0.28523
+    },
+    {
+      "method": "base_title_version_compatible",
+      "status": "ambiguous",
+      "candidate_rows": 8062,
+      "spotify_tracks": 5755,
+      "percent_of_spotify_tracks": 0.496222
+    },
+    {
+      "method": "conservative_normalized",
+      "status": "accepted_with_rules",
+      "candidate_rows": 9032,
+      "spotify_tracks": 9032,
+      "percent_of_spotify_tracks": 0.778779
+    },
+    {
+      "method": "conservative_normalized",
+      "status": "ambiguous",
+      "candidate_rows": 1531,
+      "spotify_tracks": 1442,
+      "percent_of_spotify_tracks": 0.124336
+    },
+    {
+      "method": "fuzzy_candidate",
+      "status": "candidate_for_review",
+      "candidate_rows": 3457,
+      "spotify_tracks": 3024,
+      "percent_of_spotify_tracks": 0.260743
+    },
+    {
+      "method": "raw_exact",
+      "status": "accepted_high_confidence",
+      "candidate_rows": 79740,
+      "spotify_tracks": 79740,
+      "percent_of_spotify_tracks": 6.875537
+    },
+    {
+      "method": "raw_exact",
+      "status": "ambiguous",
+      "candidate_rows": 1688,
+      "spotify_tracks": 1688,
+      "percent_of_spotify_tracks": 0.145547
+    },
+    {
+      "method": "strict_normalized",
+      "status": "accepted_high_confidence",
+      "candidate_rows": 19678,
+      "spotify_tracks": 19678,
+      "percent_of_spotify_tracks": 1.696725
+    },
+    {
+      "method": "strict_normalized",
+      "status": "ambiguous",
+      "candidate_rows": 854,
+      "spotify_tracks": 848,
+      "percent_of_spotify_tracks": 0.073118
+    }
+  ],
+  "deterministic_multiplicity": [
+    {
+      "mapping_type": "many_spotify_to_one_lfm",
+      "candidate_rows": 5509,
+      "spotify_tracks": 5509,
+      "lfm_records": 1916
+    },
+    {
+      "mapping_type": "many_to_many",
+      "candidate_rows": 4183,
+      "spotify_tracks": 1563,
+      "lfm_records": 1167
+    },
+    {
+      "mapping_type": "one_spotify_to_many_lfm",
+      "candidate_rows": 2443,
+      "spotify_tracks": 1121,
+      "lfm_records": 2443
+    },
+    {
+      "mapping_type": "one_to_one",
+      "candidate_rows": 111758,
+      "spotify_tracks": 111758,
+      "lfm_records": 111758
+    }
+  ],
+  "outputs": {
+    "all": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_all_candidates.parquet",
+    "matches": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_matches.parquet",
+    "ambiguous": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_ambiguous.parquet",
+    "review": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_candidates_review.parquet",
+    "rejected": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_rejected.parquet",
+    "unmatched": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_unmatched.parquet",
+    "status": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_tracks_with_match_status.parquet",
+    "modeling": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\modeling_base_lfm_v0_1.parquet",
+    "sample": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_review_sample.parquet"
+  }
+}

@@ -1,0 +1,790 @@
+{
+  "generated_at": "2026-08-18T01:51:36.579772+00:00",
+  "total_spotify": 1159764,
+  "matched": 111758,
+  "match_rate_percent": 9.636270827513183,
+  "by_dimension": {
+    "year": [
+      {
+        "year": 2000,
+        "total": 44034,
+        "matched": 2619,
+        "match_rate_percent": 5.947676795203706
+      },
+      {
+        "year": 2001,
+        "total": 42351,
+        "matched": 2714,
+        "match_rate_percent": 6.408349271563836
+      },
+      {
+        "year": 2002,
+        "total": 42102,
+        "matched": 2787,
+        "match_rate_percent": 6.619638021946701
+      },
+      {
+        "year": 2003,
+        "total": 42368,
+        "matched": 3207,
+        "match_rate_percent": 7.569391993957704
+      },
+      {
+        "year": 2004,
+        "total": 43390,
+        "matched": 2998,
+        "match_rate_percent": 6.90942613505416
+      },
+      {
+        "year": 2005,
+        "total": 43780,
+        "matched": 3179,
+        "match_rate_percent": 7.261306532663316
+      },
+      {
+        "year": 2006,
+        "total": 45474,
+        "matched": 3238,
+        "match_rate_percent": 7.1205524035712715
+      },
+      {
+        "year": 2007,
+        "total": 46001,
+        "matched": 3439,
+        "match_rate_percent": 7.475924436425295
+      },
+      {
+        "year": 2008,
+        "total": 47432,
+        "matched": 3818,
+        "match_rate_percent": 8.049418114353179
+      },
+      {
+        "year": 2009,
+        "total": 46869,
+        "matched": 3939,
+        "match_rate_percent": 8.404275747295653
+      },
+      {
+        "year": 2010,
+        "total": 46868,
+        "matched": 4005,
+        "match_rate_percent": 8.545276094563455
+      },
+      {
+        "year": 2011,
+        "total": 46444,
+        "matched": 4310,
+        "match_rate_percent": 9.279993109981914
+      },
+      {
+        "year": 2012,
+        "total": 54797,
+        "matched": 5497,
+        "match_rate_percent": 10.031571071409019
+      },
+      {
+        "year": 2013,
+        "total": 53216,
+        "matched": 5921,
+        "match_rate_percent": 11.126352976548407
+      },
+      {
+        "year": 2014,
+        "total": 53179,
+        "matched": 7265,
+        "match_rate_percent": 13.661407698527615
+      },
+      {
+        "year": 2015,
+        "total": 51607,
+        "matched": 7464,
+        "match_rate_percent": 14.463154223264286
+      },
+      {
+        "year": 2016,
+        "total": 40273,
+        "matched": 8457,
+        "match_rate_percent": 20.999180592456483
+      },
+      {
+        "year": 2017,
+        "total": 56241,
+        "matched": 10922,
+        "match_rate_percent": 19.419996088263012
+      },
+      {
+        "year": 2018,
+        "total": 56572,
+        "matched": 11173,
+        "match_rate_percent": 19.750053029767376
+      },
+      {
+        "year": 2019,
+        "total": 55793,
+        "matched": 11014,
+        "match_rate_percent": 19.740827702399944
+      },
+      {
+        "year": 2020,
+        "total": 55066,
+        "matched": 2706,
+        "match_rate_percent": 4.91410307630843
+      },
+      {
+        "year": 2021,
+        "total": 53566,
+        "matched": 477,
+        "match_rate_percent": 0.8904902363439495
+      },
+      {
+        "year": 2022,
+        "total": 53692,
+        "matched": 277,
+        "match_rate_percent": 0.5159055352752738
+      },
+      {
+        "year": 2023,
+        "total": 38649,
+        "matched": 332,
+        "match_rate_percent": 0.8590131698103444
+      }
+    ],
+    "temporal_cohort": [
+      {
+        "temporal_cohort": "2000-2009",
+        "total": 443801,
+        "matched": 31938,
+        "match_rate_percent": 7.1964686875423896
+      },
+      {
+        "temporal_cohort": "2010-2019",
+        "total": 514990,
+        "matched": 76028,
+        "match_rate_percent": 14.76300510689528
+      },
+      {
+        "temporal_cohort": "2020-2023",
+        "total": 200973,
+        "matched": 3792,
+        "match_rate_percent": 1.8868206176949143
+      }
+    ],
+    "genre": [
+      {
+        "genre": "acoustic",
+        "total": 21097,
+        "matched": 2935,
+        "match_rate_percent": 13.911930606247333
+      },
+      {
+        "genre": "afrobeat",
+        "total": 12395,
+        "matched": 65,
+        "match_rate_percent": 0.5244050020169423
+      },
+      {
+        "genre": "alt-rock",
+        "total": 20918,
+        "matched": 6661,
+        "match_rate_percent": 31.843388469260923
+      },
+      {
+        "genre": "ambient",
+        "total": 21389,
+        "matched": 824,
+        "match_rate_percent": 3.8524475197531443
+      },
+      {
+        "genre": "black-metal",
+        "total": 21852,
+        "matched": 3408,
+        "match_rate_percent": 15.595826468973092
+      },
+      {
+        "genre": "blues",
+        "total": 19682,
+        "matched": 2599,
+        "match_rate_percent": 13.204958845645768
+      },
+      {
+        "genre": "breakbeat",
+        "total": 12256,
+        "matched": 104,
+        "match_rate_percent": 0.8485639686684073
+      },
+      {
+        "genre": "cantopop",
+        "total": 15773,
+        "matched": 15,
+        "match_rate_percent": 0.09509922018639447
+      },
+      {
+        "genre": "chicago-house",
+        "total": 5170,
+        "matched": 12,
+        "match_rate_percent": 0.23210831721470018
+      },
+      {
+        "genre": "chill",
+        "total": 18906,
+        "matched": 2557,
+        "match_rate_percent": 13.524806939595896
+      },
+      {
+        "genre": "classical",
+        "total": 18259,
+        "matched": 450,
+        "match_rate_percent": 2.464538036037023
+      },
+      {
+        "genre": "club",
+        "total": 14678,
+        "matched": 710,
+        "match_rate_percent": 4.8371712767407
+      },
+      {
+        "genre": "comedy",
+        "total": 19334,
+        "matched": 370,
+        "match_rate_percent": 1.9137271128581772
+      },
+      {
+        "genre": "country",
+        "total": 17883,
+        "matched": 5495,
+        "match_rate_percent": 30.727506570485936
+      },
+      {
+        "genre": "dance",
+        "total": 17212,
+        "matched": 4226,
+        "match_rate_percent": 24.552637694631652
+      },
+      {
+        "genre": "dancehall",
+        "total": 18788,
+        "matched": 1033,
+        "match_rate_percent": 5.498190334255908
+      },
+      {
+        "genre": "death-metal",
+        "total": 18038,
+        "matched": 5048,
+        "match_rate_percent": 27.985364231067745
+      },
+      {
+        "genre": "deep-house",
+        "total": 17896,
+        "matched": 653,
+        "match_rate_percent": 3.6488600804649085
+      },
+      {
+        "genre": "detroit-techno",
+        "total": 3920,
+        "matched": 5,
+        "match_rate_percent": 0.12755102040816327
+      },
+      {
+        "genre": "disco",
+        "total": 16987,
+        "matched": 1185,
+        "match_rate_percent": 6.9759227644669455
+      },
+      {
+        "genre": "drum-and-bass",
+        "total": 14591,
+        "matched": 485,
+        "match_rate_percent": 3.32396682886711
+      },
+      {
+        "genre": "dub",
+        "total": 18785,
+        "matched": 996,
+        "match_rate_percent": 5.302102741549108
+      },
+      {
+        "genre": "dubstep",
+        "total": 4774,
+        "matched": 85,
+        "match_rate_percent": 1.7804775869291998
+      },
+      {
+        "genre": "edm",
+        "total": 10671,
+        "matched": 1231,
+        "match_rate_percent": 11.53593852497423
+      },
+      {
+        "genre": "electro",
+        "total": 11406,
+        "matched": 1930,
+        "match_rate_percent": 16.92091881465895
+      },
+      {
+        "genre": "electronic",
+        "total": 9369,
+        "matched": 915,
+        "match_rate_percent": 9.766250400256164
+      },
+      {
+        "genre": "emo",
+        "total": 20845,
+        "matched": 6525,
+        "match_rate_percent": 31.302470616454784
+      },
+      {
+        "genre": "folk",
+        "total": 16170,
+        "matched": 4004,
+        "match_rate_percent": 24.761904761904763
+      },
+      {
+        "genre": "forro",
+        "total": 19379,
+        "matched": 0,
+        "match_rate_percent": 0.0
+      },
+      {
+        "genre": "french",
+        "total": 18519,
+        "matched": 751,
+        "match_rate_percent": 4.055294562341379
+      },
+      {
+        "genre": "funk",
+        "total": 15136,
+        "matched": 2213,
+        "match_rate_percent": 14.620771670190274
+      },
+      {
+        "genre": "garage",
+        "total": 17123,
+        "matched": 3406,
+        "match_rate_percent": 19.891374175086142
+      },
+      {
+        "genre": "german",
+        "total": 16417,
+        "matched": 858,
+        "match_rate_percent": 5.226289821526467
+      },
+      {
+        "genre": "gospel",
+        "total": 21621,
+        "matched": 587,
+        "match_rate_percent": 2.7149530549003282
+      },
+      {
+        "genre": "goth",
+        "total": 17381,
+        "matched": 2325,
+        "match_rate_percent": 13.376675680340602
+      },
+      {
+        "genre": "grindcore",
+        "total": 14509,
+        "matched": 892,
+        "match_rate_percent": 6.147908194913502
+      },
+      {
+        "genre": "groove",
+        "total": 13366,
+        "matched": 1094,
+        "match_rate_percent": 8.184946880143649
+      },
+      {
+        "genre": "guitar",
+        "total": 17266,
+        "matched": 47,
+        "match_rate_percent": 0.27221128228889147
+      },
+      {
+        "genre": "hard-rock",
+        "total": 13800,
+        "matched": 3224,
+        "match_rate_percent": 23.36231884057971
+      },
+      {
+        "genre": "hardcore",
+        "total": 15993,
+        "matched": 4708,
+        "match_rate_percent": 29.43787907209404
+      },
+      {
+        "genre": "hardstyle",
+        "total": 12420,
+        "matched": 221,
+        "match_rate_percent": 1.7793880837359097
+      },
+      {
+        "genre": "heavy-metal",
+        "total": 14862,
+        "matched": 492,
+        "match_rate_percent": 3.310456197012515
+      },
+      {
+        "genre": "hip-hop",
+        "total": 15703,
+        "matched": 3775,
+        "match_rate_percent": 24.039992358148126
+      },
+      {
+        "genre": "house",
+        "total": 5233,
+        "matched": 414,
+        "match_rate_percent": 7.91133193197019
+      },
+      {
+        "genre": "indian",
+        "total": 20583,
+        "matched": 222,
+        "match_rate_percent": 1.0785599766797842
+      },
+      {
+        "genre": "indie-pop",
+        "total": 10022,
+        "matched": 3239,
+        "match_rate_percent": 32.31889842346837
+      },
+      {
+        "genre": "industrial",
+        "total": 15245,
+        "matched": 2037,
+        "match_rate_percent": 13.361757953427354
+      },
+      {
+        "genre": "jazz",
+        "total": 15943,
+        "matched": 888,
+        "match_rate_percent": 5.56984256413473
+      },
+      {
+        "genre": "k-pop",
+        "total": 20004,
+        "matched": 870,
+        "match_rate_percent": 4.349130173965207
+      },
+      {
+        "genre": "metal",
+        "total": 7020,
+        "matched": 2312,
+        "match_rate_percent": 32.934472934472936
+      },
+      {
+        "genre": "metalcore",
+        "total": 6267,
+        "matched": 1623,
+        "match_rate_percent": 25.897558640497845
+      },
+      {
+        "genre": "minimal-techno",
+        "total": 15198,
+        "matched": 84,
+        "match_rate_percent": 0.5527043031977892
+      },
+      {
+        "genre": "new-age",
+        "total": 19911,
+        "matched": 104,
+        "match_rate_percent": 0.5223243433278087
+      },
+      {
+        "genre": "opera",
+        "total": 15079,
+        "matched": 245,
+        "match_rate_percent": 1.624776178791697
+      },
+      {
+        "genre": "party",
+        "total": 9548,
+        "matched": 15,
+        "match_rate_percent": 0.15710096355257647
+      },
+      {
+        "genre": "piano",
+        "total": 13784,
+        "matched": 962,
+        "match_rate_percent": 6.979106210098665
+      },
+      {
+        "genre": "pop",
+        "total": 6235,
+        "matched": 1194,
+        "match_rate_percent": 19.149959903769044
+      },
+      {
+        "genre": "pop-film",
+        "total": 16907,
+        "matched": 11,
+        "match_rate_percent": 0.06506180871828236
+      },
+      {
+        "genre": "power-pop",
+        "total": 17161,
+        "matched": 2431,
+        "match_rate_percent": 14.165841151448051
+      },
+      {
+        "genre": "progressive-house",
+        "total": 10589,
+        "matched": 501,
+        "match_rate_percent": 4.7313249598640095
+      },
+      {
+        "genre": "psych-rock",
+        "total": 12789,
+        "matched": 1689,
+        "match_rate_percent": 13.206661975134882
+      },
+      {
+        "genre": "punk",
+        "total": 6197,
+        "matched": 1947,
+        "match_rate_percent": 31.418428271744393
+      },
+      {
+        "genre": "punk-rock",
+        "total": 7086,
+        "matched": 1212,
+        "match_rate_percent": 17.10414902624894
+      },
+      {
+        "genre": "rock",
+        "total": 3319,
+        "matched": 785,
+        "match_rate_percent": 23.651702319975897
+      },
+      {
+        "genre": "rock-n-roll",
+        "total": 15891,
+        "matched": 328,
+        "match_rate_percent": 2.064061418412938
+      },
+      {
+        "genre": "romance",
+        "total": 6518,
+        "matched": 0,
+        "match_rate_percent": 0.0
+      },
+      {
+        "genre": "sad",
+        "total": 6086,
+        "matched": 159,
+        "match_rate_percent": 2.6125534012487677
+      },
+      {
+        "genre": "salsa",
+        "total": 17501,
+        "matched": 4,
+        "match_rate_percent": 0.02285583680932518
+      },
+      {
+        "genre": "samba",
+        "total": 18599,
+        "matched": 25,
+        "match_rate_percent": 0.13441582880800043
+      },
+      {
+        "genre": "sertanejo",
+        "total": 17566,
+        "matched": 4,
+        "match_rate_percent": 0.022771262666514858
+      },
+      {
+        "genre": "show-tunes",
+        "total": 11101,
+        "matched": 655,
+        "match_rate_percent": 5.900369336095848
+      },
+      {
+        "genre": "singer-songwriter",
+        "total": 14035,
+        "matched": 2288,
+        "match_rate_percent": 16.3021018881368
+      },
+      {
+        "genre": "ska",
+        "total": 13776,
+        "matched": 1626,
+        "match_rate_percent": 11.803135888501743
+      },
+      {
+        "genre": "sleep",
+        "total": 17851,
+        "matched": 1,
+        "match_rate_percent": 0.005601927062909641
+      },
+      {
+        "genre": "songwriter",
+        "total": 589,
+        "matched": 50,
+        "match_rate_percent": 8.488964346349745
+      },
+      {
+        "genre": "soul",
+        "total": 8974,
+        "matched": 2607,
+        "match_rate_percent": 29.050590595052373
+      },
+      {
+        "genre": "spanish",
+        "total": 19158,
+        "matched": 125,
+        "match_rate_percent": 0.652468942478338
+      },
+      {
+        "genre": "swedish",
+        "total": 11616,
+        "matched": 1241,
+        "match_rate_percent": 10.68353994490358
+      },
+      {
+        "genre": "tango",
+        "total": 15069,
+        "matched": 0,
+        "match_rate_percent": 0.0
+      },
+      {
+        "genre": "techno",
+        "total": 7898,
+        "matched": 118,
+        "match_rate_percent": 1.494049126361104
+      },
+      {
+        "genre": "trance",
+        "total": 9592,
+        "matched": 306,
+        "match_rate_percent": 3.190158465387823
+      },
+      {
+        "genre": "trip-hop",
+        "total": 11285,
+        "matched": 317,
+        "match_rate_percent": 2.809038546743465
+      }
+    ]
+  },
+  "by_popularity_band": [
+    {
+      "band": "01-10",
+      "total": 295373,
+      "matched": 12613,
+      "match_rate_percent": 4.270193958147833
+    },
+    {
+      "band": "11-25",
+      "total": 352954,
+      "matched": 41251,
+      "match_rate_percent": 11.687358692634168
+    },
+    {
+      "band": "26-50",
+      "total": 305348,
+      "matched": 49612,
+      "match_rate_percent": 16.247691158939965
+    },
+    {
+      "band": "51-75",
+      "total": 46537,
+      "matched": 7331,
+      "match_rate_percent": 15.753056707566023
+    },
+    {
+      "band": "76-100",
+      "total": 1161,
+      "matched": 169,
+      "match_rate_percent": 14.556416881998278
+    },
+    {
+      "band": "zero",
+      "total": 158391,
+      "matched": 782,
+      "match_rate_percent": 0.4937149206709977
+    }
+  ],
+  "numeric_comparison": {
+    "spotify_popularity": {
+      "matched_mean": 27.16410458311709,
+      "matched_median": 26.0,
+      "unmatched_mean": 17.44673026681145,
+      "unmatched_median": 14.0,
+      "standardized_mean_difference": 0.6443588434614561
+    },
+    "danceability": {
+      "matched_mean": 0.5092540498219357,
+      "matched_median": 0.511,
+      "unmatched_mean": 0.5404437565242941,
+      "unmatched_median": 0.555,
+      "standardized_mean_difference": -0.17539159833182835
+    },
+    "energy": {
+      "matched_mean": 0.7155542876044658,
+      "matched_median": 0.769,
+      "unmatched_mean": 0.6315776866107682,
+      "unmatched_median": 0.685,
+      "standardized_mean_difference": 0.3318853846090047
+    },
+    "loudness": {
+      "matched_mean": -6.793124912757924,
+      "matched_median": -6.068,
+      "unmatched_mean": -9.214702609527038,
+      "unmatched_median": -7.633,
+      "standardized_mean_difference": 0.5123029325422511
+    },
+    "speechiness": {
+      "matched_mean": 0.08759720556917637,
+      "matched_median": 0.053,
+      "unmatched_mean": 0.0933711619971607,
+      "unmatched_median": 0.0505,
+      "standardized_mean_difference": -0.05189710867243355
+    },
+    "acousticness": {
+      "matched_mean": 0.18924673594794128,
+      "matched_median": 0.0337,
+      "unmatched_mean": 0.33564421509553094,
+      "unmatched_median": 0.17,
+      "standardized_mean_difference": -0.45619251744537376
+    },
+    "instrumentalness": {
+      "matched_mean": 0.1241976291378695,
+      "matched_median": 0.000266,
+      "unmatched_mean": 0.26601477270842744,
+      "unmatched_median": 0.0023750000000000004,
+      "standardized_mean_difference": -0.442425839372347
+    },
+    "liveness": {
+      "matched_mean": 0.2125789400311393,
+      "matched_median": 0.14,
+      "unmatched_mean": 0.22413217449136708,
+      "unmatched_median": 0.133,
+      "standardized_mean_difference": -0.06116373808797651
+    },
+    "valence": {
+      "matched_mean": 0.4206118210776861,
+      "matched_median": 0.395,
+      "unmatched_mean": 0.45929080796388416,
+      "unmatched_median": 0.444,
+      "standardized_mean_difference": -0.15209954666163716
+    },
+    "tempo": {
+      "matched_mean": 124.25252576101944,
+      "matched_median": 122.045,
+      "unmatched_mean": 121.0705095314337,
+      "unmatched_median": 121.88,
+      "standardized_mean_difference": 0.10662005743523982
+    },
+    "duration_ms": {
+      "matched_mean": 231251.66465935324,
+      "matched_median": 220002.5,
+      "unmatched_mean": 251514.34829571587,
+      "unmatched_median": 226560.0,
+      "standardized_mean_difference": -0.16154496027926082
+    }
+  },
+  "spotify_popularity_zero_percent": {
+    "matched": 0.6997261940979617,
+    "unmatched": 15.038940616752194
+  },
+  "warning": "O subconjunto encontrado não deve ser tratado como aleatório ou representativo. As diferenças descrevem cobertura do cruzamento e não sustentam explicação nem causalidade."
+}

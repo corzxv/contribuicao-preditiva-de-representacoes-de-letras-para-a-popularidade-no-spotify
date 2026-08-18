@@ -1,0 +1,1453 @@
+{
+  "inspected_at": "2026-08-18T01:17:28.869164+00:00",
+  "sample_lines_requested": 25,
+  "valid_samples": 25,
+  "invalid_samples": [],
+  "observed_paths": {
+    "_id.artist": [
+      "str"
+    ],
+    "_id.track": [
+      "str"
+    ],
+    "affective.AFINN.NegativeScore": [
+      "float"
+    ],
+    "affective.AFINN.PositiveScore": [
+      "float"
+    ],
+    "affective.BingLiu.negative": [
+      "float"
+    ],
+    "affective.BingLiu.positive": [
+      "float"
+    ],
+    "affective.LIWC.>six_letter_words": [
+      "float"
+    ],
+    "affective.LIWC.Apostro": [
+      "float"
+    ],
+    "affective.LIWC.Colon": [
+      "float"
+    ],
+    "affective.LIWC.Comma": [
+      "float"
+    ],
+    "affective.LIWC.Dash": [
+      "float"
+    ],
+    "affective.LIWC.Exclam": [
+      "float"
+    ],
+    "affective.LIWC.OtherP": [
+      "float"
+    ],
+    "affective.LIWC.Parenth": [
+      "float"
+    ],
+    "affective.LIWC.Period": [
+      "float"
+    ],
+    "affective.LIWC.QMark": [
+      "float"
+    ],
+    "affective.LIWC.Quote": [
+      "float"
+    ],
+    "affective.LIWC.SemiC": [
+      "float"
+    ],
+    "affective.LIWC.achieve": [
+      "float"
+    ],
+    "affective.LIWC.adverb": [
+      "float"
+    ],
+    "affective.LIWC.affect": [
+      "float"
+    ],
+    "affective.LIWC.anger": [
+      "float"
+    ],
+    "affective.LIWC.anx": [
+      "float"
+    ],
+    "affective.LIWC.article": [
+      "float"
+    ],
+    "affective.LIWC.assent": [
+      "float"
+    ],
+    "affective.LIWC.auxverb": [
+      "float"
+    ],
+    "affective.LIWC.avg_sentence_length": [
+      "float"
+    ],
+    "affective.LIWC.bio": [
+      "float"
+    ],
+    "affective.LIWC.body": [
+      "float"
+    ],
+    "affective.LIWC.cause": [
+      "float"
+    ],
+    "affective.LIWC.certain": [
+      "float"
+    ],
+    "affective.LIWC.cogmech": [
+      "float"
+    ],
+    "affective.LIWC.conj": [
+      "float"
+    ],
+    "affective.LIWC.death": [
+      "float"
+    ],
+    "affective.LIWC.dictionary_words": [
+      "float"
+    ],
+    "affective.LIWC.discrep": [
+      "float"
+    ],
+    "affective.LIWC.excl": [
+      "float"
+    ],
+    "affective.LIWC.family": [
+      "float"
+    ],
+    "affective.LIWC.feel": [
+      "float"
+    ],
+    "affective.LIWC.filler": [
+      "float"
+    ],
+    "affective.LIWC.friend": [
+      "float"
+    ],
+    "affective.LIWC.funct": [
+      "float"
+    ],
+    "affective.LIWC.future": [
+      "float"
+    ],
+    "affective.LIWC.health": [
+      "float"
+    ],
+    "affective.LIWC.hear": [
+      "float"
+    ],
+    "affective.LIWC.home": [
+      "float"
+    ],
+    "affective.LIWC.humans": [
+      "float"
+    ],
+    "affective.LIWC.i": [
+      "float"
+    ],
+    "affective.LIWC.incl": [
+      "float"
+    ],
+    "affective.LIWC.ingest": [
+      "float"
+    ],
+    "affective.LIWC.inhib": [
+      "float"
+    ],
+    "affective.LIWC.insight": [
+      "float"
+    ],
+    "affective.LIWC.ipron": [
+      "float"
+    ],
+    "affective.LIWC.leisure": [
+      "float"
+    ],
+    "affective.LIWC.money": [
+      "float"
+    ],
+    "affective.LIWC.motion": [
+      "float"
+    ],
+    "affective.LIWC.negate": [
+      "float"
+    ],
+    "affective.LIWC.negemo": [
+      "float"
+    ],
+    "affective.LIWC.nonfl": [
+      "float"
+    ],
+    "affective.LIWC.number": [
+      "float"
+    ],
+    "affective.LIWC.numerals": [
+      "float"
+    ],
+    "affective.LIWC.past": [
+      "float"
+    ],
+    "affective.LIWC.percept": [
+      "float"
+    ],
+    "affective.LIWC.posemo": [
+      "float"
+    ],
+    "affective.LIWC.ppron": [
+      "float"
+    ],
+    "affective.LIWC.preps": [
+      "float"
+    ],
+    "affective.LIWC.present": [
+      "float"
+    ],
+    "affective.LIWC.pronoun": [
+      "float"
+    ],
+    "affective.LIWC.quant": [
+      "float"
+    ],
+    "affective.LIWC.relativ": [
+      "float"
+    ],
+    "affective.LIWC.relig": [
+      "float"
+    ],
+    "affective.LIWC.sad": [
+      "float"
+    ],
+    "affective.LIWC.see": [
+      "float"
+    ],
+    "affective.LIWC.sexual": [
+      "float"
+    ],
+    "affective.LIWC.shehe": [
+      "float"
+    ],
+    "affective.LIWC.social": [
+      "float"
+    ],
+    "affective.LIWC.space": [
+      "float"
+    ],
+    "affective.LIWC.swear": [
+      "float"
+    ],
+    "affective.LIWC.tentat": [
+      "float"
+    ],
+    "affective.LIWC.they": [
+      "float"
+    ],
+    "affective.LIWC.time": [
+      "float"
+    ],
+    "affective.LIWC.total_word_count": [
+      "float"
+    ],
+    "affective.LIWC.verb": [
+      "float"
+    ],
+    "affective.LIWC.we": [
+      "float"
+    ],
+    "affective.LIWC.work": [
+      "float"
+    ],
+    "affective.LIWC.you": [
+      "float"
+    ],
+    "affective.LabMT.happiness": [
+      "float"
+    ],
+    "affective.MPQA.negative": [
+      "float"
+    ],
+    "affective.MPQA.positive": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Anger": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Anticipation": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Disgust": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Fear": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Joy": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Negative": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Positive": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Sadness": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Surprise": [
+      "float"
+    ],
+    "affective.NRCAffectIntensity.Trust": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Anger": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Anticipation": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Disgust": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Fear": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Joy": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Negative": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Positive": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Sadness": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Surprise": [
+      "float"
+    ],
+    "affective.NRCEmotionWordlevel.Trust": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Anger": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Anticipation": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Disgust": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Fear": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Joy": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Negative": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Positive": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Sadness": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Surprise": [
+      "float"
+    ],
+    "affective.NRCExpandedEmotion.Trust": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Anger": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Anticipation": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Disgust": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Fear": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Joy": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Negative": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Positive": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Sadness": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Surprise": [
+      "float"
+    ],
+    "affective.NRCHashtagEmotion.Trust": [
+      "float"
+    ],
+    "affective.NRCHashtagSentiment.NegativeScore": [
+      "float"
+    ],
+    "affective.NRCHashtagSentiment.PositiveScore": [
+      "float"
+    ],
+    "affective.Negation.count": [
+      "float"
+    ],
+    "affective.SentiWordNet.NegativeScore": [
+      "float"
+    ],
+    "affective.SentiWordNet.PositiveScore": [
+      "float"
+    ],
+    "affective.Sentiment140.NegativeScore": [
+      "float"
+    ],
+    "affective.Sentiment140.PositiveScore": [
+      "float"
+    ],
+    "features.compression_ratio": [
+      "float"
+    ],
+    "features.entropy": [
+      "float"
+    ],
+    "features.lexical.average_token_length": [
+      "float"
+    ],
+    "features.lexical.average_tokens_per_line": [
+      "float"
+    ],
+    "features.lexical.blank_line_count": [
+      "int"
+    ],
+    "features.lexical.blank_line_ratio": [
+      "float"
+    ],
+    "features.lexical.character_count": [
+      "int"
+    ],
+    "features.lexical.colon_count": [
+      "int"
+    ],
+    "features.lexical.comma_count": [
+      "int"
+    ],
+    "features.lexical.digit_count": [
+      "int"
+    ],
+    "features.lexical.digit_ratio": [
+      "float"
+    ],
+    "features.lexical.dis_legomenon_ratio": [
+      "float"
+    ],
+    "features.lexical.dot_count": [
+      "int"
+    ],
+    "features.lexical.dugast": [
+      "float"
+    ],
+    "features.lexical.exclamation_mark_count": [
+      "int"
+    ],
+    "features.lexical.hapax_legomenon_ratio": [
+      "float"
+    ],
+    "features.lexical.herdan": [
+      "float"
+    ],
+    "features.lexical.hyphen_count": [
+      "int"
+    ],
+    "features.lexical.line_count": [
+      "int"
+    ],
+    "features.lexical.maas": [
+      "float"
+    ],
+    "features.lexical.mtld": [
+      "float"
+    ],
+    "features.lexical.parens_count": [
+      "int"
+    ],
+    "features.lexical.past_tense_ratio": [
+      "float"
+    ],
+    "features.lexical.pronoun_frequency": [
+      "float"
+    ],
+    "features.lexical.punctuation_count": [
+      "int"
+    ],
+    "features.lexical.punctuation_ratio": [
+      "float"
+    ],
+    "features.lexical.question_mark_count": [
+      "int"
+    ],
+    "features.lexical.quote_count": [
+      "int"
+    ],
+    "features.lexical.repeated_line_ratio": [
+      "float"
+    ],
+    "features.lexical.repeated_token_ratio": [
+      "float"
+    ],
+    "features.lexical.semicolon_count": [
+      "int"
+    ],
+    "features.lexical.stop_word_count": [
+      "int"
+    ],
+    "features.lexical.stop_word_ratio": [
+      "float"
+    ],
+    "features.lexical.stop_words_per_line": [
+      "float"
+    ],
+    "features.lexical.summer": [
+      "float"
+    ],
+    "features.lexical.token_count": [
+      "int"
+    ],
+    "features.lexical.tris_legomenon_ratio": [
+      "float"
+    ],
+    "features.lexical.unique_bigram_ratio": [
+      "float"
+    ],
+    "features.lexical.unique_line_count": [
+      "int"
+    ],
+    "features.lexical.unique_tokens_per_line": [
+      "float"
+    ],
+    "features.lexical.unique_trigram_ratio": [
+      "float"
+    ],
+    "features.readability.automated_readability_index": [
+      "float"
+    ],
+    "features.readability.coleman_liau_index": [
+      "float"
+    ],
+    "features.readability.crawford": [
+      "float"
+    ],
+    "features.readability.dale_chall_readability_score": [
+      "float"
+    ],
+    "features.readability.difficult_words": [
+      "int"
+    ],
+    "features.readability.fernandez_huerta": [
+      "float"
+    ],
+    "features.readability.flesch_kincaid_grade": [
+      "float"
+    ],
+    "features.readability.flesch_reading_ease": [
+      "float"
+    ],
+    "features.readability.gunning_fog": [
+      "float"
+    ],
+    "features.readability.gutierrez_polini": [
+      "float"
+    ],
+    "features.readability.linsear_write_formula": [
+      "float"
+    ],
+    "features.readability.smog": [
+      "float"
+    ],
+    "features.readability.szigriszt_pazos": [
+      "float"
+    ],
+    "features.rhyme.alliterations_len_2": [
+      "int"
+    ],
+    "features.rhyme.alliterations_len_3": [
+      "int"
+    ],
+    "features.rhyme.alliterations_len_4_plus": [
+      "int"
+    ],
+    "features.rhyme.num_alternating": [
+      "int"
+    ],
+    "features.rhyme.num_clerihews": [
+      "int"
+    ],
+    "features.rhyme.num_couplets": [
+      "int"
+    ],
+    "features.rhyme.num_nested": [
+      "int"
+    ],
+    "features.rhyme.rhyme_percent": [
+      "float"
+    ],
+    "features.rhyme.unique_rhyme_words": [
+      "int"
+    ],
+    "features.structure.chorus_repetitions": [
+      "NoneType",
+      "int"
+    ],
+    "features.structure.ends_with_two_chorus_repetitions": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.number_of_sections": [
+      "NoneType",
+      "int"
+    ],
+    "features.structure.number_of_verses": [
+      "NoneType",
+      "int"
+    ],
+    "features.structure.pattern_two_choruses_at_least_one_verse": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.pattern_two_verses_at_least_one_chorus": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.pattern_verse_chorus_alternating": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.ratio_chorus_sections": [
+      "NoneType",
+      "float",
+      "int"
+    ],
+    "features.structure.ratio_verses_sections": [
+      "NoneType",
+      "float",
+      "int"
+    ],
+    "features.structure.starts_with_chorus": [
+      "NoneType",
+      "bool"
+    ],
+    "features.structure.title_occurrences": [
+      "int"
+    ],
+    "features.uncommon_words_ratio": [
+      "float"
+    ],
+    "genre": [
+      "str"
+    ],
+    "lfm_playcount": [
+      "int"
+    ],
+    "popularity": [
+      "int"
+    ],
+    "release.$date": [
+      "str"
+    ]
+  },
+  "top_level_keys": [
+    "_id",
+    "affective",
+    "features",
+    "genre",
+    "lfm_playcount",
+    "popularity",
+    "release"
+  ],
+  "first_records": [
+    {
+      "_id": {
+        "artist": "Parachute",
+        "track": "Halfway"
+      },
+      "release": {
+        "$date": "2011-05-17T00:00:00Z"
+      },
+      "popularity": 303,
+      "lfm_playcount": 1442,
+      "genre": "pop",
+      "features": {
+        "compression_ratio": 3.498046875,
+        "entropy": 3.7930081760958205,
+        "uncommon_words_ratio": 1.0,
+        "readability": {
+          "flesch_kincaid_grade": 141.7,
+          "flesch_reading_ease": -256.37,
+          "smog": 0.0,
+          "automated_readability_index": 183.2,
+          "coleman_liau_index": 5.72,
+          "dale_chall_readability_score": 18.97,
+          "difficult_words": 1,
+          "linsear_write_formula": 50.0,
+          "gunning_fog": 149.31,
+          "fernandez_huerta": -233.7,
+          "szigriszt_pazos": -227.14,
+          "gutierrez_polini": -71.35,
+          "crawford": 1.3
+        },
+        "lexical": {
+          "token_count": 442,
+          "character_count": 1758,
+          "repeated_token_ratio": 0.4,
+          "unique_tokens_per_line": 1.9090909090909092,
+          "average_token_length": 3.1176470588235294,
+          "average_tokens_per_line": 8.036363636363637,
+          "line_count": 55,
+          "unique_line_count": 25,
+          "blank_line_count": 8,
+          "blank_line_ratio": 0.14545454545454545,
+          "repeated_line_ratio": 0.14545454545454545,
+          "exclamation_mark_count": 2,
+          "question_mark_count": 0,
+          "digit_count": 0,
+          "colon_count": 0,
+          "semicolon_count": 0,
+          "quote_count": 0,
+          "comma_count": 5,
+          "dot_count": 0,
+          "hyphen_count": 4,
+          "parens_count": 6,
+          "punctuation_count": 17,
+          "digit_ratio": 0.0,
+          "punctuation_ratio": 0.009670079635949944,
+          "stop_word_count": 224,
+          "stop_word_ratio": 0.5067873303167421,
+          "stop_words_per_line": 4.072727272727272,
+          "unique_bigram_ratio": 0.47580645161290325,
+          "unique_trigram_ratio": 0.5363881401617251,
+          "hapax_legomenon_ratio": 0.6,
+          "dis_legomenon_ratio": 0.14285714285714285,
+          "tris_legomenon_ratio": 0.0380952380952381,
+          "mtld": 26.8125,
+          "herdan": 0.7639810897773185,
+          "summer": 0.8497695565554751,
+          "dugast": 25.427686587904645,
+          "maas": 0.03932721116972067,
+          "pronoun_frequency": 0.2149321266968326,
+          "past_tense_ratio": 0.050359712230215826
+        },
+        "structure": {
+          "chorus_repetitions": 3,
+          "title_occurrences": 15,
+          "number_of_sections": 5,
+          "number_of_verses": 2,
+          "starts_with_chorus": false,
+          "ratio_verses_sections": 0.4,
+          "ratio_chorus_sections": 0.6,
+          "ends_with_two_chorus_repetitions": false,
+          "pattern_verse_chorus_alternating": false,
+          "pattern_two_verses_at_least_one_chorus": true,
+          "pattern_two_choruses_at_least_one_verse": true
+        },
+        "rhyme": {
+          "num_couplets": 1,
+          "num_clerihews": 0,
+          "num_alternating": 1,
+          "num_nested": 0,
+          "alliterations_len_2": 6,
+          "alliterations_len_3": 0,
+          "alliterations_len_4_plus": 0,
+          "rhyme_percent": 0.1276595744680851,
+          "unique_rhyme_words": 4
+        }
+      },
+      "affective": {
+        "AFINN": {
+          "PositiveScore": 18.0,
+          "NegativeScore": -1.0
+        },
+        "BingLiu": {
+          "positive": 5.0,
+          "negative": 0.0
+        },
+        "MPQA": {
+          "positive": 31.0,
+          "negative": 38.0
+        },
+        "NRCAffectIntensity": {
+          "Anger": 0.0,
+          "Anticipation": 0.0,
+          "Disgust": 0.0,
+          "Fear": 0.0,
+          "Joy": 1.9649999999999999,
+          "Negative": 0.0,
+          "Positive": 0.0,
+          "Sadness": 0.0,
+          "Surprise": 0.0,
+          "Trust": 0.0
+        },
+        "NRCEmotionWordlevel": {
+          "Anger": 0.0,
+          "Anticipation": 2.0,
+          "Disgust": 0.0,
+          "Fear": 0.0,
+          "Joy": 2.0,
+          "Negative": 16.0,
+          "Positive": 5.0,
+          "Sadness": 0.0,
+          "Surprise": 0.0,
+          "Trust": 5.0
+        },
+        "NRCExpandedEmotion": {
+          "Anger": 18.583850749535095,
+          "Anticipation": 17.238192706948926,
+          "Disgust": 14.289688002059638,
+          "Fear": 17.649705505471452,
+          "Joy": 14.213156275466307,
+          "Negative": 65.6119749259352,
+          "Positive": 36.573443638565266,
+          "Sadness": 11.739328028023392,
+          "Surprise": 10.415207488779753,
+          "Trust": 17.480072439658397
+        },
+        "NRCHashtagEmotion": {
+          "Anger": 11.78772045066164,
+          "Anticipation": 11.75717907080051,
+          "Disgust": 9.362278655668975,
+          "Fear": 15.326876067222184,
+          "Joy": 2.268384109166,
+          "Negative": 0.0,
+          "Positive": 0.0,
+          "Sadness": 4.750132131330101,
+          "Surprise": 8.667537390287578,
+          "Trust": 10.396220932179922
+        },
+        "NRCHashtagSentiment": {
+          "PositiveScore": 64.88400000000004,
+          "NegativeScore": -109.05299999999997
+        },
+        "Sentiment140": {
+          "PositiveScore": 140.58099999999996,
+          "NegativeScore": -98.34600000000003
+        },
+        "SentiWordNet": {
+          "PositiveScore": 21.215074127380134,
+          "NegativeScore": -16.391734307359307
+        },
+        "Negation": {
+          "count": 20.0
+        },
+        "LIWC": {
+          ">six_letter_words": 7.5675675675675675,
+          "Apostro": 8.378378378378379,
+          "Colon": 0.0,
+          "Comma": 1.3513513513513513,
+          "Dash": 0.0,
+          "Exclam": 0.0,
+          "OtherP": 0.0,
+          "Parenth": 0.8108108108108109,
+          "Period": 0.0,
+          "QMark": 0.0,
+          "Quote": 0.0,
+          "SemiC": 0.0,
+          "achieve": 0.0,
+          "adverb": 0.5405405405405406,
+          "affect": 1.0810810810810811,
+          "anger": 0.0,
+          "anx": 0.0,
+          "article": 4.594594594594595,
+          "assent": 0.0,
+          "auxverb": 23.783783783783782,
+          "avg_sentence_length": 369.0,
+          "bio": 0.5405405405405406,
+          "body": 0.2702702702702703,
+          "cause": 0.0,
+          "certain": 3.7837837837837838,
+          "cogmech": 24.594594594594593,
+          "conj": 5.945945945945946,
+          "death": 0.0,
+          "dictionary_words": 94.32432432432432,
+          "discrep": 5.675675675675675,
+          "excl": 6.756756756756757,
+          "family": 0.0,
+          "feel": 0.0,
+          "filler": 0.0,
+          "friend": 0.0,
+          "funct": 69.72972972972973,
+          "future": 11.08108108108108,
+          "health": 0.0,
+          "hear": 0.5405405405405406,
+          "home": 0.5405405405405406,
+          "humans": 0.2702702702702703,
+          "i": 11.621621621621621,
+          "incl": 2.7027027027027026,
+          "ingest": 0.0,
+          "inhib": 0.2702702702702703,
+          "insight": 1.8918918918918919,
+          "ipron": 7.027027027027027,
+          "leisure": 1.0810810810810811,
+          "money": 0.0,
+          "motion": 0.8108108108108109,
+          "negate": 5.675675675675675,
+          "negemo": 0.0,
+          "nonfl": 0.2702702702702703,
+          "number": 0.2702702702702703,
+          "numerals": 0.0,
+          "past": 0.2702702702702703,
+          "percept": 1.8918918918918919,
+          "posemo": 1.0810810810810811,
+          "ppron": 26.216216216216218,
+          "preps": 2.972972972972973,
+          "present": 16.216216216216218,
+          "pronoun": 33.24324324324324,
+          "quant": 1.0810810810810811,
+          "relativ": 8.108108108108109,
+          "relig": 0.0,
+          "sad": 0.0,
+          "see": 1.3513513513513513,
+          "sexual": 0.2702702702702703,
+          "shehe": 1.8918918918918919,
+          "social": 16.486486486486488,
+          "space": 1.8918918918918919,
+          "swear": 0.0,
+          "tentat": 3.2432432432432434,
+          "they": 0.0,
+          "time": 3.7837837837837838,
+          "total_word_count": 369.0,
+          "verb": 38.648648648648646,
+          "we": 0.0,
+          "work": 0.2702702702702703,
+          "you": 12.702702702702704
+        },
+        "LabMT": {
+          "happiness": 0.05093831158800923
+        }
+      }
+    },
+    {
+      "_id": {
+        "artist": "Charli XCX",
+        "track": "!Franchesckaar!"
+      },
+      "release": {
+        "$date": "2008-08-18T00:00:00Z"
+      },
+      "popularity": 2522,
+      "lfm_playcount": 261,
+      "genre": "pop",
+      "features": {
+        "compression_ratio": 3.9364069952305245,
+        "entropy": 3.691611392594982,
+        "uncommon_words_ratio": 1.0,
+        "readability": {
+          "flesch_kincaid_grade": -0.4,
+          "flesch_reading_ease": 113.2,
+          "smog": 9.1,
+          "automated_readability_index": 8.9,
+          "coleman_liau_index": 10.76,
+          "dale_chall_readability_score": 5.44,
+          "difficult_words": 2,
+          "linsear_write_formula": 5.1,
+          "gunning_fog": 3.76,
+          "fernandez_huerta": 137.8,
+          "szigriszt_pazos": 133.07,
+          "gutierrez_polini": 42.24,
+          "crawford": -0.7
+        },
+        "lexical": {
+          "token_count": 535,
+          "character_count": 2443,
+          "repeated_token_ratio": 0.36752136752136755,
+          "unique_tokens_per_line": 0.9590163934426229,
+          "average_token_length": 3.8149532710280374,
+          "average_tokens_per_line": 4.385245901639344,
+          "line_count": 122,
+          "unique_line_count": 37,
+          "blank_line_count": 10,
+          "blank_line_ratio": 0.08196721311475409,
+          "repeated_line_ratio": 0.09836065573770492,
+          "exclamation_mark_count": 88,
+          "question_mark_count": 2,
+          "digit_count": 0,
+          "colon_count": 0,
+          "semicolon_count": 0,
+          "quote_count": 0,
+          "comma_count": 41,
+          "dot_count": 0,
+          "hyphen_count": 1,
+          "parens_count": 0,
+          "punctuation_count": 132,
+          "digit_ratio": 0.0,
+          "punctuation_ratio": 0.05403192795742939,
+          "stop_word_count": 180,
+          "stop_word_ratio": 0.3364485981308411,
+          "stop_words_per_line": 1.4754098360655739,
+          "unique_bigram_ratio": 0.4642857142857143,
+          "unique_trigram_ratio": 0.5370843989769821,
+          "hapax_legomenon_ratio": 0.6324786324786325,
+          "dis_legomenon_ratio": 0.09401709401709402,
+          "tris_legomenon_ratio": 0.02564102564102564,
+          "mtld": 16.9444144236246,
+          "herdan": 0.7817069770425414,
+          "summer": 0.8625692128845902,
+          "dugast": 27.492472258862435,
+          "maas": 0.036373593127029216,
+          "pronoun_frequency": 0.20747663551401868,
+          "past_tense_ratio": 0.06097560975609756
+        },
+        "structure": {
+          "chorus_repetitions": 8,
+          "title_occurrences": 44,
+          "number_of_sections": 10,
+          "number_of_verses": 2,
+          "starts_with_chorus": true,
+          "ratio_verses_sections": 0.2,
+          "ratio_chorus_sections": 0.8,
+          "ends_with_two_chorus_repetitions": false,
+          "pattern_verse_chorus_alternating": false,
+          "pattern_two_verses_at_least_one_chorus": true,
+          "pattern_two_choruses_at_least_one_verse": true
+        },
+        "rhyme": {
+          "num_couplets": 9,
+          "num_clerihews": 5,
+          "num_alternating": 39,
+          "num_nested": 4,
+          "alliterations_len_2": 6,
+          "alliterations_len_3": 2,
+          "alliterations_len_4_plus": 0,
+          "rhyme_percent": 0.6607142857142857,
+          "unique_rhyme_words": 10
+        }
+      },
+      "affective": {
+        "AFINN": {
+          "PositiveScore": 94.0,
+          "NegativeScore": -7.0
+        },
+        "BingLiu": {
+          "positive": 22.0,
+          "negative": 5.0
+        },
+        "MPQA": {
+          "positive": 55.0,
+          "negative": 13.0
+        },
+        "NRCAffectIntensity": {
+          "Anger": 0.0,
+          "Anticipation": 0.0,
+          "Disgust": 0.0,
+          "Fear": 0.188,
+          "Joy": 15.721999999999994,
+          "Negative": 0.0,
+          "Positive": 0.0,
+          "Sadness": 0.41600000000000004,
+          "Surprise": 0.0,
+          "Trust": 0.0
+        },
+        "NRCEmotionWordlevel": {
+          "Anger": 0.0,
+          "Anticipation": 4.0,
+          "Disgust": 0.0,
+          "Fear": 1.0,
+          "Joy": 25.0,
+          "Negative": 0.0,
+          "Positive": 27.0,
+          "Sadness": 2.0,
+          "Surprise": 1.0,
+          "Trust": 8.0
+        },
+        "NRCExpandedEmotion": {
+          "Anger": 22.179556768524336,
+          "Anticipation": 24.510111038855072,
+          "Disgust": 15.991439142050476,
+          "Fear": 13.747404600452104,
+          "Joy": 33.04740415045394,
+          "Negative": 69.73575961570404,
+          "Positive": 68.68052670491238,
+          "Sadness": 9.804529289234306,
+          "Surprise": 12.683787859441221,
+          "Trust": 23.080439303682816
+        },
+        "NRCHashtagEmotion": {
+          "Anger": 21.29915421270629,
+          "Anticipation": 4.324219438908029,
+          "Disgust": 22.01184216148224,
+          "Fear": 5.939466735786599,
+          "Joy": 18.467737234968737,
+          "Negative": 0.0,
+          "Positive": 0.0,
+          "Sadness": 6.938928701387203,
+          "Surprise": 7.895478182551042,
+          "Trust": 19.441162256880027
+        },
+        "NRCHashtagSentiment": {
+          "PositiveScore": 198.01499999999976,
+          "NegativeScore": -124.20599999999996
+        },
+        "Sentiment140": {
+          "PositiveScore": 299.34900000000005,
+          "NegativeScore": -60.99499999999999
+        },
+        "SentiWordNet": {
+          "PositiveScore": 64.71157907321931,
+          "NegativeScore": -8.399757265653161
+        },
+        "Negation": {
+          "count": 9.0
+        },
+        "LIWC": {
+          ">six_letter_words": 18.734177215189874,
+          "Apostro": 2.7848101265822787,
+          "Colon": 0.0,
+          "Comma": 10.379746835443038,
+          "Dash": 0.25316455696202533,
+          "Exclam": 22.27848101265823,
+          "OtherP": 0.25316455696202533,
+          "Parenth": 0.0,
+          "Period": 0.0,
+          "QMark": 0.5063291139240507,
+          "Quote": 0.0,
+          "SemiC": 0.0,
+          "achieve": 0.25316455696202533,
+          "adverb": 1.2658227848101267,
+          "affect": 7.594936708860759,
+          "anger": 1.2658227848101267,
+          "anx": 0.0,
+          "article": 1.7721518987341771,
+          "assent": 4.810126582278481,
+          "auxverb": 4.556962025316456,
+          "avg_sentence_length": 8.382978723404255,
+          "bio": 8.860759493670885,
+          "body": 4.810126582278481,
+          "cause": 1.2658227848101267,
+          "certain": 5.063291139240507,
+          "cogmech": 16.455696202531644,
+          "conj": 3.2911392405063293,
+          "death": 0.0,
+          "dictionary_words": 82.0253164556962,
+          "discrep": 5.569620253164557,
+          "excl": 0.759493670886076,
+          "family": 0.0,
+          "feel": 2.5316455696202533,
+          "filler": 0.0,
+          "friend": 0.25316455696202533,
+          "funct": 46.835443037974684,
+          "future": 0.0,
+          "health": 0.0,
+          "hear": 0.5063291139240507,
+          "home": 0.0,
+          "humans": 1.2658227848101267,
+          "i": 1.2658227848101267,
+          "incl": 2.5316455696202533,
+          "ingest": 0.0,
+          "inhib": 0.5063291139240507,
+          "insight": 0.759493670886076,
+          "ipron": 2.5316455696202533,
+          "leisure": 0.5063291139240507,
+          "money": 0.0,
+          "motion": 0.0,
+          "negate": 2.278481012658228,
+          "negemo": 1.2658227848101267,
+          "nonfl": 0.0,
+          "number": 0.0,
+          "numerals": 0.0,
+          "past": 0.5063291139240507,
+          "percept": 8.10126582278481,
+          "posemo": 6.329113924050633,
+          "ppron": 26.075949367088608,
+          "preps": 4.30379746835443,
+          "present": 15.949367088607595,
+          "pronoun": 28.60759493670886,
+          "quant": 4.050632911392405,
+          "relativ": 2.7848101265822787,
+          "relig": 0.25316455696202533,
+          "sad": 0.0,
+          "see": 5.063291139240507,
+          "sexual": 4.050632911392405,
+          "shehe": 0.0,
+          "social": 32.40506329113924,
+          "space": 1.518987341772152,
+          "swear": 0.0,
+          "tentat": 0.25316455696202533,
+          "they": 11.39240506329114,
+          "time": 1.2658227848101267,
+          "total_word_count": 394.0,
+          "verb": 16.455696202531644,
+          "we": 0.0,
+          "work": 1.518987341772152,
+          "you": 13.417721518987342
+        },
+        "LabMT": {
+          "happiness": 0.2483386790353386
+        }
+      }
+    },
+    {
+      "_id": {
+        "artist": "Slade",
+        "track": "She's Got the Lot"
+      },
+      "release": {
+        "$date": "1977-03-21T00:00:00Z"
+      },
+      "popularity": 136,
+      "lfm_playcount": 115,
+      "genre": "pop",
+      "features": {
+        "compression_ratio": 2.673202614379085,
+        "entropy": 4.236021933310507,
+        "uncommon_words_ratio": 1.0,
+        "readability": {
+          "flesch_kincaid_grade": 91.4,
+          "flesch_reading_ease": -136.26,
+          "smog": 0.0,
+          "automated_readability_index": 116.9,
+          "coleman_liau_index": 7.23,
+          "dale_chall_readability_score": 17.23,
+          "difficult_words": 6,
+          "linsear_write_formula": 54.0,
+          "gunning_fog": 96.21,
+          "fernandez_huerta": -108.0,
+          "szigriszt_pazos": -102.9,
+          "gutierrez_polini": -26.67,
+          "crawford": 2.1
+        },
+        "lexical": {
+          "token_count": 268,
+          "character_count": 1194,
+          "repeated_token_ratio": 0.4326923076923077,
+          "unique_tokens_per_line": 3.7142857142857144,
+          "average_token_length": 3.537313432835821,
+          "average_tokens_per_line": 9.571428571428571,
+          "line_count": 28,
+          "unique_line_count": 18,
+          "blank_line_count": 4,
+          "blank_line_ratio": 0.14285714285714285,
+          "repeated_line_ratio": 0.17857142857142858,
+          "exclamation_mark_count": 1,
+          "question_mark_count": 0,
+          "digit_count": 0,
+          "colon_count": 0,
+          "semicolon_count": 0,
+          "quote_count": 0,
+          "comma_count": 0,
+          "dot_count": 0,
+          "hyphen_count": 5,
+          "parens_count": 0,
+          "punctuation_count": 6,
+          "digit_ratio": 0.0,
+          "punctuation_ratio": 0.005025125628140704,
+          "stop_word_count": 129,
+          "stop_word_ratio": 0.48134328358208955,
+          "stop_words_per_line": 4.607142857142857,
+          "unique_bigram_ratio": 0.6198347107438017,
+          "unique_trigram_ratio": 0.6680497925311203,
+          "hapax_legomenon_ratio": 0.5673076923076923,
+          "dis_legomenon_ratio": 0.038461538461538464,
+          "tris_legomenon_ratio": 0.22115384615384615,
+          "mtld": 64.1376387540347,
+          "herdan": 0.8202590443304566,
+          "summer": 0.8845643008099505,
+          "dugast": 30.958555809356852,
+          "maas": 0.032301248357901824,
+          "pronoun_frequency": 0.19402985074626866,
+          "past_tense_ratio": 0.22580645161290322
+        },
+        "structure": {
+          "chorus_repetitions": null,
+          "title_occurrences": 3,
+          "number_of_sections": null,
+          "number_of_verses": null,
+          "starts_with_chorus": null,
+          "ratio_verses_sections": null,
+          "ratio_chorus_sections": null,
+          "ends_with_two_chorus_repetitions": null,
+          "pattern_verse_chorus_alternating": null,
+          "pattern_two_verses_at_least_one_chorus": null,
+          "pattern_two_choruses_at_least_one_verse": null
+        },
+        "rhyme": {
+          "num_couplets": 9,
+          "num_clerihews": 5,
+          "num_alternating": 0,
+          "num_nested": 0,
+          "alliterations_len_2": 2,
+          "alliterations_len_3": 0,
+          "alliterations_len_4_plus": 0,
+          "rhyme_percent": 0.75,
+          "unique_rhyme_words": 14
+        }
+      },
+      "affective": {
+        "AFINN": {
+          "PositiveScore": 17.0,
+          "NegativeScore": -11.0
+        },
+        "BingLiu": {
+          "positive": 6.0,
+          "negative": 10.0
+        },
+        "MPQA": {
+          "positive": 11.0,
+          "negative": 27.0
+        },
+        "NRCAffectIntensity": {
+          "Anger": 0.507,
+          "Anticipation": 0.0,
+          "Disgust": 0.0,
+          "Fear": 0.745,
+          "Joy": 4.91,
+          "Negative": 0.0,
+          "Positive": 0.0,
+          "Sadness": 2.384,
+          "Surprise": 0.0,
+          "Trust": 0.0
+        },
+        "NRCEmotionWordlevel": {
+          "Anger": 4.0,
+          "Anticipation": 3.0,
+          "Disgust": 5.0,
+          "Fear": 1.0,
+          "Joy": 5.0,
+          "Negative": 12.0,
+          "Positive": 7.0,
+          "Sadness": 4.0,
+          "Surprise": 8.0,
+          "Trust": 5.0
+        },
+        "NRCExpandedEmotion": {
+          "Anger": 9.250711700497614,
+          "Anticipation": 8.391224334595789,
+          "Disgust": 7.97601892290117,
+          "Fear": 7.830263631352304,
+          "Joy": 6.7248734089191595,
+          "Negative": 30.761910487230978,
+          "Positive": 20.184092104538383,
+          "Sadness": 4.458306145261309,
+          "Surprise": 4.575484838198259,
+          "Trust": 10.626279754969561
+        },
+        "NRCHashtagEmotion": {
+          "Anger": 8.158986035780382,
+          "Anticipation": 6.4314535273005005,
+          "Disgust": 29.288616319544797,
+          "Fear": 6.562523046837052,
+          "Joy": 4.1232408153691,
+          "Negative": 0.0,
+          "Positive": 0.0,
+          "Sadness": 5.9087977083026,
+          "Surprise": 5.519710774951059,
+          "Trust": 3.3513518830772
+        },
+        "NRCHashtagSentiment": {
+          "PositiveScore": 48.27400000000001,
+          "NegativeScore": -73.73999999999998
+        },
+        "Sentiment140": {
+          "PositiveScore": 75.15599999999999,
+          "NegativeScore": -81.953
+        },
+        "SentiWordNet": {
+          "PositiveScore": 19.38210313725887,
+          "NegativeScore": -9.6587866994117
+        },
+        "Negation": {
+          "count": 7.0
+        },
+        "LIWC": {
+          ">six_letter_words": 9.623430962343097,
+          "Apostro": 9.623430962343097,
+          "Colon": 0.0,
+          "Comma": 0.0,
+          "Dash": 2.092050209205021,
+          "Exclam": 0.41841004184100417,
+          "OtherP": 2.092050209205021,
+          "Parenth": 0.0,
+          "Period": 0.0,
+          "QMark": 0.0,
+          "Quote": 0.0,
+          "SemiC": 0.0,
+          "achieve": 0.41841004184100417,
+          "adverb": 4.602510460251046,
+          "affect": 2.928870292887029,
+          "anger": 0.41841004184100417,
+          "anx": 0.0,
+          "article": 2.092050209205021,
+          "assent": 1.2552301255230125,
+          "auxverb": 12.133891213389122,
+          "avg_sentence_length": 238.0,
+          "bio": 2.510460251046025,
+          "body": 1.6736401673640167,
+          "cause": 0.41841004184100417,
+          "certain": 1.6736401673640167,
+          "cogmech": 17.99163179916318,
+          "conj": 5.857740585774058,
+          "death": 0.0,
+          "dictionary_words": 89.5397489539749,
+          "discrep": 0.8368200836820083,
+          "excl": 3.3472803347280333,
+          "family": 0.0,
+          "feel": 3.3472803347280333,
+          "filler": 0.0,
+          "friend": 0.0,
+          "funct": 61.08786610878661,
+          "future": 2.928870292887029,
+          "health": 0.0,
+          "hear": 0.0,
+          "home": 1.6736401673640167,
+          "humans": 1.2552301255230125,
+          "i": 1.2552301255230125,
+          "incl": 5.02092050209205,
+          "ingest": 0.8368200836820083,
+          "inhib": 0.8368200836820083,
+          "insight": 2.928870292887029,
+          "ipron": 7.112970711297071,
+          "leisure": 0.41841004184100417,
+          "money": 0.0,
+          "motion": 3.7656903765690375,
+          "negate": 3.7656903765690375,
+          "negemo": 1.6736401673640167,
+          "nonfl": 0.0,
+          "number": 0.0,
+          "numerals": 0.0,
+          "past": 2.510460251046025,
+          "percept": 5.857740585774058,
+          "posemo": 1.2552301255230125,
+          "ppron": 22.594142259414227,
+          "preps": 8.786610878661088,
+          "present": 18.410041841004183,
+          "pronoun": 29.707112970711297,
+          "quant": 6.694560669456067,
+          "relativ": 10.460251046025105,
+          "relig": 0.0,
+          "sad": 0.8368200836820083,
+          "see": 0.41841004184100417,
+          "sexual": 0.0,
+          "shehe": 18.828451882845187,
+          "social": 23.430962343096233,
+          "space": 6.2761506276150625,
+          "swear": 0.0,
+          "tentat": 4.184100418410042,
+          "they": 0.8368200836820083,
+          "time": 0.41841004184100417,
+          "total_word_count": 238.0,
+          "verb": 23.84937238493724,
+          "we": 0.0,
+          "work": 0.0,
+          "you": 1.6736401673640167
+        },
+        "LabMT": {
+          "happiness": 0.15889783687385914
+        }
+      }
+    }
+  ]
+}
