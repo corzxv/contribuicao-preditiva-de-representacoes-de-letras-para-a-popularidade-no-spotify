@@ -1,0 +1,15 @@
+project_name: tcc-popularidade-musical
+random_seed: 20260817
+analysis_year_min: 2000
+analysis_year_max: 2023
+chunk_size: 25000
+compression: zstd
+normalization_version: v0.1.0
+matching_version: v0.1.0
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  rejected: data/rejected
+  reports: reports
+

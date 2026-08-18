@@ -1,0 +1,17 @@
+spotify:
+  logical_name: spotify_1million_tracks
+  page_url: https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks
+  identifier: amitanshjoshi/spotify-1million-tracks
+  download_url: https://www.kaggle.com/api/v1/datasets/download/amitanshjoshi/spotify-1million-tracks
+  local_path: data/raw/spotify/spotify_data.csv
+  archive_path: data/raw/spotify/spotify-1million-tracks.zip
+  license_observed: "Database: Open Database; Contents: © Original Authors"
+  license_url: https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks
+lfm2b:
+  logical_name: lfm2b_lyrics_descriptor_analyses
+  page_url: https://zenodo.org/records/10938615
+  identifier: 10.5281/zenodo.10938615
+  download_url: https://zenodo.org/records/10938615/files/full_dataset.json.gz?download=1
+  local_path: data/raw/lfm2b/full_dataset.json.gz
+  license_observed: CC-BY-4.0
+  license_url: https://creativecommons.org/licenses/by/4.0/

@@ -1,0 +1,18 @@
+version: v0.1.0
+methods:
+  - raw_exact
+  - strict_normalized
+  - conservative_normalized
+  - base_title_version_compatible
+  - fuzzy_candidate
+fuzzy:
+  enabled: true
+  minimum_score: 88.0
+  max_candidates_per_track: 3
+  max_tracks: 50000
+review_sample_size_per_stratum: 25
+acceptance:
+  require_artist_and_title: true
+  fuzzy_auto_accept: false
+  require_unique_spotify_candidate: true
+

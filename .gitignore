@@ -1,0 +1,45 @@
+# Ambientes e artefatos Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Segredos e configuração local
+.env
+configs/data_sources.yaml
+kaggle.json
+
+# Dados: brutos imutáveis e produtos reconstruíveis não são versionados
+data/raw/**
+data/interim/**
+data/processed/**
+data/rejected/**
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/rejected/.gitkeep
+*.duckdb
+*.duckdb.wal
+*.parquet
+*.csv
+*.jsonl
+*.json.gz
+*.zip
+
+# Relatórios gerados e logs volumosos
+reports/figures/*.png
+reports/tables/*.csv
+logs/
+*.log
+
+# Editores e sistema operacional
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
