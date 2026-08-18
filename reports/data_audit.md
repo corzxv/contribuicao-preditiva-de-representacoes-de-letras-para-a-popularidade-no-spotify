@@ -1,6 +1,6 @@
 # Auditoria de dados — Base v0.1
 
-Gerado em: `2026-08-18T01:53:01.755756+00:00`.
+Gerado em: `2026-08-18T01:54:42.185317+00:00`.
 
 > Resultados abaixo são observados nos arquivos efetivamente processados. Benchmarks fornecidos são mostrados apenas como referência comparativa.
 
@@ -67,7 +67,7 @@ Sinal heurístico de balanceamento artificial por gênero: **False**. A heuríst
 
 ## LFM2b
 
-Foram observados **582,759** registros, **242** colunas e **210** colunas classificadas como descritores LFM2b.
+Foram observados **582,759** registros, **242** colunas e **209** colunas classificadas como descritores LFM2b.
 
 Excesso de duplicatas da chave operacional: 0; excesso de artista+título: 0.
 

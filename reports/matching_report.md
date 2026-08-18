@@ -1,6 +1,6 @@
 # Relatório de matching — Spotify × LFM2b
 
-Gerado em: `2026-08-18T01:53:01.770576+00:00`.
+Gerado em: `2026-08-18T01:54:42.201189+00:00`.
 
 ## Funil por método e status
 

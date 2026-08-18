@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T01:52:58.696939+00:00",
+  "generated_at": "2026-08-18T01:54:39.008061+00:00",
   "total_spotify": 1159764,
   "matched": 111758,
   "match_rate_percent": 9.636270827513183,
@@ -709,49 +709,49 @@
       "matched_median": 26.0,
       "unmatched_mean": 17.44673026681145,
       "unmatched_median": 14.0,
-      "standardized_mean_difference": 0.6443588434614561
+      "standardized_mean_difference": 0.6443588434614562
     },
     "danceability": {
       "matched_mean": 0.5092540498219358,
       "matched_median": 0.511,
       "unmatched_mean": 0.5404437565242941,
       "unmatched_median": 0.555,
-      "standardized_mean_difference": -0.17539159833182774
+      "standardized_mean_difference": -0.1753915983318277
     },
     "energy": {
-      "matched_mean": 0.7155542876044659,
+      "matched_mean": 0.715554287604466,
       "matched_median": 0.769,
-      "unmatched_mean": 0.6315776866107682,
+      "unmatched_mean": 0.6315776866107683,
       "unmatched_median": 0.685,
       "standardized_mean_difference": 0.3318853846090052
     },
     "loudness": {
-      "matched_mean": -6.793124912757923,
+      "matched_mean": -6.793124912757924,
       "matched_median": -6.068,
       "unmatched_mean": -9.214702609527038,
       "unmatched_median": -7.633,
-      "standardized_mean_difference": 0.5123029325422513
+      "standardized_mean_difference": 0.5123029325422511
     },
     "speechiness": {
-      "matched_mean": 0.08759720556917637,
+      "matched_mean": 0.08759720556917636,
       "matched_median": 0.053,
-      "unmatched_mean": 0.09337116199716068,
+      "unmatched_mean": 0.0933711619971607,
       "unmatched_median": 0.0505,
-      "standardized_mean_difference": -0.051897108672433426
+      "standardized_mean_difference": -0.051897108672433676
     },
     "acousticness": {
       "matched_mean": 0.18924673594794125,
       "matched_median": 0.0337,
-      "unmatched_mean": 0.33564421509553094,
+      "unmatched_mean": 0.3356442150955309,
       "unmatched_median": 0.17,
-      "standardized_mean_difference": -0.45619251744537376
+      "standardized_mean_difference": -0.4561925174453736
     },
     "instrumentalness": {
-      "matched_mean": 0.12419762913786948,
+      "matched_mean": 0.1241976291378695,
       "matched_median": 0.000266,
-      "unmatched_mean": 0.2660147727084275,
+      "unmatched_mean": 0.26601477270842744,
       "unmatched_median": 0.0023750000000000004,
-      "standardized_mean_difference": -0.44242583937234725
+      "standardized_mean_difference": -0.442425839372347
     },
     "liveness": {
       "matched_mean": 0.2125789400311393,
@@ -770,9 +770,9 @@
     "tempo": {
       "matched_mean": 124.25252576101944,
       "matched_median": 122.045,
-      "unmatched_mean": 121.07050953143369,
+      "unmatched_mean": 121.0705095314337,
       "unmatched_median": 121.88,
-      "standardized_mean_difference": 0.10662005743524029
+      "standardized_mean_difference": 0.10662005743523982
     },
     "duration_ms": {
       "matched_mean": 231251.66465935324,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T01:52:57.281897+00:00",
+  "generated_at": "2026-08-18T01:54:37.605197+00:00",
   "rows": 582759,
   "columns": 242,
   "schema": {
@@ -1297,7 +1297,7 @@
   "quality_flags": {
     "lfm_qf_release_year_implausible": 127
   },
-  "descriptor_count": 210,
+  "descriptor_count": 209,
   "descriptor_names": [
     "lfm_affective_afinn_negativescore",
     "lfm_affective_afinn_positivescore",
@@ -1507,8 +1507,7 @@
     "lfm_structure_ratio_verses_sections",
     "lfm_structure_starts_with_chorus",
     "lfm_structure_title_occurrences",
-    "lfm_uncommon_words_ratio",
-    "lfm_qf_release_year_implausible"
+    "lfm_uncommon_words_ratio"
   ],
   "semantic_note": {
     "genius_lyrics_views": "Campo original popularity; visualizações da letra no Genius segundo Zenodo/artigo.",

@@ -297,6 +297,7 @@ def normalize_lfm2b(force: bool = False) -> dict[str, Any]:
             name
             for name in final_schema
             if name.startswith("lfm_")
+            and not name.startswith("lfm_qf_")
             and name
             not in {
                 "lfm_record_key",
@@ -407,6 +408,7 @@ def audit_lfm2b() -> dict[str, Any]:
             name
             for name in columns
             if name.startswith("lfm_")
+            and not name.startswith("lfm_qf_")
             and name
             not in {
                 "lfm_record_key",
