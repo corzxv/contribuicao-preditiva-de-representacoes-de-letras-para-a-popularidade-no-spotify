@@ -208,8 +208,8 @@ def audit_spotify() -> dict[str, Any]:
     observed = {
         "rows": frame.height,
         "columns": frame.width,
-        "artists_distinct": cardinality.get("artist_name_raw"),
-        "titles_distinct": cardinality.get("track_name_raw"),
+        "artists_distinct": int(frame["artist_name_raw"].drop_nulls().n_unique()),
+        "titles_distinct": int(frame["track_name_raw"].drop_nulls().n_unique()),
         "track_ids_distinct": cardinality.get("track_id"),
         "year_min": int(frame["year"].min()) if frame["year"].drop_nulls().len() else None,
         "year_max": int(frame["year"].max()) if frame["year"].drop_nulls().len() else None,

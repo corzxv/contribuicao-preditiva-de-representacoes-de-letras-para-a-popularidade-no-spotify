@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-18T01:51:31.791274+00:00",
+  "generated_at": "2026-08-18T01:52:54.134346+00:00",
   "observed": {
     "rows": 1159764,
     "columns": 61,
-    "artists_distinct": 64159,
-    "titles_distinct": 882361,
+    "artists_distinct": 64158,
+    "titles_distinct": 882360,
     "track_ids_distinct": 1159764,
     "year_min": 2000,
     "year_max": 2023
@@ -1171,7 +1171,7 @@
   "benchmark_differences_observed_minus_benchmark": {
     "rows_difference": 0,
     "track_ids_difference": 0,
-    "artists_difference": 1,
+    "artists_difference": 0,
     "genres_difference": 0,
     "popularity_zero_percentage_points_difference": -0.0028249999999996334,
     "popularity_mean_difference": 0.003122773253871003,

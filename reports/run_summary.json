@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-18T01:51:39.821761+00:00",
+  "timestamp": "2026-08-18T01:53:01.774890+00:00",
   "code_version": "0.1.0",
-  "git_commit": "b19e854bff7cd2555dd22327bbab204fa9ff03ba",
+  "git_commit": "eeadfbeee5edeba0743ecd86214555aa5c170509",
   "input_hashes": {
     "spotify": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
     "lfm2b": "0a7c3d52584c4f726fb4e06e62ce36f00ff1b428811561409e6941df8428d106"
@@ -23,11 +23,11 @@
     "database": null,
     "report": null
   },
-  "duration_seconds": 11.908697,
+  "duration_seconds": 11.411009,
   "stages": {
     "acquire": {
       "status": "completed",
-      "duration_seconds": 0.989217,
+      "duration_seconds": 0.945931,
       "result": {
         "spotify": {
           "status": "available",
@@ -38,7 +38,7 @@
             "local_path": "data/raw/spotify/spotify_data.csv",
             "size_bytes": 175822041,
             "sha256": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
-            "obtained_or_verified_at": "2026-08-18T01:51:28.193501+00:00",
+            "obtained_or_verified_at": "2026-08-18T01:52:50.630680+00:00",
             "license_observed": "Database: Open Database; Contents: © Original Authors",
             "license_url": "https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks",
             "verification_status": "file_present_hash_computed",
@@ -56,7 +56,7 @@
             "local_path": "data/raw/lfm2b/full_dataset.json.gz",
             "size_bytes": 690455174,
             "sha256": "0a7c3d52584c4f726fb4e06e62ce36f00ff1b428811561409e6941df8428d106",
-            "obtained_or_verified_at": "2026-08-18T01:51:28.976604+00:00",
+            "obtained_or_verified_at": "2026-08-18T01:52:51.375987+00:00",
             "license_observed": "CC-BY-4.0",
             "license_url": "https://creativecommons.org/licenses/by/4.0/",
             "verification_status": "file_present_hash_computed",
@@ -69,7 +69,7 @@
     },
     "normalize_spotify": {
       "status": "completed",
-      "duration_seconds": 0.002244,
+      "duration_seconds": 0.002265,
       "result": {
         "status": "reused",
         "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_tracks.parquet"
@@ -77,7 +77,7 @@
     },
     "normalize_lfm2b": {
       "status": "completed",
-      "duration_seconds": 0.017721,
+      "duration_seconds": 0.018182,
       "result": {
         "status": "reused",
         "rows": 582759,
@@ -86,14 +86,14 @@
     },
     "audit_spotify": {
       "status": "completed",
-      "duration_seconds": 4.420532,
+      "duration_seconds": 4.257171,
       "result": {
-        "generated_at": "2026-08-18T01:51:31.791274+00:00",
+        "generated_at": "2026-08-18T01:52:54.134346+00:00",
         "observed": {
           "rows": 1159764,
           "columns": 61,
-          "artists_distinct": 64159,
-          "titles_distinct": 882361,
+          "artists_distinct": 64158,
+          "titles_distinct": 882360,
           "track_ids_distinct": 1159764,
           "year_min": 2000,
           "year_max": 2023
@@ -1260,7 +1260,7 @@
         "benchmark_differences_observed_minus_benchmark": {
           "rows_difference": 0,
           "track_ids_difference": 0,
-          "artists_difference": 1,
+          "artists_difference": 0,
           "genres_difference": 0,
           "popularity_zero_percentage_points_difference": -0.0028249999999996334,
           "popularity_mean_difference": 0.003122773253871003,
@@ -1270,9 +1270,9 @@
     },
     "audit_lfm2b": {
       "status": "completed",
-      "duration_seconds": 1.778801,
+      "duration_seconds": 1.652239,
       "result": {
-        "generated_at": "2026-08-18T01:51:35.167626+00:00",
+        "generated_at": "2026-08-18T01:52:57.281897+00:00",
         "rows": 582759,
         "columns": 242,
         "schema": {
@@ -2791,7 +2791,7 @@
     },
     "match": {
       "status": "completed",
-      "duration_seconds": 0.001087,
+      "duration_seconds": 0.000954,
       "result": {
         "status": "reused",
         "generated_at": "2026-08-18T01:47:09.135332+00:00",
@@ -2909,9 +2909,9 @@
     },
     "selection_bias": {
       "status": "completed",
-      "duration_seconds": 1.401766,
+      "duration_seconds": 1.406713,
       "result": {
-        "generated_at": "2026-08-18T01:51:36.579772+00:00",
+        "generated_at": "2026-08-18T01:52:58.696939+00:00",
         "total_spotify": 1159764,
         "matched": 111758,
         "match_rate_percent": 9.636270827513183,
@@ -3624,74 +3624,74 @@
             "standardized_mean_difference": 0.6443588434614561
           },
           "danceability": {
-            "matched_mean": 0.5092540498219357,
+            "matched_mean": 0.5092540498219358,
             "matched_median": 0.511,
             "unmatched_mean": 0.5404437565242941,
             "unmatched_median": 0.555,
-            "standardized_mean_difference": -0.17539159833182835
+            "standardized_mean_difference": -0.17539159833182774
           },
           "energy": {
-            "matched_mean": 0.7155542876044658,
+            "matched_mean": 0.7155542876044659,
             "matched_median": 0.769,
             "unmatched_mean": 0.6315776866107682,
             "unmatched_median": 0.685,
-            "standardized_mean_difference": 0.3318853846090047
+            "standardized_mean_difference": 0.3318853846090052
           },
           "loudness": {
-            "matched_mean": -6.793124912757924,
+            "matched_mean": -6.793124912757923,
             "matched_median": -6.068,
             "unmatched_mean": -9.214702609527038,
             "unmatched_median": -7.633,
-            "standardized_mean_difference": 0.5123029325422511
+            "standardized_mean_difference": 0.5123029325422513
           },
           "speechiness": {
             "matched_mean": 0.08759720556917637,
             "matched_median": 0.053,
-            "unmatched_mean": 0.0933711619971607,
+            "unmatched_mean": 0.09337116199716068,
             "unmatched_median": 0.0505,
-            "standardized_mean_difference": -0.05189710867243355
+            "standardized_mean_difference": -0.051897108672433426
           },
           "acousticness": {
-            "matched_mean": 0.18924673594794128,
+            "matched_mean": 0.18924673594794125,
             "matched_median": 0.0337,
             "unmatched_mean": 0.33564421509553094,
             "unmatched_median": 0.17,
             "standardized_mean_difference": -0.45619251744537376
           },
           "instrumentalness": {
-            "matched_mean": 0.1241976291378695,
+            "matched_mean": 0.12419762913786948,
             "matched_median": 0.000266,
-            "unmatched_mean": 0.26601477270842744,
+            "unmatched_mean": 0.2660147727084275,
             "unmatched_median": 0.0023750000000000004,
-            "standardized_mean_difference": -0.442425839372347
+            "standardized_mean_difference": -0.44242583937234725
           },
           "liveness": {
             "matched_mean": 0.2125789400311393,
             "matched_median": 0.14,
             "unmatched_mean": 0.22413217449136708,
             "unmatched_median": 0.133,
-            "standardized_mean_difference": -0.06116373808797651
+            "standardized_mean_difference": -0.0611637380879765
           },
           "valence": {
-            "matched_mean": 0.4206118210776861,
+            "matched_mean": 0.4206118210776862,
             "matched_median": 0.395,
-            "unmatched_mean": 0.45929080796388416,
+            "unmatched_mean": 0.4592908079638842,
             "unmatched_median": 0.444,
-            "standardized_mean_difference": -0.15209954666163716
+            "standardized_mean_difference": -0.15209954666163694
           },
           "tempo": {
             "matched_mean": 124.25252576101944,
             "matched_median": 122.045,
-            "unmatched_mean": 121.0705095314337,
+            "unmatched_mean": 121.07050953143369,
             "unmatched_median": 121.88,
-            "standardized_mean_difference": 0.10662005743523982
+            "standardized_mean_difference": 0.10662005743524029
           },
           "duration_ms": {
             "matched_mean": 231251.66465935324,
             "matched_median": 220002.5,
             "unmatched_mean": 251514.34829571587,
             "unmatched_median": 226560.0,
-            "standardized_mean_difference": -0.16154496027926082
+            "standardized_mean_difference": -0.1615449602792608
           }
         },
         "spotify_popularity_zero_percent": {
@@ -3703,9 +3703,9 @@
     },
     "database": {
       "status": "completed",
-      "duration_seconds": 0.261336,
+      "duration_seconds": 0.243138,
       "result": {
-        "generated_at": "2026-08-18T01:51:36.861111+00:00",
+        "generated_at": "2026-08-18T01:52:58.957784+00:00",
         "database": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\music_tcc.duckdb",
         "datasets": {
           "spotify_tracks": {
@@ -3773,7 +3773,7 @@
     },
     "report": {
       "status": "completed",
-      "duration_seconds": 2.957512,
+      "duration_seconds": 2.814331,
       "result": {
         "figures": [
           "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\figures\\spotify_tracks_by_year.png",
@@ -3840,7 +3840,7 @@
     },
     "data/processed/music_tcc.duckdb": {
       "status": "available",
-      "size_bytes": 798720
+      "size_bytes": 1323008
     },
     "reports/data_audit.md": {
       "status": "available",

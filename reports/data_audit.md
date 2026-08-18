@@ -1,6 +1,6 @@
 # Auditoria de dados — Base v0.1
 
-Gerado em: `2026-08-18T01:51:39.801619+00:00`.
+Gerado em: `2026-08-18T01:53:01.755756+00:00`.
 
 > Resultados abaixo são observados nos arquivos efetivamente processados. Benchmarks fornecidos são mostrados apenas como referência comparativa.
 
@@ -13,7 +13,7 @@ Gerado em: `2026-08-18T01:51:39.801619+00:00`.
 
 ## Spotify
 
-Foram observadas **1,159,764** linhas e **61** colunas; 1,159,764 IDs, 64,159 artistas e anos de 2000 a 2023.
+Foram observadas **1,159,764** linhas e **61** colunas; 1,159,764 IDs, 64,158 artistas e anos de 2000 a 2023.
 
 `spotify_popularity`: média 18.3831, mediana 15.0000, zeros 158,391 (13.6572%).
 
@@ -31,7 +31,7 @@ Foram observadas **1,159,764** linhas e **61** colunas; 1,159,764 IDs, 64,159 ar
 {
   "rows_difference": 0,
   "track_ids_difference": 0,
-  "artists_difference": 1,
+  "artists_difference": 0,
   "genres_difference": 0,
   "popularity_zero_percentage_points_difference": -0.0028249999999996334,
   "popularity_mean_difference": 0.003122773253871003,
