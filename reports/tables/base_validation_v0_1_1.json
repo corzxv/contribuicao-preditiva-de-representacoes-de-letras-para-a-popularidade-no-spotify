@@ -1,0 +1,158 @@
+{
+  "source_rows": 111758,
+  "source_columns": 310,
+  "output_rows": 111758,
+  "output_columns": 228,
+  "unique_track_ids": 111758,
+  "unique_spotify_row_ids": 111758,
+  "unique_lfm_record_keys": 111758,
+  "total_missing_cells": 870004,
+  "total_infinite_values": 0,
+  "constant_columns_full": [
+    "lfm_affective_liwc_numerals",
+    "lfm_affective_nrcaffectintensity_anticipation",
+    "lfm_affective_nrcaffectintensity_disgust",
+    "lfm_affective_nrcaffectintensity_negative",
+    "lfm_affective_nrcaffectintensity_positive",
+    "lfm_affective_nrcaffectintensity_surprise",
+    "lfm_affective_nrcaffectintensity_trust",
+    "lfm_affective_nrchashtagemotion_negative",
+    "lfm_affective_nrchashtagemotion_positive",
+    "lfm_normalization_version",
+    "lfm_structure_ends_with_two_chorus_repetitions",
+    "lfm_structure_pattern_two_choruses_at_least_one_verse",
+    "lfm_uncommon_words_ratio",
+    "match_score",
+    "matching_version",
+    "normalization_version",
+    "qf_acousticness_out_of_range",
+    "qf_danceability_out_of_range",
+    "qf_duration_nonpositive",
+    "qf_energy_out_of_range",
+    "qf_instrumentalness_out_of_range",
+    "qf_key_invalid",
+    "qf_liveness_out_of_range",
+    "qf_mode_invalid",
+    "qf_speechiness_out_of_range",
+    "qf_spotify_popularity_out_of_range",
+    "qf_time_signature_invalid",
+    "qf_track_id_duplicate",
+    "qf_track_id_invalid",
+    "qf_valence_out_of_range",
+    "qf_year_implausible",
+    "version_compatible"
+  ],
+  "near_zero_columns_full": [],
+  "near_zero_rule": "1e-12 × max(1, média²)",
+  "candidate_predictors_before_constant_removal": 232,
+  "authorized_features_after_constant_removal": 220,
+  "constant_predictors_removed": [
+    "lfm_affective_liwc_numerals",
+    "lfm_affective_nrcaffectintensity_anticipation",
+    "lfm_affective_nrcaffectintensity_disgust",
+    "lfm_affective_nrcaffectintensity_negative",
+    "lfm_affective_nrcaffectintensity_positive",
+    "lfm_affective_nrcaffectintensity_surprise",
+    "lfm_affective_nrcaffectintensity_trust",
+    "lfm_affective_nrchashtagemotion_negative",
+    "lfm_affective_nrchashtagemotion_positive",
+    "lfm_structure_ends_with_two_chorus_repetitions",
+    "lfm_structure_pattern_two_choruses_at_least_one_verse",
+    "lfm_uncommon_words_ratio"
+  ],
+  "structure_missing_rows": 42517,
+  "consistency": {
+    "checks": [
+      {
+        "source": "Parquet v0.1",
+        "metric": "base rows",
+        "documented": 111758,
+        "observed": 111758,
+        "consistent": true
+      },
+      {
+        "source": "run_summary.json",
+        "metric": "accepted matches",
+        "documented": 111758,
+        "observed": 111758,
+        "consistent": true
+      },
+      {
+        "source": "matching_report.md / matching_summary.json",
+        "metric": "accepted matches",
+        "documented": 111758,
+        "observed": 111758,
+        "consistent": true
+      },
+      {
+        "source": "base_preview.xlsx",
+        "metric": "rows / columns / descriptors",
+        "documented": {
+          "rows": 111758,
+          "columns": 310,
+          "descriptors": 209
+        },
+        "observed": {
+          "rows": 111758,
+          "columns": 310,
+          "descriptors": 209
+        },
+        "consistent": true
+      },
+      {
+        "source": "data_audit.md / spotify_audit.json",
+        "metric": "Spotify rows",
+        "documented": 1159764,
+        "observed": 1159764,
+        "consistent": true
+      },
+      {
+        "source": "data_audit.md / lfm2b_audit.json",
+        "metric": "LFM rows / columns / descriptors",
+        "documented": {
+          "rows": 582759,
+          "columns": 242,
+          "descriptors": 209
+        },
+        "observed": {
+          "rows": 582759,
+          "columns": 242,
+          "descriptors": 209
+        },
+        "consistent": true
+      }
+    ],
+    "inconsistencies": [],
+    "descriptor_resolution": {
+      "confirmed_descriptor_count": 209,
+      "preliminary_inventory_count": 231,
+      "misclassified_normalization_or_version_fields": 22,
+      "lfm_schema_columns_in_integrated_base": 242,
+      "lfm_non_descriptor_columns": 33
+    }
+  },
+  "inventory_descriptor_extras": [
+    "lfm_acoustic",
+    "lfm_artist_collaborators_json",
+    "lfm_artist_conservative",
+    "lfm_artist_primary",
+    "lfm_artist_strict",
+    "lfm_artist_unicode",
+    "lfm_composition_key",
+    "lfm_demo",
+    "lfm_instrumental",
+    "lfm_live",
+    "lfm_mono_stereo",
+    "lfm_normalization_version",
+    "lfm_radio_edit",
+    "lfm_release_date_numberlong",
+    "lfm_remaster",
+    "lfm_remix",
+    "lfm_title_base",
+    "lfm_title_conservative",
+    "lfm_title_strict",
+    "lfm_title_unicode",
+    "lfm_version_tags",
+    "lfm_year_mentioned"
+  ]
+}

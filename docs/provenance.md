@@ -26,3 +26,14 @@ O registro oficial descreve `popularity` como visualizações da letra no Genius
 
 O manifesto legível por máquina fica em `data/raw/manifest.json` e não é versionado porque pertence à camada de dados local.
 
+## Derivados locais — Base v0.1.1
+
+- Fonte imutável: `data/processed/modeling_base_lfm_v0_1.parquet`
+- SHA-256 da fonte antes e depois da execução: `7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59`
+- `data/processed/modeling_base_lfm_v0_1_1.parquet`: 69.544.162 bytes; SHA-256 `1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c`
+- `data/processed/split_assignments_v0_1_1.parquet`: 11.322.914 bytes; SHA-256 `4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b`
+- `data/processed/matching_audit_v0_1_1.parquet`: 14.614.968 bytes; SHA-256 `3b7b9a2145b91ce7c47ac85ef61c17784b7a371633e494b6bac34fb85b54c346`
+- `reports/feature_manifest_v0_1_1.csv`: 159.893 bytes; SHA-256 `f2dd09defb9bbe383e3c189b65f836a5ba4906e090b472e2604cba388a243d42`
+- `reports/match_review_sample_v0_1_1.xlsx`: 77.540 bytes; SHA-256 `d7cef88b58cb9c0707f04146b88307bacfc8c1395786f3e7fd2400bd7f039953`
+
+Os Parquets v0.1.1 e demais derivados volumosos continuam ignorados pelo Git conforme as regras do projeto. A configuração executável está em `configs/modeling_v0_1_1.yaml`; o resumo de execução e os detalhes de ambiente estão em `reports/run_summary_v0_1_1.json`.

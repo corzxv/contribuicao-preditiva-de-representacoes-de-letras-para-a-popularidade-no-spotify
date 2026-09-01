@@ -1,0 +1,238 @@
+{
+  "rows": 111758,
+  "by_match_method": [
+    {
+      "match_method": "raw_exact",
+      "len": 79740,
+      "percent": 0.713505968252832
+    },
+    {
+      "match_method": "strict_normalized",
+      "len": 19678,
+      "percent": 0.17607688040229783
+    },
+    {
+      "match_method": "conservative_normalized",
+      "len": 9032,
+      "percent": 0.08081748062778503
+    },
+    {
+      "match_method": "base_title_version_compatible",
+      "len": 3308,
+      "percent": 0.02959967071708513
+    }
+  ],
+  "by_match_status": [
+    {
+      "match_status": "accepted_high_confidence",
+      "len": 99418,
+      "percent": 0.8895828486551298
+    },
+    {
+      "match_status": "accepted_with_rules",
+      "len": 12340,
+      "percent": 0.11041715134487017
+    }
+  ],
+  "by_acceptance_reason": [
+    {
+      "acceptance_reason": "unique_exact_or_strict_pair",
+      "len": 99418,
+      "percent": 0.8895828486551298
+    },
+    {
+      "acceptance_reason": "unique_conservative_pair_with_compatible_version",
+      "len": 12340,
+      "percent": 0.11041715134487017
+    }
+  ],
+  "match_score_non_null": 0,
+  "version_compatible_true": 111758,
+  "temporal_compatible_true": 99784,
+  "temporal_compatible_false": 11974,
+  "temporal": {
+    "statistics": {
+      "non_null": 111758,
+      "missing": 0,
+      "mean": 2.0927181946706277,
+      "median": 0.0,
+      "standard_deviation": 20.626956354593297,
+      "minimum": 0,
+      "maximum": 2018,
+      "quantiles": {
+        "0.01": 0.0,
+        "0.05": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.95": 13.0,
+        "0.99": 38.0
+      }
+    },
+    "bands": [
+      {
+        "temporal_band": "diferença 0",
+        "len": 90094,
+        "percent": 80.61525796810966
+      },
+      {
+        "temporal_band": "1–2 anos",
+        "len": 9690,
+        "percent": 8.670520231213873
+      },
+      {
+        "temporal_band": "3–5 anos",
+        "len": 2605,
+        "percent": 2.3309293294439772
+      },
+      {
+        "temporal_band": "6–10 anos",
+        "len": 2624,
+        "percent": 2.3479303495051806
+      },
+      {
+        "temporal_band": "11–20 anos",
+        "len": 3128,
+        "percent": 2.7989047763918466
+      },
+      {
+        "temporal_band": "mais de 20 anos",
+        "len": 3617,
+        "percent": 3.236457345335457
+      }
+    ],
+    "implausible_lfm_release_year_flagged": 16
+  },
+  "versions": {
+    "original_no_version_flag": {
+      "count": 105638,
+      "percent": 94.52388195923335
+    },
+    "remaster": {
+      "count": 571,
+      "percent": 0.5109253923656472
+    },
+    "remix": {
+      "count": 1843,
+      "percent": 1.6490989459367562
+    },
+    "live": {
+      "count": 2624,
+      "percent": 2.3479303495051806
+    },
+    "acoustic": {
+      "count": 460,
+      "percent": 0.41160364358703627
+    },
+    "radio_edit": {
+      "count": 191,
+      "percent": 0.17090499114157376
+    },
+    "mono_stereo": {
+      "count": 69,
+      "percent": 0.06174054653805544
+    },
+    "instrumental": {
+      "count": 177,
+      "percent": 0.15837792372805526
+    },
+    "demo": {
+      "count": 295,
+      "percent": 0.26396320621342545
+    }
+  },
+  "identity": {
+    "track_id_duplicate_excess_rows": 0,
+    "spotify_row_id_duplicate_excess_rows": 0,
+    "lfm_record_key_duplicate_excess_rows": 0,
+    "composition_keys_with_multiple_rows": 309,
+    "rows_in_duplicated_composition_groups": 623,
+    "composition_keys_with_multiple_track_ids": 309,
+    "maximum_tracks_per_composition_key": 3,
+    "tracks_linked_to_multiple_lfm_records": 0,
+    "accepted_without_spotify_composition_key": 22,
+    "accepted_without_lfm_composition_key": 22
+  },
+  "review_sample": {
+    "source_sample": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\spotify_lfm_review_sample.parquet",
+    "source_rows_reused": 222,
+    "required_cases_added_by_deterministic_replacement": 3,
+    "rows": 225,
+    "by_status_method": [
+      {
+        "match_status": "ambiguous",
+        "match_method": "base_title_version_compatible",
+        "len": 25
+      },
+      {
+        "match_status": "accepted_high_confidence",
+        "match_method": "strict_normalized",
+        "len": 25
+      },
+      {
+        "match_status": "ambiguous",
+        "match_method": "strict_normalized",
+        "len": 25
+      },
+      {
+        "match_status": "ambiguous",
+        "match_method": "conservative_normalized",
+        "len": 25
+      },
+      {
+        "match_status": "accepted_with_rules",
+        "match_method": "conservative_normalized",
+        "len": 26
+      },
+      {
+        "match_status": "ambiguous",
+        "match_method": "raw_exact",
+        "len": 25
+      },
+      {
+        "match_status": "candidate_for_review",
+        "match_method": "fuzzy_candidate",
+        "len": 25
+      },
+      {
+        "match_status": "accepted_with_rules",
+        "match_method": "base_title_version_compatible",
+        "len": 26
+      },
+      {
+        "match_status": "accepted_high_confidence",
+        "match_method": "raw_exact",
+        "len": 23
+      }
+    ],
+    "temporal_compatible": [
+      {
+        "temporal_compatible": true,
+        "len": 154,
+        "percent": 0.6844444444444444
+      },
+      {
+        "temporal_compatible": false,
+        "len": 71,
+        "percent": 0.31555555555555553
+      }
+    ],
+    "missing_composition_key": 1,
+    "genres": 54,
+    "spotify_periods": 3,
+    "lfm_periods": 3,
+    "popularity_minimum": 0.0,
+    "popularity_maximum": 80.0,
+    "version_flag_counts": {
+      "remaster": 7,
+      "remix": 54,
+      "live": 40,
+      "acoustic": 7,
+      "radio_edit": 1,
+      "mono_stereo": 1,
+      "instrumental": 1,
+      "demo": 1
+    },
+    "human_fields_blank": true
+  }
+}

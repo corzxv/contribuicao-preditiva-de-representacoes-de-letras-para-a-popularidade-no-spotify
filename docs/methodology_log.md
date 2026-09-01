@@ -26,3 +26,15 @@ Ordem: igualdade bruta; normalização estrita; normalização conservadora; cha
 
 Matched significa status aceito (`accepted_high_confidence` ou `accepted_with_rules`). A comparação com os demais registros mede cobertura: média de `spotify_popularity` 27,1641 versus 17,4467; mediana 26 versus 14; zeros 0,6997% versus 15,0389%. Essas diferenças não demonstram que descritores de letras expliquem popularidade.
 
+## Preparação v0.1.1
+
+| Etapa | Antes | Depois | Regra | Exceções/destino |
+| --- | ---: | ---: | --- | --- |
+| Consistência | 111.758 linhas, 310 colunas | mesmos registros | confronto do Parquet com relatórios, JSONs, preview e schemas | divergência preliminar 231 versus 209 descritores resolvida: 22 campos eram normalização/versão, não descritores |
+| Seleção de variáveis | 232 candidatas | 220 autorizadas | metadados/flags Spotify + acústicas + 209 descritores; constantes identificadas somente no desenvolvimento | 12 constantes removidas; rastreio completo em `reports/feature_manifest_v0_1_1.csv` |
+| Ausências estruturais | 42.517 linhas afetadas | 42.517 preservadas | nulo permanece nulo | sem imputação automática para zero |
+| Split | 111.758 linhas | 83.817 desenvolvimento + 27.941 holdout | componentes conexos por artista e chave operacional de composição; semente 42 | holdout 25,0013%; sobreposição de grupos igual a zero |
+| Auditoria temporal | 111.758 pares aceitos | 111.758 preservados | diferença absoluta entre `year` e `lfm_release_year`, coortes e compatibilidade | 11.974 pares temporalmente incompatíveis sinalizados; nenhum excluído automaticamente |
+| Revisão manual | 225 casos existentes | 225 casos enriquecidos | 222 reaproveitados + 3 reposições determinísticas | rótulos humanos permanecem vazios em `reports/match_review_sample_v0_1_1.xlsx` |
+
+O split é criado antes de qualquer transformação aprendida. PCA, imputação, padronização, seleção supervisionada ou ajuste futuro devem ser aprendidos apenas em `development_train` e depois aplicados sem reajuste a `holdout_test`. A etapa v0.1.1 não coletou letras, não executou embeddings e não treinou modelos.

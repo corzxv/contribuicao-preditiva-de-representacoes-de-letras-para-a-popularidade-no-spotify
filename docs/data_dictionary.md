@@ -309,3 +309,19 @@ Gerado do schema observado. A base de modelagem tem uma linha por par Spotify–
 | lfm_qf_release_year_implausible | LFM2b | BOOLEAN | registro de descritores LFM2b | Flag de qualidade; o registro é preservado. |
 
 `spotify_popularity`, `genius_lyrics_views` e `lfm_playcount` são métricas distintas e não devem ser combinadas como um único desfecho.
+
+## Camada de modelagem v0.1.1
+
+O catálogo completo, gerado do schema real, está em `reports/feature_manifest_v0_1_1.csv`. A matriz `modeling_base_lfm_v0_1_1.parquet` tem 228 colunas:
+
+| bloco | quantidade | observação |
+| --- | ---: | --- |
+| identificadores de auditoria | 3 | `spotify_row_id`, `track_id`, `lfm_record_key`; nunca preditores |
+| agrupamento | 3 | `artist_group_id`, `composition_group_id`, `split_group_id`; somente controle de split |
+| atribuição | 1 | `split`: `development_train` ou `holdout_test` |
+| alvo | 1 | `spotify_popularity`, snapshot Spotify na escala 0–100 |
+| preditoras autorizadas | 220 | 23 metadados/acústicas Spotify e 197 descritores LFM2b não constantes no desenvolvimento |
+
+`artist_group_id` é derivado da normalização operacional do artista. `composition_group_id` identifica a chave operacional de composição, com substituto determinístico quando ela está ausente. `split_group_id` é o componente conexo usado para impedir que ligações por artista ou composição atravessem desenvolvimento e holdout. Nenhuma dessas chaves é um identificador universal.
+
+As 12 colunas constantes removidas e todas as variáveis proibidas por leakage permanecem registradas no manifesto, com justificativa. O manifesto também registra tipo, família, ausências na base completa e no desenvolvimento, cardinalidade e decisão de inclusão.
