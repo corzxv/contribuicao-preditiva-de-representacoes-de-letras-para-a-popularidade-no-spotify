@@ -16,7 +16,9 @@ from .io import git_commit, read_json, utc_now, write_json
 from .lfm2b import audit_lfm2b, normalize_lfm2b
 from .matching import analyze_selection_bias, run_matching
 from .reporting import generate_reports
+from .revision_v011 import prepare_revision_v011
 from .spotify import audit_spotify, normalize_spotify
+from .validation_v011 import prepare_base_v011
 
 
 def _products() -> dict[str, dict[str, Any]]:
@@ -137,6 +139,10 @@ def _run_command(command: str) -> dict[str, Any]:
     ensure_directories()
     if command == "all":
         return run_all()
+    if command == "prepare-v011":
+        return prepare_base_v011()
+    if command == "revise-v011":
+        return prepare_revision_v011()
     started = time.perf_counter()
     stages: dict[str, Any] = {}
     failures: list[dict[str, str]] = []
@@ -164,12 +170,22 @@ def _run_command(command: str) -> dict[str, Any]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "command", choices=["acquire", "audit", "normalize", "match", "report", "all"]
+        "command",
+        choices=[
+            "acquire",
+            "audit",
+            "normalize",
+            "match",
+            "report",
+            "prepare-v011",
+            "revise-v011",
+            "all",
+        ],
     )
     arguments = parser.parse_args(argv)
     summary = _run_command(arguments.command)
     print(json.dumps(summary, ensure_ascii=False, indent=2, default=str))
-    return 0 if not summary["failures"] else 1
+    return 0 if not summary.get("failures") else 1
 
 
 if __name__ == "__main__":

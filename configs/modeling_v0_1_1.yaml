@@ -1,0 +1,52 @@
+version: v0.1.1
+source_base: data/processed/modeling_base_lfm_v0_1.parquet
+random_state: 42
+holdout_fraction: 0.25
+near_zero_relative_variance_threshold: 1.0e-12
+
+baseline_metadata:
+  - year
+  - genre
+  - remaster
+  - remix
+  - live
+  - acoustic
+  - radio_edit
+  - mono_stereo
+  - instrumental
+  - demo
+
+baseline_acoustic:
+  - danceability
+  - energy
+  - key
+  - loudness
+  - mode
+  - speechiness
+  - acousticness
+  - instrumentalness
+  - liveness
+  - valence
+  - tempo
+  - duration_ms
+  - time_signature
+
+minimum_prohibited:
+  - genius_lyrics_views
+  - lfm_playcount
+  - match_method
+  - match_score
+  - match_status
+  - acceptance_reason
+  - version_compatible
+  - temporal_compatible
+
+version_flags:
+  - remaster
+  - remix
+  - live
+  - acoustic
+  - radio_edit
+  - mono_stereo
+  - instrumental
+  - demo
