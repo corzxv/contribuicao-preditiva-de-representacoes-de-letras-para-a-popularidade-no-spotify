@@ -1,0 +1,113 @@
+{
+  "status": "complete",
+  "pilot_version": "v0.1",
+  "timestamp": "2026-09-04T20:44:42.147968+00:00",
+  "git_commit": "0eef0e659e0417e17a88da2e5d07904dd4461e84",
+  "random_state": 20260901,
+  "limit": 100,
+  "queried_only_smoke_subset": true,
+  "cohort_size": 2000,
+  "smoke_size": 100,
+  "status_counts": {
+    "accepted_exact": 22,
+    "ambiguous": 72,
+    "not_found": 6
+  },
+  "coverage_accepted_exact_or_instrumental": 0.22,
+  "plain_lyrics_available": 22,
+  "synced_lyrics_available": 12,
+  "cache_hits": 0,
+  "cache_reused_current_run": 100,
+  "total_http_attempts": 203,
+  "retry_attempts": 3,
+  "retryable_http_attempts": 3,
+  "final_http_status_combinations": {
+    "/api/get:200;/api/search:200": 93,
+    "/api/get:404;/api/search:200": 7
+  },
+  "technical_error_cases": 0,
+  "sampling_coverage": {
+    "period_by_quintile_strata": 20,
+    "genres": 25,
+    "matching_methods": 2,
+    "version_profiles": 1
+  },
+  "duration_seconds": 204.862173,
+  "latest_processing_duration_seconds": 0.132751,
+  "recommendation": "ajustar e repetir",
+  "recommendation_options": [
+    "escalar",
+    "ajustar e repetir",
+    "trocar de fonte",
+    "parar por motivo técnico",
+    "parar por cautela jurídica"
+  ],
+  "privacy": {
+    "raw_text_location": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\raw\\lyrics_private\\lrclib_cache_v0_1",
+    "processed_text_columns": [],
+    "tracked_private_files": [],
+    "lyrics_text_in_reports": false
+  },
+  "frozen_before": {
+    "artifacts": {
+      "data/processed/modeling_base_lfm_v0_1.parquet": {
+        "expected_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "observed_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "identical": true
+      },
+      "data/processed/modeling_base_lfm_v0_1_1.parquet": {
+        "expected_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "observed_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "identical": true
+      },
+      "data/processed/split_assignments_v0_1_1.parquet": {
+        "expected_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "observed_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "identical": true
+      }
+    },
+    "all_hashes_identical": true,
+    "split_counts": {
+      "development_train": 83817,
+      "holdout_test": 27941
+    },
+    "row_count": 111758,
+    "development_holdout_id_overlap": 0
+  },
+  "frozen_after": {
+    "artifacts": {
+      "data/processed/modeling_base_lfm_v0_1.parquet": {
+        "expected_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "observed_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "identical": true
+      },
+      "data/processed/modeling_base_lfm_v0_1_1.parquet": {
+        "expected_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "observed_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "identical": true
+      },
+      "data/processed/split_assignments_v0_1_1.parquet": {
+        "expected_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "observed_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "identical": true
+      }
+    },
+    "all_hashes_identical": true,
+    "split_counts": {
+      "development_train": 83817,
+      "holdout_test": 27941
+    },
+    "row_count": 111758,
+    "development_holdout_id_overlap": 0
+  },
+  "frozen_artifacts_preserved": true,
+  "output_hashes": {
+    "data/processed/lyrics_pilot_cohort_v0_1.parquet": "35b12cd087b938ce2935ad9f7e3e4b7be8b80dfb89980de62483f0e82e1054b1",
+    "data/processed/lyrics_pilot_cohort_v0_1.csv": "f1d2885151e9cfa4c393eeb5d5548f0607b9a7ba57dc54673d241d6ccac98903",
+    "data/processed/lyrics_pilot_lookup_input_v0_1.parquet": "ea89a9c6b833198bdd23a02de0e4d91c82d65e58c7641495422190de0d9c697c",
+    "data/processed/lyrics_pilot_smoke_results_v0_1.parquet": "a3cc11a03d63f56d08eb70e645564a90abf3f954f4e9b9683b8bba926ef22ccb",
+    "reports/lyrics_pilot_sampling_report_v0_1.md": "bb7d0681117f417ec95c3dd7fd50aec93c63a515907bb0f8782efeb3fec36e28",
+    "reports/lyrics_source_assessment_v0_1.md": "3c372e2e259946fa0faac9607d483a2b96aca33e42c8f5e3efabc4813b320d1e",
+    "reports/lyrics_pilot_smoke_report_v0_1.md": "8b230827ebf5afb7cf1f767c068937ac07c90b92797880b047269440059996b3"
+  }
+}

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
 from collections.abc import Callable
 from typing import Any
@@ -14,11 +15,24 @@ from .config import PROJECT_ROOT, ensure_directories
 from .database import build_database
 from .io import git_commit, read_json, utc_now, write_json
 from .lfm2b import audit_lfm2b, normalize_lfm2b
+from .lyrics_ambiguity_v011 import audit_lyrics_ambiguity_v011
+from .lyrics_pilot import prepare_lyrics_pilot, run_lyrics_smoke
+from .lyrics_pilot_v012 import prepare_supplemental_v012, run_supplemental_v012
 from .matching import analyze_selection_bias, run_matching
 from .reporting import generate_reports
 from .revision_v011 import prepare_revision_v011
 from .spotify import audit_spotify, normalize_spotify
 from .validation_v011 import prepare_base_v011
+
+
+def _print_lyrics_progress(done: int, total: int) -> None:
+    if done % 10 == 0 or done == total:
+        print(f"Smoke LRCLIB: {done}/{total}", file=sys.stderr, flush=True)
+
+
+def _print_supplemental_progress(done: int, total: int) -> None:
+    if done % 5 == 0 or done == total:
+        print(f"Complementar LRCLIB v0.1.2: {done}/{total}", file=sys.stderr, flush=True)
 
 
 def _products() -> dict[str, dict[str, Any]]:
@@ -143,6 +157,13 @@ def _run_command(command: str) -> dict[str, Any]:
         return prepare_base_v011()
     if command == "revise-v011":
         return prepare_revision_v011()
+    if command == "prepare-lyrics-pilot":
+        return prepare_lyrics_pilot()
+    if command == "audit-lyrics-ambiguity-v011":
+        return audit_lyrics_ambiguity_v011()
+    if command == "prepare-lyrics-supplemental-v012":
+        result = prepare_supplemental_v012()
+        return {key: value for key, value in result.items() if key not in {"sample", "smoke_final"}}
     started = time.perf_counter()
     stages: dict[str, Any] = {}
     failures: list[dict[str, str]] = []
@@ -179,11 +200,45 @@ def main(argv: list[str] | None = None) -> int:
             "report",
             "prepare-v011",
             "revise-v011",
+            "prepare-lyrics-pilot",
+            "lyrics-pilot",
+            "audit-lyrics-ambiguity-v011",
+            "prepare-lyrics-supplemental-v012",
+            "lyrics-pilot-supplemental-v012",
             "all",
         ],
     )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=100,
+        help="Máximo de composições do smoke test (0 a 100; padrão: 100).",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Valida e mostra o plano do piloto sem realizar requisições de rede.",
+    )
     arguments = parser.parse_args(argv)
-    summary = _run_command(arguments.command)
+    if arguments.command == "lyrics-pilot":
+        progress = None if arguments.dry_run else _print_lyrics_progress
+        summary = run_lyrics_smoke(
+            limit=arguments.limit,
+            dry_run=arguments.dry_run,
+            progress=progress,
+        )
+    elif arguments.command == "lyrics-pilot-supplemental-v012":
+        if arguments.limit != 100:
+            parser.error("--limit não se aplica ao teste complementar v0.1.2")
+        progress = None if arguments.dry_run else _print_supplemental_progress
+        summary = run_supplemental_v012(
+            dry_run=arguments.dry_run,
+            progress=progress,
+        )
+    else:
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run são exclusivos do comando lyrics-pilot")
+        summary = _run_command(arguments.command)
     print(json.dumps(summary, ensure_ascii=False, indent=2, default=str))
     return 0 if not summary.get("failures") else 1
 

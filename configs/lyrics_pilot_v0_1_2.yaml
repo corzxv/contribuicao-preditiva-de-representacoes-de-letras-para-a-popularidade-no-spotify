@@ -1,0 +1,35 @@
+version: v0.1.2
+random_state: 20260927
+maximum_supplemental_queries: 60
+
+inputs:
+  modeling_base: data/processed/modeling_base_lfm_v0_1_1.parquet
+  split_assignments: data/processed/split_assignments_v0_1_1.parquet
+  cohort: data/processed/lyrics_pilot_cohort_v0_1.parquet
+  lookup: data/processed/lyrics_pilot_lookup_input_v0_1.parquet
+  smoke_results_v0_1: data/processed/lyrics_pilot_smoke_results_v0_1.parquet
+  smoke_reclassified_v0_1_1: data/processed/lyrics_pilot_smoke_reclassified_v0_1_1.parquet
+
+outputs:
+  supplemental_sample: data/processed/lyrics_pilot_supplemental_sample_v0_1_2.parquet
+  supplemental_results: data/processed/lyrics_pilot_supplemental_results_v0_1_2.parquet
+  smoke_final: data/processed/lyrics_pilot_smoke_final_v0_1_2.parquet
+  report: reports/lyrics_pilot_supplemental_report_v0_1_2.md
+  run_summary: reports/run_summary_lyrics_pilot_v0_1_2.json
+
+sampling:
+  strict_normalized: 15
+  conservative_normalized: 15
+  base_title_version_compatible: 15
+  any_version_flag: 15
+
+lrclib:
+  base_url: https://lrclib.net
+  cache_dir: data/raw/lyrics_private/lrclib_cache_v0_1
+  cache_version: v0.1.2
+  user_agent: "UnB-TCC-MusicPopularity-LyricsPilot/0.1.2 (academic research; https://github.com/corzxv/tcc-popularidade-musical)"
+  timeout_seconds: 20
+  max_attempts: 3
+  backoff_seconds: 1.0
+  minimum_delay_seconds: 0.5
+  duration_tolerance_seconds: 10.0

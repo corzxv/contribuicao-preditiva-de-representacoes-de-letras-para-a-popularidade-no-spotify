@@ -1,0 +1,144 @@
+{
+  "status": "complete",
+  "audit_version": "v0.1.1",
+  "source_cache_latest_timestamp": "2026-09-04T20:38:23.132043+00:00",
+  "git_commit": "0eef0e659e0417e17a88da2e5d07904dd4461e84",
+  "network_requests_made": 0,
+  "network_attempts_blocked": 0,
+  "cache_before": {
+    "file_count": 147,
+    "manifest_sha256": "5bfb8502075db1c6209874b23ea94a63fcf63da40e7735a0f7765a8b6ce7ad4b"
+  },
+  "cache_after": {
+    "file_count": 147,
+    "manifest_sha256": "5bfb8502075db1c6209874b23ea94a63fcf63da40e7735a0f7765a8b6ce7ad4b"
+  },
+  "cache_unchanged": true,
+  "smoke_compositions": 100,
+  "non_smoke_cache_count": 47,
+  "smoke_split_values": [
+    "development_train"
+  ],
+  "before_status_counts": {
+    "accepted_exact": 22,
+    "ambiguous": 72,
+    "not_found": 6
+  },
+  "after_status_counts": {
+    "accepted_exact_equivalent": 44,
+    "accepted_exact_unique": 22,
+    "ambiguous_distinct_lyrics": 28,
+    "not_found": 6
+  },
+  "raw_candidate_occurrences": 783,
+  "after_within_endpoint_id_dedup": 783,
+  "after_endpoint_union": 692,
+  "after_strict_text_grouping": 144,
+  "after_flexible_text_grouping": 137,
+  "candidate_reduction_total": 91,
+  "duplicate_ids_between_endpoints": 91,
+  "compositions_with_duplicate_ids_between_endpoints": 91,
+  "search_limit_20_compositions": 16,
+  "accepted_total_after": 66,
+  "resolved_exclusively_by_id_dedup": 0,
+  "resolved_by_strict_text_equivalence": 44,
+  "genuinely_ambiguous_after": 28,
+  "raw_coverage": 0.94,
+  "automatic_coverage_before": 0.22,
+  "automatic_coverage_after": 0.66,
+  "old_ambiguous_with_same_strict_text": 44,
+  "old_ambiguous_with_distinct_strict_text": 28,
+  "old_ambiguous_flexible_only_equivalence": 4,
+  "equivalent_with_metadata_differences": 44,
+  "recommendation": "realizar um pequeno teste complementar",
+  "candidate_audit_rows": 692,
+  "privacy": {
+    "forbidden_text_fields_in_reclassified": [],
+    "forbidden_text_fields_in_candidate_audit": [],
+    "tracked_private_files": [],
+    "staged_private_files": [],
+    "lyrics_in_public_artifacts": false,
+    "success_fields_used_in_decision": []
+  },
+  "frozen_before": {
+    "artifacts": {
+      "data/processed/modeling_base_lfm_v0_1.parquet": {
+        "expected_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "observed_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "identical": true
+      },
+      "data/processed/modeling_base_lfm_v0_1_1.parquet": {
+        "expected_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "observed_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "identical": true
+      },
+      "data/processed/split_assignments_v0_1_1.parquet": {
+        "expected_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "observed_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "identical": true
+      }
+    },
+    "all_hashes_identical": true,
+    "split_counts": {
+      "development_train": 83817,
+      "holdout_test": 27941
+    },
+    "row_count": 111758,
+    "development_holdout_id_overlap": 0
+  },
+  "frozen_after": {
+    "artifacts": {
+      "data/processed/modeling_base_lfm_v0_1.parquet": {
+        "expected_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "observed_sha256": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+        "identical": true
+      },
+      "data/processed/modeling_base_lfm_v0_1_1.parquet": {
+        "expected_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "observed_sha256": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+        "identical": true
+      },
+      "data/processed/split_assignments_v0_1_1.parquet": {
+        "expected_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "observed_sha256": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+        "identical": true
+      }
+    },
+    "all_hashes_identical": true,
+    "split_counts": {
+      "development_train": 83817,
+      "holdout_test": 27941
+    },
+    "row_count": 111758,
+    "development_holdout_id_overlap": 0
+  },
+  "frozen_artifacts_preserved": true,
+  "immutable_hashes_before": {
+    "data/processed/modeling_base_lfm_v0_1.parquet": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+    "data/processed/modeling_base_lfm_v0_1_1.parquet": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+    "data/processed/split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+    "data/processed/lyrics_pilot_cohort_v0_1.parquet": "35b12cd087b938ce2935ad9f7e3e4b7be8b80dfb89980de62483f0e82e1054b1",
+    "data/processed/lyrics_pilot_lookup_input_v0_1.parquet": "ea89a9c6b833198bdd23a02de0e4d91c82d65e58c7641495422190de0d9c697c",
+    "data/processed/lyrics_pilot_smoke_results_v0_1.parquet": "a3cc11a03d63f56d08eb70e645564a90abf3f954f4e9b9683b8bba926ef22ccb"
+  },
+  "immutable_hashes_after": {
+    "data/processed/modeling_base_lfm_v0_1.parquet": "7a0c15c905081fb7fe672478513d706c40fbd709d2af4077173803484a02ab59",
+    "data/processed/modeling_base_lfm_v0_1_1.parquet": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+    "data/processed/split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+    "data/processed/lyrics_pilot_cohort_v0_1.parquet": "35b12cd087b938ce2935ad9f7e3e4b7be8b80dfb89980de62483f0e82e1054b1",
+    "data/processed/lyrics_pilot_lookup_input_v0_1.parquet": "ea89a9c6b833198bdd23a02de0e4d91c82d65e58c7641495422190de0d9c697c",
+    "data/processed/lyrics_pilot_smoke_results_v0_1.parquet": "a3cc11a03d63f56d08eb70e645564a90abf3f954f4e9b9683b8bba926ef22ccb"
+  },
+  "immutable_hashes_preserved": true,
+  "output_hashes": {
+    "data/processed/lyrics_pilot_smoke_reclassified_v0_1_1.parquet": "1dbec930ad3d600213ec84d92e116cb3451290a3f0062fb63f6fa940a31cb475",
+    "data/processed/lyrics_candidate_audit_v0_1_1.parquet": "a7f89c1a91267be8784e6c5d1b409f5d2180bcac17b32564941ab2d87310e5fd",
+    "reports/lyrics_ambiguity_audit_v0_1_1.md": "eb6982ae41098b1c9c3ea27045fbfaedb8462b2adc8b4abd1d012341fb2af07f"
+  },
+  "recommendation_options": [
+    "realizar um pequeno teste complementar",
+    "escalar para as 1.900 restantes",
+    "ajustar novamente as regras",
+    "testar uma fonte adicional"
+  ]
+}
