@@ -40,6 +40,11 @@ def _print_full_lyrics_progress(done: int, total: int) -> None:
     print(f"Piloto completo LRCLIB v0.1.3: {done}/{total}", file=sys.stderr, flush=True)
 
 
+def _print_embeddings_progress(done: int, total: int) -> None:
+    if done % 640 == 0 or done == total:
+        print(f"Chunks MiniLM v0.2: {done}/{total}", file=sys.stderr, flush=True)
+
+
 def _products() -> dict[str, dict[str, Any]]:
     paths = [
         "data/interim/spotify_normalized.parquet",
@@ -211,6 +216,7 @@ def main(argv: list[str] | None = None) -> int:
             "prepare-lyrics-supplemental-v012",
             "lyrics-pilot-supplemental-v012",
             "lyrics-pilot-full-v013",
+            "lyrics-embeddings-v020",
             "all",
         ],
     )
@@ -249,6 +255,12 @@ def main(argv: list[str] | None = None) -> int:
             dry_run=arguments.dry_run,
             progress=progress,
         )
+    elif arguments.command == "lyrics-embeddings-v020":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam ao piloto de embeddings v0.2")
+        from .lyrics_embeddings_v020 import run_lyrics_embeddings_v020
+
+        summary = run_lyrics_embeddings_v020(progress=_print_embeddings_progress)
     else:
         if arguments.dry_run or arguments.limit != 100:
             parser.error("--limit e --dry-run são exclusivos do comando lyrics-pilot")

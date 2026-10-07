@@ -20,6 +20,15 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.3", "ruff>=0.8"]
+embeddings = [
+  "huggingface-hub==0.36.2",
+  "langid==1.1.6",
+  "numpy==2.5.2",
+  "scikit-learn==1.9.1",
+  "sentence-transformers==5.1.1",
+  "torch==2.8.0",
+  "transformers==4.57.1",
+]
 
 [project.scripts]
 tcc-music = "tcc_music_popularity.cli:main"
