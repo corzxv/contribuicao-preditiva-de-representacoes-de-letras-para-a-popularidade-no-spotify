@@ -20,6 +20,7 @@ data/raw/**
 data/interim/**
 data/processed/**
 data/rejected/**
+data/derived/**
 data/raw/lyrics_private/
 data/interim/lyrics_private/
 !data/raw/.gitkeep

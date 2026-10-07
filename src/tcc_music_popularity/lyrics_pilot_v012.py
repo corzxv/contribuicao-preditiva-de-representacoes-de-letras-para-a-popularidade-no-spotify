@@ -522,13 +522,14 @@ def prepare_supplemental_v012(
     smoke_keys = set(cohort.filter(pl.col("smoke_selected")).get_column("composition_key"))
     sample_keys = set(sample.get_column("composition_key"))
     existing_cache_names = {path.stem for path in cache_dir.glob("*.json")}
-    expected_names = {_sha256(str(key)) for key in smoke_keys | sample_keys}
+    sample_names = {_sha256(str(key)) for key in sample_keys}
+    cohort_names = {_sha256(str(key)) for key in cohort.get_column("composition_key").to_list()}
     original_names = {_sha256(str(key)) for key in smoke_keys}
     if not original_names <= existing_cache_names:
         raise AssertionError("Um ou mais caches do smoke original estão ausentes.")
-    unexpected = existing_cache_names - expected_names
+    unexpected = existing_cache_names - cohort_names
     if unexpected:
-        raise AssertionError(f"Caches fora do escopo v0.1.2: {len(unexpected)}")
+        raise AssertionError(f"Caches fora da coorte original: {len(unexpected)}")
     return {
         "status": "prepared_offline",
         "network_requests_made": 0,
@@ -538,8 +539,8 @@ def prepare_supplemental_v012(
         "sample": sample,
         "smoke_final": smoke_final,
         "smoke_keys": smoke_keys,
-        "existing_supplemental_caches": len(existing_cache_names - original_names),
-        "missing_supplemental_caches": len(expected_names - existing_cache_names),
+        "existing_supplemental_caches": len(existing_cache_names & sample_names),
+        "missing_supplemental_caches": len(sample_names - existing_cache_names),
     }
 
 
@@ -782,7 +783,9 @@ def run_supplemental_v012(
     if forbidden_columns:
         raise AssertionError(f"Texto bruto de letra em saída pública: {forbidden_columns}")
     _atomic_write_frame(results, config["outputs"]["supplemental_results"])
-    cache_after = _directory_manifest(cache_dir)
+    scoped_cache_keys = prepared["smoke_keys"] | set(sample.get_column("composition_key"))
+    cache_after = _cache_manifest_for_keys(cache_dir, scoped_cache_keys)
+    global_cache_after = _directory_manifest(cache_dir)
     expected_cache_count = 100 + sample.height
     if cache_after["file_count"] != expected_cache_count:
         raise AssertionError(
@@ -846,6 +849,7 @@ def run_supplemental_v012(
             "existing_supplemental": prepared["existing_supplemental_caches"],
         },
         "cache_after": cache_after,
+        "global_cache_after": global_cache_after,
         "expected_cache_count": expected_cache_count,
         "privacy": {
             "forbidden_text_fields_in_public_outputs": forbidden_columns,

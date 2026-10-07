@@ -1,0 +1,2150 @@
+{
+  "status": "complete",
+  "pilot_version": "v0.1.3",
+  "timestamp": "2026-10-07T21:39:07.334672+00:00",
+  "git_commit": "e656bd8d5f6918714afd4e4f3f224c9b5c757304",
+  "checkpoint_commit": "e656bd8",
+  "checkpoint_tag": "lyrics-pilot-v0.1.2",
+  "preflight": {
+    "cohort_rows": 2000,
+    "unique_compositions": 2000,
+    "missing_composition_keys": 0,
+    "duplicate_compositions": 0,
+    "cached_in_cohort": 147,
+    "remaining_without_cache": 1853,
+    "caches_outside_cohort": 0,
+    "split_values": [
+      "development_train"
+    ],
+    "holdout_rows": 0,
+    "development_holdout_id_overlap": 0
+  },
+  "postflight": {
+    "cohort_rows": 2000,
+    "unique_compositions": 2000,
+    "missing_composition_keys": 0,
+    "duplicate_compositions": 0,
+    "cached_in_cohort": 2000,
+    "remaining_without_cache": 0,
+    "caches_outside_cohort": 0,
+    "split_values": [
+      "development_train"
+    ],
+    "holdout_rows": 0,
+    "development_holdout_id_overlap": 0
+  },
+  "network_scope": {
+    "queried_only_missing_cohort_compositions": true,
+    "previous_caches_requeried": false,
+    "holdout_queried": false,
+    "outside_cohort_queried": false
+  },
+  "collection": {
+    "initial_cache_count": 147,
+    "queried_current_run": 0,
+    "queried_for_v013_total": 1853,
+    "reused_existing_caches": 147,
+    "duration_seconds": 3971.241744,
+    "latest_processing_duration_seconds": 4.9e-05,
+    "mean_seconds_per_new_composition": 2.143142,
+    "checkpoint_every": 50,
+    "status_counts_current_network_run": {
+      "accepted_exact_equivalent": 948,
+      "accepted_exact_unique": 394,
+      "ambiguous_distinct_lyrics": 401,
+      "ambiguous_metadata_conflict": 8,
+      "instrumental": 17,
+      "not_found": 84,
+      "request_error": 1
+    }
+  },
+  "result_rows": 2000,
+  "metrics": {
+    "status_counts": {
+      "accepted_exact_equivalent": 1015,
+      "accepted_exact_unique": 426,
+      "ambiguous_distinct_lyrics": 440,
+      "ambiguous_metadata_conflict": 8,
+      "instrumental": 19,
+      "not_found": 91,
+      "request_error": 1
+    },
+    "accepted_total": 1441,
+    "automatic_coverage": 0.7205,
+    "raw_coverage": 0.9545,
+    "plain_available": 1891,
+    "synced_available": 1532,
+    "search_results_truncated": 236,
+    "candidate_statistics": {
+      "n": 2000,
+      "mean": 6.8685,
+      "median": 4.0,
+      "std": 6.444065,
+      "q1": 2.0,
+      "q3": 10.0,
+      "minimum": 0.0,
+      "maximum": 21.0
+    },
+    "status_by_period": {
+      "2000-2005": {
+        "accepted_exact_equivalent": 189,
+        "accepted_exact_unique": 38,
+        "ambiguous_distinct_lyrics": 87,
+        "instrumental": 2,
+        "not_found": 5
+      },
+      "2006-2011": {
+        "accepted_exact_equivalent": 235,
+        "accepted_exact_unique": 67,
+        "ambiguous_distinct_lyrics": 87,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1,
+        "not_found": 17,
+        "request_error": 1
+      },
+      "2012-2017": {
+        "accepted_exact_equivalent": 378,
+        "accepted_exact_unique": 203,
+        "ambiguous_distinct_lyrics": 171,
+        "ambiguous_metadata_conflict": 3,
+        "instrumental": 10,
+        "not_found": 46
+      },
+      "2018-2023": {
+        "accepted_exact_equivalent": 213,
+        "accepted_exact_unique": 118,
+        "ambiguous_distinct_lyrics": 95,
+        "ambiguous_metadata_conflict": 4,
+        "instrumental": 6,
+        "not_found": 23
+      }
+    },
+    "status_by_year": {
+      "2000": {
+        "accepted_exact_equivalent": 31,
+        "accepted_exact_unique": 3,
+        "ambiguous_distinct_lyrics": 12
+      },
+      "2001": {
+        "accepted_exact_equivalent": 30,
+        "accepted_exact_unique": 6,
+        "ambiguous_distinct_lyrics": 20,
+        "instrumental": 1,
+        "not_found": 2
+      },
+      "2002": {
+        "accepted_exact_equivalent": 32,
+        "accepted_exact_unique": 9,
+        "ambiguous_distinct_lyrics": 15,
+        "instrumental": 1,
+        "not_found": 1
+      },
+      "2003": {
+        "accepted_exact_equivalent": 30,
+        "accepted_exact_unique": 9,
+        "ambiguous_distinct_lyrics": 14,
+        "not_found": 1
+      },
+      "2004": {
+        "accepted_exact_equivalent": 38,
+        "accepted_exact_unique": 3,
+        "ambiguous_distinct_lyrics": 9
+      },
+      "2005": {
+        "accepted_exact_equivalent": 28,
+        "accepted_exact_unique": 8,
+        "ambiguous_distinct_lyrics": 17,
+        "not_found": 1
+      },
+      "2006": {
+        "accepted_exact_equivalent": 31,
+        "accepted_exact_unique": 6,
+        "ambiguous_distinct_lyrics": 26,
+        "not_found": 2
+      },
+      "2007": {
+        "accepted_exact_equivalent": 46,
+        "accepted_exact_unique": 5,
+        "ambiguous_distinct_lyrics": 10,
+        "not_found": 1,
+        "request_error": 1
+      },
+      "2008": {
+        "accepted_exact_equivalent": 36,
+        "accepted_exact_unique": 8,
+        "ambiguous_distinct_lyrics": 10,
+        "not_found": 2
+      },
+      "2009": {
+        "accepted_exact_equivalent": 46,
+        "accepted_exact_unique": 17,
+        "ambiguous_distinct_lyrics": 11,
+        "ambiguous_metadata_conflict": 1,
+        "not_found": 2
+      },
+      "2010": {
+        "accepted_exact_equivalent": 41,
+        "accepted_exact_unique": 19,
+        "ambiguous_distinct_lyrics": 14,
+        "not_found": 8
+      },
+      "2011": {
+        "accepted_exact_equivalent": 35,
+        "accepted_exact_unique": 12,
+        "ambiguous_distinct_lyrics": 16,
+        "instrumental": 1,
+        "not_found": 2
+      },
+      "2012": {
+        "accepted_exact_equivalent": 42,
+        "accepted_exact_unique": 20,
+        "ambiguous_distinct_lyrics": 23,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1,
+        "not_found": 6
+      },
+      "2013": {
+        "accepted_exact_equivalent": 57,
+        "accepted_exact_unique": 28,
+        "ambiguous_distinct_lyrics": 21,
+        "not_found": 6
+      },
+      "2014": {
+        "accepted_exact_equivalent": 60,
+        "accepted_exact_unique": 28,
+        "ambiguous_distinct_lyrics": 30,
+        "instrumental": 1,
+        "not_found": 6
+      },
+      "2015": {
+        "accepted_exact_equivalent": 73,
+        "accepted_exact_unique": 40,
+        "ambiguous_distinct_lyrics": 33,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 2,
+        "not_found": 7
+      },
+      "2016": {
+        "accepted_exact_equivalent": 62,
+        "accepted_exact_unique": 41,
+        "ambiguous_distinct_lyrics": 28,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 4,
+        "not_found": 10
+      },
+      "2017": {
+        "accepted_exact_equivalent": 84,
+        "accepted_exact_unique": 46,
+        "ambiguous_distinct_lyrics": 36,
+        "instrumental": 2,
+        "not_found": 11
+      },
+      "2018": {
+        "accepted_exact_equivalent": 97,
+        "accepted_exact_unique": 62,
+        "ambiguous_distinct_lyrics": 32,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1,
+        "not_found": 10
+      },
+      "2019": {
+        "accepted_exact_equivalent": 91,
+        "accepted_exact_unique": 43,
+        "ambiguous_distinct_lyrics": 40,
+        "ambiguous_metadata_conflict": 3,
+        "instrumental": 5,
+        "not_found": 11
+      },
+      "2020": {
+        "accepted_exact_equivalent": 20,
+        "accepted_exact_unique": 13,
+        "ambiguous_distinct_lyrics": 16,
+        "not_found": 2
+      },
+      "2021": {
+        "accepted_exact_equivalent": 2,
+        "ambiguous_distinct_lyrics": 5
+      },
+      "2022": {
+        "accepted_exact_equivalent": 2,
+        "ambiguous_distinct_lyrics": 2
+      },
+      "2023": {
+        "accepted_exact_equivalent": 1
+      }
+    },
+    "status_by_genre": {
+      "acoustic": {
+        "accepted_exact_equivalent": 22,
+        "accepted_exact_unique": 17,
+        "ambiguous_distinct_lyrics": 8,
+        "not_found": 4,
+        "request_error": 1
+      },
+      "alt-rock": {
+        "accepted_exact_equivalent": 66,
+        "accepted_exact_unique": 7,
+        "ambiguous_distinct_lyrics": 49
+      },
+      "ambient": {
+        "accepted_exact_equivalent": 7,
+        "accepted_exact_unique": 7,
+        "ambiguous_distinct_lyrics": 1,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1,
+        "not_found": 1
+      },
+      "black-metal": {
+        "accepted_exact_equivalent": 28,
+        "accepted_exact_unique": 22,
+        "ambiguous_distinct_lyrics": 5,
+        "not_found": 4
+      },
+      "blues": {
+        "accepted_exact_equivalent": 27,
+        "accepted_exact_unique": 13,
+        "ambiguous_distinct_lyrics": 5,
+        "instrumental": 1,
+        "not_found": 2
+      },
+      "chill": {
+        "accepted_exact_equivalent": 22,
+        "accepted_exact_unique": 13,
+        "ambiguous_distinct_lyrics": 7,
+        "instrumental": 1,
+        "not_found": 3
+      },
+      "classical": {
+        "accepted_exact_equivalent": 2,
+        "accepted_exact_unique": 1,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1
+      },
+      "club": {
+        "accepted_exact_equivalent": 1,
+        "accepted_exact_unique": 5,
+        "ambiguous_distinct_lyrics": 1,
+        "instrumental": 1,
+        "not_found": 1
+      },
+      "comedy": {
+        "accepted_exact_equivalent": 3,
+        "accepted_exact_unique": 2,
+        "ambiguous_distinct_lyrics": 1
+      },
+      "country": {
+        "accepted_exact_equivalent": 52,
+        "accepted_exact_unique": 15,
+        "ambiguous_distinct_lyrics": 33,
+        "instrumental": 1
+      },
+      "dance": {
+        "accepted_exact_equivalent": 35,
+        "accepted_exact_unique": 8,
+        "ambiguous_distinct_lyrics": 33,
+        "not_found": 1
+      },
+      "dancehall": {
+        "accepted_exact_equivalent": 13,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 5
+      },
+      "death-metal": {
+        "accepted_exact_equivalent": 58,
+        "accepted_exact_unique": 16,
+        "ambiguous_distinct_lyrics": 16,
+        "ambiguous_metadata_conflict": 1,
+        "not_found": 3
+      },
+      "deep-house": {
+        "accepted_exact_equivalent": 3,
+        "accepted_exact_unique": 5,
+        "not_found": 2
+      },
+      "disco": {
+        "accepted_exact_equivalent": 18,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 6,
+        "not_found": 1
+      },
+      "drum-and-bass": {
+        "accepted_exact_equivalent": 2,
+        "ambiguous_metadata_conflict": 1,
+        "not_found": 3
+      },
+      "dub": {
+        "accepted_exact_equivalent": 6,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 3,
+        "instrumental": 2,
+        "not_found": 3
+      },
+      "dubstep": {
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1
+      },
+      "edm": {
+        "accepted_exact_equivalent": 11,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 4,
+        "instrumental": 2
+      },
+      "electro": {
+        "accepted_exact_equivalent": 10,
+        "accepted_exact_unique": 5,
+        "ambiguous_distinct_lyrics": 14,
+        "instrumental": 1
+      },
+      "electronic": {
+        "accepted_exact_equivalent": 10,
+        "accepted_exact_unique": 3,
+        "ambiguous_distinct_lyrics": 1,
+        "instrumental": 1
+      },
+      "emo": {
+        "accepted_exact_equivalent": 61,
+        "accepted_exact_unique": 31,
+        "ambiguous_distinct_lyrics": 29,
+        "ambiguous_metadata_conflict": 1,
+        "not_found": 3
+      },
+      "folk": {
+        "accepted_exact_equivalent": 45,
+        "accepted_exact_unique": 11,
+        "ambiguous_distinct_lyrics": 16
+      },
+      "french": {
+        "accepted_exact_equivalent": 6,
+        "accepted_exact_unique": 2,
+        "ambiguous_distinct_lyrics": 2,
+        "not_found": 2
+      },
+      "funk": {
+        "accepted_exact_equivalent": 28,
+        "accepted_exact_unique": 3,
+        "ambiguous_distinct_lyrics": 8,
+        "instrumental": 2,
+        "not_found": 3
+      },
+      "garage": {
+        "accepted_exact_equivalent": 30,
+        "accepted_exact_unique": 26,
+        "ambiguous_distinct_lyrics": 4,
+        "not_found": 5
+      },
+      "german": {
+        "accepted_exact_equivalent": 8,
+        "accepted_exact_unique": 3,
+        "ambiguous_distinct_lyrics": 2
+      },
+      "gospel": {
+        "accepted_exact_equivalent": 6,
+        "accepted_exact_unique": 2,
+        "ambiguous_distinct_lyrics": 2
+      },
+      "goth": {
+        "accepted_exact_equivalent": 22,
+        "accepted_exact_unique": 11,
+        "ambiguous_distinct_lyrics": 7,
+        "not_found": 2
+      },
+      "grindcore": {
+        "accepted_exact_equivalent": 7,
+        "accepted_exact_unique": 7,
+        "not_found": 2
+      },
+      "groove": {
+        "accepted_exact_equivalent": 11,
+        "accepted_exact_unique": 5,
+        "ambiguous_distinct_lyrics": 2
+      },
+      "hard-rock": {
+        "accepted_exact_equivalent": 31,
+        "accepted_exact_unique": 16,
+        "ambiguous_distinct_lyrics": 13
+      },
+      "hardcore": {
+        "accepted_exact_equivalent": 38,
+        "accepted_exact_unique": 26,
+        "ambiguous_distinct_lyrics": 21,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 1,
+        "not_found": 4
+      },
+      "hardstyle": {
+        "accepted_exact_equivalent": 1,
+        "accepted_exact_unique": 3
+      },
+      "heavy-metal": {
+        "accepted_exact_equivalent": 1,
+        "accepted_exact_unique": 6,
+        "ambiguous_distinct_lyrics": 1,
+        "not_found": 3
+      },
+      "hip-hop": {
+        "accepted_exact_equivalent": 33,
+        "accepted_exact_unique": 7,
+        "ambiguous_distinct_lyrics": 27,
+        "not_found": 1
+      },
+      "house": {
+        "accepted_exact_equivalent": 1,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 1
+      },
+      "indian": {
+        "accepted_exact_equivalent": 1,
+        "accepted_exact_unique": 3,
+        "not_found": 1
+      },
+      "indie-pop": {
+        "accepted_exact_equivalent": 29,
+        "accepted_exact_unique": 13,
+        "ambiguous_distinct_lyrics": 15
+      },
+      "industrial": {
+        "accepted_exact_equivalent": 21,
+        "accepted_exact_unique": 8,
+        "ambiguous_distinct_lyrics": 8,
+        "not_found": 3
+      },
+      "jazz": {
+        "accepted_exact_equivalent": 11,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 4,
+        "instrumental": 1,
+        "not_found": 1
+      },
+      "k-pop": {
+        "accepted_exact_equivalent": 5,
+        "accepted_exact_unique": 6,
+        "ambiguous_distinct_lyrics": 5
+      },
+      "metal": {
+        "accepted_exact_equivalent": 22,
+        "accepted_exact_unique": 6,
+        "ambiguous_distinct_lyrics": 16
+      },
+      "metalcore": {
+        "accepted_exact_equivalent": 20,
+        "accepted_exact_unique": 7,
+        "ambiguous_distinct_lyrics": 2,
+        "instrumental": 1,
+        "not_found": 1
+      },
+      "new-age": {
+        "accepted_exact_equivalent": 1
+      },
+      "opera": {
+        "accepted_exact_equivalent": 2,
+        "accepted_exact_unique": 1
+      },
+      "piano": {
+        "accepted_exact_equivalent": 9,
+        "accepted_exact_unique": 5,
+        "ambiguous_distinct_lyrics": 2
+      },
+      "pop": {
+        "accepted_exact_equivalent": 12,
+        "ambiguous_distinct_lyrics": 7
+      },
+      "power-pop": {
+        "accepted_exact_equivalent": 19,
+        "accepted_exact_unique": 11,
+        "ambiguous_distinct_lyrics": 1,
+        "not_found": 10
+      },
+      "progressive-house": {
+        "accepted_exact_equivalent": 5,
+        "accepted_exact_unique": 2
+      },
+      "psych-rock": {
+        "accepted_exact_equivalent": 17,
+        "accepted_exact_unique": 4,
+        "ambiguous_distinct_lyrics": 7,
+        "not_found": 6
+      },
+      "punk": {
+        "accepted_exact_equivalent": 20,
+        "accepted_exact_unique": 7,
+        "ambiguous_distinct_lyrics": 9
+      },
+      "punk-rock": {
+        "accepted_exact_equivalent": 6,
+        "accepted_exact_unique": 8,
+        "ambiguous_distinct_lyrics": 4,
+        "not_found": 1
+      },
+      "rock": {
+        "accepted_exact_equivalent": 6,
+        "ambiguous_distinct_lyrics": 9
+      },
+      "rock-n-roll": {
+        "accepted_exact_equivalent": 3,
+        "accepted_exact_unique": 1,
+        "not_found": 2
+      },
+      "sad": {
+        "accepted_exact_unique": 1
+      },
+      "show-tunes": {
+        "accepted_exact_equivalent": 5,
+        "accepted_exact_unique": 2,
+        "ambiguous_distinct_lyrics": 1,
+        "not_found": 1
+      },
+      "singer-songwriter": {
+        "accepted_exact_equivalent": 20,
+        "accepted_exact_unique": 13,
+        "ambiguous_distinct_lyrics": 5
+      },
+      "ska": {
+        "accepted_exact_equivalent": 8,
+        "accepted_exact_unique": 10,
+        "ambiguous_distinct_lyrics": 4,
+        "not_found": 8
+      },
+      "songwriter": {
+        "accepted_exact_equivalent": 1
+      },
+      "soul": {
+        "accepted_exact_equivalent": 27,
+        "accepted_exact_unique": 8,
+        "ambiguous_distinct_lyrics": 9,
+        "not_found": 2
+      },
+      "swedish": {
+        "accepted_exact_equivalent": 15,
+        "accepted_exact_unique": 5,
+        "ambiguous_distinct_lyrics": 4
+      },
+      "techno": {
+        "accepted_exact_equivalent": 1,
+        "not_found": 1
+      },
+      "trance": {
+        "accepted_exact_equivalent": 1,
+        "ambiguous_distinct_lyrics": 1,
+        "ambiguous_metadata_conflict": 1,
+        "not_found": 1
+      },
+      "trip-hop": {
+        "accepted_exact_equivalent": 3,
+        "accepted_exact_unique": 1,
+        "instrumental": 1
+      }
+    },
+    "status_by_popularity_quintile": {
+      "Q1": {
+        "accepted_exact_equivalent": 191,
+        "accepted_exact_unique": 106,
+        "ambiguous_distinct_lyrics": 40,
+        "ambiguous_metadata_conflict": 2,
+        "instrumental": 3,
+        "not_found": 60,
+        "request_error": 1
+      },
+      "Q2": {
+        "accepted_exact_equivalent": 221,
+        "accepted_exact_unique": 128,
+        "ambiguous_distinct_lyrics": 54,
+        "ambiguous_metadata_conflict": 2,
+        "instrumental": 2,
+        "not_found": 12
+      },
+      "Q3": {
+        "accepted_exact_equivalent": 229,
+        "accepted_exact_unique": 99,
+        "ambiguous_distinct_lyrics": 72,
+        "ambiguous_metadata_conflict": 2,
+        "instrumental": 3,
+        "not_found": 10
+      },
+      "Q4": {
+        "accepted_exact_equivalent": 200,
+        "accepted_exact_unique": 54,
+        "ambiguous_distinct_lyrics": 106,
+        "ambiguous_metadata_conflict": 2,
+        "instrumental": 7,
+        "not_found": 8
+      },
+      "Q5": {
+        "accepted_exact_equivalent": 174,
+        "accepted_exact_unique": 39,
+        "ambiguous_distinct_lyrics": 168,
+        "instrumental": 4,
+        "not_found": 1
+      }
+    },
+    "status_by_match_method": {
+      "base_title_version_compatible": {
+        "accepted_exact_equivalent": 7,
+        "accepted_exact_unique": 1,
+        "ambiguous_distinct_lyrics": 3,
+        "not_found": 1
+      },
+      "conservative_normalized": {
+        "accepted_exact_equivalent": 52,
+        "accepted_exact_unique": 16,
+        "ambiguous_distinct_lyrics": 47,
+        "not_found": 3
+      },
+      "raw_exact": {
+        "accepted_exact_equivalent": 775,
+        "accepted_exact_unique": 313,
+        "ambiguous_distinct_lyrics": 317,
+        "ambiguous_metadata_conflict": 7,
+        "instrumental": 13,
+        "not_found": 63,
+        "request_error": 1
+      },
+      "strict_normalized": {
+        "accepted_exact_equivalent": 181,
+        "accepted_exact_unique": 96,
+        "ambiguous_distinct_lyrics": 73,
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 6,
+        "not_found": 24
+      }
+    },
+    "status_by_version_profile": {
+      "demo": {
+        "accepted_exact_equivalent": 1
+      },
+      "live": {
+        "accepted_exact_equivalent": 4,
+        "accepted_exact_unique": 3,
+        "ambiguous_distinct_lyrics": 1,
+        "not_found": 1
+      },
+      "original_sem_flag": {
+        "accepted_exact_equivalent": 1009,
+        "accepted_exact_unique": 422,
+        "ambiguous_distinct_lyrics": 439,
+        "ambiguous_metadata_conflict": 8,
+        "instrumental": 19,
+        "not_found": 90,
+        "request_error": 1
+      },
+      "remaster": {
+        "accepted_exact_equivalent": 1,
+        "accepted_exact_unique": 1
+      }
+    },
+    "status_by_has_version_flag": {
+      "False": {
+        "accepted_exact_equivalent": 1009,
+        "accepted_exact_unique": 422,
+        "ambiguous_distinct_lyrics": 439,
+        "ambiguous_metadata_conflict": 8,
+        "instrumental": 19,
+        "not_found": 90,
+        "request_error": 1
+      },
+      "True": {
+        "accepted_exact_equivalent": 6,
+        "accepted_exact_unique": 4,
+        "ambiguous_distinct_lyrics": 1,
+        "not_found": 1
+      }
+    },
+    "status_by_plain_available": {
+      "False": {
+        "ambiguous_metadata_conflict": 1,
+        "instrumental": 17,
+        "not_found": 91
+      },
+      "True": {
+        "accepted_exact_equivalent": 1015,
+        "accepted_exact_unique": 426,
+        "ambiguous_distinct_lyrics": 440,
+        "ambiguous_metadata_conflict": 7,
+        "instrumental": 2,
+        "request_error": 1
+      }
+    },
+    "status_by_synced_available": {
+      "False": {
+        "accepted_exact_equivalent": 176,
+        "accepted_exact_unique": 155,
+        "ambiguous_distinct_lyrics": 25,
+        "ambiguous_metadata_conflict": 4,
+        "instrumental": 17,
+        "not_found": 91
+      },
+      "True": {
+        "accepted_exact_equivalent": 839,
+        "accepted_exact_unique": 271,
+        "ambiguous_distinct_lyrics": 415,
+        "ambiguous_metadata_conflict": 4,
+        "instrumental": 2,
+        "request_error": 1
+      }
+    },
+    "technical": {
+      "total_http_attempts": 4184,
+      "retry_attempts": 184,
+      "retryable_http_attempts": 185,
+      "technical_error_cases": 0,
+      "http_status_combinations": {
+        "/api/get:200;/api/search:200": 1901,
+        "/api/get:200;/api/search:503": 1,
+        "/api/get:404;/api/search:200": 98
+      }
+    }
+  },
+  "selection_bias": {
+    "popularity_by_status_group": {
+      "accepted": {
+        "n": 1441,
+        "mean": 25.611381,
+        "median": 24.0,
+        "std": 13.282831,
+        "q1": 16.0,
+        "q3": 33.0,
+        "minimum": 0.0,
+        "maximum": 85.0,
+        "standardized_mean_difference_vs_cohort": -0.102419
+      },
+      "ambiguous": {
+        "n": 448,
+        "mean": 34.323661,
+        "median": 35.0,
+        "std": 14.1046,
+        "q1": 24.0,
+        "q3": 45.0,
+        "minimum": 0.0,
+        "maximum": 78.0,
+        "standardized_mean_difference_vs_cohort": 0.515042
+      },
+      "not_found": {
+        "n": 91,
+        "mean": 13.901099,
+        "median": 11.0,
+        "std": 9.89282,
+        "q1": 6.5,
+        "q3": 18.5,
+        "minimum": 0.0,
+        "maximum": 44.0,
+        "standardized_mean_difference_vs_cohort": -0.932356
+      },
+      "instrumental": {
+        "n": 19,
+        "mean": 29.368421,
+        "median": 31.0,
+        "std": 13.450364,
+        "q1": 23.0,
+        "q3": 38.5,
+        "minimum": 0.0,
+        "maximum": 47.0,
+        "standardized_mean_difference_vs_cohort": 0.163852
+      },
+      "request_error": {
+        "n": 1,
+        "mean": 7.0,
+        "median": 7.0,
+        "std": 0.0,
+        "q1": 7.0,
+        "q3": 7.0,
+        "minimum": 7.0,
+        "maximum": 7.0,
+        "standardized_mean_difference_vs_cohort": -1.421454
+      },
+      "full_cohort": {
+        "n": 2000,
+        "mean": 27.0565,
+        "median": 26.0,
+        "std": 14.109849,
+        "q1": 17.0,
+        "q3": 36.0,
+        "minimum": 0.0,
+        "maximum": 85.0,
+        "standardized_mean_difference_vs_cohort": 0.0
+      }
+    },
+    "categorical_acceptance": {
+      "period": [
+        {
+          "category": "2000-2005",
+          "n": 321,
+          "proportion": 0.1605,
+          "accepted_n": 227,
+          "acceptance_rate": 0.707165,
+          "wilson_95_low": 0.655167,
+          "wilson_95_high": 0.754263
+        },
+        {
+          "category": "2006-2011",
+          "n": 409,
+          "proportion": 0.2045,
+          "accepted_n": 302,
+          "acceptance_rate": 0.738386,
+          "wilson_95_low": 0.693713,
+          "wilson_95_high": 0.778623
+        },
+        {
+          "category": "2012-2017",
+          "n": 811,
+          "proportion": 0.4055,
+          "accepted_n": 581,
+          "acceptance_rate": 0.7164,
+          "wilson_95_low": 0.684413,
+          "wilson_95_high": 0.746345
+        },
+        {
+          "category": "2018-2023",
+          "n": 459,
+          "proportion": 0.2295,
+          "accepted_n": 331,
+          "acceptance_rate": 0.721133,
+          "wilson_95_low": 0.678401,
+          "wilson_95_high": 0.760194
+        }
+      ],
+      "year": [
+        {
+          "category": "2000",
+          "n": 46,
+          "proportion": 0.023,
+          "accepted_n": 34,
+          "acceptance_rate": 0.73913,
+          "wilson_95_low": 0.597406,
+          "wilson_95_high": 0.843993
+        },
+        {
+          "category": "2001",
+          "n": 59,
+          "proportion": 0.0295,
+          "accepted_n": 36,
+          "acceptance_rate": 0.610169,
+          "wilson_95_low": 0.482661,
+          "wilson_95_high": 0.724208
+        },
+        {
+          "category": "2002",
+          "n": 58,
+          "proportion": 0.029,
+          "accepted_n": 41,
+          "acceptance_rate": 0.706897,
+          "wilson_95_low": 0.579869,
+          "wilson_95_high": 0.80822
+        },
+        {
+          "category": "2003",
+          "n": 54,
+          "proportion": 0.027,
+          "accepted_n": 39,
+          "acceptance_rate": 0.722222,
+          "wilson_95_low": 0.591093,
+          "wilson_95_high": 0.823833
+        },
+        {
+          "category": "2004",
+          "n": 50,
+          "proportion": 0.025,
+          "accepted_n": 41,
+          "acceptance_rate": 0.82,
+          "wilson_95_low": 0.692037,
+          "wilson_95_high": 0.902299
+        },
+        {
+          "category": "2005",
+          "n": 54,
+          "proportion": 0.027,
+          "accepted_n": 36,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.533607,
+          "wilson_95_high": 0.777588
+        },
+        {
+          "category": "2006",
+          "n": 65,
+          "proportion": 0.0325,
+          "accepted_n": 37,
+          "acceptance_rate": 0.569231,
+          "wilson_95_low": 0.448328,
+          "wilson_95_high": 0.682407
+        },
+        {
+          "category": "2007",
+          "n": 63,
+          "proportion": 0.0315,
+          "accepted_n": 51,
+          "acceptance_rate": 0.809524,
+          "wilson_95_low": 0.69593,
+          "wilson_95_high": 0.887539
+        },
+        {
+          "category": "2008",
+          "n": 56,
+          "proportion": 0.028,
+          "accepted_n": 44,
+          "acceptance_rate": 0.785714,
+          "wilson_95_low": 0.661803,
+          "wilson_95_high": 0.872942
+        },
+        {
+          "category": "2009",
+          "n": 77,
+          "proportion": 0.0385,
+          "accepted_n": 63,
+          "acceptance_rate": 0.818182,
+          "wilson_95_low": 0.717635,
+          "wilson_95_high": 0.888488
+        },
+        {
+          "category": "2010",
+          "n": 82,
+          "proportion": 0.041,
+          "accepted_n": 60,
+          "acceptance_rate": 0.731707,
+          "wilson_95_low": 0.627036,
+          "wilson_95_high": 0.81564
+        },
+        {
+          "category": "2011",
+          "n": 66,
+          "proportion": 0.033,
+          "accepted_n": 47,
+          "acceptance_rate": 0.712121,
+          "wilson_95_low": 0.593625,
+          "wilson_95_high": 0.807282
+        },
+        {
+          "category": "2012",
+          "n": 93,
+          "proportion": 0.0465,
+          "accepted_n": 62,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.565933,
+          "wilson_95_high": 0.754178
+        },
+        {
+          "category": "2013",
+          "n": 112,
+          "proportion": 0.056,
+          "accepted_n": 85,
+          "acceptance_rate": 0.758929,
+          "wilson_95_low": 0.671977,
+          "wilson_95_high": 0.828706
+        },
+        {
+          "category": "2014",
+          "n": 125,
+          "proportion": 0.0625,
+          "accepted_n": 88,
+          "acceptance_rate": 0.704,
+          "wilson_95_low": 0.618859,
+          "wilson_95_high": 0.776976
+        },
+        {
+          "category": "2015",
+          "n": 156,
+          "proportion": 0.078,
+          "accepted_n": 113,
+          "acceptance_rate": 0.724359,
+          "wilson_95_low": 0.649485,
+          "wilson_95_high": 0.788449
+        },
+        {
+          "category": "2016",
+          "n": 146,
+          "proportion": 0.073,
+          "accepted_n": 103,
+          "acceptance_rate": 0.705479,
+          "wilson_95_low": 0.627036,
+          "wilson_95_high": 0.773387
+        },
+        {
+          "category": "2017",
+          "n": 179,
+          "proportion": 0.0895,
+          "accepted_n": 130,
+          "acceptance_rate": 0.726257,
+          "wilson_95_low": 0.656698,
+          "wilson_95_high": 0.786308
+        },
+        {
+          "category": "2018",
+          "n": 203,
+          "proportion": 0.1015,
+          "accepted_n": 159,
+          "acceptance_rate": 0.783251,
+          "wilson_95_low": 0.721593,
+          "wilson_95_high": 0.834388
+        },
+        {
+          "category": "2019",
+          "n": 193,
+          "proportion": 0.0965,
+          "accepted_n": 134,
+          "acceptance_rate": 0.694301,
+          "wilson_95_low": 0.626036,
+          "wilson_95_high": 0.754981
+        },
+        {
+          "category": "2020",
+          "n": 51,
+          "proportion": 0.0255,
+          "accepted_n": 33,
+          "acceptance_rate": 0.647059,
+          "wilson_95_low": 0.509858,
+          "wilson_95_high": 0.763657
+        },
+        {
+          "category": "2021",
+          "n": 7,
+          "proportion": 0.0035,
+          "accepted_n": 2,
+          "acceptance_rate": 0.285714,
+          "wilson_95_low": 0.082217,
+          "wilson_95_high": 0.641071
+        },
+        {
+          "category": "2022",
+          "n": 4,
+          "proportion": 0.002,
+          "accepted_n": 2,
+          "acceptance_rate": 0.5,
+          "wilson_95_low": 0.150036,
+          "wilson_95_high": 0.849964
+        },
+        {
+          "category": "2023",
+          "n": 1,
+          "proportion": 0.0005,
+          "accepted_n": 1,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.206543,
+          "wilson_95_high": 1.0
+        }
+      ],
+      "genre": [
+        {
+          "category": "acoustic",
+          "n": 52,
+          "proportion": 0.026,
+          "accepted_n": 39,
+          "acceptance_rate": 0.75,
+          "wilson_95_low": 0.617933,
+          "wilson_95_high": 0.84767
+        },
+        {
+          "category": "alt-rock",
+          "n": 122,
+          "proportion": 0.061,
+          "accepted_n": 73,
+          "acceptance_rate": 0.598361,
+          "wilson_95_low": 0.509652,
+          "wilson_95_high": 0.681064
+        },
+        {
+          "category": "ambient",
+          "n": 18,
+          "proportion": 0.009,
+          "accepted_n": 14,
+          "acceptance_rate": 0.777778,
+          "wilson_95_low": 0.54785,
+          "wilson_95_high": 0.909992
+        },
+        {
+          "category": "black-metal",
+          "n": 59,
+          "proportion": 0.0295,
+          "accepted_n": 50,
+          "acceptance_rate": 0.847458,
+          "wilson_95_low": 0.734818,
+          "wilson_95_high": 0.917616
+        },
+        {
+          "category": "blues",
+          "n": 48,
+          "proportion": 0.024,
+          "accepted_n": 40,
+          "acceptance_rate": 0.833333,
+          "wilson_95_low": 0.704219,
+          "wilson_95_high": 0.913046
+        },
+        {
+          "category": "chill",
+          "n": 46,
+          "proportion": 0.023,
+          "accepted_n": 35,
+          "acceptance_rate": 0.76087,
+          "wilson_95_low": 0.620646,
+          "wilson_95_high": 0.86088
+        },
+        {
+          "category": "classical",
+          "n": 5,
+          "proportion": 0.0025,
+          "accepted_n": 3,
+          "acceptance_rate": 0.6,
+          "wilson_95_low": 0.23072,
+          "wilson_95_high": 0.882382
+        },
+        {
+          "category": "club",
+          "n": 9,
+          "proportion": 0.0045,
+          "accepted_n": 6,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.354197,
+          "wilson_95_high": 0.879418
+        },
+        {
+          "category": "comedy",
+          "n": 6,
+          "proportion": 0.003,
+          "accepted_n": 5,
+          "acceptance_rate": 0.833333,
+          "wilson_95_low": 0.436491,
+          "wilson_95_high": 0.969947
+        },
+        {
+          "category": "country",
+          "n": 101,
+          "proportion": 0.0505,
+          "accepted_n": 67,
+          "acceptance_rate": 0.663366,
+          "wilson_95_low": 0.566725,
+          "wilson_95_high": 0.748036
+        },
+        {
+          "category": "dance",
+          "n": 77,
+          "proportion": 0.0385,
+          "accepted_n": 43,
+          "acceptance_rate": 0.558442,
+          "wilson_95_low": 0.44738,
+          "wilson_95_high": 0.663948
+        },
+        {
+          "category": "dancehall",
+          "n": 19,
+          "proportion": 0.0095,
+          "accepted_n": 14,
+          "acceptance_rate": 0.736842,
+          "wilson_95_low": 0.51208,
+          "wilson_95_high": 0.881938
+        },
+        {
+          "category": "death-metal",
+          "n": 94,
+          "proportion": 0.047,
+          "accepted_n": 74,
+          "acceptance_rate": 0.787234,
+          "wilson_95_low": 0.69408,
+          "wilson_95_high": 0.857832
+        },
+        {
+          "category": "deep-house",
+          "n": 10,
+          "proportion": 0.005,
+          "accepted_n": 8,
+          "acceptance_rate": 0.8,
+          "wilson_95_low": 0.490157,
+          "wilson_95_high": 0.943319
+        },
+        {
+          "category": "disco",
+          "n": 26,
+          "proportion": 0.013,
+          "accepted_n": 19,
+          "acceptance_rate": 0.730769,
+          "wilson_95_low": 0.539166,
+          "wilson_95_high": 0.862957
+        },
+        {
+          "category": "drum-and-bass",
+          "n": 6,
+          "proportion": 0.003,
+          "accepted_n": 2,
+          "acceptance_rate": 0.333333,
+          "wilson_95_low": 0.096769,
+          "wilson_95_high": 0.700012
+        },
+        {
+          "category": "dub",
+          "n": 15,
+          "proportion": 0.0075,
+          "accepted_n": 7,
+          "acceptance_rate": 0.466667,
+          "wilson_95_low": 0.248092,
+          "wilson_95_high": 0.698834
+        },
+        {
+          "category": "dubstep",
+          "n": 2,
+          "proportion": 0.001,
+          "accepted_n": 0,
+          "acceptance_rate": 0.0,
+          "wilson_95_low": 0.0,
+          "wilson_95_high": 0.657628
+        },
+        {
+          "category": "edm",
+          "n": 18,
+          "proportion": 0.009,
+          "accepted_n": 12,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.437491,
+          "wilson_95_high": 0.837214
+        },
+        {
+          "category": "electro",
+          "n": 30,
+          "proportion": 0.015,
+          "accepted_n": 15,
+          "acceptance_rate": 0.5,
+          "wilson_95_low": 0.331539,
+          "wilson_95_high": 0.668461
+        },
+        {
+          "category": "electronic",
+          "n": 15,
+          "proportion": 0.0075,
+          "accepted_n": 13,
+          "acceptance_rate": 0.866667,
+          "wilson_95_low": 0.621175,
+          "wilson_95_high": 0.96264
+        },
+        {
+          "category": "emo",
+          "n": 125,
+          "proportion": 0.0625,
+          "accepted_n": 92,
+          "acceptance_rate": 0.736,
+          "wilson_95_low": 0.652524,
+          "wilson_95_high": 0.805403
+        },
+        {
+          "category": "folk",
+          "n": 72,
+          "proportion": 0.036,
+          "accepted_n": 56,
+          "acceptance_rate": 0.777778,
+          "wilson_95_low": 0.669088,
+          "wilson_95_high": 0.858327
+        },
+        {
+          "category": "french",
+          "n": 12,
+          "proportion": 0.006,
+          "accepted_n": 8,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.390618,
+          "wilson_95_high": 0.861882
+        },
+        {
+          "category": "funk",
+          "n": 44,
+          "proportion": 0.022,
+          "accepted_n": 31,
+          "acceptance_rate": 0.704545,
+          "wilson_95_low": 0.557795,
+          "wilson_95_high": 0.818446
+        },
+        {
+          "category": "garage",
+          "n": 65,
+          "proportion": 0.0325,
+          "accepted_n": 56,
+          "acceptance_rate": 0.861538,
+          "wilson_95_low": 0.757317,
+          "wilson_95_high": 0.92541
+        },
+        {
+          "category": "german",
+          "n": 13,
+          "proportion": 0.0065,
+          "accepted_n": 11,
+          "acceptance_rate": 0.846154,
+          "wilson_95_low": 0.577648,
+          "wilson_95_high": 0.956743
+        },
+        {
+          "category": "gospel",
+          "n": 10,
+          "proportion": 0.005,
+          "accepted_n": 8,
+          "acceptance_rate": 0.8,
+          "wilson_95_low": 0.490157,
+          "wilson_95_high": 0.943319
+        },
+        {
+          "category": "goth",
+          "n": 42,
+          "proportion": 0.021,
+          "accepted_n": 33,
+          "acceptance_rate": 0.785714,
+          "wilson_95_low": 0.640599,
+          "wilson_95_high": 0.882943
+        },
+        {
+          "category": "grindcore",
+          "n": 16,
+          "proportion": 0.008,
+          "accepted_n": 14,
+          "acceptance_rate": 0.875,
+          "wilson_95_low": 0.639767,
+          "wilson_95_high": 0.965023
+        },
+        {
+          "category": "groove",
+          "n": 18,
+          "proportion": 0.009,
+          "accepted_n": 16,
+          "acceptance_rate": 0.888889,
+          "wilson_95_low": 0.671998,
+          "wilson_95_high": 0.968981
+        },
+        {
+          "category": "hard-rock",
+          "n": 60,
+          "proportion": 0.03,
+          "accepted_n": 47,
+          "acceptance_rate": 0.783333,
+          "wilson_95_low": 0.663797,
+          "wilson_95_high": 0.868771
+        },
+        {
+          "category": "hardcore",
+          "n": 91,
+          "proportion": 0.0455,
+          "accepted_n": 64,
+          "acceptance_rate": 0.703297,
+          "wilson_95_low": 0.602758,
+          "wilson_95_high": 0.787366
+        },
+        {
+          "category": "hardstyle",
+          "n": 4,
+          "proportion": 0.002,
+          "accepted_n": 4,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.5101,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "heavy-metal",
+          "n": 11,
+          "proportion": 0.0055,
+          "accepted_n": 7,
+          "acceptance_rate": 0.636364,
+          "wilson_95_low": 0.353797,
+          "wilson_95_high": 0.848338
+        },
+        {
+          "category": "hip-hop",
+          "n": 68,
+          "proportion": 0.034,
+          "accepted_n": 40,
+          "acceptance_rate": 0.588235,
+          "wilson_95_low": 0.469613,
+          "wilson_95_high": 0.697422
+        },
+        {
+          "category": "house",
+          "n": 3,
+          "proportion": 0.0015,
+          "accepted_n": 2,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.207655,
+          "wilson_95_high": 0.93851
+        },
+        {
+          "category": "indian",
+          "n": 5,
+          "proportion": 0.0025,
+          "accepted_n": 4,
+          "acceptance_rate": 0.8,
+          "wilson_95_low": 0.375528,
+          "wilson_95_high": 0.963777
+        },
+        {
+          "category": "indie-pop",
+          "n": 57,
+          "proportion": 0.0285,
+          "accepted_n": 42,
+          "acceptance_rate": 0.736842,
+          "wilson_95_low": 0.610232,
+          "wilson_95_high": 0.833544
+        },
+        {
+          "category": "industrial",
+          "n": 40,
+          "proportion": 0.02,
+          "accepted_n": 29,
+          "acceptance_rate": 0.725,
+          "wilson_95_low": 0.571647,
+          "wilson_95_high": 0.838921
+        },
+        {
+          "category": "jazz",
+          "n": 18,
+          "proportion": 0.009,
+          "accepted_n": 12,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.437491,
+          "wilson_95_high": 0.837214
+        },
+        {
+          "category": "k-pop",
+          "n": 16,
+          "proportion": 0.008,
+          "accepted_n": 11,
+          "acceptance_rate": 0.6875,
+          "wilson_95_low": 0.444039,
+          "wilson_95_high": 0.858356
+        },
+        {
+          "category": "metal",
+          "n": 44,
+          "proportion": 0.022,
+          "accepted_n": 28,
+          "acceptance_rate": 0.636364,
+          "wilson_95_low": 0.488661,
+          "wilson_95_high": 0.762167
+        },
+        {
+          "category": "metalcore",
+          "n": 31,
+          "proportion": 0.0155,
+          "accepted_n": 27,
+          "acceptance_rate": 0.870968,
+          "wilson_95_low": 0.711472,
+          "wilson_95_high": 0.948658
+        },
+        {
+          "category": "new-age",
+          "n": 1,
+          "proportion": 0.0005,
+          "accepted_n": 1,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.206543,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "opera",
+          "n": 3,
+          "proportion": 0.0015,
+          "accepted_n": 3,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.438494,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "piano",
+          "n": 16,
+          "proportion": 0.008,
+          "accepted_n": 14,
+          "acceptance_rate": 0.875,
+          "wilson_95_low": 0.639767,
+          "wilson_95_high": 0.965023
+        },
+        {
+          "category": "pop",
+          "n": 19,
+          "proportion": 0.0095,
+          "accepted_n": 12,
+          "acceptance_rate": 0.631579,
+          "wilson_95_low": 0.410392,
+          "wilson_95_high": 0.808507
+        },
+        {
+          "category": "power-pop",
+          "n": 41,
+          "proportion": 0.0205,
+          "accepted_n": 30,
+          "acceptance_rate": 0.731707,
+          "wilson_95_low": 0.580662,
+          "wilson_95_high": 0.843052
+        },
+        {
+          "category": "progressive-house",
+          "n": 7,
+          "proportion": 0.0035,
+          "accepted_n": 7,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.645661,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "psych-rock",
+          "n": 34,
+          "proportion": 0.017,
+          "accepted_n": 21,
+          "acceptance_rate": 0.617647,
+          "wilson_95_low": 0.450407,
+          "wilson_95_high": 0.761
+        },
+        {
+          "category": "punk",
+          "n": 36,
+          "proportion": 0.018,
+          "accepted_n": 27,
+          "acceptance_rate": 0.75,
+          "wilson_95_low": 0.589292,
+          "wilson_95_high": 0.862497
+        },
+        {
+          "category": "punk-rock",
+          "n": 19,
+          "proportion": 0.0095,
+          "accepted_n": 14,
+          "acceptance_rate": 0.736842,
+          "wilson_95_low": 0.51208,
+          "wilson_95_high": 0.881938
+        },
+        {
+          "category": "rock",
+          "n": 15,
+          "proportion": 0.0075,
+          "accepted_n": 6,
+          "acceptance_rate": 0.4,
+          "wilson_95_low": 0.198242,
+          "wilson_95_high": 0.642536
+        },
+        {
+          "category": "rock-n-roll",
+          "n": 6,
+          "proportion": 0.003,
+          "accepted_n": 4,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.299988,
+          "wilson_95_high": 0.903231
+        },
+        {
+          "category": "sad",
+          "n": 1,
+          "proportion": 0.0005,
+          "accepted_n": 1,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.206543,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "show-tunes",
+          "n": 9,
+          "proportion": 0.0045,
+          "accepted_n": 7,
+          "acceptance_rate": 0.777778,
+          "wilson_95_low": 0.452583,
+          "wilson_95_high": 0.936776
+        },
+        {
+          "category": "singer-songwriter",
+          "n": 38,
+          "proportion": 0.019,
+          "accepted_n": 33,
+          "acceptance_rate": 0.868421,
+          "wilson_95_low": 0.726728,
+          "wilson_95_high": 0.942462
+        },
+        {
+          "category": "ska",
+          "n": 30,
+          "proportion": 0.015,
+          "accepted_n": 18,
+          "acceptance_rate": 0.6,
+          "wilson_95_low": 0.423201,
+          "wilson_95_high": 0.754096
+        },
+        {
+          "category": "songwriter",
+          "n": 1,
+          "proportion": 0.0005,
+          "accepted_n": 1,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.206543,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "soul",
+          "n": 46,
+          "proportion": 0.023,
+          "accepted_n": 35,
+          "acceptance_rate": 0.76087,
+          "wilson_95_low": 0.620646,
+          "wilson_95_high": 0.86088
+        },
+        {
+          "category": "swedish",
+          "n": 24,
+          "proportion": 0.012,
+          "accepted_n": 20,
+          "acceptance_rate": 0.833333,
+          "wilson_95_low": 0.641465,
+          "wilson_95_high": 0.933214
+        },
+        {
+          "category": "techno",
+          "n": 2,
+          "proportion": 0.001,
+          "accepted_n": 1,
+          "acceptance_rate": 0.5,
+          "wilson_95_low": 0.094529,
+          "wilson_95_high": 0.905471
+        },
+        {
+          "category": "trance",
+          "n": 4,
+          "proportion": 0.002,
+          "accepted_n": 1,
+          "acceptance_rate": 0.25,
+          "wilson_95_low": 0.045586,
+          "wilson_95_high": 0.699364
+        },
+        {
+          "category": "trip-hop",
+          "n": 5,
+          "proportion": 0.0025,
+          "accepted_n": 4,
+          "acceptance_rate": 0.8,
+          "wilson_95_low": 0.375528,
+          "wilson_95_high": 0.963777
+        }
+      ],
+      "match_method": [
+        {
+          "category": "base_title_version_compatible",
+          "n": 12,
+          "proportion": 0.006,
+          "accepted_n": 8,
+          "acceptance_rate": 0.666667,
+          "wilson_95_low": 0.390618,
+          "wilson_95_high": 0.861882
+        },
+        {
+          "category": "conservative_normalized",
+          "n": 118,
+          "proportion": 0.059,
+          "accepted_n": 68,
+          "acceptance_rate": 0.576271,
+          "wilson_95_low": 0.48609,
+          "wilson_95_high": 0.661643
+        },
+        {
+          "category": "raw_exact",
+          "n": 1489,
+          "proportion": 0.7445,
+          "accepted_n": 1088,
+          "acceptance_rate": 0.730692,
+          "wilson_95_low": 0.707587,
+          "wilson_95_high": 0.752609
+        },
+        {
+          "category": "strict_normalized",
+          "n": 381,
+          "proportion": 0.1905,
+          "accepted_n": 277,
+          "acceptance_rate": 0.727034,
+          "wilson_95_low": 0.680201,
+          "wilson_95_high": 0.769334
+        }
+      ],
+      "popularity_quintile": [
+        {
+          "category": "Q1",
+          "n": 403,
+          "proportion": 0.2015,
+          "accepted_n": 297,
+          "acceptance_rate": 0.736973,
+          "wilson_95_low": 0.691894,
+          "wilson_95_high": 0.777576
+        },
+        {
+          "category": "Q2",
+          "n": 419,
+          "proportion": 0.2095,
+          "accepted_n": 349,
+          "acceptance_rate": 0.832936,
+          "wilson_95_low": 0.794226,
+          "wilson_95_high": 0.865595
+        },
+        {
+          "category": "Q3",
+          "n": 415,
+          "proportion": 0.2075,
+          "accepted_n": 328,
+          "acceptance_rate": 0.790361,
+          "wilson_95_low": 0.748624,
+          "wilson_95_high": 0.826773
+        },
+        {
+          "category": "Q4",
+          "n": 377,
+          "proportion": 0.1885,
+          "accepted_n": 254,
+          "acceptance_rate": 0.67374,
+          "wilson_95_low": 0.624867,
+          "wilson_95_high": 0.719108
+        },
+        {
+          "category": "Q5",
+          "n": 386,
+          "proportion": 0.193,
+          "accepted_n": 213,
+          "acceptance_rate": 0.551813,
+          "wilson_95_low": 0.501933,
+          "wilson_95_high": 0.600673
+        }
+      ],
+      "version_profile": [
+        {
+          "category": "demo",
+          "n": 1,
+          "proportion": 0.0005,
+          "accepted_n": 1,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.206543,
+          "wilson_95_high": 1.0
+        },
+        {
+          "category": "live",
+          "n": 9,
+          "proportion": 0.0045,
+          "accepted_n": 7,
+          "acceptance_rate": 0.777778,
+          "wilson_95_low": 0.452583,
+          "wilson_95_high": 0.936776
+        },
+        {
+          "category": "original_sem_flag",
+          "n": 1988,
+          "proportion": 0.994,
+          "accepted_n": 1431,
+          "acceptance_rate": 0.719819,
+          "wilson_95_low": 0.699668,
+          "wilson_95_high": 0.739122
+        },
+        {
+          "category": "remaster",
+          "n": 2,
+          "proportion": 0.001,
+          "accepted_n": 2,
+          "acceptance_rate": 1.0,
+          "wilson_95_low": 0.342372,
+          "wilson_95_high": 1.0
+        }
+      ],
+      "has_any_version_flag": [
+        {
+          "category": "False",
+          "n": 1988,
+          "proportion": 0.994,
+          "accepted_n": 1431,
+          "acceptance_rate": 0.719819,
+          "wilson_95_low": 0.699668,
+          "wilson_95_high": 0.739122
+        },
+        {
+          "category": "True",
+          "n": 12,
+          "proportion": 0.006,
+          "accepted_n": 10,
+          "acceptance_rate": 0.833333,
+          "wilson_95_low": 0.551964,
+          "wilson_95_high": 0.953036
+        }
+      ],
+      "plain_available": [
+        {
+          "category": "False",
+          "n": 109,
+          "proportion": 0.0545,
+          "accepted_n": 0,
+          "acceptance_rate": 0.0,
+          "wilson_95_low": 0.0,
+          "wilson_95_high": 0.034044
+        },
+        {
+          "category": "True",
+          "n": 1891,
+          "proportion": 0.9455,
+          "accepted_n": 1441,
+          "acceptance_rate": 0.762031,
+          "wilson_95_low": 0.742318,
+          "wilson_95_high": 0.780681
+        }
+      ],
+      "synced_available": [
+        {
+          "category": "False",
+          "n": 468,
+          "proportion": 0.234,
+          "accepted_n": 331,
+          "acceptance_rate": 0.707265,
+          "wilson_95_low": 0.664486,
+          "wilson_95_high": 0.746669
+        },
+        {
+          "category": "True",
+          "n": 1532,
+          "proportion": 0.766,
+          "accepted_n": 1110,
+          "acceptance_rate": 0.724543,
+          "wilson_95_low": 0.701631,
+          "wilson_95_high": 0.746332
+        }
+      ]
+    },
+    "version_flag_acceptance": [
+      {
+        "flag": "remaster",
+        "n": 2,
+        "accepted_n": 2,
+        "acceptance_rate": 1.0,
+        "wilson_95_low": 0.342372,
+        "wilson_95_high": 1.0
+      },
+      {
+        "flag": "remix",
+        "n": 0,
+        "accepted_n": 0,
+        "acceptance_rate": null,
+        "wilson_95_low": null,
+        "wilson_95_high": null
+      },
+      {
+        "flag": "live",
+        "n": 9,
+        "accepted_n": 7,
+        "acceptance_rate": 0.777778,
+        "wilson_95_low": 0.452583,
+        "wilson_95_high": 0.936776
+      },
+      {
+        "flag": "acoustic",
+        "n": 0,
+        "accepted_n": 0,
+        "acceptance_rate": null,
+        "wilson_95_low": null,
+        "wilson_95_high": null
+      },
+      {
+        "flag": "radio_edit",
+        "n": 0,
+        "accepted_n": 0,
+        "acceptance_rate": null,
+        "wilson_95_low": null,
+        "wilson_95_high": null
+      },
+      {
+        "flag": "mono_stereo",
+        "n": 0,
+        "accepted_n": 0,
+        "acceptance_rate": null,
+        "wilson_95_low": null,
+        "wilson_95_high": null
+      },
+      {
+        "flag": "instrumental",
+        "n": 0,
+        "accepted_n": 0,
+        "acceptance_rate": null,
+        "wilson_95_low": null,
+        "wilson_95_high": null
+      },
+      {
+        "flag": "demo",
+        "n": 1,
+        "accepted_n": 1,
+        "acceptance_rate": 1.0,
+        "wilson_95_low": 0.206543,
+        "wilson_95_high": 1.0
+      },
+      {
+        "flag": "karaoke",
+        "n": 0,
+        "accepted_n": 0,
+        "acceptance_rate": null,
+        "wilson_95_low": null,
+        "wilson_95_high": null
+      }
+    ],
+    "duration_by_status_group": {
+      "accepted": {
+        "n": 1441,
+        "mean": 229.644722,
+        "median": 218.884,
+        "std": 86.685385,
+        "q1": 185.61,
+        "q3": 260.827,
+        "minimum": 9.707,
+        "maximum": 999.976
+      },
+      "ambiguous": {
+        "n": 448,
+        "mean": 232.405993,
+        "median": 220.589,
+        "std": 77.206019,
+        "q1": 191.5735,
+        "q3": 260.75925,
+        "minimum": 42.387,
+        "maximum": 688.0
+      },
+      "not_found": {
+        "n": 91,
+        "mean": 208.511286,
+        "median": 187.0,
+        "std": 135.180504,
+        "q1": 138.0895,
+        "q3": 243.576,
+        "minimum": 67.473,
+        "maximum": 983.173
+      },
+      "instrumental": {
+        "n": 19,
+        "mean": 234.475895,
+        "median": 225.75,
+        "std": 86.703438,
+        "q1": 198.724,
+        "q3": 265.314,
+        "minimum": 80.284,
+        "maximum": 479.087
+      },
+      "request_error": {
+        "n": 1,
+        "mean": 283.373,
+        "median": 283.373,
+        "std": 0.0,
+        "q1": 283.373,
+        "q3": 283.373,
+        "minimum": 283.373,
+        "maximum": 283.373
+      },
+      "full_cohort": {
+        "n": 2000,
+        "mean": 229.374436,
+        "median": 218.4115,
+        "std": 87.521406,
+        "q1": 185.176,
+        "q3": 260.30675,
+        "minimum": 9.707,
+        "maximum": 999.976
+      }
+    },
+    "diagnosis": {
+      "accepted_popularity_smd": -0.102419,
+      "popularity_shift_magnitude": "small_or_negligible",
+      "period_acceptance_rate_range": [
+        0.707165,
+        0.738386
+      ],
+      "genre_acceptance_rate_range_n_ge_20": [
+        0.5,
+        0.870968
+      ],
+      "match_method_acceptance_rate_range": [
+        0.576271,
+        0.730692
+      ],
+      "popularity_quintile_acceptance_rates": {
+        "Q1": 0.736973,
+        "Q2": 0.832936,
+        "Q3": 0.790361,
+        "Q4": 0.67374,
+        "Q5": 0.551813
+      },
+      "version_flag_acceptance_rate_range": [
+        0.719819,
+        0.833333
+      ],
+      "assessment": [
+        "O grupo aceito não favorece músicas mais populares: sua média é ligeiramente inferior à da coorte, com deslocamento padronizado pequeno.",
+        "A aceitação cai no quinto quintil, acompanhado por mais casos ambíguos; isso indica associação entre popularidade e o tipo de desfecho, sem interpretação causal.",
+        "As taxas por período são próximas, sem evidência descritiva de forte concentração temporal da disponibilidade aceita.",
+        "Há heterogeneidade por gênero e método de matching; o método conservador apresenta aceitação menor que raw_exact e strict_normalized.",
+        "O estrato com flag de versão tem somente 12 composições e intervalo amplo; não há base para uma conclusão forte sobre versões especiais."
+      ],
+      "interpretation": "Associações descritivas de disponibilidade; não sustentam inferência causal. Modelos futuros com letras generalizam primariamente para composições com status aceito."
+    }
+  },
+  "circuit_breaker": {
+    "triggered": false,
+    "reason": null
+  },
+  "cache_after": {
+    "file_count": 2000,
+    "manifest_sha256": "f10853a36b26ceb663d8f3e6eed0678082131c73ed4d7a2d7c8dd1a9e37a0e86"
+  },
+  "privacy": {
+    "forbidden_fields_in_public_results": [],
+    "matching_success_fields": [],
+    "tracked_private_files": [],
+    "staged_private_files": [],
+    "lyrics_in_public_artifacts": false
+  },
+  "immutable_hashes_before": {
+    "data/processed/modeling_base_lfm_v0_1_1.parquet": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+    "data/processed/split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+    "data/processed/lyrics_pilot_cohort_v0_1.parquet": "35b12cd087b938ce2935ad9f7e3e4b7be8b80dfb89980de62483f0e82e1054b1",
+    "data/processed/lyrics_pilot_lookup_input_v0_1.parquet": "ea89a9c6b833198bdd23a02de0e4d91c82d65e58c7641495422190de0d9c697c"
+  },
+  "immutable_hashes_after": {
+    "data/processed/modeling_base_lfm_v0_1_1.parquet": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+    "data/processed/split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+    "data/processed/lyrics_pilot_cohort_v0_1.parquet": "35b12cd087b938ce2935ad9f7e3e4b7be8b80dfb89980de62483f0e82e1054b1",
+    "data/processed/lyrics_pilot_lookup_input_v0_1.parquet": "ea89a9c6b833198bdd23a02de0e4d91c82d65e58c7641495422190de0d9c697c"
+  },
+  "immutable_hashes_preserved": true,
+  "recommendation": "gerar embeddings para as letras aceitas do piloto",
+  "recommendation_options": [
+    "gerar embeddings para as letras aceitas do piloto",
+    "ampliar a coleta",
+    "adicionar outra fonte",
+    "ajustar o matching"
+  ],
+  "failures": [],
+  "output_hashes": {
+    "data/processed/lyrics_pilot_full_results_v0_1_3.parquet": "b7c7e8d44f18eeb5f2dbc71a58bfcc8aec97bfe4f500a84dfd6b4ef12764cb3f",
+    "reports/lyrics_pilot_full_report_v0_1_3.md": "8bf72ebcda17c3ed71b65648400745b81a89888d4f6b830d7b94e6dc80d314f0",
+    "reports/lyrics_pilot_selection_bias_v0_1_3.md": "155b483fc6df74250e32a45045f7e7d44488ff65d6d0056a26c8086850af3479"
+  },
+  "verification": {
+    "status": "passed",
+    "commands": [
+      {
+        "command": "python -c <permissão tmp Windows>; pytest.main([-q, -p no:cacheprovider, --basetemp isolado])",
+        "exit_code": 0,
+        "result": "58 passed"
+      },
+      {
+        "command": "pytest tests/test_lyrics_pilot_v013.py -q (tmp isolado)",
+        "exit_code": 0,
+        "result": "8 passed"
+      },
+      {
+        "command": "python -m ruff check src tests",
+        "exit_code": 0,
+        "result": "All checks passed"
+      },
+      {
+        "command": "python -m ruff format --check .",
+        "exit_code": 0,
+        "result": "56 files already formatted"
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0,
+        "result": "sem erros; somente avisos LF/CRLF"
+      },
+      {
+        "command": "auditoria de hashes, split, privacidade e cardinalidade",
+        "exit_code": 0,
+        "result": "base/split preservados; 2.000 resultados/caches; 1.441 aceitas; holdout 0; privado tracked/staged 0"
+      },
+      {
+        "command": "python -m ruff check .",
+        "exit_code": 1,
+        "result": "único B018 preexistente em exp_base.py:8; excluído do checkpoint"
+      }
+    ],
+    "full_suite_tests": 58,
+    "collection_specific_tests": 8,
+    "all_required_checks_passed": true,
+    "preexisting_b018": "exp_base.py:8"
+  }
+}

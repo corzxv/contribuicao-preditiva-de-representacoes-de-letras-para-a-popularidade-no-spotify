@@ -18,6 +18,7 @@ from .lfm2b import audit_lfm2b, normalize_lfm2b
 from .lyrics_ambiguity_v011 import audit_lyrics_ambiguity_v011
 from .lyrics_pilot import prepare_lyrics_pilot, run_lyrics_smoke
 from .lyrics_pilot_v012 import prepare_supplemental_v012, run_supplemental_v012
+from .lyrics_pilot_v013 import run_full_pilot_v013
 from .matching import analyze_selection_bias, run_matching
 from .reporting import generate_reports
 from .revision_v011 import prepare_revision_v011
@@ -33,6 +34,10 @@ def _print_lyrics_progress(done: int, total: int) -> None:
 def _print_supplemental_progress(done: int, total: int) -> None:
     if done % 5 == 0 or done == total:
         print(f"Complementar LRCLIB v0.1.2: {done}/{total}", file=sys.stderr, flush=True)
+
+
+def _print_full_lyrics_progress(done: int, total: int) -> None:
+    print(f"Piloto completo LRCLIB v0.1.3: {done}/{total}", file=sys.stderr, flush=True)
 
 
 def _products() -> dict[str, dict[str, Any]]:
@@ -205,6 +210,7 @@ def main(argv: list[str] | None = None) -> int:
             "audit-lyrics-ambiguity-v011",
             "prepare-lyrics-supplemental-v012",
             "lyrics-pilot-supplemental-v012",
+            "lyrics-pilot-full-v013",
             "all",
         ],
     )
@@ -232,6 +238,14 @@ def main(argv: list[str] | None = None) -> int:
             parser.error("--limit não se aplica ao teste complementar v0.1.2")
         progress = None if arguments.dry_run else _print_supplemental_progress
         summary = run_supplemental_v012(
+            dry_run=arguments.dry_run,
+            progress=progress,
+        )
+    elif arguments.command == "lyrics-pilot-full-v013":
+        if arguments.limit != 100:
+            parser.error("--limit não se aplica ao piloto completo v0.1.3")
+        progress = None if arguments.dry_run else _print_full_lyrics_progress
+        summary = run_full_pilot_v013(
             dry_run=arguments.dry_run,
             progress=progress,
         )
