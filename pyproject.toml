@@ -29,6 +29,11 @@ embeddings = [
   "torch==2.8.0",
   "transformers==4.57.1",
 ]
+modeling = [
+  "numpy==2.5.2",
+  "scikit-learn==1.9.1",
+  "scipy>=1.14",
+]
 
 [project.scripts]
 tcc-music = "tcc_music_popularity.cli:main"

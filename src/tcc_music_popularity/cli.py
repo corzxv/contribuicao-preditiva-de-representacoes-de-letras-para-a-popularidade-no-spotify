@@ -45,6 +45,16 @@ def _print_embeddings_progress(done: int, total: int) -> None:
         print(f"Chunks MiniLM v0.2: {done}/{total}", file=sys.stderr, flush=True)
 
 
+def _print_modeling_progress(
+    algorithm: str, block: str, variant: str, done: int, total: int
+) -> None:
+    print(
+        f"Modelagem v0.3: {algorithm} / {block} / {variant} — fold {done}/{total}",
+        file=sys.stderr,
+        flush=True,
+    )
+
+
 def _products() -> dict[str, dict[str, Any]]:
     paths = [
         "data/interim/spotify_normalized.parquet",
@@ -217,6 +227,7 @@ def main(argv: list[str] | None = None) -> int:
             "lyrics-pilot-supplemental-v012",
             "lyrics-pilot-full-v013",
             "lyrics-embeddings-v020",
+            "modeling-pilot-v030",
             "all",
         ],
     )
@@ -261,6 +272,12 @@ def main(argv: list[str] | None = None) -> int:
         from .lyrics_embeddings_v020 import run_lyrics_embeddings_v020
 
         summary = run_lyrics_embeddings_v020(progress=_print_embeddings_progress)
+    elif arguments.command == "modeling-pilot-v030":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam à modelagem piloto v0.3")
+        from .modeling_pilot_v030 import run_modeling_pilot_v030
+
+        summary = run_modeling_pilot_v030(progress=_print_modeling_progress)
     else:
         if arguments.dry_run or arguments.limit != 100:
             parser.error("--limit e --dry-run são exclusivos do comando lyrics-pilot")
