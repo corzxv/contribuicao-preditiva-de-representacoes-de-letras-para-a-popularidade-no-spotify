@@ -55,6 +55,20 @@ def _print_modeling_progress(
     )
 
 
+def _print_recalibration_progress(
+    analysis: str,
+    algorithm: str,
+    representation: str,
+    done: int,
+    total: int,
+) -> None:
+    print(
+        f"Recalibração v0.3.1: {analysis} / {algorithm} / {representation} — fold {done}/{total}",
+        file=sys.stderr,
+        flush=True,
+    )
+
+
 def _products() -> dict[str, dict[str, Any]]:
     paths = [
         "data/interim/spotify_normalized.parquet",
@@ -228,6 +242,7 @@ def main(argv: list[str] | None = None) -> int:
             "lyrics-pilot-full-v013",
             "lyrics-embeddings-v020",
             "modeling-pilot-v030",
+            "modeling-recalibration-v031",
             "all",
         ],
     )
@@ -278,6 +293,12 @@ def main(argv: list[str] | None = None) -> int:
         from .modeling_pilot_v030 import run_modeling_pilot_v030
 
         summary = run_modeling_pilot_v030(progress=_print_modeling_progress)
+    elif arguments.command == "modeling-recalibration-v031":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam à recalibração v0.3.1")
+        from .modeling_recalibration_v031 import run_modeling_recalibration_v031
+
+        summary = run_modeling_recalibration_v031(progress=_print_recalibration_progress)
     else:
         if arguments.dry_run or arguments.limit != 100:
             parser.error("--limit e --dry-run são exclusivos do comando lyrics-pilot")
