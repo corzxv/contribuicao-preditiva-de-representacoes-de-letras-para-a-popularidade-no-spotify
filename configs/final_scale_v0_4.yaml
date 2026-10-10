@@ -1,0 +1,76 @@
+version: v0.4
+protocol_version: final-study-protocol-v1.0
+seed: 20261010
+
+sampling:
+  main_development: 10500
+  main_holdout: 3500
+  reserve_development: 1500
+  reserve_holdout: 500
+  reserve_batch_development: 375
+  reserve_batch_holdout: 125
+  minimum_accepted_before_reserve_stop: 10000
+
+inputs:
+  modeling_base: data/processed/modeling_base_lfm_v0_1_1.parquet
+  split_assignments: data/processed/split_assignments_v0_1_1.parquet
+  matching_audit: data/processed/matching_audit_v0_1_1.parquet
+  legacy_cache: data/raw/lyrics_private/lrclib_cache_v0_1
+  pilot_embeddings: data/derived/private_embeddings/lyrics_embeddings_minilm_v0_2.parquet
+
+private_outputs:
+  cohort: data/derived/private_final_study/final_cohort_v1_0.parquet
+  reserve: data/derived/private_final_study/final_reserve_v1_0.parquet
+  lookup: data/derived/private_final_study/final_lookup_v1_0.parquet
+  precollection_seal: data/derived/private_final_study/precollection_seal_v1_0.json
+  collection_progress: data/interim/lyrics_private/final_scale_progress_v0_4.json
+  collection_results: data/derived/private_final_study/final_lyrics_results_v0_4.parquet
+  lyrics_index: data/derived/private_final_study/final_lyrics_index_v0_4.parquet
+  embeddings_development: data/derived/private_final_study/final_embeddings_development_v0_4.parquet
+  embeddings_holdout: data/derived/private_final_study/final_embeddings_holdout_v0_4.parquet
+  embedding_index_development: data/derived/private_final_study/final_embedding_index_development_v0_4.parquet
+  embedding_index_holdout: data/derived/private_final_study/final_embedding_index_holdout_v0_4.parquet
+  integrity_manifest: data/derived/private_final_study/final_integrity_manifest_v0_4.json
+
+public_outputs:
+  analysis_protocol: reports/final_analysis_protocol_v1_0.md
+  sampling_protocol: reports/final_sampling_protocol_v1_0.md
+  protocol_summary: reports/run_summary_final_protocol_v1_0.json
+  sampling_report: reports/final_sampling_report_v1_0.md
+  lyrics_report: reports/lyrics_scale_report_v0_4.md
+  embeddings_report: reports/embeddings_scale_report_v0_4.md
+  scale_summary: reports/run_summary_scale_v0_4.json
+
+collection:
+  checkpoint_every: 50
+  cache_dir: data/raw/lyrics_private/lrclib_cache_v0_4
+  cache_version: v0.4
+  base_url: https://lrclib.net
+  user_agent: "UnB-TCC-MusicPopularity-FinalScale/0.4 (academic research; https://github.com/corzxv/tcc-popularidade-musical)"
+  timeout_seconds: 20
+  max_attempts: 3
+  backoff_seconds: 1.0
+  minimum_delay_seconds: 0.5
+  duration_tolerance_seconds: 10.0
+  circuit_breaker:
+    consecutive_technical_errors: 10
+    rolling_window: 50
+    maximum_request_error_rate: 0.20
+
+model:
+  id: sentence-transformers/all-MiniLM-L6-v2
+  revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+  private_snapshot: data/raw/lyrics_private/huggingface_cache/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+  license: Apache-2.0
+  embedding_dimension: 384
+  maximum_tokens_including_special: 256
+
+embedding_execution:
+  seed: 20261010
+  device: cpu
+  dtype: float32
+  batch_size: 64
+  overlap_content_tokens: 32
+  language_confidence_threshold: 0.80
+  very_short_token_threshold: 20
+  numeric_tolerance: 0.00001

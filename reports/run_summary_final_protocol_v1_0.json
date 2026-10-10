@@ -1,0 +1,1502 @@
+{
+  "status": "protocol_prepared_collection_not_started",
+  "protocol_version": "final-study-protocol-v1.0",
+  "scale_version": "v0.4",
+  "timestamp": "2026-10-10T13:17:00.925760+00:00",
+  "git_parent_before_protocol_checkpoint": "2bbc321b044c4c4fc4612cbaae860f3fc6b0cc00",
+  "planned_checkpoint_tag": "final-study-protocol-v1.0",
+  "seed": 20261010,
+  "target_loaded_for_sampling": false,
+  "holdout_target_loaded": false,
+  "collection_started": false,
+  "first_request_at": null,
+  "representative_uses_popularity": false,
+  "sampling_uses_popularity_or_success_proxy": false,
+  "universe": {
+    "source_rows": 111758,
+    "missing_composition_key_rows": 22,
+    "eligible_unique_compositions": 111422,
+    "duplicate_rows_collapsed": 314,
+    "composition_keys_crossing_split": 0,
+    "target_columns_loaded": []
+  },
+  "sampling": {
+    "main_total": 14000,
+    "main_by_split": {
+      "development_train": 10500,
+      "holdout_test": 3500
+    },
+    "reserve_total": 2000,
+    "reserve_by_split": {
+      "development_train": 1500,
+      "holdout_test": 500
+    },
+    "main_reserve_overlap": 0,
+    "reserve_batches": {
+      "1": 500,
+      "2": 500,
+      "3": 500,
+      "4": 500
+    }
+  },
+  "private_artifact_hashes": {
+    "cohort_sha256": "119dc1ded7a61b67a4ed6116ba46758ae5e8a5c867f74775c5e74a8618123f8c",
+    "reserve_sha256": "1e6c0da25f6a068d1a5971cf0655e5cc5a966999a827b4287c46b63e65fe9574",
+    "cohort_logical_sha256": "3646c15e0164ca1ef5677ff649983439d25f0c6f9426d4d44e79c3986a17cd91",
+    "reserve_logical_sha256": "fd827a6f304fdde10335617c468acbba44f6f731d4926a9fad2cb3f02dd4ebfb"
+  },
+  "representativity": {
+    "categorical": {
+      "split": [
+        {
+          "field": "split",
+          "category": "development_train",
+          "population_n": 83559,
+          "sample_n": 10500,
+          "population_proportion": 0.7499326883380302,
+          "sample_proportion": 0.75,
+          "difference_percentage_points": 0.006731166196982663,
+          "standardized_difference": 0.0001554426503249437
+        },
+        {
+          "field": "split",
+          "category": "holdout_test",
+          "population_n": 27863,
+          "sample_n": 3500,
+          "population_proportion": 0.2500673116619698,
+          "sample_proportion": 0.25,
+          "difference_percentage_points": -0.006731166196982663,
+          "standardized_difference": -0.0001554426503249437
+        }
+      ],
+      "period": [
+        {
+          "field": "period",
+          "category": "2000-2005",
+          "population_n": 17469,
+          "sample_n": 2181,
+          "population_proportion": 0.1567823230600779,
+          "sample_proportion": 0.15578571428571428,
+          "difference_percentage_points": -0.0996608774363611,
+          "standardized_difference": -0.002744540808205043
+        },
+        {
+          "field": "period",
+          "category": "2006-2011",
+          "population_n": 22699,
+          "sample_n": 2813,
+          "population_proportion": 0.203720988673691,
+          "sample_proportion": 0.20092857142857143,
+          "difference_percentage_points": -0.2792417245119583,
+          "standardized_difference": -0.006950968901190643
+        },
+        {
+          "field": "period",
+          "category": "2012-2017",
+          "population_n": 45410,
+          "sample_n": 5753,
+          "population_proportion": 0.40754967600653375,
+          "sample_proportion": 0.4109285714285714,
+          "difference_percentage_points": 0.33788954220376755,
+          "standardized_difference": 0.006871995683416758
+        },
+        {
+          "field": "period",
+          "category": "2018-2023",
+          "population_n": 25844,
+          "sample_n": 3253,
+          "population_proportion": 0.23194701225969735,
+          "sample_proportion": 0.23235714285714285,
+          "difference_percentage_points": 0.04101305974454905,
+          "standardized_difference": 0.0009714005115363243
+        }
+      ],
+      "year": [
+        {
+          "field": "year",
+          "category": "2000",
+          "population_n": 2613,
+          "sample_n": 342,
+          "population_proportion": 0.023451383030281273,
+          "sample_proportion": 0.024428571428571428,
+          "difference_percentage_points": 0.09771883982901547,
+          "standardized_difference": 0.00639264211207953
+        },
+        {
+          "field": "year",
+          "category": "2001",
+          "population_n": 2710,
+          "sample_n": 337,
+          "population_proportion": 0.024321947191757464,
+          "sample_proportion": 0.02407142857142857,
+          "difference_percentage_points": -0.025051862032889408,
+          "standardized_difference": -0.0016303507604861704
+        },
+        {
+          "field": "year",
+          "category": "2002",
+          "population_n": 2782,
+          "sample_n": 341,
+          "population_proportion": 0.024968139146667623,
+          "sample_proportion": 0.02435714285714286,
+          "difference_percentage_points": -0.061099628952476434,
+          "standardized_difference": -0.003939509888696049
+        },
+        {
+          "field": "year",
+          "category": "2003",
+          "population_n": 3198,
+          "sample_n": 392,
+          "population_proportion": 0.028701692663926335,
+          "sample_proportion": 0.028,
+          "difference_percentage_points": -0.07016926639263343,
+          "standardized_difference": -0.004227758331136933
+        },
+        {
+          "field": "year",
+          "category": "2004",
+          "population_n": 2991,
+          "sample_n": 373,
+          "population_proportion": 0.02684389079355962,
+          "sample_proportion": 0.026642857142857142,
+          "difference_percentage_points": -0.020103365070247778,
+          "standardized_difference": -0.0012460832562967016
+        },
+        {
+          "field": "year",
+          "category": "2005",
+          "population_n": 3175,
+          "sample_n": 396,
+          "population_proportion": 0.028495270233885588,
+          "sample_proportion": 0.028285714285714286,
+          "difference_percentage_points": -0.020955594817130205,
+          "standardized_difference": -0.001261733806861847
+        },
+        {
+          "field": "year",
+          "category": "2006",
+          "population_n": 3231,
+          "sample_n": 407,
+          "population_proportion": 0.028997863976593492,
+          "sample_proportion": 0.02907142857142857,
+          "difference_percentage_points": 0.007356459483507868,
+          "standardized_difference": 0.0004381357803857705
+        },
+        {
+          "field": "year",
+          "category": "2007",
+          "population_n": 3430,
+          "sample_n": 410,
+          "population_proportion": 0.030783866740859075,
+          "sample_proportion": 0.029285714285714286,
+          "difference_percentage_points": -0.1498152455144789,
+          "standardized_difference": -0.008777479230597834
+        },
+        {
+          "field": "year",
+          "category": "2008",
+          "population_n": 3810,
+          "sample_n": 465,
+          "population_proportion": 0.034194324280662707,
+          "sample_proportion": 0.03321428571428572,
+          "difference_percentage_points": -0.09800385663769895,
+          "standardized_difference": -0.005430590516887792
+        },
+        {
+          "field": "year",
+          "category": "2009",
+          "population_n": 3929,
+          "sample_n": 504,
+          "population_proportion": 0.035262335983917,
+          "sample_proportion": 0.036,
+          "difference_percentage_points": 0.0737664016082995,
+          "standardized_difference": 0.003979448110340664
+        },
+        {
+          "field": "year",
+          "category": "2010",
+          "population_n": 3998,
+          "sample_n": 471,
+          "population_proportion": 0.03588160327403924,
+          "sample_proportion": 0.03364285714285714,
+          "difference_percentage_points": -0.22387461311820997,
+          "standardized_difference": -0.012221991799365487
+        },
+        {
+          "field": "year",
+          "category": "2011",
+          "population_n": 4301,
+          "sample_n": 556,
+          "population_proportion": 0.0386009944176195,
+          "sample_proportion": 0.039714285714285716,
+          "difference_percentage_points": 0.11132912966662148,
+          "standardized_difference": 0.005739529290862916
+        },
+        {
+          "field": "year",
+          "category": "2012",
+          "population_n": 5488,
+          "sample_n": 690,
+          "population_proportion": 0.04925418678537452,
+          "sample_proportion": 0.04928571428571429,
+          "difference_percentage_points": 0.003152750033976609,
+          "standardized_difference": 0.0001456699149576962
+        },
+        {
+          "field": "year",
+          "category": "2013",
+          "population_n": 5908,
+          "sample_n": 799,
+          "population_proportion": 0.0530236398556838,
+          "sample_proportion": 0.05707142857142857,
+          "difference_percentage_points": 0.40477887157447723,
+          "standardized_difference": 0.01774847401837361
+        },
+        {
+          "field": "year",
+          "category": "2014",
+          "population_n": 7252,
+          "sample_n": 913,
+          "population_proportion": 0.06508588968067347,
+          "sample_proportion": 0.06521428571428571,
+          "difference_percentage_points": 0.012839603361224083,
+          "standardized_difference": 0.0005202632796662773
+        },
+        {
+          "field": "year",
+          "category": "2015",
+          "population_n": 7447,
+          "sample_n": 954,
+          "population_proportion": 0.06683599289188849,
+          "sample_proportion": 0.06814285714285714,
+          "difference_percentage_points": 0.13068642509686534,
+          "standardized_difference": 0.005209393987471802
+        },
+        {
+          "field": "year",
+          "category": "2016",
+          "population_n": 8438,
+          "sample_n": 1081,
+          "population_proportion": 0.07573010716016586,
+          "sample_proportion": 0.07721428571428571,
+          "difference_percentage_points": 0.148417855411985,
+          "standardized_difference": 0.0055848443735875145
+        },
+        {
+          "field": "year",
+          "category": "2017",
+          "population_n": 10877,
+          "sample_n": 1316,
+          "population_proportion": 0.09761985963274757,
+          "sample_proportion": 0.094,
+          "difference_percentage_points": -0.3619859632747566,
+          "standardized_difference": -0.012298858755165796
+        },
+        {
+          "field": "year",
+          "category": "2018",
+          "population_n": 11114,
+          "sample_n": 1418,
+          "population_proportion": 0.09974690815099352,
+          "sample_proportion": 0.10128571428571428,
+          "difference_percentage_points": 0.1538806134720766,
+          "standardized_difference": 0.005117648028360558
+        },
+        {
+          "field": "year",
+          "category": "2019",
+          "population_n": 10961,
+          "sample_n": 1343,
+          "population_proportion": 0.09837375024680943,
+          "sample_proportion": 0.09592857142857143,
+          "difference_percentage_points": -0.24451788182379974,
+          "standardized_difference": -0.008256249455756334
+        },
+        {
+          "field": "year",
+          "category": "2020",
+          "population_n": 2692,
+          "sample_n": 355,
+          "population_proportion": 0.024160399203029922,
+          "sample_proportion": 0.025357142857142856,
+          "difference_percentage_points": 0.1196743654112934,
+          "standardized_difference": 0.007701650118646535
+        },
+        {
+          "field": "year",
+          "category": "2021",
+          "population_n": 476,
+          "sample_n": 77,
+          "population_proportion": 0.004272046813017178,
+          "sample_proportion": 0.0055,
+          "difference_percentage_points": 0.1227953186982822,
+          "standardized_difference": 0.01761101805419992
+        },
+        {
+          "field": "year",
+          "category": "2022",
+          "population_n": 277,
+          "sample_n": 24,
+          "population_proportion": 0.0024860440487515932,
+          "sample_proportion": 0.0017142857142857142,
+          "difference_percentage_points": -0.0771758334465879,
+          "standardized_difference": -0.016858797168685262
+        },
+        {
+          "field": "year",
+          "category": "2023",
+          "population_n": 324,
+          "sample_n": 36,
+          "population_proportion": 0.0029078637970957263,
+          "sample_proportion": 0.0025714285714285713,
+          "difference_percentage_points": -0.0336435225667155,
+          "standardized_difference": -0.006436535871151042
+        }
+      ],
+      "genre_sampling": [
+        {
+          "field": "genre_sampling",
+          "category": "acoustic",
+          "population_n": 2930,
+          "sample_n": 364,
+          "population_proportion": 0.02629642260953851,
+          "sample_proportion": 0.026,
+          "difference_percentage_points": -0.0296422609538511,
+          "standardized_difference": -0.0018575652906074765
+        },
+        {
+          "field": "genre_sampling",
+          "category": "afrobeat",
+          "population_n": 65,
+          "sample_n": 7,
+          "population_proportion": 0.0005833677370716734,
+          "sample_proportion": 0.0005,
+          "difference_percentage_points": -0.008336773707167344,
+          "standardized_difference": -0.0035829720137076663
+        },
+        {
+          "field": "genre_sampling",
+          "category": "alt-rock",
+          "population_n": 6637,
+          "sample_n": 840,
+          "population_proportion": 0.05956633339914918,
+          "sample_proportion": 0.06,
+          "difference_percentage_points": 0.04336666008508197,
+          "standardized_difference": 0.0018291641815185568
+        },
+        {
+          "field": "genre_sampling",
+          "category": "ambient",
+          "population_n": 821,
+          "sample_n": 99,
+          "population_proportion": 0.0073683832636283675,
+          "sample_proportion": 0.007071428571428571,
+          "difference_percentage_points": -0.029695469219979606,
+          "standardized_difference": -0.0035075071124118728
+        },
+        {
+          "field": "genre_sampling",
+          "category": "black-metal",
+          "population_n": 3407,
+          "sample_n": 425,
+          "population_proportion": 0.03057744431081833,
+          "sample_proportion": 0.030357142857142857,
+          "difference_percentage_points": -0.02203014536754748,
+          "standardized_difference": -0.0012817970897985513
+        },
+        {
+          "field": "genre_sampling",
+          "category": "blues",
+          "population_n": 2590,
+          "sample_n": 325,
+          "population_proportion": 0.023244960600240526,
+          "sample_proportion": 0.023214285714285715,
+          "difference_percentage_points": -0.003067488595481088,
+          "standardized_difference": -0.00020364119493543258
+        },
+        {
+          "field": "genre_sampling",
+          "category": "breakbeat",
+          "population_n": 103,
+          "sample_n": 10,
+          "population_proportion": 0.0009244134910520364,
+          "sample_proportion": 0.0007142857142857143,
+          "difference_percentage_points": -0.021012777676632212,
+          "standardized_difference": -0.007343950857848119
+        },
+        {
+          "field": "genre_sampling",
+          "category": "cantopop",
+          "population_n": 15,
+          "sample_n": 2,
+          "population_proportion": 0.00013462332393961694,
+          "sample_proportion": 0.00014285714285714287,
+          "difference_percentage_points": 0.0008233818917525928,
+          "standardized_difference": 0.0006990854396000479
+        },
+        {
+          "field": "genre_sampling",
+          "category": "chicago-house",
+          "population_n": 12,
+          "sample_n": 0,
+          "population_proportion": 0.00010769865915169357,
+          "sample_proportion": 0.0,
+          "difference_percentage_points": -0.010769865915169357,
+          "standardized_difference": -0.014677210865979139
+        },
+        {
+          "field": "genre_sampling",
+          "category": "chill",
+          "population_n": 2553,
+          "sample_n": 315,
+          "population_proportion": 0.022912889734522806,
+          "sample_proportion": 0.0225,
+          "difference_percentage_points": -0.04128897345228068,
+          "standardized_difference": -0.002771707607534572
+        },
+        {
+          "field": "genre_sampling",
+          "category": "classical",
+          "population_n": 450,
+          "sample_n": 51,
+          "population_proportion": 0.004038699718188508,
+          "sample_proportion": 0.003642857142857143,
+          "difference_percentage_points": -0.039584257533136546,
+          "standardized_difference": -0.00639956891059949
+        },
+        {
+          "field": "genre_sampling",
+          "category": "club",
+          "population_n": 710,
+          "sample_n": 84,
+          "population_proportion": 0.006372170666475202,
+          "sample_proportion": 0.006,
+          "difference_percentage_points": -0.03721706664752021,
+          "standardized_difference": -0.0047466026071509545
+        },
+        {
+          "field": "genre_sampling",
+          "category": "comedy",
+          "population_n": 369,
+          "sample_n": 54,
+          "population_proportion": 0.003311733768914577,
+          "sample_proportion": 0.003857142857142857,
+          "difference_percentage_points": 0.054540908822828034,
+          "standardized_difference": 0.009126328261949094
+        },
+        {
+          "field": "genre_sampling",
+          "category": "country",
+          "population_n": 5488,
+          "sample_n": 686,
+          "population_proportion": 0.04925418678537452,
+          "sample_proportion": 0.049,
+          "difference_percentage_points": -0.02541867853745189,
+          "standardized_difference": -0.00117606485624205
+        },
+        {
+          "field": "genre_sampling",
+          "category": "dance",
+          "population_n": 4201,
+          "sample_n": 505,
+          "population_proportion": 0.03770350559135539,
+          "sample_proportion": 0.036071428571428574,
+          "difference_percentage_points": -0.16320770199268128,
+          "standardized_difference": -0.00865898097585004
+        },
+        {
+          "field": "genre_sampling",
+          "category": "dancehall",
+          "population_n": 1030,
+          "sample_n": 127,
+          "population_proportion": 0.009244134910520363,
+          "sample_proportion": 0.00907142857142857,
+          "difference_percentage_points": -0.017270633909179274,
+          "standardized_difference": -0.0018130553431070417
+        },
+        {
+          "field": "genre_sampling",
+          "category": "death-metal",
+          "population_n": 5045,
+          "sample_n": 621,
+          "population_proportion": 0.0452783112850245,
+          "sample_proportion": 0.04435714285714286,
+          "difference_percentage_points": -0.09211684278816398,
+          "standardized_difference": -0.00445217349565835
+        },
+        {
+          "field": "genre_sampling",
+          "category": "deep-house",
+          "population_n": 652,
+          "sample_n": 97,
+          "population_proportion": 0.005851627147242017,
+          "sample_proportion": 0.006928571428571429,
+          "difference_percentage_points": 0.10769442813294118,
+          "standardized_difference": 0.013515788678911895
+        },
+        {
+          "field": "genre_sampling",
+          "category": "detroit-techno",
+          "population_n": 5,
+          "sample_n": 0,
+          "population_proportion": 4.487444131320565e-05,
+          "sample_proportion": 0.0,
+          "difference_percentage_points": -0.004487444131320565,
+          "standardized_difference": -0.009473801255996162
+        },
+        {
+          "field": "genre_sampling",
+          "category": "disco",
+          "population_n": 1182,
+          "sample_n": 142,
+          "population_proportion": 0.010608317926441816,
+          "sample_proportion": 0.010142857142857143,
+          "difference_percentage_points": -0.04654607835846737,
+          "standardized_difference": -0.004593489122978701
+        },
+        {
+          "field": "genre_sampling",
+          "category": "drum-and-bass",
+          "population_n": 484,
+          "sample_n": 57,
+          "population_proportion": 0.004343845919118307,
+          "sample_proportion": 0.004071428571428571,
+          "difference_percentage_points": -0.0272417347689736,
+          "standardized_difference": -0.004208546992116198
+        },
+        {
+          "field": "genre_sampling",
+          "category": "dub",
+          "population_n": 984,
+          "sample_n": 102,
+          "population_proportion": 0.008831290050438872,
+          "sample_proportion": 0.007285714285714286,
+          "difference_percentage_points": -0.1545575764724586,
+          "standardized_difference": -0.01728766466232218
+        },
+        {
+          "field": "genre_sampling",
+          "category": "dubstep",
+          "population_n": 84,
+          "sample_n": 9,
+          "population_proportion": 0.000753890614061855,
+          "sample_proportion": 0.0006428571428571428,
+          "difference_percentage_points": -0.011103347120471216,
+          "standardized_difference": -0.004203030927473381
+        },
+        {
+          "field": "genre_sampling",
+          "category": "edm",
+          "population_n": 1221,
+          "sample_n": 169,
+          "population_proportion": 0.01095833856868482,
+          "sample_proportion": 0.012071428571428571,
+          "difference_percentage_points": 0.11130900027437521,
+          "standardized_difference": 0.010433291670171691
+        },
+        {
+          "field": "genre_sampling",
+          "category": "electro",
+          "population_n": 1921,
+          "sample_n": 218,
+          "population_proportion": 0.01724076035253361,
+          "sample_proportion": 0.015571428571428571,
+          "difference_percentage_points": -0.16693317811050395,
+          "standardized_difference": -0.013141396474978216
+        },
+        {
+          "field": "genre_sampling",
+          "category": "electronic",
+          "population_n": 899,
+          "sample_n": 123,
+          "population_proportion": 0.008068424548114376,
+          "sample_proportion": 0.008785714285714286,
+          "difference_percentage_points": 0.07172897375999093,
+          "standardized_difference": 0.007846885998934234
+        },
+        {
+          "field": "genre_sampling",
+          "category": "emo",
+          "population_n": 6511,
+          "sample_n": 841,
+          "population_proportion": 0.058435497478056396,
+          "sample_proportion": 0.060071428571428574,
+          "difference_percentage_points": 0.16359310933721782,
+          "standardized_difference": 0.006929061730439442
+        },
+        {
+          "field": "genre_sampling",
+          "category": "folk",
+          "population_n": 3996,
+          "sample_n": 512,
+          "population_proportion": 0.035863653497513956,
+          "sample_proportion": 0.036571428571428574,
+          "difference_percentage_points": 0.07077750739146182,
+          "standardized_difference": 0.0037883234609117867
+        },
+        {
+          "field": "genre_sampling",
+          "category": "french",
+          "population_n": 751,
+          "sample_n": 80,
+          "population_proportion": 0.006740141085243488,
+          "sample_proportion": 0.005714285714285714,
+          "difference_percentage_points": -0.1025855370957774,
+          "standardized_difference": -0.013040821314327886
+        },
+        {
+          "field": "genre_sampling",
+          "category": "funk",
+          "population_n": 2204,
+          "sample_n": 273,
+          "population_proportion": 0.01978065373086105,
+          "sample_proportion": 0.0195,
+          "difference_percentage_points": -0.0280653730861051,
+          "standardized_difference": -0.0020225718903521153
+        },
+        {
+          "field": "genre_sampling",
+          "category": "garage",
+          "population_n": 3400,
+          "sample_n": 437,
+          "population_proportion": 0.030514620092979842,
+          "sample_proportion": 0.031214285714285715,
+          "difference_percentage_points": 0.06996656213058734,
+          "standardized_difference": 0.004045478245885371
+        },
+        {
+          "field": "genre_sampling",
+          "category": "german",
+          "population_n": 857,
+          "sample_n": 122,
+          "population_proportion": 0.0076914792410834485,
+          "sample_proportion": 0.008714285714285714,
+          "difference_percentage_points": 0.10228064732022658,
+          "standardized_difference": 0.011339810132549867
+        },
+        {
+          "field": "genre_sampling",
+          "category": "gospel",
+          "population_n": 585,
+          "sample_n": 77,
+          "population_proportion": 0.005250309633645061,
+          "sample_proportion": 0.0055,
+          "difference_percentage_points": 0.02496903663549389,
+          "standardized_difference": 0.003414894406215392
+        },
+        {
+          "field": "genre_sampling",
+          "category": "goth",
+          "population_n": 2322,
+          "sample_n": 333,
+          "population_proportion": 0.020839690545852704,
+          "sample_proportion": 0.023785714285714285,
+          "difference_percentage_points": 0.2946023739861581,
+          "standardized_difference": 0.019947192015801588
+        },
+        {
+          "field": "genre_sampling",
+          "category": "grindcore",
+          "population_n": 892,
+          "sample_n": 146,
+          "population_proportion": 0.008005600330275888,
+          "sample_proportion": 0.01042857142857143,
+          "difference_percentage_points": 0.24229710982955413,
+          "standardized_difference": 0.025356952946514126
+        },
+        {
+          "field": "genre_sampling",
+          "category": "groove",
+          "population_n": 1089,
+          "sample_n": 139,
+          "population_proportion": 0.00977365331801619,
+          "sample_proportion": 0.009928571428571429,
+          "difference_percentage_points": 0.0154918110555239,
+          "standardized_difference": 0.0015685899803470798
+        },
+        {
+          "field": "genre_sampling",
+          "category": "guitar",
+          "population_n": 47,
+          "sample_n": 4,
+          "population_proportion": 0.0004218197483441331,
+          "sample_proportion": 0.00028571428571428574,
+          "difference_percentage_points": -0.013610546262984738,
+          "standardized_difference": -0.007237633093604665
+        },
+        {
+          "field": "genre_sampling",
+          "category": "hard-rock",
+          "population_n": 3210,
+          "sample_n": 408,
+          "population_proportion": 0.028809391323078026,
+          "sample_proportion": 0.029142857142857144,
+          "difference_percentage_points": 0.033346581977911766,
+          "standardized_difference": 0.001988000265924486
+        },
+        {
+          "field": "genre_sampling",
+          "category": "hardcore",
+          "population_n": 4703,
+          "sample_n": 591,
+          "population_proportion": 0.04220889949920124,
+          "sample_proportion": 0.04221428571428571,
+          "difference_percentage_points": 0.0005386215084474122,
+          "standardized_difference": 2.6787552471480168e-05
+        },
+        {
+          "field": "genre_sampling",
+          "category": "hardstyle",
+          "population_n": 221,
+          "sample_n": 21,
+          "population_proportion": 0.00198345030604369,
+          "sample_proportion": 0.0015,
+          "difference_percentage_points": -0.04834503060436898,
+          "standardized_difference": -0.011594388964594061
+        },
+        {
+          "field": "genre_sampling",
+          "category": "heavy-metal",
+          "population_n": 492,
+          "sample_n": 60,
+          "population_proportion": 0.004415645025219436,
+          "sample_proportion": 0.004285714285714286,
+          "difference_percentage_points": -0.012993073950515015,
+          "standardized_difference": -0.0019741509971058385
+        },
+        {
+          "field": "genre_sampling",
+          "category": "hip-hop",
+          "population_n": 3767,
+          "sample_n": 448,
+          "population_proportion": 0.033808404085369136,
+          "sample_proportion": 0.032,
+          "difference_percentage_points": -0.1808404085369135,
+          "standardized_difference": -0.010137727864263419
+        },
+        {
+          "field": "genre_sampling",
+          "category": "house",
+          "population_n": 410,
+          "sample_n": 50,
+          "population_proportion": 0.0036797041876828634,
+          "sample_proportion": 0.0035714285714285713,
+          "difference_percentage_points": -0.010827561625429208,
+          "standardized_difference": -0.0018014890317656117
+        },
+        {
+          "field": "genre_sampling",
+          "category": "indian",
+          "population_n": 222,
+          "sample_n": 28,
+          "population_proportion": 0.001992425194306331,
+          "sample_proportion": 0.002,
+          "difference_percentage_points": 0.0007574805693669109,
+          "standardized_difference": 0.00016970787983769018
+        },
+        {
+          "field": "genre_sampling",
+          "category": "indie-pop",
+          "population_n": 3235,
+          "sample_n": 420,
+          "population_proportion": 0.029033763529644055,
+          "sample_proportion": 0.03,
+          "difference_percentage_points": 0.0966236470355944,
+          "standardized_difference": 0.005708946389219827
+        },
+        {
+          "field": "genre_sampling",
+          "category": "industrial",
+          "population_n": 2026,
+          "sample_n": 243,
+          "population_proportion": 0.01818312362011093,
+          "sample_proportion": 0.017357142857142856,
+          "difference_percentage_points": -0.08259807629680746,
+          "standardized_difference": -0.00625201692179191
+        },
+        {
+          "field": "genre_sampling",
+          "category": "jazz",
+          "population_n": 880,
+          "sample_n": 117,
+          "population_proportion": 0.007897901671124195,
+          "sample_proportion": 0.008357142857142856,
+          "difference_percentage_points": 0.04592411860186614,
+          "standardized_difference": 0.005114877610622577
+        },
+        {
+          "field": "genre_sampling",
+          "category": "k-pop",
+          "population_n": 870,
+          "sample_n": 125,
+          "population_proportion": 0.007808152788497783,
+          "sample_proportion": 0.008928571428571428,
+          "difference_percentage_points": 0.11204186400736449,
+          "standardized_difference": 0.012299660342949523
+        },
+        {
+          "field": "genre_sampling",
+          "category": "metal",
+          "population_n": 2308,
+          "sample_n": 290,
+          "population_proportion": 0.020714042110175728,
+          "sample_proportion": 0.020714285714285713,
+          "difference_percentage_points": 2.4360410998472415e-05,
+          "standardized_difference": 1.7103940238376847e-06
+        },
+        {
+          "field": "genre_sampling",
+          "category": "metalcore",
+          "population_n": 1620,
+          "sample_n": 198,
+          "population_proportion": 0.01453931898547863,
+          "sample_proportion": 0.014142857142857143,
+          "difference_percentage_points": -0.03964618426214872,
+          "standardized_difference": -0.0033346297537850465
+        },
+        {
+          "field": "genre_sampling",
+          "category": "minimal-techno",
+          "population_n": 84,
+          "sample_n": 12,
+          "population_proportion": 0.000753890614061855,
+          "sample_proportion": 0.0008571428571428571,
+          "difference_percentage_points": 0.010325224308100213,
+          "standardized_difference": 0.003639468094953312
+        },
+        {
+          "field": "genre_sampling",
+          "category": "new-age",
+          "population_n": 104,
+          "sample_n": 15,
+          "population_proportion": 0.0009333883793146775,
+          "sample_proportion": 0.0010714285714285715,
+          "difference_percentage_points": 0.0138040192113894,
+          "standardized_difference": 0.00436216413218444
+        },
+        {
+          "field": "genre_sampling",
+          "category": "opera",
+          "population_n": 245,
+          "sample_n": 33,
+          "population_proportion": 0.002198847624347077,
+          "sample_proportion": 0.002357142857142857,
+          "difference_percentage_points": 0.01582952327957802,
+          "standardized_difference": 0.0033203758988521225
+        },
+        {
+          "field": "genre_sampling",
+          "category": "party",
+          "population_n": 15,
+          "sample_n": 0,
+          "population_proportion": 0.00013462332393961694,
+          "sample_proportion": 0.0,
+          "difference_percentage_points": -0.013462332393961694,
+          "standardized_difference": -0.016409841548237547
+        },
+        {
+          "field": "genre_sampling",
+          "category": "piano",
+          "population_n": 955,
+          "sample_n": 112,
+          "population_proportion": 0.00857101829082228,
+          "sample_proportion": 0.008,
+          "difference_percentage_points": -0.0571018290822279,
+          "standardized_difference": -0.00629940083829412
+        },
+        {
+          "field": "genre_sampling",
+          "category": "pop",
+          "population_n": 1189,
+          "sample_n": 156,
+          "population_proportion": 0.010671142144280304,
+          "sample_proportion": 0.011142857142857144,
+          "difference_percentage_points": 0.04717149985768391,
+          "standardized_difference": 0.004541607425205362
+        },
+        {
+          "field": "genre_sampling",
+          "category": "pop-film",
+          "population_n": 11,
+          "sample_n": 0,
+          "population_proportion": 9.872377088905243e-05,
+          "sample_proportion": 0.0,
+          "difference_percentage_points": -0.009872377088905242,
+          "standardized_difference": -0.014052296483798344
+        },
+        {
+          "field": "genre_sampling",
+          "category": "power-pop",
+          "population_n": 2429,
+          "sample_n": 284,
+          "population_proportion": 0.021800003589955305,
+          "sample_proportion": 0.020285714285714285,
+          "difference_percentage_points": -0.151428930424102,
+          "standardized_difference": -0.010550685717110436
+        },
+        {
+          "field": "genre_sampling",
+          "category": "progressive-house",
+          "population_n": 497,
+          "sample_n": 61,
+          "population_proportion": 0.004460519466532642,
+          "sample_proportion": 0.004357142857142857,
+          "difference_percentage_points": -0.01033766093897848,
+          "standardized_difference": -0.0015603433138913958
+        },
+        {
+          "field": "genre_sampling",
+          "category": "psych-rock",
+          "population_n": 1673,
+          "sample_n": 205,
+          "population_proportion": 0.015014988063398611,
+          "sample_proportion": 0.014642857142857143,
+          "difference_percentage_points": -0.037213092054146774,
+          "standardized_difference": -0.003078829548337118
+        },
+        {
+          "field": "genre_sampling",
+          "category": "punk",
+          "population_n": 1944,
+          "sample_n": 238,
+          "population_proportion": 0.017447182782574358,
+          "sample_proportion": 0.017,
+          "difference_percentage_points": -0.044718278257435684,
+          "standardized_difference": -0.003437134262612099
+        },
+        {
+          "field": "genre_sampling",
+          "category": "punk-rock",
+          "population_n": 1204,
+          "sample_n": 149,
+          "population_proportion": 0.010805765468219921,
+          "sample_proportion": 0.010642857142857143,
+          "difference_percentage_points": -0.01629083253627782,
+          "standardized_difference": -0.0015816123254843903
+        },
+        {
+          "field": "genre_sampling",
+          "category": "rock",
+          "population_n": 782,
+          "sample_n": 90,
+          "population_proportion": 0.0070183626213853635,
+          "sample_proportion": 0.0064285714285714285,
+          "difference_percentage_points": -0.0589791192813935,
+          "standardized_difference": -0.0072172106884531295
+        },
+        {
+          "field": "genre_sampling",
+          "category": "rock-n-roll",
+          "population_n": 327,
+          "sample_n": 41,
+          "population_proportion": 0.0029347884618836496,
+          "sample_proportion": 0.0029285714285714284,
+          "difference_percentage_points": -0.0006217033312221239,
+          "standardized_difference": -0.00011499063130119758
+        },
+        {
+          "field": "genre_sampling",
+          "category": "sad",
+          "population_n": 159,
+          "sample_n": 26,
+          "population_proportion": 0.0014270072337599397,
+          "sample_proportion": 0.0018571428571428571,
+          "difference_percentage_points": 0.04301356233829175,
+          "standardized_difference": 0.010623604719135222
+        },
+        {
+          "field": "genre_sampling",
+          "category": "salsa",
+          "population_n": 4,
+          "sample_n": 2,
+          "population_proportion": 3.589955305056452e-05,
+          "sample_proportion": 0.00014285714285714287,
+          "difference_percentage_points": 0.010695758980657834,
+          "standardized_difference": 0.01131414667801601
+        },
+        {
+          "field": "genre_sampling",
+          "category": "samba",
+          "population_n": 25,
+          "sample_n": 3,
+          "population_proportion": 0.00022437220656602825,
+          "sample_proportion": 0.00021428571428571427,
+          "difference_percentage_points": -0.0010086492280313977,
+          "standardized_difference": -0.000681145399134499
+        },
+        {
+          "field": "genre_sampling",
+          "category": "sertanejo",
+          "population_n": 4,
+          "sample_n": 0,
+          "population_proportion": 3.589955305056452e-05,
+          "sample_proportion": 0.0,
+          "difference_percentage_points": -0.003589955305056452,
+          "standardized_difference": -0.008473587419120895
+        },
+        {
+          "field": "genre_sampling",
+          "category": "show-tunes",
+          "population_n": 655,
+          "sample_n": 72,
+          "population_proportion": 0.00587855181202994,
+          "sample_proportion": 0.005142857142857143,
+          "difference_percentage_points": -0.07356946691727972,
+          "standardized_difference": -0.009938008260540412
+        },
+        {
+          "field": "genre_sampling",
+          "category": "singer-songwriter",
+          "population_n": 2276,
+          "sample_n": 269,
+          "population_proportion": 0.020426845685771213,
+          "sample_proportion": 0.019214285714285715,
+          "difference_percentage_points": -0.12125599714854982,
+          "standardized_difference": -0.0086995446223029
+        },
+        {
+          "field": "genre_sampling",
+          "category": "ska",
+          "population_n": 1620,
+          "sample_n": 201,
+          "population_proportion": 0.01453931898547863,
+          "sample_proportion": 0.014357142857142857,
+          "difference_percentage_points": -0.018217612833577347,
+          "standardized_difference": -0.0015266677679734455
+        },
+        {
+          "field": "genre_sampling",
+          "category": "sleep",
+          "population_n": 1,
+          "sample_n": 0,
+          "population_proportion": 8.97488826264113e-06,
+          "sample_proportion": 0.0,
+          "difference_percentage_points": -0.000897488826264113,
+          "standardized_difference": -0.004236736671539401
+        },
+        {
+          "field": "genre_sampling",
+          "category": "songwriter",
+          "population_n": 49,
+          "sample_n": 7,
+          "population_proportion": 0.00043976952486941536,
+          "sample_proportion": 0.0005,
+          "difference_percentage_points": 0.006023047513058466,
+          "standardized_difference": 0.0027792210193399625
+        },
+        {
+          "field": "genre_sampling",
+          "category": "soul",
+          "population_n": 2599,
+          "sample_n": 357,
+          "population_proportion": 0.023325734594604297,
+          "sample_proportion": 0.0255,
+          "difference_percentage_points": 0.2174265405395701,
+          "standardized_difference": 0.014089023857900904
+        },
+        {
+          "field": "genre_sampling",
+          "category": "spanish",
+          "population_n": 125,
+          "sample_n": 16,
+          "population_proportion": 0.0011218610328301412,
+          "sample_proportion": 0.001142857142857143,
+          "difference_percentage_points": 0.0020996110027001738,
+          "standardized_difference": 0.0006242992369802456
+        },
+        {
+          "field": "genre_sampling",
+          "category": "swedish",
+          "population_n": 1235,
+          "sample_n": 163,
+          "population_proportion": 0.011083987004361796,
+          "sample_proportion": 0.011642857142857142,
+          "difference_percentage_points": 0.055887013849534664,
+          "standardized_difference": 0.005272778259924214
+        },
+        {
+          "field": "genre_sampling",
+          "category": "techno",
+          "population_n": 117,
+          "sample_n": 19,
+          "population_proportion": 0.0010500619267290122,
+          "sample_proportion": 0.0013571428571428571,
+          "difference_percentage_points": 0.030708093041384485,
+          "standardized_difference": 0.008856805377505482
+        },
+        {
+          "field": "genre_sampling",
+          "category": "trance",
+          "population_n": 301,
+          "sample_n": 34,
+          "population_proportion": 0.0027014413670549803,
+          "sample_proportion": 0.0024285714285714284,
+          "difference_percentage_points": -0.027286993848355194,
+          "standardized_difference": -0.005394742826092058
+        },
+        {
+          "field": "genre_sampling",
+          "category": "trip-hop",
+          "population_n": 317,
+          "sample_n": 40,
+          "population_proportion": 0.0028450395792572383,
+          "sample_proportion": 0.002857142857142857,
+          "difference_percentage_points": 0.0012103277885618883,
+          "standardized_difference": 0.00022699560154887648
+        }
+      ],
+      "match_method": [
+        {
+          "field": "match_method",
+          "category": "base_title_version_compatible",
+          "population_n": 3242,
+          "sample_n": 425,
+          "population_proportion": 0.029096587747482545,
+          "sample_proportion": 0.030357142857142857,
+          "difference_percentage_points": 0.1260555109660312,
+          "standardized_difference": 0.00742238140136885
+        },
+        {
+          "field": "match_method",
+          "category": "conservative_normalized",
+          "population_n": 8972,
+          "sample_n": 1104,
+          "population_proportion": 0.08052269749241622,
+          "sample_proportion": 0.07885714285714286,
+          "difference_percentage_points": -0.16655546352733613,
+          "standardized_difference": -0.006150241247316435
+        },
+        {
+          "field": "match_method",
+          "category": "raw_exact",
+          "population_n": 79559,
+          "sample_n": 10007,
+          "population_proportion": 0.7140331352874657,
+          "sample_proportion": 0.7147857142857142,
+          "difference_percentage_points": 0.07525789982485431,
+          "standardized_difference": 0.0016661217047584647
+        },
+        {
+          "field": "match_method",
+          "category": "strict_normalized",
+          "population_n": 19649,
+          "sample_n": 2464,
+          "population_proportion": 0.17634757947263557,
+          "sample_proportion": 0.176,
+          "difference_percentage_points": -0.03475794726355841,
+          "standardized_difference": -0.0009123589028299237
+        }
+      ],
+      "remaster": [
+        {
+          "field": "remaster",
+          "category": "false",
+          "population_n": 110856,
+          "sample_n": 13927,
+          "population_proportion": 0.9949202132433451,
+          "sample_proportion": 0.9947857142857143,
+          "difference_percentage_points": -0.01344989576308464,
+          "standardized_difference": -0.0018795810094963817
+        },
+        {
+          "field": "remaster",
+          "category": "true",
+          "population_n": 566,
+          "sample_n": 73,
+          "population_proportion": 0.00507978675665488,
+          "sample_proportion": 0.005214285714285715,
+          "difference_percentage_points": 0.013449895763083513,
+          "standardized_difference": 0.0018795810094962256
+        }
+      ],
+      "remix": [
+        {
+          "field": "remix",
+          "category": "false",
+          "population_n": 109741,
+          "sample_n": 13784,
+          "population_proportion": 0.9849132128305003,
+          "sample_proportion": 0.9845714285714285,
+          "difference_percentage_points": -0.034178425907172016,
+          "standardized_difference": -0.0027883477558069006
+        },
+        {
+          "field": "remix",
+          "category": "true",
+          "population_n": 1681,
+          "sample_n": 216,
+          "population_proportion": 0.01508678716949974,
+          "sample_proportion": 0.015428571428571429,
+          "difference_percentage_points": 0.034178425907168894,
+          "standardized_difference": 0.0027883477558066474
+        }
+      ],
+      "live": [
+        {
+          "field": "live",
+          "category": "false",
+          "population_n": 108887,
+          "sample_n": 13671,
+          "population_proportion": 0.9772486582542047,
+          "sample_proportion": 0.9765,
+          "difference_percentage_points": -0.07486582542046705,
+          "standardized_difference": -0.004981021832453418
+        },
+        {
+          "field": "live",
+          "category": "true",
+          "population_n": 2535,
+          "sample_n": 329,
+          "population_proportion": 0.022751341745795264,
+          "sample_proportion": 0.0235,
+          "difference_percentage_points": 0.07486582542047364,
+          "standardized_difference": 0.004981021832453856
+        }
+      ],
+      "acoustic": [
+        {
+          "field": "acoustic",
+          "category": "false",
+          "population_n": 111005,
+          "sample_n": 13966,
+          "population_proportion": 0.9962574715944786,
+          "sample_proportion": 0.9975714285714286,
+          "difference_percentage_points": 0.1313956976949915,
+          "standardized_difference": 0.023692799712115808
+        },
+        {
+          "field": "acoustic",
+          "category": "true",
+          "population_n": 417,
+          "sample_n": 34,
+          "population_proportion": 0.003742528405521351,
+          "sample_proportion": 0.0024285714285714284,
+          "difference_percentage_points": -0.13139569769499226,
+          "standardized_difference": -0.023692799712116002
+        }
+      ],
+      "radio_edit": [
+        {
+          "field": "radio_edit",
+          "category": "false",
+          "population_n": 111235,
+          "sample_n": 13981,
+          "population_proportion": 0.9983216958948861,
+          "sample_proportion": 0.9986428571428572,
+          "difference_percentage_points": 0.032116124797110235,
+          "standardized_difference": 0.008250121129756505
+        },
+        {
+          "field": "radio_edit",
+          "category": "true",
+          "population_n": 187,
+          "sample_n": 19,
+          "population_proportion": 0.0016783041051138914,
+          "sample_proportion": 0.0013571428571428571,
+          "difference_percentage_points": -0.03211612479710343,
+          "standardized_difference": -0.008250121129754786
+        }
+      ],
+      "mono_stereo": [
+        {
+          "field": "mono_stereo",
+          "category": "false",
+          "population_n": 111354,
+          "sample_n": 13992,
+          "population_proportion": 0.9993897075981404,
+          "sample_proportion": 0.9994285714285714,
+          "difference_percentage_points": 0.0038863830431057345,
+          "standardized_difference": 0.0015993061568574075
+        },
+        {
+          "field": "mono_stereo",
+          "category": "true",
+          "population_n": 68,
+          "sample_n": 8,
+          "population_proportion": 0.0006102924018595968,
+          "sample_proportion": 0.0005714285714285715,
+          "difference_percentage_points": -0.003886383043102536,
+          "standardized_difference": -0.0015993061568560921
+        }
+      ],
+      "instrumental": [
+        {
+          "field": "instrumental",
+          "category": "false",
+          "population_n": 111247,
+          "sample_n": 13975,
+          "population_proportion": 0.9984293945540378,
+          "sample_proportion": 0.9982142857142857,
+          "difference_percentage_points": -0.021510883975206507,
+          "standardized_difference": -0.005255424554095927
+        },
+        {
+          "field": "instrumental",
+          "category": "true",
+          "population_n": 175,
+          "sample_n": 25,
+          "population_proportion": 0.0015706054459621978,
+          "sample_proportion": 0.0017857142857142857,
+          "difference_percentage_points": 0.021510883975208783,
+          "standardized_difference": 0.005255424554096492
+        }
+      ],
+      "demo": [
+        {
+          "field": "demo",
+          "category": "false",
+          "population_n": 111139,
+          "sample_n": 13969,
+          "population_proportion": 0.9974601066216726,
+          "sample_proportion": 0.9977857142857143,
+          "difference_percentage_points": 0.03256076640416605,
+          "standardized_difference": 0.006686380195695945
+        },
+        {
+          "field": "demo",
+          "category": "true",
+          "population_n": 283,
+          "sample_n": 31,
+          "population_proportion": 0.00253989337832744,
+          "sample_proportion": 0.002214285714285714,
+          "difference_percentage_points": -0.03256076640417256,
+          "standardized_difference": -0.006686380195697248
+        }
+      ],
+      "karaoke": [
+        {
+          "field": "karaoke",
+          "category": "false",
+          "population_n": 111412,
+          "sample_n": 13999,
+          "population_proportion": 0.9999102511173736,
+          "sample_proportion": 0.9999285714285714,
+          "difference_percentage_points": 0.001832031119775035,
+          "standardized_difference": 0.0020408609930460254
+        },
+        {
+          "field": "karaoke",
+          "category": "true",
+          "population_n": 10,
+          "sample_n": 1,
+          "population_proportion": 8.97488826264113e-05,
+          "sample_proportion": 7.142857142857143e-05,
+          "difference_percentage_points": -0.0018320311197839864,
+          "standardized_difference": -0.0020408609930559333
+        }
+      ]
+    },
+    "maximum_absolute_standardized_difference": {
+      "split": 0.0001554426503249437,
+      "period": 0.006950968901190643,
+      "year": 0.01774847401837361,
+      "genre_sampling": 0.025356952946514126,
+      "match_method": 0.00742238140136885,
+      "remaster": 0.0018795810094963817,
+      "remix": 0.0027883477558069006,
+      "live": 0.004981021832453856,
+      "acoustic": 0.023692799712116002,
+      "radio_edit": 0.008250121129756505,
+      "mono_stereo": 0.0015993061568574075,
+      "instrumental": 0.005255424554096492,
+      "demo": 0.006686380195697248,
+      "karaoke": 0.0020408609930559333
+    },
+    "numeric": {
+      "year": {
+        "field": "year",
+        "population": {
+          "n": 111422,
+          "mean": 2012.5983917000233,
+          "std": 5.677080774368873,
+          "median": 2014.0,
+          "minimum": 2000.0,
+          "maximum": 2023.0
+        },
+        "sample": {
+          "n": 14000,
+          "mean": 2012.6144285714286,
+          "std": 5.663282479502843,
+          "median": 2014.0,
+          "minimum": 2000.0,
+          "maximum": 2023.0
+        },
+        "standardized_mean_difference": 0.002828279690041655
+      },
+      "duration_ms": {
+        "field": "duration_ms",
+        "population": {
+          "n": 111422,
+          "mean": 231193.60893719373,
+          "std": 87156.54891856093,
+          "median": 220000.0,
+          "minimum": 5827.0,
+          "maximum": 3602933.0
+        },
+        "sample": {
+          "n": 14000,
+          "mean": 230855.1072142857,
+          "std": 90382.732561271,
+          "median": 219586.5,
+          "minimum": 10533.0,
+          "maximum": 3602933.0
+        },
+        "standardized_mean_difference": -0.0038126305989502345
+      },
+      "artist_group_size_at_composition_level": {
+        "field": "artist_group_size",
+        "population": {
+          "n": 111422,
+          "mean": 28.12171743461794,
+          "std": 30.197953285317734,
+          "median": 20.0,
+          "minimum": 1.0,
+          "maximum": 315.0
+        },
+        "sample": {
+          "n": 14000,
+          "mean": 27.969214285714287,
+          "std": 29.690360687886233,
+          "median": 20.0,
+          "minimum": 1.0,
+          "maximum": 315.0
+        },
+        "standardized_mean_difference": -0.00509273550781042
+      }
+    },
+    "artist_groups": {
+      "population_unique_groups": 13899,
+      "sample_unique_groups": 6017,
+      "population_group_size": {
+        "n": 13899,
+        "mean": 8.01654795309015,
+        "std": 12.69589115336407,
+        "median": 3.0,
+        "minimum": 1.0,
+        "maximum": 315.0
+      },
+      "sample_group_size": {
+        "n": 6017,
+        "mean": 2.32674090078112,
+        "std": 2.1795115301714554,
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 36.0
+      },
+      "population_singleton_proportion": 0.32297287574645656,
+      "sample_singleton_proportion": 0.5037394050191125
+    }
+  },
+  "frozen_hashes": {
+    "data/processed/modeling_base_lfm_v0_1_1.parquet": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+    "data/processed/split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b"
+  },
+  "privacy": {
+    "individual_lists_public": false,
+    "target_columns_loaded": [],
+    "private_files": {
+      "tracked": [],
+      "staged": []
+    }
+  }
+}

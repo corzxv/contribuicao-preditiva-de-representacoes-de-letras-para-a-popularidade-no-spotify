@@ -45,6 +45,15 @@ def _print_embeddings_progress(done: int, total: int) -> None:
         print(f"Chunks MiniLM v0.2: {done}/{total}", file=sys.stderr, flush=True)
 
 
+def _print_scale_collection_progress(phase: str, done: int, total: int) -> None:
+    print(f"Coleta LRCLIB v0.4 ({phase}): {done}/{total}", file=sys.stderr, flush=True)
+
+
+def _print_scale_embeddings_progress(done: int, total: int) -> None:
+    if done % 640 == 0 or done == total:
+        print(f"Chunks MiniLM v0.4: {done}/{total}", file=sys.stderr, flush=True)
+
+
 def _print_modeling_progress(
     algorithm: str, block: str, variant: str, done: int, total: int
 ) -> None:
@@ -243,6 +252,10 @@ def main(argv: list[str] | None = None) -> int:
             "lyrics-embeddings-v020",
             "modeling-pilot-v030",
             "modeling-recalibration-v031",
+            "prepare-final-protocol-v040",
+            "lyrics-scale-v040",
+            "embeddings-scale-v040",
+            "final-scale-v040",
             "all",
         ],
     )
@@ -299,6 +312,33 @@ def main(argv: list[str] | None = None) -> int:
         from .modeling_recalibration_v031 import run_modeling_recalibration_v031
 
         summary = run_modeling_recalibration_v031(progress=_print_recalibration_progress)
+    elif arguments.command == "prepare-final-protocol-v040":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam ao protocolo final v0.4")
+        from .final_study_v040 import prepare_final_protocol_v040
+
+        summary = prepare_final_protocol_v040()
+    elif arguments.command == "lyrics-scale-v040":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam à coleta final v0.4")
+        from .lyrics_scale_v040 import run_lyrics_scale_v040
+
+        summary = run_lyrics_scale_v040(progress=_print_scale_collection_progress)
+    elif arguments.command == "embeddings-scale-v040":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam aos embeddings finais v0.4")
+        from .embeddings_scale_v040 import run_embeddings_scale_v040
+
+        summary = run_embeddings_scale_v040(progress=_print_scale_embeddings_progress)
+    elif arguments.command == "final-scale-v040":
+        if arguments.dry_run or arguments.limit != 100:
+            parser.error("--limit e --dry-run não se aplicam à ampliação final v0.4")
+        from .embeddings_scale_v040 import run_embeddings_scale_v040
+        from .lyrics_scale_v040 import run_lyrics_scale_v040
+
+        summary = run_lyrics_scale_v040(progress=_print_scale_collection_progress)
+        if summary.get("status") == "collection_complete_embeddings_pending":
+            summary = run_embeddings_scale_v040(progress=_print_scale_embeddings_progress)
     else:
         if arguments.dry_run or arguments.limit != 100:
             parser.error("--limit e --dry-run são exclusivos do comando lyrics-pilot")
