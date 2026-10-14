@@ -1,0 +1,3 @@
+# Avaliação futura única do holdout — plano v0.5
+
+Avaliação futura: três comparações primárias Elastic Net textual versus Baseline; MAE primária, RMSE secundária, R²/Spearman descritivas; bootstrap pareado por artista com 2000 reamostragens e seed 20261013. Multiplicidade: Bonferroni para a família das três comparações de MAE, intervalos percentis bilaterais 98.333333% (quantis 0.008333333 e 0.991666667), além dos IC95% descritivos. Ganho confirmado apenas com limite superior ajustado de ΔMAE abaixo de zero. Previsões brutas fora de 0–100 mantidas e contadas. Não retunar, fazer clipping ou modificar pré-processamento após abertura do alvo do teste.

@@ -1,0 +1,31 @@
+version: v0.5
+protocol: final-study-protocol-v1.0
+seed: 20261013
+outer_folds: 5
+inner_folds: 3
+bootstrap_repetitions: 2000
+minimum_diagnostic_cell: 30
+algorithms: [elastic_net, ridge]
+blocks: [baseline, traditional, deep, combined]
+elastic_net:
+  alpha: [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30]
+  l1_ratio: [0.05, 0.1, 0.25, 0.5, 0.8, 0.95]
+  max_iter: 50000
+  convergence_retry_max_iter: [200000, 500000]
+  tol: 0.001
+ridge:
+  alpha: [0.0001, 0.001, 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000, 3000, 10000]
+execution:
+  tuning_workers: 2
+  numerical_threads_per_worker: 2
+  parallel_backend: loky
+selection:
+  metric: mae
+  candidate: lowest_elastic_net_oof_mae
+  tie_break: frozen_block_order
+holdout_future:
+  primary_metric: mae
+  primary_comparisons: [traditional_vs_baseline, deep_vs_baseline, combined_vs_baseline]
+  family_wise_error_rate: 0.05
+  multiplicity: bonferroni_three_two_sided_percentile_intervals
+  prediction_policy: raw_unclipped
