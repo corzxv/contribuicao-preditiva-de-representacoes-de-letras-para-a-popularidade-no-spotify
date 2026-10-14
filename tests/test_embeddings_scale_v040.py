@@ -4,8 +4,10 @@ import numpy as np
 import polars as pl
 import pytest
 
+from tcc_music_popularity.embeddings_scale_v040 import _vectors_for_records
 from tcc_music_popularity.lyrics_embeddings_v020 import (
     build_embedding_frame,
+    build_embedding_index,
     build_token_chunks,
     validate_embedding_frame,
     weighted_chunk_aggregate,
@@ -68,6 +70,19 @@ def test_development_and_holdout_frames_are_separate_and_target_free():
     assert "spotify_popularity" not in holdout_frame.columns
     validate_embedding_frame(development_frame, expected_rows=3, dimension=384, tolerance=1e-5)
     validate_embedding_frame(holdout_frame, expected_rows=2, dimension=384, tolerance=1e-5)
+
+
+def test_split_index_receives_only_vectors_from_that_split():
+    development = _records("development_train", 3)
+    holdout = _records("holdout_test", 2)
+    vectors = {
+        row["lyrics_sha256"]: np.ones(384, dtype=np.float32) / np.sqrt(384)
+        for row in development + holdout
+    }
+    development_vectors = _vectors_for_records(development, vectors)
+    assert set(development_vectors) == {row["lyrics_sha256"] for row in development}
+    assert not set(development_vectors) & {row["lyrics_sha256"] for row in holdout}
+    assert build_embedding_index(development, development_vectors).height == 3
 
 
 def test_numeric_validation_rejects_nan():

@@ -137,6 +137,17 @@ def _numeric_aggregate(records: list[dict[str, Any]], field: str) -> dict[str, A
     }
 
 
+def _vectors_for_records(
+    records: list[dict[str, Any]], vectors: Mapping[str, np.ndarray]
+) -> dict[str, np.ndarray]:
+    """Return only the vectors referenced by one split's audited records."""
+    required = {str(row["lyrics_sha256"]) for row in records}
+    missing = required - set(vectors)
+    if missing:
+        raise AssertionError("Há registros auditados sem embedding no split.")
+    return {digest: vectors[digest] for digest in sorted(required)}
+
+
 def _embedding_report(summary: Mapping[str, Any]) -> str:
     embeddings = summary["embeddings"]
     return f"""# Embeddings escalados das letras — v0.4
@@ -242,8 +253,9 @@ def run_embeddings_scale_v040(
     frames: dict[str, pl.DataFrame] = {}
     for split, (embedding_key, index_key) in split_outputs.items():
         subset = [row for row in audited if row["split"] == split]
-        frame = build_embedding_frame(subset, vectors, embedding_config)
-        index = build_embedding_index(subset, vectors)
+        subset_vectors = _vectors_for_records(subset, vectors)
+        frame = build_embedding_frame(subset, subset_vectors, embedding_config)
+        index = build_embedding_index(subset, subset_vectors)
         if FORBIDDEN_EMBEDDING_COLUMNS & set(frame.columns):
             raise AssertionError("Embedding contém coluna proibida.")
         _atomic_write_frame(frame, private[embedding_key])

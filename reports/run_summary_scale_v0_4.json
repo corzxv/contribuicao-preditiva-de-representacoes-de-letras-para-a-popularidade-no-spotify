@@ -1,0 +1,3187 @@
+{
+  "status": "complete",
+  "scale_version": "v0.4",
+  "protocol_version": "final-study-protocol-v1.0",
+  "timestamp": "2026-10-11T20:30:19.543766+00:00",
+  "checkpoint_commit": "3efb3d16da0b768837161c4339697e9a119de164",
+  "checkpoint_tag": "final-study-protocol-v1.0",
+  "seed": 20261010,
+  "holdout_target_loaded": false,
+  "holdout_target_statistics_calculated": false,
+  "models_trained": false,
+  "collection": {
+    "planned_and_processed": 15000,
+    "accepted_total": 10240,
+    "acceptance_rate": 0.6826666666666666,
+    "accepted_by_split": {
+      "development_train": 7648,
+      "holdout_test": 2592
+    },
+    "processed_by_split": {
+      "development_train": 11250,
+      "holdout_test": 3750
+    },
+    "status_counts": [
+      {
+        "final_status": "accepted_exact_equivalent",
+        "len": 7126
+      },
+      {
+        "final_status": "accepted_exact_unique",
+        "len": 3114
+      },
+      {
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3243
+      },
+      {
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 106
+      },
+      {
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "final_status": "instrumental",
+        "len": 109
+      },
+      {
+        "final_status": "not_found",
+        "len": 644
+      },
+      {
+        "final_status": "request_error",
+        "len": 657
+      }
+    ],
+    "status_by_split": [
+      {
+        "split": "development_train",
+        "final_status": "accepted_exact_equivalent",
+        "len": 5305
+      },
+      {
+        "split": "development_train",
+        "final_status": "accepted_exact_unique",
+        "len": 2343
+      },
+      {
+        "split": "development_train",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2451
+      },
+      {
+        "split": "development_train",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 71
+      },
+      {
+        "split": "development_train",
+        "final_status": "instrumental",
+        "len": 83
+      },
+      {
+        "split": "development_train",
+        "final_status": "not_found",
+        "len": 492
+      },
+      {
+        "split": "development_train",
+        "final_status": "request_error",
+        "len": 505
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1821
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "accepted_exact_unique",
+        "len": 771
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 792
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 35
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "instrumental",
+        "len": 26
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "not_found",
+        "len": 152
+      },
+      {
+        "split": "holdout_test",
+        "final_status": "request_error",
+        "len": 152
+      }
+    ],
+    "cache_sources": [
+      {
+        "cache_source": "current",
+        "len": 14707
+      },
+      {
+        "cache_source": "legacy",
+        "len": 293
+      }
+    ],
+    "technical": {
+      "attempts": 37133,
+      "retry_attempts": 7133,
+      "retryable_http_attempts": 7814,
+      "technical_errors": 0,
+      "http_status_counts": [
+        {
+          "http_status": "/api/get:200;/api/search:200",
+          "len": 13591
+        },
+        {
+          "http_status": "/api/get:200;/api/search:503",
+          "len": 300
+        },
+        {
+          "http_status": "/api/get:400;/api/search:200",
+          "len": 1
+        },
+        {
+          "http_status": "/api/get:404;/api/search:200",
+          "len": 752
+        },
+        {
+          "http_status": "/api/get:404;/api/search:503",
+          "len": 19
+        },
+        {
+          "http_status": "/api/get:503;/api/search:200",
+          "len": 312
+        },
+        {
+          "http_status": "/api/get:503;/api/search:503",
+          "len": 25
+        }
+      ]
+    }
+  },
+  "reserve": {
+    "used": true,
+    "activated_batches": [
+      1,
+      2
+    ],
+    "stopped_after_threshold": true,
+    "exhausted": false
+  },
+  "network": {
+    "legacy_caches_reused": 293,
+    "current_caches_reused": 14707,
+    "new_compositions_queried": 14707,
+    "http_attempts_current_scale": 36521,
+    "retry_attempts_current_scale": 7107,
+    "first_request_at": "2026-10-10T13:20:49.591929+00:00"
+  },
+  "aggregates": {
+    "status_by_period": [
+      {
+        "period": "2000-2005",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1247
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "accepted_exact_unique",
+        "len": 223
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 676
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 14
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "instrumental",
+        "len": 12
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "not_found",
+        "len": 76
+      },
+      {
+        "period": "2000-2005",
+        "final_status": "request_error",
+        "len": 101
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1549
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "accepted_exact_unique",
+        "len": 538
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 628
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 21
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "instrumental",
+        "len": 9
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "not_found",
+        "len": 131
+      },
+      {
+        "period": "2006-2011",
+        "final_status": "request_error",
+        "len": 134
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "accepted_exact_equivalent",
+        "len": 2773
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "accepted_exact_unique",
+        "len": 1529
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1219
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 42
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "instrumental",
+        "len": 59
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "not_found",
+        "len": 272
+      },
+      {
+        "period": "2012-2017",
+        "final_status": "request_error",
+        "len": 262
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1557
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "accepted_exact_unique",
+        "len": 824
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 720
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 29
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "instrumental",
+        "len": 29
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "not_found",
+        "len": 165
+      },
+      {
+        "period": "2018-2023",
+        "final_status": "request_error",
+        "len": 160
+      }
+    ],
+    "status_by_genre": [
+      {
+        "genre_sampling": "acoustic",
+        "final_status": "accepted_exact_equivalent",
+        "len": 170
+      },
+      {
+        "genre_sampling": "acoustic",
+        "final_status": "accepted_exact_unique",
+        "len": 143
+      },
+      {
+        "genre_sampling": "acoustic",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 41
+      },
+      {
+        "genre_sampling": "acoustic",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "acoustic",
+        "final_status": "not_found",
+        "len": 18
+      },
+      {
+        "genre_sampling": "acoustic",
+        "final_status": "request_error",
+        "len": 18
+      },
+      {
+        "genre_sampling": "afrobeat",
+        "final_status": "accepted_exact_equivalent",
+        "len": 2
+      },
+      {
+        "genre_sampling": "afrobeat",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      },
+      {
+        "genre_sampling": "afrobeat",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "afrobeat",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "alt-rock",
+        "final_status": "accepted_exact_equivalent",
+        "len": 445
+      },
+      {
+        "genre_sampling": "alt-rock",
+        "final_status": "accepted_exact_unique",
+        "len": 82
+      },
+      {
+        "genre_sampling": "alt-rock",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 316
+      },
+      {
+        "genre_sampling": "alt-rock",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "alt-rock",
+        "final_status": "request_error",
+        "len": 43
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "accepted_exact_equivalent",
+        "len": 43
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "accepted_exact_unique",
+        "len": 33
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 11
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "instrumental",
+        "len": 6
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "not_found",
+        "len": 7
+      },
+      {
+        "genre_sampling": "ambient",
+        "final_status": "request_error",
+        "len": 5
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "accepted_exact_equivalent",
+        "len": 185
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "accepted_exact_unique",
+        "len": 134
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 56
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "instrumental",
+        "len": 3
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "not_found",
+        "len": 54
+      },
+      {
+        "genre_sampling": "black-metal",
+        "final_status": "request_error",
+        "len": 20
+      },
+      {
+        "genre_sampling": "blues",
+        "final_status": "accepted_exact_equivalent",
+        "len": 195
+      },
+      {
+        "genre_sampling": "blues",
+        "final_status": "accepted_exact_unique",
+        "len": 70
+      },
+      {
+        "genre_sampling": "blues",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 58
+      },
+      {
+        "genre_sampling": "blues",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "blues",
+        "final_status": "not_found",
+        "len": 20
+      },
+      {
+        "genre_sampling": "blues",
+        "final_status": "request_error",
+        "len": 15
+      },
+      {
+        "genre_sampling": "breakbeat",
+        "final_status": "accepted_exact_equivalent",
+        "len": 6
+      },
+      {
+        "genre_sampling": "breakbeat",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "genre_sampling": "breakbeat",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2
+      },
+      {
+        "genre_sampling": "breakbeat",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "breakbeat",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "breakbeat",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "cantopop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "genre_sampling": "cantopop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "accepted_exact_equivalent",
+        "len": 161
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "accepted_exact_unique",
+        "len": 78
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 52
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "instrumental",
+        "len": 12
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "not_found",
+        "len": 17
+      },
+      {
+        "genre_sampling": "chill",
+        "final_status": "request_error",
+        "len": 18
+      },
+      {
+        "genre_sampling": "classical",
+        "final_status": "accepted_exact_equivalent",
+        "len": 26
+      },
+      {
+        "genre_sampling": "classical",
+        "final_status": "accepted_exact_unique",
+        "len": 4
+      },
+      {
+        "genre_sampling": "classical",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 23
+      },
+      {
+        "genre_sampling": "classical",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "classical",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "classical",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "club",
+        "final_status": "accepted_exact_equivalent",
+        "len": 33
+      },
+      {
+        "genre_sampling": "club",
+        "final_status": "accepted_exact_unique",
+        "len": 19
+      },
+      {
+        "genre_sampling": "club",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 10
+      },
+      {
+        "genre_sampling": "club",
+        "final_status": "instrumental",
+        "len": 4
+      },
+      {
+        "genre_sampling": "club",
+        "final_status": "not_found",
+        "len": 19
+      },
+      {
+        "genre_sampling": "club",
+        "final_status": "request_error",
+        "len": 5
+      },
+      {
+        "genre_sampling": "comedy",
+        "final_status": "accepted_exact_equivalent",
+        "len": 24
+      },
+      {
+        "genre_sampling": "comedy",
+        "final_status": "accepted_exact_unique",
+        "len": 13
+      },
+      {
+        "genre_sampling": "comedy",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 11
+      },
+      {
+        "genre_sampling": "comedy",
+        "final_status": "not_found",
+        "len": 7
+      },
+      {
+        "genre_sampling": "comedy",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "country",
+        "final_status": "accepted_exact_equivalent",
+        "len": 405
+      },
+      {
+        "genre_sampling": "country",
+        "final_status": "accepted_exact_unique",
+        "len": 96
+      },
+      {
+        "genre_sampling": "country",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 192
+      },
+      {
+        "genre_sampling": "country",
+        "final_status": "not_found",
+        "len": 5
+      },
+      {
+        "genre_sampling": "country",
+        "final_status": "request_error",
+        "len": 41
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "accepted_exact_equivalent",
+        "len": 257
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "accepted_exact_unique",
+        "len": 37
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 234
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "instrumental",
+        "len": 3
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "genre_sampling": "dance",
+        "final_status": "request_error",
+        "len": 22
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "accepted_exact_equivalent",
+        "len": 68
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "accepted_exact_unique",
+        "len": 32
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 26
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 5
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "not_found",
+        "len": 5
+      },
+      {
+        "genre_sampling": "dancehall",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "accepted_exact_equivalent",
+        "len": 319
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "accepted_exact_unique",
+        "len": 162
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 131
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "instrumental",
+        "len": 3
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "not_found",
+        "len": 12
+      },
+      {
+        "genre_sampling": "death-metal",
+        "final_status": "request_error",
+        "len": 37
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "accepted_exact_equivalent",
+        "len": 42
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "accepted_exact_unique",
+        "len": 36
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 9
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "instrumental",
+        "len": 3
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "not_found",
+        "len": 8
+      },
+      {
+        "genre_sampling": "deep-house",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "disco",
+        "final_status": "accepted_exact_equivalent",
+        "len": 79
+      },
+      {
+        "genre_sampling": "disco",
+        "final_status": "accepted_exact_unique",
+        "len": 19
+      },
+      {
+        "genre_sampling": "disco",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 39
+      },
+      {
+        "genre_sampling": "disco",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "disco",
+        "final_status": "not_found",
+        "len": 7
+      },
+      {
+        "genre_sampling": "disco",
+        "final_status": "request_error",
+        "len": 4
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "accepted_exact_equivalent",
+        "len": 20
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "accepted_exact_unique",
+        "len": 8
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 9
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 4
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "not_found",
+        "len": 15
+      },
+      {
+        "genre_sampling": "drum-and-bass",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "accepted_exact_equivalent",
+        "len": 52
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "accepted_exact_unique",
+        "len": 24
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 12
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "instrumental",
+        "len": 12
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "not_found",
+        "len": 9
+      },
+      {
+        "genre_sampling": "dub",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "dubstep",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "genre_sampling": "dubstep",
+        "final_status": "accepted_exact_unique",
+        "len": 2
+      },
+      {
+        "genre_sampling": "dubstep",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2
+      },
+      {
+        "genre_sampling": "dubstep",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "dubstep",
+        "final_status": "not_found",
+        "len": 4
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "accepted_exact_equivalent",
+        "len": 84
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "accepted_exact_unique",
+        "len": 33
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 46
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "instrumental",
+        "len": 5
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "not_found",
+        "len": 6
+      },
+      {
+        "genre_sampling": "edm",
+        "final_status": "request_error",
+        "len": 7
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "accepted_exact_equivalent",
+        "len": 119
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "accepted_exact_unique",
+        "len": 29
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 78
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "genre_sampling": "electro",
+        "final_status": "request_error",
+        "len": 11
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "accepted_exact_equivalent",
+        "len": 75
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "accepted_exact_unique",
+        "len": 23
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 10
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "instrumental",
+        "len": 4
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "not_found",
+        "len": 8
+      },
+      {
+        "genre_sampling": "electronic",
+        "final_status": "request_error",
+        "len": 6
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "accepted_exact_equivalent",
+        "len": 425
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "accepted_exact_unique",
+        "len": 238
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 176
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "not_found",
+        "len": 20
+      },
+      {
+        "genre_sampling": "emo",
+        "final_status": "request_error",
+        "len": 31
+      },
+      {
+        "genre_sampling": "folk",
+        "final_status": "accepted_exact_equivalent",
+        "len": 282
+      },
+      {
+        "genre_sampling": "folk",
+        "final_status": "accepted_exact_unique",
+        "len": 105
+      },
+      {
+        "genre_sampling": "folk",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 118
+      },
+      {
+        "genre_sampling": "folk",
+        "final_status": "not_found",
+        "len": 5
+      },
+      {
+        "genre_sampling": "folk",
+        "final_status": "request_error",
+        "len": 31
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "accepted_exact_equivalent",
+        "len": 34
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "accepted_exact_unique",
+        "len": 19
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 13
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 4
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "instrumental",
+        "len": 4
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "not_found",
+        "len": 7
+      },
+      {
+        "genre_sampling": "french",
+        "final_status": "request_error",
+        "len": 4
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "accepted_exact_equivalent",
+        "len": 148
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "accepted_exact_unique",
+        "len": 40
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 72
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "instrumental",
+        "len": 4
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "not_found",
+        "len": 9
+      },
+      {
+        "genre_sampling": "funk",
+        "final_status": "request_error",
+        "len": 13
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "accepted_exact_equivalent",
+        "len": 174
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "accepted_exact_unique",
+        "len": 184
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 34
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "not_found",
+        "len": 52
+      },
+      {
+        "genre_sampling": "garage",
+        "final_status": "request_error",
+        "len": 19
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "accepted_exact_equivalent",
+        "len": 65
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "accepted_exact_unique",
+        "len": 21
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 30
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "german",
+        "final_status": "request_error",
+        "len": 8
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "accepted_exact_equivalent",
+        "len": 33
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "accepted_exact_unique",
+        "len": 31
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 10
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "genre_sampling": "gospel",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "accepted_exact_equivalent",
+        "len": 165
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "accepted_exact_unique",
+        "len": 89
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 59
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 4
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "not_found",
+        "len": 26
+      },
+      {
+        "genre_sampling": "goth",
+        "final_status": "request_error",
+        "len": 11
+      },
+      {
+        "genre_sampling": "grindcore",
+        "final_status": "accepted_exact_equivalent",
+        "len": 42
+      },
+      {
+        "genre_sampling": "grindcore",
+        "final_status": "accepted_exact_unique",
+        "len": 40
+      },
+      {
+        "genre_sampling": "grindcore",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 5
+      },
+      {
+        "genre_sampling": "grindcore",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "grindcore",
+        "final_status": "not_found",
+        "len": 60
+      },
+      {
+        "genre_sampling": "grindcore",
+        "final_status": "request_error",
+        "len": 8
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "accepted_exact_equivalent",
+        "len": 77
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "accepted_exact_unique",
+        "len": 36
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 25
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "not_found",
+        "len": 6
+      },
+      {
+        "genre_sampling": "groove",
+        "final_status": "request_error",
+        "len": 5
+      },
+      {
+        "genre_sampling": "guitar",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "genre_sampling": "guitar",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "guitar",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "guitar",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "accepted_exact_equivalent",
+        "len": 217
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "accepted_exact_unique",
+        "len": 73
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 108
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "not_found",
+        "len": 8
+      },
+      {
+        "genre_sampling": "hard-rock",
+        "final_status": "request_error",
+        "len": 19
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "accepted_exact_equivalent",
+        "len": 276
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "accepted_exact_unique",
+        "len": 170
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 128
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "not_found",
+        "len": 15
+      },
+      {
+        "genre_sampling": "hardcore",
+        "final_status": "request_error",
+        "len": 29
+      },
+      {
+        "genre_sampling": "hardstyle",
+        "final_status": "accepted_exact_equivalent",
+        "len": 14
+      },
+      {
+        "genre_sampling": "hardstyle",
+        "final_status": "accepted_exact_unique",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hardstyle",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hardstyle",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hardstyle",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "hardstyle",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "heavy-metal",
+        "final_status": "accepted_exact_equivalent",
+        "len": 11
+      },
+      {
+        "genre_sampling": "heavy-metal",
+        "final_status": "accepted_exact_unique",
+        "len": 23
+      },
+      {
+        "genre_sampling": "heavy-metal",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 5
+      },
+      {
+        "genre_sampling": "heavy-metal",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "heavy-metal",
+        "final_status": "not_found",
+        "len": 21
+      },
+      {
+        "genre_sampling": "heavy-metal",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hip-hop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 224
+      },
+      {
+        "genre_sampling": "hip-hop",
+        "final_status": "accepted_exact_unique",
+        "len": 61
+      },
+      {
+        "genre_sampling": "hip-hop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 178
+      },
+      {
+        "genre_sampling": "hip-hop",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 6
+      },
+      {
+        "genre_sampling": "hip-hop",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "genre_sampling": "hip-hop",
+        "final_status": "request_error",
+        "len": 16
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "accepted_exact_equivalent",
+        "len": 30
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "accepted_exact_unique",
+        "len": 5
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 8
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "house",
+        "final_status": "request_error",
+        "len": 4
+      },
+      {
+        "genre_sampling": "indian",
+        "final_status": "accepted_exact_equivalent",
+        "len": 6
+      },
+      {
+        "genre_sampling": "indian",
+        "final_status": "accepted_exact_unique",
+        "len": 15
+      },
+      {
+        "genre_sampling": "indian",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3
+      },
+      {
+        "genre_sampling": "indian",
+        "final_status": "not_found",
+        "len": 4
+      },
+      {
+        "genre_sampling": "indie-pop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 238
+      },
+      {
+        "genre_sampling": "indie-pop",
+        "final_status": "accepted_exact_unique",
+        "len": 62
+      },
+      {
+        "genre_sampling": "indie-pop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 137
+      },
+      {
+        "genre_sampling": "indie-pop",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "genre_sampling": "indie-pop",
+        "final_status": "request_error",
+        "len": 20
+      },
+      {
+        "genre_sampling": "industrial",
+        "final_status": "accepted_exact_equivalent",
+        "len": 132
+      },
+      {
+        "genre_sampling": "industrial",
+        "final_status": "accepted_exact_unique",
+        "len": 62
+      },
+      {
+        "genre_sampling": "industrial",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 40
+      },
+      {
+        "genre_sampling": "industrial",
+        "final_status": "instrumental",
+        "len": 4
+      },
+      {
+        "genre_sampling": "industrial",
+        "final_status": "not_found",
+        "len": 16
+      },
+      {
+        "genre_sampling": "industrial",
+        "final_status": "request_error",
+        "len": 8
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "accepted_exact_equivalent",
+        "len": 68
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "accepted_exact_unique",
+        "len": 27
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 19
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "genre_sampling": "jazz",
+        "final_status": "request_error",
+        "len": 6
+      },
+      {
+        "genre_sampling": "k-pop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 52
+      },
+      {
+        "genre_sampling": "k-pop",
+        "final_status": "accepted_exact_unique",
+        "len": 36
+      },
+      {
+        "genre_sampling": "k-pop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 39
+      },
+      {
+        "genre_sampling": "k-pop",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "k-pop",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "genre_sampling": "k-pop",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "metal",
+        "final_status": "accepted_exact_equivalent",
+        "len": 124
+      },
+      {
+        "genre_sampling": "metal",
+        "final_status": "accepted_exact_unique",
+        "len": 26
+      },
+      {
+        "genre_sampling": "metal",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 147
+      },
+      {
+        "genre_sampling": "metal",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "metal",
+        "final_status": "request_error",
+        "len": 11
+      },
+      {
+        "genre_sampling": "metalcore",
+        "final_status": "accepted_exact_equivalent",
+        "len": 93
+      },
+      {
+        "genre_sampling": "metalcore",
+        "final_status": "accepted_exact_unique",
+        "len": 76
+      },
+      {
+        "genre_sampling": "metalcore",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 25
+      },
+      {
+        "genre_sampling": "metalcore",
+        "final_status": "instrumental",
+        "len": 5
+      },
+      {
+        "genre_sampling": "metalcore",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "metalcore",
+        "final_status": "request_error",
+        "len": 5
+      },
+      {
+        "genre_sampling": "minimal-techno",
+        "final_status": "accepted_exact_equivalent",
+        "len": 4
+      },
+      {
+        "genre_sampling": "minimal-techno",
+        "final_status": "accepted_exact_unique",
+        "len": 2
+      },
+      {
+        "genre_sampling": "minimal-techno",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "minimal-techno",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "minimal-techno",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "minimal-techno",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "new-age",
+        "final_status": "accepted_exact_equivalent",
+        "len": 8
+      },
+      {
+        "genre_sampling": "new-age",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "genre_sampling": "new-age",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3
+      },
+      {
+        "genre_sampling": "new-age",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "new-age",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "opera",
+        "final_status": "accepted_exact_equivalent",
+        "len": 22
+      },
+      {
+        "genre_sampling": "opera",
+        "final_status": "accepted_exact_unique",
+        "len": 4
+      },
+      {
+        "genre_sampling": "opera",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 6
+      },
+      {
+        "genre_sampling": "opera",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "piano",
+        "final_status": "accepted_exact_equivalent",
+        "len": 68
+      },
+      {
+        "genre_sampling": "piano",
+        "final_status": "accepted_exact_unique",
+        "len": 21
+      },
+      {
+        "genre_sampling": "piano",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 21
+      },
+      {
+        "genre_sampling": "piano",
+        "final_status": "request_error",
+        "len": 9
+      },
+      {
+        "genre_sampling": "pop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 87
+      },
+      {
+        "genre_sampling": "pop",
+        "final_status": "accepted_exact_unique",
+        "len": 5
+      },
+      {
+        "genre_sampling": "pop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 68
+      },
+      {
+        "genre_sampling": "pop",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "pop",
+        "final_status": "request_error",
+        "len": 10
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 133
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "accepted_exact_unique",
+        "len": 79
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 25
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "not_found",
+        "len": 52
+      },
+      {
+        "genre_sampling": "power-pop",
+        "final_status": "request_error",
+        "len": 12
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "accepted_exact_equivalent",
+        "len": 34
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "accepted_exact_unique",
+        "len": 14
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 5
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 4
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "instrumental",
+        "len": 2
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "genre_sampling": "progressive-house",
+        "final_status": "request_error",
+        "len": 5
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "accepted_exact_equivalent",
+        "len": 121
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "accepted_exact_unique",
+        "len": 46
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 27
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "not_found",
+        "len": 13
+      },
+      {
+        "genre_sampling": "psych-rock",
+        "final_status": "request_error",
+        "len": 10
+      },
+      {
+        "genre_sampling": "punk",
+        "final_status": "accepted_exact_equivalent",
+        "len": 109
+      },
+      {
+        "genre_sampling": "punk",
+        "final_status": "accepted_exact_unique",
+        "len": 54
+      },
+      {
+        "genre_sampling": "punk",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 70
+      },
+      {
+        "genre_sampling": "punk",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "genre_sampling": "punk",
+        "final_status": "request_error",
+        "len": 18
+      },
+      {
+        "genre_sampling": "punk-rock",
+        "final_status": "accepted_exact_equivalent",
+        "len": 78
+      },
+      {
+        "genre_sampling": "punk-rock",
+        "final_status": "accepted_exact_unique",
+        "len": 49
+      },
+      {
+        "genre_sampling": "punk-rock",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 23
+      },
+      {
+        "genre_sampling": "punk-rock",
+        "final_status": "not_found",
+        "len": 6
+      },
+      {
+        "genre_sampling": "punk-rock",
+        "final_status": "request_error",
+        "len": 4
+      },
+      {
+        "genre_sampling": "rock",
+        "final_status": "accepted_exact_equivalent",
+        "len": 45
+      },
+      {
+        "genre_sampling": "rock",
+        "final_status": "accepted_exact_unique",
+        "len": 7
+      },
+      {
+        "genre_sampling": "rock",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 42
+      },
+      {
+        "genre_sampling": "rock",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "rock-n-roll",
+        "final_status": "accepted_exact_equivalent",
+        "len": 22
+      },
+      {
+        "genre_sampling": "rock-n-roll",
+        "final_status": "accepted_exact_unique",
+        "len": 5
+      },
+      {
+        "genre_sampling": "rock-n-roll",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 11
+      },
+      {
+        "genre_sampling": "rock-n-roll",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "genre_sampling": "rock-n-roll",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "sad",
+        "final_status": "accepted_exact_equivalent",
+        "len": 9
+      },
+      {
+        "genre_sampling": "sad",
+        "final_status": "accepted_exact_unique",
+        "len": 12
+      },
+      {
+        "genre_sampling": "sad",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3
+      },
+      {
+        "genre_sampling": "sad",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "sad",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "salsa",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "genre_sampling": "salsa",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      },
+      {
+        "genre_sampling": "samba",
+        "final_status": "accepted_exact_equivalent",
+        "len": 4
+      },
+      {
+        "genre_sampling": "show-tunes",
+        "final_status": "accepted_exact_equivalent",
+        "len": 32
+      },
+      {
+        "genre_sampling": "show-tunes",
+        "final_status": "accepted_exact_unique",
+        "len": 19
+      },
+      {
+        "genre_sampling": "show-tunes",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 14
+      },
+      {
+        "genre_sampling": "show-tunes",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "show-tunes",
+        "final_status": "not_found",
+        "len": 4
+      },
+      {
+        "genre_sampling": "show-tunes",
+        "final_status": "request_error",
+        "len": 6
+      },
+      {
+        "genre_sampling": "singer-songwriter",
+        "final_status": "accepted_exact_equivalent",
+        "len": 170
+      },
+      {
+        "genre_sampling": "singer-songwriter",
+        "final_status": "accepted_exact_unique",
+        "len": 55
+      },
+      {
+        "genre_sampling": "singer-songwriter",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 41
+      },
+      {
+        "genre_sampling": "singer-songwriter",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 3
+      },
+      {
+        "genre_sampling": "singer-songwriter",
+        "final_status": "not_found",
+        "len": 8
+      },
+      {
+        "genre_sampling": "singer-songwriter",
+        "final_status": "request_error",
+        "len": 14
+      },
+      {
+        "genre_sampling": "ska",
+        "final_status": "accepted_exact_equivalent",
+        "len": 97
+      },
+      {
+        "genre_sampling": "ska",
+        "final_status": "accepted_exact_unique",
+        "len": 74
+      },
+      {
+        "genre_sampling": "ska",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 21
+      },
+      {
+        "genre_sampling": "ska",
+        "final_status": "not_found",
+        "len": 16
+      },
+      {
+        "genre_sampling": "ska",
+        "final_status": "request_error",
+        "len": 8
+      },
+      {
+        "genre_sampling": "songwriter",
+        "final_status": "accepted_exact_equivalent",
+        "len": 6
+      },
+      {
+        "genre_sampling": "songwriter",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "accepted_exact_equivalent",
+        "len": 194
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "accepted_exact_unique",
+        "len": 72
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 78
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "not_found",
+        "len": 12
+      },
+      {
+        "genre_sampling": "soul",
+        "final_status": "request_error",
+        "len": 15
+      },
+      {
+        "genre_sampling": "spanish",
+        "final_status": "accepted_exact_equivalent",
+        "len": 6
+      },
+      {
+        "genre_sampling": "spanish",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "genre_sampling": "spanish",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 4
+      },
+      {
+        "genre_sampling": "spanish",
+        "final_status": "not_found",
+        "len": 4
+      },
+      {
+        "genre_sampling": "spanish",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "accepted_exact_equivalent",
+        "len": 96
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "accepted_exact_unique",
+        "len": 48
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 22
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "not_found",
+        "len": 7
+      },
+      {
+        "genre_sampling": "swedish",
+        "final_status": "request_error",
+        "len": 3
+      },
+      {
+        "genre_sampling": "techno",
+        "final_status": "accepted_exact_equivalent",
+        "len": 8
+      },
+      {
+        "genre_sampling": "techno",
+        "final_status": "accepted_exact_unique",
+        "len": 4
+      },
+      {
+        "genre_sampling": "techno",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 4
+      },
+      {
+        "genre_sampling": "techno",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "genre_sampling": "techno",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "techno",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "accepted_exact_equivalent",
+        "len": 10
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "accepted_exact_unique",
+        "len": 16
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 7
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "genre_sampling": "trance",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "accepted_exact_equivalent",
+        "len": 19
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "accepted_exact_unique",
+        "len": 6
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "not_found",
+        "len": 11
+      },
+      {
+        "genre_sampling": "trip-hop",
+        "final_status": "request_error",
+        "len": 2
+      }
+    ],
+    "status_by_match_method": [
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "accepted_exact_equivalent",
+        "len": 198
+      },
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "accepted_exact_unique",
+        "len": 74
+      },
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 110
+      },
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 13
+      },
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "instrumental",
+        "len": 6
+      },
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "not_found",
+        "len": 31
+      },
+      {
+        "match_method": "base_title_version_compatible",
+        "final_status": "request_error",
+        "len": 22
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "accepted_exact_equivalent",
+        "len": 583
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "accepted_exact_unique",
+        "len": 148
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 345
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 8
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "instrumental",
+        "len": 14
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "not_found",
+        "len": 52
+      },
+      {
+        "match_method": "conservative_normalized",
+        "final_status": "request_error",
+        "len": 40
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "accepted_exact_equivalent",
+        "len": 5116
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "accepted_exact_unique",
+        "len": 2283
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2260
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 70
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "instrumental",
+        "len": 67
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "not_found",
+        "len": 436
+      },
+      {
+        "match_method": "raw_exact",
+        "final_status": "request_error",
+        "len": 470
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1229
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "accepted_exact_unique",
+        "len": 609
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 528
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 15
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "instrumental",
+        "len": 22
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "not_found",
+        "len": 125
+      },
+      {
+        "match_method": "strict_normalized",
+        "final_status": "request_error",
+        "len": 125
+      }
+    ],
+    "status_by_version_profile": [
+      {
+        "version_profile": "acoustic",
+        "final_status": "accepted_exact_equivalent",
+        "len": 18
+      },
+      {
+        "version_profile": "acoustic",
+        "final_status": "accepted_exact_unique",
+        "len": 3
+      },
+      {
+        "version_profile": "acoustic",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 14
+      },
+      {
+        "version_profile": "acoustic",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "version_profile": "acoustic",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "version_profile": "acoustic",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "version_profile": "demo",
+        "final_status": "accepted_exact_equivalent",
+        "len": 17
+      },
+      {
+        "version_profile": "demo",
+        "final_status": "accepted_exact_unique",
+        "len": 2
+      },
+      {
+        "version_profile": "demo",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 9
+      },
+      {
+        "version_profile": "demo",
+        "final_status": "not_found",
+        "len": 3
+      },
+      {
+        "version_profile": "demo",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "version_profile": "instrumental",
+        "final_status": "accepted_exact_equivalent",
+        "len": 2
+      },
+      {
+        "version_profile": "instrumental",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "version_profile": "instrumental",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3
+      },
+      {
+        "version_profile": "instrumental",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 2
+      },
+      {
+        "version_profile": "instrumental",
+        "final_status": "instrumental",
+        "len": 11
+      },
+      {
+        "version_profile": "instrumental",
+        "final_status": "not_found",
+        "len": 9
+      },
+      {
+        "version_profile": "karaoke",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "version_profile": "live",
+        "final_status": "accepted_exact_equivalent",
+        "len": 163
+      },
+      {
+        "version_profile": "live",
+        "final_status": "accepted_exact_unique",
+        "len": 85
+      },
+      {
+        "version_profile": "live",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 66
+      },
+      {
+        "version_profile": "live",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 1
+      },
+      {
+        "version_profile": "live",
+        "final_status": "instrumental",
+        "len": 1
+      },
+      {
+        "version_profile": "live",
+        "final_status": "not_found",
+        "len": 21
+      },
+      {
+        "version_profile": "live",
+        "final_status": "request_error",
+        "len": 13
+      },
+      {
+        "version_profile": "live+acoustic",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "version_profile": "live+acoustic",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      },
+      {
+        "version_profile": "live+demo",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      },
+      {
+        "version_profile": "mono_stereo",
+        "final_status": "accepted_exact_equivalent",
+        "len": 3
+      },
+      {
+        "version_profile": "mono_stereo",
+        "final_status": "accepted_exact_unique",
+        "len": 1
+      },
+      {
+        "version_profile": "mono_stereo",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      },
+      {
+        "version_profile": "mono_stereo",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "accepted_exact_equivalent",
+        "len": 6787
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "accepted_exact_unique",
+        "len": 2970
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3074
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 94
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "instrumental",
+        "len": 91
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "not_found",
+        "len": 574
+      },
+      {
+        "version_profile": "original_sem_flag",
+        "final_status": "request_error",
+        "len": 625
+      },
+      {
+        "version_profile": "radio_edit",
+        "final_status": "accepted_exact_equivalent",
+        "len": 12
+      },
+      {
+        "version_profile": "radio_edit",
+        "final_status": "accepted_exact_unique",
+        "len": 5
+      },
+      {
+        "version_profile": "radio_edit",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 2
+      },
+      {
+        "version_profile": "remaster",
+        "final_status": "accepted_exact_equivalent",
+        "len": 40
+      },
+      {
+        "version_profile": "remaster",
+        "final_status": "accepted_exact_unique",
+        "len": 8
+      },
+      {
+        "version_profile": "remaster",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 21
+      },
+      {
+        "version_profile": "remaster",
+        "final_status": "not_found",
+        "len": 2
+      },
+      {
+        "version_profile": "remaster",
+        "final_status": "request_error",
+        "len": 2
+      },
+      {
+        "version_profile": "remaster+live",
+        "final_status": "accepted_exact_equivalent",
+        "len": 3
+      },
+      {
+        "version_profile": "remaster+live",
+        "final_status": "request_error",
+        "len": 1
+      },
+      {
+        "version_profile": "remaster+mono_stereo",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "accepted_exact_equivalent",
+        "len": 78
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "accepted_exact_unique",
+        "len": 38
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 50
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 8
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "instrumental",
+        "len": 6
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "not_found",
+        "len": 33
+      },
+      {
+        "version_profile": "remix",
+        "final_status": "request_error",
+        "len": 13
+      },
+      {
+        "version_profile": "remix+instrumental",
+        "final_status": "not_found",
+        "len": 1
+      },
+      {
+        "version_profile": "remix+live",
+        "final_status": "accepted_exact_equivalent",
+        "len": 1
+      },
+      {
+        "version_profile": "remix+mono_stereo",
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 1
+      }
+    ],
+    "status_by_has_version_flag": [
+      {
+        "has_any_version_flag": false,
+        "final_status": "accepted_exact_equivalent",
+        "len": 6787
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "accepted_exact_unique",
+        "len": 2970
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 3074
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 94
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "ambiguous_search_truncated",
+        "len": 1
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "instrumental",
+        "len": 91
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "not_found",
+        "len": 574
+      },
+      {
+        "has_any_version_flag": false,
+        "final_status": "request_error",
+        "len": 625
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "accepted_exact_equivalent",
+        "len": 339
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "accepted_exact_unique",
+        "len": 144
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "ambiguous_distinct_lyrics",
+        "len": 169
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "ambiguous_metadata_conflict",
+        "len": 12
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "instrumental",
+        "len": 18
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "not_found",
+        "len": 70
+      },
+      {
+        "has_any_version_flag": true,
+        "final_status": "request_error",
+        "len": 32
+      }
+    ]
+  },
+  "duration_seconds": 357.28499030001694,
+  "private_artifact_hashes": {
+    "collection_results_sha256": "3f4ce8e2541c9dc97dc41746f861076f105436f6e5aa7508e36c0e3ee3e975c0",
+    "lyrics_index_sha256": "836c408ad43a2d06a5ee28117610c944d6e17fe81ad85381605192a0ca75eb2c"
+  },
+  "frozen_hashes": {
+    "data/processed/modeling_base_lfm_v0_1_1.parquet": "1c28f31e9b466b76d7e0180b769ba7ac51c46d2590ad7b1ba1ed21eaebdd1c5c",
+    "data/processed/split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b"
+  },
+  "privacy": {
+    "private_tracked": [],
+    "private_staged": [],
+    "holdout_target_loaded": false,
+    "lyrics_text_public": false,
+    "individual_outputs_public": false
+  },
+  "embeddings": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "dimension": 384,
+    "dtype": "float32",
+    "development": {
+      "rows": 7648,
+      "dimensions": 384,
+      "dtype": "float32",
+      "nan_count": 0,
+      "infinite_count": 0,
+      "l2_norm_distribution": {
+        "n": 7648,
+        "mean": 1.0,
+        "std": 0.0,
+        "minimum": 0.9999999403953552,
+        "q1": 1.0,
+        "median": 1.0,
+        "q3": 1.0,
+        "maximum": 1.0
+      },
+      "maximum_absolute_l2_deviation": 5.960464477539063e-08,
+      "duplicate_hash_embedding_mismatches": 0,
+      "forbidden_columns": []
+    },
+    "holdout": {
+      "rows": 2592,
+      "dimensions": 384,
+      "dtype": "float32",
+      "nan_count": 0,
+      "infinite_count": 0,
+      "l2_norm_distribution": {
+        "n": 2592,
+        "mean": 1.0,
+        "std": 0.0,
+        "minimum": 0.9999999403953552,
+        "q1": 1.0,
+        "median": 1.0,
+        "q3": 1.0,
+        "maximum": 1.0
+      },
+      "maximum_absolute_l2_deviation": 5.960464477539063e-08,
+      "duplicate_hash_embedding_mismatches": 0,
+      "forbidden_columns": []
+    },
+    "holdout_target_columns": [],
+    "reuse": {
+      "compositions_reused_from_v0_2": 213,
+      "unique_hashes_reused_from_v0_2": 213,
+      "new_unique_hashes_encoded": 10025
+    },
+    "language_status_counts": {
+      "english": 10117,
+      "non_english": 119,
+      "uncertain": 4
+    },
+    "detected_language_counts": {
+      "af": 1,
+      "ar": 1,
+      "br": 1,
+      "cy": 6,
+      "da": 1,
+      "de": 2,
+      "en": 10118,
+      "eo": 1,
+      "es": 6,
+      "fa": 1,
+      "fi": 3,
+      "fr": 1,
+      "hi": 2,
+      "id": 12,
+      "ja": 13,
+      "jv": 2,
+      "ko": 38,
+      "ky": 1,
+      "la": 3,
+      "lb": 2,
+      "lv": 1,
+      "ms": 3,
+      "mt": 1,
+      "nn": 2,
+      "no": 2,
+      "pl": 2,
+      "ru": 2,
+      "sl": 1,
+      "sw": 7,
+      "tl": 1,
+      "tr": 1,
+      "uk": 1,
+      "zh": 1
+    },
+    "token_distribution": {
+      "n": 10240,
+      "mean": 309.737109375,
+      "median": 269.0,
+      "minimum": 4.0,
+      "maximum": 1723.0
+    },
+    "chunk_distribution": {
+      "n": 10240,
+      "mean": 1.75625,
+      "median": 2.0,
+      "minimum": 1.0,
+      "maximum": 8.0
+    },
+    "validation": {
+      "nan_count": 0,
+      "infinite_count": 0,
+      "maximum_l2_deviation": 5.960464477539063e-08,
+      "all_tokens_covered_without_truncation": true,
+      "separate_split_files": true
+    },
+    "duration_seconds": 673.6193122000113
+  },
+  "tests": {
+    "status": "passed",
+    "verified_at": "2026-10-13T16:02:28.3105853Z",
+    "full_pytest": {
+      "collected": 108,
+      "exit_code": 0
+    },
+    "sampling_specific": {
+      "passed": 4,
+      "exit_code": 0
+    },
+    "collection_specific": {
+      "passed": 6,
+      "exit_code": 0
+    },
+    "embeddings_specific": {
+      "passed": 6,
+      "exit_code": 0
+    },
+    "ruff_check": {
+      "exit_code": 0
+    },
+    "ruff_format_check": {
+      "files_checked": 39,
+      "exit_code": 0
+    },
+    "git_diff_check": {
+      "exit_code": 0
+    },
+    "frozen_hashes_match": true,
+    "public_privacy_violations": 0,
+    "private_files_tracked": 0,
+    "private_files_staged": 0,
+    "holdout_target_present": false
+  },
+  "operational_corrections": [
+    {
+      "scope": "circuit_breaker_resume",
+      "effect": "cached technical outcomes are not replayed into the live breaker window",
+      "scientific_protocol_changed": false,
+      "regression_test_added": true
+    },
+    {
+      "scope": "split_embedding_index",
+      "effect": "each split index receives only vectors referenced by that split",
+      "scientific_protocol_changed": false,
+      "regression_test_added": true
+    }
+  ],
+  "completed_at": "2026-10-13T15:58:16.487027+00:00",
+  "private_integrity_manifest_sha256": "a7ce98f23a7bfb37c953cb813a3d1c684368c9d1dfc61a0f4c7b2339d6d93bc5"
+}

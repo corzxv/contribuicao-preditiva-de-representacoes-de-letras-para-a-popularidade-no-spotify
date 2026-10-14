@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-10-14T14:00:53.143518+00:00",
+  "technical_error_exceptions": 0,
+  "request_error_final_outcomes": 657,
+  "request_error_http_patterns": [
+    {
+      "http_status": "/api/get:200;/api/search:503",
+      "len": 300
+    },
+    {
+      "http_status": "/api/get:400;/api/search:200",
+      "len": 1
+    },
+    {
+      "http_status": "/api/get:404;/api/search:503",
+      "len": 19
+    },
+    {
+      "http_status": "/api/get:503;/api/search:200",
+      "len": 312
+    },
+    {
+      "http_status": "/api/get:503;/api/search:503",
+      "len": 25
+    }
+  ],
+  "composition_chunks_total": 17984,
+  "unique_hash_chunks_total": 17978,
+  "duplicate_composition_chunks": 6,
+  "pilot_reused_unique_hash_chunks": 385,
+  "chunks_actually_encoded": 17593,
+  "composition_chunk_mean": 1.75625,
+  "collection_wall_seconds_until_consolidated": 112169.951837,
+  "last_idempotent_consolidation_seconds": 357.28499030001694,
+  "development_rows": 7648,
+  "holdout_rows": 2592,
+  "artist_overlap": 0,
+  "composition_overlap": 0,
+  "lyrics_hash_overlap": 0,
+  "nan_count": 0,
+  "infinite_count": 0,
+  "hashes_match": true,
+  "holdout_target_loaded": false,
+  "cohort_hash": "119dc1ded7a61b67a4ed6116ba46758ae5e8a5c867f74775c5e74a8618123f8c",
+  "reserve_hash": "1e6c0da25f6a068d1a5971cf0655e5cc5a966999a827b4287c46b63e65fe9574"
+}

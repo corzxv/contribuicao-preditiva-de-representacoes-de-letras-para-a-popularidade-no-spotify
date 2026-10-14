@@ -205,6 +205,25 @@ def _breaker_config(collection: Mapping[str, Any]) -> dict[str, Any]:
     return {"circuit_breaker": collection["circuit_breaker"], "lrclib": collection}
 
 
+def _current_run_circuit_breaker_reason(
+    recent_network_statuses: list[str],
+    *,
+    source: str,
+    status: str,
+    envelope: Mapping[str, Any],
+    collection: Mapping[str, Any],
+) -> str | None:
+    """Evaluate the breaker only for network requests made in this process."""
+    if source != "network":
+        return None
+    recent_network_statuses.append(status)
+    return circuit_breaker_reason(
+        recent_network_statuses,
+        envelope,
+        _breaker_config(collection),
+    )
+
+
 def _write_progress(
     config: Mapping[str, Any],
     *,
@@ -247,7 +266,7 @@ def _collect_queries(
     started = time.perf_counter()
     source_counts: Counter[str] = Counter()
     status_counts: Counter[str] = Counter()
-    recent_statuses: list[str] = []
+    recent_network_statuses: list[str] = []
     queried_current = 0
     first_request_at: str | None = None
     checkpoint = int(collection["checkpoint_every"])
@@ -269,11 +288,12 @@ def _collect_queries(
         )
         status = str(classified["final_status"])
         status_counts[status] += 1
-        recent_statuses.append(status)
-        reason = circuit_breaker_reason(
-            recent_statuses,
-            envelope,
-            _breaker_config(collection),
+        reason = _current_run_circuit_breaker_reason(
+            recent_network_statuses,
+            source=str(source),
+            status=status,
+            envelope=envelope,
+            collection=collection,
         )
         if processed % checkpoint == 0 or processed == ordered.height or reason:
             _write_progress(

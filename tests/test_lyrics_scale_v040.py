@@ -9,6 +9,7 @@ from tcc_music_popularity.lyrics_pilot_v012 import (
     classify_cached_composition_v012,
 )
 from tcc_music_popularity.lyrics_scale_v040 import (
+    _current_run_circuit_breaker_reason,
     activate_reserve_batches,
     audit_public_scale_outputs,
     cache_is_compatible,
@@ -110,6 +111,38 @@ def test_reserve_activates_complete_batches_sequentially():
     assert activate_reserve_batches(10000, {}) == []
     assert activate_reserve_batches(9800, {1: 300, 2: 300}) == [1]
     assert activate_reserve_batches(9000, {1: 200, 2: 200, 3: 200, 4: 200}) == [1, 2, 3, 4]
+
+
+def test_resume_does_not_replay_cached_errors_into_circuit_breaker():
+    collection = {
+        "max_attempts": 3,
+        "circuit_breaker": {
+            "consecutive_technical_errors": 10,
+            "rolling_window": 50,
+            "maximum_request_error_rate": 0.20,
+        },
+    }
+    recent_network_statuses: list[str] = []
+    for _ in range(50):
+        reason = _current_run_circuit_breaker_reason(
+            recent_network_statuses,
+            source="current",
+            status="request_error",
+            envelope=_envelope(),
+            collection=collection,
+        )
+        assert reason is None
+    assert recent_network_statuses == []
+
+    for index in range(10):
+        reason = _current_run_circuit_breaker_reason(
+            recent_network_statuses,
+            source="network",
+            status="request_error",
+            envelope=_envelope(),
+            collection=collection,
+        )
+        assert reason == ("10_consecutive_technical_errors" if index == 9 else None)
 
 
 def test_public_audit_rejects_lyrics_and_private_paths(tmp_path):
