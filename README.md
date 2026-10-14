@@ -1,4 +1,4 @@
-# TCC — popularidade musical, Base v0.1.1
+# TCC popularidade musical, Base v0.1.1
 
 Pipeline Python reproduzível para avaliar, em etapas futuras, a contribuição preditiva incremental de descritores de letras na estimação da popularidade Spotify observada. O projeto trata associação e predição; não faz afirmações causais e não treina modelos nesta versão.
 
