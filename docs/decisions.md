@@ -29,6 +29,14 @@ Script 30 audita caminhos, tamanho, segredos e tabelas individuais nos blobs do
 encoder, corpus ou treino. Relatório de publicação registra testes, preservação,
 seleção e confirmação remota; preparação não é presumida como push concluído.
 
+Execução confirmada: commit principal 082a9a0 enviado ao remoto; 564 arquivos
+versionados, 394 testes locais e lint aprovados. Os 15 selos científicos e 154
+artefatos acadêmicos anteriores foram conferidos. CI inicialmente falhou por
+Polars ausente no ambiente; a configuração foi corrigida em 9b375a8, com 19
+testes direcionados locais e CI aprovada. Não houve alteração científica.
+Relatório: reports/publicacao_github_20261102.json. Commits históricos não foram
+reescritos; retirar do índice atual não apaga conteúdo de commits anteriores.
+
 ## D-023 — Relatório no template e referências originais (02/11/2026)
 
 Pesquisador forneceu Template_Relatório_TCC.zip e relatorio_tcc_ana.zip e pediu

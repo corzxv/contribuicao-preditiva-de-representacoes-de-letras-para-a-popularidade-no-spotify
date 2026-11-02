@@ -5,12 +5,13 @@ Leia este arquivo primeiro ao continuar em outro chat. Depois: `CONTEXTO_TCC.md`
 
 ## Organização do Git e publicação — D-024
 
-Autorizada publicação em corzxv/tcc-popularidade-musical, master, privado.
-Seleção auditada em andamento; README/guia de reprodução/histórico/política de
-publicação atualizados. Fontes seladas mantidas e oito prévias/roteiros antigos
-retirados apenas do índice, sem apagar arquivos locais. Confirmação remota e
-resultado dos testes ficam no relatório de publicação; não inferir push pela
-existência dos códigos. A entrada acadêmica atual continua sendo a versão 2.
+Publicação concluída em corzxv/tcc-popularidade-musical, master, privado.
+Commit principal 082a9a0 confirmado no remoto; 564 arquivos versionados.
+394 testes locais e lint aprovados. CI do commit 9b375a8 aprovada após incluir
+Polars no ambiente das fixtures, sem mudar código científico. Quinze selos e
+154 artefatos anteriores preservados. Oito prévias/roteiros antigos retirados
+apenas do índice; originais locais e histórico mantidos. Evidências em
+reports/publicacao_github_20261102.json. A entrada acadêmica permanece a versão 2.
 
 ## Entrada acadêmica atual — template fornecido (D-023, 02/11)
 

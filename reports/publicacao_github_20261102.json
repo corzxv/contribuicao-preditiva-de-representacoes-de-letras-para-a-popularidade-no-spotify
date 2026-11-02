@@ -1,6 +1,6 @@
 {
   "data": "2026-11-02",
-  "estado": "preparado_e_verificado_localmente",
+  "estado": "publicado_e_verificado_no_remoto",
   "repositorio": "corzxv/tcc-popularidade-musical",
   "ramo": "master",
   "visibilidade": "privado_preservado",
@@ -67,5 +67,22 @@
     "novo_embedding_corpus": false,
     "consulta_lrclib": false
   },
-  "confirmacao_remota": null
+  "confirmacao_remota": {
+    "commit_principal": "082a9a055d4327e4560a693e33a593189b124366",
+    "ramo": "master",
+    "push": "confirmado",
+    "historico_reescrito": false
+  },
+  "verificacao_automatica": {
+    "commit": "9b375a89a1d330a76cc09eb19ec88b427285bcf7",
+    "resultado": "success",
+    "url": "https://github.com/corzxv/tcc-popularidade-musical/actions/runs/41539572008",
+    "correcao": "Inclusão de polars==1.43.2 no ambiente de fixtures; código científico inalterado",
+    "testes_direcionados_locais": 19
+  },
+  "preservacao_indice": {
+    "arquivos": 564,
+    "bytes_iguais_aos_originais_locais": true,
+    "selos_cientificos_conferidos": 15
+  }
 }

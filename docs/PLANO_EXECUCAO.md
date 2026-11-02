@@ -6,9 +6,10 @@ executadas manualmente pelo pesquisador. Etapas concluídas não devem ser repet
 
 ## Publicação autorizada — D-024
 
-Preparar/auditar o índice, executar testes leves e lint, conferir selos e enviar
-commits em português ao remoto privado existente. Confirmar HEAD remoto após o
-push e registrar o resultado; não alterar avaliação científica ou modelos.
+Concluída: publicação principal 082a9a0 confirmada no remoto privado, com
+394 testes locais e lint aprovados. CI aprovada em 9b375a8 após ajuste de sua
+dependência Polars. Histórico, selos, modelos e avaliação científica preservados.
+Próximo trabalho permanece a revisão acadêmica, sem novo processamento pesado.
 Guias atuais: REPRODUCAO.md, HISTORICO_METODOLOGICO.md e PUBLICACAO_GITHUB.md.
 
 ## Próxima ação vigente — revisão do relatório no template (D-023)

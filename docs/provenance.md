@@ -461,3 +461,14 @@ transformações implementadas em etapas anteriores e limitações em
 - `reports/match_review_sample_v0_1_1.xlsx`: 77.540 bytes; SHA-256 `d7cef88b58cb9c0707f04146b88307bacfc8c1395786f3e7fd2400bd7f039953`
 
 Os Parquets v0.1.1 e demais derivados volumosos continuam ignorados pelo Git conforme as regras do projeto. A configuração executável está em `configs/modeling_v0_1_1.yaml`; o resumo de execução e os detalhes de ambiente estão em `reports/run_summary_v0_1_1.json`.
+
+## Publicação GitHub — 02/11/2026 (D-024)
+
+Commit principal 082a9a055d4327e4560a693e33a593189b124366 enviado ao remoto
+corzxv/tcc-popularidade-musical, master, privado. Seleção de códigos, protocolos,
+testes, agregados e fontes acadêmicas; nenhum novo resultado científico gerado.
+394 testes locais e lint aprovados; CI de 9b375a8 aprovada após configurar Polars.
+Quinze selos científicos e 154 artefatos anteriores preservados. Oito arquivos
+saíram apenas do índice atual, mantendo cópias locais e histórico. Relatório
+público agregado em reports/publicacao_github_20261102.json; inventários internos
+com hashes do índice em logs/publicacao_git_20261102/, fora da publicação.

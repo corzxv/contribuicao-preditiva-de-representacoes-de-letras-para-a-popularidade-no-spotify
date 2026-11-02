@@ -15,6 +15,9 @@ este mapa traz dependências e evidências científicas.
 
 ## Arquivos da publicação — D-024
 
+Publicação principal confirmada no commit 082a9a0; relatório agregado em
+reports/publicacao_github_20261102.json. CI aprovada no commit 9b375a8.
+
 README.md, requirements-cientificos.txt, .gitattributes/.gitignore, guias públicos
 REPRODUCAO/HISTORICO_METODOLOGICO/PUBLICACAO_GITHUB, script 30 e git_publication.py
 são entradas de consulta/publicação. Os códigos históricos com consumidores

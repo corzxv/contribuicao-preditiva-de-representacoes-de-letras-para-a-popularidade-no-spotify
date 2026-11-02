@@ -4,6 +4,15 @@ Atualização: 02/11/2026. TCC de Estatística/UnB, Felipe Macedo Cordeiro. Pyth
 PowerShell; projeto em `C:\Users\Concursos Felipe\Documents\UnB\TCC`.
 Este documento reúne o contexto; números detalhados continuam nos artefatos originais.
 
+## Repositório atualizado (D-024)
+
+Publicação principal 082a9a0 enviada a corzxv/tcc-popularidade-musical/master,
+com visibilidade privada preservada. Código, testes, agregados e material
+acadêmico selecionados; dados individuais, letras, vetores e modelos locais.
+394 testes locais e lint aprovados; CI de 9b375a8 aprovada. Fontes científicas
+seladas e histórico preservados, inclusive comentários antigos. Novos textos e
+commits em português. Evidências: reports/publicacao_github_20261102.json.
+
 ## Revisão acadêmica vigente (D-023)
 
 Template e exemplo de Ana fornecidos; BDM e referências originais de TCCs de

@@ -38,7 +38,7 @@ dos arquivos. Os testes verificam esses controles em fixtures sintéticas.
 Dados e saídas individuais não foram lidos para montar a publicação. A varredura
 é de arquivos candidatos de código, documentação e agregados, sem execução do
 pipeline ou varredura do LRCLIB. O fluxo GitHub Actions usa apenas Python, Ruff,
-pytest e testes leves de publicação/normalização; não instala o encoder ou
+pytest, Polars e testes leves de publicação/normalização; não instala o encoder ou
 executa treinamento real.
 
 ## Histórico e hashes
