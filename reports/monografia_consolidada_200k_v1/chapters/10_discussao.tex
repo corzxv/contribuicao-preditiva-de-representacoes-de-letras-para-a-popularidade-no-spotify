@@ -1,0 +1,30 @@
+\chapter{Discussão e limitações}\label{cap:discussao}
+\section{O que o incremento preditivo sustenta}
+Os resultados sustentam uma associação preditiva incremental média das representações textuais no domínio observado e sob a família Ridge especificada. A união de metadados/acústicas, descritores e embedding apresentou MAE inferior ao Baseline nas previsões externas, e a direção se manteve nas cinco avaliações agrupadas e na sensibilidade ponderada. A escala do ganho, contudo, deve ser conservada: 0,2374 ponto de MAE é uma redução relativa de 2,84\%, e não uma mudança de dezenas de pontos ou uma identificação do mecanismo de popularidade.
+
+O contraste mais delicado é Combinado--Profundo. Seu ganho de 0,0134 ponto é pequeno e a análise auxiliar condicional inclui zero. Não há base para tratar o acréscimo dos descritores ao embedding como superioridade confirmada do algoritmo completo. Também não é adequado interpretar a diferença como prova de equivalência entre os dois blocos: inconclusão sobre ganho não constitui teste de equivalência.
+
+Os rótulos das quatro configurações descrevem variáveis, não quatro famílias de aprendizado. O encoder neural permaneceu congelado, e todos os ajustes supervisionados foram Ridge. A conclusão responde a essa combinação particular de dados, representações, penalização e validação. Modelos não lineares ou outras fontes poderiam modificar o padrão, mas a possibilidade não justifica procurar novas versões indefinidamente após observar testes.
+
+\section{Seleção e alcance populacional}
+O domínio analítico é condicionado à letra aceita por uma regra de recuperação. A maior popularidade média das aceitas, os estratos sem cobertura e a heterogeneidade de idioma e gênero mostram por que o desenho original não pode ser invocado sozinho para generalizar a etapa preditiva. Pesos de sorteio não substituem probabilidades de observação textual.
+
+A sensibilidade ponderada mostra que a reponderação disponível não altera a ordenação dentro dos casos observados. Não demonstra que os mesmos ganhos ocorreriam no catálogo, em todas as músicas com letras ou em lançamentos futuros. Para tais alvos seriam necessárias hipóteses adicionais de seleção, suporte e transporte. Nenhuma afirmação causal de efeito da letra decorre da redução do MAE.
+
+O indicador Spotify é um escore da fonte com temporalidade de medição não confirmada. O campo year não foi validado como ano original de lançamento, e registros de versões distintas podem ter popularidades diferentes. Consequentemente, associações com esse campo não devem ser reescritas como trajetórias causais de envelhecimento de músicas ou como mudanças de preferência do público ao longo do tempo.
+
+\section{Matching, identidade e representação}
+A auditoria técnica confirmou ligações de arquivos, hashes e dimensões. Ela não certificou correção semântica de todos os matches. Ambiguidade de créditos, duração, títulos e versões pode persistir mesmo sob regras conservadoras. Sem revisão humana adequada, não é possível anunciar uma taxa de precisão global. Isso é uma limitação observacional, que deve ser mantida distinta da melhora preditiva média.
+
+Os componentes evitam as sobreposições operacionais identificadas, mas não são identidades universais de artista ou composição. Dependências residuais entre pseudônimos, colaborações não resolvidas e gravações relacionadas podem permanecer. A CV responde à separação desses componentes e não garante transferência para qualquer artista novo. Além disso, a exposição histórica do teste impede apresentar o estudo como uma confirmação inteiramente independente do desenvolvimento.
+
+A diferença de tokenização do E5 é um achado de implementação real e deve acompanhar a descrição de resultados. O token adicional modifica a representação, e testes artificiais de alta similaridade não provam irrelevância no MAE. Preservar a execução não significa declarar a receita canônica correta: significa relatar honestamente a variante que foi avaliada. Corrigi-la em outra versão seria uma comparação adicional, com custos e objetivos próprios, e nunca uma substituição silenciosa.
+
+Os 21 descritores também têm limites substantivos. Medem segmentos e propriedades gráficas, não semântica universal; sistemas de escrita e marcadores de seção podem afetar sua interpretação. A falta de um vocabulário aprendido globalmente reduz uma forma de vazamento, mas não garante adequação linguística. O mesmo cuidado vale para a média ponderada de janelas, cuja cobertura completa de tokens não implica preservação completa de relações de longo alcance.
+
+\section{Incerteza, heterogeneidade e utilidade}
+Limites condicionais e diagnósticos de remoção de componentes qualificam a avaliação, mas não incorporam toda a variação do treinamento, do tuning ou das decisões históricas. Um intervalo de composição de erros congelados não pode ser promovido a intervalo de todo o procedimento. A diferenciação entre esses alvos é parte do resultado metodológico do trabalho, e não apenas ressalva formal.
+
+A subestimação de todos os casos da cauda e a piora em certos subgrupos indicam que menor MAE médio não é garantia de utilidade uniforme. A pequena participação da cauda no erro agregado explica por que suas falhas são pouco visíveis no número global. Se a aplicação principal fosse identificar ou estimar hits, seria necessário definir outro objetivo e outro desenho antes de ajustar modelos; não basta reinterpretar retrospectivamente o MAE médio como sucesso nessa tarefa.
+
+A análise atual é suficientemente delimitada para responder à pergunta empírica proposta, desde que essas condições acompanhem a conclusão. A decisão de encerrar a modelagem preserva um resultado auditável e evita transformar conhecimento dos testes em uma sequência de novas escolhas apresentadas depois como se fossem independentes.

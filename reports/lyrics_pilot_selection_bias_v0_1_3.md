@@ -166,17 +166,3 @@ Avaliação descritiva:
 - O estrato com flag de versão tem somente 12 composições e intervalo amplo; não há base para uma conclusão forte sobre versões especiais.
 
 Associações descritivas de disponibilidade; não sustentam inferência causal. Modelos futuros com letras generalizam primariamente para composições com status aceito.
-
-## Validação final
-
-| command | exit_code | result |
-| --- | --- | --- |
-| python -c <permissão tmp Windows>; pytest.main([-q, -p no:cacheprovider, --basetemp isolado]) | 0 | 58 passed |
-| pytest tests/test_lyrics_pilot_v013.py -q (tmp isolado) | 0 | 8 passed |
-| python -m ruff check src tests | 0 | All checks passed |
-| python -m ruff format --check . | 0 | 56 files already formatted |
-| git diff --check | 0 | sem erros; somente avisos LF/CRLF |
-| auditoria de hashes, split, privacidade e cardinalidade | 0 | base/split preservados; 2.000 resultados/caches; 1.441 aceitas; holdout 0; privado tracked/staged 0 |
-| python -m ruff check . | 1 | único B018 preexistente em exp_base.py:8; excluído do checkpoint |
-
-Nenhum commit ou push foi realizado depois da coleta.

@@ -1,0 +1,41 @@
+{
+  "inputs": {
+    "reports\\auditoria_catalogo_spotify_20261031\\resumo_catalogo_spotify.json": "0406390fd44ca6d5f151dd1af6e2be2502e25f0a609e6b68f43dbeeb36172812",
+    "reports\\amostra_spotify_200k_20261031\\resumo_amostra_200k.json": "9383596da2f887da8d99fca4ea9eb429fef90507fa11e0728f2474dfb582cba9",
+    "reports\\monografia_consolidada_200k_v1\\images\\distribuicao_popularidade.png": "ab8ed96b1c65b7fc54958fe80c6c59ca995d1622ec103c8475b88d98b635cc68",
+    "reports\\monografia_consolidada_200k_v1\\images\\distribuicao_popularidade.svg": "1946ce0d4786819bc0c6b5538b20a2be8ea1f088531037ec27dec6cf7a2d3143",
+    "reports\\monografia_consolidada_200k_v1\\images\\cobertura_bandas.png": "1d5e7ad8b870c0d1eddbd51e8e6df22334e3bc92d0da1ca3a17a1928be2de508",
+    "reports\\monografia_consolidada_200k_v1\\images\\cobertura_bandas.svg": "742cd6f5cdf95065e6a33b21ec1ab6a6117f5361d321a3813f31c976f5843507",
+    "reports\\monografia_consolidada_200k_v1\\images\\erro_popularidade.png": "4654742f858c458a84336033e0d14e1ae486532130f499cd18f9c3e8464b7c57",
+    "reports\\monografia_consolidada_200k_v1\\images\\erro_popularidade.svg": "f75fa25efa90fbfdfb884b30cab244442fb3bea504265d79b75ef37db0485f82",
+    "reports\\monografia_consolidada_200k_v1\\tables\\metricas.tex": "98f3318718a028a9e05aba15da18447dc702892f1c3674267f10beecaa23d82a",
+    "reports\\monografia_consolidada_200k_v1\\tables\\incerteza.tex": "6891f8be9de1acdf043b98e3d627ddf7d423a2d3e54b31b6c5b703e60d487a0c",
+    "reports\\monografia_consolidada_200k_v1\\tables\\clipping.tex": "6b60e3d822e2d31d4b632c7fe5211ffbba174170857a1d07d24407ff83e65485",
+    "reports\\monografia_consolidada_200k_v1\\tables\\descritivas.tex": "3d12e921bd3247ad0a0d32f43f9db9570f4d893219104cd1ddef532f388577c2",
+    "reports\\monografia_consolidada_200k_v1\\tables\\cobertura.tex": "44ccb456601a4f9673affc2b4c5afaa58c26af4ec9e1ca6b6bc8b53d40eebbcc",
+    "reports\\monografia_consolidada_200k_v1\\tables\\idiomas.tex": "7ba2ffb8c15dbf21f11ba14201cc2f9f80708bfac6c168e804fc7e6b8dd9550e"
+  },
+  "generated": {
+    "images/cobertura_bandas.png": "1d5e7ad8b870c0d1eddbd51e8e6df22334e3bc92d0da1ca3a17a1928be2de508",
+    "images/cobertura_bandas.svg": "742cd6f5cdf95065e6a33b21ec1ab6a6117f5361d321a3813f31c976f5843507",
+    "images/distribuicao_popularidade.png": "ab8ed96b1c65b7fc54958fe80c6c59ca995d1622ec103c8475b88d98b635cc68",
+    "images/distribuicao_popularidade.svg": "1946ce0d4786819bc0c6b5538b20a2be8ea1f088531037ec27dec6cf7a2d3143",
+    "images/erro_popularidade.png": "4654742f858c458a84336033e0d14e1ae486532130f499cd18f9c3e8464b7c57",
+    "images/erro_popularidade.svg": "f75fa25efa90fbfdfb884b30cab244442fb3bea504265d79b75ef37db0485f82",
+    "images/spotify_generos.png": "4e4259ff192bedbd0fb8cbbba70b8ac90773104ce292fc66593291325d5c9531",
+    "images/spotify_generos.svg": "c8fff66de9361dffdd55ac08f7c5fa3f14fd97c4b10a0215fa9e2a3bc4d8c56c",
+    "images/spotify_panorama.png": "10709166a43ee9edd1a5a396ae466ec1293443ed851ed535d15756114e38ffcf",
+    "images/spotify_panorama.svg": "83d758faab05885bb1fd09462cfe0be7792db913b26859ee739dbe377ceb3233",
+    "tables/clipping.tex": "6b60e3d822e2d31d4b632c7fe5211ffbba174170857a1d07d24407ff83e65485",
+    "tables/cobertura.tex": "4048ebd28c39d863a2b27607eb1193d81d9a6b880dcb530da5a8a1bf83b0ffef",
+    "tables/descritivas.tex": "3d12e921bd3247ad0a0d32f43f9db9570f4d893219104cd1ddef532f388577c2",
+    "tables/idiomas.tex": "7ba2ffb8c15dbf21f11ba14201cc2f9f80708bfac6c168e804fc7e6b8dd9550e",
+    "tables/incerteza.tex": "6891f8be9de1acdf043b98e3d627ddf7d423a2d3e54b31b6c5b703e60d487a0c",
+    "tables/metricas.tex": "2b47d07a450ea06d0ba417b61cdb8f570fd91997d9b4d00cdc02105001fd675a",
+    "tables/spotify_acusticas.tex": "c7a678346f013d130f32288ab031f81e5dab60dda2478ae24e40947e0c529b3b",
+    "source_data/perfil_catalogo.json": "6297e10f70b92a98c3afb3ab324075ada280f6af9245fa077e85b91978f0df8a"
+  },
+  "generator_sha256": "4cbb5d3d495bb74aab7f33adbc44698a8c6fffd0e01c68a44e6aee0249f6f5c7",
+  "individual_data_read": false,
+  "new_model_fits": 0
+}

@@ -1,0 +1,109 @@
+{
+  "status": "completed",
+  "completed": true,
+  "sample_rows": 200000,
+  "sample_sha256": "cbaf98e2771067ab70538068d85b029ce77fbcdfb86e8b35f34a2a7abf46faff",
+  "sample_summary_sha256": "9383596da2f887da8d99fca4ea9eb429fef90507fa11e0728f2474dfb582cba9",
+  "source": {
+    "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+    "size": 261755867136,
+    "mtime_ns": 1793112801795482900,
+    "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+    "source": {
+      "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+      "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+      "compressed_bytes": 47837763733,
+      "database_bytes": 261755867136,
+      "etag": "9595e9d143bf175845a9e41acd298884-2852"
+    }
+  },
+  "rules_version": "sample-local-200k-v1",
+  "code_hashes": {
+    "sample_lyrics.py": "5cb01afec12530fcb3dab012e068465407ca6737523a5208435b196bbe1b1072",
+    "protocolo_busca_local_200k.md": "0c5baa204dc387bff38d49620ca0301d4667349633c25c2f381b54be770be38f",
+    "local_lyrics.py": "4999e2382bf4c3a04d429f45d541c5df945cb9e096d55f588b40983c570f9a93",
+    "normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+    "lyrics_pilot.py": "7e8e36dbd48dbdcaf9b20d470bfc44d0baaa1961f9bf05b7a20cdb1f60c0ca8a",
+    "lyrics_ambiguity_v011.py": "9160a72007d06c721e4e9a9fe7827474ac3bdeb0909f250be237691414f7df73",
+    "lyrics_embeddings_v020.py": "d9a43824ac89ac66c1f07ce99e3fb1bba7a20820aacbeb84a39a796a33549e7f",
+    "catalog_sampling.py": "c4d378304c7d7a586a048260418f983b9e6a2aae1702d15e38be092a3e19b99d",
+    "catalog_audit.py": "3ef3d833e9d05c7703a882368bc4425dbead7fe6989ca10d86f512eeac485dc5",
+    "manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f"
+  },
+  "language": {
+    "available": true,
+    "version": "1.1.6",
+    "model_sha256": "e2d675b6d0f511cbb5317b4770c9289754b7338dec97fce660ff09c91b3d95a7",
+    "threshold": 0.8,
+    "uncertainty": "normalized model score, not calibrated probability"
+  },
+  "index": {
+    "previous_scanned": 33714178,
+    "previous_indexed": 12757266,
+    "filter": "normalized artists in prior manifest; no language/text filter",
+    "sample_artists": 39808,
+    "additional_artists": 28410,
+    "supplemental_progress": {
+      "last_id": 39053376,
+      "scanned": 33714178,
+      "indexed": 4455510,
+      "complete": true,
+      "updated_at": "2026-10-31T20:11:07.896994+00:00"
+    },
+    "elapsed_seconds_this_invocation": 1900.1425320000271
+  },
+  "http_requests": 0,
+  "old_cache_imports": 0,
+  "command_argv": [
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\scripts\\13_buscar_letras_amostra_200k.py",
+    "--all"
+  ],
+  "last_invocation_started_at": "2026-10-31T19:39:27.785563+00:00",
+  "versions": {
+    "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.2",
+    "polars": "1.43.2",
+    "sqlite": "3.50.4"
+  },
+  "expected_high_popularity_tracks": 499,
+  "checks": {
+    "sample_hash_unchanged": true,
+    "one_row_per_track": true,
+    "original_fields_weights_preserved": true,
+    "text_references_hashes_valid": true
+  },
+  "private_text_rows": 77391,
+  "plots": [
+    "cobertura_popularidade_200k.png",
+    "cobertura_genero_200k.png",
+    "cobertura_periodo_200k.png"
+  ],
+  "status_counts": {
+    "accepted": 77391,
+    "not_found": 88049,
+    "ambiguous": 25775,
+    "insufficient_metadata": 27,
+    "no_text": 10,
+    "instrumental": 8748
+  },
+  "runs": [
+    {
+      "started_at": "2026-10-31T20:11:08.318423+00:00",
+      "new_queries": 199973,
+      "new_tracks": 199973,
+      "reused_queries": 0,
+      "reused_tracks": 0,
+      "errors_this_run": 0,
+      "old_cache_imports": 0,
+      "stop_reason": null,
+      "elapsed_seconds": 1691.3110212999745
+    }
+  ],
+  "execution_seconds_cumulative": 1691.3110212999745,
+  "queries_total": 199973,
+  "queries_ever_attempted": 199973,
+  "tracks_ever_attempted": 199973,
+  "updated_at": "2026-10-31T20:39:57.204100+00:00",
+  "invocation_elapsed_seconds_including_reports": 3676.3966107000015
+}

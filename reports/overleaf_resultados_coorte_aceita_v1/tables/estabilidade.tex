@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering\small
+\caption{MAE e erros grandes por fold nos modelos aditivos}\label{tab:estabilidade}
+\begin{tabular}{crrrrr}
+\toprule
+Fold & MAE B & MAE T & $\Delta$MAE & Erros >20 B & Erros >20 T\\\midrule
+1 & 6,9317 & 6,8370 & -0,0947 & 389 & 364\\
+2 & 7,1595 & 7,0598 & -0,0997 & 417 & 396\\
+3 & 6,9849 & 6,9208 & -0,0640 & 405 & 382\\
+4 & 6,9283 & 6,8910 & -0,0374 & 387 & 386\\
+5 & 6,7629 & 6,7400 & -0,0228 & 347 & 354\\
+\bottomrule
+\end{tabular}
+\fonte{Elaboração a partir dos resultados salvos da coorte aceita.}
+\nota{B = Baseline; T = Tradicional. Os folds não são experimentos independentes.}
+\end{table}

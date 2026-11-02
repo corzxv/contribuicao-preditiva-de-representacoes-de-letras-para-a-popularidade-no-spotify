@@ -1,0 +1,17 @@
+\chapter{Rastreabilidade e reprodução}\label{ap:reproducao}
+\section{Artefatos e verificação}
+Os números do manuscrito estão ligados a agregados reais das auditorias de catálogo, amostra, recuperação v2, preparação de representações, modelagem e diagnósticos. Cada etapa registra código, configuração e hashes das entradas. O pacote LaTeX inclui as tabelas, figuras e agregados selecionados que permitem compilar e conferir sua apresentação sem acesso às letras ou aos modelos.
+
+O CSV Spotify congelado tem SHA-256 iniciado por \texttt{42fff9e85d1b26c3}; o arquivo de previsões externas, por \texttt{4e9bc8839ceb76be}; e a assinatura da regressão, por \texttt{34e5e6e0b46462ec}. São abreviações para leitura, não identificadores completos de verificação. Os hashes integrais e os caminhos dos agregados estão em \path{PROVENIENCIA_AGREGADOS.json} no projeto LaTeX e nos resumos originais.
+
+A revisão E5 utilizada é \texttt{614241f622f53c4eeff9890bdc4f31cfecc418b3}. A configuração fixa dimensão 384, CPU float32, limite 512, overlap 32 e o tratamento de prefixo descrito no Capítulo~\ref{cap:representacoes}. O snapshot e os vetores são privados; não integram o ZIP da monografia.
+
+\section{Sequência metodológica reproduzível}
+O projeto foi desenvolvido em Python, com lógica disponível por CLI, sem depender de um notebook como única fonte. O uso de scikit-learn se apoia na biblioteca descrita por \citet{pedregosa2011}; a execução registrada utilizou scikit-learn 1.9.1, NumPy 2.5.2, PyTorch 2.8.0 e Transformers 4.57.1. Esses números documentam o ambiente utilizado, não garantem disponibilidade futura das mesmas versões.
+
+A reprodução científica das etapas originais exige as fontes congeladas e seus resumos. A reprodução editorial desta versão exige apenas os arquivos do pacote: \texttt{main.tex}, capítulos, bibliografia, tabelas e imagens. Nenhuma etapa de treino ou recuperação precisa ser executada para compilar a monografia. O gerador editorial calcula figuras e tabelas somente de agregados já produzidos, sem recomputar previsões.
+
+As verificações distinguem integridade de arquivos e validade substantiva. As 30 partes externas foram reconciliadas e as métricas globais reproduzidas na auditoria; os diagnósticos posteriores preservaram suas entradas. O teste de pooling utilizou estados artificiais e a investigação do prefixo utilizou apenas quatro frases artificiais curtas, sem gerar embeddings do corpus. Isso não substitui validação de matching ou estimação integral da incerteza.
+
+\section{Preservação e acesso}
+O pacote não contém dados individuais, letras, modelos ou credenciais. As fontes brutas, índices locais e derivados privados permanecem nos diretórios originais, sem movimentação para fins de escrita. Os pacotes parciais anteriores também permanecem preservados. O material de revisão inclui inventário de reaproveitamento, verificação da compilação e pendências, separando fatos confirmados de informações ainda não disponíveis.

@@ -1,0 +1,394 @@
+[
+  {
+    "doi": "10.1080/00401706.1970.10488634",
+    "title": [
+      "Ridge Regression: Biased Estimation for Nonorthogonal Problems"
+    ],
+    "authors": [
+      {
+        "given": "Arthur E.",
+        "family": "Hoerl",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Delaware and E. 1. du Pont de Nemours & Co"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Robert W.",
+        "family": "Kennard",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Delaware and E. 1. du Pont de Nemours & Co"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": [
+      [
+        1970,
+        2
+      ]
+    ],
+    "venue": [
+      "Technometrics"
+    ],
+    "volume": "12",
+    "issue": "1",
+    "pages": "55-67",
+    "source": "https://api.crossref.org/works/10.1080%2F00401706.1970.10488634"
+  },
+  {
+    "doi": "10.3368/jhr.50.2.317",
+    "title": [
+      "A Practitioner’s Guide to Cluster-Robust Inference"
+    ],
+    "authors": [
+      {
+        "given": "A.",
+        "family": "Colin Cameron",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Douglas L.",
+        "family": "Miller",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": [
+      [
+        2015
+      ]
+    ],
+    "venue": [
+      "Journal of Human Resources"
+    ],
+    "volume": "50",
+    "issue": "2",
+    "pages": "317-372",
+    "source": "https://api.crossref.org/works/10.3368%2Fjhr.50.2.317"
+  },
+  {
+    "doi": "10.1080/01621459.2023.2197686",
+    "title": [
+      "Cross-Validation: What Does It Estimate and How Well Does It Do It?"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-3273-8179",
+        "authenticated-orcid": false,
+        "given": "Stephen",
+        "family": "Bates",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Statistics and EECS, University of California",
+            "place": [
+              "Berkeley"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0164-3142",
+        "authenticated-orcid": false,
+        "given": "Trevor",
+        "family": "Hastie",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Statistics and Biomedical Data Science, Stanford University",
+            "place": [
+              "Stanford"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Robert",
+        "family": "Tibshirani",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Biomedical Data Science and Statistics, Stanford University",
+            "place": [
+              "Stanford"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": [
+      [
+        2023,
+        5,
+        15
+      ]
+    ],
+    "venue": [
+      "Journal of the American Statistical Association"
+    ],
+    "volume": "119",
+    "issue": "546",
+    "pages": "1434-1445",
+    "source": "https://api.crossref.org/works/10.1080%2F01621459.2023.2197686"
+  },
+  {
+    "doi": "10.1038/s41598-024-55742-x",
+    "title": [
+      "Song lyrics have become simpler and more repetitive over the last five decades"
+    ],
+    "authors": [
+      {
+        "given": "Emilia",
+        "family": "Parada-Cabaleiro",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maximilian",
+        "family": "Mayerl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Stefan",
+        "family": "Brandl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Marcin",
+        "family": "Skowron",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Markus",
+        "family": "Schedl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Elisabeth",
+        "family": "Lex",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Eva",
+        "family": "Zangerle",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": [
+      [
+        2024,
+        3,
+        28
+      ]
+    ],
+    "venue": [
+      "Scientific Reports"
+    ],
+    "volume": "14",
+    "issue": "1",
+    "pages": null,
+    "source": "https://api.crossref.org/works/10.1038%2Fs41598-024-55742-x"
+  },
+  {
+    "doi": "10.1038/s41598-024-62519-9",
+    "title": [
+      "Author Correction: Song lyrics have become simpler and more repetitive over the last five decades"
+    ],
+    "authors": [
+      {
+        "given": "Emilia",
+        "family": "Parada‑Cabaleiro",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Maximilian",
+        "family": "Mayerl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Stefan",
+        "family": "Brandl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Marcin",
+        "family": "Skowron",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Markus",
+        "family": "Schedl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Elisabeth",
+        "family": "Lex",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Eva",
+        "family": "Zangerle",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "year": [
+      [
+        2024,
+        5,
+        22
+      ]
+    ],
+    "venue": [
+      "Scientific Reports"
+    ],
+    "volume": "14",
+    "issue": "1",
+    "pages": null,
+    "source": "https://api.crossref.org/works/10.1038%2Fs41598-024-62519-9"
+  }
+]

@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Desempenho nas previsões externas reunidas ($n=77.535$).}
+\label{tab:metricas}
+\begin{tabular}{lrrrr}
+\toprule
+Configuração & MAE & RMSE & R² & MAE ponderado \\
+\midrule
+Baseline & 8,3525 & 10,8255 & 0,5087 & 8,2194 \\
+Tradicional & 8,2957 & 10,7538 & 0,5152 & 8,1652 \\
+Profundo & 8,1285 & 10,5540 & 0,5330 & 8,0032 \\
+Combinado & 8,1151 & 10,5381 & 0,5344 & 7,9908 \\
+Média do treino & 12,5621 & 15,4463 & -0,0003 & 12,4181 \\
+Mediana do treino & 12,4786 & 15,5708 & -0,0165 & 12,3213 \\
+\bottomrule
+\end{tabular}
+\fonte{Elaboração própria a partir dos agregados auditados do estudo.}
+\nota{Pesos iguais no ajuste e na avaliação principal. Última coluna: sensibilidade com pesos originais nas mesmas previsões; não houve retreino ponderado.}
+\end{table}

@@ -1,0 +1,18 @@
+{
+  "purpose": "Documentação de resultados existentes; nenhum ajuste ou métrica reexecutado",
+  "source_directory": "data/derived/private_statistical_cohort_v1",
+  "sources": {
+    "summary.json": "9802d53e21a8bb55b335ccff15bfc97b37d9531a0435bf3fe422a29c160c472f",
+    "description/summary.json": "044a6db2f4a09e91d8aa4cd8c1c46e1452b643c854aed9e5710dc78341196f22",
+    "description/target_bins.csv": "0091f68a2518784ec0d6320230a8308e283f9630a00fe3865f98155d4aead947",
+    "metrics.csv": "9c16779b281a6e12dae5d1dd5e8b209752c8bc0907cf1d4301c965adefe5050b",
+    "paired_comparisons.csv": "ea519bdcaa028170814b55d517159bbb15470a319274b66d88720809fea2977c",
+    "selected_parameters.csv": "875c2c715d00a12a73fa255be0552560a16e0ccb03ee0772aef9d23c2f781c91",
+    "coverage.csv": "f0ceb4c98c7bddacf1145be26cad13a7b20ca35af792dde0bfbac39b926b8b65",
+    "verification.json": "3a975c2f36aab5c5f2a4a9bb3c4daa6d1a677ed3c6a37975b96086e80893265d",
+    "progress.json": "3b34634410833b88d137187803260dd8587337691f7c4e74a8727a896fd0939d",
+    "description/target_distribution.png": "5db1a7eb1572c66ce7bf6d1a0a9ee3d591cd9d50e52b3e1ad45e3b1795888739",
+    "diagnostics/additive_ridge__traditional.png": "bc09194ee1c82b3276816bebef76984be03cf34579be90b0ba277afefc4d9eae"
+  },
+  "reference_layout": "TCC1_Proposta_Felipe_Cordeiro.pdf, do próprio autor; aparência reconstruída sem fontes TeX originais"
+}

@@ -2,20 +2,20 @@
   "status": "complete",
   "audit_version": "v0.1.1",
   "source_cache_latest_timestamp": "2026-09-04T20:38:23.132043+00:00",
-  "git_commit": "0eef0e659e0417e17a88da2e5d07904dd4461e84",
+  "git_commit": "a37946ae2ddb211abe85d67a9b69fc7e88a71b86",
   "network_requests_made": 0,
   "network_attempts_blocked": 0,
   "cache_before": {
-    "file_count": 147,
-    "manifest_sha256": "5bfb8502075db1c6209874b23ea94a63fcf63da40e7735a0f7765a8b6ce7ad4b"
+    "file_count": 2000,
+    "manifest_sha256": "f10853a36b26ceb663d8f3e6eed0678082131c73ed4d7a2d7c8dd1a9e37a0e86"
   },
   "cache_after": {
-    "file_count": 147,
-    "manifest_sha256": "5bfb8502075db1c6209874b23ea94a63fcf63da40e7735a0f7765a8b6ce7ad4b"
+    "file_count": 2000,
+    "manifest_sha256": "f10853a36b26ceb663d8f3e6eed0678082131c73ed4d7a2d7c8dd1a9e37a0e86"
   },
   "cache_unchanged": true,
   "smoke_compositions": 100,
-  "non_smoke_cache_count": 47,
+  "non_smoke_cache_count": 1900,
   "smoke_split_values": [
     "development_train"
   ],

@@ -1,0 +1,7 @@
+# Os selos científicos usam SHA-256 dos bytes exatos dos arquivos.
+# Não converter quebras de linha ao adicionar ou clonar o repositório.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# SVGs são figuras geradas; a comparação de milhares de coordenadas não é textual.
+*.svg -diff
+# Conservar inclusive a linha final da fonte acadêmica anterior, já identificada por hash.
+reports/monografia_consolidada_200k_v1/chapters/11_conclusoes.tex whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol

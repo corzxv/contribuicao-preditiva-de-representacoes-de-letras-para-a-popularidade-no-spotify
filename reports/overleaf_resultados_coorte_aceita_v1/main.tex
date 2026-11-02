@@ -1,0 +1,39 @@
+% Trecho autônomo para leitura. Integração no TCC: ver README.md.
+% Aparência reconstruída a partir do PDF da proposta do autor; não é classe oficial.
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage{lmodern,microtype,indentfirst}
+\usepackage{graphicx,booktabs,longtable,amsmath,array,setspace,tabularx}
+\usepackage{fancyhdr,caption,pdflscape,placeins}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Metodologia e resultados da coorte ampliada de letras},pdfauthor={Felipe Macedo Cordeiro}}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\headheight}{16pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\nouppercase{\leftmark}}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\headrulewidth}{0.4pt}
+\captionsetup{font=small,labelfont=bf}
+\newcommand{\fonte}[1]{\par\smallskip{\footnotesize Fonte: #1\par}}
+\newcommand{\nota}[1]{\par\smallskip{\footnotesize Nota: #1\par}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\numberwithin{equation}{subsection}
+\setcounter{section}{2}
+\begin{document}
+\input{sections/metodologia}
+\clearpage
+\input{sections/resultados}
+\clearpage
+\input{sections/discussao}
+\clearpage
+\input{references/referencias}
+\end{document}

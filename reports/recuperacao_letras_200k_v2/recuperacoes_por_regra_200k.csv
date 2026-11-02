@@ -1,0 +1,9 @@
+﻿recovery_rule,n_tracks,sum_weights
+cache+contextual_metadata,110,640.1575061494317
+cache+contextual_metadata+ignore_empty,1,5.712121212121212
+cache+explicit_feat_layout,1,5.850501367365543
+cache+explicit_feat_layout+qualifier_layout,2,11.616738816738817
+cache+qualifier_layout,2,11.116819571865443
+controlled_lookup+explicit_feat_layout,22,128.32780454114473
+controlled_lookup+explicit_feat_layout+qualifier_layout,2,11.548450211100814
+controlled_lookup+literal_symbols,4,23.327037512960946

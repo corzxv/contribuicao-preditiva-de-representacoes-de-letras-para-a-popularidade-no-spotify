@@ -1,0 +1,22 @@
+\chapter{Introdução}\label{cap:introducao}
+\section{Problema de pesquisa}
+A popularidade observada de uma música reúne dimensões que não se reduzem às propriedades de seu sinal acústico. A letra é outra fonte de informação disponível para caracterizar a obra: sua extensão, organização, repetição e conteúdo podem distinguir faixas com perfis diferentes. A presença dessas distinções, entretanto, não demonstra que sejam úteis para prever um indicador de popularidade depois que metadados e atributos acústicos já foram considerados. A pergunta exige uma comparação incremental sobre as mesmas observações e com avaliação fora dos dados utilizados no ajuste.
+
+Este trabalho investiga se representações textuais de letras reduzem o erro de estimação da popularidade Spotify observada no snapshot de uma fonte pública. A formulação se concentra em um indicador já registrado, e não no sucesso futuro de um lançamento. A data exata de medição da popularidade na fonte não está confirmada; assim, a temporalidade disponível não permite interpretar o estudo como previsão prospectiva.
+
+O interesse pela letra tem antecedente na análise computacional de descritores lexicais e estruturais. O conjunto de dados de \citet{parada2024data} disponibiliza informações textuais derivadas de músicas associadas ao LFM-2b. Sua existência motivou etapas iniciais do projeto. A versão atual, contudo, calcula representações sobre o mesmo texto aceito no LRCLIB para cada faixa da amostra Spotify, evitando condicionar a elegibilidade à integração com aquele conjunto histórico.
+
+\section{Objetivos}
+O objetivo geral é avaliar a associação preditiva incremental de representações textuais com a popularidade observada, em conjunto com metadados e descritores acústicos, dentro de um domínio definido de faixas com letras aceitas. A comparação mantém a família de regressão Ridge e modifica os conjuntos de variáveis. São examinadas quatro configurações: Baseline, Tradicional, Profundo e Combinado.
+
+Os objetivos específicos são: caracterizar as fontes e suas unidades; preservar um desenho amostral probabilístico para a descrição do catálogo acessível; documentar a recuperação e a seleção textual; construir descritores e embeddings sobre entradas compatíveis; prevenir compartilhamento de relações operacionais entre treino e avaliação; comparar erros externos pareados; e investigar estabilidade, heterogeneidade e resíduos sem modificar retrospectivamente o resultado principal.
+
+A distinção entre associação, avaliação preditiva e inferência populacional orienta essas etapas. Associação significa que padrões observados podem estar relacionados ao indicador; contribuição preditiva é a diferença de desempenho fora do treino no procedimento definido; inferência populacional exige, adicionalmente, um mecanismo de seleção ou um modelo que sustente a extrapolação. O presente estudo não identifica efeitos causais da letra sobre a popularidade.
+
+\section{Justificativa e contribuição}
+Uma comparação de representações só é interpretável quando a vantagem de uma configuração não pode ser atribuída a mudanças silenciosas de população, resposta ou partições. A contribuição metodológica do trabalho é organizar uma avaliação pareada que conserva esses elementos, explicita a disponibilidade seletiva das letras e separa a extração textual do aprendizado supervisionado.
+
+O domínio observado contém 77.535 faixas, extraídas de uma amostra estratificada de 200.000 registros. O número de casos viabiliza a comparação, mas não comprova qualidade dos matches, representatividade ou suficiência preditiva. A avaliação incorpora tanto o ganho médio quanto situações em que ele é pequeno ou não ocorre. Particular atenção é dedicada à cauda de popularidade e à diferença entre descritores transparentes e vetores de um encoder neural congelado.
+
+\section{Organização e delimitação}
+Os capítulos seguintes apresentam fundamentação, fontes, amostragem e integração; caracterizam cobertura e seleção; descrevem representações e modelagem; e discutem resultados e diagnósticos. Os apêndices registram definições, proveniência, trajetória do projeto e pendências documentais. A avaliação principal foi encerrada e seus resultados preservados. Experimentos anteriores aparecem apenas como história do desenvolvimento, sem serem tratados como réplicas ou combinados numericamente com a comparação atual.

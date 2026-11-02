@@ -1,0 +1,74 @@
+% Estrutura e diagramação adaptadas do template fornecido pelo pesquisador.
+% Referências autor-data com o mesmo backend BibTeX do exemplo de Ana.
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx,booktabs,array,longtable}
+\usepackage{fancyhdr,titletoc,titlesec,setspace,indentfirst}
+\usepackage{caption,float,placeins}
+\usepackage[colorlinks=true,allcolors=black,bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark}
+\usepackage[alf]{abntex2cite}
+\numberwithin{equation}{subsection}
+\newcommand{\titulo}{Contribuição preditiva de representações de letras para a popularidade no Spotify}
+\newcommand{\autor}{Felipe Macedo Cordeiro}
+\newcommand{\orientador}{Leandro Tavares Correia}
+\newcommand{\fonte}[1]{\par\vspace{2pt}{\footnotesize Fonte: #1\par}}
+\newcommand{\nota}[1]{\par{\footnotesize Nota: #1\par}}
+\newcommand{\figura}[4]{\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{images/#1.png}\caption{#2}\label{#3}\fonte{#4}\end{figure}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\pagestyle{fancy}\fancyhf{}
+\setlength{\headheight}{16pt}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[RE,LO]{\nouppercase{\emph{\leftmark}}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\titlecontents{section}[0cm]{}{\bfseries\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+\titlecontents{subsection}[.75cm]{}{\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+\setcounter{secnumdepth}{3}\setcounter{tocdepth}{2}
+\captionsetup{font=small,labelfont=normalfont,justification=centering}
+\setlength{\parindent}{1.5cm}\setlength{\parskip}{0.2cm}
+\setlength{\intextsep}{0.5cm}
+\titlespacing*{\section}{0cm}{0cm}{0.5cm}
+\titlespacing*{\subsection}{0cm}{0.5cm}{0.35cm}
+\titlespacing*{\subsubsection}{0cm}{0.4cm}{0.25cm}
+\raggedbottom
+\hypersetup{pdftitle={Contribuição preditiva de representações de letras para a popularidade no Spotify},pdfauthor={Felipe Macedo Cordeiro}}
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{capa}
+\input{rosto}
+\clearpage\pagenumbering{roman}\hypersetup{pageanchor=true}
+\onehalfspacing
+\input{resumo}
+\clearpage\listoftables
+\clearpage\listoffigures
+\clearpage\tableofcontents
+\clearpage\pagenumbering{arabic}
+\section{Introdução}\label{sec:introducao}
+\input{introducao}
+\clearpage\section{Referencial teórico}\label{sec:teoria}
+\input{refteorico}
+\clearpage\section{Dados e metodologia}\label{sec:metodologia}
+\input{metodologia}
+\clearpage\section{Resultados e discussão}\label{sec:resultados}
+\input{resultados}
+\clearpage\section{Considerações finais}\label{sec:conclusao}
+\input{conclusao}
+\clearpage\phantomsection\addcontentsline{toc}{section}{Referências}
+\markboth{Referências}{}
+\bibliographystyle{abntex2-alf}
+\begingroup\small\singlespacing\raggedright
+\interlinepenalty=10000
+\bibliography{ref}
+\endgroup
+\clearpage\appendix
+\section{Definições dos descritores textuais}\label{ap:descritores}
+\input{apendice_descritores}
+\clearpage\section{Limites auxiliares para os contrastes}\label{ap:incerteza}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\input{apendice_incerteza}
+\end{document}

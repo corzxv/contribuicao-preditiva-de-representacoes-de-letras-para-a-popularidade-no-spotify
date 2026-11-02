@@ -1,0 +1,59 @@
+\subsection{Desempenho global e ganho incremental}
+A Tabela~\ref{tab:metricas} reúne as previsões externas das mesmas 77.535 faixas. Todas as configurações Ridge superaram as referências de média e mediana do treino. Entre as configurações, o Combinado apresentou o menor MAE (8,1151), seguido de Profundo (8,1285), Tradicional (8,2957) e Baseline (8,3525). RMSE e $R^2$ mantiveram a mesma ordenação. O resultado mostra redução de erro na avaliação realizada, sem atribuir às letras causalidade sobre o escore.
+
+\input{tables/metricas}
+
+O acréscimo dos 21 descritores ao Baseline reduziu o MAE em 0,0568 ponto (0,68\%). O acréscimo dos embeddings reduziu-o em 0,2240 ponto (2,68\%). Reunindo ambas as representações, a redução frente ao Baseline foi 0,2374 ponto (2,84\%). Assim, a maior parcela do ganho conjunto já aparece na configuração com embeddings. Adicionar os descritores ao Profundo produziu redução de apenas 0,0134 ponto (0,16\%). A dimensão do ganho importa além de sua direção: a melhora média é modesta diante de um erro absoluto ainda próximo de oito pontos.
+
+A ponderação pelos pesos originais de amostragem, aplicada somente às mesmas previsões, preservou a ordenação. O MAE ponderado passou de 8,2194 no Baseline a 7,9908 no Combinado, redução de 2,78\%. Essa concordância indica que o sentido da comparação não depende apenas da contribuição relativa dos estratos na avaliação sem pesos. Não demonstra que os pesos corrijam a seleção de letras ou que o desempenho ponderado se generalize ao catálogo.
+
+O Combinado superou o Baseline nos cinco testes externos; as diferenças de MAE variaram de $-0,2724$ a $-0,2070$. Retirar um componente de cada vez apenas da avaliação, mantendo os modelos fixos, não inverteu o sinal dos contrastes examinados. Esses resultados descrevem estabilidade nos casos e divisões existentes, mas não são cinco réplicas independentes, validação com reajuste a cada retirada ou intervalos de confiança.
+
+Em seis dos vinte ajustes externos Ridge, a penalização selecionada foi o menor valor da grade, $\alpha=0,1$. Isso não demonstra erro de otimização ou que uma grade ampliada necessariamente melhoraria desempenho. A comparação se refere ao procedimento especificado; modificar a grade depois de observar seus testes externos criaria outra etapa de desenvolvimento. Os resultados atuais foram preservados.
+
+\subsection{Incerteza dos contrastes e alcance da evidência}\label{subsec:incerteza}
+As diferenças calculadas nas previsões existentes são conhecidas exatamente para esses casos. Quantificar sua variação em avaliações hipotéticas exige um alvo e hipóteses adicionais. A análise auxiliar do Apêndice~\ref{ap:incerteza} utiliza os componentes para permitir dependência interna e condiciona separadamente no par de modelos de cada fold. Os limites da Tabela~\ref{tab:incerteza} têm nível nominal de 95\% nesse modelo auxiliar, com ajuste Bonferroni; não representam a incerteza integral de seleção, treinamento e construção de dados.
+
+\input{tables/incerteza}
+
+Para Combinado--Baseline, os limites mantêm valores negativos, entre $-0,3140$ e $-0,1607$ ponto. Para Combinado--Profundo, abrangem zero, de $-0,0303$ a $0,0035$. A sensibilidade ponderada leva à mesma interpretação. O ganho adicional dos descritores além dos embeddings permanece inconclusivo nessa análise; isso não demonstra equivalência entre configurações. Também não se declara significância integral do ganho conjunto, pois o alvo condicional não abrange toda a variação do procedimento.
+
+Essa distinção é compatível com a discussão de \citeonline{bates2024}: erro de um modelo ajustado, desempenho médio de um algoritmo e variabilidade da CV não são a mesma quantidade. Um bootstrap das perdas por componente com previsões congeladas variaria a composição da avaliação, mas não repetiria a escolha de hiperparâmetros nem o treinamento. A grande quantidade de componentes, por si só, não resolve a sobreposição entre treinos ou transforma grupos operacionais em uma amostra independente de composições.
+
+\subsection{Popularidade elevada e subestimação}
+A Figura~\ref{fig:bandaserro} mostra que a média global encobre erros diferentes ao longo do alvo. Nas 128 faixas aceitas com popularidade de pelo menos 80, o Combinado teve MAE de 29,3711 pontos, muito acima do global. Essas faixas pertencem a 96 componentes e têm popularidade observada entre 80 e 96: 116 estão em 80--84, oito em 85--89 e quatro em 90--100. Portanto, a dificuldade não se restringe a poucos valores próximos de cem.
+
+\figura{erro_popularidade}{MAE do Baseline e do Combinado por banda de popularidade observada.}{fig:bandaserro}{Elaboração própria a partir das previsões externas existentes. As bandas são definidas pelo alvo observado; contagens indicadas na figura.}
+
+Todas as 128 faixas foram subestimadas pelas quatro configurações. No Combinado, a popularidade média observada foi 81,8125, enquanto a previsão média foi 52,4414; a maior previsão nessa cauda foi 77,9977. Definindo o desvio assinado de diagnóstico por $r_i=\widehat y_i-y_i=-e_i$, a mediana foi $-28,7755$, com primeiro e terceiro quartis de $-37,2444$ e $-22,4381$. Houve 101 subestimações de pelo menos vinte pontos e 22 de pelo menos quarenta pontos, evidenciando um padrão amplo na cauda aceita.
+
+Apesar desses erros elevados, a cauda contém apenas 0,1651\% das faixas avaliadas e produz 0,5975\% do erro absoluto total do Combinado. Sua contribuição aditiva ao MAE global é
+\begin{equation}\label{eq:contribuicaocauda}
+ \frac{1}{77.535}\sum_{i:y_i\ge80}|e_i|=0,04849.
+\end{equation}
+Para o erro quadrático total, a participação é 1,4591\%. O baixo peso numérico da cauda permite que um bom resultado médio relativo conviva com desempenho fraco nos escores mais altos. Isso limita aplicações voltadas a identificar músicas muito populares.
+
+A compressão das previsões é compatível com regularização e informação insuficiente para distinguir a cauda, mas o diagnóstico não identifica causalmente seu mecanismo. Condicionar nos maiores valores observados pode gerar erros negativos mesmo sem falha de código. Essa análise também difere de estudar calibração condicionada na previsão, $E(Y\mid\widehat Y)$. No domínio inteiro, o Combinado não produziu nenhuma previsão de pelo menos 80.
+
+\FloatBarrier
+\subsection{Previsões negativas e restrição ao suporte}
+O Combinado produziu 615 previsões negativas, em 317 componentes, com mínimo de $-32,7066$ e mediana de $-1,7873$. Nessas faixas, a popularidade observada tem média 5,3122 e mediana três; 133 respostas são zero e apenas uma é de pelo menos quarenta. A extrapolação se concentra na borda inferior. A regressão Ridge da Equação~\ref{eq:ridge} não impõe restrição de suporte, de modo que valores negativos não constituem, isoladamente, evidência de dados corrompidos.
+
+Como sensibilidade separada, aplicou-se a projeção
+\begin{equation}\label{eq:clipping}
+ \widetilde y_i=\min\{100,\max\{0,\widehat y_i\}\}.
+\end{equation}
+Para $y_i\in[0,100]$, ela não aumenta o erro absoluto nem o quadrático de nenhuma observação, pois aproxima uma previsão externa ao intervalo admissível. A melhora decorrente não representa nova informação das letras. A Tabela~\ref{tab:clipping} apresenta essa análise sem substituir o resultado principal.
+
+\input{tables/clipping}
+
+A ordenação permanece a mesma e o MAE do Combinado passa a 8,0970, redução de 0,0181 ponto. Nenhuma das 128 previsões da cauda é alterada, porque elas já estavam em $[0,100]$. O clipping reduz extrapolações de suporte, mas não resolve a subestimação das faixas de alta popularidade. Como análise posterior, não foi incorporado retroativamente à regra principal de avaliação.
+
+\subsection{Idiomas, heterogeneidade e limitações}
+A Tabela~\ref{tab:idiomas} evidencia heterogeneidade linguística. O ganho Combinado--Baseline é favorável nos status inglês e não inglês, mas desfavorável nos 180 casos incertos. Esse status pequeno não permite uma conclusão geral sobre uma língua específica. Os grupos são estimados automaticamente, e nenhuma faixa foi excluída para melhorar a comparação.
+
+\input{tables/idiomas}
+
+Entre os 76 gêneros com métricas publicadas pelos limiares descritivos de pelo menos cem faixas e vinte componentes, 59 favoreceram o Combinado e 17 não. Essas comparações são exploratórias e podem compartilhar componentes entre categorias; não representam uma bateria confirmatória de testes por gênero. O ganho médio não autoriza prometer benefício para todos os idiomas ou estilos.
+
+O alcance das conclusões combina limitações de fonte, integração e avaliação. O catálogo não cobre probabilisticamente toda a plataforma, a data do escore é desconhecida e a disponibilidade de letras é seletiva. As regras de matching preservam ambiguidades, mas não tiveram precisão global estimada por revisão humana probabilística. O agrupamento reduz vazamentos identificados, sem resolver toda identidade musical ou exposição histórica. Por fim, o encoder avaliado é a variante operacional descrita, e não uma garantia abstrata de desempenho de qualquer embedding E5. Esses limites qualificam a evidência obtida sem exigir que resultados de outras populações sejam misturados aos atuais.

@@ -1,0 +1,65 @@
+\begin{titlepage}
+\centering
+{\large Universidade de Brasília\\Departamento de Estatística\\Bacharelado em Estatística\par}
+\vspace{2.7cm}
+{\large\autorTCC\par}
+\vspace{2.3cm}
+{\Large\bfseries\tituloTCC\par}
+\vfill
+{\large Brasília\\2026\par}
+\end{titlepage}
+\begin{titlepage}
+\centering
+{\large\autorTCC\par}
+\vspace{2.2cm}
+{\Large\bfseries\tituloTCC\par}
+\vspace{2cm}
+\begin{flushright}
+\begin{minipage}{0.62\textwidth}
+Monografia para revisão acadêmica no âmbito do Trabalho de Conclusão de Curso do Bacharelado em Estatística da Universidade de Brasília.
+
+\vspace{0.7cm}
+Orientador: \orientadorTCC.
+\end{minipage}
+\end{flushright}
+\vfill
+{Brasília\\2026\par}
+\end{titlepage}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\chapter*{Nota sobre esta versão}
+\addcontentsline{toc}{chapter}{Nota sobre esta versão}
+Esta versão consolida o percurso empírico e a avaliação principal encerrada em novembro de 2026. Os resultados derivam exclusivamente dos artefatos concluídos do projeto. A redação reúne o estudo atual em um único texto e mantém experimentos anteriores identificados como antecedentes, sem combinar suas métricas com as da amostra recente.
+
+Trata-se de versão para revisão pelo autor e pelo orientador. A estrutura gráfica usa a classe padrão \texttt{report} e não constitui declaração de conformidade a um modelo institucional da UnB. Não foram preenchidas datas de defesa, banca, ficha catalográfica ou informações de coleta que não estejam confirmadas. As pendências documentais e seus meios de verificação são discriminados no Apêndice~\ref{ap:pendencias}.
+
+A avaliação principal foi preservada. Os diagnósticos posteriores, incluindo o desvio de tokenização do encoder e os limites auxiliares de incerteza, integram a discussão com indicação de seu alcance. Não se pretende apresentar uma nova avaliação confirmatória ou inferência para todo o catálogo Spotify.
+
+\chapter*{Resumo}
+\addcontentsline{toc}{chapter}{Resumo}
+Este trabalho avalia a contribuição preditiva incremental de representações textuais de letras para estimar a popularidade Spotify observada na fonte, em conjunto com metadados e descritores acústicos. Uma amostra probabilística estratificada fixa de 200.000 faixas foi selecionada de um catálogo acessível com 1.159.764 identificadores. A recuperação local no LRCLIB resultou em 77.535 faixas com letras aceitas, que constituem o domínio analítico observado, sem pressuposto de representatividade do catálogo ou de todas as músicas com letras. Foram calculados 21 descritores lexicais e estruturais e embeddings de 384 dimensões obtidos de um encoder multilingual-e5-small congelado. A auditoria identificou um token adicional de espaço no tratamento do prefixo; a execução é descrita como variante operacional e seu impacto preditivo específico não foi estimado. Quatro configurações de variáveis foram comparadas com regressão Ridge e validação cruzada agrupada aninhada de cinco folds externos e três internos. Os 21.893 componentes operacionais mantêm relações de artista, composição e texto na mesma partição. O MAE externo foi 8,3525 no Baseline, 8,2957 no Tradicional, 8,1285 no Profundo e 8,1151 no Combinado. A redução do Combinado em relação ao Baseline foi de 2,84\%; o incremento frente ao Profundo foi pequeno e inconclusivo na análise auxiliar condicional. Os 128 casos com popularidade de pelo menos 80 foram subestimados, com MAE de 29,37. A sensibilidade com pesos originais preservou a ordenação dos modelos. Conclui-se que as representações textuais acrescentaram informação preditiva média no domínio estudado, dentro do procedimento Ridge especificado, com limitações de seleção, dependência, temporalidade e adequação das representações. Os resultados não têm interpretação causal nem quantificam toda a incerteza do treinamento.
+
+\noindent\textbf{Palavras-chave:} popularidade musical; letras de músicas; regressão Ridge; embeddings multilingues; validação cruzada agrupada.
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{otherlanguage}{english}
+This study evaluates the incremental predictive contribution of song-lyrics representations to Spotify popularity observed in the source snapshot, alongside metadata and acoustic descriptors. A fixed stratified probability sample of 200,000 tracks was drawn from an accessible catalog containing 1,159,764 identifiers. Local retrieval from LRCLIB yielded 77,535 tracks with accepted lyrics, defining the observed analytical domain without assuming representativeness of the catalog or of all songs with lyrics. Twenty-one lexical and structural descriptors and 384-dimensional embeddings from a frozen multilingual-e5-small encoder were constructed. A technical audit identified an additional whitespace token in prefix handling; the implementation is documented as an operational variant, and its specific predictive impact was not measured. Four feature configurations were compared using Ridge regression and nested grouped cross-validation with five outer and three inner folds. The 21,893 operational components keep related artists, compositions and identical texts in the same partition. Pooled outer-fold MAE was 8.3525 for Baseline, 8.2957 for Traditional, 8.1285 for Deep and 8.1151 for Combined. Combined reduced MAE by 2.84\% relative to Baseline, while its small improvement over Deep remained inconclusive in an auxiliary conditional uncertainty analysis. All 128 tracks with observed popularity of at least 80 were underestimated, with MAE of 29.37. Evaluation with original sampling weights retained the ranking. Lyrics representations provided an average predictive increment within the specified Ridge procedure and observed domain. Selection, dependence, temporal provenance and representation limitations restrict interpretation. Results are noncausal and do not quantify the full uncertainty of the training procedure.
+
+\noindent\textbf{Keywords:} music popularity; song lyrics; Ridge regression; multilingual embeddings; grouped cross-validation.
+\end{otherlanguage}
+
+\chapter*{Siglas e notação}
+\addcontentsline{toc}{chapter}{Siglas e notação}
+\begin{description}
+\item[CV] Validação cruzada.
+\item[MAE] Erro absoluto médio.
+\item[RMSE] Raiz do erro quadrático médio.
+\item[OOF] Previsão produzida fora do fold usado no treinamento.
+\item[LRCLIB] Base de letras utilizada por meio de snapshot local.
+\item[LFM-2b] Base de eventos de escuta do Last.fm, distinta de sua derivação textual.
+\item[$y_i$] Popularidade Spotify observada da faixa $i$.
+\item[$\widehat y_i^{(m)}$] Previsão externa da configuração $m$ para a faixa $i$.
+\item[$w_i$] Peso do sorteio original, preservado para descrição e sensibilidade.
+\item[$g(i)$] Componente operacional da faixa $i$.
+\end{description}

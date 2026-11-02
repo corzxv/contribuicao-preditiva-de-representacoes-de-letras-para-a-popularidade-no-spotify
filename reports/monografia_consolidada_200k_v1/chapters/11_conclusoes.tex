@@ -1,0 +1,9 @@
+\chapter{Conclusões e trabalhos futuros}\label{cap:conclusoes}
+O trabalho comparou quatro configurações de variáveis em 77.535 faixas com letras aceitas de uma amostra estratificada de 200.000. A construção preservou pesos e estratos e documentou seleção textual e representações. A avaliação empregou componentes comuns e CV agrupada aninhada, com pré-processamento e escolha de penalização restritos aos treinos.
+
+No procedimento Ridge avaliado, o Combinado reduziu o MAE de 8,3525 do Baseline para 8,1151, ganho relativo de 2,84\%. O Profundo obteve 8,1285 e o Tradicional 8,2957. O ganho conjunto frente ao Baseline manteve a direção nas avaliações por fold e nas sensibilidades apresentadas. O pequeno incremento frente ao Profundo permaneceu inconclusivo na análise auxiliar de incerteza. A resposta à pergunta de pesquisa é, portanto, favorável a um incremento médio observado das representações textuais nesse procedimento, sem superioridade universal ou causalidade.
+
+As conclusões são restritas ao domínio observado. Seleção textual, qualidade do matching, identidades operacionais, temporalidade e exposição histórica limitam a extrapolação. O token de espaço no prefixo E5 qualifica a representação como variante operacional, de impacto preditivo específico não estimado. A subestimação das 128 faixas da cauda mostra que ganho médio não implica boa estimação de faixas muito populares.
+
+Como trabalhos futuros, cabe investigar validação humana dos matches e condições para inferência além das aceitas. Correção da tokenização, incerteza integral e estudos prospectivos exigiriam versões e desenhos próprios, não alterações silenciosas ou teste dos cinco folds como réplicas. A avaliação principal foi encerrada e permanece congelada; o produto atual é uma monografia integrada e revisável, com resultados rastreáveis e lacunas explícitas.
+

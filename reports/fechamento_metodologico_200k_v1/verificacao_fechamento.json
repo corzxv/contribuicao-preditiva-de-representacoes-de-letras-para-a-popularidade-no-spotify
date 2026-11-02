@@ -1,0 +1,62 @@
+{
+  "verified_on": "2026-11-02",
+  "frozen_19_23_code_protocol_hashes_verified": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\text_descriptors.py": "44179dd3292e5c9a0ca26bea8ca34c1d2eb722494ccbcd318eb6b0c0245aafe3",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\contrato_representacoes_200k_v1.md": "a6a791b8c0eafdfcd340c9eef79fdf53a9442321c097416a5d89f1523f86d3bb",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\lyrics_embeddings_v020.py": "d9a43824ac89ac66c1f07ce99e3fb1bba7a20820aacbeb84a39a796a33549e7f",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\multilingual_embeddings.py": "bab3ad9ffab1b0c2c3c57fa771a58e2cadccecca08b317a7b80aac661f41537f",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\protocolo_embeddings_multilingues_200k_v1.md": "34b59bfa9f753212505ce53727c90a2f25d04f5133d5c501d462057fcd9d2910",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\manual_embeddings.py": "c26417d3cc37fbbf79b4f5e6556000ca1e8731ae65dafa1f40b6ddf4a9f6740c",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\observed_modeling_data.py": "e67a6ae849fcd5fac170c9b42976e2aab0313cd57b0dc2204012dc2b9f3e73a0",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\protocolo_base_modelagem_200k_v1.md": "e774567149e19fa7c120a7747efeba3ced2a63505d9243f81836ef8240c88177",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\protocolo_regressao_200k_v1.md": "302eef7bd27c1c28e2206782e212181a56fe697e54b9764a2618e5a295729069",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\observed_regression.py": "594e6dc727ba62b787be7b00e446e89e4811ccdccd88488b7af79edae9596ee4",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\cohort_regression.py": "467f09028e13666737d1204e2f3433a5a0b14138891976189cc9b256ef7e27ab",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\observed_results.py": "0d9802cfa8e69808c2341ea7d5540b6419abc8c1a80b27e3f708011d2e5ade6d",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\protocolo_diagnosticos_modelagem_200k_v1.md": "5d0dec30e4e5de818d1bf52a50977bc1f6124ba0ffcf8c0bc25a925c8031effd"
+  },
+  "preserved_partial_pdf_zip": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\output\\pdf\\resultados_dominio_observado_200k_v1.pdf": "683c55e6f4200ebade2a95574da7e39e98f2158601316759df31df3339063d7d",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\overleaf_dominio_observado_200k_v1.zip": "aacc1acf58420f8a1ad8157c273727f2dc7703a3fe36b143624d5bef2d1497c3"
+  },
+  "stage25_input_hashes_reverified": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_regression_200k_v1\\integral\\predicoes_externas.parquet": "4e9bc8839ceb76bef0248e328217dc362c5ee894479731e43de401fb0ffaf448",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_results_diagnostics_200k_v1\\perdas_componentes.parquet": "72515a656ec04b05cc3eb6125586c03f1d166facc2faab60dc35d454c34b6118",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\resumo_diagnosticos.json": "996c9d39d7b3558d684a32a9a9f3ae585e9ad7a4379d2f5aa8a03ef1afc3bac0"
+  },
+  "generated_report_hashes": {
+    "reports\\fechamento_metodologico_200k_v1\\intervalos_condicionais_combinados.csv": "2768d67b22bdc8523c21b9898ff9ae8f48cb829fb0087124495d3818aee1284a",
+    "reports\\fechamento_metodologico_200k_v1\\intervalos_condicionais_por_fold.csv": "c59e4cbfa25d35896a915a97f398ae49a84db7d721e90d63cad530c230353685",
+    "reports\\fechamento_metodologico_200k_v1\\metrics_and_clipping.csv": "27b028ba67ecde0ef117ce384c9354cfa8856cdf70025b238fc9befafccbfb57",
+    "reports\\fechamento_metodologico_200k_v1\\negative_predictions.csv": "363cde22924bc057ccae1e1b85ac7463c3a5a0fc6c271286127eaa9288a11a06",
+    "reports\\fechamento_metodologico_200k_v1\\tail_counts_by_fold.csv": "764891295279e72ed841a24ff7f5c12dc929202036d7e2627ed2261c45e2d1e3",
+    "reports\\fechamento_metodologico_200k_v1\\tail_residuals.csv": "bce8e8533148f9ae728945a8c7e51acc3a926d94179eb4068d381d6284348988",
+    "reports\\fechamento_metodologico_200k_v1\\tail_residual_histogram.csv": "5c197e6c9d0a5d2f5d36deea55dbd0f643c723ac6d78e8910d7835ae792c8aed",
+    "reports\\fechamento_metodologico_200k_v1\\auditoria_representacoes.json": "740738b4ce324aff275a8c8ca9b31776b404b0bee491b97813f43d1c18d56b13",
+    "reports\\fechamento_metodologico_200k_v1\\complemento_cauda.json": "a4726fdb266b73d6960bf98aa102995a1dd6e7f0f2cfb2cc8bcd19b3698cdeda",
+    "reports\\fechamento_metodologico_200k_v1\\desvio_prefixo_sintetico.json": "7a093ad880b0dda215c24929e2e422ffdb6312ef818277ee9a8fd074ab76d454",
+    "reports\\fechamento_metodologico_200k_v1\\resumo_fechamento.json": "bf4548ae3a67216edb8b2b769909b5dc21ff96cbe15d989c8fb6c4bf2d55cc71",
+    "reports\\parecer_fechamento_metodologico_200k_v1.md": "8ebfff04bf7849eeb86d4d97dece99994848a615c987660c162bffe7603096e4",
+    "scripts\\resumir_cauda_auxiliar.py": "064578f4c7f14c07800c12b249f70694655e60ebcfd922573e6f344e4e406812"
+  },
+  "tests_passed": 17,
+  "test_files": [
+    "test_closure_diagnostics.py",
+    "test_multilingual_embeddings.py",
+    "test_text_descriptors.py",
+    "test_representation_pooling_audit.py"
+  ],
+  "ruff_check": "passed",
+  "ruff_format_check": "7 files passed",
+  "git_diff_check": "passed",
+  "new_training_runs": 0,
+  "new_corpus_embeddings": 0,
+  "synthetic_e5_sentences": 4,
+  "synthetic_forward_calls": 8,
+  "lrclib_queries": 0,
+  "full_pipeline_confidence_interval_computed": false,
+  "conditional_auxiliary_limits_computed": true,
+  "actual_encoder_implementation_deviation_detected": true
+}

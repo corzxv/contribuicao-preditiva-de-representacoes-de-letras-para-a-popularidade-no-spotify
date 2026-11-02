@@ -1,0 +1,43 @@
+\chapter{Modelagem e validação}\label{cap:modelagem}
+\section{Domínio, estimando e configurações}
+A avaliação principal utiliza exatamente as 77.535 faixas com letras aceitas e os mesmos folds nos quatro conjuntos de variáveis. Seu estimando operacional é o erro médio nas previsões externas reunidas da distribuição empírica desse domínio, sob o procedimento de treino e divisão especificado. Cada faixa recebe peso igual no ajuste e na avaliação principal. Isso não atribui peso igual a artistas ou componentes: grupos maiores contribuem com mais faixas.
+
+O Baseline contém 11 campos numéricos: year, danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo e duration\_ms. Seus quatro campos categóricos são genre, key, mode e time\_signature. Tradicional acrescenta 21 descritores textuais; Profundo acrescenta as 384 coordenadas do embedding; Combinado acrescenta ambos. A quantidade de colunas após codificação categórica depende das categorias observadas em cada treino, e não deve ser confundida com o número de campos originais.
+
+Nomes, identificadores, hashes, chaves de agrupamento, idioma estimado, pesos e metadados de matching são controles, não preditores. A comparação mantém a família Ridge. Consequentemente, um ganho do Profundo sobre o Baseline mede o incremento da representação dentro dessa família, e não superioridade geral de uma rede neural treinada sobre todos os algoritmos possíveis.
+
+\section{Componentes operacionais e partições comuns}
+O agrupamento forma componentes conexos por relações de artista conservador, participação explícita, composição operacional e texto igual. Uma ligação pode unir relações transitivamente: se duas faixas compartilham uma letra e uma delas tem outra relação de artista, o componente resultante precisa permanecer inteiro. Créditos de bandas não são separados por todo sinal de pontuação. O artista formado apenas por símbolos \texttt{!!!}, por exemplo, conserva chave literal em vez de desaparecer pela normalização.
+
+A base contém 21.893 componentes, com no máximo 186 faixas em um componente. A atribuição aos folds ordena os componentes por tamanho e usa desempates determinísticos por hash e semente para equilibrar o número de faixas. Não usa popularidade para formar grupos ou melhorar resultados. As mesmas regras são aplicadas às subdivisões internas de cada treino externo. Os componentes são preservados, mas suas chaves continuam operacionais, sujeitas a relações não detectadas.
+
+A CV é agrupada aninhada 5$\times$3. Cada teste externo contém 15.507 faixas e seu treino 62.028. Nos treinos externos, as três validações internas contêm 20.676 faixas e os treinos internos 41.352. A auditoria verificou alinhamento dos IDs, textos e vetores e ausência das sobreposições especificadas pelos grupos. Os cinco folds não foram redesenhados após observar o desempenho.
+
+\section{Pré-processamento e escolha de penalização}
+Em cada treino interno ou externo, as variáveis numéricas passam por imputação de mediana e padronização por média e desvio estimados naquele treino. O mecanismo de imputação mantém colunas inteiramente vazias por regra explícita; na coorte atual, os 15 campos Baseline não apresentaram ausências ou invalidade. Colunas constantes são centradas para zero. Essas operações não aprendem valores na avaliação.
+
+Campos categóricos recebem uma categoria de ausência, quando necessária, e codificação one-hot sem remoção automática de nível. O vocabulário é aprendido no treino; uma categoria nova na avaliação é representada por zeros naquele bloco. As dummies não recebem a mesma escala das numéricas. Não há seleção global de correlações, PCA ou seleção de características orientada pelo teste.
+
+A grade de penalização é $\{0{,}1;1;10;100;1.000;10.000\}$. Para cada configuração e treino externo, os seis valores são comparados pela soma dos erros absolutos das validações internas, dividida pelo total de observações previstas. Em empate numérico exato, a regra favorece o maior $\alpha$. Após a escolha, o pré-processamento e Ridge são ajustados novamente sobre todo o treino externo, antes de prever seu teste.
+
+O ajuste usa solver LSQR, tolerância $10^{-5}$, limite de 10.000 iterações e duas threads de bibliotecas numéricas. A execução registrou 360 ajustes internos, 20 ajustes externos Ridge e dez referências simples, totalizando 390 ajustes. Não houve aviso interno registrado ou alcance do limite de iterações; o máximo interno foi 352. Esses controles verificam a execução do procedimento, não a otimalidade científica da grade.
+
+\section{Métricas e contrastes}
+Cada faixa $i$ tem uma previsão $\widehat y_i^{(m)}$ da configuração $m$ que não utilizou seu componente no treino. Definindo $e_i^{(m)}=y_i-\widehat y_i^{(m)}$, calculam-se
+\begin{align}
+ \operatorname{MAE}_m&=\frac{1}{n}\sum_{i=1}^{n}|e_i^{(m)}|,\label{eq:mae}\\
+ \operatorname{RMSE}_m&=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(e_i^{(m)})^2},\label{eq:rmse}\\
+ R_m^2&=1-\frac{\sum_i(e_i^{(m)})^2}{\sum_i(y_i-\overline y)^2}.\label{eq:r2}
+\end{align}
+As métricas globais usam previsões externas reunidas, e não a média simples de $R^2$ dos folds. O MAE é primário e orienta a seleção interna. São examinados os incrementos do Tradicional e do Profundo frente ao Baseline, além do Combinado frente a cada uma das outras três configurações, sempre pareadamente nos mesmos casos.
+
+Duas referências adicionais usam a média e a mediana da resposta do respectivo treino externo. Elas não usam o alvo do teste para escolher a constante. Não são outras fontes de dados nem modelos de letras; oferecem referências simples para a escala de erro.
+
+\section{Ponderação e exposição histórica}
+A sensibilidade ponderada aplica os pesos originais apenas à avaliação:
+\begin{equation}\label{eq:maeponderado}
+ \operatorname{MAE}_{m,w}=\frac{\sum_i w_i|e_i^{(m)}|}{\sum_i w_i}.
+\end{equation}
+Modelos, casos, folds e previsões são os mesmos. Não houve retreino ponderado nem seleção por essa métrica. Os pesos descrevem o sorteio original e não são correção automática da disponibilidade de letras.
+
+O teste histórico v0.6 havia sido aberto em 14 de outubro de 2026. Na linhagem do domínio atual foram detectados 421 IDs, 438 colisões operacionais de composição e 7.162 de artista associados àquele teste; essas contagens se sobrepõem. O novo sorteio e a separação por grupos reduzem certas formas de compartilhamento operacional, mas não apagam exposição ao processo de desenvolvimento. A avaliação é apresentada com essa história, sem alegação de confirmação independente.

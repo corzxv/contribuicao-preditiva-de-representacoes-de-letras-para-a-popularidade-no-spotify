@@ -1,0 +1,42 @@
+\chapter{População, amostragem e integração}\label{cap:amostra}
+\section{Desenho amostral fixo}
+A população de referência do sorteio é o catálogo acessível de $N=1.159.764$ faixas. A amostra contém exatamente $n_s=200.000$ IDs e foi obtida com semente fixa 20261031. O tamanho foi definido como orçamento operacional para as etapas textuais, e não como solução de um cálculo de poder ou garantia de uma margem de erro universal.
+
+As 499 faixas com popularidade pelo menos 80 foram incluídas integralmente nas 200.000. Para as demais, os estratos combinam o gênero registrado, três períodos do campo \texttt{year} (2000--2009, 2010--2019 e 2020--2023) e cinco bandas de popularidade (0--19, 20--39, 40--59, 60--69 e 70--79). O desenho executado contém 981 estratos, dos quais 62 são integrais. Não se trata de alocação proporcional pura: a inclusão da cauda e a proteção dos estratos pequenos tornam a alocação desproporcional.
+
+Para cada estrato não vazio fora da cauda integral, foi reservada inicialmente a quantidade $b_h=\min(2,N_h)$. O orçamento restante foi distribuído proporcionalmente às capacidades $c_h=N_h-b_h$, por partes inteiras e maiores restos com desempate determinístico. A seleção dentro de cada estrato não integral foi aleatória simples sem reposição. Não houve repetição de sementes para procurar uma amostra com melhores resultados ou maior cobertura textual.
+
+Para a faixa $i$ do estrato $h$, as probabilidades e os pesos originais são
+\begin{equation}\label{eq:pesos}
+ \pi_i=\frac{n_h}{N_h},\qquad w_i=\frac{N_h}{n_h}.
+\end{equation}
+Estratos integrais têm $\pi_i=w_i=1$. A soma dos pesos da amostra é exatamente 1.159.764 nos registros da execução. A fundamentação de probabilidades e pesos em desenhos estratificados é discutida por \citet{statcan2010}; os limiares, a reserva mínima, a semente e o orçamento são escolhas operacionais deste estudo.
+
+Os controles verificaram unicidade e pertencimento dos IDs, totais por estrato, probabilidades válidas, pesos positivos e finitos, inclusão de todas as faixas da cauda e preservação dos campos originais. A reprodução interna com a mesma semente confirmou o sorteio registrado. A possibilidade de descrever o catálogo com o desenho inicial não se transfere automaticamente ao subconjunto que depois recebeu letra aceita.
+
+\section{Recuperação textual e critérios de correspondência}
+As consultas locais partiram dos metadados de artista e título da amostra, preservando seus valores originais. Formas normalizadas foram criadas separadamente. A recuperação não aceitou correspondência apenas por título, não escolheu maior popularidade para resolver candidatos e não substituiu faixas sem letra por novas unidades.
+
+A primeira rodada recente foi seguida de uma recuperação delimitada, denominada v2, que preservou as aceitações anteriores e acrescentou 144 faixas aceitas. A versão v2 é a fonte textual principal desta monografia. Uma avaliação posterior de 1.000 casos produziu sugestões diagnósticas, mas não foi aplicada integralmente. Suas 31 sugestões adicionais de aceite não foram somadas às 77.535 faixas do domínio principal.
+
+Os critérios combinaram compatibilidade de artista e título, tratamento conservador de versões, relação de duração e unicidade ou equivalência do conteúdo elegível. A aceitação exige que a informação disponível sustente uma decisão textual; candidatos com conteúdo incompatível não são resolvidos escolhendo arbitrariamente o mais próximo em duração. Concordância de metadados é evidência operacional, não reconhecimento humano da composição.
+
+A recuperação também examinou situações específicas: créditos explícitos de participação, nomes que perdiam toda a informação ao normalizar símbolos, correspondências contextuais e letra sincronizada convertível. Nomes de bandas não foram divididos indiscriminadamente por vírgula, \& ou ponto e vírgula. A conversão de conteúdo sincronizado remove marcações temporais conforme a regra registrada e preserva as linhas textuais; ela não inventa versos ausentes.
+
+Instrumentais, ambiguidades, registros sem texto e metadados insuficientes permaneceram identificados. Quando não foi possível sustentar um aceite, a faixa continuou na amostra para análise de cobertura, sem integrar a matriz textual preditiva. Não se flexibilizaram critérios até atingir uma meta desejada de cobertura.
+
+Essas situações são classificações operacionais da recuperação. Não encontrada significa ausência de match aceito sob as consultas e regras empregadas, e não prova de inexistência de letra. A categoria instrumental decorre da evidência registrada na fonte, sem equivaler a uma rotulação musical humana independente.
+
+\section{Fluxo de registros e domínio analítico}
+O fluxo principal pode ser expresso em quatro etapas: catálogo congelado; sorteio estratificado de 200.000 faixas; recuperação e classificação textual v2; e domínio observado de 77.535 faixas aceitas. A Tabela~\ref{tab:cobertura} reconcilia integralmente os destinos da amostra. Não houve descarte silencioso para reduzir erro dos modelos.
+
+\input{tables/cobertura}
+
+As letras aceitas correspondem a 77.051 entradas normalizadas únicas. O número menor de textos decorre de conteúdo compartilhado por mais de uma faixa, não de exclusão de observações. Uma representação armazenada por hash pode ser reutilizada, enquanto cada faixa permanece uma unidade de avaliação. Os componentes para a CV ligam relações textuais e de identidade antes de definir partições.
+
+O uso de letra aceita é uma condição de observação da análise atual. A população de interesse preditivo foi delimitada ao domínio observado, e não presumida como todas as faixas com letras existentes na plataforma. Uma inferência mais ampla precisaria explicitar a probabilidade de observar a letra, a cobertura dos estratos e as hipóteses necessárias para transferir o desempenho.
+
+\section{Auditoria de integridade e qualidade substantiva}
+O fechamento técnico verificou referências de texto, hashes e vínculos da coorte. As etapas de descritores e preparação da base mantiveram os IDs, pesos e estratos. A matriz final não teve ausências ou valores inválidos nos 15 campos selecionados do Baseline. Os vetores foram alinhados por hash do conteúdo, com controles de dimensão, finitude e norma.
+
+Essas verificações sustentam reprodutibilidade e coerência da ligação computacional. Não estimam a precisão semântica de todos os matches. Não foi concluída uma revisão humana probabilística que permita anunciar taxa de acerto do corpus; inspeções dirigidas de casos problemáticos devem ser apresentadas como tal. Essa pendência é uma limitação substantiva, distinta de erro técnico de arquivo.

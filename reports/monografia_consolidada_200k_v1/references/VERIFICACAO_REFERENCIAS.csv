@@ -1,0 +1,20 @@
+key,source_url,verification,accessed_on
+james2023,https://link.springer.com/book/10.1007/978-3-031-38747-0,"Autores, título, edição Python 2023, editora e DOI conferidos na Springer",2026-11-02
+hoerl1970,https://doi.org/10.1080/00401706.1970.10488634,"Autores, título, periódico, ano, volume, número e páginas conferidos no DOI/publisher",2026-11-02
+cawley2010,https://www.jmlr.org/papers/v11/cawley10a.html,Metadados e resumo conferidos no periódico,2026-11-02
+bengio2004,https://www.jmlr.org/papers/v5/grandvalet04a.html,Metadados e resumo conferidos no periódico,2026-11-02
+statcan2010,https://www150.statcan.gc.ca/pub/12-587-x/12-587-x2003001-eng.pdf,Folha de créditos: edição eletrônica 2010; original de 2003,2026-11-02
+parada2024data,https://zenodo.org/records/10938615,"Criadores, título, versão v2 de 2024 e DOI conferidos; fonte histórica de descritores",2026-11-02
+parada2024lyrics,https://doi.org/10.1038/s41598-024-55742-x,Autores/título/ano/volume via DOI; identificador de artigo 5531; correção identificada,2026-11-02
+parada2024correction,https://pubmed.ncbi.nlm.nih.gov/38778218/,"Correção dos mesmos autores, 22/05/2024, volume 14, artigo 11712 e DOI conferidos",2026-11-02
+wang2024,https://arxiv.org/abs/2402.05672,"Autores, título, ano e DOI arXiv conferidos no registro primário",2026-11-02
+e5card,https://huggingface.co/intfloat/multilingual-e5-small,Model card conferido; revisão congelada conferida no snapshot local; data não inventada,2026-11-02
+kudo2018,https://aclanthology.org/D18-2012/,"Autores, título, evento, ano, páginas e DOI conferidos no ACL Anthology",2026-11-02
+bates2024,https://doi.org/10.1080/01621459.2023.2197686,"Volume 119(546), páginas 1434-1445: edição de 2024; publicação online em 2023 distinta",2026-11-02
+cameron2015,https://www.econ.ucdavis.edu/faculty/cameron/research/Cameron_Miller_JHR_2015_February.pdf,PDF dos autores e DOI confirmam título/autores/venue/ano/páginas; normalização do sobrenome segue autores,2026-11-02
+bayle2020,https://papers.neurips.cc/paper_files/paper/2020/hash/bce9abf229ffd7e570818476ee5d7dde-Abstract.html,"Autores, título, evento/volume/ano e resumo conferidos na fonte primária; páginas não presumidas",2026-11-02
+bayle2026,https://proceedings.mlr.press/v306/bayle26a.html,"Autores, título, evento, volume 306, ano e páginas 7144-7178 conferidos no PMLR",2026-11-02
+spotifydocs,https://developer.spotify.com/documentation/web-api/reference/get-track,Definição documentada de popularity; página não informa data de medição do CSV histórico,2026-11-02
+spotifydataset,https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks,Identificador da conta/URL e título conforme proveniência local; versão/data do arquivo não confirmadas,2026-11-02
+lrclib,https://lrclib.net/docs,"Documentação oficial e URL de dumps; timestamp específico fundamentado no checkpoint local, não inferido da página atual",2026-11-02
+pedregosa2011,https://jmlr.org/papers/v12/pedregosa11a.html,"Autores, título, periódico, ano, volume e páginas conferidos no JMLR",2026-11-02

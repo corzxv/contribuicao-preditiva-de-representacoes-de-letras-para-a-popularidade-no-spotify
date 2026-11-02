@@ -1,0 +1,59 @@
+{
+  "completed": true,
+  "seal": {
+    "version": "observed-modeling-data-v1",
+    "inputs": {
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_text_descriptors_200k_v1\\coorte_descritores.parquet": "e5c6a8cc598a99801f07c694d25975d8fbc7c0bfe80b81ea5872c5cbbf9cc5ff",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\descritores_textuais_200k_v1\\resumo_descritores.json": "3b69ead73fbcddef8ae8755b2507e1a002e3e4f30313534943b41c52e3d700dc",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\embeddings_multilingues_200k_v1\\integral\\resumo_embeddings.json": "37160ab72c96a42ef72c1d3085aefa54026e7a0def92f9c6f4a9d14f06b0fe09",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_embeddings_200k_v1\\embeddings.parquet": "7c379cabb065764f24a8c6a54895a318513ce89e737ce366ecb5a67147519ab8",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_embeddings_200k_v1\\indice_embeddings.parquet": "3a1fc23eb45fa2db21b5b07ede19d6fcf96768d36476fe18b979c8fc9ed7dbef"
+    },
+    "embedding_seal": "b8650aeb590949b648f2ddd223d5f16493bafbcb6038af542b9473c0addd3914",
+    "seed": 20261101,
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "code": "e67a6ae849fcd5fac170c9b42976e2aab0313cd57b0dc2204012dc2b9f3e73a0",
+    "protocol": "e774567149e19fa7c120a7747efeba3ced2a63505d9243f81836ef8240c88177",
+    "support_code": {
+      "manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f",
+      "normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+      "lyrics_recovery.py": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+    },
+    "runtime": {
+      "python": "3.13.15",
+      "polars": "1.43.2",
+      "numpy": "2.5.2",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "models_trained": false,
+  "encoder_loaded": false,
+  "embeddings_generated": false,
+  "splits_created": true,
+  "cohort_rows": 77535,
+  "original_rows_preserved": true,
+  "unique_input_texts": 77051,
+  "vectors": {
+    "vectors": 77051,
+    "dimension": 384,
+    "max_l2_error": 5.960464477539063e-08
+  },
+  "components": 21893,
+  "largest_component": 186,
+  "baseline_features": 15,
+  "traditional_features": 21,
+  "predictor_invalid_cells": 0,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "leakage_checks_passed": true,
+  "original_weights_preserved": true,
+  "weights_applied": false,
+  "outputs_sha256": {
+    "coorte_modelagem.parquet": "d14c77002f42d0c59ca1af0e734bec5075190e197479f55e6ea3c23f033d4efe",
+    "folds_5x3.parquet": "4ceff167a8c2a17e315c1c7a3226051bd769e173c0eebc07e27976df69903d5b",
+    "blocos.json": "35a5f803853ae9a27bb69deba8a8d0e933b26875c01c6dcc795dbc80dc9e0ba8",
+    "metadados_invalidos.parquet": "05ba653af881d4c5a43434af89c00373dffcfef4b3943973a3d97387882b8474"
+  },
+  "seconds": 8.322698300005868
+}

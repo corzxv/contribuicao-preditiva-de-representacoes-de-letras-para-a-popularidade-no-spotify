@@ -1,0 +1,16 @@
+﻿source,derived,kind,source_missing,invalid_nonmissing,model_missing
+year,model_year,numeric,0,0,0
+danceability,model_danceability,numeric,0,0,0
+energy,model_energy,numeric,0,0,0
+loudness,model_loudness,numeric,0,0,0
+speechiness,model_speechiness,numeric,0,0,0
+acousticness,model_acousticness,numeric,0,0,0
+instrumentalness,model_instrumentalness,numeric,0,0,0
+liveness,model_liveness,numeric,0,0,0
+valence,model_valence,numeric,0,0,0
+tempo,model_tempo,numeric,0,0,0
+duration_ms,model_duration_ms,numeric,0,0,0
+genre,model_genre,categorical,0,0,0
+key,model_key,categorical,0,0,0
+mode,model_mode,categorical,0,0,0
+time_signature,model_time_signature,categorical,0,0,0

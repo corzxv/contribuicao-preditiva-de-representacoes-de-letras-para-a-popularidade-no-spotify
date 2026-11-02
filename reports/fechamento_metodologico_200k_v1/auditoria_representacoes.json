@@ -1,0 +1,529 @@
+{
+  "completed": true,
+  "descriptor_features": 21,
+  "sample_texts_recomputed": 8,
+  "sample_descriptor_max_abs_difference": 0.0,
+  "descriptor_output_sha256_prior_stage21": "e5c6a8cc598a99801f07c694d25975d8fbc7c0bfe80b81ea5872c5cbbf9cc5ff",
+  "descriptor_output_full_rehash_this_audit": false,
+  "descriptor_projection_compressed_bytes": 10154023,
+  "descriptor_source_size_mtime_unchanged": true,
+  "code_and_protocol_hashes_verified": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\text_descriptors.py": "44179dd3292e5c9a0ca26bea8ca34c1d2eb722494ccbcd318eb6b0c0245aafe3",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\contrato_representacoes_200k_v1.md": "a6a791b8c0eafdfcd340c9eef79fdf53a9442321c097416a5d89f1523f86d3bb",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\lyrics_embeddings_v020.py": "d9a43824ac89ac66c1f07ce99e3fb1bba7a20820aacbeb84a39a796a33549e7f",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\multilingual_embeddings.py": "bab3ad9ffab1b0c2c3c57fa771a58e2cadccecca08b317a7b80aac661f41537f",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\protocolo_embeddings_multilingues_200k_v1.md": "34b59bfa9f753212505ce53727c90a2f25d04f5133d5c501d462057fcd9d2910",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\src\\tcc_music_popularity\\manual_embeddings.py": "c26417d3cc37fbbf79b4f5e6556000ca1e8731ae65dafa1f40b6ddf4a9f6740c"
+  },
+  "encoder_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "encoder_settings_match_frozen_seal": true,
+  "snapshot_small_files_hashes_verified": {
+    "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+    "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+    "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+    "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+    "README.md": "0038de97aee16258cecbad7ffda4b4febd6953e747a00e0ddbc8e6ed241e9c1c"
+  },
+  "weights_rehashed_this_audit": false,
+  "weights_loaded": false,
+  "weights_integrity_prior_evidence": "checked_snapshot at smoke/all, frozen seal; all stored vectors audited by stage 21",
+  "prior_vector_audit": {
+    "vectors": 77051,
+    "dimension": 384,
+    "max_l2_error": 5.960464477539063e-08
+  },
+  "tokenizer_synthetic_probes": 11,
+  "joint_and_separate_prefix_tokens_equal": false,
+  "synthetic_prefix_tokenization_differences": [
+    {
+      "synthetic_probe": "A calm morning.",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        62,
+        116572,
+        42141,
+        5
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        62,
+        116572,
+        42141,
+        5
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁A",
+        "▁calm",
+        "▁morning",
+        "."
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁A",
+        "▁calm",
+        "▁morning",
+        "."
+      ],
+      "separate_decoded": "query:  A calm morning.",
+      "joint_decoded": "query: A calm morning."
+    },
+    {
+      "synthetic_probe": "Uma manhã tranquila.",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        15634,
+        65117,
+        151712,
+        5
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        15634,
+        65117,
+        151712,
+        5
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁Uma",
+        "▁manhã",
+        "▁tranquila",
+        "."
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁Uma",
+        "▁manhã",
+        "▁tranquila",
+        "."
+      ],
+      "separate_decoded": "query:  Uma manhã tranquila.",
+      "joint_decoded": "query: Uma manhã tranquila."
+    },
+    {
+      "synthetic_probe": "Una mañana tranquila.",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        4228,
+        55371,
+        151712,
+        5
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        4228,
+        55371,
+        151712,
+        5
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁Una",
+        "▁mañana",
+        "▁tranquila",
+        "."
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁Una",
+        "▁mañana",
+        "▁tranquila",
+        "."
+      ],
+      "separate_decoded": "query:  Una mañana tranquila.",
+      "joint_decoded": "query: Una mañana tranquila."
+    },
+    {
+      "synthetic_probe": "صباح هادئ",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        70986,
+        917,
+        826,
+        3239
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        70986,
+        917,
+        826,
+        3239
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁صباح",
+        "▁ها",
+        "د",
+        "ئ"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁صباح",
+        "▁ها",
+        "د",
+        "ئ"
+      ],
+      "separate_decoded": "query:  صباح هادئ",
+      "joint_decoded": "query: صباح هادئ"
+    },
+    {
+      "synthetic_probe": "एक शांत सुबह",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        967,
+        112078,
+        82158
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        967,
+        112078,
+        82158
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁एक",
+        "▁शांत",
+        "▁सुबह"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁एक",
+        "▁शांत",
+        "▁सुबह"
+      ],
+      "separate_decoded": "query:  एक शांत सुबह",
+      "joint_decoded": "query: एक शांत सुबह"
+    },
+    {
+      "synthetic_probe": "静かな朝です",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        6,
+        25086,
+        34275,
+        9210,
+        1453
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        25086,
+        34275,
+        9210,
+        1453
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁",
+        "静",
+        "かな",
+        "朝",
+        "です"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "静",
+        "かな",
+        "朝",
+        "です"
+      ],
+      "separate_decoded": "query:  静かな朝です",
+      "joint_decoded": "query: 静かな朝です"
+    },
+    {
+      "synthetic_probe": "宁静的早晨",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        6,
+        29779,
+        25086,
+        43,
+        188000
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        29779,
+        25086,
+        43,
+        188000
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁",
+        "宁",
+        "静",
+        "的",
+        "早晨"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "宁",
+        "静",
+        "的",
+        "早晨"
+      ],
+      "separate_decoded": "query:  宁静的早晨",
+      "joint_decoded": "query: 宁静的早晨"
+    },
+    {
+      "synthetic_probe": "조용한 아침입니다",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        214230,
+        993,
+        83662,
+        5826
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        214230,
+        993,
+        83662,
+        5826
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁조용",
+        "한",
+        "▁아침",
+        "입니다"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁조용",
+        "한",
+        "▁아침",
+        "입니다"
+      ],
+      "separate_decoded": "query:  조용한 아침입니다",
+      "joint_decoded": "query: 조용한 아침입니다"
+    },
+    {
+      "synthetic_probe": "  texto",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        18946
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        18946
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁texto"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁texto"
+      ],
+      "separate_decoded": "query:  texto",
+      "joint_decoded": "query: texto"
+    },
+    {
+      "synthetic_probe": "?!",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        6,
+        4730
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        4730
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁",
+        "?!"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "?!"
+      ],
+      "separate_decoded": "query: ?!",
+      "joint_decoded": "query:?!"
+    },
+    {
+      "synthetic_probe": "[Verse]\nSynthetic line",
+      "separate_token_ids": [
+        41,
+        1294,
+        12,
+        6,
+        378,
+        15896,
+        184,
+        268,
+        19010,
+        2347,
+        9523,
+        13315
+      ],
+      "joint_token_ids": [
+        41,
+        1294,
+        12,
+        378,
+        15896,
+        184,
+        268,
+        19010,
+        2347,
+        9523,
+        13315
+      ],
+      "separate_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁",
+        "▁[",
+        "Ver",
+        "se",
+        "]",
+        "▁Syn",
+        "the",
+        "tic",
+        "▁line"
+      ],
+      "joint_token_strings": [
+        "▁que",
+        "ry",
+        ":",
+        "▁[",
+        "Ver",
+        "se",
+        "]",
+        "▁Syn",
+        "the",
+        "tic",
+        "▁line"
+      ],
+      "separate_decoded": "query:  [Verse] Synthetic line",
+      "joint_decoded": "query: [Verse] Synthetic line"
+    }
+  ],
+  "sample_prefix_tokenization_mismatches": 8,
+  "prefix_tokens": 4,
+  "content_limit": 506,
+  "synthetic_long_content_tokens": 2001,
+  "synthetic_chunks": 5,
+  "max_input_tokens": 512,
+  "tokenizer_is_fast": true,
+  "models_trained": false,
+  "embeddings_generated": false,
+  "individual_outputs_written": false,
+  "partial_artifact_hashes_unchanged": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\output\\pdf\\resultados_dominio_observado_200k_v1.pdf": "683c55e6f4200ebade2a95574da7e39e98f2158601316759df31df3339063d7d",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\overleaf_dominio_observado_200k_v1.zip": "aacc1acf58420f8a1ad8157c273727f2dc7703a3fe36b143624d5bef2d1497c3"
+  },
+  "script_sha256": "622bd9b675f3db0d40c345deeb8785c20822a94b2dc43269f20012c648cbeaae",
+  "seconds": 20.461104099988006
+}

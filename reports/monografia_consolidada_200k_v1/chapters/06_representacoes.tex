@@ -1,0 +1,35 @@
+\chapter{Representações textuais}\label{cap:representacoes}
+\section{Entrada comum e preservação do texto}
+Descritores e embeddings foram construídos a partir do mesmo conteúdo aceito, normalizado de forma conservadora. O procedimento aplica NFC ao Unicode, remove BOM, uniformiza quebras de linha e elimina espaços ou tabulações no final das linhas e linhas vazias externas. Não remove palavras, repetições, marcadores de seção ou pontuação. O original e seus hashes permanecem preservados separadamente.
+
+Cada entrada normalizada recebe um hash próprio. Esse hash identifica conteúdo para ligação e cache; não é preditor. Nomes de artista e título, gênero, idioma estimado, popularidade, pesos e indicadores de qualidade não são concatenados à entrada do encoder. Desse modo, a comparação textual não incorpora diretamente metadados já presentes em outro bloco ou a resposta que se pretende estimar.
+
+\section{Vinte e um descritores próprios do estudo}
+O conjunto tradicional resume extensão, segmentos lexicais, diversidade, estrutura de linhas e composição gráfica. Inclui contagens de caracteres e linhas, número de tipos e segmentos, comprimentos médios e desvios, razões de tipos e de ocorrências únicas, entropia de frequências, repetição de linhas, frações de letras, dígitos, pontuação e maiúsculas, presença de interrogações e exclamações e uma flag de ausência de segmentos. As definições completas estão no Apêndice~\ref{ap:descritores}.
+
+A segmentação usa sequências de letras Unicode, com apóstrofo ou hífen interno, após casefold. São segmentos operacionais, não palavras linguísticas universais. Uma língua sem separação por espaços pode produzir segmentos longos; marcas combinantes e expansões de casefold também afetam contagens e comprimentos. Por isso, a análise não interpreta as mesmas razões como escalas psicolinguísticas invariantes entre idiomas.
+
+Os desvios descritivos usam divisor $n$ e denominadores nulos recebem zero acompanhado da flag pertinente. As repetições permanecem no texto. A fração de linhas repetidas mede o excedente de ocorrências sobre linhas distintas, após tratamento de caixa e espaços; não deduplica a fonte nem identifica automaticamente refrões. A entropia é calculada em bits a partir das frequências dos segmentos, sem atribuir sentimentos ou temas.
+
+Essas 21 medidas são implementações próprias, e não reprodução dos descritores LFM2b. Não incluem dicionários ingleses de sentimento ou legibilidade aplicados a todas as línguas. Na coorte atual, a flag de ausência de segmentos é constante zero; ela não acrescenta informação e é centrada para zero pela padronização no treino, sem excluir faixas.
+
+\section{Encoder congelado e agregação de janelas}
+O bloco Profundo usa vetores de 384 dimensões do modelo \emph{multilingual-e5-small}, disponibilizado por intfloat, na revisão congelada identificada no Apêndice~\ref{ap:reproducao}. O nome Profundo designa a origem da representação, não uma rede neural treinada para predizer popularidade. O regressor final continua sendo Ridge nas quatro configurações.
+
+O model card recomenda o prefixo \texttt{query: } quando embeddings são usados como características, inclusive em línguas não inglesas \citep{e5card}. O processamento empregou tokenizer fast local, execução CPU float32, modo de avaliação e inferência sem gradientes. O modelo não foi ajustado com o alvo. O suporte multilingue declarado não garante igual adequação para todas as letras ou sistemas de escrita.
+
+Textos longos foram tokenizados integralmente e divididos em janelas com sobreposição de 32 tokens de conteúdo, reservando prefixo e tokens especiais no limite de 512. Não houve truncamento silencioso da cauda. Para cada janela, a média mascarada dos hidden states dos tokens válidos foi normalizada em L2. Padding foi excluído; prefixo e tokens especiais válidos participaram da média. A agregação final é uma média dos vetores de janela ponderada pelo número de tokens novos, seguida de nova normalização L2.
+
+A soma desses pesos coincide com a quantidade de tokens de conteúdo, mas isso não remove toda a influência contextual do overlap. A média de janelas é adaptação operacional para este corpus, não uma garantia de preservação semântica ou de desempenho do modelo sobre letras. Foram armazenados 77.051 vetores e 91.156 janelas, com uma referência por faixa e zero entrada pendente.
+
+\section{Desvio de tokenização identificado na auditoria}
+A auditoria posterior encontrou um desvio real da entrada concatenada mostrada na receita oficial. O código tokeniza \texttt{query: } e conteúdo separadamente e depois concatena os IDs. O prefixo isolado termina com um token de espaço, ID 6. Quando o conteúdo também começa por um token com marcador de espaço, a entrada efetiva equivale a \verb|query:  texto|, com espaço adicional. Esse token é válido, recebe atenção e participa do pooling.
+
+A diferença foi reproduzida em 11 frases artificiais e oito textos inspecionados. Em quatro frases artificiais curtas, as duas receitas produziram embeddings com cossenos entre 0,996643 e 0,999434. A proximidade não equivale a igualdade, não mede impacto no MAE das letras e não demonstra que a ordenação observada entre configurações seja produzida pelo desvio.
+
+A execução preservada é, portanto, uma variante operacional do E5, com tratamento de prefixo e agregação explicitados, e não reprodução exata da receita oficial. Corrigir a tokenização exige uma nova versão testada também nas fronteiras de janelas e subpalavras. Não se modificaram os selos ou se recalcularam representações do corpus depois de observar resultados externos. As conclusões se referem à representação efetivamente utilizada.
+
+\section{Integridade e alcance da auditoria}
+O processamento original verificou finitude dos 21 descritores e preservação de casos e campos. A preparação da base auditou integralmente dimensão, hashes e norma dos 77.051 vetores, com erro máximo de norma L2 de $5{,}96\times10^{-8}$. Uma auditoria limitada posterior recalculou os 21 descritores em oito textos originais, com diferença máxima zero, e confirmou os selos de código, normalização e configuração.
+
+Essas são evidências distintas: a verificação integral anterior não foi repetida como se fosse uma nova execução completa, e a inspeção de oito textos não certifica todas as características semânticas do corpus. Não foram encontrados erros nas definições auditadas dos descritores ou no pooling mascarado. A divergência no prefixo e as limitações linguísticas permanecem documentadas.

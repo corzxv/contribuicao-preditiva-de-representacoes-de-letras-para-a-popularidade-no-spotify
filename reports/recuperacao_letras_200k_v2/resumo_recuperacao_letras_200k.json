@@ -1,0 +1,381 @@
+{
+  "version": "sample-local-recovery-v2",
+  "completed": true,
+  "status": "completed",
+  "started_at": "2026-11-01T02:14:37.438131+00:00",
+  "source": {
+    "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+    "size": 261755867136,
+    "mtime_ns": 1793112801795482900,
+    "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+    "source": {
+      "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+      "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+      "compressed_bytes": 47837763733,
+      "database_bytes": 261755867136,
+      "etag": "9595e9d143bf175845a9e41acd298884-2852"
+    }
+  },
+  "input_hashes": {
+    "sample_sha256": "cbaf98e2771067ab70538068d85b029ce77fbcdfb86e8b35f34a2a7abf46faff",
+    "sample_summary_sha256": "9383596da2f887da8d99fca4ea9eb429fef90507fa11e0728f2474dfb582cba9",
+    "allocation_sha256": "da62f686bd734eb0c0742af200961967432eb6ebad8d46084d0c103eaaa8c1aa",
+    "baseline_report_sha256": "6bcb643bbd1a1aa437d5b87fd6b195e891f3fd018e5cc7992de077450ac8e059",
+    "baseline_result_sha256": "3eac0c468b79a9d8481369d6627e7fd8edec6aa83a6f010ed17396f6dd0acfd0",
+    "baseline_state_sha256": "1ecf1e16a5a413532c4b86e80d0b4dc8881722ce080a849256e72f47b6ef1934"
+  },
+  "code_hashes": {
+    "lyrics_recovery.py": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78",
+    "protocolo_recuperacao_letras_200k_v2.md": "2ac52605af52e94c1a40da8faa4a347fe6b6eae73c139b9198ad1090815e4615",
+    "sample_lyrics.py": "5cb01afec12530fcb3dab012e068465407ca6737523a5208435b196bbe1b1072",
+    "local_lyrics.py": "4999e2382bf4c3a04d429f45d541c5df945cb9e096d55f588b40983c570f9a93",
+    "normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+    "lyrics_ambiguity_v011.py": "9160a72007d06c721e4e9a9fe7827474ac3bdeb0909f250be237691414f7df73",
+    "lyrics_pilot.py": "7e8e36dbd48dbdcaf9b20d470bfc44d0baaa1961f9bf05b7a20cdb1f60c0ca8a",
+    "catalog_sampling.py": "c4d378304c7d7a586a048260418f983b9e6a2aae1702d15e38be092a3e19b99d",
+    "catalog_audit.py": "3ef3d833e9d05c7703a882368bc4425dbead7fe6989ca10d86f512eeac485dc5",
+    "manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f",
+    "lyrics_embeddings_v020.py": "d9a43824ac89ac66c1f07ce99e3fb1bba7a20820aacbeb84a39a796a33549e7f"
+  },
+  "language": {
+    "available": true,
+    "version": "1.1.6",
+    "model_sha256": "e2d675b6d0f511cbb5317b4770c9289754b7338dec97fce660ff09c91b3d95a7",
+    "threshold": 0.8,
+    "uncertainty": "normalized model score, not calibrated probability"
+  },
+  "http_requests": 0,
+  "sample_rows": 200000,
+  "checks": {
+    "sample_unchanged": true,
+    "baseline_state_unchanged": true,
+    "baseline_result_unchanged": true,
+    "one_row_per_track_and_weights_preserved": true,
+    "previous_accepted_and_instrumental_preserved": true,
+    "text_hashes_references_valid": true,
+    "recovery_counts_reconcile": true
+  },
+  "command": [
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\scripts\\14_recuperar_letras_amostra_200k.py",
+    "--all"
+  ],
+  "initial_diagnostics": [
+    {
+      "lyrics_status": "accepted",
+      "recovery_initial_diagnostic": "all_eligible_strict_equivalent",
+      "n_tracks": 48783,
+      "sum_weights": 282112.9449364537
+    },
+    {
+      "lyrics_status": "accepted",
+      "recovery_initial_diagnostic": "unique_compatible_plain",
+      "n_tracks": 28608,
+      "sum_weights": 166383.32874421278
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "recovery_initial_diagnostic": "different_texts",
+      "n_tracks": 19475,
+      "sum_weights": 110363.2383047735
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "recovery_initial_diagnostic": "empty_blocking_text",
+      "n_tracks": 10,
+      "sum_weights": 57.51610234696562
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "recovery_initial_diagnostic": "instrumental_text_conflict",
+      "n_tracks": 248,
+      "sum_weights": 1418.1014230533597
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "recovery_initial_diagnostic": "metadata_conflict",
+      "n_tracks": 496,
+      "sum_weights": 2888.7587973059844
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "recovery_initial_diagnostic": "operational_limit",
+      "n_tracks": 841,
+      "sum_weights": 4685.91247166644
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "recovery_initial_diagnostic": "version_conflict",
+      "n_tracks": 4705,
+      "sum_weights": 27389.357497031964
+    },
+    {
+      "lyrics_status": "instrumental",
+      "recovery_initial_diagnostic": "compatible_source_instrumental_no_text",
+      "n_tracks": 8748,
+      "sum_weights": 50750.55627135638
+    },
+    {
+      "lyrics_status": "insufficient_metadata",
+      "recovery_initial_diagnostic": "missing_artist_or_title",
+      "n_tracks": 2,
+      "sum_weights": 11.68090161021351
+    },
+    {
+      "lyrics_status": "insufficient_metadata",
+      "recovery_initial_diagnostic": "symbols_erased_by_v1_normalization",
+      "n_tracks": 25,
+      "sum_weights": 145.8481039890581
+    },
+    {
+      "lyrics_status": "no_text",
+      "recovery_initial_diagnostic": "compatible_without_plain_synced_not_converted",
+      "n_tracks": 10,
+      "sum_weights": 58.113867680991135
+    },
+    {
+      "lyrics_status": "not_found",
+      "recovery_initial_diagnostic": "artist_present_title_not_found_v1",
+      "n_tracks": 73466,
+      "sum_weights": 428346.94974862965
+    },
+    {
+      "lyrics_status": "not_found",
+      "recovery_initial_diagnostic": "full_credit_not_found_v1",
+      "n_tracks": 14583,
+      "sum_weights": 85151.69282988396
+    }
+  ],
+  "index": {
+    "last_id": 39053376,
+    "scanned": 33714178,
+    "indexed": 5726985,
+    "complete": true,
+    "updated_at": "2026-11-01T02:49:13.569468+00:00"
+  },
+  "private_text_rows": 77535,
+  "private_review_rows": 17,
+  "runs": [
+    {
+      "started_at": "2026-11-01T02:14:37.439322+00:00",
+      "cache_seconds": 166.37940500001423,
+      "index_seconds": 1786.0691416999907,
+      "search_seconds": 168.9036117999931,
+      "new_local_queries": 90451,
+      "new_cache_decisions": 23408,
+      "reused_decisions": 86139,
+      "elapsed_seconds": 2291.1617175999563
+    }
+  ],
+  "invocation_elapsed_seconds": 2309.509907199943,
+  "plots": [
+    "cobertura_popularidade_200k.png",
+    "cobertura_genero_200k.png",
+    "cobertura_periodo_200k.png"
+  ],
+  "status_counts": {
+    "insufficient_metadata": 2,
+    "not_found": 86610,
+    "accepted": 77535,
+    "no_text": 9,
+    "instrumental": 8759,
+    "ambiguous": 27085
+  },
+  "previous_status_counts": {
+    "no_text": 10,
+    "instrumental": 8748,
+    "accepted": 77391,
+    "not_found": 88049,
+    "ambiguous": 25775,
+    "insufficient_metadata": 27
+  },
+  "recovered_tracks": 144,
+  "recovered_by_rule": [
+    {
+      "recovery_rule": "cache+contextual_metadata",
+      "n_tracks": 110,
+      "sum_weights": 640.1575061494317
+    },
+    {
+      "recovery_rule": "cache+contextual_metadata+ignore_empty",
+      "n_tracks": 1,
+      "sum_weights": 5.712121212121212
+    },
+    {
+      "recovery_rule": "cache+explicit_feat_layout",
+      "n_tracks": 1,
+      "sum_weights": 5.850501367365543
+    },
+    {
+      "recovery_rule": "cache+explicit_feat_layout+qualifier_layout",
+      "n_tracks": 2,
+      "sum_weights": 11.616738816738817
+    },
+    {
+      "recovery_rule": "cache+qualifier_layout",
+      "n_tracks": 2,
+      "sum_weights": 11.116819571865443
+    },
+    {
+      "recovery_rule": "controlled_lookup+explicit_feat_layout",
+      "n_tracks": 22,
+      "sum_weights": 128.32780454114473
+    },
+    {
+      "recovery_rule": "controlled_lookup+explicit_feat_layout+qualifier_layout",
+      "n_tracks": 2,
+      "sum_weights": 11.548450211100814
+    },
+    {
+      "recovery_rule": "controlled_lookup+literal_symbols",
+      "n_tracks": 4,
+      "sum_weights": 23.327037512960946
+    }
+  ],
+  "preserved_previous_accepted": 77391,
+  "preserved_previous_instrumental": 8748,
+  "remaining_losses": [
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "empty_synced_text",
+      "n_tracks": 2,
+      "sum_weights": 11.683735438127746
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "instrumental_text_conflict",
+      "n_tracks": 144,
+      "sum_weights": 834.7028438241133
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "invalid_or_extended_synced_format",
+      "n_tracks": 19,
+      "sum_weights": 110.92990807161053
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "metadata_conflict",
+      "n_tracks": 3319,
+      "sum_weights": 19290.419584632724
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "operational_limit:candidate_limit",
+      "n_tracks": 846,
+      "sum_weights": 4715.009767863374
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "plain_synced_conflict",
+      "n_tracks": 13081,
+      "sum_weights": 74666.1377401163
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "positive_version_conflict",
+      "n_tracks": 8578,
+      "sum_weights": 48414.4198066474
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "substantively_distinct_texts",
+      "n_tracks": 1081,
+      "sum_weights": 6290.756344849914
+    },
+    {
+      "lyrics_status": "ambiguous",
+      "lyrics_reason": "unordered_synced_timestamps",
+      "n_tracks": 15,
+      "sum_weights": 87.04720175665622
+    },
+    {
+      "lyrics_status": "instrumental",
+      "lyrics_reason": "compatible_source_instrumental_no_text",
+      "n_tracks": 8759,
+      "sum_weights": 50814.7275138967
+    },
+    {
+      "lyrics_status": "insufficient_metadata",
+      "lyrics_reason": "missing_artist_or_title",
+      "n_tracks": 2,
+      "sum_weights": 11.68090161021351
+    },
+    {
+      "lyrics_status": "no_text",
+      "lyrics_reason": "compatible_without_text",
+      "n_tracks": 9,
+      "sum_weights": 52.26396910086943
+    },
+    {
+      "lyrics_status": "not_found",
+      "lyrics_reason": "no_candidate_controlled_keys",
+      "n_tracks": 86610,
+      "sum_weights": 505130.2900221346
+    }
+  ],
+  "high_popularity": [
+    {
+      "high_band": "80-89",
+      "v1_lyrics_status": "accepted",
+      "lyrics_status": "accepted",
+      "n_tracks": 124,
+      "sum_weights": 124.0
+    },
+    {
+      "high_band": "80-89",
+      "v1_lyrics_status": "ambiguous",
+      "lyrics_status": "ambiguous",
+      "n_tracks": 343,
+      "sum_weights": 343.0
+    },
+    {
+      "high_band": "80-89",
+      "v1_lyrics_status": "instrumental",
+      "lyrics_status": "instrumental",
+      "n_tracks": 2,
+      "sum_weights": 2.0
+    },
+    {
+      "high_band": "80-89",
+      "v1_lyrics_status": "not_found",
+      "lyrics_status": "not_found",
+      "n_tracks": 2,
+      "sum_weights": 2.0
+    },
+    {
+      "high_band": "90-100",
+      "v1_lyrics_status": "accepted",
+      "lyrics_status": "accepted",
+      "n_tracks": 4,
+      "sum_weights": 4.0
+    },
+    {
+      "high_band": "90-100",
+      "v1_lyrics_status": "ambiguous",
+      "lyrics_status": "ambiguous",
+      "n_tracks": 24,
+      "sum_weights": 24.0
+    }
+  ],
+  "coverage": [
+    {
+      "phase": "before",
+      "accepted_n": 77391,
+      "denominator_n": 200000,
+      "unweighted_rate": 0.386955,
+      "accepted_weight": 448496.2736806663,
+      "denominator_weight": 1159764.0,
+      "weighted_rate": 0.38671339486366735
+    },
+    {
+      "phase": "after",
+      "accepted_n": 77535,
+      "denominator_n": 200000,
+      "unweighted_rate": 0.387675,
+      "accepted_weight": 449333.930660049,
+      "denominator_weight": 1159764.0,
+      "weighted_rate": 0.387435659892917
+    }
+  ]
+}

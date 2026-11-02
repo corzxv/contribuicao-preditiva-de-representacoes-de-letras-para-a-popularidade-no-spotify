@@ -1,0 +1,151 @@
+\subsection{Catálogo Spotify: origem e análise descritiva}\label{subsec:spotify}
+O ponto de partida é o arquivo público \textit{Spotify\_1Million\_Tracks}, disponibilizado no Kaggle pela conta \texttt{amitanshjoshi} \cite{spotifydataset}. O catálogo acessível contém 1.159.764 linhas, 20 colunas e 1.159.764 identificadores de faixa distintos, sem identificadores ausentes ou repetidos. A unidade inicial é a faixa identificada no Spotify; versões e gravações relacionadas permanecem distintas. A fonte não informa um desenho probabilístico de coleta a partir de toda a plataforma. Assim, o catálogo é a população finita acessível deste estudo, não um censo do Spotify.
+
+A resposta corresponde ao campo \texttt{popularity}, mantido separadamente de qualquer contagem de execuções ou visualizações de letras. Conforme a documentação do Spotify, o escore varia de zero a cem e considera execuções e recência \cite{spotifydocs}. A data de medição da resposta no arquivo e a versão exata do conjunto Kaggle não foram confirmadas. O campo \texttt{year} varia de 2000 a 2023 e é utilizado como metadado fornecido; não se presume que identifique o primeiro lançamento da composição.
+
+A popularidade tem média 18,38, desvio-padrão 15,89 e mediana 15. Os quartis inferior e superior são 5 e 29, e o percentil 95 é 49. Há 158.391 faixas com escore zero (13,66\% do catálogo), 499 com escore de pelo menos 80 (0,043\%) e 28 com pelo menos 90. A Figura~\ref{fig:panorama} mostra concentração nos escores baixos e uma cauda superior rara. Trata-se de uma distribuição discreta e assimétrica, sem ajuste ou suposição de normalidade para o alvo.
+
+\figura{spotify_panorama}{Distribuições de popularidade e do campo year no catálogo de 1.159.764 faixas.}{fig:panorama}{Elaboração própria a partir da auditoria do catálogo. Cada barra de popularidade reúne dez valores inteiros, exceto a última, que inclui cem. O campo year não identifica a data de medição da popularidade.}
+
+Agrupando o campo \texttt{year}, 443.801 faixas (38,27\%) estão em 2000--2009, 514.990 (44,40\%) em 2010--2019 e 200.973 (17,33\%) em 2020--2023. As respectivas popularidades médias são 12,66, 19,99 e 26,89. A associação entre ano informado e escore pode refletir recência, composição da fonte e outras diferenças; não estabelece uma tendência longitudinal da mesma música.
+
+O catálogo registra 82 categorias de gênero, com um rótulo por linha e sem ausência nesse campo. Os rótulos são preservados como fornecidos. A Figura~\ref{fig:generos} apresenta as 12 categorias mais frequentes, que juntas correspondem a 21,26\% do catálogo. Black-metal é a maior, com 21.852 faixas (1,88\%), enquanto songwriter é a menor, com 589 (0,05\%). Os rótulos incluem estilos, categorias culturais e descritores de ambiente; não devem ser interpretados como uma taxonomia homogênea ou como participações de mercado na plataforma.
+
+\figura{spotify_generos}{As 12 categorias de gênero mais frequentes no catálogo Spotify utilizado.}{fig:generos}{Elaboração própria a partir das contagens do arquivo original. Os números nas barras são contagens; as outras 70 categorias permanecem na população e na amostra.}
+
+A distribuição por crédito de artista também é desigual. Existem 64.157 strings distintas de crédito, após aparar espaços, com mediana de seis faixas por string e máximo de 4.058. As mil strings mais frequentes reúnem 20,09\% das linhas. Essas strings não são pessoas desambiguadas: podem representar bandas e participações. A dependência potencial entre faixas relacionadas será tratada por agrupamento na validação.
+
+A auditoria identificou 15 créditos de artista e um título ausentes, preservados no catálogo. A busca de termos nos títulos sinalizou 50.267 ocorrências de live/ao vivo, 37.932 de remix e 15.984 de remaster; são marcações heurísticas sobrepostas, não classes exaustivas de versões. Não houve deduplicação por título ou escolha da maior popularidade, pois isso alteraria a unidade e a população analisadas.
+
+As medidas acústicas e musicais já acompanham a fonte; não foram recalculadas a partir de áudio. Danceability, energy, speechiness, acousticness, instrumentalness, liveness e valence são escores entre zero e um; resumem, respectivamente, adequação à dança, intensidade, presença de fala, caráter acústico, ausência de voz, indícios de execução ao vivo e positividade musical. Loudness é expressa em decibéis, tempo em batidas por minuto e duração originalmente em milissegundos \cite{spotifyaudio}. A Tabela~\ref{tab:acusticas} resume essas variáveis no catálogo.
+
+\input{tables/spotify_acusticas}
+
+Instrumentalness tem mediana 0,0018, mas terceiro quartil 0,6140, indicando heterogeneidade importante. A variável é uma estimativa acústica da fonte, não a classificação textual instrumental do LRCLIB. A duração mediana é 225,74 segundos e o terceiro quartil é 286,91. A auditoria não encontrou ausências nos campos acústicos listados; identificou, porém, 1.199 registros de tempo iguais a zero, incompatíveis com a regra diagnóstica local de valor positivo. Eles permanecem na descrição bruta, sem exclusão retroativa para melhorar resultados.
+
+\FloatBarrier
+\subsection{LRCLIB: fonte textual e snapshot local}\label{subsec:lrclib}
+O LRCLIB é uma base aberta de letras que recebe contribuições e disponibiliza metadados e textos simples ou sincronizados em formato LRC. Sua documentação descreve identificador de registro, artista, título, álbum, duração e indicação instrumental, além das representações textuais \cite{lrclib}. Um registro da base não equivale necessariamente a uma composição única ou a uma letra pronta para análise: podem existir versões, representações diferentes e ausência de texto utilizável.
+
+Neste estudo foi utilizado o dump público identificado como 12 de outubro de 2026, obtido do domínio de distribuição do LRCLIB e descompactado localmente em SQLite. O resumo da preparação e da busca registra 47,84 GB comprimidos, 261,76 GB descompactados e 33.714.178 registros de metadados percorridos na tabela de faixas. Essas contagens caracterizam o snapshot utilizado; não são o número de letras distintas, de músicas do Spotify correspondentes ou de registros atuais do serviço.
+
+\begin{table}[htbp]\centering\small
+\caption{Caracterização documental do snapshot LRCLIB utilizado.}\label{tab:lrclib}
+\begin{tabular}{P{.40\linewidth}P{.52\linewidth}}\toprule
+Aspecto & Registro disponível \\\midrule
+Snapshot & 12 de outubro de 2026 \\
+Formato local & Banco SQLite obtido de dump público comprimido \\
+Volume comprimido / local & 47,84 GB / 261,76 GB (unidades decimais) \\
+Metadados percorridos & 33.714.178 registros de faixas \\
+Identificação & Artista, título, álbum e duração; ID próprio do LRCLIB \\
+Conteúdo textual & Letra simples, sincronizada, indicação instrumental ou texto ausente \\
+Uso no estudo & Recuperar letras das 200.000 faixas sorteadas no Spotify \\
+\bottomrule\end{tabular}
+\fonte{Documentação LRCLIB e resumo concluído da busca local. O total de metadados provém do checkpoint de indexação, sem nova varredura do banco.}
+\end{table}
+
+O uso local tornou possível repetir consultas sobre o mesmo snapshot e examinar candidatos sem depender de respostas mutáveis da API. Índices auxiliares selecionaram metadados dos artistas necessários à busca. Suas contagens não são somadas como se fossem letras novas: os índices são estruturas de acesso ao mesmo banco e podem conter recortes sobrepostos.
+
+Não foi produzido um censo global de idiomas, comprimentos ou disponibilidade de cada tipo de letra no dump. A descrição quantitativa textual apresentada adiante refere-se aos resultados de consulta da amostra Spotify, cujo denominador é conhecido. Essa distinção evita extrapolar a composição dos artistas pesquisados para o LRCLIB inteiro. A existência de conteúdo público tampouco garante correspondência correta ou cobertura uniforme por língua, gênero e popularidade.
+
+O LFM2b teve um papel anterior de motivação e integração de descritores, conforme a base de \citeonline{parada2024data}. Seus dados e resultados não foram transportados para preencher a coorte atual. Contagens Last.fm e visualizações Genius permanecem respostas diferentes do escore Spotify. A base principal desta análise é construída pela sequência Spotify--amostragem--LRCLIB descrita a seguir.
+
+\FloatBarrier
+\subsection{Seleção probabilística de 200 mil faixas}\label{subsec:amostragem}
+A busca de letras e a construção das representações exigem recursos de armazenamento e processamento. Fixou-se, por isso, um orçamento de 200.000 faixas antes da recuperação textual. Esse total é uma decisão operacional; não decorre de cálculo de poder, tamanho ótimo ou garantia genérica de erro. A estratificação utiliza informações disponíveis no catálogo e permite preservar probabilidades e pesos conhecidos \cite{cochran1977,statcan2010}.
+
+As 499 faixas com popularidade de pelo menos 80 foram incluídas integralmente, dentro das 200.000, para preservar a cauda rara do catálogo. As demais foram estratificadas pelo cruzamento de gênero, três períodos do campo year (2000--2009, 2010--2019 e 2020--2023) e cinco bandas de popularidade (0--19, 20--39, 40--59, 60--69 e 70--79). O desenho resultou em 981 estratos não vazios, dos quais 62 foram integrais, incluindo o grupo de alta popularidade.
+
+Para explicitar a alocação, seja $C_0=499$ o tamanho do grupo incluído integralmente e $\mathcal H_0$ o conjunto dos outros estratos. Define-se uma reserva $b_h=\min(2,N_h)$, uma capacidade residual $c_h=N_h-b_h$ e o orçamento restante
+\begin{equation}\label{eq:orcamento}
+ R=200.000-C_0-\sum_{h\in\mathcal H_0}b_h,\qquad
+ q_h=R\frac{c_h}{\sum_{\ell\in\mathcal H_0}c_\ell}.
+\end{equation}
+A alocação inicial é $n_h=b_h+\lfloor q_h\rfloor$. As vagas ainda disponíveis são distribuídas pelos maiores restos $q_h-\lfloor q_h\rfloor$, com desempate determinístico pelo identificador de estrato. Depois, realiza-se sorteio aleatório simples sem reposição em cada estrato não integral. A distribuição é aproximadamente proporcional à capacidade residual, não uma alocação de Neyman ou otimização demonstrada para o MAE.
+
+O sorteio utilizou gerador PCG64 e semente 20261031, com ordenação fixa de estratos e identificadores. As probabilidades e pesos seguem a Equação~\ref{eq:inclusao}. A amostra contém exatamente 200.000 IDs únicos, inclui as 499 faixas da cauda e conserva a soma dos pesos igual a 1.159.764. Nenhuma faixa foi substituída por possuir letra mais fácil de localizar. Gêneros e anos originais, pesos e estratos permanecem disponíveis para diagnóstico de cobertura.
+
+\subsection{Integração por metadados e aceitação de letras}\label{subsec:integracao}
+Somente depois do sorteio foram consultadas as correspondências no LRCLIB. A recuperação utiliza artista, título e duração da faixa Spotify, com referências separadas ao registro e ao conteúdo textual encontrado. Popularidade, gênero, peso amostral e instrumentalness não participam da decisão de aceitar uma letra, evitando que a resposta ou um preditor acústico sejam usados como evidência de identidade textual.
+
+A normalização cria chaves adicionais e preserva os campos originais. Nas consultas finais, uniformizam-se Unicode, caixa, espaços e sinais tipográficos usuais, preservando acentos e nomes formados apenas por símbolos. Participações são reconhecidas quando explicitadas por feat., ft. ou featuring. Não se decompõem automaticamente nomes de bandas e créditos por qualquer vírgula ou sinal \&. Qualificadores contextuais, como live, remix, remaster e versões acústicas, são conservados para impedir que a simplificação do título iguale gravações incompatíveis.
+
+Os candidatos precisam ter artista e título compatíveis, incluindo as informações de colaboração e versão disponíveis. Quando ambas as durações são válidas, exige-se diferença de no máximo dez segundos; ausência de duração não comprova identidade. Não se aceita uma correspondência apenas por título isolado, substring ou maior similaridade. Se candidatos elegíveis contêm textos substantivamente diferentes ou conflitos de versão, a decisão permanece ambígua.
+
+Letras sincronizadas são convertidas somente nos formatos LRC suportados, removendo marcadores temporais e metadados sem apagar conteúdo, ordem e repetições. Quando texto simples e sincronizado estão disponíveis, divergências impedem novas aceitações. Diferenças puramente tipográficas têm equivalência restrita; o procedimento não escolhe a letra mais conveniente. Uma primeira recuperação já havia aceitado 77.391 faixas; suas aceitações e classificações instrumentais foram preservadas na recuperação final, que acrescentou 144 aceitas. Isso significa que parte das decisões foi herdada, sem uma revalidação humana universal.
+
+\input{tables/cobertura}
+
+O resultado final é de 77.535 letras aceitas, 38,77\% da amostra. As outras 122.465 faixas permanecem registradas nos diagnósticos de cobertura, e não foram substituídas. Não encontrada significa ausência de candidato aceito sob as chaves, critérios e snapshot utilizados, não inexistência universal de letra. Ambiguidade representa evidência insuficiente para escolher entre candidatos; instrumental é uma classificação da fonte textual, distinta do preditor instrumentalness. Não restaram erros técnicos ou consultas pendentes.
+
+Integridade de vínculo e texto foi auditada, mas não se estimou uma taxa global de precisão do matching por revisão humana probabilística. Identificadores e hashes verificam consistência técnica, não a pertinência semântica de toda letra à gravação. Homônimos, pseudônimos e decisões herdadas são limitações da integração, mantidas na interpretação dos resultados.
+
+\FloatBarrier
+\subsection{Da amostra sorteada ao domínio observado}\label{subsec:selecao}
+A Tabela~\ref{tab:descritivas} compara catálogo, amostra e aceitas. A média da amostra ponderada, 18,3899, aproxima-se da média do catálogo, 18,3831, enquanto a média ponderada entre aceitas é 23,7482. Sem pesos, a média das aceitas é 23,9821 e sua mediana é 22, contra 15 no catálogo. A Figura~\ref{fig:distribuicao} mostra o deslocamento da distribuição observada após a etapa textual.
+
+\input{tables/descritivas}
+\figura{distribuicao_popularidade}{Distribuição acumulada da popularidade antes e depois da recuperação de letras.}{fig:distribuicao}{Elaboração própria a partir das frequências agregadas. Amostra ponderada pelos pesos de desenho; aceitas com pesos iguais por faixa.}
+
+A cobertura global ponderada é 38,7436\%, próxima da proporção sem pesos. Entretanto, a Figura~\ref{fig:cobertura} evidencia que essa proximidade não elimina seleção por popularidade. Das 499 faixas incluídas integralmente na banda de pelo menos 80, apenas 128 tiveram letras aceitas (25,65\%). Há ainda 102 estratos sem aceitas e 348 com menos de cinco aceitas. Um peso original positivo não cria informação textual nos estratos não observados.
+
+\figura{cobertura_bandas}{Proporção de letras aceitas por banda de popularidade na amostra.}{fig:cobertura}{Elaboração própria a partir da recuperação local. Cada denominador é o número de faixas sorteadas na banda; proporções sem pesos.}
+
+Um diagnóstico exploratório anterior comparou 104 critérios marginais com tolerâncias explícitas: um ponto para a média de popularidade; 0,10 desvio-padrão do catálogo para outras médias; e o menor entre um ponto percentual e 20\% da proporção do catálogo para categorias. A análise por linearização sob o desenho utilizou equivalência de Wald (TOST a 5\%) e controle simultâneo de diferenças por Bonferroni. Foram 21 critérios equivalentes, 74 diferenças individuais e nove inconclusivos; 72 diferenças tiveram apoio no controle simultâneo. O resultado não sustenta equivalência global das aceitas ao catálogo. Esses diagnósticos são posteriores a explorações do projeto e não constituem confirmação independente.
+
+A conclusão sobre inferência é delimitada: a seleção probabilística inicial permite descrição e estimação sob o desenho para o catálogo definido; a posterior recuperação textual não preserva automaticamente esse alcance. Não se demonstrou que as 77.535 aceitas sejam uma amostra representativa de todo o catálogo ou de todas as músicas com letras. Por isso, o estimando principal da modelagem é o desempenho preditivo médio nas avaliações externas da distribuição empírica desse domínio observado, com pesos iguais por faixa. Os pesos originais são preservados para descrição e sensibilidade, sem serem interpretados como correção automática da disponibilidade textual.
+
+O domínio permaneceu multilingue: 56.908 faixas foram classificadas no status inglês, 20.447 no status não inglês e 180 como incertas. O status combina código e confiança de um detector automático, não uma verificação humana. Houve 77.051 entradas textuais normalizadas distintas, de modo que 484 vínculos excedentes compartilham conteúdo. A análise conserva as faixas e considera texto igual na formação de grupos de validação.
+
+\FloatBarrier
+\subsection{Preditores e representações utilizadas}\label{subsec:representacoes}
+O Baseline contém 15 campos: 11 numéricos (year, danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo e duração) e quatro categóricos (genre, key, mode e time\_signature). Key representa a classe de altura musical; mode codifica modo maior/menor; time\_signature informa a assinatura de tempo \cite{spotifyaudio}. Gênero é a categoria da fonte, e não uma classificação construída a partir da letra. Nomes, IDs, idioma, chaves de grupos, pesos e informações de matching não entram como preditores.
+
+\begin{table}[htbp]\centering\small
+\caption{Configurações preditivas comparadas nas mesmas faixas e folds.}\label{tab:blocos}
+\begin{tabular}{lP{.65\linewidth}}\toprule
+Configuração & Conjunto de características antes da codificação categórica \\\midrule
+Baseline & 15 campos acústicos, musicais e de metadados \\
+Tradicional & Baseline + 21 descritores lexicais e estruturais próprios \\
+Profundo & Baseline + 384 coordenadas do embedding multilingue \\
+Combinado & Baseline + 21 descritores + 384 coordenadas \\
+\bottomrule\end{tabular}
+\fonte{Elaboração própria. A quantidade final de colunas depende das categorias observadas em cada treino. Todos os regressores são Ridge.}
+\end{table}
+
+Descritores e embeddings recebem o mesmo texto aceito, com normalização Unicode NFC, uniformização de quebras de linha e remoção de espaços finais e linhas vazias externas. Não se removem palavras, repetições ou pontuação. Os 21 descritores resumem extensão, diversidade de segmentos, entropia, estrutura de linhas e composição gráfica. São definidos integralmente no Apêndice~\ref{ap:descritores}; não constituem reprodução dos descritores LFM2b nem medidas de sentimento validadas para todas as línguas. Segmentos lexicais são sequências de letras Unicode com apóstrofo ou hífen interno, e não palavras linguísticas universais.
+
+O encoder é o \textit{multilingual-e5-small}, revisão congelada \texttt{614241f6}, com vetor de 384 dimensões, execução em CPU e ponto flutuante de 32 bits, sem ajuste com popularidade \cite{wang2024,e5card}. O texto é tokenizado integralmente e dividido em janelas com sobreposição de 32 tokens de conteúdo. Reservam-se prefixo e tokens especiais no limite de 512 posições; não se descarta silenciosamente o final de letras longas.
+
+Para uma janela $j$, sejam $\bm h_{jt}$ os estados dos tokens e $a_{jt}\in\{0,1\}$ sua máscara de atenção. O pooling e a agregação são
+\begin{equation}\label{eq:embedding}
+ \bm v_j=\frac{\sum_t a_{jt}\bm h_{jt}}{\sum_t a_{jt}},\quad
+ \bm u_j=\frac{\bm v_j}{\|\bm v_j\|_2},\quad
+ \bm z=\frac{\sum_j c_j\bm u_j}{\|\sum_j c_j\bm u_j\|_2},
+\end{equation}
+em que $c_j$ é o número de tokens de conteúdo novos na janela. Padding é excluído; prefixo e tokens especiais válidos participam da média. O pooling mascarado e a normalização L2 seguem a orientação do model card; a agregação de janelas é uma adaptação deste estudo, não garantia de preservação integral de semântica.
+
+Há um desvio de entrada que precisa qualificar os resultados. O model card recomenda o prefixo \texttt{query: } para uso como características. A execução tokenizou prefixo e conteúdo separadamente, introduzindo um token adicional de espaço em comparação com a concatenação textual da receita oficial. Em quatro frases artificiais, as duas receitas produziram vetores próximos, mas diferentes, com cossenos entre 0,99664 e 0,99943. Não foi medido o efeito dessa diferença no MAE do corpus. A representação avaliada é, portanto, uma variante operacional documentada do E5; não se alega reprodução canônica exata.
+
+Foram produzidos 77.051 vetores, associados às 77.535 faixas por referências de conteúdo. A auditoria verificou dimensão, finitude e norma dos vetores; uma conferência limitada posterior reproduziu os 21 descritores em oito textos, com diferença máxima zero. Esses controles verificam implementação e alinhamento, sem certificar adequação semântica ou uniformidade entre línguas. As representações e a população foram preservadas após conhecer os resultados.
+
+\subsection{Validação, ajuste e política de comparação}\label{subsec:validacao}
+A separação dos dados utiliza componentes conexos de relações identificadas por artista, composição operacional, versão e texto igual. Se uma relação liga duas faixas, elas e suas ligações transitivas permanecem no mesmo componente. Foram formados 21.893 componentes, com máximo de 186 faixas. As chaves são operacionais e podem deixar de reconhecer aliases ou versões; não são identificadores universais de composição.
+
+Aplicou-se validação cruzada agrupada aninhada 5$\times$3, com os mesmos componentes e partições nas quatro configurações. Cada teste externo contém 15.507 faixas e seu treino 62.028. Dentro do treino externo, cada avaliação interna contém 20.676 faixas e seu treino 41.352. A distribuição equilibra quantidades de faixas sem usar popularidade para formar ou redesenhar os grupos.
+
+Em cada treino, as características numéricas passam por imputação de mediana e padronização conforme a Equação~\ref{eq:padronizacao}. Nos 15 campos Baseline da coorte final não houve ausência ou invalidade registrada. As categorias são codificadas por indicadores binários, com vocabulário aprendido no treino e zeros para categorias novas na avaliação. Nenhuma transformação aprende parâmetros no teste. Não há seleção global de variáveis ou redução por componentes principais.
+
+Para cada configuração e treino externo, a penalização é selecionada na grade
+$\mathcal A=\{0{,}1;1;10;100;1.000;10.000\}$. Se $V_{k\ell}$ indica a avaliação interna $\ell$ do treino externo $k$, escolhe-se
+\begin{equation}\label{eq:selecaoalpha}
+ \widehat\alpha_{k,m}=\underset{\alpha\in\mathcal A}{\operatorname{argmin}}
+ \frac{\sum_{\ell=1}^{3}\sum_{i\in V_{k\ell}}
+ |y_i-\widehat f^{(m)}_{k\ell,\alpha}(\bm x_i)|}
+ {\sum_{\ell=1}^{3}|V_{k\ell}|}.
+\end{equation}
+Empates exatos favorecem o maior $\alpha$. O pré-processamento e o Ridge são então reajustados sobre todo o treino externo, com a penalização escolhida, para prever seu teste. Reunidas as cinco avaliações externas, cada faixa tem uma previsão por configuração. MAE, RMSE e $R^2$ seguem as Equações~\ref{eq:mae}--\ref{eq:r2}; os ajustes e as métricas principais dão peso igual a cada faixa, sem equilibrar artistas por meio de pesos artificiais.
+
+Duas referências adicionais predizem a média e a mediana do respectivo treino externo. A sensibilidade da Equação~\ref{eq:maeponderado} utiliza os pesos originais somente nas mesmas previsões externas, sem retreinar ou selecionar novamente os modelos. Os ajustes foram realizados em Python e scikit-learn \cite{pedregosa2011}, com solver LSQR, tolerância $10^{-5}$ e limite de 10.000 iterações. Os 360 ajustes internos Ridge não registraram avisos ou alcance desse limite.
+
+A comparação atual sucede explorações anteriores do projeto. Um teste histórico foi consultado em 14 de outubro de 2026, havendo vínculos de artista e composição com o domínio recente. O agrupamento atual evita as sobreposições operacionais especificadas, mas um novo sorteio não apaga essa exposição. A avaliação é apresentada como estudo empírico com essa história, sem alegar confirmação independente. Os cinco folds tampouco fornecem cinco réplicas independentes para inferência.

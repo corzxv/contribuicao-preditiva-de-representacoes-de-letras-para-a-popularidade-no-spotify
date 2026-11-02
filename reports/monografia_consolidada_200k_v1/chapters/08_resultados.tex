@@ -1,0 +1,35 @@
+\chapter{Resultados preditivos}\label{cap:resultados}
+\section{Comparação global das quatro configurações}
+A avaliação foi concluída para 20 partes Ridge e dez referências, com uma previsão externa por faixa e por variante. A auditoria posterior reproduziu as métricas e reconciliou as partes com o arquivo global. A Tabela~\ref{tab:metricas} apresenta os resultados da comparação principal e a sensibilidade de avaliação ponderada.
+
+\input{tables/metricas}
+
+O Combinado apresentou o menor MAE observado, 8,1151, seguido do Profundo, 8,1285. Tradicional e Baseline tiveram MAE de 8,2957 e 8,3525. O Combinado também apresentou os menores RMSE e maior $R^2$ entre as quatro configurações, mas essas métricas complementares não foram usadas para escolher retrospectivamente o critério de destaque. As referências de média e mediana do treino tiveram erros maiores.
+
+Em relação ao Baseline, a diferença de MAE do Combinado foi de $-0{,}23736$ ponto, equivalente a redução relativa de 2,84\%. É um incremento médio de magnitude moderada na escala de zero a cem; não significa que a letra explique causalmente essa parcela da popularidade nem que todo caso tenha melhorado. O $R^2$ externo descreve erro relativo à variabilidade observada, sem interpretação como fração causal atribuível às letras.
+
+\figura{comparacao_global}{Desempenho médio e incrementos nas previsões externas.}{fig:global}{Agregados da comparação Ridge atual. Pesos originais são usados somente como sensibilidade na avaliação.}
+\FloatBarrier
+
+\section{Incrementos específicos}
+A Tabela~\ref{tab:contrastes} discrimina os cinco contrastes. O Profundo reduz o MAE frente ao Baseline em cerca de 0,2240 ponto, enquanto o Tradicional reduz cerca de 0,0568. O Combinado acrescenta apenas 0,0134 ponto de redução em relação ao Profundo. Assim, a ordenação pontual favorece a união das representações, mas quase todo o ganho conjunto frente ao Baseline já aparece ao acrescentar o embedding.
+
+\input{tables/contrastes}
+
+Esse resultado é compatível com sobreposição informacional entre descritores e embeddings, mas não a demonstra como mecanismo. A família Ridge, suas escalas, a grade e a representação efetivamente usada participam do resultado. Não é possível concluir que descritores explícitos sejam sempre redundantes ou que embeddings sejam universalmente superiores em outras populações ou algoritmos.
+
+Com pesos originais, o MAE do Combinado foi 7,9908 frente a 8,2194 do Baseline, redução relativa de 2,78\%. A ordenação é mantida, e o incremento Combinado--Profundo continua pequeno. Essa concordância é evidência de sensibilidade limitada à reponderação específica dos casos observados; não valida correção do viés de disponibilidade textual.
+
+\section{Variação entre avaliações externas}
+O Combinado apresentou menor MAE nos cinco folds externos, mantendo a mesma ordenação global. As diferenças frente ao Baseline variaram de aproximadamente $-0{,}2724$ a $-0{,}2070$. A Tabela~\ref{tab:folds} e a Figura~\ref{fig:folds} permitem examinar essa consistência sem tratar folds como observações independentes para um teste de hipótese.
+
+\input{tables/folds}
+\figura{estabilidade_folds}{MAE nas cinco avaliações externas agrupadas.}{fig:folds}{Mesmas observações e partições para as quatro configurações; a sobreposição dos treinos impede interpretar os cinco pontos como réplicas independentes.}
+\FloatBarrier
+
+\section{Penalização selecionada e limites do procedimento}
+A Tabela~\ref{tab:alphas} registra os parâmetros escolhidos nas validações internas. Seis seleções ocorreram no extremo inferior da grade, 0,1. Esse fato é documentado como limitação da busca fixada e não autoriza expandi-la depois de observar os testes externos. A comparação responde pelo procedimento efetivamente executado, e não pelo melhor resultado que poderia ser obtido após novas tentativas.
+
+\input{tables/alphas}
+
+Não foi ajustado automaticamente um novo modelo final em toda a coorte. Os resultados reportados são de avaliação externa agrupada, com os próprios tamanhos de treino definidos pela CV. Um modelo de implantação, se fosse objetivo posterior, teria outra finalidade e não herdaria sem ressalvas a mesma quantificação de erro ou incerteza.

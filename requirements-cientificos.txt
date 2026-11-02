@@ -1,0 +1,14 @@
+# Versões científicas observadas no ambiente da execução congelada.
+# Instalação completa e processamento real são manuais.
+-r requirements-lock.txt
+joblib==1.6.0
+threadpoolctl==3.7.0
+scikit-learn==1.9.1
+scipy==1.18.1
+langid==1.1.6
+huggingface-hub==0.36.2
+torch==2.8.0
+transformers==4.57.1
+sentence-transformers==5.1.1
+tokenizers==0.22.2
+safetensors==0.8.0

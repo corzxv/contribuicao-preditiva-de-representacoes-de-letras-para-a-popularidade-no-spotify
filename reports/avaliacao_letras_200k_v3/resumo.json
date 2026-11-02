@@ -1,0 +1,182 @@
+{
+  "mode": "evaluate",
+  "completed": true,
+  "budget_seconds": 600.0,
+  "elapsed_seconds_including_exports": 181.13091080001323,
+  "new_queries": 1000,
+  "reused_queries": 0,
+  "selected_tracks": 1000,
+  "transitions": [
+    {
+      "before": "accepted",
+      "after": "accepted",
+      "gain_stage": "classifier",
+      "reason": "deterministic_identity_text_sequence",
+      "len": 98
+    },
+    {
+      "before": "accepted",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "review_required",
+      "len": 2
+    },
+    {
+      "before": "ambiguous",
+      "after": "accepted",
+      "gain_stage": "classifier",
+      "reason": "deterministic_identity_text_sequence",
+      "len": 31
+    },
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "synced_requires_review",
+      "len": 1
+    },
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "no_compatible_candidate_in_available_indexes",
+      "len": 56
+    },
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "different_word_sequence_or_punctuation",
+      "len": 116
+    },
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "plain_synced_content_conflict",
+      "len": 3
+    },
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "operational_limit:artist_block_limit",
+      "len": 89
+    },
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "instrumental_text_conflict",
+      "len": 4
+    },
+    {
+      "before": "not_found",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "operational_limit:artist_block_limit",
+      "len": 19
+    },
+    {
+      "before": "not_found",
+      "after": "ambiguous",
+      "gain_stage": "expanded_search",
+      "reason": "review_required",
+      "len": 12
+    },
+    {
+      "before": "not_found",
+      "after": "not_found",
+      "gain_stage": "expanded_search",
+      "reason": "no_compatible_candidate_in_available_indexes",
+      "len": 569
+    }
+  ],
+  "scale_cost_by_group": [
+    {
+      "status": "no_text",
+      "population_n": 9,
+      "processed_n": 0,
+      "naive_scale_seconds": null
+    },
+    {
+      "status": "instrumental",
+      "population_n": 8759,
+      "processed_n": 0,
+      "naive_scale_seconds": null
+    },
+    {
+      "status": "insufficient_metadata",
+      "population_n": 2,
+      "processed_n": 0,
+      "naive_scale_seconds": null
+    },
+    {
+      "status": "not_found",
+      "population_n": 86610,
+      "processed_n": 600,
+      "naive_scale_seconds": 7131.318777164177
+    },
+    {
+      "status": "ambiguous",
+      "population_n": 27085,
+      "processed_n": 300,
+      "naive_scale_seconds": 9431.88979381076
+    },
+    {
+      "status": "accepted",
+      "population_n": 77535,
+      "processed_n": 100,
+      "naive_scale_seconds": 443.97866846146644
+    }
+  ],
+  "approximate_auto_acceptance": false,
+  "precision_measured": false,
+  "new_indexes": 0,
+  "seal": {
+    "version": "lyrics-diagnostic-v3",
+    "sample": "cbaf98e2771067ab70538068d85b029ce77fbcdfb86e8b35f34a2a7abf46faff",
+    "baseline": "ca0fc1598271c182495eb681ebdf260435de0590f28df6c10f42b0f59b65f74b",
+    "sources": [
+      {
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\state.sqlite",
+        "size": 1041354752,
+        "mtime_ns": 1793501571205309600
+      },
+      {
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v1\\state.sqlite",
+        "size": 6203969536,
+        "mtime_ns": 1793479197225256500
+      },
+      {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_v1\\lookup.sqlite",
+        "size": 2818658304,
+        "mtime_ns": 1793154533975425800
+      },
+      {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v1\\lookup.sqlite",
+        "size": 1001488384,
+        "mtime_ns": 1793477467924516200
+      },
+      {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+        "size": 1254682624,
+        "mtime_ns": 1793501353594451100
+      }
+    ],
+    "code": {
+      "lyrics_evaluation.py": "c035f40c8fe6bedec1d34733bdaf3f4211ef2e9f8004fffe6297064e14ac0e38",
+      "protocolo_avaliacao_letras_v3.md": "f6205a58c83bb5d17f39eeefe116c6ccb2205d2a16baef40dcabd8c6ed3f2e88",
+      "lyrics_recovery.py": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78",
+      "sample_lyrics.py": "5cb01afec12530fcb3dab012e068465407ca6737523a5208435b196bbe1b1072",
+      "normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0"
+    }
+  },
+  "scope": "diagnostic_only",
+  "new_acceptances": 31,
+  "classifier_gain": 31,
+  "expanded_search_gain": 0,
+  "previous_acceptances_now_inconclusive": 2,
+  "proposed_candidate_pairs": 205,
+  "projected_net_gain_in_three_diagnostic_groups": 1225.1363040109973
+}

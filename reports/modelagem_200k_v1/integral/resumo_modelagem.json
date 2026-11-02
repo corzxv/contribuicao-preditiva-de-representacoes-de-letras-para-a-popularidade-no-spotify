@@ -1,0 +1,60 @@
+{
+  "completed": true,
+  "mode": "all",
+  "seal": {
+    "version": "observed-ridge-v1",
+    "inputs": {
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\base_modelagem_200k_v1\\resumo_base_modelagem.json": "98824bdb94375545640e058ee2d497250b0695926f54f1fd7d4cc3ebdcf0f5b7",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\coorte_modelagem.parquet": "d14c77002f42d0c59ca1af0e734bec5075190e197479f55e6ea3c23f033d4efe",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\folds_5x3.parquet": "4ceff167a8c2a17e315c1c7a3226051bd769e173c0eebc07e27976df69903d5b",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\blocos.json": "35a5f803853ae9a27bb69deba8a8d0e933b26875c01c6dcc795dbc80dc9e0ba8",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\metadados_invalidos.parquet": "05ba653af881d4c5a43434af89c00373dffcfef4b3943973a3d97387882b8474",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_embeddings_200k_v1\\embeddings.parquet": "7c379cabb065764f24a8c6a54895a318513ce89e737ce366ecb5a67147519ab8"
+    },
+    "protocol": "302eef7bd27c1c28e2206782e212181a56fe697e54b9764a2618e5a295729069",
+    "code": {
+      "observed_regression.py": "594e6dc727ba62b787be7b00e446e89e4811ccdccd88488b7af79edae9596ee4",
+      "cohort_regression.py": "467f09028e13666737d1204e2f3433a5a0b14138891976189cc9b256ef7e27ab",
+      "manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f"
+    },
+    "alpha_grid": [
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0,
+      10000.0
+    ],
+    "solver": "lsqr",
+    "tol": 1e-05,
+    "max_iter": 10000,
+    "threads": 2,
+    "versions": {
+      "numpy": "2.5.2",
+      "polars": "1.43.2",
+      "pyarrow": "25.0.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0"
+    },
+    "python": "3.13.15"
+  },
+  "signature": "34e5e6e0b46462ec2bafe4aa9e05769c254c1bf00792debdc07170e3ee3682b9",
+  "source_rows": 77535,
+  "used_rows": 77535,
+  "new_outer_blocks": 19,
+  "reused_outer_blocks": 1,
+  "expected_outer_blocks": 20,
+  "training_weight_policy": "equal_track_weights",
+  "selection": "unweighted_MAE",
+  "sensitivity": "original_sampling_weights_same_predictions",
+  "global_metrics_available": true,
+  "completed_outer_blocks": 20,
+  "pending_outer_blocks": 0,
+  "prediction_rows": 77535,
+  "models_evaluated": 6,
+  "paired_comparisons": 5,
+  "predictions_sha256": "4e9bc8839ceb76bef0248e328217dc362c5ee894479731e43de401fb0ffaf448",
+  "seconds_this_invocation": 651.3722905999748
+}

@@ -1,0 +1,119 @@
+\section{Metodologia da análise da coorte ampliada}
+\label{sec:metodologia}
+
+O objetivo desta etapa foi avaliar se descritores de letras acrescentam informação para estimar a popularidade Spotify registrada na base, além daquela disponível em características acústicas e metadados. A questão não consiste em identificar uma fórmula de sucesso comercial, mas em comparar a capacidade preditiva de dois conjuntos de variáveis sob as mesmas condições de avaliação. Foram comparados o bloco \textit{Baseline}, com 23 atributos, e o bloco \textit{Tradicional}, com os mesmos 23 atributos acrescidos de 196 descritores de letras.
+
+A análise foi implementada em Python e realizada exclusivamente no conjunto de desenvolvimento. As previsões avaliadas foram produzidas para observações que não participaram do ajuste do respectivo modelo. O conjunto de teste originalmente reservado não foi utilizado para escolher transformações, hiperparâmetros ou famílias de regressão nesta rodada. Como esta etapa ocorreu após análises anteriores do estudo, seus resultados têm caráter exploratório.
+
+\subsection{Adequações em relação à proposta inicial}
+
+A proposta inicial previa obtenção de dados pelas APIs do Spotify e do Genius, restrição a músicas em inglês, implementação em R e amostragem com quantidades iguais em estratos de popularidade. A execução aqui descrita adotou um desenho diferente: reutilizou a base integrada Spotify--LFM2b, os descritores já disponíveis e as letras aceitas na coleta do LRCLIB, com implementação em Python. A presente auditoria de integridade não estabeleceu que todas as letras fossem em inglês; por isso, essa restrição não é apresentada como característica comprovada da coorte.
+
+Outra diferença fundamental é que não foram selecionadas quantidades iguais de músicas em cada faixa de popularidade. Utilizou-se a coorte elegível com letras aceitas, respeitando a divisão de desenvolvimento e teste já existente. Consequentemente, o número de composições de alta popularidade corresponde à disponibilidade nessa coorte, e não a uma cota previamente preenchida. O balanceamento previsto na proposta original não deve ser descrito como procedimento executado.
+
+Também foi delimitada a interpretação do desfecho. A resposta analisada é a popularidade observada no momento de referência da fonte, denominado \textit{snapshot}. Não se trata de uma observação futura feita após o treinamento, nem de uma medida direta de lucro, vendas ou sucesso comercial. Essa distinção é necessária para que a conclusão corresponda ao que os dados permitem avaliar.
+
+\subsection{Formação da amostra e unidade de análise}
+
+A coleta e a auditoria identificaram 78.323 faixas com letras aceitas, sendo 58.705 vinculadas ao desenvolvimento e 19.618 ao teste reservado. Esses números descrevem faixas, isto é, registros associados a identificadores de gravações. Eles não correspondem necessariamente ao número de composições musicais distintas.
+
+Uma mesma composição pode aparecer em mais de uma versão. Para reduzir sua repetição na análise, selecionou-se um representante por chave operacional de composição dentro do subconjunto aceito. A escolha foi determinística e não utilizou popularidade: considerou critérios já implementados de versão, confiança do pareamento, completude e desempate por identificadores. Foram colapsadas 72 versões adicionais no desenvolvimento, resultando em \textbf{58.633 composições operacionais}. Os vínculos das demais faixas foram preservados para rastreabilidade.
+
+A expressão composição operacional indica uma identificação construída a partir das regras do projeto; não equivale a um identificador universal de uma obra musical. Cada linha da matriz representa uma dessas composições por meio de uma faixa selecionada. A Tabela~\ref{tab:amostra} distingue as etapas e evita confundir o universo coletado com o tamanho efetivamente usado na modelagem.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Da coleção aceita à matriz de desenvolvimento}\label{tab:amostra}
+\begin{tabularx}{\textwidth}{Yr}
+\toprule Etapa ou unidade & Quantidade\\\midrule
+Faixas com letras aceitas nos dois conjuntos & 78.323\\
+Faixas aceitas no desenvolvimento & 58.705\\
+Faixas aceitas no teste reservado & 19.618\\
+Versões adicionais colapsadas no desenvolvimento & 72\\
+Composições operacionais usadas nesta rodada & 58.633\\
+Grupos de artista na matriz de desenvolvimento & 8.883\\
+Componentes de dependência utilizados na validação & 8.880\\
+\bottomrule
+\end{tabularx}
+\fonte{Registros de preparação e descrição da coorte aceita, execução de outubro de 2026.}
+\end{table}
+
+A auditoria encontrou 78.280 textos distintos por hash entre as 78.323 consultas aceitas. Um hash é uma assinatura computacional do texto: permite detectar igualdade exata, mas não demonstra que duas versões diferentes sejam semanticamente equivalentes. A contagem de textos distintos é diferente da contagem de composições. Textos repetidos foram considerados na construção dos grupos de validação, sem exclusão automática de composições apenas por compartilharem letra.
+
+\subsection{Variável resposta e blocos de preditoras}
+
+A variável resposta, denotada por $Y$, é o índice \texttt{spotify\_popularity}, cuja escala nominal vai de 0 a 100. Na coorte analisada, o intervalo efetivamente observado foi de 0 a 85. Um valor 80 não significa que 80\% das pessoas conheçam a música; trata-se da pontuação registrada na fonte.
+
+O bloco Baseline reuniu características acústicas, duração, ano, gênero e indicadores de versão. Os 23 campos autorizados foram \texttt{year}, \texttt{genre}, \texttt{danceability}, \texttt{energy}, \texttt{key}, \texttt{loudness}, \texttt{mode}, \texttt{speechiness}, \texttt{acousticness}, \texttt{instrumentalness}, \texttt{liveness}, \texttt{valence}, \texttt{tempo}, \texttt{duration\_ms}, \texttt{time\_signature}, \texttt{remaster}, \texttt{remix}, \texttt{live}, \texttt{acoustic}, \texttt{radio\_edit}, \texttt{mono\_stereo}, \texttt{instrumental} e \texttt{demo}. Ano e gênero mantiveram a semântica documentada para a fonte, sem atribuir ao ano, por exemplo, uma interpretação universal de primeira publicação da composição.
+
+O bloco Tradicional acrescentou 196 descritores LFM2b autorizados no manifesto do projeto. Esses descritores quantificam propriedades lexicais, de diversidade, legibilidade, rima, estrutura e conteúdo afetivo. Logo, esse bloco utiliza informação sobre letras, mas não corresponde a uma nova rede neural lendo os textos completos. Os descritores foram reaproveitados, sem recálculo a partir das letras LRCLIB. A possível diferença entre a versão textual de origem do descritor e a letra posteriormente recuperada permanece uma limitação.
+
+O Tradicional possui, portanto, 219 atributos de entrada antes da codificação de categorias e da expansão por splines. Esse número não é necessariamente igual ao número de coeficientes ajustados. Ambos os blocos utilizaram as mesmas 58.633 observações. Artista, título, identificadores, informações do pareamento, status de coleta, visualizações no Genius e contagens de reprodução no LFM não foram utilizados como preditores. A popularidade ficou exclusivamente no vetor resposta, separado da matriz de entrada.
+
+\subsection{Descrição e preparação dos dados}
+
+Foram examinadas a distribuição empírica da resposta, suas frequências, quantis, média e dispersão, além das ausências e associações entre variáveis. A descrição antecedeu a modelagem e não foi usada para excluir observações por popularidade ou por dificuldade de previsão. Encontraram-se 233 pares de preditoras com correlação de Spearman em valor absoluto de pelo menos 0,8, considerando pares completos. Essa redundância motivou a comparação de regressões com regularização, sem justificar a remoção automática de variáveis.
+
+Oito descritores estruturais apresentaram 23.699 ausências cada um, aproximadamente 40,4\% das 58.633 observações. As ausências numéricas foram tratadas pela mediana calculada no respectivo treinamento, seguida de padronização das variáveis numéricas também com parâmetros do treino. Nenhuma dessas estatísticas foi estimada usando as observações externas de validação. Para colunas inteiramente ausentes em um treino, o procedimento preserva a coluna com preenchimento por zero.
+
+Gênero, tonalidade e assinatura de compasso foram tratados como categorias, sem impor uma distância numérica ordinal à tonalidade. As categorias foram codificadas por indicadores, omitindo-se uma categoria de referência. Categorias ausentes receberam marcador explícito; categorias não vistas no treino receberam o vetor de indicadores nulo. Modalidade e indicadores de versão foram tratados como binários.
+
+Nos modelos regularizados do Tradicional, compararam-se descritores originais com a transformação $\operatorname{asinh}(x)$, que comprime valores extremos de forma monotônica e admite zeros e números negativos. A escolha ocorreu na validação interna. Essa transformação não apagou registros, não retirou variáveis e não alterou os dados originais. Não foi aplicada análise de componentes principais nesta rodada.
+
+\subsection{Famílias de regressão comparadas}
+
+Os nomes Baseline e Tradicional designam conjuntos de atributos, e não algoritmos. Cada conjunto foi analisado com quatro famílias de regressão. A comparação permite distinguir a contribuição da forma do modelo da contribuição das informações textuais. Regressão, regularização e modelos aditivos integram a abordagem estatística de aprendizagem supervisionada discutida por \citet{james2023}.
+
+Na regressão linear por mínimos quadrados ordinários, ou MQO, a média condicional é representada por uma combinação linear dos atributos:
+\begin{equation}
+\widehat{Y}_i=\widehat{\beta}_0+\sum_{j=1}^{p}\widehat{\beta}_j X_{ij}.
+\end{equation}
+Os coeficientes são escolhidos para reduzir a soma dos erros quadráticos no treinamento. A forma linear é uma hipótese sobre a relação entre os atributos e a resposta; ela não exige que o histograma marginal da popularidade seja normal para que o ajuste seja realizado.
+
+A regressão Ridge também utiliza uma combinação linear, mas penaliza coeficientes muito grandes. Essa penalização pode estabilizar o ajuste quando variáveis carregam informações semelhantes. O Elastic Net combina duas formas de penalização e pode reduzir alguns coeficientes a zero. Portanto, Elastic Net já é uma regressão linear regularizada, e não uma alternativa conceitualmente oposta à regressão.
+
+A regressão aditiva com Ridge permite que determinadas variáveis contínuas apresentem relações curvas com a resposta. Em vez de exigir uma única reta para o ano ou a dançabilidade, por exemplo, o modelo combina funções suaves, representadas por splines:
+\begin{equation}
+\widehat{Y}_i=\widehat{\beta}_0+\sum_{j\in\mathcal{S}}\widehat{f}_j(X_{ij})+
+\sum_{j\notin\mathcal{S}}\widehat{\beta}_jX_{ij}.
+\end{equation}
+O conjunto $\mathcal{S}$ incluiu ano, dançabilidade, energia, intensidade sonora, presença de fala, acusticidade, instrumentalidade, presença de público, valência, andamento e duração. Foram usadas bases cúbicas com cinco nós uniformes por variável, aprendidos no treino, e extrapolação linear. O ajuste é aditivo: não inclui automaticamente todas as interações entre variáveis. Trata-se de regressão em bases spline com penalização Ridge, não de uma rede neural nem de um GAM ajustado por REML.
+
+Para Ridge e para a regressão aditiva, compararam-se valores de penalização iguais a 1, 100 e 1.000. Para Elastic Net, foram considerados $\alpha\in\{0{,}03;0{,}3\}$ e proporção L1 em $\{0{,}1;0{,}8\}$. A comparação entre descritores originais e transformados duplicou as configurações desses métodos no Tradicional. A grade foi estabelecida antes dos ajustes e não foi ampliada para favorecer os resultados. Conclusões sobre superioridade dizem respeito a essas configurações, não a todas as versões possíveis dos algoritmos.
+
+Também foram ajustadas duas referências constantes: uma prevê a média e outra a mediana da popularidade do treino para qualquer composição. Elas mostram o erro obtido sem utilizar características das músicas e ajudam a interpretar se os modelos acrescentam capacidade preditiva.
+
+\subsection{Validação agrupada e significado do tamanho utilizado}
+
+Registros relacionados não foram distribuídos livremente entre treino e validação. Foram construídos componentes que reúnem qualquer vínculo conhecido de artista, composição, grupo original de split ou texto idêntico. As relações são transitivas: se duas faixas estão ligadas por artista e uma delas compartilha texto com uma terceira, as três pertencem ao mesmo componente. Isso resultou em 8.880 componentes de validação, ligeiramente menos que os 8.883 grupos de artista. O maior componente continha 256 composições.
+
+Esses componentes foram divididos em cinco partes externas, denominadas \textit{folds}. Em cada rodada, quatro partes serviram ao treinamento e uma ficou reservada para avaliação. Cada composição recebeu uma previsão externa uma única vez. Ao reunir essas previsões, obteve-se o conjunto \textit{out-of-fold} (OOF) de 58.633 observações. Os tamanhos de cada rodada estão na Tabela~\ref{tab:folds}.
+
+\input{tables/folds}
+
+Assim, nenhum ajuste externo utilizou as 58.633 linhas simultaneamente como treino: cada um aprendeu com aproximadamente 46,6 a 47,2 mil composições e foi avaliado em aproximadamente 11,5 a 12,1 mil. A divisão externa em cinco folds ocorreu dentro do desenvolvimento e não substituiu o split original de 75\%/25\%. Os alvos das faixas do holdout permaneceram fora dessa avaliação.
+
+Dentro de cada treinamento externo, foram criadas três partes internas, respeitando os mesmos componentes. As configurações foram escolhidas pela média do MAE nessas três validações internas. Somente depois da escolha foi ajustado o modelo no treino externo completo e prevista sua validação externa. Essa separação reduz o viés de avaliar um modelo nos mesmos dados usados para escolhê-lo, problema discutido por \citet{cawley2010}.
+
+Em termos práticos, esconder a resposta da validação significa não fornecê-la ao modelo no momento da previsão. Não significa substituí-la por zero, modificar a base ou deixar de usá-la posteriormente para medir o erro. Para cada previsão OOF, a resposta correspondente só participa da comparação entre valor previsto e observado.
+
+O benchmark inicial utilizou 3.008 observações para verificar custo e funcionamento. Esse lote não foi a amostra final de treinamento. A execução completa realizou 480 ajustes internos e 50 externos, além dos oito ajustes técnicos do benchmark. Os 50 modelos externos correspondem a quatro famílias, dois blocos e cinco folds, mais duas referências constantes em cinco folds. A repetição de ajustes não cria novas observações independentes.
+
+\subsection{Métricas e avaliação da contribuição incremental}
+
+Se $y_i$ é a popularidade observada e $\widehat{y}_i$ sua previsão OOF, o erro absoluto médio e a raiz do erro quadrático médio são definidos por:
+\begin{align}
+\operatorname{MAE}&=\frac{1}{n}\sum_{i=1}^{n}|y_i-\widehat{y}_i|,\\
+\operatorname{RMSE}&=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\widehat{y}_i)^2}.
+\end{align}
+Ambas são expressas em pontos da escala de popularidade. Como exemplo exclusivamente ilustrativo, uma música observada com 20 pontos e prevista com 26 produz erro absoluto de 6 pontos. O MAE resume a média desses erros; o RMSE atribui maior peso aos erros grandes. Um MAE de 6,89 não significa erro máximo de 6,89, nem 93,11\% de acerto.
+
+O coeficiente de determinação foi calculado no conjunto OOF por:
+\begin{equation}
+R^2=1-\frac{\sum_i(y_i-\widehat{y}_i)^2}{\sum_i(y_i-\overline{y})^2}.
+\end{equation}
+Um $R^2$ de 0,56 indica que o erro quadrático agregado corresponde a aproximadamente 44\% da variação quadrática em torno da média observada usada nessa definição. Não significa que 56\% das músicas foram previstas corretamente. A média no denominador é uma referência matemática de avaliação; não foi fornecida ao modelo como informação da validação.
+
+Foram calculados ainda mediana, percentis 90 e 95 do erro absoluto, frequência de erros superiores a 20 pontos e previsões fora de 0--100. O percentil 95, ou P95, informa o valor abaixo do qual se encontram aproximadamente 95\% dos erros observados; não é um intervalo individual de previsão. As previsões foram mantidas sem corte nos limites da escala.
+
+A contribuição dos descritores foi avaliada por diferenças Tradicional menos Baseline, dentro da mesma família e nas mesmas observações. Para erros, diferenças negativas favorecem o Tradicional. Intervalos exploratórios de 95\% foram obtidos por 1.000 reamostragens pareadas de componentes completos, mantendo fixas as previsões OOF. Esses intervalos não incorporam toda a variação de repetir treinamento e seleção, e os cinco folds não são tratados como cinco experimentos independentes.

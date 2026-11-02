@@ -1,0 +1,24 @@
+Esta análise é exploratória e condicionada às previsões produzidas. Para um contraste $a-b$, defina $d_i=|e_i^{(a)}|-|e_i^{(b)}|$. Em um componente $g$ do teste externo $k$, sejam $D_g=\sum_{i\in g}d_i$ e $N_g$ o número de faixas. O contraste no fold e seu erro-padrão auxiliar são
+\begin{align}
+ \widehat\delta_k&=\frac{\sum_{g\in k}D_g}{\sum_{g\in k}N_g},\label{eq:deltafold}\\
+ \widehat{\operatorname{SE}}_k^2&=
+ \frac{G_k}{G_k-1}\frac{\sum_{g\in k}(D_g-\widehat\delta_k N_g)^2}
+ {(\sum_{g\in k}N_g)^2},\label{eq:sefold}
+\end{align}
+em que $G_k$ é o número de componentes do teste. A razão preserva peso igual por faixa, em vez de peso igual por componente. Na sensibilidade ponderada, usam-se $D_g=\sum_{i\in g}w_i d_i$ e $N_g=\sum_{i\in g}w_i$.
+
+A linearização admite dependência interna ao componente e pressupõe independência, momentos adequados e ausência de grupos dominantes entre componentes, sob um modelo auxiliar de avaliações hipotéticas \cite{cameron2015}. O sorteio original de faixas não comprova essas hipóteses para os grupos formados posteriormente; relações não detectadas podem violá-las.
+
+Para cada ponderação, a família contém dois contrastes por cinco folds, totalizando $M=10$ limites marginais. Com $\gamma=0,05$, utiliza-se
+\begin{equation}\label{eq:bonferroni}
+ [L_k,U_k]=\widehat\delta_k\ \pm\
+ z_{1-\gamma/(2M)}\widehat{\operatorname{SE}}_k,
+\end{equation}
+em que $z_q$ é o quantil $q$ da normal padrão. Os limites combinados são
+\begin{equation}\label{eq:combinacaolimites}
+ L=\sum_k\omega_kL_k,\qquad U=\sum_k\omega_kU_k,
+ \qquad\omega_k=\frac{\sum_{g\in k}N_g}{\sum_gN_g}.
+\end{equation}
+A desigualdade da união de Bonferroni dispensa independência entre folds, mas a cobertura nominal depende dos limites marginais e do modelo auxiliar. Cada análise condiciona separadamente no seu treino e par de modelos, pois os demais treinos contêm faixas que são teste em outro fold.
+
+O alvo combinado é a média de riscos condicionais dos pares ajustados, sem repetir treino, seleção ou construção dos dados. A Tabela~\ref{tab:incerteza} não cobre a variabilidade do algoritmo integral, nem fundamenta inferência de catálogo ou tratamento dos folds como réplicas independentes \cite{bengio2004,bates2024}.

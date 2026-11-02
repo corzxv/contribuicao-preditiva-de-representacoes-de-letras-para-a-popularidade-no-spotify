@@ -1,0 +1,840 @@
+{
+  "completed": true,
+  "sample_rows": 200000,
+  "accepted_rows": 77535,
+  "new_text_checks": 77535,
+  "reused_text_checks": 0,
+  "inputs": {
+    "inputs": {
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\amostra_spotify_200k_20261031\\amostra_spotify_200k.parquet": "cbaf98e2771067ab70538068d85b029ce77fbcdfb86e8b35f34a2a7abf46faff",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\resultados_faixas_200k.parquet": "ca0fc1598271c182495eb681ebdf260435de0590f28df6c10f42b0f59b65f74b",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\letras_aceitas_200k.parquet": "dcd589bd75dceb6ac7f2917c3a08fccebded832e299bc0d27c04ebe834f4437a",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\split_assignments_v0_1_1.parquet": "4b0ff5a0e9be21af15607b9bbced423c99247c7d1aaa9615635baf134b86856b",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_final_development_v0_5\\holdout_features.parquet": "d7b9f8f169ac81501305d41569e28f630ed24180433364eef7454f4cd59670e1",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_final_development_v0_5\\development_matrix.parquet": "4604fe010ca54da65a434c5b7a23f16b0ce1e0362eb80bfe0fc4b83e75539ce8",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_statistical_cohort_v1\\development.parquet": "a402dd307f498c7ebca9a7f7c65c88e7d6f013a43ab8ce291c0f0dae1eb1c463"
+    },
+    "code": "84d59bd9390d2285703fe05a8dcca3e05dc7ae6ad4360ed2c2bad97bd624196a",
+    "normalization": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+    "strict_fingerprint": "9160a72007d06c721e4e9a9fe7827474ac3bdeb0909f250be237691414f7df73"
+  },
+  "old_targets_loaded": false,
+  "models_loaded": false,
+  "ssd_queries": 0,
+  "training_executed": false,
+  "history_flags": {
+    "readiness_v06_evaluated_track": 421,
+    "readiness_v06_composition_collision": 438,
+    "readiness_v06_artist_collision": 7162,
+    "readiness_old_development_track": 1297,
+    "readiness_unknown_group": 4,
+    "readiness_old_cohort_track": 10074
+  },
+  "old_lfm_overlap_tracks": 13558,
+  "unknown_old_lfm_tracks": 63977,
+  "language_counts": [
+    {
+      "lyrics_detected_language": "vi",
+      "lyrics_language_status": "non_english",
+      "tracks": 32,
+      "sampling_weight_total": 185.84343435183305
+    },
+    {
+      "lyrics_detected_language": "am",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.847276264591439
+    },
+    {
+      "lyrics_detected_language": "lv",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.35716070143444
+    },
+    {
+      "lyrics_detected_language": "pl",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.8076923076923075
+    },
+    {
+      "lyrics_detected_language": "lv",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.643940292073072
+    },
+    {
+      "lyrics_detected_language": "wa",
+      "lyrics_language_status": "non_english",
+      "tracks": 3,
+      "sampling_weight_total": 17.508112262564808
+    },
+    {
+      "lyrics_detected_language": "da",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.728395061728395
+    },
+    {
+      "lyrics_detected_language": "tl",
+      "lyrics_language_status": "non_english",
+      "tracks": 123,
+      "sampling_weight_total": 694.56676985421
+    },
+    {
+      "lyrics_detected_language": "an",
+      "lyrics_language_status": "non_english",
+      "tracks": 25,
+      "sampling_weight_total": 145.0201648568864
+    },
+    {
+      "lyrics_detected_language": "te",
+      "lyrics_language_status": "non_english",
+      "tracks": 75,
+      "sampling_weight_total": 432.7841050474809
+    },
+    {
+      "lyrics_detected_language": "mt",
+      "lyrics_language_status": "non_english",
+      "tracks": 9,
+      "sampling_weight_total": 52.49339193219976
+    },
+    {
+      "lyrics_detected_language": "zh",
+      "lyrics_language_status": "non_english",
+      "tracks": 1364,
+      "sampling_weight_total": 7899.77695209124
+    },
+    {
+      "lyrics_detected_language": "is",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.69565606806986
+    },
+    {
+      "lyrics_detected_language": "qu",
+      "lyrics_language_status": "non_english",
+      "tracks": 8,
+      "sampling_weight_total": 46.6261466383592
+    },
+    {
+      "lyrics_detected_language": "en",
+      "lyrics_language_status": "english",
+      "tracks": 56908,
+      "sampling_weight_total": 330181.84712363285
+    },
+    {
+      "lyrics_detected_language": "et",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.807142857142857
+    },
+    {
+      "lyrics_detected_language": "ml",
+      "lyrics_language_status": "non_english",
+      "tracks": 33,
+      "sampling_weight_total": 191.33287014181266
+    },
+    {
+      "lyrics_detected_language": "fr",
+      "lyrics_language_status": "non_english",
+      "tracks": 1363,
+      "sampling_weight_total": 7920.283083136345
+    },
+    {
+      "lyrics_detected_language": "lb",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.852097130242826
+    },
+    {
+      "lyrics_detected_language": "hi",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.850906095551895
+    },
+    {
+      "lyrics_detected_language": "sv",
+      "lyrics_language_status": "non_english",
+      "tracks": 571,
+      "sampling_weight_total": 3300.874528749185
+    },
+    {
+      "lyrics_detected_language": "oc",
+      "lyrics_language_status": "non_english",
+      "tracks": 7,
+      "sampling_weight_total": 40.83606568802575
+    },
+    {
+      "lyrics_detected_language": "bs",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.111252828831354
+    },
+    {
+      "lyrics_detected_language": "sl",
+      "lyrics_language_status": "non_english",
+      "tracks": 5,
+      "sampling_weight_total": 29.06336697006204
+    },
+    {
+      "lyrics_detected_language": "cy",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.617178706907332
+    },
+    {
+      "lyrics_detected_language": "no",
+      "lyrics_language_status": "uncertain",
+      "tracks": 4,
+      "sampling_weight_total": 23.38262192294136
+    },
+    {
+      "lyrics_detected_language": "be",
+      "lyrics_language_status": "non_english",
+      "tracks": 1,
+      "sampling_weight_total": 5.817204301075269
+    },
+    {
+      "lyrics_detected_language": "mg",
+      "lyrics_language_status": "non_english",
+      "tracks": 7,
+      "sampling_weight_total": 40.504110088802825
+    },
+    {
+      "lyrics_detected_language": "cy",
+      "lyrics_language_status": "non_english",
+      "tracks": 23,
+      "sampling_weight_total": 133.31846899671
+    },
+    {
+      "lyrics_detected_language": "br",
+      "lyrics_language_status": "non_english",
+      "tracks": 34,
+      "sampling_weight_total": 197.7656618361097
+    },
+    {
+      "lyrics_detected_language": "ms",
+      "lyrics_language_status": "uncertain",
+      "tracks": 7,
+      "sampling_weight_total": 36.40830275815834
+    },
+    {
+      "lyrics_detected_language": "th",
+      "lyrics_language_status": "non_english",
+      "tracks": 8,
+      "sampling_weight_total": 46.390260459089454
+    },
+    {
+      "lyrics_detected_language": "ms",
+      "lyrics_language_status": "non_english",
+      "tracks": 128,
+      "sampling_weight_total": 716.1495781044587
+    },
+    {
+      "lyrics_detected_language": "bn",
+      "lyrics_language_status": "non_english",
+      "tracks": 55,
+      "sampling_weight_total": 319.51473409065636
+    },
+    {
+      "lyrics_detected_language": "ja",
+      "lyrics_language_status": "non_english",
+      "tracks": 694,
+      "sampling_weight_total": 4008.2600396673206
+    },
+    {
+      "lyrics_detected_language": "ne",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.846069868995633
+    },
+    {
+      "lyrics_detected_language": "eu",
+      "lyrics_language_status": "non_english",
+      "tracks": 10,
+      "sampling_weight_total": 58.28041643041643
+    },
+    {
+      "lyrics_detected_language": "km",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.321435530109383
+    },
+    {
+      "lyrics_detected_language": "ta",
+      "lyrics_language_status": "non_english",
+      "tracks": 201,
+      "sampling_weight_total": 1158.3670901260948
+    },
+    {
+      "lyrics_detected_language": "fr",
+      "lyrics_language_status": "uncertain",
+      "tracks": 4,
+      "sampling_weight_total": 23.26612782598442
+    },
+    {
+      "lyrics_detected_language": "ps",
+      "lyrics_language_status": "non_english",
+      "tracks": 3,
+      "sampling_weight_total": 17.35683760683761
+    },
+    {
+      "lyrics_detected_language": "ku",
+      "lyrics_language_status": "non_english",
+      "tracks": 40,
+      "sampling_weight_total": 232.96066542599857
+    },
+    {
+      "lyrics_detected_language": "jv",
+      "lyrics_language_status": "uncertain",
+      "tracks": 4,
+      "sampling_weight_total": 23.347965641696806
+    },
+    {
+      "lyrics_detected_language": "se",
+      "lyrics_language_status": "non_english",
+      "tracks": 9,
+      "sampling_weight_total": 51.317173237747866
+    },
+    {
+      "lyrics_detected_language": "fi",
+      "lyrics_language_status": "non_english",
+      "tracks": 116,
+      "sampling_weight_total": 676.2105582071587
+    },
+    {
+      "lyrics_detected_language": "am",
+      "lyrics_language_status": "non_english",
+      "tracks": 1,
+      "sampling_weight_total": 5.777777777777778
+    },
+    {
+      "lyrics_detected_language": "mg",
+      "lyrics_language_status": "uncertain",
+      "tracks": 6,
+      "sampling_weight_total": 34.675306956585075
+    },
+    {
+      "lyrics_detected_language": "el",
+      "lyrics_language_status": "non_english",
+      "tracks": 20,
+      "sampling_weight_total": 116.53790061494573
+    },
+    {
+      "lyrics_detected_language": "qu",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.667591710983643
+    },
+    {
+      "lyrics_detected_language": "fa",
+      "lyrics_language_status": "non_english",
+      "tracks": 25,
+      "sampling_weight_total": 144.1213441926934
+    },
+    {
+      "lyrics_detected_language": "nl",
+      "lyrics_language_status": "uncertain",
+      "tracks": 3,
+      "sampling_weight_total": 17.42364065243322
+    },
+    {
+      "lyrics_detected_language": "ru",
+      "lyrics_language_status": "non_english",
+      "tracks": 276,
+      "sampling_weight_total": 1594.2326726192828
+    },
+    {
+      "lyrics_detected_language": "en",
+      "lyrics_language_status": "uncertain",
+      "tracks": 80,
+      "sampling_weight_total": 464.6896470932514
+    },
+    {
+      "lyrics_detected_language": "sw",
+      "lyrics_language_status": "non_english",
+      "tracks": 286,
+      "sampling_weight_total": 1664.8313338872406
+    },
+    {
+      "lyrics_detected_language": "eo",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.842329545454546
+    },
+    {
+      "lyrics_detected_language": "is",
+      "lyrics_language_status": "non_english",
+      "tracks": 27,
+      "sampling_weight_total": 157.43836000783242
+    },
+    {
+      "lyrics_detected_language": "es",
+      "lyrics_language_status": "uncertain",
+      "tracks": 4,
+      "sampling_weight_total": 23.327677475633493
+    },
+    {
+      "lyrics_detected_language": "sq",
+      "lyrics_language_status": "non_english",
+      "tracks": 16,
+      "sampling_weight_total": 93.17346172043817
+    },
+    {
+      "lyrics_detected_language": "tr",
+      "lyrics_language_status": "non_english",
+      "tracks": 120,
+      "sampling_weight_total": 682.1533998142479
+    },
+    {
+      "lyrics_detected_language": "sk",
+      "lyrics_language_status": "non_english",
+      "tracks": 6,
+      "sampling_weight_total": 34.96847167958323
+    },
+    {
+      "lyrics_detected_language": "nn",
+      "lyrics_language_status": "non_english",
+      "tracks": 32,
+      "sampling_weight_total": 186.96958004184413
+    },
+    {
+      "lyrics_detected_language": "zu",
+      "lyrics_language_status": "non_english",
+      "tracks": 44,
+      "sampling_weight_total": 255.81027937491848
+    },
+    {
+      "lyrics_detected_language": "hi",
+      "lyrics_language_status": "non_english",
+      "tracks": 503,
+      "sampling_weight_total": 2888.9947977000124
+    },
+    {
+      "lyrics_detected_language": "nl",
+      "lyrics_language_status": "non_english",
+      "tracks": 83,
+      "sampling_weight_total": 482.21118148911864
+    },
+    {
+      "lyrics_detected_language": "ht",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.81981981981982
+    },
+    {
+      "lyrics_detected_language": "gu",
+      "lyrics_language_status": "non_english",
+      "tracks": 7,
+      "sampling_weight_total": 40.83603777119696
+    },
+    {
+      "lyrics_detected_language": "pl",
+      "lyrics_language_status": "non_english",
+      "tracks": 104,
+      "sampling_weight_total": 603.5352088692983
+    },
+    {
+      "lyrics_detected_language": "lt",
+      "lyrics_language_status": "non_english",
+      "tracks": 3,
+      "sampling_weight_total": 17.53498523947962
+    },
+    {
+      "lyrics_detected_language": "kk",
+      "lyrics_language_status": "non_english",
+      "tracks": 8,
+      "sampling_weight_total": 46.50063469337203
+    },
+    {
+      "lyrics_detected_language": "mr",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.850906095551895
+    },
+    {
+      "lyrics_detected_language": "eo",
+      "lyrics_language_status": "non_english",
+      "tracks": 8,
+      "sampling_weight_total": 46.76208069067123
+    },
+    {
+      "lyrics_detected_language": "hr",
+      "lyrics_language_status": "non_english",
+      "tracks": 42,
+      "sampling_weight_total": 244.4711448119662
+    },
+    {
+      "lyrics_detected_language": "bs",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.801526717557252
+    },
+    {
+      "lyrics_detected_language": "ne",
+      "lyrics_language_status": "non_english",
+      "tracks": 20,
+      "sampling_weight_total": 116.34510181782449
+    },
+    {
+      "lyrics_detected_language": "zh",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.826568265682657
+    },
+    {
+      "lyrics_detected_language": "et",
+      "lyrics_language_status": "non_english",
+      "tracks": 7,
+      "sampling_weight_total": 40.911280203798285
+    },
+    {
+      "lyrics_detected_language": "cs",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.84
+    },
+    {
+      "lyrics_detected_language": "zu",
+      "lyrics_language_status": "uncertain",
+      "tracks": 4,
+      "sampling_weight_total": 23.30184578990068
+    },
+    {
+      "lyrics_detected_language": "rw",
+      "lyrics_language_status": "non_english",
+      "tracks": 20,
+      "sampling_weight_total": 115.95793917386484
+    },
+    {
+      "lyrics_detected_language": "tl",
+      "lyrics_language_status": "uncertain",
+      "tracks": 4,
+      "sampling_weight_total": 23.288251856903628
+    },
+    {
+      "lyrics_detected_language": "it",
+      "lyrics_language_status": "non_english",
+      "tracks": 241,
+      "sampling_weight_total": 1396.1318936437378
+    },
+    {
+      "lyrics_detected_language": "af",
+      "lyrics_language_status": "non_english",
+      "tracks": 33,
+      "sampling_weight_total": 192.24542030278886
+    },
+    {
+      "lyrics_detected_language": "sl",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.825938566552901
+    },
+    {
+      "lyrics_detected_language": "an",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.40911707148613
+    },
+    {
+      "lyrics_detected_language": "de",
+      "lyrics_language_status": "non_english",
+      "tracks": 1333,
+      "sampling_weight_total": 7705.754816858608
+    },
+    {
+      "lyrics_detected_language": "az",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.285647642187985
+    },
+    {
+      "lyrics_detected_language": "lb",
+      "lyrics_language_status": "non_english",
+      "tracks": 15,
+      "sampling_weight_total": 86.48839049882113
+    },
+    {
+      "lyrics_detected_language": "mt",
+      "lyrics_language_status": "uncertain",
+      "tracks": 3,
+      "sampling_weight_total": 17.289996951661344
+    },
+    {
+      "lyrics_detected_language": "or",
+      "lyrics_language_status": "non_english",
+      "tracks": 6,
+      "sampling_weight_total": 34.626706725364194
+    },
+    {
+      "lyrics_detected_language": "no",
+      "lyrics_language_status": "non_english",
+      "tracks": 65,
+      "sampling_weight_total": 379.6890720946103
+    },
+    {
+      "lyrics_detected_language": "ur",
+      "lyrics_language_status": "non_english",
+      "tracks": 26,
+      "sampling_weight_total": 145.98136262880095
+    },
+    {
+      "lyrics_detected_language": "la",
+      "lyrics_language_status": "non_english",
+      "tracks": 91,
+      "sampling_weight_total": 524.9858448063275
+    },
+    {
+      "lyrics_detected_language": "sw",
+      "lyrics_language_status": "uncertain",
+      "tracks": 7,
+      "sampling_weight_total": 40.881938584166164
+    },
+    {
+      "lyrics_detected_language": "it",
+      "lyrics_language_status": "uncertain",
+      "tracks": 3,
+      "sampling_weight_total": 17.537809697029424
+    },
+    {
+      "lyrics_detected_language": "ro",
+      "lyrics_language_status": "non_english",
+      "tracks": 10,
+      "sampling_weight_total": 58.28924767540588
+    },
+    {
+      "lyrics_detected_language": "da",
+      "lyrics_language_status": "non_english",
+      "tracks": 24,
+      "sampling_weight_total": 139.77189647093772
+    },
+    {
+      "lyrics_detected_language": "he",
+      "lyrics_language_status": "non_english",
+      "tracks": 34,
+      "sampling_weight_total": 195.96960600513373
+    },
+    {
+      "lyrics_detected_language": "jv",
+      "lyrics_language_status": "non_english",
+      "tracks": 108,
+      "sampling_weight_total": 629.4904402614495
+    },
+    {
+      "lyrics_detected_language": "vo",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.36968954248366
+    },
+    {
+      "lyrics_detected_language": "hy",
+      "lyrics_language_status": "non_english",
+      "tracks": 2,
+      "sampling_weight_total": 11.691009747733105
+    },
+    {
+      "lyrics_detected_language": "as",
+      "lyrics_language_status": "non_english",
+      "tracks": 1,
+      "sampling_weight_total": 5.850906095551895
+    },
+    {
+      "lyrics_detected_language": "gl",
+      "lyrics_language_status": "non_english",
+      "tracks": 21,
+      "sampling_weight_total": 122.5187676181629
+    },
+    {
+      "lyrics_detected_language": "hu",
+      "lyrics_language_status": "non_english",
+      "tracks": 32,
+      "sampling_weight_total": 186.69746012007738
+    },
+    {
+      "lyrics_detected_language": "uk",
+      "lyrics_language_status": "non_english",
+      "tracks": 24,
+      "sampling_weight_total": 138.72514701829644
+    },
+    {
+      "lyrics_detected_language": "ga",
+      "lyrics_language_status": "non_english",
+      "tracks": 17,
+      "sampling_weight_total": 99.26318982559253
+    },
+    {
+      "lyrics_detected_language": "lo",
+      "lyrics_language_status": "non_english",
+      "tracks": 2,
+      "sampling_weight_total": 11.368695652173912
+    },
+    {
+      "lyrics_detected_language": "mr",
+      "lyrics_language_status": "non_english",
+      "tracks": 24,
+      "sampling_weight_total": 140.0456776302535
+    },
+    {
+      "lyrics_detected_language": "ar",
+      "lyrics_language_status": "non_english",
+      "tracks": 73,
+      "sampling_weight_total": 425.22641105931683
+    },
+    {
+      "lyrics_detected_language": "es",
+      "lyrics_language_status": "non_english",
+      "tracks": 6345,
+      "sampling_weight_total": 36613.88065250829
+    },
+    {
+      "lyrics_detected_language": "kn",
+      "lyrics_language_status": "non_english",
+      "tracks": 26,
+      "sampling_weight_total": 150.55681394000266
+    },
+    {
+      "lyrics_detected_language": "cs",
+      "lyrics_language_status": "non_english",
+      "tracks": 26,
+      "sampling_weight_total": 151.50552448821873
+    },
+    {
+      "lyrics_detected_language": "id",
+      "lyrics_language_status": "uncertain",
+      "tracks": 5,
+      "sampling_weight_total": 24.980099000894207
+    },
+    {
+      "lyrics_detected_language": "af",
+      "lyrics_language_status": "uncertain",
+      "tracks": 3,
+      "sampling_weight_total": 17.404351424665354
+    },
+    {
+      "lyrics_detected_language": "fo",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.337649478686153
+    },
+    {
+      "lyrics_detected_language": "eu",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.835189309576838
+    },
+    {
+      "lyrics_detected_language": "pa",
+      "lyrics_language_status": "non_english",
+      "tracks": 46,
+      "sampling_weight_total": 264.7584714976448
+    },
+    {
+      "lyrics_detected_language": "nb",
+      "lyrics_language_status": "non_english",
+      "tracks": 10,
+      "sampling_weight_total": 53.58587437264738
+    },
+    {
+      "lyrics_detected_language": "pt",
+      "lyrics_language_status": "non_english",
+      "tracks": 3686,
+      "sampling_weight_total": 21252.07834228263
+    },
+    {
+      "lyrics_detected_language": "la",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.656183826821389
+    },
+    {
+      "lyrics_detected_language": "ka",
+      "lyrics_language_status": "non_english",
+      "tracks": 4,
+      "sampling_weight_total": 23.30529818037999
+    },
+    {
+      "lyrics_detected_language": "nb",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.8463227222832055
+    },
+    {
+      "lyrics_detected_language": "xh",
+      "lyrics_language_status": "non_english",
+      "tracks": 30,
+      "sampling_weight_total": 174.06535108096375
+    },
+    {
+      "lyrics_detected_language": "id",
+      "lyrics_language_status": "non_english",
+      "tracks": 140,
+      "sampling_weight_total": 784.336073131923
+    },
+    {
+      "lyrics_detected_language": "se",
+      "lyrics_language_status": "uncertain",
+      "tracks": 1,
+      "sampling_weight_total": 5.83567134268537
+    },
+    {
+      "lyrics_detected_language": "ro",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.66338924233661
+    },
+    {
+      "lyrics_detected_language": "bg",
+      "lyrics_language_status": "non_english",
+      "tracks": 2,
+      "sampling_weight_total": 10.244617092119867
+    },
+    {
+      "lyrics_detected_language": "ko",
+      "lyrics_language_status": "non_english",
+      "tracks": 1278,
+      "sampling_weight_total": 7415.66799437967
+    },
+    {
+      "lyrics_detected_language": "ht",
+      "lyrics_language_status": "non_english",
+      "tracks": 18,
+      "sampling_weight_total": 104.62982162473666
+    },
+    {
+      "lyrics_detected_language": "pt",
+      "lyrics_language_status": "uncertain",
+      "tracks": 2,
+      "sampling_weight_total": 11.670488019678702
+    },
+    {
+      "lyrics_detected_language": "rw",
+      "lyrics_language_status": "uncertain",
+      "tracks": 3,
+      "sampling_weight_total": 17.503351222079736
+    },
+    {
+      "lyrics_detected_language": "sv",
+      "lyrics_language_status": "uncertain",
+      "tracks": 3,
+      "sampling_weight_total": 17.488094267623403
+    },
+    {
+      "lyrics_detected_language": "ky",
+      "lyrics_language_status": "non_english",
+      "tracks": 7,
+      "sampling_weight_total": 40.212981691793495
+    },
+    {
+      "lyrics_detected_language": "ca",
+      "lyrics_language_status": "non_english",
+      "tracks": 18,
+      "sampling_weight_total": 105.07973116108697
+    }
+  ],
+  "strict_text_duplicates_tracks": 484,
+  "texts_linking_multiple_operational_artists": 16,
+  "seconds": 18.787222800019663,
+  "cohort_frozen": false,
+  "next": "Revisar integridade/linhagem e congelar contrato de descritores/encoder/splits; não iniciar treino automaticamente."
+}

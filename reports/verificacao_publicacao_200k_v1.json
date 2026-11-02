@@ -1,0 +1,31 @@
+{
+  "verified_on": "2026-11-02",
+  "project": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\overleaf_dominio_observado_200k_v1",
+  "main_tex_compilation": "success_desktop_editor",
+  "latex_pdf_exported": false,
+  "pdf_reading_renderer": "ReportLab",
+  "pdf_reading_pages": 7,
+  "visual_QA": "all_seven_final_pages_rendered_and_inspected",
+  "figures": 4,
+  "tables": 6,
+  "zip_files": 28,
+  "zip_crc_passed": true,
+  "relative_tex_assets_resolved": 12,
+  "zip_sha256": "aacc1acf58420f8a1ad8157c273727f2dc7703a3fe36b143624d5bef2d1497c3",
+  "reading_pdf_sha256": "683c55e6f4200ebade2a95574da7e39e98f2158601316759df31df3339063d7d",
+  "individual_data_or_models_included": false,
+  "models_trained": false,
+  "source_input_hashes": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\resumo_modelagem.json": "f5cbfeac97ae7f9a66fd70e229cc827ab8c49c7b5bade92530fd0c374503b02b",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\resumo_diagnosticos.json": "996c9d39d7b3558d684a32a9a9f3ae585e9ad7a4379d2f5aa8a03ef1afc3bac0",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\metricas_externas.csv": "a641bdadf325178f99c79d6315ac1613bc2ab21af1727494d6ca9b8f92632e02",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\incrementos_pareados.csv": "335b0b83a0eb7b823761904309610daf5434d6fe1ebf7894b7d04972bde80599",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\diagnosticos_subgrupos.csv": "20ac117c2d442041e218727285ccd2044233385688f15297355111327ce88e9e",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\sensibilidade_remocao_componente.csv": "aa20164b320b4fad53ee334a571c9f645f559544252da67d5c8e81bf2323ec2a",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\previsoes_fora_intervalo.csv": "67e5ee1c2759680347086da3c643964ba47c4480daa2a0b391fb7e6dfa22b394",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\celulas_pequenas.csv": "91e37acf569f3f871aa76f5b225d3aba5f78f37885e1d033fe3dbeb924050b6e"
+  },
+  "generated_file_hashes_verified": true,
+  "tests": "4 synthetic observed_results tests passed; Ruff check and format; git diff --check",
+  "renderer_sha256": "9dbcb8410d7ad901bb1478331918555908a753132a9d40e62e4b55619d62e5c8"
+}

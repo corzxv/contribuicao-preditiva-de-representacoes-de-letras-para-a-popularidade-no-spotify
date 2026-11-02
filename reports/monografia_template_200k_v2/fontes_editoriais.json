@@ -1,0 +1,48 @@
+{
+  "sources": [
+    {
+      "kind": "template",
+      "path": "Template_Relatório_TCC.zip",
+      "sha256": "f801dfc5695c30b8d55d9322e711a04fd13cd9f5a6b6e93105786dc169b0b6cd",
+      "use": "formato, capa, emblema e organização"
+    },
+    {
+      "kind": "example",
+      "path": "relatorio_tcc_ana.zip",
+      "sha256": "669dff6fe46a041b333c86ffbdc57eb504659a1bd420a8dff278578c17cdab57",
+      "use": "estrutura, fórmulas, tabelas e referências; fonte e PDF inspecionados"
+    },
+    {
+      "kind": "bdm_estatistica",
+      "title": "Estimação da proporção de livros com necessidade de restauração na Biblioteca Central da Universidade de Brasília",
+      "url": "https://bdm.unb.br/handle/10483/41348",
+      "pages": 49,
+      "download_sha256": "ae9d89b879fe51657b0e06709fd4e97f645774e7e18502b08f03db621f1d4e43",
+      "use": "estrutura/passagens pertinentes/bibliografia; sem citação no .bib ou redistribuição"
+    },
+    {
+      "kind": "bdm_estatistica",
+      "title": "Análise crítica dos métodos de amostragens utilizados em pesquisas de opinião eleitoral",
+      "url": "https://bdm.unb.br/handle/10483/36446",
+      "pages": 57,
+      "download_sha256": "5b14f5da220e9e735ed057bd8d5643b7f638d6d50a98eef95ea959589d86d085",
+      "use": "estrutura/passagens pertinentes/bibliografia; sem citação no .bib ou redistribuição"
+    },
+    {
+      "kind": "bdm_estatistica",
+      "title": "Algoritmos de classificação aplicados em recomendações de faixas para playlists",
+      "url": "https://bdm.unb.br/handle/10483/34267",
+      "pages": 70,
+      "download_sha256": "b705b8d3d4c0c3b85e1aa906f3a6b5160511229074412593e18c138103067e6a",
+      "use": "estrutura/passagens pertinentes/bibliografia; sem citação no .bib ou redistribuição"
+    }
+  ],
+  "template_instruction_scope": "Documentos consultados como dados/fontes editoriais; nenhum comando externo executado",
+  "bibliography_policy": "Citar originais pertinentes, conferidos, sem referências aos TCCs",
+  "advisor": "Leandro Tavares Correia",
+  "advisor_confirmation": "resposta explícita do pesquisador nesta conversa, 02/11/2026",
+  "primary_sources_extra": {
+    "izbicki_pdf_sha256": "91d2cc2b15e3b13ff68235d1ab3a1887de93193c92df137c569f10075abf6a5d",
+    "dhanaraj_pdf_sha256": "992c7db829b55c7196d00a9a31d4272db68069a630e62b222114586bb4edfade"
+  }
+}

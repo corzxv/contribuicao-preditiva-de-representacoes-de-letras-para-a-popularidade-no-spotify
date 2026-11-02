@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tcc-music-popularity"
 version = "0.1.1"
-description = "Pipeline reproduzível da Base v0.1 do TCC sobre popularidade musical"
+description = "Pipeline auditável do TCC sobre contribuição preditiva de letras à popularidade musical"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
 license = {text = "MIT"}
@@ -20,6 +20,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.3", "ruff>=0.8"]
+editorial = ["reportlab>=4.0"]
 embeddings = [
   "huggingface-hub==0.36.2",
   "langid==1.1.6",

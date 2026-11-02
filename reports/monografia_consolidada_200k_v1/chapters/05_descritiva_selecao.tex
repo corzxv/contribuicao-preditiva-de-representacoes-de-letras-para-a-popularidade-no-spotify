@@ -1,0 +1,36 @@
+\chapter{Descrição, cobertura e seleção textual}\label{cap:descritiva}
+\section{Comparação dos universos}
+A Tabela~\ref{tab:descritivas} separa catálogo, amostra e domínio aceito, com e sem pesos quando pertinente. A popularidade média da amostra ponderada é próxima da média do catálogo, enquanto as faixas aceitas apresentam média mais alta. A proximidade entre amostra e catálogo é uma propriedade descritiva do sorteio registrado; não implica que toda variável tenha sido controlada por estratificação nem que a etapa textual preserve o desenho.
+
+\input{tables/descritivas}
+
+A média sem pesos das aceitas é 23,9821, contra 18,3831 no catálogo. A mediana passa de 15 para 22 e o terceiro quartil de 29 para 34. A Figura~\ref{fig:distribuicao} apresenta distribuições acumuladas calculadas a partir das frequências reais. O deslocamento das aceitas para valores maiores é compatível com disponibilidade textual seletiva. Não identifica sua causa, nem prova que letras provoquem popularidade.
+
+\figura{distribuicao_popularidade}{Distribuição acumulada da popularidade nos universos definidos.}{fig:distribuicao}{Agregados da auditoria do catálogo, amostra estratificada e parecer da recuperação v2. A curva das aceitas usa pesos iguais.}
+\FloatBarrier
+
+\section{Cobertura textual}
+A aceitação v2 corresponde a 38,7675\% das 200.000 faixas. A razão com pesos originais é 38,7436\%, obtida pela soma dos pesos das aceitas dividida pela soma dos pesos da amostra inteira. Essa proximidade global entre proporções não elimina diferenças de composição dentro do domínio aceito. O maior grupo restante é o de não encontradas, seguido das ambiguidades.
+
+A Figura~\ref{fig:cobertura} descreve a aceitação por banda de popularidade na amostra. As 499 faixas com popularidade pelo menos 80 foram incluídas no sorteio, mas apenas 128 tiveram letra aceita: inclusão amostral e observação textual são eventos distintos. Mesmo na banda integral, não se pode usar a existência da amostra para afirmar cobertura textual completa.
+
+\figura{cobertura_bandas}{Proporção de letras aceitas por banda de popularidade.}{fig:cobertura}{Contagens da recuperação v2, com denominador da amostra em cada banda; porcentagens sem pesos.}
+\FloatBarrier
+
+O parecer de cobertura registrou 102 estratos sem nenhuma letra aceita e 348 com menos de cinco aceitações. A inexistência ou escassez de casos em células do desenho limita reponderações e comparações específicas. Um peso original positivo não cria informação textual em um estrato não observado.
+
+\section{Seleção e interpretação das marginais}
+A avaliação de compatibilidade das aceitas com o catálogo examinou 104 critérios primários ponderados, com tolerâncias operacionais explícitas. Foram 21 resultados de equivalência, 74 diferenças individuais e nove inconclusivos; 72 diferenças tiveram apoio no controle simultâneo adotado. Esses diagnósticos não autorizam chamar a base aceita de representativa do catálogo.
+
+As margens foram de um ponto para a média de popularidade, 0,10 desvio do catálogo para outras médias contínuas e year, e o menor entre um ponto percentual e 20\% da proporção do catálogo para categorias. O parecer utilizou linearização de razões sob o desenho estratificado e TOST de Wald a 5\%, associado a limites de 90\% por comparação, além de limites de 95\% e controle Bonferroni para diferenças simultâneas. A equivalência conjunta exigia todos os critérios, sem escolher uma maioria favorável. Células raras ou de variância não estimável foram classificadas como inconclusivas. São escolhas e aproximações do diagnóstico registrado, não propriedades garantidas da base.
+
+As tolerâncias e comparações foram formuladas depois de etapas anteriores do projeto e não constituem confirmação independente. Além disso, falta de equivalência não é sinônimo de diferença demonstrada: o parecer distingue esses resultados por critério. Tampouco equivalência marginal, se ocorresse, certificaria identidade correta das letras, equivalência multivariada ou ausência de viés preditivo.
+
+Na análise principal, os pesos originais não foram usados para tentar corrigir a disponibilidade de letras. Eles permanecem preservados para descrição e sensibilidade. Uma correção inferencial para a seleção exigiria hipóteses sobre observação, suporte e especificação que não são verificadas apenas pelos agregados existentes.
+
+\section{Idioma, repetição e qualidade dos preditores}
+O domínio permaneceu multilingue. O detector automático classificou 56.908 faixas como inglesas, 20.447 como não inglesas e 180 como incertas. Esses números se referem ao status que combina código estimado e confiança; não devem ser confundidos com a simples contagem de um código de língua. O detector não foi tratado como verdade humana nem usado para exclusão silenciosa.
+
+Foram registrados 484 vínculos excedentes de faixas em relação às entradas normalizadas únicas. Conteúdo compartilhado é relevante para a avaliação porque pode aproximar versões ou ligar artistas. Por isso, duplicação textual foi incorporada ao agrupamento, sem eliminar a faixa da distribuição empírica de interesse.
+
+Não houve ausência ou invalidade nos 15 campos do Baseline na coorte final. Essa constatação não valida todos os domínios possíveis da fonte nem corrige seu mecanismo de coleta. A auditoria do catálogo tinha escopo mais amplo e regras diagnósticas próprias. Os controles de elegibilidade, qualidade e modelagem não devem ser intercambiados retrospectivamente para excluir observações difíceis.

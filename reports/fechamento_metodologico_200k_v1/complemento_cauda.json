@@ -1,0 +1,16 @@
+{
+  "source_sha256": "4e9bc8839ceb76bef0248e328217dc362c5ee894479731e43de401fb0ffaf448",
+  "n": 128,
+  "observed_min": 80.0,
+  "observed_max": 96.0,
+  "observed_counts_80_84": 116,
+  "observed_counts_85_89": 8,
+  "observed_counts_90_100": 4,
+  "components": 96,
+  "largest_tail_component_tracks": 7,
+  "top5_components_tail_tracks": 24,
+  "global_predictions_at_least_80": 0,
+  "global_max_prediction": 77.99768328140846,
+  "tail_contribution_to_baseline_combined_mae_gain": 0.002572565954892544,
+  "tail_share_of_total_baseline_combined_gain": 0.01083812769666819
+}

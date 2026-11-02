@@ -1,0 +1,5 @@
+weighting,contrast,delta_mae,conditional_bonferroni_lower,conditional_bonferroni_upper,nominal_family_alpha,fold_independence_assumed,full_training_uncertainty
+equal_tracks,combined_minus_baseline,-0.2373625802253107,-0.31399993294127243,-0.16072522750934892,0.05,false,false
+equal_tracks,combined_minus_deep,-0.013401685621993176,-0.030270971315339262,0.003467600071352908,0.05,false,false
+original_weights_sensitivity,combined_minus_baseline,-0.22860840350969105,-0.30453800447693563,-0.15267880254244645,0.05,false,false
+original_weights_sensitivity,combined_minus_deep,-0.012343377263494111,-0.029191201635220206,0.0045044471082319815,0.05,false,false

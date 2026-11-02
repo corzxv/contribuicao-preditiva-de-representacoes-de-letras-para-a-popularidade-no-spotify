@@ -1,0 +1,33 @@
+\chapter{Dicionário dos descritores textuais}\label{ap:descritores}
+As definições abaixo se referem ao texto normalizado. $C$ é o número de caracteres não brancos; $L$, o número de letras Unicode; $T$, a quantidade de segmentos após casefold; $U$, a quantidade de tipos; e $B$, o número de linhas não vazias. Denominadores nulos recebem zero. A flag de ausência de segmentos é mantida, mesmo sendo constante zero no domínio atual. As colunas originais não foram substituídas.
+
+\begingroup\small\singlespacing
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.39\textwidth}>{\raggedright\arraybackslash}p{0.55\textwidth}}
+\caption{Definições operacionais das 21 características textuais.}\label{tab:dicionario}\\
+\toprule Coluna & Definição \\\midrule\endfirsthead
+\toprule Coluna & Definição (continuação) \\\midrule\endhead
+\bottomrule\endfoot
+\texttt{text\_characters} & Pontos de código do texto, incluindo espaços e quebras internos.\\
+\texttt{text\_nonspace\_characters} & Quantidade $C$.\\
+\texttt{text\_nonempty\_lines} & Quantidade $B$.\\
+\texttt{text\_stanzas} & Blocos não vazios separados por uma ou mais linhas vazias.\\
+\texttt{text\_lexical\_segments} & Quantidade $T$ de sequências de letras Unicode com apóstrofo ou hífen interno.\\
+\texttt{text\_unique\_segments} & Quantidade $U$ de tipos após casefold.\\
+\texttt{text\_segment\_length\_mean} & Média dos comprimentos dos segmentos após casefold.\\
+\texttt{text\_segment\_length\_std} & Desvio populacional desses comprimentos.\\
+\texttt{text\_segment\_type\_ratio} & $U/T$.\\
+\texttt{text\_hapax\_type\_ratio} & Tipos com uma ocorrência divididos por $U$.\\
+\texttt{text\_segment\_entropy} & $-\sum_t p_t\log_2p_t$, com frequências relativas dos segmentos.\\
+\texttt{text\_line\_length\_mean} & Média de caracteres não brancos por linha não vazia.\\
+\texttt{text\_line\_length\_std} & Desvio populacional desses comprimentos.\\
+\texttt{text\_repeated\_line\_fraction} & $(B-\text{linhas distintas})/B$, com casefold e uniformização de espaços.\\
+\texttt{text\_letters\_fraction} & $L/C$; letras são categoria Unicode L.\\
+\texttt{text\_digits\_fraction} & Dígitos decimais Unicode divididos por $C$.\\
+\texttt{text\_punctuation\_fraction} & Caracteres de categoria Unicode P divididos por $C$.\\
+\texttt{text\_uppercase\_letter\_fraction} & Letras maiúsculas divididas por $L$.\\
+\texttt{text\_question\_line\_fraction} & Linhas com interrogação simples ou de largura completa, divididas por $B$.\\
+\texttt{text\_exclamation\_line\_fraction} & Linhas com exclamação simples ou de largura completa, divididas por $B$.\\
+\texttt{text\_no\_lexical\_segments} & Indicador de $T=0$.\\
+\end{longtable}
+\endgroup
+Não há dicionário de sentimento, classificador temático ou vocabulário aprendido globalmente nessa extração. A interpretação é lexical e gráfica, condicionada à segmentação operacional. Desvios populacionais usam divisor $n$, e não o estimador amostral com $n-1$.

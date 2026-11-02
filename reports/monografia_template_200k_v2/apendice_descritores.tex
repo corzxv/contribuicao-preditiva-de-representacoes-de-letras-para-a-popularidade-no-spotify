@@ -1,0 +1,33 @@
+As medidas são calculadas no texto normalizado comum. $C$ conta caracteres não brancos; $L$, letras Unicode; $T$, segmentos lexicais; $U$, tipos distintos; e $B$, linhas não vazias. Segmentos são sequências de letras com apóstrofo ou hífen interno, após casefold. Denominadores nulos recebem zero, com indicador de ausência de segmentos.
+
+\begingroup\footnotesize\singlespacing
+\begin{longtable}{rP{.31\linewidth}P{.56\linewidth}}
+\caption{Definições operacionais dos 21 descritores de letras.}\label{tab:descritores}\\
+\toprule & Descritor & Definição \\\midrule\endfirsthead
+\toprule & Descritor & Definição (continuação) \\\midrule\endhead
+\bottomrule\endfoot
+1 & Caracteres totais & Pontos de código, incluindo espaços e quebras internas.\\
+2 & Caracteres não brancos & Contagem $C$.\\
+3 & Linhas não vazias & Contagem $B$.\\
+4 & Estrofes operacionais & Blocos não vazios separados por uma ou mais linhas vazias.\\
+5 & Segmentos lexicais & Contagem $T$.\\
+6 & Tipos lexicais & Contagem $U$, após casefold.\\
+7 & Comprimento médio de segmento & Média de caracteres dos segmentos após casefold.\\
+8 & Dispersão de comprimento de segmento & Desvio com divisor $T$.\\
+9 & Razão tipo/segmento & $U/T$.\\
+10 & Razão de tipos únicos em frequência & Número de tipos com uma ocorrência dividido por $U$.\\
+11 & Entropia de segmentos & $-\sum_{t=1}^{U}p_t\log_2p_t$, com frequências relativas $p_t$.\\
+12 & Comprimento médio de linha & Média de caracteres não brancos nas linhas não vazias.\\
+13 & Dispersão de comprimento de linha & Desvio com divisor $B$.\\
+14 & Fração de linhas repetidas & $(B-\text{número de linhas distintas})/B$, após casefold e uniformização de espaços.\\
+15 & Fração de letras & $L/C$, com categoria Unicode L.\\
+16 & Fração de dígitos & Dígitos decimais Unicode divididos por $C$.\\
+17 & Fração de pontuação & Caracteres de categoria Unicode P divididos por $C$.\\
+18 & Fração de maiúsculas & Letras maiúsculas divididas por $L$.\\
+19 & Linhas com interrogação & Fração das $B$ linhas com interrogação simples ou de largura completa.\\
+20 & Linhas com exclamação & Fração das $B$ linhas com exclamação simples ou de largura completa.\\
+21 & Ausência de segmentos & Indicador de $T=0$.\\
+\end{longtable}
+\endgroup
+
+A entropia segue a definição discreta em bits de \citeonline{cover2006}, aplicada aqui aos segmentos. Ela e a razão tipo/segmento dependem da extensão e segmentação, sem interpretação linguística universal. O indicador 21 foi constante zero e é centrado para zero na padronização.

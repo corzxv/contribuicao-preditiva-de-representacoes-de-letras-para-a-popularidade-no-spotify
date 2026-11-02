@@ -1,0 +1,134 @@
+\section{Métodos e domínio de análise}
+
+A análise compara a contribuição preditiva incremental de informações textuais para a popularidade Spotify observada no snapshot da fonte. O domínio analítico contém 77.535 faixas com letras aceitas, provenientes da amostra estratificada original de 200.000 faixas. A disponibilidade das letras não assegura representatividade do catálogo ou de todas as músicas com letras; por isso, as conclusões se referem ao domínio observado.
+
+
+As quatro configurações usam as mesmas observações: Baseline, com 15 campos de metadados e acústicas; Tradicional, acrescentando 21 descritores lexicais e estruturais; Profundo, acrescentando embeddings multilingues de 384 dimensões; e Combinado, reunindo as duas representações textuais. Descritores e embeddings derivam do mesmo texto aceito padronizado. O encoder intfloat/multilingual-e5-small permaneceu congelado, sem ajuste pela resposta.
+
+
+A avaliação empregou validação cruzada aninhada agrupada, com cinco folds externos e três internos. Os 21.893 componentes operacionais, maior com 186 faixas, unem artistas, participações explícitas, composições e textos iguais segundo regras documentadas. Cada faixa recebeu uma previsão externa de ajuste que não utilizou seu componente. Chaves operacionais não são identificadores universais.
+
+
+A família Ridge foi mantida entre blocos, com alpha em 0,1; 1; 10; 100; 1.000; 10.000 e seleção por MAE interno não ponderado. Imputação, escala e categorias foram aprendidas apenas em cada treino. Foram executados 360 ajustes internos, 20 refits externos e dez referências média/mediana. Não houve PCA, ajuste do encoder, clipping ou expansão da grade após resultados externos. Esse cuidado distingue seleção e avaliação, conforme Cawley e Talbot (2010).
+
+
+O ajuste e as métricas principais atribuem pesos iguais às faixas. MAE é a métrica primária, com RMSE e R² complementares calculados sobre previsões externas reunidas. A sensibilidade usa os pesos amostrais originais apenas no MAE, nas mesmas previsões. Esses pesos não corrigem automaticamente a disponibilidade textual. O teste histórico v0.6 já havia sido aberto em 14/10/2026; nova CV não restaura confirmação independente.
+
+
+\FloatBarrier
+
+\clearpage
+
+\section{Resultados globais e sensibilidade aos pesos}
+
+O Combinado apresentou o menor MAE observado: 8,1151, frente a 8,3525 no Baseline. A redução foi de 0,2374 ponto, ou 2,842\%. Com pesos originais, a redução relativa foi de 2,781\%, mantendo a ordenação dos quatro blocos.
+
+
+O Profundo capturou a maior parte do incremento observado. Acrescentar os descritores tradicionais ao Profundo reduziu o MAE em apenas 0,0134 ponto. A comparação é entre representações na família Ridge: não demonstra superioridade de toda abordagem profunda, nem permite atribuição causal do incremento a elementos isolados das letras.
+
+
+\input{tables/global}
+
+\begin{figure}[!htbp]\centering
+
+\includegraphics[width=\linewidth]{images/comparacao_global.png}
+
+\caption{MAE global e deltas frente ao Baseline; pontos estimados, sem intervalos de confiança.}
+
+\end{figure}
+
+As referências média e mediana tiveram MAE de 12,5621 e 12,4786. O desempenho melhor das configurações com atributos confirma utilidade preditiva neste procedimento, mas o ganho textual adicional permanece modesto na escala da resposta. Não foi definido um limiar de equivalência prática ou calculado teste de significância.
+
+
+\FloatBarrier
+
+\clearpage
+
+\section{Estabilidade entre folds e influência dos componentes}
+
+O Combinado teve menor MAE que o Baseline nos cinco folds. Os deltas variaram de -0,2724 a -0,2070. Cada teste externo contém 15.507 faixas; sua estabilidade de direção é descritiva e não autoriza tratar os cinco resultados como réplicas independentes.
+
+
+\input{tables/folds}
+
+\input{tables/component}
+
+\begin{figure}[!htbp]\centering
+
+\includegraphics[width=\linewidth]{images/estabilidade_folds.png}
+
+\caption{MAE por fold externo, com as mesmas observações entre blocos em cada partição.}
+
+\end{figure}
+
+Os cinco contrastes mantiveram delta negativo quando qualquer componente foi retirado da avaliação, tanto com pesos iguais quanto com pesos originais. Isso indica que o sinal observado não depende de um único componente avaliado, condicionando aos modelos e previsões fixos. A operação não retreina modelos e não quantifica incerteza do treinamento; seus extremos não são IC.
+
+
+\FloatBarrier
+
+\clearpage
+
+\section{Erro na cauda de popularidade}
+
+O erro não é uniforme ao longo da resposta. Embora o Combinado melhore o MAE frente ao Baseline em todas as faixas de popularidade publicadas, o erro absoluto cresce na cauda superior. Nas 128 faixas com popularidade entre 80 e 100, o MAE foi 29,3711, contra 30,9294 no Baseline. Esse comportamento deve acompanhar a divulgação do MAE global de 8,1151.
+
+
+\input{tables/bands}
+
+\begin{figure}[!htbp]\centering
+
+\includegraphics[width=\linewidth]{images/erro_popularidade.png}
+
+\caption{MAE por faixa da resposta observada e número de casos; células pequenas na cauda exigem cautela.}
+
+\end{figure}
+
+As previsões externas máximas do Profundo e do Combinado foram aproximadamente 78 pontos; no Combinado, a mínima foi -32,7066. O protocolo preservou previsões lineares sem clipping: 615 das 77.535 ficaram abaixo de zero. Não se propõe transformá-las retrospectivamente para substituir o resultado principal. Esses diagnósticos não definem um classificador de hits nem avaliação prospectiva de lançamentos.
+
+
+\FloatBarrier
+
+\clearpage
+
+\section{Heterogeneidade por idioma e outros subgrupos}
+
+O incremento do Combinado frente ao Baseline foi de 0,1561 ponto nas 56.908 faixas de inglês estimado e 0,4693 nas 20.447 classificadas como não inglês. Nas 180 de status incerto, o MAE aumentou de 9,4360 para 9,8564. Portanto, o benefício médio não é uniforme. Essas diferenças descrevem subconjuntos com composição própria, sem identificar um efeito causal do idioma.
+
+
+\input{tables/language}
+
+\begin{figure}[!htbp]\centering
+
+\includegraphics[width=\linewidth]{images/erro_idioma.png}
+
+\caption{MAE por status de idioma automático; o grupo incerto foi mantido na análise principal.}
+
+\end{figure}
+
+Entre os 76 gêneros com métricas publicadas, 59 apresentaram redução do MAE no Combinado frente ao Baseline. Há exceções, e as comparações são exploratórias, sem testes múltiplos. O diagnóstico publicou 116 células e omitiu métricas de 77 células com menos de 100 faixas ou 20 componentes, mantendo apenas suas contagens. Esses limiares não asseguram poder estatístico.
+
+
+\FloatBarrier
+
+\clearpage
+
+\section{Limites e conclusão descritiva}
+
+O ganho do Combinado também aparece em componentes com colisão histórica detectada e nos sem colisão detectada. Essa separação não constitui novo holdout independente. Os quatro casos de chave histórica indeterminada, pertencentes a um componente, continuam na avaliação global; suas métricas isoladas foram omitidas pelos limiares predefinidos.
+
+
+A análise sustenta contribuição preditiva incremental observada de letras na comparação Ridge: o bloco de embeddings responde pelo maior incremento, enquanto a adição dos descritores tradicionais a ele produz ganho pequeno. A ordenação global é estável à ponderação e os sinais são preservados nos folds e na retirada condicional de um componente da avaliação.
+
+
+O alcance permanece limitado ao domínio observado. A integridade técnica não certifica precisão semântica de todos os pares Spotify-LRCLIB; idiomas e identidades são operacionais. As conclusões não são causais, não representam automaticamente o catálogo e não avaliam sucesso comercial futuro. Hipóteses adicionais seriam necessárias para ampliar a inferência.
+
+
+Não foram calculados IC ou p-valores. Bengio e Grandvalet (2004) mostram por que ignorar correlações na CV pode subestimar a variância. Os resultados apresentados não estabelecem significância estatística. Qualquer análise inferencial adicional deverá declarar seu estimando, hipóteses e tratamento da dependência dos ajustes.
+
+
+\input{tables/history}
+
+Esta consolidação é um trecho parcial de métodos, resultados e discussão para a monografia. Não substitui introdução, revisão bibliográfica, caracterização completa das fontes, revisão dirigida de matching ou adequação ao template institucional. Os dados, modelos, pesos e folds anteriores permanecem preservados.
+
+
+\FloatBarrier

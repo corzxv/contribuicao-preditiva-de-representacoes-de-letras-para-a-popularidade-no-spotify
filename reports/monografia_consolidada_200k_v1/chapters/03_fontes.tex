@@ -1,0 +1,30 @@
+\chapter{Fontes, medidas e proveniência}\label{cap:fontes}
+\section{Catálogo acessível da fonte Spotify}
+A fonte inicial é o conjunto público identificado como \emph{Spotify\_1Million\_Tracks}, disponibilizado na plataforma Kaggle pela conta \texttt{amitanshjoshi} \citep{spotifydataset}. O arquivo local anterior a qualquer matching contém 1.159.764 linhas e o mesmo número de identificadores de faixa distintos. Sua auditoria verificou ausência de IDs faltantes ou repetidos. As observações têm gêneros registrados em 82 categorias e o campo \texttt{year} assume valores entre 2000 e 2023.
+
+Esses registros definem o catálogo acessível deste estudo. Não se conhece um desenho probabilístico que tenha selecionado esse catálogo a partir de todo o Spotify. Sua dimensão e variedade não justificam tratar a fonte como censo da plataforma. A palavra catálogo, neste texto, designa esse arquivo congelado, identificado por caminho, tamanho e hash, e não a totalidade de músicas existentes no serviço.
+
+A variável resposta é \texttt{spotify\_popularity}, derivada explicitamente do campo \texttt{popularity} da fonte. A documentação do Spotify descreve um escore de zero a cem, calculado principalmente com informação de execuções e recência, e informa que versões duplicadas podem ser avaliadas separadamente \citep{spotifydocs}. Essa definição não revela a data de medição de cada linha no arquivo utilizado. Não se trata de contagem de execuções nem de medida de popularidade no lançamento.
+
+Há uma distinção entre datas documentais. O manifesto local registra reuso ou verificação do arquivo em 18 de agosto de 2026; isso não comprova a data de download original. Uma atualização upstream em 2023 consta da proveniência histórica, mas não equivale à data de coleta da resposta. A versão exata do conjunto Kaggle e o significado de \texttt{year} como ano original de lançamento permanecem não confirmados. A análise usa o campo como metadado fornecido, sem reconstruir datas por títulos ou letras.
+
+Além da popularidade, os campos acústicos e musicais incluem danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duração, tonalidade, modo e assinatura de tempo. São medidas da fonte, não extraídas novamente do áudio pelo projeto. Nomes de campos não substituem interpretação de suas escalas; tampouco sua presença autoriza atribuição causal.
+
+\section{LFM-2b e descritores de letras: papel histórico}
+O LFM-2b reúne eventos de escuta associados ao Last.fm. A derivação \emph{LFM2b Lyrics Descriptor Analyses} é outro objeto: disponibiliza descritores textuais e informações de músicas, com 582.759 registros completos segundo seus autores. A derivação usa letras identificadas como inglesas e distingue contagens de escuta no Last.fm de visualizações de letras no Genius \citep{parada2024data}.
+
+No projeto, essa derivação participou de uma integração inicial com a fonte Spotify e motivou estudos de descritores. A integração histórica aceitou 111.758 pares, universo diferente do domínio recente. Os seus resultados, vetores e transformações não foram transportados automaticamente para a análise atual. Um \texttt{track\_id} comum não demonstra que a letra, a versão da gravação e o processamento textual sejam os mesmos.
+
+Três variáveis precisam permanecer separadas: popularidade Spotify, visualizações de letras no Genius e eventos de escuta no Last.fm. Somente a primeira é resposta desta monografia. A informação LFM2b não é requisito de elegibilidade da amostra recente e seus descritores não preenchem silenciosamente as faixas que não integraram o matching antigo. Esse papel histórico é importante para a trajetória do estudo, mas não constitui um quinto bloco preditivo atual.
+
+\section{LRCLIB e o snapshot textual}
+As letras da versão atual foram recuperadas de um dump local do LRCLIB \citep{lrclib}. O arquivo identificado pelo projeto corresponde ao snapshot de 12 de outubro de 2026. Ele armazena metadados e representações textuais que podem conter letra simples, letra sincronizada, sinalização instrumental ou ausência de conteúdo utilizável. A existência de um registro não garante correspondência correta com uma faixa Spotify.
+
+O armazenamento local permitiu consultas reproduzíveis sem enviar letras a serviços externos de inferência. Índices auxiliares por artista apoiaram a recuperação; suas contagens são contagens de registros indexados, não de letras aceitas na amostra. Nenhum índice ou varredura foi reconstruído para produzir esta monografia.
+
+Os procedimentos de preparação do dump registraram tamanho, verificações de transporte e consistência SQLite. Esses controles detectam corrupção técnica, mas não são assinatura independente do publicador nem avaliação da qualidade semântica dos textos. A disponibilidade pública de uma base tampouco implica licença irrestrita sobre todas as letras. O pacote da monografia contém agregados, fontes de figuras e definições; não distribui letras, bases individuais, credenciais ou pesos de modelos.
+
+\section{Unidades de observação e ligação}
+A unidade inicial e de avaliação principal é o identificador de faixa Spotify. Um identificador não é uma composição universal: gravações, álbuns e versões podem gerar registros distintos. Uma composição operacional é uma chave de agrupamento construída no projeto; uma letra aceita é um conteúdo ligado por referência e hash; um componente operacional pode reunir várias faixas e relações. Essas unidades são usadas para finalidades diferentes e não devem ter suas contagens trocadas.
+
+Os hashes documentam identidade de arquivos ou entradas normalizadas. Eles permitem detectar alteração ou reuso incompatível, mas não provam que uma letra pertença à gravação correta. A cadeia de proveniência informa de onde veio o conteúdo e qual regra o aceitou; a validade substantiva do matching continua exigindo evidência adicional.

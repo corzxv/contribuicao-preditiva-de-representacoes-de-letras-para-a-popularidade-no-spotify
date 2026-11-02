@@ -1,0 +1,69 @@
+% Versão acadêmica para revisão. Classe report; não é template homologado da UnB.
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,brazil]{babel}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage{lmodern,microtype,indentfirst,setspace}
+\microtypesetup{expansion=false}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,tabularx,array}
+\usepackage{caption,placeins,fancyhdr}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdftitle={Representações textuais de letras e popularidade observada no Spotify},pdfauthor={Felipe Macedo Cordeiro}}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}
+\clubpenalty=10000
+\widowpenalty=10000
+\setlength{\headheight}{17pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\headrulewidth}{0.3pt}
+\captionsetup{font=small,labelfont=bf}
+\newcommand{\fonte}[1]{\par\smallskip\parbox{\linewidth}{\footnotesize Fonte: #1}}
+\newcommand{\nota}[1]{\par\smallskip\parbox{\linewidth}{\footnotesize Nota: #1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\tituloTCC}{Representações textuais de letras e popularidade observada no Spotify: contribuição preditiva incremental no domínio com letras aceitas}
+\newcommand{\autorTCC}{Felipe Macedo Cordeiro}
+\newcommand{\orientadorTCC}{Leandro Tavares Correa}
+\newcommand{\figura}[4]{\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{images/#1.png}\caption{#2}\label{#3}\fonte{#4}\end{figure}}
+\renewcommand{\bibname}{Referências}
+\begin{document}
+\hypersetup{pageanchor=false}
+\pagenumbering{roman}
+\input{frontmatter/iniciais}
+\tableofcontents
+\clearpage\listoffigures
+\clearpage\listoftables
+\clearpage
+\pagenumbering{arabic}
+\input{chapters/01_introducao}
+\input{chapters/02_fundamentacao}
+\input{chapters/03_fontes}
+\input{chapters/04_amostra_integracao}
+\input{chapters/05_descritiva_selecao}
+\input{chapters/06_representacoes}
+\input{chapters/07_modelagem}
+\input{chapters/08_resultados}
+\input{chapters/09_diagnosticos}
+\input{chapters/10_discussao}
+\input{chapters/11_conclusoes}
+\cleardoublepage
+\phantomsection\addcontentsline{toc}{chapter}{Referências}
+\begingroup\small\singlespacing\raggedright
+\interlinepenalty=10000
+\setlength{\bibsep}{0.4\baselineskip}
+\bibliographystyle{plainnat}
+\bibliography{references/referencias}
+\endgroup
+\appendix
+\input{appendices/a_descritores}
+\input{appendices/b_reproducao}
+\input{appendices/c_historico}
+\input{appendices/d_pendencias}
+\end{document}

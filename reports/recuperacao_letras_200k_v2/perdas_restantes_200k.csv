@@ -1,0 +1,14 @@
+﻿lyrics_status,lyrics_reason,n_tracks,sum_weights
+ambiguous,empty_synced_text,2,11.683735438127746
+ambiguous,instrumental_text_conflict,144,834.7028438241133
+ambiguous,invalid_or_extended_synced_format,19,110.92990807161053
+ambiguous,metadata_conflict,3319,19290.419584632724
+ambiguous,operational_limit:candidate_limit,846,4715.009767863374
+ambiguous,plain_synced_conflict,13081,74666.1377401163
+ambiguous,positive_version_conflict,8578,48414.4198066474
+ambiguous,substantively_distinct_texts,1081,6290.756344849914
+ambiguous,unordered_synced_timestamps,15,87.04720175665622
+instrumental,compatible_source_instrumental_no_text,8759,50814.7275138967
+insufficient_metadata,missing_artist_or_title,2,11.68090161021351
+no_text,compatible_without_text,9,52.26396910086943
+not_found,no_candidate_controlled_keys,86610,505130.2900221346

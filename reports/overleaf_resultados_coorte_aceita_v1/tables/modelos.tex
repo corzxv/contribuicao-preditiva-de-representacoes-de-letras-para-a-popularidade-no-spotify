@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Desempenho OOF das famílias de regressão}\label{tab:modelos}
+\begin{tabular}{llrrr}
+\toprule
+Família & Bloco & MAE & RMSE & $R^2$\\\midrule
+Linear comum & Baseline & 7,0536 & 9,1360 & 0,5378\\
+Linear comum & Tradicional & 6,9854 & 9,0549 & 0,5460\\
+Ridge & Baseline & 7,0524 & 9,1340 & 0,5380\\
+Ridge & Tradicional & 6,9712 & 9,0269 & 0,5488\\
+Elastic Net & Baseline & 7,4490 & 9,6340 & 0,4860\\
+Elastic Net & Tradicional & 7,3577 & 9,5095 & 0,4992\\
+Aditiva Ridge & Baseline & 6,9546 & 8,9924 & 0,5522\\
+Aditiva Ridge & Tradicional & 6,8906 & 8,9016 & 0,5612\\
+Média do treino & Constante & 10,7488 & 13,4383 & $\approx 0$\\
+Mediana do treino & Constante & 10,7003 & 13,4760 & -0,0056\\
+\bottomrule
+\end{tabular}
+\fonte{Elaboração a partir dos resultados salvos da coorte aceita.}
+\nota{n = 58.633 para todas as linhas. Valores menores favorecem MAE/RMSE; maiores favorecem R². A escolha interna de família também selecionou a aditiva nos cinco folds de cada bloco.}
+\end{table}

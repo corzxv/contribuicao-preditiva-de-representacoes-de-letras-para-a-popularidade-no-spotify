@@ -1,0 +1,29 @@
+{
+  "completed": true,
+  "version": "closure-diagnostics-v1",
+  "cohort_rows": 77535,
+  "components": 21893,
+  "input_hashes": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_regression_200k_v1\\integral\\predicoes_externas.parquet": "4e9bc8839ceb76bef0248e328217dc362c5ee894479731e43de401fb0ffaf448",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_results_diagnostics_200k_v1\\perdas_componentes.parquet": "72515a656ec04b05cc3eb6125586c03f1d166facc2faab60dc35d454c34b6118",
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\diagnosticos_modelagem_200k_v1\\resumo_diagnosticos.json": "996c9d39d7b3558d684a32a9a9f3ae585e9ad7a4379d2f5aa8a03ef1afc3bac0"
+  },
+  "code_sha256": "51fb428d3a1c2c3484a94f3c77a11e4917c702d2c43ba772a4e61b67745d5b56",
+  "protocol_sha256": "6890289f80269fbd5abd84372731f6b1299d4a2010bdbb218efcf19eb842a089",
+  "residual_definition": "prediction_minus_observed; negative_is_underprediction",
+  "intervals": "auxiliary_asymptotic_foldwise_cluster_ratio_and_Bonferroni_envelope",
+  "interval_families": "two_contrasts_times_five_folds_separate_for_each_weighting",
+  "component_independence_is_assumption": true,
+  "fold_independence_assumed": false,
+  "full_training_uncertainty": false,
+  "models_trained": false,
+  "embeddings_generated": false,
+  "lyrics_read": false,
+  "individual_outputs_written": false,
+  "original_inputs_unchanged": true,
+  "runtime": {
+    "numpy": "2.5.2",
+    "polars": "1.43.2"
+  },
+  "seconds": 0.26373309997143224
+}

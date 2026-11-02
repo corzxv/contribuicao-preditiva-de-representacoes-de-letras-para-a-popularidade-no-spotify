@@ -1,0 +1,35 @@
+\chapter{Fundamentação e trabalhos relacionados}\label{cap:fundamentacao}
+\section{Predição, perda e regularização}
+Em uma tarefa de regressão supervisionada, um procedimento aprende uma função $f$ que relaciona um vetor de características $x$ a uma resposta numérica $y$. A qualidade preditiva é definida por uma função de perda e pelo conjunto em que ela é avaliada. Um ajuste que reproduz bem o próprio treino pode falhar em observações novas; por isso, reduzir erro de treinamento não equivale a reduzir risco preditivo. A formulação de aprendizado estatístico e de regularização é apresentada por \citet{james2023}.
+
+O erro absoluto $|y-f(x)|$ e o erro quadrático $(y-f(x))^2$ valorizam desvios de formas distintas. O segundo atribui peso maior aos erros extremos. A média das perdas absolutas conduz ao MAE; a raiz da média das perdas quadráticas conduz ao RMSE. A escolha da métrica determina o que significa melhorar o desempenho e deve anteceder a comparação. Neste estudo, o MAE é primário; RMSE e $R^2$ são complementares.
+
+Ridge acrescenta uma penalização quadrática aos coeficientes da regressão linear. Para matriz de características $X$, vetor de respostas $y$ e intercepto $\beta_0$, a estimativa resolve
+\begin{equation}\label{eq:ridge}
+ (\widehat\beta_0,\widehat\beta)=\arg\min_{\beta_0,\beta}
+ \left\{\sum_{i\in T}(y_i-\beta_0-x_i^\top\beta)^2+\alpha\sum_{j=1}^{p}\beta_j^2\right\}.
+\end{equation}
+O conjunto $T$ indica apenas o treino correspondente. O intercepto não é penalizado. A penalização encolhe coeficientes e modifica a relação entre viés e variância; a proposta clássica está em \citet{hoerl1970}. Como a penalização depende da escala das colunas, a padronização das características numéricas integra o procedimento. Ela precisa ser estimada no treino, sem usar a avaliação.
+
+A solução Ridge não impõe que as previsões pertençam ao suporte da resposta. Uma variável observada entre zero e cem pode receber previsões negativas em uma regressão linear regularizada. Essa possibilidade deve ser diagnosticada, não confundida automaticamente com falha de dados. Tampouco é necessário que a métrica de seleção de $\alpha$ coincida com a perda otimizada no ajuste: aqui o ajuste usa quadrados penalizados e a seleção interna usa MAE.
+
+\section{Representações textuais e informação incremental}
+Uma letra é um objeto de comprimento variável. Para utilizá-la em regressão, é necessário convertê-la em características numéricas. Descritores explícitos resumem aspectos definidos pelo pesquisador, como extensão e repetição. São interpretáveis como medidas operacionais, mas não esgotam o conteúdo da letra. Embeddings produzem vetores densos por meio de um modelo pré-treinado, oferecendo outra representação do mesmo texto.
+
+\citet{parada2024lyrics}, com a correção publicada em \citet{parada2024correction}, analisam descritores de letras em um corpus de músicas em inglês e discutem mudanças ao longo do tempo. O trabalho fundamenta o interesse por propriedades lexicais e estruturais, mas não demonstra que as 21 medidas aqui implementadas sejam equivalentes às suas ou que reduzam o erro sobre a popularidade Spotify. O recorte linguístico e a resposta também diferem. A comparação atual precisa ser estabelecida empiricamente.
+
+O multilingual E5 oferece modelos de embeddings treinados com pares textuais multilingues, com alternativas de tamanho e custo \citep{wang2024}. Sua aplicação neste estudo é a extração congelada de características: o encoder não recebe a popularidade e não é ajustado com a resposta. A revisão, o tratamento das entradas e a agregação de trechos são parte da definição efetiva da representação. Uma mesma família de modelo não garante vetores equivalentes quando esses procedimentos diferem.
+
+A representação por subpalavras também não coincide com a segmentação lexical usada nos descritores. O SentencePiece foi proposto como método de tokenização de subpalavras sem exigir segmentação prévia em palavras \citep{kudo2018}. O suporte multilingue de um encoder deve ser distinguido da comparabilidade de métricas lexicais entre sistemas de escrita. A existência de um vocabulário compartilhado não prova desempenho uniforme para cada língua ou gênero musical.
+
+\section{Validação e dependência}
+Validação cruzada organiza a avaliação fora do treino. Quando hiperparâmetros são escolhidos pelos mesmos resultados usados para anunciar desempenho, há risco de otimismo. A discussão de \citet{cawley2010} motiva a separação entre seleção interna e avaliação externa. A validação aninhada empregada aqui reserva os testes externos e realiza a escolha de $\alpha$ apenas nas subdivisões do treino externo.
+
+Observações relacionadas exigem cuidado adicional. Versões de uma composição, créditos do mesmo artista e letras idênticas podem compartilhar informação suficiente para tornar uma divisão por faixas isoladas pouco informativa sobre transferência para relações novas. O agrupamento operacional evita as sobreposições identificadas, embora não resolva todos os pseudônimos, colaborações ou versões. A ausência de colisão de uma chave não é prova de independência estatística.
+
+Os erros dos folds também não são independentes: seus modelos usam conjuntos de treino sobrepostos. \citet{bengio2004} demonstram a inexistência de um estimador universalmente não viesado da variância da CV e os problemas de ignorar tais correlações. A CV aninhada reduz a mistura entre seleção e avaliação, mas não torna seus cinco resultados réplicas independentes nem elimina a exposição de avaliações históricas.
+
+\section{Amostragem e disponibilidade textual}
+A amostragem estratificada permite associar probabilidades de inclusão conhecidas às faixas do catálogo acessível. Os pesos de desenho são inversos dessas probabilidades e devem ser coerentes com a unidade selecionada \citep{statcan2010}. A posterior disponibilidade de letra aceita é outro mecanismo. Aplicar os pesos originais somente às faixas aceitas não incorpora automaticamente a probabilidade de aceitação textual.
+
+Essa distinção é decisiva para a interpretação: o sorteio inicial sustenta a descrição da amostra em relação ao catálogo definido, enquanto a análise preditiva principal descreve o domínio observado com letras. O número de casos ou a concordância em algumas marginais não substituem hipóteses de cobertura e seleção. Por isso, a análise mantém pesos e estratos para diagnóstico, mas usa pesos iguais por faixa no ajuste e na métrica principal.

@@ -1,0 +1,64 @@
+\chapter{Incerteza e diagnósticos}\label{cap:diagnosticos}
+\section{Diferenças conhecidas e incerteza auxiliar}
+As diferenças de MAE nos casos e previsões observados são números conhecidos, não estimativas com erro de Monte Carlo. Para discutir sua variação em outras avaliações hipotéticas, é necessário explicitar um alvo adicional e suas hipóteses. A quantidade de componentes operacionais não os torna automaticamente uma amostra probabilística de artistas ou composições independentes.
+
+A análise auxiliar trata componentes como unidades de dependência dentro de cada teste externo e condiciona separadamente no respectivo treino e par de modelos. Para um contraste entre configurações $a$ e $b$, define-se $D_g=\sum_{i\in g}(|e_i^{(a)}|-|e_i^{(b)}|)$ e $N_g$ como número de faixas do grupo. No fold $k$, o contraste é uma razão de totais,
+\begin{equation}\label{eq:deltagrupo}
+ \widehat\delta_k=\frac{\sum_{g\in k}D_g}{\sum_{g\in k}N_g}.
+\end{equation}
+Isso preserva o estimando por faixa; não é média simples dos MAEs por grupo. A linearização da razão conduz ao erro padrão auxiliar
+\begin{equation}\label{eq:segrupo}
+ \widehat{\operatorname{SE}}_k^2=
+ \frac{G_k}{G_k-1}\frac{\sum_{g\in k}(D_g-\widehat\delta_kN_g)^2}
+ {(\sum_{g\in k}N_g)^2}.
+\end{equation}
+Na sensibilidade ponderada, $D_g$ incorpora os pesos originais e $N_g$ passa a ser sua soma. A lógica admite dependência arbitrária dentro de grupos e requer independência e regularidade entre componentes em um modelo auxiliar, conforme os princípios de inferência por clusters discutidos por \citet{cameron2015}. Essas hipóteses não são demonstradas pelo desenho original de faixas e podem falhar por aliases ou relações residuais.
+
+Foram construídos limites normais por fold e aplicada correção Bonferroni a dez quantidades, dois contrastes por cinco folds, com família separada para cada ponderação. A combinação usa médias ponderadas dos extremos por tamanho ou soma de pesos do fold. A desigualdade da união não exige independência entre folds, mas sua cobertura nominal depende da adequação dos limites marginais. Não se condiciona conjuntamente em todos os modelos: os outros treinos contêm os casos que são teste neste fold.
+
+\input{tables/incerteza}
+\figura{limites_condicionais}{Contrastes e limites auxiliares condicionais.}{fig:limites}{Análise exploratória por componentes/folds, com 95\% nominais e Bonferroni; C significa Combinado. Não representa a incerteza integral de seleção e treinamento.}
+\FloatBarrier
+
+Os limites da Tabela~\ref{tab:incerteza} mantêm direção favorável para Combinado--Baseline, mas incluem zero para Combinado--Profundo. O segundo ganho é inconclusivo mesmo nesse cenário auxiliar. O alvo combinado é uma média de riscos condicionais dos cinco pares ajustados em avaliações hipotéticas compatíveis, e não o risco de todo o algoritmo refeito em novas amostras ou o do modelo ajustado em todas as faixas. As escolhas históricas de hipóteses e famílias não são apagadas por Bonferroni; a análise continua exploratória.
+
+Métodos assintóticos de inferência para CV podem ser defensáveis sob condições de estabilidade \citep{bayle2020}. Porém, estabilidade individual dos modelos não basta para a estabilidade relativa de uma comparação \citep{bayle2026}. Não se presume que o nosso Ridge viole esses resultados, mas tampouco que a simples escolha dessa família valide seus intervalos. \citet{bates2024} estudam um desenho aninhado para estimar variabilidade da CV; ele não é automaticamente equivalente ao aninhamento 5$\times$3 aqui usado para tuning.
+
+Um bootstrap pareado de componentes com previsões congeladas avaliaria composição de casos, não toda a incerteza de treinamento. Para incorporar seleção e reajuste seria necessário outro desenho, com pré-processamento, tuning e modelos refeitos em cada réplica e manutenção das cópias de um componente na mesma partição. Nenhum refit desse tipo foi executado ou é pressuposto nos limites apresentados.
+
+\section{Influência de componentes e subgrupos}
+A retirada de um componente apenas da avaliação preservou o sinal negativo dos cinco contrastes, tanto sem pesos quanto com pesos originais. A Tabela~\ref{tab:remocao} mostra os extremos condicionais. Esse resultado indica que um único componente não é suficiente para inverter a direção dos contrastes observados com os ajustes fixos. Não é validação leave-one-group-out com refit e seus extremos não são limites de confiança.
+
+\input{tables/remocao}
+
+Os diagnósticos por subgrupo publicaram métricas apenas em células com pelo menos 100 faixas e 20 componentes; outras tiveram contagens e motivo de omissão, sem excluir casos da avaliação global. Foram 116 células com métricas e 77 com métricas omitidas. Esses limiares controlam a apresentação de células pequenas e não garantem precisão inferencial.
+
+\input{tables/idiomas}
+A Tabela~\ref{tab:idiomas} mostra que o ganho não é uniforme. No status incerto, com 180 casos, o MAE do Combinado foi maior que o do Baseline. Entre os 76 gêneros com métricas publicadas, 59 favoreceram o Combinado e 17 não. Os resultados são exploratórios, com sobreposição de componentes entre categorias; não são uma bateria confirmatória de testes. O idioma automático também pode errar e não justifica redefinir a população após a comparação.
+
+\figura{erro_idioma}{MAE por status de idioma estimado.}{fig:idiomas}{Diagnóstico agregado das mesmas previsões externas, sem alterar o domínio analítico ou o detector de idioma.}
+\FloatBarrier
+
+\section{Cauda de popularidade e distribuição dos resíduos}
+A dificuldade na cauda superior é expressiva. Os 128 casos com $y\ge80$ pertencem a 96 componentes e apresentam valores de 80 a 96; 116 estão em 80--84, oito em 85--89 e quatro em 90--100. Não se trata de 128 observações próximas de cem. Todas foram subestimadas pelas quatro configurações, conforme a Tabela~\ref{tab:cauda}.
+
+\figura{erro_popularidade}{Erro por banda de popularidade observada no Baseline e no Combinado.}{fig:bandaserro}{Diagnósticos da comparação recente; contagens indicadas na figura. As bandas são definidas pelo alvo, e não pelo valor previsto.}
+\FloatBarrier
+
+\input{tables/cauda}
+No Combinado, a previsão média foi 52,4414 para popularidade média de 81,8125, com previsões entre 24,9681 e 77,9977. Definindo agora o resíduo diagnóstico como $r_i=\widehat y_i-y_i$, valor negativo significa subestimação. Sua mediana na cauda foi $-28{,}7755$, P25 $-37{,}2444$ e P75 $-22{,}4381$; o desvio populacional descritivo foi 10,9011. Houve 101 subestimações de pelo menos 20 pontos e 22 de pelo menos 40, de modo que o MAE elevado não é produzido apenas por um ou dois casos isolados.
+
+\figura{residuos_cauda}{Contagens de resíduos do Combinado na cauda observada ($n=128$).}{fig:residuoscauda}{Previsões existentes; resíduos iguais à previsão menos o observado. Barras são contagens por intervalo, não densidades.}
+\FloatBarrier
+
+A cauda representa 0,1651\% das faixas, 0,5975\% do erro absoluto total e 1,4591\% do erro quadrático total do Combinado. Sua contribuição aditiva ao MAE global, mantendo o denominador de 77.535, é 0,04849 ponto. A melhora frente ao Baseline nessa cauda corresponde a apenas 1,0838\% da melhora total de MAE. O bom desempenho médio relativo convive, portanto, com dificuldade de reproduzir os valores mais altos.
+
+A compressão das previsões é compatível com regularização e com informação insuficiente para distinguir a cauda, mas esses diagnósticos não identificam causalmente o mecanismo. Condicionar no próprio alvo alto pode produzir resíduos negativos mesmo sem erro de código. Isso não é a mesma análise que calibração condicional na previsão, $E(Y\mid\widehat Y)$. No domínio inteiro, o Combinado não emitiu previsão de pelo menos 80.
+
+\section{Previsões fora do suporte e sensibilidade ao clipping}
+No Combinado foram observadas 615 previsões negativas, em 317 componentes, com mínimo $-32{,}7066$ e mediana $-1{,}7873$. Nesses casos, a resposta tem média 5,3122 e mediana 3; 133 são zero e apenas um caso tem popularidade pelo menos 40. A extrapolação ocorre principalmente na borda inferior. Não é evidência, por si só, de corrupção de embeddings.
+
+Como sensibilidade separada, calculou-se $\widetilde y=\min(100,\max(0,\widehat y))$, sem substituir as previsões principais. Se $y\in[0,100]$, a projeção não aumenta o erro absoluto ou quadrático ponto a ponto. Por isso, uma melhora após clipping é propriedade da restrição de suporte, não comprovação de nova informação textual.
+
+\input{tables/clipping}
+A ordenação dos modelos permanece a mesma. O MAE do Combinado passa a 8,0970 nessa sensibilidade, redução de 0,01811 ponto. A projeção não modifica nenhuma das 128 previsões da cauda, pois já estavam em [0,100]. Trata-se de análise posterior aos resultados, que não altera o estimador declarado nem a comparação principal.

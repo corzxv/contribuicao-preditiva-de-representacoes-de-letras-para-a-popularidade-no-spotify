@@ -1,0 +1,37 @@
+{
+  "completed": true,
+  "seal": {
+    "version": "observed-results-diagnostics-v1",
+    "inputs": {
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\resumo_modelagem.json": "f5cbfeac97ae7f9a66fd70e229cc827ab8c49c7b5bade92530fd0c374503b02b",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\coorte_modelagem.parquet": "d14c77002f42d0c59ca1af0e734bec5075190e197479f55e6ea3c23f033d4efe",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\folds_5x3.parquet": "4ceff167a8c2a17e315c1c7a3226051bd769e173c0eebc07e27976df69903d5b",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_regression_200k_v1\\integral\\predicoes_externas.parquet": "4e9bc8839ceb76bef0248e328217dc362c5ee894479731e43de401fb0ffaf448",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\base_modelagem_200k_v1\\resumo_base_modelagem.json": "98824bdb94375545640e058ee2d497250b0695926f54f1fd7d4cc3ebdcf0f5b7",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\metricas_externas.csv": "a641bdadf325178f99c79d6315ac1613bc2ab21af1727494d6ca9b8f92632e02",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\incrementos_pareados.csv": "335b0b83a0eb7b823761904309610daf5434d6fe1ebf7894b7d04972bde80599",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\modelagem_200k_v1\\integral\\alphas_selecionados.csv": "f46a56417f327c22c54d55fec56233cf7d38f8fdf77406737a9fa88d12b72366"
+    },
+    "regression_signature": "34e5e6e0b46462ec2bafe4aa9e05769c254c1bf00792debdc07170e3ee3682b9",
+    "code": "0d9802cfa8e69808c2341ea7d5540b6419abc8c1a80b27e3f708011d2e5ade6d",
+    "protocol": "5d0dec30e4e5de818d1bf52a50977bc1f6124ba0ffcf8c0bc25a925c8031effd",
+    "runtime": {
+      "polars": "1.43.2",
+      "numpy": "2.5.2"
+    }
+  },
+  "models_trained": false,
+  "confidence_intervals_computed": false,
+  "predictions_recomputed": false,
+  "cohort_rows": 77535,
+  "models": 6,
+  "verified_parts": 30,
+  "components": 21893,
+  "folds_verified": true,
+  "metrics_reproduced": true,
+  "published_cells": 116,
+  "withheld_cells": 77,
+  "alpha_boundary_selections": 6,
+  "component_losses_sha256": "72515a656ec04b05cc3eb6125586c03f1d166facc2faab60dc35d454c34b6118",
+  "seconds": 0.6076114000170492
+}

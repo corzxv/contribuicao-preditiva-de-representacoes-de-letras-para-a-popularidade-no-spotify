@@ -1,0 +1,22 @@
+{
+  "seal": {
+    "input_sha256": "ca0fc1598271c182495eb681ebdf260435de0590f28df6c10f42b0f59b65f74b",
+    "aggregate_sha256": "c38b59f15ce3e6499bc017a9e92c88ebfb2343a97be52a0229daca660e868adf",
+    "protocol_sha256": "de01bb2599f0776fe9173ac8aac85507d7c32f313ca9e26971cc6702e6ff5881",
+    "code_sha256": "7931b1fbdabb530efd862c3d85d5825718628356dc6f60aeba0b975bb40450e8",
+    "sample_sha256": "cbaf98e2771067ab70538068d85b029ce77fbcdfb86e8b35f34a2a7abf46faff"
+  },
+  "scope": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\resultados_faixas_200k.parquet",
+  "complete_input": true,
+  "conclusion": "incompatível com os critérios observados",
+  "sample_n": 200000,
+  "accepted_n": 77535,
+  "population_N": 1159764,
+  "weighted_acceptance_rate": 0.387435659892917,
+  "primary_comparisons": 104,
+  "non_equivalent_or_inconclusive": 83,
+  "zero_coverage_strata": 102,
+  "few_accepted_strata": 348,
+  "design_checks_passed": true,
+  "ssd_queries": 0
+}

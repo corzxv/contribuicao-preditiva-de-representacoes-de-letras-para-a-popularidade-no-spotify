@@ -1,0 +1,15 @@
+﻿v1_lyrics_status,recovery_initial_diagnostic,n_tracks,sum_weights
+accepted,all_eligible_strict_equivalent,48783,282112.9449364529
+accepted,unique_compatible_plain,28608,166383.32874421243
+ambiguous,different_texts,19475,110363.23830477353
+ambiguous,empty_blocking_text,10,57.51610234696561
+ambiguous,instrumental_text_conflict,248,1418.1014230533597
+ambiguous,metadata_conflict,496,2888.758797305984
+ambiguous,operational_limit,841,4685.912471666439
+ambiguous,version_conflict,4705,27389.35749703196
+instrumental,compatible_source_instrumental_no_text,8748,50750.556271356385
+insufficient_metadata,missing_artist_or_title,2,11.68090161021351
+insufficient_metadata,symbols_erased_by_v1_normalization,25,145.84810398905807
+no_text,compatible_without_plain_synced_not_converted,10,58.11386768099114
+not_found,artist_present_title_not_found_v1,73466,428346.94974863145
+not_found,full_credit_not_found_v1,14583,85151.69282988404

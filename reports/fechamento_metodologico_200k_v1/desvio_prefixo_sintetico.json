@@ -1,0 +1,72 @@
+{
+  "completed": true,
+  "trigger": "extra_whitespace_token_when_prefix_is_encoded_separately",
+  "synthetic_sentences": 4,
+  "forward_calls": 8,
+  "max_tokens_allowed": 64,
+  "model": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "snapshot_hashes_reverified_including_weights": {
+    "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+    "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+    "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+    "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+    "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+    "README.md": "0038de97aee16258cecbad7ffda4b4febd6953e747a00e0ddbc8e6ed241e9c1c"
+  },
+  "synthetic_probe_results": [
+    {
+      "synthetic_text": "A calm morning.",
+      "actual_input_tokens": 10,
+      "canonical_input_tokens": 9,
+      "cosine": 0.9983831726271024,
+      "l2_distance": 0.05686523162591547,
+      "max_abs_coordinate_difference": 0.008747022598981857
+    },
+    {
+      "synthetic_text": "Uma manhã tranquila.",
+      "actual_input_tokens": 10,
+      "canonical_input_tokens": 9,
+      "cosine": 0.9980895206894292,
+      "l2_distance": 0.06181390282412526,
+      "max_abs_coordinate_difference": 0.011073403060436249
+    },
+    {
+      "synthetic_text": "صباح هادئ",
+      "actual_input_tokens": 10,
+      "canonical_input_tokens": 9,
+      "cosine": 0.9966431397332464,
+      "l2_distance": 0.08193729831039986,
+      "max_abs_coordinate_difference": 0.013009965419769287
+    },
+    {
+      "synthetic_text": "宁静的早晨",
+      "actual_input_tokens": 11,
+      "canonical_input_tokens": 10,
+      "cosine": 0.9994338498905558,
+      "l2_distance": 0.03364966924972447,
+      "max_abs_coordinate_difference": 0.006072932854294777
+    }
+  ],
+  "corpus_texts_read": 0,
+  "corpus_embeddings_generated": 0,
+  "vectors_exported": 0,
+  "models_trained": false,
+  "predictive_impact_measured": false,
+  "original_artifact_size_mtime_unchanged": {
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\output\\pdf\\resultados_dominio_observado_200k_v1.pdf": [
+      619442,
+      1793592450108989500
+    ],
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\overleaf_dominio_observado_200k_v1.zip": [
+      444340,
+      1793592449120821100
+    ],
+    "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_embeddings_200k_v1\\state.sqlite": [
+      164671488,
+      1793579409612283000
+    ]
+  },
+  "script_sha256": "72869a73ff22c41720463fadbacb093a915263881b50e039c8c5081686da6d21",
+  "seconds": 20.70207900000969
+}

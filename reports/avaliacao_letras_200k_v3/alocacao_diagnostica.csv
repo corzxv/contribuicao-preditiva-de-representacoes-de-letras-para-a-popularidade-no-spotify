@@ -1,0 +1,12 @@
+﻿diagnostic_group,diagnostic_reason,diagnostic_N,diagnostic_n,diagnostic_probability,len
+ambiguous,invalid_or_extended_synced_format,19,1,0.05263157894736842,1
+ambiguous,empty_synced_text,2,1,0.5,1
+ambiguous,unordered_synced_timestamps,15,1,0.06666666666666667,1
+not_found,all,86610,600,0.006927606511950121,600
+ambiguous,operational_limit:candidate_limit,846,10,0.01182033096926714,10
+ambiguous,instrumental_text_conflict,144,2,0.013888888888888888,2
+ambiguous,substantively_distinct_texts,1081,13,0.012025901942645698,13
+ambiguous,positive_version_conflict,8578,93,0.01084168803916997,93
+ambiguous,plain_synced_conflict,13081,142,0.010855439186606529,142
+ambiguous,metadata_conflict,3319,37,0.011147936125338957,37
+accepted,all,77535,100,0.0012897401173663507,100

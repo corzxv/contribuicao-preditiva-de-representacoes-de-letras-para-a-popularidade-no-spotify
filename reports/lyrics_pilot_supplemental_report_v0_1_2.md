@@ -219,17 +219,3 @@ O smoke original e o teste complementar podem ser somados apenas para descrever 
 - Split original preservado: True.
 
 **Recomendação final: escalar para o restante da coorte de 2.000.** Esta é uma recomendação analítica; nenhuma escala automática foi iniciada.
-
-## Verificação executada
-
-| command | exit_code | result |
-| --- | --- | --- |
-| python -m pytest --basetemp <temp-isolado> -p no:cacheprovider | 0 | 50 passed |
-| python -m pytest tests/test_lyrics_pilot.py tests/test_lyrics_ambiguity_v011.py tests/test_lyrics_pilot_v012.py | 0 | 33 passed |
-| python -m ruff check src tests | 0 | All checks passed |
-| python -m ruff format --check . | 0 | 52 files already formatted |
-| git diff --check | 0 | sem erros |
-| verificação de hashes, split e Git privado | 0 | hashes preservados; split 83817/27941; privado 0 |
-| python -m ruff check . | 1 | único B018 preexistente em exp_base.py:8, não alterado nem adicionado |
-
-Git privado limpo: True. Nenhum commit ou push executado: True.

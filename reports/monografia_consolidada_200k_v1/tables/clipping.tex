@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Projeção de suporte como sensibilidade pós-resultado.}
+\label{tab:clipping}
+\begin{tabular}{lrrrr}
+\toprule
+Configuração & Abaixo de 0 & Acima de 100 & MAE original & MAE projetado \\
+\midrule
+Baseline & 537 & 0 & 8,35248 & 8,33781 \\
+Tradicional & 584 & 1 & 8,29569 & 8,28013 \\
+Profundo & 610 & 0 & 8,12852 & 8,11055 \\
+Combinado & 615 & 0 & 8,11512 & 8,09701 \\
+\bottomrule
+\end{tabular}
+\fonte{Elaboração própria a partir dos agregados auditados do estudo.}
+\nota{Projeção fixa em [0,100], sem substituir as previsões ou métricas principais.}
+\end{table}
