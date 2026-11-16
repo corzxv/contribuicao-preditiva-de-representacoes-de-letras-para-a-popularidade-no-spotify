@@ -1,0 +1,103 @@
+\subsection{Por que dimensionar um sorteio no catálogo}
+O catálogo já fornece as distribuições dos metadados. O sorteio teve outra finalidade prática: limitar o número de consultas para recuperar letras e, ao mesmo tempo, preservar uma seleção de origem conhecida para medir a cobertura. Como gênero explica uma parcela importante da variação de vários atributos, os 82 rótulos foram usados como estratos. Adotou-se alocação aproximadamente proporcional para manter a composição de gênero e evitar concentrar o desenho em apenas uma variável.
+
+Sejam $N=1.159.764$ o tamanho do catálogo, $N_h$ o total do gênero $h$, $W_h=N_h/N$ e $n$ o tamanho a determinar. Para cada candidato a $n$, calculou-se $nW_h$, tomou-se sua parte inteira e distribuíram-se as vagas restantes pelos maiores restos. A busca exigiu ao menos duas observações por estrato. Após fixar a alocação $n_h$, foi realizado um sorteio aleatório simples sem reposição em cada gênero, independentemente dos demais, com semente 20261106. A probabilidade de inclusão é $\pi_i=n_h/N_h$ no estrato $h$ e o peso amostral é $w_i=1/\pi_i$ \cite{cochran1977,lohr2022,statcan2010}.
+
+\subsection{Critérios e cálculo do tamanho}
+Para uma variável $z$, a média ponderada por estrato e sua variância sob o desenho são
+\begin{equation}
+\widehat{\bar z}_{\mathrm{est}}=\sum_{h=1}^{82}W_h\bar z_h,\qquad
+V_d(\widehat{\bar z}_{\mathrm{est}})=
+\sum_{h=1}^{82}W_h^2\left(\frac{1}{n_h}-\frac{1}{N_h}\right)S_h^2,
+\label{eq:desenho}
+\end{equation}
+onde $\bar z_h$ é a média no sorteio e $S_h^2$ é a variância finita do gênero, com divisor $N_h-1$. A expressão incorpora a correção de população finita \cite{cochran1977,lohr2022}. Para um indicador binário com proporção populacional $P_h$ no estrato, $S_h^2=N_h P_h(1-P_h)/(N_h-1)\leq N_h/[4(N_h-1)]$. O limite usa o cenário de maior variância, de aproximadamente metade dos registros em cada categoria do indicador.
+
+Foram adotadas duas metas de planejamento. Uma proporção global, considerada individualmente, deveria ter margem nominal de até 1 ponto percentual a 95\% pela aproximação normal. Para as doze médias, de popularidade, ano e dez atributos de áudio e duração, definiu-se margem de até 0,05 desvio-padrão do respectivo campo, com nível conjunto nominal de 95\%. A escala relativa torna o critério comparável entre variáveis em unidades diferentes. O ajuste de Bonferroni usa a cauda $0,05/(2\cdot12)$ em cada margem. Com $V_{\max}$ calculada pelo limite binário, $S_j$ o desvio-padrão do campo $j$ no catálogo e $V_{d,j}$ sua variância de desenho, selecionou-se o menor tamanho examinado que atendesse simultaneamente a
+\begin{equation}
+z_{0{,}975}\sqrt{V_{\max}}\leq 0{,}01,\qquad
+\max_{1\le j\le 12}\frac{z_{1-0{,}05/(2\cdot12)}\sqrt{V_{d,j}}}{S_j}\leq 0{,}05,
+\end{equation}
+em que $z_q$ é o quantil de ordem $q$ da normal padrão. Os momentos dos campos vieram da descrição do catálogo. A busca sequencial é apropriada porque as alocações inteiras por maiores restos mudam em degraus à medida que $n$ aumenta.
+
+\begin{table}[H]\centering\small
+\caption{Sensibilidade do dimensionamento à meta para uma proporção global.}\label{tab:dimensionamento}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrr@{}}\toprule
+Meta (p.p.) & Tamanho & Limite obtido (p.p.) & Maior margem média (DP) \\\midrule
+2,00 & 3.195 & 1,73148 & 0,04999 \\
+1,50 & 4.254 & 1,49984 & 0,04331 \\
+1,00 & 9.526 & 0,99997 & 0,02887 \\\bottomrule
+\end{tabular}
+\nota{A meta para a família de doze médias é 0,05 DP em todos os cenários.}
+\end{table}
+
+A Tabela~\ref{tab:dimensionamento} mostra que, ao adotar a meta de 1 ponto percentual, o primeiro tamanho que satisfez ambos os critérios foi \textbf{9.526 faixas}. A margem para proporção foi a condição mais restritiva nesse cenário. A alocação final variou de 5 a 179 faixas por gênero. As metas se aplicam à descrição do sorteio antes da vinculação. O desenho não quantifica a precisão por gênero, quantas letras serão encontradas ou o poder para detectar ganhos preditivos.
+
+\subsection{Verificação descritiva do sorteio}
+A média ponderada da popularidade no sorteio foi de 18,40, ante 18,38 no catálogo. A mediana sem ponderação foi de 15 em ambos. Para as doze médias, o maior desvio padronizado da média ponderada em relação ao catálogo foi 0,0190. A Figura~\ref{fig:amostra} mostra a proximidade das médias e a comparação entre as dispersões observadas. Na Figura~\ref{fig:amostraperiodos}, a maior diferença entre proporções por período é de 0,405 ponto percentual. São verificações das marginais observadas, incluindo variáveis que não definiram os estratos.
+
+\figura[.39\textheight]{comparacao_medias_dispersoes}{Médias e dispersões no catálogo e no sorteio inicial.}{fig:amostra}{As diferenças de médias são expressas em desvios-padrão do catálogo.}
+\figura[.22\textheight]{comparacao_periodos}{Composição por período no catálogo e no sorteio inicial.}{fig:amostraperiodos}{Períodos definidos pelo ano informado no catálogo.}
+
+\subsection{Vinculação das faixas ao LRCLIB}
+O cruzamento teve como entrada as faixas Spotify selecionadas e como fonte de candidatos o dump do LRCLIB descrito na Seção~\ref{sec:fontes}. Como os IDs pertencem a sistemas diferentes, a busca usa créditos de artista, título e duração. O índice de metadados facilita a busca sem carregar letras de todos os candidatos. As chaves derivadas uniformizam Unicode, caixa, espaços e sinais tipográficos usuais. Preservaram-se os campos de origem e os qualificadores informativos de versão. A análise de participações explícitas busca evitar que uma diferença de crédito torne invisível um candidato compatível.
+
+O processo verificou título e artista compatíveis e diferença de até dez segundos quando as duas durações eram válidas, após converter milissegundos para segundos. Possíveis homônimos e versões tiveram tratamento específico. Depois da seleção por metadados, letras sincronizadas foram interpretadas nos formatos LRC suportados, retirando os marcadores de tempo sem reordenar ou remover repetições. A aceitação considerou conflitos entre textos simples e sincronizados, bem como conflitos entre candidatos elegíveis. Revisões dirigidas examinaram diferenças de caixa, variantes documentadas de artista e consultas inicialmente interrompidas pelo limite de candidatos. Os vínculos preservam o texto original e sua proveniência por identificador e hash. A verificação de integridade confirma o conteúdo armazenado e utilizado. A correção da correspondência depende das regras de identidade e das evidências disponíveis para cada caso.
+
+\begin{table}[H]\centering\small
+\caption{Desfechos da vinculação no sorteio original de 9.526 faixas.}\label{tab:status_nova}
+\begin{tabular}{@{}P{.22\linewidth}rP{.60\linewidth}@{}}\toprule
+Desfecho & Faixas & Critério operacional \\\midrule
+Letra aceita & 3.869 & Vínculo elegível com texto utilizável, incluindo reutilizações compatíveis. \\
+Ambígua & 1.085 & Evidência insuficiente para resolver candidatos, versões ou textos concorrentes. \\
+Sem candidato & 4.155 & Ausência de candidato pelos métodos e fontes consultados. \\
+Instrumental & 416 & Indicação no registro do LRCLIB, distinta do atributo acústico do Spotify. \\
+Sem texto & 1 & Registro compatível, sem letra utilizável. \\\midrule
+Total & 9.526 & Sorteio original do catálogo. \\\bottomrule
+\end{tabular}
+\end{table}
+
+Houve 3.869 vínculos aceitos, com cobertura de 40,62\% sem pesos e 40,63\% com os pesos do sorteio (Tabela~\ref{tab:status_nova}). A cobertura ponderada é uma estimativa da fração alcançada pelo procedimento de recuperação nas condições observadas. Ela não mede toda letra existente. A Tabela~\ref{tab:cobertura_nova} mostra o comportamento por banda de popularidade. Nos gêneros \textit{sleep} e \textit{detroit-techno}, nenhuma das 147 e 32 faixas sorteadas teve letra aceita, respectivamente. Em \textit{indie-pop}, foram 63 de 82. Essas diferenças explicam por que os vínculos aceitos mudam a composição da amostra. Em particular, a popularidade média passou de 18,38 no catálogo para 24,11 nas 3.869 aceitações e a instrumentalidade média, de 0,252 para 0,107.
+
+\begin{table}[H]\centering\small
+\caption{Cobertura no sorteio original por banda de popularidade.}\label{tab:cobertura_nova}
+\begin{tabular}{lrrr}\toprule
+Escore & Sorteadas & Aceitas & Cobertura (\%) \\\midrule
+0--19 & 5.548 & 1.664 & 29,99 \\
+20--39 & 2.919 & 1.565 & 53,61 \\
+40--59 & 935 & 568 & 60,75 \\
+60--79 & 119 & 71 & 59,66 \\
+80--100 & 5 & 1 & 20,00 \\\midrule
+Total & 9.526 & 3.869 & 40,62 \\\bottomrule
+\end{tabular}
+\nota{Cobertura calculada dentro de cada banda. A última banda tem cinco faixas.}
+\end{table}
+
+Um piloto online em 100 faixas sem candidato retornou zero vínculos textuais provisórios sob os critérios usados. O desfecho caracteriza o rendimento daquele piloto. A recuperação seletiva motivou construir a coorte de modelagem a partir de um quadro mais amplo de vínculos aceitos.
+
+\subsection{Do quadro vinculado às 9.526 faixas classificadas}
+A Tabela~\ref{tab:trajeto} distingue as etapas. O sorteio inicial continua sendo a referência para dimensionamento e cobertura. Para o modelo, reuniu-se um quadro de 80.943 faixas com letra, combinando as aceitações do sorteio atual com registros de uma etapa anterior de recuperação e com revisões dirigidas. A etapa anterior forneceu 77.535 vínculos. Dos 3.869 do sorteio atual, 682 já estavam nesse conjunto. Somaram-se 42 vínculos de revalidações históricas e 179 de uma busca por gêneros deficitários. A procedência anterior importa para explicar a formação do quadro e a exposição de faixas em análises anteriores.
+
+\begin{table}[H]\centering\small
+\caption{Percurso das faixas desde o catálogo até a avaliação dos modelos.}\label{tab:trajeto}
+\begin{tabular}{@{}P{.36\linewidth}rP{.49\linewidth}@{}}\toprule
+Conjunto & Faixas & Papel no estudo \\\midrule
+Catálogo Spotify & 1.159.764 & População finita descrita e origem do sorteio. \\
+Sorteio inicial & 9.526 & Seleção probabilística para consultar letras e medir cobertura. \\
+Vínculos no sorteio inicial & 3.869 & Parcela do sorteio com letra aceita. \\
+Quadro consolidado com letra & 80.943 & Vínculos de recuperação atual, anterior e revisões dirigidas. \\
+Coorte de modelagem & \textbf{9.526} & \textbf{Faixas com letra avaliadas nos quatro modelos.} \\\bottomrule
+\end{tabular}
+\end{table}
+
+No quadro de vínculos, a alocação foi definida nas células de gênero e das cinco bandas da Tabela~\ref{tab:cobertura_nova}. Uma programação inteira manteve os totais das bandas do sorteio original, garantiu ao menos uma faixa em cada célula com capacidade e preservou a cota de gênero até o limite viável. A redistribuição priorizou reduzir os desvios absolutos nas cotas de gênero e, em seguida, nas células. Após fixar as cotas, sorteou-se sem reposição em cada célula, com semente 20261108. Para uma célula $h$ com capacidade $N_h^L$ e alocação $n_h^L$, a probabilidade de inclusão condicional ao quadro é $n_h^L/N_h^L$. Os pesos $w_i^L=N_h^L/n_h^L$ são usados em uma análise de sensibilidade da avaliação.
+
+A coorte tem 9.526 IDs distintos e 82 gêneros. A conferência dos IDs mostrou que 461 faixas da coorte vieram do sorteio inicial e 9.065 vieram de fora dele. A coorte preserva o tamanho e os totais das cinco bandas do sorteio original. Restaram diferenças de gênero, especialmente em \textit{sleep} (23 faixas, ante cota de 147) e \textit{indie-pop} (81, ante 82). O escore médio da coorte é 19,87. Seu valor pode mudar sem alterar os totais por banda, pois há variação dentro das bandas. A instrumentalidade média é 0,135 e a energia média, 0,673, ante 0,252 e 0,640 no catálogo. A Figura~\ref{fig:selecao_final} apresenta os desvios etapa a etapa.
+
+\figura[.37\textheight]{selecao_metadados_final}{Desvios das médias em relação ao catálogo nas três etapas de seleção.}{fig:selecao_final}{Sorteio inicial ponderado e demais etapas com peso igual por faixa. A unidade é o desvio-padrão do catálogo.}
+
+\input{tables/formatos_coorte}
+
+Nos registros associados à coorte, 5.800 das 9.526 faixas têm as duas formas de letra registradas e 3.726 têm somente a forma simples (Tabela~\ref{tab:formatos_coorte}). A tabulação é por faixa Spotify, vinculada ao registro de origem. Não equivale a uma contagem de letras distintas nem a uma estimativa de formatos no dump inteiro. A formação da coorte permite comparar áudio e letras nas mesmas observações. O alcance fica condicionado ao quadro recuperado, porque os pesos do segundo sorteio descrevem probabilidades de inclusão naquele quadro.
+

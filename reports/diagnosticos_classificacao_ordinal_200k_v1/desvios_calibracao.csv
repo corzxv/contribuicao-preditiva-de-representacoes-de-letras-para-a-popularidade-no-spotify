@@ -1,0 +1,16 @@
+model,class_index,n,weighted_absolute_bin_deviation,confidence_interval_computed
+baseline,0,77535,0.03999687042865005,False
+baseline,1,77535,0.03718019837793105,False
+baseline,2,77535,0.02736778520524649,False
+traditional,0,77535,0.03563847796839514,False
+traditional,1,77535,0.03289624630936022,False
+traditional,2,77535,0.025090047145355007,False
+deep,0,77535,0.028858881066139253,False
+deep,1,77535,0.028819917556656305,False
+deep,2,77535,0.02299435912328081,False
+combined,0,77535,0.028744974775558027,False
+combined,1,77535,0.027332242076998706,False
+combined,2,77535,0.02277006438006143,False
+class_prior,0,77535,0.0,False
+class_prior,1,77535,0.0,False
+class_prior,2,77535,0.0,False

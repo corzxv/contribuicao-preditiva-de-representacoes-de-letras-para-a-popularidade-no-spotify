@@ -1,0 +1,9 @@
+scheme,model,reference,weighting,delta_accuracy,delta_balanced_accuracy,delta_macro_f1,conditional_on_existing_predictions
+principal_20_40,combined,baseline,equal_tracks,0.01568323982717479,0.021071931670312294,0.02242743871800723,True
+principal_20_40,combined,baseline,original_weight_sensitivity,0.015399062170107447,0.020821504629483734,0.022047740096356683,True
+principal_20_40,combined,deep,equal_tracks,0.0013542271232346303,0.002409318263453586,0.0026533527382078814,True
+principal_20_40,combined,deep,original_weight_sensitivity,0.0013116584919807828,0.0023902836615022904,0.002622689356448271,True
+sensibilidade_40_60,combined,baseline,equal_tracks,0.00486232024247113,0.014854744436983314,0.015983737546610643,True
+sensibilidade_40_60,combined,baseline,original_weight_sensitivity,0.004827997963444131,0.014844140978799214,0.015858487253653464,True
+sensibilidade_40_60,combined,deep,equal_tracks,0.0011091765009351162,0.0026642932714463496,0.0030350501948674946,True
+sensibilidade_40_60,combined,deep,original_weight_sensitivity,0.0011249294239233931,0.002961863325486258,0.0035166279942882017,True

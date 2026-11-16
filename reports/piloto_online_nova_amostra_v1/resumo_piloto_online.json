@@ -1,0 +1,20 @@
+{
+  "completed": true,
+  "universe_tracks": 4155,
+  "sample_tracks": 100,
+  "sample_queries": 100,
+  "completed_queries": 100,
+  "pending_tracks": 0,
+  "outcomes_by_track": {
+    "sem_resultados": 93,
+    "sem_candidato_compativel": 5,
+    "compatible_source_instrumental_no_text": 1,
+    "limite_da_busca": 1
+  },
+  "provisional_tracks": 0,
+  "new_confirmed_tracks": 0,
+  "pause": null,
+  "manifest_sha256": "e98bb4bd33e3db67e31744708a4217237193acfd341cf105eb2d83f698552b9c",
+  "endpoint": "https://lrclib.net/api/search",
+  "state_sha256": "25f0f484c471aec2bd92a2f7a32dc863f5e21fb92d36875618751147c837d193"
+}

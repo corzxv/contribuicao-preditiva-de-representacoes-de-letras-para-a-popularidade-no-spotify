@@ -1,0 +1,85 @@
+% Estrutura adaptada do template institucional fornecido.
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx,booktabs,array,longtable}
+\usepackage{fancyhdr,titletoc,titlesec,setspace,indentfirst}
+\usepackage{caption,float,placeins}
+\usepackage[colorlinks=true,allcolors=black,bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark}
+\usepackage[alf]{abntex2cite}
+\numberwithin{equation}{section}
+\newcommand{\titulo}{Contribuição preditiva de representações de letras para a popularidade no Spotify}
+\newcommand{\autor}{Felipe Macedo Cordeiro}
+\newcommand{\orientador}{Leandro Tavares Correia}
+\newcommand{\fonte}[1]{\par\vspace{2pt}{\footnotesize Fonte: #1\par}}
+\newcommand{\nota}[1]{\par\vspace{2pt}{\footnotesize #1\par}}
+\newcommand{\notafigura}[1]{\if\relax\detokenize{#1}\relax\else\nota{#1}\fi}
+\newcommand{\figura}[5][.42\textheight]{%
+  \begin{figure}[!htbp]\centering
+  \caption{#3}\label{#4}%
+  \includegraphics[width=\linewidth,height=#1,keepaspectratio]{images/#2.png}%
+  \notafigura{#5}%
+  \end{figure}}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{.87}
+\renewcommand{\bottomfraction}{.74}
+\renewcommand{\textfraction}{.10}
+\renewcommand{\floatpagefraction}{.71}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\pagestyle{fancy}\fancyhf{}
+\setlength{\headheight}{16pt}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[RE,LO]{\nouppercase{\emph{\leftmark}}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\titlecontents{section}[0cm]{}{\bfseries\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+\titlecontents{subsection}[.75cm]{}{\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+\setcounter{secnumdepth}{3}\setcounter{tocdepth}{2}
+\captionsetup{font=small,labelfont=normalfont,justification=centering}
+\setlength{\parindent}{1.5cm}\setlength{\parskip}{0.15cm}
+\setlength{\intextsep}{9pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 3pt minus 3pt}
+\setlength{\floatsep}{9pt plus 2pt minus 2pt}
+\titlespacing*{\section}{0cm}{0cm}{0.5cm}
+\titlespacing*{\subsection}{0cm}{0.43cm}{0.22cm}
+\raggedbottom
+\hypersetup{pdftitle={Contribuição preditiva de representações de letras para a popularidade no Spotify},pdfauthor={Felipe Macedo Cordeiro}}
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{capa}
+\input{rosto}
+\clearpage\pagenumbering{gobble}
+\onehalfspacing
+\input{resumo}
+\clearpage
+\begingroup\small\singlespacing
+\listoftables
+\clearpage
+\listoffigures
+\endgroup
+\clearpage\tableofcontents
+\clearpage\pagenumbering{arabic}\hypersetup{pageanchor=true}
+\section{Introdução}\label{sec:introducao}
+\input{introducao}
+\section{Fontes e análise descritiva}\label{sec:fontes}
+\input{fontes}
+\section{Desenho amostral e vinculação}\label{sec:amostragem}
+\input{amostragem}
+\section{Metodologia de classificação}\label{sec:metodologia}
+\input{metodologia}
+\section{Resultados e discussão}\label{sec:resultados}
+\input{resultados}
+\section{Considerações finais}\label{sec:conclusao}
+\input{conclusao}
+\clearpage\phantomsection\addcontentsline{toc}{section}{Referências}
+\markboth{Referências}{}
+\bibliographystyle{abntex2-alf}
+\begingroup\small\singlespacing\raggedright
+\bibliography{ref}
+\endgroup
+\end{document}
+

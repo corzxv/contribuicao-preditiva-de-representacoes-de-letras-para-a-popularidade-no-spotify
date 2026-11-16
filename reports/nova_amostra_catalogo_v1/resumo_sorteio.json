@@ -1,0 +1,20 @@
+{
+  "concluido": true,
+  "criado_em": "2026-11-06T23:59:55.391513+00:00",
+  "N": 1159764,
+  "n": 9526,
+  "seed": 20261106,
+  "source_sha256": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
+  "plano_sha256": "7673321fafef793f034ad9803ec9c3fa3ff69982f44452fc04185a03ab5c263b",
+  "parquet": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\processed\\nova_amostra_catalogo_v1\\amostra_spotify.parquet",
+  "parquet_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+  "soma_pesos": 1159764.0000000002,
+  "agregados_sha256": {
+    "comparacao_metadados.csv": "0ab71fe5a756ee90d9ecde7f4e628571d13a00862ddc5f4317c19454dd0df4d9",
+    "comparacao_categorias.csv": "4e6a2abbcdece6b5a2210fc1567565b2b68635ce630d973273bb62d921b82487"
+  },
+  "letras_buscadas": false,
+  "modelos_treinados": false,
+  "amostra_200k_alterada": false,
+  "ressorteio_por_desempenho": false
+}

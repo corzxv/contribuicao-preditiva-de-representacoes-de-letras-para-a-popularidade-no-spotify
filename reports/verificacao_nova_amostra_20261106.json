@@ -1,0 +1,51 @@
+{
+  "verificado_em": "2026-11-06T23:46:51.303303+00:00",
+  "decisao": "D-030",
+  "preservacao": {
+    "concluido": true,
+    "n_arquivos": 430,
+    "zip_bytes": 16872772,
+    "zip_sha256": "62844c01cfc7f844f16532c232de01e60bda509195a858955ed94cbe06311d19",
+    "inventario_sha256": "7212b32014bfe36235775ab74ad9f9619110c920f65a8dfd058c26b72db4652c",
+    "crc_e_todos_os_hashes_conferidos": true,
+    "copia_externa": false,
+    "commit_push": false
+  },
+  "testes": {
+    "comando": "python -m pytest tests/test_sample_redesign.py -p no:cacheprovider --basetemp .tmp_nova_amostra_20261106 --tb=short",
+    "aprovados": 4,
+    "segundos": 0.89,
+    "somente_populacoes_sinteticas": true,
+    "n_fixture_integracao": 200
+  },
+  "lint_ruff": "4 arquivos aprovados",
+  "formatacao_ruff": "4 arquivos aprovados",
+  "git_diff_check": "aprovado",
+  "plano_sha256": "7673321fafef793f034ad9803ec9c3fa3ff69982f44452fc04185a03ab5c263b",
+  "n": 9526,
+  "N": 1159764,
+  "n_h_min": 5,
+  "n_h_max": 179,
+  "margem_proporcao_n_9525": 0.010000270950166418,
+  "margem_proporcao_n_9526": 0.009999741551575885,
+  "maior_margem_medias_familia_em_dp": 0.028873725541631277,
+  "soma_pesos_planejada": 1159764.0,
+  "n_efetivo_kish_planejado": 9525.931570576304,
+  "selos_preparacao_anterior_conferidos": 113,
+  "selos_monografia_historica_conferidos": 154,
+  "momento_bpm_zero_reconciliado": true,
+  "sorteio_real_executado": false,
+  "csv_individual_real_lido": false,
+  "recuperacao_letras": false,
+  "treino": false,
+  "pdfs_alterados": false,
+  "commit_push": false,
+  "arquivos_preparados_sha256": {
+    "scripts/40_preparar_nova_amostra.py": "619886fadfbc53c7bb63ad39fb7b404eb667dba2c392f88c316d41d784982143",
+    "src/tcc_music_popularity/sample_redesign.py": "fdd8d83ee51a6ee6c65ee6b6f6a4c9f6bc24c69bb71faacbc90a8bca17dca10d",
+    "tests/test_sample_redesign.py": "960abc12880f37081d8f9366903b019b65a8fd7d71e7c08f3917f440492fdd53",
+    "docs/plano_nova_amostra_catalogo_v1.md": "163dd01ca00101713d19742da3324d99cd7e2b23ed6cf4384f475f487fe9dc79",
+    "docs/execucao_nova_amostra_catalogo_v1.md": "37962a8454d7fe5671a348d439e3d1804d073675c6f6f3bfbd0b671074ceb11f",
+    "scripts/arquivar_resultados_monografia.py": "0b18039fcee7ece339437158940d098a7089d365187cfadf3df8707761542e78"
+  }
+}

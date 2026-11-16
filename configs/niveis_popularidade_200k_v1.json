@@ -1,0 +1,22 @@
+{
+  "version": "niveis-popularidade-v1",
+  "decision_date": "2026-11-04",
+  "schemes": {
+    "principal_20_40": [20, 40],
+    "sensibilidade_40_60": [40, 60]
+  },
+  "primary_scheme": "principal_20_40",
+  "labels": ["baixo", "intermediario", "elevado_operacional"],
+  "extreme_tail_minimum": 80,
+  "expected_tracks": 77535,
+  "expected_components": 21893,
+  "minimum_partition_tracks_per_class": 100,
+  "minimum_partition_components_per_class": 20,
+  "primary_metric_future_classifier": "balanced_accuracy",
+  "training_weight_policy": "equal_tracks",
+  "original_weights": "evaluation_sensitivity_only",
+  "cutpoints_selected_using_classification_metrics": false,
+  "cutpoint_rationale": "Reagrupamento de bandas amostrais existentes, suporte descritivo conhecido e ausência de escolha por desempenho; limites operacionais do estudo, sem definição oficial de hit.",
+  "population": "observed_77535_accepted_tracks",
+  "catalog_inference_claimed": false
+}

@@ -1,0 +1,119 @@
+{
+  "completed": true,
+  "version": "nova-amostra-matching-v2",
+  "sample_rows": 9526,
+  "revision_targets": 3162,
+  "new_queries_this_invocation": 3162,
+  "status_counts": {
+    "accepted": 3647,
+    "ambiguous": 1298,
+    "not_found": 4164,
+    "no_text": 1,
+    "instrumental": 416,
+    "insufficient_metadata": 0,
+    "technical_error": 0,
+    "pending": 0
+  },
+  "accepted_queries": 3647,
+  "previous_status_counts": {
+    "accepted": 1425,
+    "ambiguous": 3574,
+    "not_found": 4164,
+    "no_text": 1,
+    "instrumental": 362,
+    "insufficient_metadata": 0,
+    "technical_error": 0,
+    "pending": 0
+  },
+  "new_accepted_tracks": 2222,
+  "seal": {
+    "version": "nova-amostra-matching-v2",
+    "code_sha256": "e9331e2fe6eea9cb0d7fbba7a272cb8ad9d1df7de5019c10039e4f4df1b9f526",
+    "summary42_sha256": "751668fc2c06fab72dc5d97c977db8fc1776213a7397b11aebc20345253ec7ef",
+    "state42_sha256": "5a31dde17041a73d664b010bde59169288d6722457ab24331f658c30f0b055d7",
+    "sample_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    },
+    "primary": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "086a59969ebb21218205ad0e836d0a52796a12fc5e5f8ee185a76e6fff82b0f2",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "progress": {
+        "last_id": 39053376,
+        "scanned": 33714178,
+        "indexed": 5726985,
+        "complete": true,
+        "updated_at": "2026-11-01T02:49:13.569468+00:00"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+        "bytes": 1254682624,
+        "mtime_ns": 1793501353594451100
+      }
+    },
+    "supplement": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "28bf022e5a88a65adcedd262a7a9166fb691b4f9a36cc3b022057c3948332544",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_nova_amostra_v1\\lookup.sqlite",
+        "bytes": 784396288,
+        "mtime_ns": 1794013397946088400
+      }
+    }
+  },
+  "seconds": 41.79257299999881,
+  "indices_built": 0,
+  "http_requests": 0,
+  "sample_replaced": false,
+  "models_trained": false,
+  "private_sha256": {
+    "resultados_faixas.parquet": "adf21687afcef2ec3a8694c3f347951f232cc5ad58cd8c6572ba9b4d9116e76d",
+    "letras_aceitas.parquet": "c3707e41bafdc30f399fbad90a4eba222098fa1418d30fc5ee68a9fa661cccff",
+    "pendencias_revisao.parquet": "b0b6b21b69077899c8d353ae043d74455982ccbce8cb59169036110fb75f40a6"
+  },
+  "public_sha256": {
+    "status_revisao.csv": "9817affe52dc5bd0e7e61d37d3c0e102856d1ec2ba4b44148e35295cb3a9ca95",
+    "cobertura_revisao.csv": "bb5a48f24be072d64664fda7a514c131629aae8d59334e44d0d75269f22de8b4",
+    "transicoes_status.csv": "17e8d77ca481a328dba5faae7326c4e07b97e7e0b44c5eec0861caae51a07dca"
+  }
+}

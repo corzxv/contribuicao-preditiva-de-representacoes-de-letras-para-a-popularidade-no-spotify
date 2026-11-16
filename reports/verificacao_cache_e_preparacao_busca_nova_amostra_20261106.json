@@ -1,0 +1,113 @@
+{
+  "verified_at": "2026-11-07T00:39:52.247547+00:00",
+  "local_date": "2026-11-06",
+  "decision": "D-032",
+  "stage41_real_complete": true,
+  "sample_rows": 9526,
+  "stage41_query_count": 9526,
+  "status_counts": {
+    "accepted": 682,
+    "instrumental": 87,
+    "pending_search": 8757,
+    "insufficient_metadata": 0,
+    "cache_error": 0
+  },
+  "cache_seconds": 30.324733699999342,
+  "stage41_private_hashes_verified": {
+    "resultados_faixas.parquet": "815b6722a21a011e003faa98e3b0f7ee4c6837042ae1918ada198557b1629453",
+    "pendencias_busca.parquet": "3cfbf37ac8a28b82118f00dd27fc879a05805f02379cb0d52dca87f39a092183",
+    "letras_aceitas.parquet": "d5a3bece516e99b4a4ed2876db330ed8075a6b029954619d8a1222bb580bfad9"
+  },
+  "stage41_public_hashes_verified": {
+    "status_cache.csv": "aa436fa9e55fb53235db19f783bb4a837ee919b2c3960060f6a4a17df7640037",
+    "cobertura_cache.csv": "f498481485176e081b5c1ef1ea347e8d5f1d832bfa3cfea1faefce8e7274dfaf"
+  },
+  "stage41_code_hashes_verified": {
+    "src\\tcc_music_popularity\\sample_cache_reuse.py": "954cce0b11b724c768de47ebb56ec833c6b962086d486a0e5f6bc863cd78ce37",
+    "src\\tcc_music_popularity\\lyrics_recovery.py": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78",
+    "src\\tcc_music_popularity\\sample_lyrics.py": "5cb01afec12530fcb3dab012e068465407ca6737523a5208435b196bbe1b1072",
+    "src\\tcc_music_popularity\\normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+    "src\\tcc_music_popularity\\lyrics_ambiguity_v011.py": "9160a72007d06c721e4e9a9fe7827474ac3bdeb0909f250be237691414f7df73",
+    "src\\tcc_music_popularity\\manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f",
+    "src\\tcc_music_popularity\\lyrics_pilot.py": "7e8e36dbd48dbdcaf9b20d470bfc44d0baaa1961f9bf05b7a20cdb1f60c0ca8a",
+    "src\\tcc_music_popularity\\lyrics_pilot_v012.py": "0bb1319fe837e9699f5bf6ccd1241b3d744ff8bc007744ff7ad900de93a7b5de"
+  },
+  "stage41_summary_sha256": "e430fb2886cf25a5903518c2cc0af28a47729384be9cf35f82cc7e123b9dbcca",
+  "primary_index_metadata": {
+    "seal": {
+      "dump": {
+        "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+        "size": 261755867136,
+        "mtime_ns": 1793112801795482900,
+        "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+        "source": {
+          "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+          "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+          "compressed_bytes": 47837763733,
+          "database_bytes": 261755867136,
+          "etag": "9595e9d143bf175845a9e41acd298884-2852"
+        }
+      },
+      "artists": "086a59969ebb21218205ad0e836d0a52796a12fc5e5f8ee185a76e6fff82b0f2",
+      "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+    },
+    "progress": {
+      "last_id": 39053376,
+      "scanned": 33714178,
+      "indexed": 5726985,
+      "complete": true,
+      "updated_at": "2026-11-01T02:49:13.569468+00:00"
+    },
+    "stamp": {
+      "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+      "bytes": 1254682624,
+      "mtime_ns": 1793501353594451100
+    }
+  },
+  "primary_artists_count": 24330,
+  "dump_identity": {
+    "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+    "size": 261755867136,
+    "mtime_ns": 1793112801795482900,
+    "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+    "source": {
+      "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+      "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+      "compressed_bytes": 47837763733,
+      "database_bytes": 261755867136,
+      "etag": "9595e9d143bf175845a9e41acd298884-2852"
+    }
+  },
+  "primary_metadata_checked_with_new_helper": true,
+  "real_track_queries_by_agent": 0,
+  "real_lyrics_read_by_agent": 0,
+  "dump_rehashed": false,
+  "index_rehashed": false,
+  "full_real_metadata_scan_by_agent": false,
+  "stage42_prepared": true,
+  "stage42_real_executed": false,
+  "supplement_real_built_by_agent": false,
+  "supplement_directory_preexisting": false,
+  "tests": {
+    "command": "python -m pytest tests/test_new_sample_local.py -p no:cacheprovider --basetemp .tmp_nova_busca_local_20261106_final --tb=short",
+    "passed": 4,
+    "seconds": 2.63,
+    "synthetic_dump_records": 9,
+    "network_forbidden": true
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "git_diff_check": "passed",
+  "previous_artifacts_preserved_checked": 113,
+  "prepared_sha256": {
+    "src/tcc_music_popularity/new_sample_local.py": "d8548448d0721c0bfa74e7f571b6055a6dca2f04875019615f1affaae157e19e",
+    "scripts/42_buscar_letras_nova_amostra.py": "da0038dcd0487ec36d529dbd56d72f0f8095b631eb40a3edf589c18bd3e14ee1",
+    "tests/test_new_sample_local.py": "a964f94287f829fefd83cbf0e53eea0d6b3528b25d29cf10008f90068cb45ba6",
+    "docs/execucao_busca_nova_amostra_v1.md": "4adf16fa580ff39d79b30aebec8a668c6fc72563457daa37e6b69085db2bf476",
+    "reports/interpretacao_reaproveitamento_nova_amostra_v1.md": "c046c8f3aa80735ccef8cb023b870a5881ec9cafeb7ce3676144f28896666088"
+  },
+  "new_embeddings": false,
+  "models_trained": false,
+  "new_pdf": false,
+  "commit_push": false
+}

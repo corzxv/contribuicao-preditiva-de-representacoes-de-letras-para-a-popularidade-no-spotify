@@ -1,0 +1,90 @@
+{
+  "completed": true,
+  "sample_rows": 9526,
+  "counts": {
+    "accepted": 3869,
+    "ambiguous": 1085,
+    "instrumental": 416,
+    "no_text": 1,
+    "not_found": 4155
+  },
+  "coverage_pct": 40.615158513541886,
+  "weighted_coverage_pct": 40.63045123563811,
+  "genres_without_accepted": 2,
+  "popularity_coverage": [
+    {
+      "limites": [
+        0,
+        19
+      ],
+      "n": 5548,
+      "aceitas": 1664,
+      "cobertura_percentual": 29.992790194664742
+    },
+    {
+      "limites": [
+        20,
+        39
+      ],
+      "n": 2919,
+      "aceitas": 1565,
+      "cobertura_percentual": 53.61425145597808
+    },
+    {
+      "limites": [
+        40,
+        59
+      ],
+      "n": 935,
+      "aceitas": 568,
+      "cobertura_percentual": 60.74866310160428
+    },
+    {
+      "limites": [
+        60,
+        79
+      ],
+      "n": 119,
+      "aceitas": 71,
+      "cobertura_percentual": 59.66386554621849
+    },
+    {
+      "limites": [
+        80,
+        100
+      ],
+      "n": 5,
+      "aceitas": 1,
+      "cobertura_percentual": 20.0
+    }
+  ],
+  "accepted_by_source_stage": {
+    "43": 3647,
+    "46": 130,
+    "47": 58,
+    "48": 9,
+    "50": 25
+  },
+  "stage50_outcomes": {
+    "accepted_after_metadata_filter": 25,
+    "different_after_case_normalization": 8,
+    "sem_candidato_compativel": 1,
+    "limite_de_candidatos_compativeis": 3,
+    "plain_synced_conflict": 1,
+    "compatible_source_instrumental_no_text": 2
+  },
+  "stage_summaries_sha256": {
+    "43": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+    "46": "c978dfe10641bdfdc8d739c3a456e2a226a9651f0e0b17313ff03ded59f12bf2",
+    "47": "ca247666069ddfb725f3f6c02c983fe71c8f31c014849857014a1a128251bec3",
+    "48": "9307f9a83fdfe8a08a01ec734a89e1efaf3faccc6e64ece88262f4e710373eb2",
+    "50": "1005e5850f5b757fcbc61fb667c17d0206182036c9c3af1f1ea0d8e2c5b1e1fd"
+  },
+  "code_sha256": "bc8a700ad05be6dfce1ee3ba2f63f4a7845c4f10dea763a780de7fac62c74134",
+  "weighted_coverage_interpretation": "Peso do sorteio; não ajusta a seleção de letras.",
+  "private_manifest_sha256": "6e5b544de3a325b9918938d9839dde2689006d19d35e3ae2aab3251efcfb32f2",
+  "public_sha256": {
+    "comparacao_metadados.csv": "f3ddb19375ed5174ff309f1b07b24a7fa5442eda568a2be10257a71136511f31",
+    "cobertura_generos.csv": "e8b960b1c5874fd54b682086b0db3b08cd0bc1e7f7f6bee20b68c008cbda45a0"
+  }
+}

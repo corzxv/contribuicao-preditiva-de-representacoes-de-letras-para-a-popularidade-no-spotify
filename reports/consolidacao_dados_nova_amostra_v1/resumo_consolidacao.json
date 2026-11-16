@@ -1,0 +1,35 @@
+{
+  "completed": true,
+  "sample_rows": 9526,
+  "accepted_rows": 3647,
+  "numeric_variables": 12,
+  "genres": 82,
+  "largest_mean_shift": {
+    "variavel": "instrumentalness",
+    "desvio_aceitas_em_dp_catalogo": -0.3960285261040921
+  },
+  "artist_variant_queries_for_review": 13,
+  "artist_variant_candidate_pairs": 16,
+  "new_accepted": 0,
+  "source_statuses_changed": false,
+  "lyrics_read": false,
+  "source_metadata_bytes": 1556212,
+  "individual_metadata_rows_read": 9526,
+  "catalogue_rows_reprocessed": 0,
+  "dump_accessed": false,
+  "models_trained": false,
+  "source43_summary_sha256": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+  "source44_summary_sha256": "34ff7b291fa00fa3ba9b3c348e5e324058971aceb52ae85187bf617c52cbe5e4",
+  "source_metadata_sha256": "adf21687afcef2ec3a8694c3f347951f232cc5ad58cd8c6572ba9b4d9116e76d",
+  "code_sha256": "f8b674d9389c2830dff85410e5b3548239ec7b2b434b60db4173c506dcc53be7",
+  "private_pairs_sha256": "7c5e8bb0579862f6ddf8f8c8e369a4b7b552b21239f44ce2f92dae8729441501",
+  "public_sha256": {
+    "comparacao_metadados.csv": "3c6c429ea956bb80f17f07200f87ec010d18f153630e6e3a6faa5b75eaa1c188",
+    "cobertura_generos.csv": "e4a5cc149d1a59800fd369b02685a49914f39ad253e91f28e81e0b8060d09651",
+    "cobertura_status.csv": "7580a04ee40d5d25d46339f734e6baa5579915e7a66951ef191ff10d8571e3fd",
+    "selecao_metadados.png": "63173b2081f54ad71a43cd65e432c791ca8b63b28772064c4432a478f23622b0",
+    "selecao_metadados.svg": "3d2dcd8b4d4f6c566b43f34523496857d69b772dd244db0d3ef0d1d695f9abbb"
+  },
+  "weight_interpretation": "Médias ponderadas das aceitas são condicionais ao domínio observado; não corrigem disponibilidade de letras.",
+  "seconds": 0.5766450000010082
+}

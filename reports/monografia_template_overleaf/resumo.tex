@@ -1,0 +1,13 @@
+\thispagestyle{empty}
+\vspace*{2.5cm}
+\begin{center}
+{\Huge\bfseries Resumo}
+\end{center}
+\vspace{1.5cm}
+\begin{spacing}{1.35}
+Este trabalho avalia quanto as letras acrescentam à classificação da popularidade musical quando já se conhecem atributos acústicos e metadados. A partir de um catálogo de 1.159.764 faixas do Spotify, dimensionou-se um sorteio estratificado de 9.526 faixas. A consulta ao LRCLIB recuperou letras para 3.869 das faixas sorteadas. Em um quadro consolidado de 80.943 vínculos aceitos, selecionou-se uma coorte de modelagem com 9.526 faixas, todas com letra. Os escores observados foram agrupados em três níveis, baixo (0--19), médio (20--39) e alto (40--100). Compararam-se quatro regressões logísticas ordinais penalizadas em validação cruzada aninhada por grupos. As acurácias balanceadas foram 56,14\% com áudio e metadados, 56,24\% com a adição de descritores lexicais, 55,91\% com a adição de embeddings e 55,96\% com a inclusão de ambas as representações. Com embeddings, a sensibilidade da classe alta subiu de 26,25\% para 31,07\% no modelo Profundo, acompanhada de menor precisão nessa classe. O bootstrap condicionado às previsões incluiu zero nos contrastes de acurácia balanceada. Os resultados indicam ganho global limitado e redistribuição de erros nas faixas com letra analisadas.
+\end{spacing}
+
+\vspace{1.5cm}
+\noindent Palavras-chave: popularidade musical, letras de músicas, amostragem estratificada, regressão ordinal, representações textuais.
+

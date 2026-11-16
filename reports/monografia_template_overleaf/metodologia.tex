@@ -1,0 +1,106 @@
+\subsection{Resposta ordinal e comparações de interesse}
+A resposta original, $s$, é o escore inteiro de popularidade. A pergunta preditiva é qual de três níveis a faixa ocupa. Agrupar o escore permite distinguir uma troca entre classes vizinhas de um erro entre os extremos. Também admite que escores diferentes, dentro do mesmo intervalo, correspondam à mesma decisão. A regra de classificação foi fixada no protocolo antes da avaliação das 9.526 faixas
+\begin{equation}
+Y(s)=
+\begin{cases}
+0, & 0\leq s<20 \quad \text{(baixa)},\\
+1, & 20\leq s<40 \quad \text{(média)},\\
+2, & 40\leq s\leq 100 \quad \text{(alta)}.
+\end{cases}
+\end{equation}
+Os cortes reagrupam as cinco bandas do planejamento. Manter o limite inferior da classe alta em 40 dá suporte à avaliação dessa categoria em uma distribuição concentrada nos escores baixos. O estrato de 80--100, por exemplo, tem apenas cinco faixas na coorte. Os limites são uma definição operacional, sem interpretação oficial de sucesso musical. A Figura~\ref{fig:niveis} apresenta o escore inteiro e os cortes em cada conjunto. A composição da classe alta pode variar dentro de 40--100, mesmo quando o total permanece fixo.
+
+\figura[.34\textheight]{popularidade_sorteio_coorte}{Distribuição do escore nas duas seleções de 9.526 faixas e cortes da classificação.}{fig:niveis}{Barras em porcentagem de cada conjunto, com peso igual por faixa.}
+
+\begin{table}[H]\centering\small
+\caption{Classes observadas nas 9.526 faixas da avaliação.}\label{tab:niveis}
+\begin{tabular}{llrr}\toprule
+Nível & Escore & Faixas & Percentual (\%) \\\midrule
+Baixa & 0--19 & 5.548 & 58,24 \\
+Média & 20--39 & 2.919 & 30,64 \\
+Alta & 40--100 & 1.059 & 11,12 \\\midrule
+Total &  & 9.526 & 100,00 \\\bottomrule
+\end{tabular}
+\end{table}
+
+O Baseline tem 15 atributos de áudio, música e metadados. São 11 numéricos, ano, dançabilidade, energia, intensidade sonora, presença de fala, caráter acústico, instrumentalidade, indício de execução ao vivo, valência, andamento e duração. Os quatro categóricos são gênero, tonalidade, modo e assinatura de tempo. São as variáveis definidas e descritas na Seção~\ref{sec:fontes}. Títulos, créditos e IDs servem para integração e agrupamento. Idioma, peso amostral e informações de vinculação ficam fora do vetor de preditores.
+
+\begin{table}[H]\centering\small
+\caption{Quatro configurações e informação textual acrescentada ao Baseline.}\label{tab:blocos}
+\begin{tabular}{@{}lP{.61\linewidth}r@{}}\toprule
+Modelo & Atributos & Campos iniciais \\\midrule
+Baseline & Áudio, música e metadados & 15 \\
+Tradicional & Baseline e 21 descritores lexicais e estruturais & 36 \\
+Profundo & Baseline e 384 coordenadas de embeddings & 399 \\
+Combinado & Baseline, 21 descritores e 384 coordenadas & 420 \\\bottomrule
+\end{tabular}\nota{Contagens antes da expansão das variáveis categóricas.}
+\end{table}
+
+As quatro configurações correspondem a perguntas de desempenho sobre os mesmos exemplos. O Baseline informa o que áudio e metadados já permitem classificar. Tradicional versus Baseline mede o incremento dos descritores. Profundo versus Baseline mede o incremento dos embeddings. Combinado versus Baseline mede o ganho das duas representações juntas, e Combinado versus Profundo examina se os descritores acrescentam informação aos embeddings. Para cada par, a expectativa de melhoria corresponde a uma diferença positiva na acurácia balanceada. Os contrastes são avaliados de forma pareada e interpretados com as outras métricas, sem exigir uma ordenação prévia dos resultados.
+
+\subsection{Normalização e descritores lexicais e estruturais}
+A letra elegível é convertida ao mesmo formato textual para os dois blocos. Aplicam-se normalização Unicode NFC, padronização das quebras de linha, remoção de espaços finais e remoção de linhas vazias externas. Palavras, diacríticos, sinais internos, ordem de linhas e repetições são preservados. A versão normalizada serve para produzir atributos, enquanto texto e metadados de origem permanecem documentados. A segmentação não depende de um dicionário de um idioma específico.
+
+A motivação dos descritores é comparar propriedades mensuráveis de extensão, diversidade lexical, repetição e composição gráfica. Uma letra longa pode repetir muitas vezes o mesmo refrão. Por isso, são consideradas tanto contagens de tamanho quanto medidas relativas de diversidade e repetição. A Tabela~\ref{tab:descritores} explicita como cada variável foi obtida.
+
+\input{tables/descritores}
+
+\subsection{Embeddings multilíngues}
+O \textit{multilingual-e5-small} é um encoder treinado por aprendizagem contrastiva em múltiplos idiomas. Ele fornece um vetor denso de 384 coordenadas a partir do texto \cite{wang2024,e5card}. A escolha permite representar informação contextual além de contagens lexicais e usar a mesma transformação para os idiomas presentes. O encoder é congelado na revisão \texttt{614241f6}. O modelo de popularidade ajusta coeficientes sobre os vetores, sem atualizar os parâmetros da rede.
+
+O texto completo é tokenizado e repartido em janelas de até 512 posições, incluindo tokens especiais e o prefixo \texttt{query: }. Janelas consecutivas usam sobreposição de 32 tokens de conteúdo. Esse procedimento incorpora trechos além da primeira janela, enquanto mantém algum contexto na transição. Para a janela $j$, denote-se por $\bm h_{jt}$ o estado do token $t$, por $a_{jt}$ sua máscara de atenção e por $c_j$ a quantidade de tokens de conteúdo novos. Calculam-se a média mascarada, a normalização da janela e a normalização da soma ponderada
+\begin{equation}
+\bm v_j=\frac{\sum_t a_{jt}\bm h_{jt}}{\sum_t a_{jt}},\qquad
+\bm u_j=\frac{\bm v_j}{\|\bm v_j\|_2},\qquad
+\bm z=\frac{\sum_j c_j\bm u_j}{\left\|\sum_j c_j\bm u_j\right\|_2}.
+\end{equation}
+A máscara exclui o preenchimento. Os pesos reduzem a influência de contar novamente posições de sobreposição, embora a rede possa usar esse contexto em mais de uma janela. A média mascarada e a normalização seguem a documentação do encoder. A agregação por janelas é uma adaptação do estudo.
+
+A tokenização separada de prefixo e conteúdo introduz um token de espaço adicional em comparação com a concatenação textual do exemplo oficial. Essa diferença foi identificada na auditoria da implementação. O experimento avalia a variante efetivamente executada, com a mesma configuração para toda a coorte. Houve 9.500 entradas textuais distintas para o encoder. Foram reutilizados 9.018 vetores cuja entrada e configuração coincidiam com o registro anterior, e 482 foram calculados para completar a avaliação.
+
+\subsection{Regressão logística ordinal regularizada}
+A resposta tem ordem e duas fronteiras. O modelo de chances proporcionais representa a ordenação por dois limiares, usando o mesmo vetor de coeficientes para ambas as fronteiras \cite{mccullagh1980,agresti2010}. A restrição é parcimoniosa diante de um bloco de 384 coordenadas e de atributos correlacionados. A penalização quadrática ajuda a estabilizar o ajuste nessa dimensão \cite{hoerl1970,hastie2009}.
+
+Para o vetor de preditores $x_i$, define-se
+\begin{equation}
+F_k(x_i)=\Pr(Y_i\leq k\mid x_i)
+=\frac{1}{1+\exp[-(\theta_k-x_i^\top\beta)]},\qquad
+k=0,1,\quad \theta_0<\theta_1.
+\label{eq:logit}
+\end{equation}
+Então $p_{i0}=F_0(x_i)$, $p_{i1}=F_1(x_i)-F_0(x_i)$ e $p_{i2}=1-F_1(x_i)$. A Equação~\ref{eq:logit} supõe que uma mudança em $x_i^\top\beta$ desloca as duas chances acumuladas da mesma maneira na escala logit. Para um conjunto de treinamento $\mathcal T$ com $n_t$ faixas, minimiza-se
+\begin{equation}
+-\frac{1}{n_t}\sum_{i\in\mathcal T}\log p_{i,y_i}
++\frac{\alpha}{2}\sum_j \beta_j^2.
+\end{equation}
+Os limiares não são penalizados. Os coeficientes recebem a penalização L2 com intensidade $\alpha$. As faixas recebem pesos iguais no ajuste. Os limiares são parametrizados com distância positiva, e a otimização usa L-BFGS-B com gradiente analítico.
+
+\subsection{Validação agrupada e seleção do hiperparâmetro}
+Faixas de um mesmo artista, participações explícitas, composições relacionadas pela chave operacional e letras iguais ligam observações entre si. Construiu-se um grafo com essas ligações. Cada componente conexo permanece na mesma parte para impedir que relações reconhecidas atravessem a separação entre treino e teste. Foram obtidos 6.271 componentes. O agrupamento usa metadados e identidade textual, sem usar o escore para distribuir partes. O algoritmo procurou equilibrar o número de faixas, e as três classes tiveram suporte nas partes de treino e avaliação.
+
+A validação cruzada tem cinco partes externas e três internas. Em cada iteração externa, uma parte é reservada para avaliação. Dentro das outras quatro partes, as três divisões internas comparam $\alpha\in\{0{,}001,0{,}01,0{,}1,1\}$ pela acurácia balanceada reunida das previsões internas. Empates favorecem a penalização maior. Imputação pela mediana, padronização e níveis da codificação indicadora são ajustados no respectivo treino, com tratamento de categorias inéditas. A combinação selecionada é ajustada novamente ao treino externo inteiro e avaliada na parte reservada \cite{cawley2010}. Cada faixa tem uma única previsão externa por modelo. Foram usados 240 ajustes internos e 20 avaliações externas para os quatro blocos.
+
+A classe prevista é a de maior probabilidade, com empate resolvido pela classe de menor índice. Uma referência adicional atribui as frequências das classes no treino externo como probabilidades e usa a mesma regra de decisão. Isso dá uma medida de quanto se pode acertar com a prevalência das classes sozinha.
+
+\subsection{Métricas e estabilidade dos contrastes}
+Para $C_{kj}$ igual ao número de faixas de classe observada $k$ e prevista $j$, a sensibilidade é $r_k=C_{kk}/\sum_j C_{kj}$ e a precisão é $q_k=C_{kk}/\sum_j C_{jk}$, quando o respectivo denominador é positivo. A sensibilidade mede a fração de uma classe observada que foi recuperada. A precisão indica a fração correta entre as previsões daquela classe. Reunindo as previsões externas por faixa, calculam-se
+\begin{equation}
+\mathrm{AB}=\tfrac13\sum_{k=0}^{2}r_k,\qquad
+\mathrm{Ac}=\tfrac1n\sum_{k=0}^2 C_{kk},\qquad
+\mathrm{F1}_{\mathrm{macro}}=\tfrac13\sum_{k=0}^2\frac{2C_{kk}}{\sum_j C_{kj}+\sum_j C_{jk}}.
+\end{equation}
+A acurácia balanceada (AB) é a métrica principal porque atribui a mesma importância à recuperação de cada classe, mesmo quando seus tamanhos são diferentes \cite{brodersen2010}. A acurácia comum representa a fração de acertos e reflete as prevalências. O macro-F1 incorpora precisão e sensibilidade. A taxa de trocas entre os níveis baixo e alto é $(C_{02}+C_{20})/n$. Para as probabilidades externas $\widehat p_{ik}$, as medidas são \cite{gneiting2007}
+\begin{equation}
+\operatorname{LogLoss}=-\tfrac1n\sum_i\log\widehat p_{i,y_i},
+\qquad
+\operatorname{Brier}=\tfrac1n\sum_i\sum_{k=0}^2(\widehat p_{ik}-\mathbf{1}\{y_i=k\})^2.
+\end{equation}
+Valores menores indicam probabilidades mais adequadas segundo cada critério. A calibração descritiva compara a média prevista e a frequência observada em dez intervalos de largura 0,1 por classe. Na avaliação ponderada, os pesos $w_i^L$ são aplicados aos mesmos acertos e erros. A comparação principal conserva pesos iguais por faixa.
+
+A estabilidade de $\Delta\mathrm{AB}$ e da diferença de sensibilidade da classe alta foi examinada com bootstrap pareado por componentes nas previsões externas congeladas \cite{field2007}. Em cada uma de 8.000 réplicas (semente 42), sorteiam-se 6.271 componentes com reposição. Um componente sorteado leva todas as suas faixas e as previsões dos quatro modelos. Para multiplicidades $b_g$, o contraste de $A$ versus $B$ é
+\begin{equation}
+\Delta\mathrm{AB}^{*}=\frac13\sum_{k=0}^2
+\frac{\sum_g b_g (D^A_{gk}-D^B_{gk})}{\sum_g b_g N_{gk}},
+\end{equation}
+em que $D^A_{gk}$ conta os acertos de $A$ e $N_{gk}$ as faixas da classe $k$ no componente $g$. Para a sensibilidade alta, retém-se apenas o termo $k=2$ sem o fator $1/3$. Usam-se os percentis 2,5 e 97,5, separadamente para cada contraste. Essa análise quantifica a variação ao mudar a composição dos componentes avaliados, com previsões fixas. A variabilidade integral incluiria a seleção da coorte, as divisões, a escolha do hiperparâmetro e novos ajustes. As cinco avaliações externas compartilham observações de treino e, portanto, são dependentes \cite{bengio2004,bates2024}.
+

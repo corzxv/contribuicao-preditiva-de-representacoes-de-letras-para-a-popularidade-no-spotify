@@ -48,10 +48,28 @@ def test_segredo_e_detectado_sem_expor_valor():
     assert result == ["token_github"] and fake not in repr(result)
 
 
-def test_zip_nao_contorna_restricao_de_dados():
+@pytest.mark.parametrize(
+    "pacote",
+    [
+        "reports/monografia_template_200k_v2.zip",
+        "reports/monografia_template_overleaf.zip",
+    ],
+)
+def test_zip_nao_contorna_restricao_de_dados(pacote):
     stream = io.BytesIO()
     with zipfile.ZipFile(stream, "w") as archive:
         archive.writestr("dados.csv", "track_id,popularity\nsynthetic,0\n")
-    assert "tabela_individual_ou_letra" in inspect_bytes(
-        "reports/monografia_template_200k_v2.zip", stream.getvalue()
-    )
+    assert "tabela_individual_ou_letra" in inspect_bytes(pacote, stream.getvalue())
+
+
+def test_zip_atual_aceita_instrucoes_e_rejeita_caminho_ascendente():
+    pacote = "reports/monografia_template_overleaf.zip"
+    stream = io.BytesIO()
+    with zipfile.ZipFile(stream, "w") as archive:
+        archive.writestr("LEIA_PRIMEIRO.txt", "Abrir main.tex no Overleaf.")
+    assert inspect_bytes(pacote, stream.getvalue()) == []
+
+    stream = io.BytesIO()
+    with zipfile.ZipFile(stream, "w") as archive:
+        archive.writestr("../fora.csv", "categoria,n\nA,1\n")
+    assert inspect_bytes(pacote, stream.getvalue()) == ["caminho_fora_da_publicacao"]

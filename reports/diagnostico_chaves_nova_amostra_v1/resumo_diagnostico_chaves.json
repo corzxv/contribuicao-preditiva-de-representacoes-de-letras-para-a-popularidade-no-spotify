@@ -1,0 +1,49 @@
+{
+  "completed": true,
+  "version": "native-lookup-audit-v1",
+  "targets": 4164,
+  "diagnosed": 4164,
+  "diagnostic_counts": {
+    "same_artist_other_title": 2059,
+    "no_candidates_under_these_methods": 1676,
+    "artist_key_variant": 13,
+    "same_title_other_artist": 410,
+    "other_metadata_candidates": 6
+  },
+  "incomplete_methods": 332,
+  "prior_accepted": 3647,
+  "new_accepted": 0,
+  "source_statuses_changed": false,
+  "lyrics_read": false,
+  "indices_created": false,
+  "seal": {
+    "version": "native-lookup-audit-v1",
+    "source_summary_sha256": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+    "state43_sha256": "4310d8687ae35dd4ed0bc8514b7fc714878c523a9cca64bcdad4282026929cb4",
+    "code_sha256": "88a53bb908ce137567c799c46b963e534eb0456a46b99904f755f55e628d43c4",
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    }
+  },
+  "access_plans": {
+    "exact_title": "(5, 0, 58, 'SEARCH tracks USING INDEX idx_tracks_name_lower (name_lower=?)')",
+    "exact_artist": "(5, 0, 70, 'SEARCH tracks USING INDEX idx_tracks_artist_name_lower (artist_name_lower=?)')",
+    "fts": "(5, 0, 132, 'SCAN tracks_fts VIRTUAL TABLE INDEX 64:M3') (10, 0, 48, 'SEARCH t USING INTEGER PRIMARY KEY (rowid=?)')"
+  },
+  "seconds": 137.64432189999934,
+  "candidates_are_review_suggestions": true,
+  "scope": "Candidatos de metadados por métodos limitados; não letras aceitas, ausência comprovada ou aliases validados.",
+  "public_sha256": {
+    "categorias_diagnostico.csv": "8e446103b6823da7edd868822a17f7c5b9eaefc246aaff45ebd1d2d437cedfe1"
+  }
+}

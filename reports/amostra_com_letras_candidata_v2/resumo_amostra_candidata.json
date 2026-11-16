@@ -1,0 +1,53 @@
+{
+  "status": "candidata_a_validacao_metodologica",
+  "seed": 20261108,
+  "frame_tracks": 80943,
+  "sample_tracks": 9526,
+  "verified_text_links": 9526,
+  "sample_genres": 82,
+  "original_popularity_band_totals": true,
+  "selected_by_source_stage": {
+    "14": 9033,
+    "43": 343,
+    "46": 17,
+    "47": 1,
+    "50": 1,
+    "53": 36,
+    "55": 95
+  },
+  "genre_shortfalls": [
+    {
+      "genre": "indie-pop",
+      "target": 82,
+      "capacity": 1164,
+      "selected": 81
+    },
+    {
+      "genre": "sleep",
+      "target": 147,
+      "capacity": 23,
+      "selected": 23
+    }
+  ],
+  "sum_design_weights": 80942.99999999999,
+  "private_sample_sha256": "5bc1da66383c7ad4b03e44203c189d1faee0a13826da182412bbcfa096aff06e",
+  "source_reports_sha256": {
+    "53": "951891f46edfbebbbe8d3dd8c65b112b0a616a29d1ab85fef81b1230127a87c0",
+    "55": "0aefd93dc4060b9e6b7a8a8f865aa5878d09bb09292efe2d7a250f540b1d8f2a"
+  },
+  "text_sources_sha256": {
+    "data/derived/private_sample_lyrics_200k_v2/letras_aceitas_200k.parquet": "dcd589bd75dceb6ac7f2917c3a08fccebded832e299bc0d27c04ebe834f4437a",
+    "data/derived/private_revalidacao_cache_historico_v1/letras_revalidadas.parquet": "ca922ea8e19ed73295d822e95eb4104c428dabe3ab69b5768050b75820bb0008",
+    "data/derived/private_recuperacao_generos_deficitarios_v1/letras_aceitas.parquet": "60ec854f544a2a9784b886e7b60f5589ee234af82f3a0ec08364e4054b63d3c4",
+    "data/derived/private_nova_amostra_matching_v2/letras_aceitas.parquet": "c3707e41bafdc30f399fbad90a4eba222098fa1418d30fc5ee68a9fa661cccff",
+    "data/derived/private_revisao_caixa_nova_amostra_v1/novas_letras_aceitas.parquet": "25ea157abfbb266939034856a85e77c6c6a6501515aeaf290eb07fe88be4fc19",
+    "data/derived/private_revisao_caixa_plain_lrc_nova_amostra_v1/novas_letras_aceitas.parquet": "e13f16fb704a77ce89dadf0df574857ba70473316dc370f05dbc9e7f63bda1b6",
+    "data/derived/private_revisao_limites_nova_amostra_v1/novas_letras_aceitas.parquet": "31f4e344413e7d51be9553acae4d0ff662eb75ddf1d94fff8524322d6b2e1ef0"
+  },
+  "code_sha256": "0343af2849bf87264555a5fdcdac86311340fa111f47e0368784a3755205c6b1",
+  "public_sha256": {
+    "alocacao_candidata.csv": "8788109d45f14bcdc94b3eb3eeaacdb300f43584b47dc801414e855274002798",
+    "cotas_genero.csv": "6c636b36e5b7c0ee60d99e9a13e3233b5aa8841d22b306ffcd8fa29b0174a2b0",
+    "comparacao_metadados.csv": "d870a06e61f3930eb4edece2e066d5d7efed4533b9fd2744bbf18455f2adb70c"
+  }
+}

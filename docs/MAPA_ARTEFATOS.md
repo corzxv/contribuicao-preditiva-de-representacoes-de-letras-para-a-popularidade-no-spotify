@@ -13,6 +13,255 @@ nomes/tamanhos/categorias provisórias, sem ler corpos de bases/modelos, sem SSD
 com profundidade limitada nos dados. A existência no inventário não prova execução;
 este mapa traz dependências e evidências científicas.
 
+## Etapa vigente — repositório organizado para a edição atual, D-049
+
+- ATIVO: `README.md` e `docs/PUBLICACAO_GITHUB.md` orientam o acesso à
+  edição e aos códigos em `corzxv/contribuicao-preditiva-de-representacoes-de-letras-para-a-popularidade-no-spotify`.
+- ATIVO: fontes, PDF, ZIP e agregados da edição D-048.
+- HISTÓRICO: as cópias locais das versões editoriais intermediárias e o
+  pacote de preservação têm caminhos registrados e ficam fora da seleção nova.
+
+## Histórico — monografia otimizada para Overleaf, D-048
+
+- ATIVO: reports/monografia_template_overleaf/main.tex, seu ZIP e o PDF
+  em output/pdf/monografia_template_overleaf.pdf.
+- ATIVO: script 58 gera os contrastes da nova edição. Opção
+  `--somente-contrastes` atualiza apenas a tabela CSV e o gráfico.
+  Script 59 tem opção `--paineis-compactos` para as figuras 6 e 7.
+- Evidência técnica: reports/verificacao_monografia_template_overleaf.json.
+
+## Histórico — monografia revisada, D-047
+
+- ATIVO: reports/monografia_template_revisada/main.tex, suas tabelas e figuras,
+  reports/monografia_template_revisada.zip e
+  output/pdf/monografia_template_revisada.pdf.
+- ATIVO: scripts/59_consolidar_descritivas_monografia.py, que verifica a
+  sobreposição dos conjuntos, tabula os formatos e prepara figuras com
+  agregados ou as duas seleções seladas de 9.526 faixas.
+- Evidência técnica: reports/verificacao_monografia_template_revisada.json.
+
+## Histórico — monografia D-046
+
+- ATIVO: reports/monografia_template_final/main.tex, fontes LaTeX e material
+  complementar agregado da descrição, vinculação e avaliação.
+- ATIVO: reports/monografia_template_final.zip e
+  output/pdf/monografia_template_final.pdf, compilado a partir do ZIP.
+- ATIVO: scripts/58_diagnosticar_previsoes_monografia_final.py e
+  reports/monografia_template_final/material_complementar/contrastes_condicionais.csv.
+  O script usa as probabilidades externas seladas de 57 e só exporta agregados.
+- Evidência técnica: reports/verificacao_monografia_template_final.json.
+  Monografia v3 e resultados científicos de origem preservados.
+
+## Histórico — classificação concluída, D-045
+
+57 REAL. `reports/classificacao_9526_v1` guarda o resumo, as métricas e
+`interpretacao_resultados.md`. Em `data/derived/private_classificacao_9526_v1`
+estão as divisões, probabilidades individuais, modelos e checkpoint.
+
+## Histórico — classificação da candidata v2, D-044
+
+57 em scripts/57_classificar_amostra_9526.py e
+src/tcc_music_popularity/linked_classification.py. As 9.526 faixas e as
+divisões 5×3 foram conferidas na preparação. A execução manual escreve
+reports/classificacao_9526_v1 e data/derived/private_classificacao_9526_v1.
+
+## Histórico — candidata ampliada, D-043
+
+55 completo em reports/recuperacao_generos_deficitarios_v1, com checkpoint
+e vínculos privados em data/derived/private_recuperacao_generos_deficitarios_v1.
+56 usa `scripts/56_atualizar_amostra_com_letras.py` para produzir a candidata
+em data/processed/private_amostra_com_letras_candidata_v2/amostra_candidata_9526.parquet
+e os agregados em reports/amostra_com_letras_candidata_v2.
+
+## Histórico — recuperação dirigida, D-042
+
+53 revalidou o cache em reports/revalidacao_cache_historico_v1 e gravou os
+vínculos e textos em data/derived/private_revalidacao_cache_historico_v1.
+54 selou a lista de consultas em data/derived/private_triagem_generos_deficitarios_v1
+com resumo em reports/triagem_generos_deficitarios_v1. 55 está preparado
+para produzir o checkpoint e vínculos em data/derived/private_recuperacao_generos_deficitarios_v1,
+com agregado em reports/recuperacao_generos_deficitarios_v1.
+
+## Histórico — candidata completa com letras, D-041
+
+52 REAL leve usa `scripts/52_preparar_amostra_com_letras.py` e
+`src/tcc_music_popularity/linked_sample_design.py`. A candidata privada está em
+data/processed/private_amostra_com_letras_candidata_v1/amostra_candidata_9526.parquet.
+O Parquet referencia seis arquivos selados com os textos originais. Os
+agregados e selos estão em reports/amostra_com_letras_candidata_v1.
+
+## Histórico — revisão local e consolidação reais, D-040
+
+50 REAL em reports/revisao_limites_nova_amostra_v1, com complemento privado
+data/derived/private_revisao_limites_nova_amostra_v1 e 25 novos vínculos.
+51 REAL usa scripts/51_consolidar_vinculos_nova_amostra.py para combinar 43,
+46, 47, 48 e 50. Em data/derived/private_vinculos_consolidados_nova_amostra_v1
+o `vinculos_e_status.parquet` referencia os textos por chave e arquivo.
+Agregados de cobertura em reports/recuperacao_consolidada_nova_amostra_v1.
+
+## Histórico — piloto online real e revisão local preparada, D-039
+
+49 REAL. O resumo selado e `verificacao_resultado_piloto.json` estão em
+reports/piloto_online_nova_amostra_v1. Zero candidatas em 100 consultas.
+
+50 PREPARADO. `scripts/50_revisar_limite_de_candidatos.py` usa o estado 43,
+os índices existentes e o dump. A saída prevista é
+reports/revisao_limites_nova_amostra_v1 e o complemento privado é
+data/derived/private_revisao_limites_nova_amostra_v1.
+
+## Histórico — piloto online preparado, D-038
+
+49 usa scripts/49_pilotar_busca_online_lrclib.py e
+src/tcc_music_popularity/lyrics_online_pilot.py. A entrada selada está em
+data/derived/private_piloto_online_nova_amostra_v1/manifesto.json. A coleta
+manual gravará `state.sqlite` nessa mesma pasta e o resumo agregado em
+reports/piloto_online_nova_amostra_v1/resumo_piloto_online.json.
+
+## Histórico — 47 e 48 reais, D-037
+
+47 REAL em reports/revisao_caixa_plain_lrc_nova_amostra_v1 e
+data/derived/private_revisao_caixa_plain_lrc_nova_amostra_v1. A cobertura
+combinada 43/46/47 está em reports/cobertura_pos_revisao_plain_lrc_nova_amostra_v1.
+
+48 REAL leve em reports/revisao_variantes_artista_nova_amostra_v1. O script
+48_registrar_variantes_artista_revisadas.py consome as fichas documentais e o
+diagnóstico 44, usando o dump por ID. Em data/derived/private_revisao_variantes_artista_nova_amostra_v1
+ficam `revisao_documental.json`, `desfechos.json` e o complemento de vínculos
+e letras. Cobertura 43/46/47/48 em reports/cobertura_pos_revisao_variantes_nova_amostra_v1.
+
+## Histórico — 46 real e 47 preparado, D-036
+
+46 REAL concluído. reports/revisao_caixa_nova_amostra_v1 resume os 130 vínculos
+novos. As tabelas em reports/cobertura_pos_revisao_caixa_nova_amostra_v1 combinam
+43 e 46 apenas para descrever a cobertura das 3.777 aceitas.
+
+47 PREPARADO, scripts/47_revisar_caixa_plain_lrc.py e
+src/tcc_music_popularity/lyrics_synced_revision.py. Consome evidências seladas
+de 43, vínculos de 46 e textos por ID no dump. Saída pública prevista em
+reports/revisao_caixa_plain_lrc_nova_amostra_v1. O complemento privado fica em
+data/derived/private_revisao_caixa_plain_lrc_nova_amostra_v1. Consumir junto a
+43 e 46 por `query_id` e `track_id` depois da conferência da execução.
+
+## Histórico — diagnóstico e consolidação, D-035
+
+44 REAL: reports/diagnostico_chaves_nova_amostra_v1 e checkpoint privado
+correspondente, 4.164 consultas e 13 casos de variação de artista. 45 REAL leve:
+reports/consolidacao_dados_nova_amostra_v1 com comparação, cobertura e figura.
+Fichas de 16 pares em data/derived/private_consolidacao_nova_amostra_v1.
+Interpretação em reports/interpretacao_diagnostico_chaves_e_consolidacao_v1.md.
+
+46 PREPARADO: scripts/46_revisar_caixa_textos_concorrentes.py e
+src/tcc_music_popularity/lyrics_case_revision.py. Revisão das 831 consultas por
+índices existentes. Resumo previsto em reports/revisao_caixa_nova_amostra_v1 e
+complemento privado em data/derived/private_revisao_caixa_nova_amostra_v1.
+Consumo futuro: vincular novos textos por query_id a novos vínculos por track_id
+e combinar com os produtos de 43. Execução real manual pendente.
+
+## Histórico — 43 real e diagnóstico preparado, D-034
+
+CONCLUÍDO REAL: data/derived/private_nova_amostra_matching_v2 e
+reports/revisao_matching_nova_amostra_v2, 3.647 aceitas/1.298 ambíguas/4.164 sem
+candidato/416 instrumentais/uma sem texto. Interpretação em
+reports/interpretacao_revisao_matching_nova_amostra_v2.md. Não repetir 43.
+
+PREPARADO/SEM EXECUÇÃO REAL: scripts/44_diagnosticar_consultas_sem_candidato.py →
+src/tcc_music_popularity/native_lookup_audit.py. Consome consultas 43 e índices
+nativos do dump, em modo somente leitura. Saídas previstas:
+data/derived/private_diagnostico_chaves_nova_amostra_v1 (metadados candidatos,
+métodos e limites) e reports/diagnostico_chaves_nova_amostra_v1 (agregados).
+Sem letras ou alteração dos resultados 43. Guia execucao_diagnostico_chaves_nova_amostra_v1.md;
+testes test_native_lookup_audit.py. Consumidor seguinte: revisão dirigida dos candidatos.
+Evidência: reports/verificacao_revisao_matching_e_preparacao_diagnostico_20261106.json.
+
+## Histórico — 42 real e correção dirigida preparada, D-033
+
+CONCLUÍDO REAL: data/derived/private_nova_amostra_local_v1 e
+reports/busca_local_nova_amostra_v1. 1.425 aceitas/362 instrumentais/3.574
+ambíguas/4.164 sem candidato/uma sem texto, zero erro/pendência. Não repetir 42.
+
+PREPARADO/SEM EXECUÇÃO REAL: scripts/43_revisar_bloqueios_vinculacao.py →
+src/tcc_music_popularity/lyrics_matching_revision.py. Consome 42/amostra 40,
+índices v2/complemento existentes e dump em modo somente leitura. Não cria
+índice novo. Saídas previstas: data/derived/private_nova_amostra_matching_v2 e
+reports/revisao_matching_nova_amostra_v2. Reavalia somente 3.162 bloqueios por
+layout plain/LRC ou veto indevido por outra versão com candidato compatível.
+Guia revisao_bloqueios_vinculacao_v2.md; testes test_lyrics_matching_revision.py.
+Evidência: reports/auditoria_bloqueios_matching_nova_amostra_v1.json; casos
+diagnósticos em data/derived/private_auditoria_matching_nova_amostra_v1.
+
+## Histórico — 41 real e busca local preparada, D-032
+
+CONCLUÍDO REAL: data/derived/private_nova_amostra_cache_v1 e
+reports/reaproveitamento_nova_amostra_v1. 682 letras/87 instrumentais/8.757
+pendentes, 9.526 consultas, zero erros. Interpretação em
+reports/interpretacao_reaproveitamento_nova_amostra_v1.md. Não repetir 41.
+
+PREPARADO/SEM EXECUÇÃO REAL: scripts/42_buscar_letras_nova_amostra.py →
+src/tcc_music_popularity/new_sample_local.py. Consome amostra 40, resultados 41,
+dump D:/TCC_LRCLIB/lrclib-db-dump-20261012T090639Z.sqlite3, índice v2 existente e
+lista de artistas selada do estado histórico v2. Complemento novo somente quando
+necessário em D:/TCC_LRCLIB/tcc_lookup_nova_amostra_v1. Nunca alterar índice antigo.
+Saídas previstas: data/derived/private_nova_amostra_local_v1 e
+reports/busca_local_nova_amostra_v1 (resumo/status/cobertura/transições).
+Guia execucao_busca_nova_amostra_v1.md; testes tests/test_new_sample_local.py.
+Consumidor futuro: diagnóstico de cobertura/seleção e revisão de pendências.
+Verificação: reports/verificacao_cache_e_preparacao_busca_nova_amostra_20261106.json.
+
+## Histórico — nova amostra real e reaproveitamento, D-031
+
+CONCLUÍDO REAL: data/processed/nova_amostra_catalogo_v1/amostra_spotify.parquet
+(687.337 bytes, 9.526 linhas/27 campos); resumo_sorteio.json e comparativos em
+reports/nova_amostra_catalogo_v1. Interpretação em
+reports/interpretacao_nova_amostra_catalogo_v1.md; comparacao_medias_dispersoes e
+comparacao_periodos (PNG/SVG). Gerador leve: scripts/analisar_comparativo_nova_amostra.py,
+somente agregados. Não altera a descrição 39 ou o código selado 40.
+Verificação: reports/verificacao_sorteio_nova_amostra_20261106.json.
+
+PREPARADO/SEM EXECUÇÃO REAL: scripts/41_reaproveitar_letras_nova_amostra.py →
+src/tcc_music_popularity/sample_cache_reuse.py. Consome nova amostra e consultas
+pontuais nos estados private_sample_lyrics_200k_v2/v1, sem varredura, SSD ou rede.
+Saídas previstas: data/derived/private_nova_amostra_cache_v1 (estado, resultados,
+textos privados e pendências); reports/reaproveitamento_nova_amostra_v1
+(resumo/status/cobertura). Guia execucao_reaproveitamento_nova_amostra_v1.md;
+testes em tests/test_sample_cache_reuse.py. Consumidor futuro: busca dirigida
+para as pendências, ainda não preparada/executada integralmente.
+
+## Histórico — preservação e nova amostra, D-030
+
+CONCLUÍDO: reports/preservacao_monografia_20261106/resultados_e_monografias.zip,
+inventario.json e verificacao.json: pacote local de 430 fontes/resultados,
+SHA-256/CRC conferidos; inclui retrato dos documentos antes da nova amostragem.
+Não substitui os originais ou backups externos. Gerador:
+scripts/arquivar_resultados_monografia.py; não repetir para sobrescrever.
+
+DIMENSIONADO/SEM SORTEIO: reports/nova_amostra_catalogo_v1 contém plano JSON,
+alocação dos 82 gêneros, precisão das doze médias e cenários. Código:
+scripts/40_preparar_nova_amostra.py → src/tcc_music_popularity/sample_redesign.py.
+Entrada leve já consumida: perfis_grupos/resumo_numerico/frequencias_categoricas
+da descrição 39. N=1.159.764, n=9.526; fonte CSV individual não foi lida pelo
+agente. Protocolo/guia: docs/plano_nova_amostra_catalogo_v1.md e
+docs/execucao_nova_amostra_catalogo_v1.md. Testes: tests/test_sample_redesign.py.
+Verificação: reports/verificacao_nova_amostra_20261106.json.
+
+PENDENTE MANUAL: 40 sortear lê CSV selado e grava
+data/processed/nova_amostra_catalogo_v1/amostra_spotify.parquet (privado),
+resumo_sorteio.json e comparacao_metadados/categorias.csv (agregados).
+Consumidor seguinte: recuperação dirigida das letras, ainda não executada.
+
+## Histórico — descrição do catálogo, D-029
+
+CONCLUÍDO REAL pelo pesquisador/conferido: script 39_descrever_catalogo_completo.py e
+catalog_description.py. Fonte: CSV original Spotify, somente leitura. Regras:
+configs/quality_rules.yaml. Saídas em reports/descritiva_catalogo_completo_v1:
+agregados CSV/JSON, guia e treze figuras PNG/SVG, sem linhas individuais.
+Consumidores futuros: descrição inicial da monografia e dimensionamento de nova
+amostra menor. Não consome coorte/letras/vetores/modelos ou LRCLIB.
+Guia: docs/execucao_descritiva_catalogo_completo_v1.md. Evidências reais:
+reports/verificacao_descritiva_catalogo_20261106.json e
+reports/interpretacao_descritiva_catalogo_completo_v1.md. Quarenta e quatro
+arquivos conferidos; treze figuras inspecionadas. Próximo consumidor é o
+dimensionamento de nova amostra menor; não há sorteio novo nesta etapa.
+
 ## Arquivos da publicação — D-024
 
 Publicação principal confirmada no commit 082a9a0; relatório agregado em
@@ -25,9 +274,58 @@ permanecem. Oito arquivos de prévias/roteiros retirados do índice ficam locais
 assim como dados/modelos/cache/demonstrador/prévias pessoais. O mapa anterior
 registra sua existência local e histórica, não inclusão automática no GitHub.
 
-## Entrada acadêmica atual — D-023
+## Nova etapa de níveis — D-025, 04/11/2026
 
-ATIVO: reports/monografia_template_200k_v2/main.tex, ZIP correspondente e
+- ATIVO: configs/niveis_popularidade_200k_v1.json, popularity_levels.py, script 31,
+  protocolo/guia. Agregados públicos em reports/niveis_popularidade_200k_v1/agregados/.
+  Consumidores: diagnóstico de suporte/categorização e futura classificação ordinal.
+- CONCLUÍDO em 05/11 pelo pesquisador: 31 previsoes; usa predicoes_externas.parquet e
+  folds_5x3.parquet selados. Não abre modelos/vetores/letras ou cria splits.
+- CONCLUÍDO pelo pesquisador v1.1: linkage_review_plan.py/script 32; usa resultados
+  v2 projetados e até 240 consultas por chave nos caches v1/v2, sem dump/SSD.
+  Fichas individuais em data/derived/private_linkage_review_200k_v1_1/; só alocação
+  e resumo em reports/piloto_vinculacao_200k_v1_1/. Não altera aceitação existente.
+  Pastas v1 contêm apenas selos/resumo incompleto da falha de tipos; preservadas.
+- CONCLUÍDO: script 33/linkage_review_audit.py, triagem de 133 fichas; agregados em
+  reports/triagem_piloto_vinculacao_200k_v1/, detalhes privados em
+  data/derived/private_linkage_triage_200k_v1/. Não é revisão semântica humana.
+- PRODUÇÃO REAL CONCLUÍDA/conferida, 20/20 partes: script 34/observed_classification.py,
+  ordinal_classifier.py, config/protocolo/guia de classificação ordinal. Fontes:
+  base/folds/vetores existentes, resumos 31/32/33. Novos modelos/probabilidades em
+  data/derived/private_ordinal_classification_200k_v1/; agregados em
+  reports/classificacao_ordinal_200k_v1/. Saídas smoke existentes: quatro modelos,
+  uma referência e respectivas probabilidades/selos. Integral: vinte modelos,
+  cinco referências, 480 ajustes internos e probabilidades globais 77.535 linhas.
+- CONCLUÍDO: script 35/classification_diagnostics.py; só agregados e parâmetros
+  de três modelos PCA, três figuras em diagnosticos_classificacao_ordinal_200k_v1/.
+  Relatório interpretacao_classificacao_ordinal_200k_v1.md. Sem novo ajuste.
+- CONCLUÍDO pelo pesquisador e conferido: script 36/decision_sensitivity.py,
+  protocolo/guia de sensibilidade da regra p/pi. Fonte: probabilidades externas
+  existentes; agregados novos em reports/sensibilidade_decisao_ordinal_200k_v1/.
+  Saídas reais existentes, sem substituir as originais. 120 métricas/1.080 células.
+- CONCLUÍDO pelo agente em 06/11: script 37/decision_analysis.py, agregados e
+  inspeção delimitada da cauda 128/96; duas figuras em analise_sensibilidade_decisao_ordinal_v1/.
+  Relatório interpretacao_sensibilidade_decisao_ordinal_v1.md; sem modelo/treino.
+- ATIVO: reports/abertura_nova_etapa_20261104.md e verificacao_nova_etapa_20261104.json.
+  Registro da preparação e preservação; não evidenciam novo treinamento.
+
+O congelamento abaixo se refere à primeira comparação; a nova investigação foi
+autorizada separadamente. Monografia v2/PDF/ZIP continuam preservados.
+
+## Entrada acadêmica atual — D-028
+
+ATIVO: reports/monografia_template_200k_v3/main.tex, ZIP correspondente e
+output/pdf/monografia_template_200k_v3.pdf (45 páginas, 32 referências originais).
+Consumidor: Overleaf/revisão com Leandro Tavares Correia. Script 38 prepara quatro
+tabelas e copia duas figuras de CSVs/figuras públicos pequenos, sem bases individuais.
+Objetivos incorporados à introdução; regressão, extensão ordinal/PCA e sensibilidade
+posterior preservadas como etapas distintas. Verificação/revisão em reports/;
+guia docs/execucao_monografia_template_200k_v3.md. Sem alteração de código ou
+protocolo científicos. Fontes/PDF/ZIP da versão 2 passam a HISTÓRICO, intactos.
+
+## Entrada acadêmica anterior — D-023
+
+HISTÓRICO: reports/monografia_template_200k_v2/main.tex, ZIP correspondente e
 output/pdf/monografia_template_200k_v2.pdf (34 páginas, 27 fontes originais).
 Consumidor: Overleaf/revisão com Leandro Tavares Correia. Script 29 gera só duas
 figuras/uma tabela novas de agregados e reutiliza artefatos editoriais compatíveis,

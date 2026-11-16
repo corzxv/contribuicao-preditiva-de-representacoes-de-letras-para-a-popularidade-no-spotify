@@ -1,0 +1,91 @@
+{
+  "completed": true,
+  "targets": 831,
+  "outcomes": {
+    "different_after_case_normalization": 701,
+    "accepted_case_equivalent": 130
+  },
+  "previous_accepted_tracks": 3647,
+  "new_accepted_tracks": 130,
+  "accepted_tracks_with_overlay": 3777,
+  "new_accepted_queries": 130,
+  "seconds": 39.6003822000057,
+  "seal": {
+    "version": "nova-amostra-caixa-v1",
+    "code_sha256": "7f17e6caa49a3916b03e3a3179478ebb54712f168782ecdbd7aeedf24f9e56ed",
+    "source_summary_sha256": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+    "source_state_sha256": "4310d8687ae35dd4ed0bc8514b7fc714878c523a9cca64bcdad4282026929cb4",
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    },
+    "primary": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "086a59969ebb21218205ad0e836d0a52796a12fc5e5f8ee185a76e6fff82b0f2",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "progress": {
+        "last_id": 39053376,
+        "scanned": 33714178,
+        "indexed": 5726985,
+        "complete": true,
+        "updated_at": "2026-11-01T02:49:13.569468+00:00"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+        "bytes": 1254682624,
+        "mtime_ns": 1793501353594451100
+      }
+    },
+    "supplement": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "28bf022e5a88a65adcedd262a7a9166fb691b4f9a36cc3b022057c3948332544",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_nova_amostra_v1\\lookup.sqlite",
+        "bytes": 784396288,
+        "mtime_ns": 1794013397946088400
+      }
+    }
+  },
+  "private_sha256": {
+    "novas_letras_aceitas.parquet": "25ea157abfbb266939034856a85e77c6c6a6501515aeaf290eb07fe88be4fc19",
+    "novos_vinculos.parquet": "9c4fbebd25be808c85f838e2309168b57f6e83a61072fd9e2c82dfdca8a889af"
+  }
+}

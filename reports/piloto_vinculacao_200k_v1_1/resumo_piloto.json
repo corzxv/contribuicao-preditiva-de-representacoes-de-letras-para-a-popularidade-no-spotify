@@ -1,0 +1,37 @@
+{
+  "completed": true,
+  "seal": {
+    "version": "linkage-review-v1.1",
+    "source_sha256": "ca0fc1598271c182495eb681ebdf260435de0590f28df6c10f42b0f59b65f74b",
+    "code": "ad8c898b779020f76a0191c29f5ae9bc34b62ccbbd784807c48600ec0264d7c8",
+    "helpers": "a31d4498050e278c389a32706876ca3c3e0bbfa950fad2cc77f87bd4b98c54ac",
+    "protocol": "c6e0b92642c91045caa9f3f75feaa7920e427ff0d4ce6f6dbd0af3755a94229d",
+    "cache_metadata": {
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\state.sqlite": {
+        "bytes": 1041354752,
+        "mtime_ns": 1793501571205309600
+      },
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v1\\state.sqlite": {
+        "bytes": 6203969536,
+        "mtime_ns": 1793479197225256500
+      }
+    },
+    "seed": 20261104,
+    "per_cell": 20,
+    "numpy": "2.5.2"
+  },
+  "new_lrclib_queries": 0,
+  "indexes_built": 0,
+  "human_review_completed": false,
+  "precision_estimated": false,
+  "recovery_recall_estimated": false,
+  "existing_decisions_changed": false,
+  "lyric_texts_exported": false,
+  "source_tracks": 200000,
+  "unique_query_population": 199998,
+  "excluded_missing_query": 2,
+  "selected_queries": 133,
+  "cached_evidence": 130,
+  "truncated_candidate_lists": 22,
+  "metadata_review_only": true
+}

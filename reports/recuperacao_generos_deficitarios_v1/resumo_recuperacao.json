@@ -1,0 +1,47 @@
+{
+  "completed": true,
+  "queries_reviewed": 22443,
+  "queries_planned": 22443,
+  "new_tracks_with_lyrics": 179,
+  "outcomes_by_query": {
+    "sem_candidato_compativel": 21556,
+    "compatible_source_instrumental_no_text": 703,
+    "accepted_after_metadata_filter": 179,
+    "different_after_case_normalization": 5
+  },
+  "by_genre": [
+    {
+      "genre": "detroit-techno",
+      "target": 32,
+      "verified_before": 11,
+      "new_links": 51,
+      "verified_after": 62,
+      "deficit_after": 0
+    },
+    {
+      "genre": "romance",
+      "target": 54,
+      "verified_before": 12,
+      "new_links": 110,
+      "verified_after": 122,
+      "deficit_after": 0
+    },
+    {
+      "genre": "sleep",
+      "target": 147,
+      "verified_before": 5,
+      "new_links": 18,
+      "verified_after": 23,
+      "deficit_after": 124
+    }
+  ],
+  "seal": {
+    "triage_sha256": "cc23c0dd6e1ffac7594ea91dfb766a2b94e7e933107321ab8a49232eca70716a",
+    "code_sha256": "ac58c27234b66bfee559692395ccacbf9adfc9402ce13a14a04cb1e69220bfdc",
+    "lookup_code_sha256": "28ad1581bc7f7ec008eb7e48c8baf4491eb13e1f082172b44af373b7cca5ecdc"
+  },
+  "private_sha256": {
+    "letras_aceitas.parquet": "60ec854f544a2a9784b886e7b60f5589ee234af82f3a0ec08364e4054b63d3c4",
+    "vinculos_aceitos.parquet": "25ce9a5ec0a73c613008455cc9f08bf2afb24ad379432a6449696b1e0ece3c44"
+  }
+}

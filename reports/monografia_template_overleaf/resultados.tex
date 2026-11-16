@@ -1,0 +1,35 @@
+\subsection{Cobertura da avaliação e desempenho global}
+A avaliação reuniu 9.526 previsões externas por configuração. Uma parte externa contém 1.906 faixas, e as demais têm 1.905 cada. As vinte combinações de modelo e parte externa selecionaram $\alpha=0,001$, o menor valor da grade. A avaliação corresponde ao protocolo e à faixa de penalização estudados. A seleção na fronteira não demonstra que 0,001 seja o melhor valor em uma grade ampliada.
+
+\input{tables/desempenho_final}
+
+A referência por frequências do treino sempre previu a classe baixa, com acurácia comum de 58,24\% e acurácia balanceada de 33,33\%. O Baseline elevou esses valores para 71,37\% e 56,14\%, respectivamente. O Tradicional apresentou a maior acurácia balanceada (56,24\%) e o melhor macro-F1 (0,5892). Também mostrou menor taxa de trocas entre classes extremas e as menores perdas probabilísticas. Profundo e Combinado tiveram 55,91\% e 55,96\% de acurácia balanceada, respectivamente. As diferenças entre os quatro modelos são pequenas na métrica principal, embora todos apresentem ganho claro em relação à referência por frequências.
+
+Quando os pesos do quadro de vínculos são aplicados às mesmas previsões, a acurácia balanceada fica em 56,57\% no Baseline, 56,70\% no Tradicional, 56,50\% no Profundo e 56,58\% no Combinado. Os ganhos frente ao Baseline são de $+0,13$, $-0,07$ e $+0,02$ ponto percentual, respectivamente. A ponderação altera ligeiramente as posições, com diferenças ainda abaixo de 0,15 ponto percentual frente ao Baseline.
+
+\subsection{Distribuição dos erros por nível de popularidade}
+A Tabela~\ref{tab:classes_final} e a Figura~\ref{fig:matrizesfinal} mostram o que a comparação global resume. A sensibilidade é maior na classe baixa em todos os modelos. No Baseline, a classe média tem 51,97\% de sensibilidade e a alta, 26,25\%. Para a classe alta, o Profundo eleva os acertos de 278 para 329 entre 1.059 faixas. Entre as previsões de classe alta, porém, a proporção correta passa de 75,96\% para 69,56\%. As faixas altas classificadas incorretamente foram atribuídas sobretudo à classe média.
+
+\input{tables/classes_final}
+\figura[.50\textheight]{confusao_classificacao_final}{Matrizes de confusão nas previsões externas dos quatro modelos.}{fig:matrizesfinal}{Cada célula mostra contagem e porcentagem dentro da classe observada.}
+
+O ganho líquido do Profundo na classe alta foi de 51 acertos, acompanhado de 191 acertos a menos na classe baixa e 60 a menos na média. O Combinado acertou 325 faixas altas e teve 30,69\% de sensibilidade e 69,00\% de precisão nessa classe. Já o Tradicional teve a menor taxa de trocas entre baixo e alto, de 1,75\%. Assim, a escolha do bloco textual afeta o tipo de erro cometido. Uma aplicação que privilegie recuperar faixas da classe alta avaliaria esse ganho juntamente com o aumento dos falsos positivos.
+
+\subsection{Contrastes pareados e estabilidade}
+A Tabela~\ref{tab:contrastes_final} apresenta as diferenças de acurácia balanceada e sensibilidade alta. Frente ao Baseline, o ganho em acurácia balanceada do Tradicional foi de 0,11 ponto percentual, com limites de $-0{,}50$ a $+0{,}69$. Para Profundo e Combinado, as diferenças de $-0{,}23$ e $-0{,}18$ também tiveram intervalos que incluem zero. Acrescentar os descritores aos embeddings no Combinado produziu $+0{,}05$ ponto percentual de acurácia balanceada em relação ao Profundo, com limites de $-0{,}32$ a $+0{,}43$.
+
+\input{tables/contrastes_final}
+
+Na classe alta, o Profundo recuperou 4,82 pontos percentuais a mais que o Baseline, e o Combinado recuperou 4,44 pontos a mais. Os limites condicionais ficaram acima de zero nesses dois contrastes (Figura~\ref{fig:contrastesfinal}). Para o Tradicional, os limites incluem zero. A inspeção dos resultados por parte externa também mostra variação. Por exemplo, a acurácia balanceada do Combinado superou a do Baseline em duas partes e foi menor nas demais. A reamostragem descreve os contrastes das previsões observadas e não mede a estabilidade frente a novos treinos ou a uma nova seleção de faixas.
+
+\figura[.26\textheight]{contrastes_condicionais}{Contrastes pareados e limites percentílicos condicionados às previsões externas.}{fig:contrastesfinal}{Bootstrap por componentes, com 8.000 réplicas.}
+
+\subsection{Probabilidades e limites da avaliação}
+A Figura~\ref{fig:calfinal} compara a média das probabilidades previstas com a frequência observada em cada intervalo ocupado. Um ponto na diagonal indica concordância naquele intervalo. As curvas exibem desvios em alguns intervalos, com tamanhos variáveis de grupo. As contagens estão na tabela agregada de calibração. As perdas logarítmica e de Brier do Profundo e do Combinado são ligeiramente maiores que as do Baseline. O aumento de sensibilidade da classe alta, portanto, convive com piora nessas duas medidas de qualidade probabilística.
+
+\figura[.27\textheight]{calibracao_classificacao_final}{Calibração descritiva por classe nas previsões externas.}{fig:calfinal}{Cada ponto mostra a média da probabilidade e a proporção observada em um intervalo.}
+
+A formação da coorte depende de vínculos aceitos com o LRCLIB, cuja cobertura varia por gênero e popularidade. As comparações são válidas para as configurações e as faixas avaliadas, sob este protocolo. A validação por componentes reduz o compartilhamento de informação por relações reconhecidas. As chaves podem deixar de agrupar alguns artistas, composições e versões relacionados. Além disso, 9.033 faixas pertenciam à coorte usada no desenvolvimento anterior do projeto. O resultado é uma avaliação interna agrupada, em um conjunto com exposição histórica documentada.
+
+A modelagem impõe chances proporcionais e usa uma variante congelada do encoder para todos os idiomas presentes. Língua, estilo e relações entre texto e áudio podem levar a efeitos diferentes ao longo dos cortes. A comparação atual caracteriza as representações e o modelo definidos, no recorte acessível. O escore é observado em um único arquivo e não permite inferência causal nem acompanhamento de popularidade futura.
+

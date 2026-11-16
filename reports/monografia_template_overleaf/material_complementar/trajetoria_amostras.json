@@ -1,0 +1,15 @@
+{
+  "catalogo": 1159764,
+  "sorteio_original": 9526,
+  "letras_aceitas_do_sorteio": 3869,
+  "quadro_com_letras": 80943,
+  "coorte_classificada": 9526,
+  "faixas_do_sorteio_presentes_na_coorte": 461,
+  "faixas_da_coorte_fora_do_sorteio": 9065,
+  "faixas_da_coorte_historica": 9033,
+  "class_counts": [
+    5548,
+    2919,
+    1059
+  ]
+}

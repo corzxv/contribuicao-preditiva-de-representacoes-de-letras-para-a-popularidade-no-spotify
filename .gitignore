@@ -94,9 +94,19 @@ reports/handoff_base_v0_1_1_revision.md
 reports/fixture_run_summary.json
 docs/next_steps_lyrics.md
 reports/**/owner.json
+reports/**/execution.lock
 
 # Agregados auditados necessários à reprodução das tabelas e figuras
 !reports/**/*.csv
+
+# Cópias locais de edições anteriores e pacote de preservação
+reports/monografia_template_200k_v3/
+reports/monografia_template_final/
+reports/monografia_template_revisada/
+reports/preservacao_monografia_20261106/
+reports/monografia_template_overleaf/images/*.svg
+reports/monografia_template_overleaf/material_complementar/**/densidade_pca.csv
+reports/monografia_template_overleaf/material_complementar/**/densidades_relacoes.csv
 
 # Documento atual; outros PDFs e pacotes continuam como arquivo local
 output/*
@@ -104,3 +114,5 @@ output/*
 output/pdf/*
 !output/pdf/monografia_template_200k_v2.pdf
 !reports/monografia_template_200k_v2.zip
+!output/pdf/monografia_template_overleaf.pdf
+!reports/monografia_template_overleaf.zip

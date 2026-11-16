@@ -1,0 +1,30 @@
+{
+  "decisao": "D-048",
+  "data": "2026-11-16",
+  "fonte": "reports/monografia_template_overleaf/main.tex",
+  "zip": "reports/monografia_template_overleaf.zip",
+  "zip_bytes": 1253993,
+  "zip_sha256": "1fba9b01454428ae2263f8eda4ee8abfbab2a7f7cb4147ea1b9afa4e01a6485b",
+  "pdf": "output/pdf/monografia_template_overleaf.pdf",
+  "pdf_sha256": "4caaa704fd348db5e042d1fa6161b3ad73270a7d154df901f204473955809010",
+  "paginas": 36,
+  "figuras": 21,
+  "tabelas": 14,
+  "figuras_6_e_7_na_pagina_pdf": 13,
+  "compilado_do_zip_extraido": true,
+  "compilador": "Tectonic 0.17.0+20260731 / XeTeX / BibTeX",
+  "tempo_local_segundos": 5.4268537,
+  "comparacao_local_versao_anterior_segundos": 15.0676683,
+  "validacao_no_servidor_overleaf": false,
+  "avisos_latex_bibtex": 0,
+  "limites_bootstrap": {
+    "semente": 42,
+    "replicas": 8000,
+    "prediction_sha256": "f78c632c3a472b7dbbebc34123381aaed3d6cdecf84ec2629340baf266270d2f",
+    "contrastes_pontuais_preservados": true
+  },
+  "edicao_D047_preservada": {
+    "output/pdf/monografia_template_revisada.pdf": "eb35ca1899a739c4aaa8c01318d29ff5b8f45c2925b50effe91d00d6c7da9bd4",
+    "reports/monografia_template_revisada.zip": "aa75a71560536823335ded0ab07c163097d29f73dc426b85663a60edf8c83141"
+  }
+}

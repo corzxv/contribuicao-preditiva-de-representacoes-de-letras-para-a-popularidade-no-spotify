@@ -1,0 +1,9 @@
+model,decision_rule,n_observed_ge80,components,predicted_operational_class_0,predicted_operational_class_1,predicted_operational_class_2,fraction_predicted_ge40,is_binary_hit_detection
+baseline,argmax_original,128,96,0,17,111,0.8671875,False
+baseline,inverse_training_prior,128,96,0,2,126,0.984375,False
+traditional,argmax_original,128,96,0,13,115,0.8984375,False
+traditional,inverse_training_prior,128,96,0,2,126,0.984375,False
+deep,argmax_original,128,96,0,11,117,0.9140625,False
+deep,inverse_training_prior,128,96,0,3,125,0.9765625,False
+combined,argmax_original,128,96,0,9,119,0.9296875,False
+combined,inverse_training_prior,128,96,0,3,125,0.9765625,False

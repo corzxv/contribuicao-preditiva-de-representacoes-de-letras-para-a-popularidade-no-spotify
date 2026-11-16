@@ -1,0 +1,26 @@
+{
+  "sample_tracks": 9526,
+  "components": 6271,
+  "class_counts": [
+    5548,
+    2919,
+    1059
+  ],
+  "unique_texts": 9500,
+  "cache_vectors_available": 9018,
+  "vectors_to_compute_initially": 482,
+  "folds": {
+    "outer": 5,
+    "inner": 3
+  },
+  "sample_sha256": "5bc1da66383c7ad4b03e44203c189d1faee0a13826da182412bbcfa096aff06e",
+  "known_prior_cohort_overlap": 9033,
+  "prediction_rows": 9526,
+  "models_evaluated": 5,
+  "prediction_sha256": "f78c632c3a472b7dbbebc34123381aaed3d6cdecf84ec2629340baf266270d2f",
+  "completed": true,
+  "signature": "f97ee7c8011aab4134a40e5d519e8ad1ee2b72abc5da4228c798dafd09b53040",
+  "new_vectors_this_run": 482,
+  "external_parts": 20,
+  "folds_sha256": "32b7ef2a990d2a7b9287678ec0ab3b85ef5d7cbbad2b4b869d417060d39ef11b"
+}

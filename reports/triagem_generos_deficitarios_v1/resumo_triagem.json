@@ -1,0 +1,115 @@
+{
+  "completed": true,
+  "pending_lookup_tracks": 22443,
+  "pending_lookup_queries": 22443,
+  "by_genre": [
+    {
+      "genre": "detroit-techno",
+      "target": 32,
+      "verified_before": 11,
+      "deficit": 21,
+      "catalog_tracks": 3920,
+      "principal": 3182,
+      "complementar": 0,
+      "fora_dos_indices": 32,
+      "consulta_inviavel": 0,
+      "already_drawn": 695
+    },
+    {
+      "genre": "romance",
+      "target": 54,
+      "verified_before": 12,
+      "deficit": 42,
+      "catalog_tracks": 6518,
+      "principal": 5239,
+      "complementar": 39,
+      "fora_dos_indices": 73,
+      "consulta_inviavel": 0,
+      "already_drawn": 1155
+    },
+    {
+      "genre": "sleep",
+      "target": 147,
+      "verified_before": 5,
+      "deficit": 142,
+      "catalog_tracks": 17851,
+      "principal": 13971,
+      "complementar": 12,
+      "fora_dos_indices": 680,
+      "consulta_inviavel": 0,
+      "already_drawn": 3183
+    }
+  ],
+  "catalog_sha256": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
+  "private_sha256": "da85470985940e344be0d8cd47f05755e845cf3c9d584ac61c61c39a6e1825e2",
+  "index_seals": {
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    },
+    "primary": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "086a59969ebb21218205ad0e836d0a52796a12fc5e5f8ee185a76e6fff82b0f2",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "progress": {
+        "last_id": 39053376,
+        "scanned": 33714178,
+        "indexed": 5726985,
+        "complete": true,
+        "updated_at": "2026-11-01T02:49:13.569468+00:00"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+        "bytes": 1254682624,
+        "mtime_ns": 1793501353594451100
+      }
+    },
+    "supplement": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "28bf022e5a88a65adcedd262a7a9166fb691b4f9a36cc3b022057c3948332544",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_nova_amostra_v1\\lookup.sqlite",
+        "bytes": 784396288,
+        "mtime_ns": 1794013397946088400
+      }
+    }
+  }
+}

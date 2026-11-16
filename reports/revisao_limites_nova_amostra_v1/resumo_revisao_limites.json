@@ -1,0 +1,96 @@
+{
+  "completed": true,
+  "targets": 40,
+  "outcomes_by_track": {
+    "accepted_after_metadata_filter": 25,
+    "different_after_case_normalization": 8,
+    "sem_candidato_compativel": 1,
+    "limite_de_candidatos_compativeis": 3,
+    "plain_synced_conflict": 1,
+    "compatible_source_instrumental_no_text": 2
+  },
+  "new_accepted_tracks": 25,
+  "new_accepted_queries": 25,
+  "accepted_tracks_with_overlays": 3869,
+  "seal": {
+    "version": "nova-amostra-metadados-antes-do-limite-v1",
+    "code_sha256": "28ad1581bc7f7ec008eb7e48c8baf4491eb13e1f082172b44af373b7cca5ecdc",
+    "state43_sha256": "4310d8687ae35dd4ed0bc8514b7fc714878c523a9cca64bcdad4282026929cb4",
+    "summary43_sha256": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+    "summary48_sha256": "9307f9a83fdfe8a08a01ec734a89e1efaf3faccc6e64ece88262f4e710373eb2",
+    "summary49_sha256": "0a6c6a9545989ab37698b21cd206735dc0784bc3b985a1c5fdadbaa58460a86e",
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    },
+    "primary": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "086a59969ebb21218205ad0e836d0a52796a12fc5e5f8ee185a76e6fff82b0f2",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "progress": {
+        "last_id": 39053376,
+        "scanned": 33714178,
+        "indexed": 5726985,
+        "complete": true,
+        "updated_at": "2026-11-01T02:49:13.569468+00:00"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+        "bytes": 1254682624,
+        "mtime_ns": 1793501353594451100
+      }
+    },
+    "supplement": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "28bf022e5a88a65adcedd262a7a9166fb691b4f9a36cc3b022057c3948332544",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_nova_amostra_v1\\lookup.sqlite",
+        "bytes": 784396288,
+        "mtime_ns": 1794013397946088400
+      }
+    }
+  },
+  "private_sha256": {
+    "state.sqlite": "348b7b91413cb311027daaf9a05e26eb996740772ec1e631d2e67988dce30686",
+    "novas_letras_aceitas.parquet": "31f4e344413e7d51be9553acae4d0ff662eb75ddf1d94fff8524322d6b2e1ef0",
+    "novos_vinculos.parquet": "d535a3123e932abb4444ae69a64598273b31e814b1b60257d15d74eeeee68644"
+  }
+}

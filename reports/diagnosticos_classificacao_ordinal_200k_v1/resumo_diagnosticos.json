@@ -1,0 +1,36 @@
+{
+  "completed": true,
+  "seal": {
+    "code": "766d5a26fc03f6a9099c6529c1078de75ef12aa6ebb99768e574cad357cc0f78",
+    "inputs": {
+      "reports\\classificacao_ordinal_200k_v1\\integral\\resumo_classificacao.json": "97f69200d067fe62b9c4b0b9318c7bedde63ab122260110f8c7d7c514b0c7115",
+      "reports\\niveis_popularidade_200k_v1\\previsoes\\metricas_categorizadas.csv": "443a13b91ad66261c230e81982b62140bea1bac8dc972a00e828a0e1d1f3740e",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\metricas_externas.csv": "c3e341f922f96f3d41f45649d77678cb1905bed51535b66d907d5a28d5c36f08",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\matrizes_confusao.csv": "67af9f4786bf90abfb9a4b2352cddfe01691ccada956350fa0e29497c5660f70",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\metricas_por_classe.csv": "3a60403d61788d6e236fd9729c3e3347dc6353b3661fe0910a86fc679dcfd7cb",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\selecoes_internas.csv": "3da8187a39650e2d12696d3a8fa023485c40932024b87bb396342d6db61dd3cc",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\calibracao_descritiva.csv": "5eb816efd1aa9076eee92f14934632287c265c4f5f91d6b0e7765db625cca845",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\parts\\outer0_deep.json": "6810c95b7d933895c1248d853b194abb0649daad4f4f347f54e6b7e42276843c",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\parts\\outer0_deep.joblib": "b8a7ba4559d0d087243e021f8efd72749fa5d29c34c6a5ac54efd8ec9ee71174",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\parts\\outer3_deep.json": "c14b65e6fc09571bbe2956acb36837e1ef254ad4e8cad407a08b4ad31a08e4c4",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\parts\\outer3_deep.joblib": "4b71bd16a50cc1a3c246e8c67beefc22c32bce749358bd1b2d9dfc5312ede9fb",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\parts\\outer3_combined.json": "5d1d84833fccf0cdadb8dcc68591eeb98731c78dfabe3a646eab398289ccdc7c",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\parts\\outer3_combined.joblib": "4c8a150306349e7f4e62fb4203f49cb84a412f3a29efb5178b1b08f1f1fd0537"
+    },
+    "classification_signature": "681ce2037856f2fa17843dde0e0cb032aaf8e0dfa40cf373aa8a03de98fb01f3"
+  },
+  "source_rows": 77535,
+  "classification_models_trained": false,
+  "individual_prediction_rows_read": 0,
+  "confusion_metrics_reconciled": true,
+  "selected_pca_parts": 3,
+  "total_outer_model_parts": 20,
+  "selected_alpha_counts": {
+    "0.001": 20
+  },
+  "selected_pca_model_files_read": 3,
+  "delta_combined_baseline_balanced_accuracy_pp": 1.3877675653378607,
+  "delta_combined_deep_balanced_accuracy_pp": 0.13041381801480734,
+  "confidence_intervals_computed": false,
+  "proportional_odds_formally_tested": false
+}

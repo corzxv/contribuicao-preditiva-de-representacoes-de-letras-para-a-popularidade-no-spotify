@@ -1,0 +1,49 @@
+{
+  "completed": true,
+  "n_pilot_tracks": 100,
+  "eligible_tracks": 4155,
+  "counts": {
+    "compatible_source_instrumental_no_text": 1,
+    "limite_da_busca": 1,
+    "sem_candidato_compativel": 5,
+    "sem_resultados": 93
+  },
+  "http_status_queries": {
+    "200": 100
+  },
+  "candidate_counts_reported": {
+    "0": 93,
+    "1": 5,
+    "2": 1,
+    "20": 1
+  },
+  "first_query_utc": "2026-11-07T22:30:01.465506+00:00",
+  "last_query_utc": "2026-11-07T22:32:02.630459+00:00",
+  "between_first_and_last_query_seconds": 121.164953,
+  "by_local_diagnostic": {
+    "no_candidates_under_these_methods": {
+      "sem_resultados": 36
+    },
+    "same_artist_other_title": {
+      "compatible_source_instrumental_no_text": 1,
+      "limite_da_busca": 1,
+      "sem_candidato_compativel": 4,
+      "sem_resultados": 51
+    },
+    "same_title_other_artist": {
+      "sem_candidato_compativel": 1,
+      "sem_resultados": 6
+    }
+  },
+  "confirmed_before_and_after": 3844,
+  "upper_one_sided_exact_95pct_same_protocol_yield": {
+    "method": "hipergeometrica, inversao de P(X=0) em AAS sem reposicao",
+    "max_tracks": 121,
+    "proportion": 0.029121540312876053,
+    "assumption": "Resposta fixa para cada faixa sob o mesmo endpoint, janela e regras. O evento é produzir candidata pelo protocolo, não ter letra disponível."
+  },
+  "manifest_sha256": "e98bb4bd33e3db67e31744708a4217237193acfd341cf105eb2d83f698552b9c",
+  "state_sha256": "25f0f484c471aec2bd92a2f7a32dc863f5e21fb92d36875618751147c837d193",
+  "source49_summary_sha256": "0a6c6a9545989ab37698b21cd206735dc0784bc3b985a1c5fdadbaa58460a86e",
+  "source49_code_sha256": "0ccbe2e675864e12ce6cd65a2617c318033789601ee65bfaa787a6dc987cc3b0"
+}

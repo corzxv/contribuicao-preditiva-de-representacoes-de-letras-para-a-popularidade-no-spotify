@@ -4,6 +4,706 @@ Este é o registro canônico equivalente a `DECISOES_METODOLOGICAS.md` solicitad
 na consolidação. Não criar outro histórico paralelo. Contexto em
 `CONTEXTO_TCC.md`, estado em `ESTADO_ATUAL.md`.
 
+## D-049 — Publicação e nome do repositório (16/11/2026)
+
+O pesquisador confirmou que o ZIP da D-048 compilou no Overleaf e autorizou
+a publicação da edição e a renomeação do remoto para o título da monografia.
+O nome no endereço usa letras minúsculas, sem acentos e com hífens. O README
+usa o título integral e reúne monografia, protocolo, métricas e reprodução.
+
+A seleção inclui código e testes, documentação, agregados que sustentam o
+estudo, PDF, ZIP e fontes LaTeX da D-048. Cópias editoriais intermediárias
+inéditas e o pacote local de preservação ficam fora do commit. Os arquivos
+já publicados e as sementes científicas históricas são preservados.
+O repositório segue privado, no ramo master.
+
+## D-048 — Edição otimizada para Overleaf e semente 42 (16/11/2026)
+
+O pesquisador solicitou reduzir o custo de compilação, retirar créditos
+repetidos e reduzir espaços entre figuras. O pacote passou de cerca de
+3,05 MB para 1,25 MB, com os mesmos arquivos e figuras otimizadas. As figuras
+6 e 7 estão lado a lado. Compilação limpa do ZIP com Tectonic/XeTeX e
+BibTeX em cerca de 5,4 segundos, ante 15,1 segundos da D-047 no mesmo
+ambiente. O tempo no servidor Overleaf ainda não foi medido.
+
+Semente 42 passa a ser o padrão de novas execuções estocásticas. O script
+58 recalculou os percentis do bootstrap de 8.000 réplicas com 42, mantendo
+os contrastes pontuais e a leitura dos limites. As seleções de D-031 e
+D-043, com sementes de execução 20261106 e 20261108, e a avaliação selada
+de 57 foram preservadas. A opção `--semente 20261113` em 58 permite
+reproduzir os limites das edições anteriores em uma pasta separada.
+Não houve publicação no GitHub nesta etapa.
+
+## D-047 — Revisão da estrutura da monografia (13/11/2026)
+
+A pedido do pesquisador, as análises descritivas, a PCA, o dimensionamento,
+a vinculação e as definições das representações passam ao corpo do texto.
+Resumo em português em página própria e palavras-chave conforme o template
+e o exemplo de Ana. A etapa histórica entra na narrativa apenas como parte
+da proveniência e da exposição prévia, com a edição anterior preservada.
+
+59 conferiu os selos e os IDs do sorteio, da coorte e da vinculação original.
+A coorte classificada de 9.526 faixas contém 461 IDs do sorteio inicial e
+9.065 de fora dele. Os formatos são 3.726 letras só simples e 5.800 com
+ambas as formas nos registros de origem, por faixa Spotify. O resultado
+refere-se à coorte e não aos 33.714.178 registros do dump. As métricas
+de 57 e a interpretação condicionada de 58 foram mantidas.
+
+O ZIP foi compilado de uma extração limpa e o PDF revisado visualmente.
+Artefatos e hashes em reports/verificacao_monografia_template_revisada.json.
+
+## D-046 — Monografia final para revisão (13/11/2026)
+
+O pesquisador autorizou a consolidação editorial e o uso das previsões
+existentes. A monografia incorpora o dicionário e a exploração do catálogo,
+o dimensionamento probabilístico e a cobertura seletiva. A análise principal
+é a classificação ordinal nas 9.526 faixas sorteadas dentro do quadro de
+80.943 vínculos aceitos. Os pesos de um quadro não substituem os do outro.
+As avaliações de 77.535 faixas são mantidas em apêndice como histórico.
+
+58 validou o hash das probabilidades externas e reproduziu a acurácia
+balanceada. Calculou 8.000 réplicas de bootstrap pareado por componente,
+com previsões fixas, semente 20261113 e limites percentílicos marginais.
+Todos os contrastes de acurácia balanceada apresentados incluem zero.
+O resultado para sensibilidade alta descreve uma redistribuição de erros.
+Os limites não representam a variabilidade dos treinos e da seleção.
+
+A entrega usa o template institucional e mantém os objetivos na introdução.
+O ZIP e o PDF são versões distintas da V3 preservada. A compilação foi
+testada a partir do ZIP extraído e o PDF passou por revisão visual. Nenhuma
+nova busca, geração de embeddings ou treinamento foi executada.
+
+## D-045 — Classificação concluída e verificada
+
+57 concluiu a avaliação agrupada das 9.526 faixas. A acurácia balanceada
+foi de 56,14% no Baseline, 56,24% no Tradicional, 55,91% no Profundo e 55,96%
+no Combinado. Na classe alta, as sensibilidades do Baseline e do Profundo
+foram 26,25% e 31,07%. São diferenças de desempenho observadas no procedimento
+avaliado. A interpretação por classe e a sensibilidade ao peso de desenho
+constam em reports/classificacao_9526_v1/interpretacao_resultados.md.
+
+## D-044 — Classificação na amostra de 9.526 faixas com letra
+
+O pesquisador autorizou a modelagem da candidata v2 com quatro conjuntos
+de preditores. A resposta tem níveis baixo (0–19), médio (20–39) e alto
+(40–100). 57 usa logística ordinal com penalização L2 e divisão agrupada
+5×3 construída na amostra atual. A grade de penalização tem quatro valores
+e o pré-processamento principal usa as covariáveis diretamente. A acurácia
+balanceada das previsões externas é a métrica principal. Os pesos da
+candidata entram na análise de sensibilidade. O alcance é o conjunto de
+faixas com letra verificada.
+
+O protocolo em docs/protocolo_classificacao_9526_v1.md registra a composição
+da amostra, a sobreposição com a coorte histórica e seus quatro blocos.
+O diagnóstico real de preparação verificou 6.271 componentes, com 9.018
+vetores reutilizáveis para 9.500 textos distintos. Treino manual pendente.
+
+## D-043 — Conferência de 55 e candidata v2 (13/11/2026)
+
+55 terminou com 179 vínculos entre 22.443 consultas. Selos, equivalência
+entre checkpoint e Parquet e correspondência com gravações e textos
+originais foram verificados. Para 166 faixas, a diferença de duração foi
+de até dois segundos. As outras 13 ficaram dentro da margem de dez segundos.
+O quadro ampliado tem 80.943 IDs distintos.
+
+56 revisou a alocação por restrições de capacidade. Mantém os totais das
+cinco bandas de popularidade, prioriza a redistribuição proporcional das
+vagas e minimiza desvios nas células observadas. A seleção é aleatória
+sem reposição dentro das células. Todos os 9.526 textos foram rechecados
+por hash. `sleep` tem 23 dos 147 previstos e `indie-pop` tem 81 dos 82.
+9.033 faixas pertenciam à coorte histórica de modelagem. Os pesos da nova
+candidata referem-se ao quadro observado de vínculos aceitos.
+
+Em `sleep`, 55 encontrou 18 letras em 13.983 consultas. Uma inspeção de
+48 das 680 faixas fora dos índices, por chave nativa de artista, título
+e duração, encontrou 17 registros compatíveis marcados como instrumentais
+e zero campos de letra compatíveis. O diagnóstico tem escopo de verificação
+local por chave exata. O uso analítico da candidata depende da definição do
+domínio e do tratamento da exposição histórica com o pesquisador.
+
+## D-042 — Revalidação de caches e recuperação dirigida (13/11/2026)
+
+53 revalidou 42 de 43 consultas históricas. Aplicou o hash da fonte, a
+identidade da consulta e as regras atuais de compatibilidade e concordância
+textual. Um vínculo de `guitar` ficou incompatível. O quadro potencial
+passou de 80.722 para 80.764 faixas. `minimal-techno` alcançou capacidade
+de 151 para a cota de 125. As cotas ainda deficitárias somam 205 vínculos.
+
+54 triou `sleep`, `romance` e `detroit-techno` no catálogo selado. A lista
+contém 22.443 consultas distintas de faixas fora dos sorteios de 200 mil e
+9.526, com artistas nos índices existentes. 55 usa a regra textual de 50 e
+registra os desfechos e a capacidade resultante. A execução real é manual.
+A decisão sobre o quadro final considera esse resultado, a exposição anterior
+e o domínio da avaliação.
+
+## D-041 — Candidata de 9.526 faixas com vínculo textual (07/11/2026)
+
+O pesquisador fixou o requisito de 9.526 faixas com letra vinculada e pediu
+explorar outras faixas e fontes. 52 combinou 77.535 faixas da coorte histórica
+e 3.869 aceitas do sorteio menor. As 682 duplicatas conferiram em metadados e
+hash, resultando em 80.722 IDs elegíveis. Houve sorteio estratificado de uma
+candidata de 9.526, com textos não vazios e hashes conferidos. O desenho é
+condicional a esse quadro observado e preserva os totais das bandas de
+popularidade do sorteio inicial. Quatro cotas de gênero excedem a capacidade
+disponível. A avaliação definitiva, o alcance de inferência e o tratamento da
+exposição anterior precisam ser acordados antes de modelar. A comparação e
+as fontes potenciais estão em docs/amostra_com_letras_candidata_v1.md.
+
+## D-040 — Recuperação local conferida e cobertura consolidada (07/11/2026)
+
+50 real concluído pelo pesquisador, com 25 aceitações em 40 consultas por
+limite. Checkpoint, chaves, selos e hashes verificados. As 25 letras foram
+conferidas por ID no dump com leitura pontual. O complemento altera apenas
+as 25 faixas aceitas. Os 15 demais casos mantêm o status-base, com desfechos
+da revisão registrados à parte, incluindo duas indicações instrumentais.
+
+51 reconciliou os complementos disjuntos de 46, 47, 48 e 50 ao resultado 43,
+preservando os campos originais, pesos e faixas do sorteio. Total de 3.869
+aceitas (40,62%; 40,63% com os pesos do sorteio). Cobertura de 29,99% em
+popularidade 0–19 e 60,75% em 40–59. Os dois gêneros sem letras aceitas foram
+detroit-techno e sleep. O domínio observado apresenta seleção por metadados e
+popularidade. O próximo passo é decidir o domínio da avaliação com o
+pesquisador, mantendo os resultados acadêmicos anteriores separados.
+
+## D-039 — Resultado do piloto online e revisão dos limites locais (07/11/2026)
+
+49 real concluído pelo pesquisador. As 100 respostas foram HTTP 200. Houve
+93 vazias, cinco sem candidato compatível, uma indicação instrumental e uma
+resposta no teto. Zero candidatas e 3.844 letras aceitas no conjunto local.
+O limite superior unilateral exato de 95% para o rendimento do mesmo
+protocolo é 121/4.155 (2,91%), pela hipergeométrica de uma AAS sem reposição,
+sob a hipótese de resposta fixa no período. O evento avaliado é produzir
+candidata segundo as regras do piloto. A rodada online fica encerrada com
+esse protocolo. A indicação instrumental continua registrada como desfecho
+do piloto, com o status local de origem preservado.
+
+Entre as 1.110 ambiguidades, 40 foram barradas pelo teto de 500 resultados
+da chave antes da elegibilidade. Em sete consultas inspecionadas, seis
+tinham 1 a 457 compatíveis e uma tinha zero. A etapa 50 antecipa a filtragem
+pelos mesmos critérios de metadados. O teto de leitura de 2.500 metadados
+e o de 500 elegíveis exigem conjunto completo antes de aceitar texto.
+A execução real continua manual com SSD D: e saída incremental separada.
+
+## D-038 — Piloto online nas pendências sem candidato (07/11/2026)
+
+O pesquisador autorizou testar a API atual do LRCLIB antes de expandir a
+recuperação. Seleção aleatória simples sem reposição de 100 das 4.155 faixas
+sem candidato após 48, semente 20261107. O tamanho é operacional para o
+piloto e a taxa se refere a essas pendências. O manifesto foi selado antes
+das consultas, com 100 consultas distintas.
+
+Somente a busca GET `/api/search`, com artista e título. O controle local
+exige identidade, participações, versão e diferença de duração de até dois
+segundos, além de consistência textual sob as regras de 46–47. Retornos no
+teto de 20 ficam inconclusivos. A API pode trazer tanto novos registros
+quanto registros alcançados por outro mecanismo de busca. Atribuir a origem
+do ganho exige comparação posterior com o dump.
+
+Resultados positivos são candidatos provisórios até a conferência. Falhas
+operacionais são pendências separadas. Execução real manual, em série e
+retomável. Nove testes e um fluxo com respostas simuladas passaram.
+
+## D-037 — Revisão plain/LRC conferida e variantes documentadas (07/11/2026)
+
+47 real concluído pelo pesquisador em 3,64 s. Das 108 consultas, 58 foram
+aceitas, 29 mantiveram divergência plain/LRC e 21 mantiveram diferenças entre
+candidatos. Conferência de hashes, originais e vínculos confirmou 3.835 aceitas.
+
+48 revisou individualmente 13 variantes de grafia por fichas do Spotify e
+catálogos de lançamento. Foram aceitos nove casos com concordância de título,
+versão, crédito essencial e edição, duração a até um segundo e textos elegíveis
+consistentes. A aprovação vale apenas para os pares documentados. Dois casos
+ficaram pendentes por edição insuficientemente identificada e dois por
+participações ausentes no cadastro do LRCLIB. A revisão verifica evidência
+documental de vínculo, sem comparação de áudio ou anotação humana da letra.
+
+Os complementos disjuntos somam 3.844 aceitas (40,35%; 40,37% com os pesos do
+sorteio), 1.110 ambíguas, 4.155 sem candidato pelos métodos usados, 416
+instrumentais e uma sem texto. A cobertura foi 29,76% na popularidade 0–19 e
+60,53% em 40–59. Próximo passo em avaliação é testar uma fonte atual em um
+piloto pequeno das pendências, com validação antes de eventual expansão.
+
+## D-036 — Caixa entre representações simples e sincronizada (07/11/2026)
+
+46 real concluído pelo pesquisador em 39,60 s, com 130 novas aceitações nas
+831 consultas e 701 ainda diferentes. Arquivos, hashes de texto, decisões e
+chaves conferidos. Total de 3.777/9.526 (39,65% sem peso e 39,66% com os pesos
+originais). Restam 1.168 ambiguidades, 4.164 sem candidato pelos métodos usados,
+416 indicações instrumentais e uma faixa sem texto. As duas faixas de
+popularidade 0–19 e 40–59 têm coberturas de 29,33% e 59,57%, respectivamente.
+Os pesos do sorteio descrevem a cobertura e as perdas continuam seletivas.
+
+Em 12 das 108 pendências plain/LRC inspecionadas em ordem determinística, cinco
+ficaram inteiramente equivalentes com a normalização de 46 aplicada também ao
+par simples/sincronizado do mesmo candidato. Outras quatro mantiveram conflito
+plain/LRC e três mantiveram diferenças entre candidatos. A inspeção é dirigida.
+Com essa evidência, 47 reaplica caixa, espaços e tipografia apenas a esse tipo
+de conflito. Todos os candidatos elegíveis passam pelas mesmas regras de
+metadados e pelo analisador LRC vigente. O original aceito é preservado, com
+vínculos em complemento. Execução real manual pendente, SSD D:.
+
+## D-035 — Continuidade da recuperação e comparação de caixa (07/11/2026)
+
+O pesquisador escolheu continuar a recuperação antes de modelar. 44 concluiu
+4.164 diagnósticos em 137,64 s. Houve 13 consultas com variação de artista,
+16 pares para revisão e 332 consultas com truncamento por limite de registros.
+Conferência pontual dos 13 casos encontrou pelo menos um registro com campo
+textual preenchido por consulta. Fichas privadas guardadas para validar o vínculo.
+
+45 concluiu a consolidação leve das 9.526 linhas de metadados. As 3.647 aceitas
+têm popularidade média 24,156, energia 0,686 e instrumentalidade 0,108. As
+médias do catálogo são 18,383, 0,640 e 0,252. A descrição condicional ponderada
+também está disponível. A seleção permanece uma limitação do domínio com letras.
+
+Inspeção de doze ambiguidades por textos concorrentes identificou cinco com
+igualdade após uniformização de caixa, espaços e tipografia vigente. O agente
+escolheu essa comparação restrita para a revisão 46, com evidência caso a caso.
+A elegibilidade de metadados e os conflitos plain/LRC continuam avaliados pelo
+classificador de origem. A comparação conserva acentos, ordem das palavras e
+pontuação além da tipografia preexistente. A saída guarda o texto original e
+registra os vínculos em complemento separado. A execução de 831 consultas é
+manual e está pendente. Sete verificações sintéticas aprovadas. Guia
+execucao_revisao_caixa_nova_amostra_v1.md.
+
+## D-034 — Revisão conferida e diagnóstico nativo das chaves (06/11/2026)
+
+43 real concluído pelo pesquisador/conferido: 3.647 aceitas, ganho de 2.222,
+1.298 ambíguas, 4.164 sem candidato, 416 instrumentais, uma sem texto, zero
+erro/pendência. Preservadas 1.425 aceitas/362 instrumentais de 42; 54 ambiguidades
+viraram indicação instrumental. Tempo 41,79 s, sem rebuild. Taxa sem peso 38,28%,
+ponderada 38,30%; não é prova de representatividade ou revisão humana dos vínculos.
+
+Transições: 1.614 aceitações após bloqueio plain/LRC e 608 após veto de versão.
+Motivos restantes: 831 textos concorrentes, 153 versões sem elegível, 152
+metadados, 108 plain/LRC, 40 limites, oito instrumental/texto e seis formatos.
+Oito casos do primeiro motivo inspecionados pontualmente; diferenças persistiram
+após whitespace. Não inferir que todos os 831 sejam conflitos semânticos reais.
+Cobertura por popularidade/gênero continua desigual; não transportar margem do
+sorteio completo ao subconjunto textual ou interpretar pesos como correção de perdas.
+
+Doze consultas sem candidato inspecionadas por metadados e índices nativos,
+com limites temporais/numéricos. Um exemplo &/and, mesmo título/duração próxima;
+título de outra consulta apareceu com artistas diferentes. Nenhuma aceitação
+decorrente dessas inspeções; não extrapolar suas frequências aos 4.164.
+
+44/native_lookup_audit.py preparado para diagnóstico manual dos 4.164, usando
+índices B-tree de nome/artista e FTS5 existentes. Sem varredura/rebuild ou corpo
+de letra. Consultas parametrizadas, duração ±10 s, cem registros por método,
+cinquenta salvos, dois segundos totais por consulta; truncamentos explícitos.
+Classificação de indícios não aceita aliases/covers nem modifica status. Mesmo
+artista/outro título ou mesma duração não prova mesma faixa. Sem popularidade,
+gênero/peso ou similaridade aproximada para aceitar. Referência técnica oficial
+SQLite no guia execucao_diagnostico_chaves_nova_amostra_v1.md.
+
+Três testes sintéticos/lint aprovados: &/and como indício, outro artista como
+não vínculo, limites e retomada preservando 43. Execução real 44 pendente. Após
+resultado, justificar recuperação/revisão dirigida. Não iniciar modelagem por
+ter atingido um número de aceitas ou aumentar cobertura sem critério.
+
+## D-033 — Auditoria e correção de dois bloqueios indevidos (06/11/2026)
+
+42 executado pelo pesquisador: 1.425 aceitas, 3.574 ambíguas, 4.164 sem candidato,
+uma sem texto, 362 instrumentais, zero erro/pendência. O pesquisador questionou
+a baixa recuperação e o significado de instrumental. Indicação vem do LRCLIB
+e ausência de texto nos candidatos compatíveis; 87 herdadas/275 novas, sem uso
+da instrumentalness Spotify ou confirmação humana. Preservar o sorteio.
+
+Auditoria leve do estado 42 (9.526 decisões, agregação SQL com limite temporal)
+identificou 2.139 plain_synced_conflict e 1.176 positive_version_conflict. Dez
+consultas do primeiro motivo, em ordem determinística de hash, foram examinadas
+por ID no dump; todas coincidiram após whitespace/tipografia, sem mudar palavras,
+ordem, pontuação ou capitalização. Não é validação probabilística das 2.139.
+Das versões, 1.023 tinham candidato já elegível; outra versão vetava a consulta.
+Agente reconheceu a falha ao reutilizar esses filtros sem diagnosticar o efeito.
+
+Correção fundamentada no comportamento e em exemplos, não em escolher regras
+por desempenho preditivo. Novo VERSION nova-amostra-matching-v2, sem alterar
+bytes, resultados ou protocolos 200k/42. Duas mudanças: ignorar diferença apenas
+de whitespace entre plain e extração LRC quando igualdade exata for comprovada
+em cada candidato; excluir candidatos incompatíveis quando há candidato
+plenamente compatível, eliminando veto global por outra versão. Preservar
+conflitos substantivos, qualificadores, convidados, duração e limite operacional.
+Não usar similaridade aproximada, fingerprint flexível ou popularidade para aceitar.
+
+43 preparado/testado em quatro verificações sintéticas; execução real manual
+pendente. Alvos: 2.139 + 1.023 = 3.162 consultas, pelos índices prontos. Sem
+rebuild, varredura de metadados ou nova amostra. Textos originais e 1.425
+aceitas/362 instrumentais protegidos. 4.164 sem candidato/153 versões sem elegível
+e demais causas permanecem fora da correção; investigar separadamente.
+Não prometer que todos os alvos virarão aceitos. Guia revisao_bloqueios_vinculacao_v2.md.
+
+Nenhuma reavaliação integral real, nova letra aceita, treino, embedding, PDF ou
+publicação pelo agente; inspeções textuais limitadas, sem divulgar corpos.
+
+## D-032 — Cache conferido e preparação da busca local (06/11/2026)
+
+41 executado pelo pesquisador; resumo e hashes conferidos. 9.526 consultas,
+682 aceitas, 87 instrumentais, 8.757 pendentes; zero erro/insuficiência de
+metadados, 30,32 segundos. Não usar os 7,16% de cache como cobertura final.
+Amostra, pesos, dados e resultados históricos mantidos.
+
+Avança a recuperação autorizada por D-029/030. 42/new_sample_local.py preparado
+para execução manual no SSD. Índice v2 real inspecionado só por meta/schema/
+EXPLAIN e lista selada: completo, 33.714.178 registros históricos percorridos,
+5.726.985 entradas/24.330 chaves de artista, mesmo código e identidade de dump.
+Nenhuma faixa/letra real foi consultada pelo agente nesta preparação.
+
+Reutilizar esse índice, cuja normalização corresponde à classificação v2,
+em vez de assumir compatibilidade de índices antigos de normalização diferente.
+A execução determina artistas não cobertos, registra a lista e só então cria
+complemento separado/retomável para eles. Uma passagem de metadados pode ser
+necessária; não reconstruir índices existentes, duplicar dump ou gerar índice
+para toda a população Spotify. Trabalho pesado permanece manual.
+
+Preservar 682 aceitas/87 instrumentais de 41 e todos os sorteados. Reutilizar
+também negativas somente se decorrentes de busca controlled_lookup v2 completa,
+sem limite operacional, da mesma consulta/snapshot/código, com origem comprovada.
+Outras negativas e consultas novas seguem para busca; regras, tolerância e
+conflitos de versões/textos não são relaxados. Ausência continua restrita às
+chaves controladas no snapshot, sem alegar inexistência universal de letra.
+
+Novos checkpoints por consulta, complemento por lote. Evidência não aceita
+guarda IDs, metadados e hashes, sem duplicar corpos; candidatos recuperáveis
+do dump por ID. Aceitas mantêm plain/synced originais e texto efetivo separado.
+Nenhuma seleção usa popularidade/gênero/pesos; estes entram só na descrição
+posterior. Nenhuma substituição de faixas ou decisão de modelagem.
+
+Quatro testes em dump sintético de nove registros e lint aprovados, com
+retomada, preservação dos vínculos, complemento e controle de versões. Execução
+real 42 ainda pendente; guia execucao_busca_nova_amostra_v1.md. Não houve
+varredura real, nova letra real, treino, embedding, PDF ou publicação pelo agente.
+
+## D-031 — Sorteio conferido e reaproveitamento dirigido de cache (06/11/2026)
+
+Pesquisador executou 40 sortear; conferidos resumo concluído, hash do plano,
+Parquet e agregados. 9.526 faixas, 82 gêneros, soma dos pesos 1.159.764 com erro
+numérico 2e-10. Agente não repetiu sorteio, CSV ou processamento individual.
+Doze médias: máximo desvio absoluto 0,01901 DP; maior desvio por período
+0,4050 pp. Gêneros ponderados coincidem por construção, sem teste independente
+de representatividade. Manter o sorteio; diferenças não justificam reamostragem.
+
+Interpretados dispersões e quantis além de médias; não alegar igualdade de
+distribuições. Duração/speechiness têm DP amostral cerca de 3,6% menor. Relatório
+interpretacao_nova_amostra_catalogo_v1.md e duas figuras PNG/SVG produzidos de
+agregados e inspecionados. Metas de dimensionamento não corrigem futura seleção
+de letras nem estabelecem suficiência preditiva.
+
+Próximo passo autorizado no plano é recuperar letras: começar pelo reaproveitamento
+**exato** de decisões v2/v1. 41/sample_cache_reuse.py preparado/testado (seis
+verificações sintéticas), execução real manual pendente. O agente inspecionou
+somente schemas/planos de acesso/metadados dos caches (1,04/6,20 GB, WAL vazio);
+nenhum texto real ou consulta de faixa foi lido. Não recalcular hash integral
+dos bancos só para esta preparação: caminho/tamanho/mtime registrados e hashes
+de cada texto importado conferidos durante a execução.
+
+Reuso exige mesma consulta completa e fingerprint, duração/qualificadores,
+integridade do texto efetivo e vínculo ao ID LRCLIB. Decisão exata v2 tem
+prioridade; v1 somente na ausência da consulta no v2. Nunca usar v1 para contornar
+uma decisão v2. Não transferir apenas por track_id ou chave de composição.
+Sem nova aceitação por critérios relaxados ou releitura massiva do dump.
+
+Aceitações/instrumentais anteriores ficam como decisões herdadas, sem alegar
+revisão humana. Casos não aceitos, erros e ausência no cache ficam distintos;
+negativa antiga não vira ausência de letra. Todos os sorteados e pesos continuam
+no resultado; nenhuma substituição de perdas. Checkpoint novo por consulta,
+campos originais intactos, textos privados separados de agregados públicos.
+Conclusão desta passagem não é conclusão integral da recuperação. Não houve
+busca no SSD/rede, índice novo, encoder, treino, PDF ou publicação.
+
+## D-030 — Preservação acadêmica e nova amostra dimensionada (06/11/2026)
+
+Pesquisador solicitou guardar os resultados da monografia e avançar. Pacote
+local de 430 arquivos/16.872.772 bytes concluído em
+reports/preservacao_monografia_20261106, com PDFs/fontes/tabelas/figuras e
+agregados históricos/descrição nova; originais preservados, hashes/CRC de cada
+membro conferidos. Retrato da documentação incluído; não é backup externo ou
+publicação. Bases, letras, vetores/modelos não foram duplicados.
+
+Sob autonomia D-029, adotadas metas de planejamento antes do novo sorteio:
+proporção global com margem individual aproximada de 1 pp/95%, e doze médias
+de metadados com margem até 0,05 DP/confiança conjunta aproximada 95% usando
+Bonferroni. Metas são decisões do estudo, não números impostos pela literatura.
+Fundamentação: Cochran (1977), capítulos 3–5, e Statistics Canada (2010),
+capítulos 6–8; fontes verificadas e fórmulas em plano_nova_amostra_catalogo_v1.md.
+
+Desenho: AAS sem reposição independente nos 82 gêneros, alocação proporcional
+com maiores restos/empate alfabético, π=n_h/N_h e peso=N_h/n_h; semente20261106.
+Gênero fundamentado pela descrição; precisão usa todos os doze metadados,
+incluindo BPM, sem depender exclusivamente da PCA. Perfis de BPM reconciliados
+com reinserção dos 1.199 zeros documentados, sem excluí-los do cadastro.
+
+Primeiro tamanho inteiro que atende às metas nesse algoritmo: **9.526**, com
+5–179 por gênero. Cenários de 2/1,5 pp: 3.195/4.254. Margem escolhida efetiva
+0,999974 pp; maior margem conjunta das médias 0,028874 DP. Não se declara
+ótimo global, igualdade de distribuições, precisão por gênero/cauda extrema,
+precisão preditiva ou quantidade de letras garantida. Margem de proporção é
+individual; não conjunta com todas as características. Aproximação normal e
+resposta completa explicitadas. Perdas na recuperação exigirão diagnóstico e
+hipóteses próprias para eventual inferência além do domínio observado.
+
+40/sample_redesign.py preparado, quatro verificações sintéticas e lint aprovados;
+dimensionamento real executado pelo agente só em agregados (sem CSV individual).
+**Sorteio real pendente manual**, um comando `40_preparar_nova_amostra.py sortear`.
+Saídas em pastas novas, vinte campos originais preservados, comparativos sem
+ressorteio para melhorar aparência e nenhuma busca/modelo embutidos. Não altera
+amostra antiga, pesos D-017, folds, modelos, selos ou PDFs. Próximo consumidor:
+organizar recuperação das selecionadas com reaproveitamento de evidência compatível.
+
+## D-029 — Descrição inicial e novo dimensionamento amostral (06/11/2026)
+
+Pesquisador definiu expressamente a sequência que passa a orientar o trabalho:
+descrição completa do catálogo original, com dicionário/distribuições/gênero/
+período/relações/PCA; dimensionamento de uma nova amostra menor com técnica
+estatística fundamentada; busca das letras sorteadas; modelagem a decidir depois.
+Descritiva é parte inicial para apresentar os dados, não o centro do TCC.
+Não desviar para novos treinos, classificação ou cruzamento integral automático.
+Resultados anteriores e PDFs permanecem preservados.
+
+Autonomia autorizada para preparar esse trabalho, com execução integral manual
+pelo pesquisador. Fluxo simples: um comando de descrição; nenhum smoke obrigatório
+ou rodada de treinamento. Linguagem escolhida: Python, no ambiente existente.
+Script 39/catalog_description.py preparado: todos os campos, perfis e relações,
+PCA das dez contínuas acústicas/duração, com ano/gênero para contextualização.
+Popularidade é descrita também em log1p, sem mudar resposta de modelos.
+Registros inválidos permanecem na população e são contados; casos completos
+apenas nas análises multivariadas, com denominadores explícitos.
+
+Não foi fixado tamanho ou método da nova amostra: a escolha virá depois da
+descrição, fundamentada em livro/artigo e critérios de confiança/precisão e
+composição. Nenhuma probabilidade de recuperação ou representatividade textual
+é garantida pelo tamanho. A escolha efetiva e o tratamento de perdas serão
+documentados na etapa própria, sem impedir o trabalho descritivo atual.
+
+Preparação inicial: execução real 39 estava pendente, com conferência sintética
+e lint concluídos. Nenhuma leitura integral pelo agente. Guia:
+docs/execucao_descritiva_catalogo_completo_v1.md.
+
+### Conclusão real da descrição e encaminhamento
+
+Pesquisador executou 39; resumo concluído em 1.159.764 faixas/vinte campos/
+82 gêneros e 32,71 s registrados. Conferidos 44 arquivos por hash, totais de
+categorias e histogramas, 36 eta² e 100 coeficientes de PCA; treze figuras reais
+inspecionadas. Matrizes agregadas reproduzem a PCA até erro numérico <4e-15,
+sem releitura de linhas individuais ou recalcular PCA no catálogo.
+
+Gênero apresenta eta² de 45,99% para energia, 51,76% para acousticness e 8,50%
+para BPM, fundamentando estudar estratificação sem presumir balanceamento total.
+PCA de dez contínuas em 1.158.565 casos completos: 44,35% em dois eixos,
+57,85% em três, 95,66% em oito; não descreve clusters ou variância do alvo.
+Tempos zero (1.199) permanecem na população, fora apenas do cálculo multivariado.
+Log1p mantém zeros e muda assimetria de +0,8100 a -0,7947: não apresentar como
+solução demonstrada para simetria.
+
+Interpretação concluída para a parte inicial do TCC, sem editar a versão 3.
+Próximo: dimensionamento/alocação multivariada de uma amostra menor, com metas
+e fontes explícitas. Nenhum desenho ou n adotado ainda. Não repetir treino,
+busca ou recuperação por continuidade automática. Relatórios:
+interpretacao_descritiva_catalogo_completo_v1.md e
+verificacao_descritiva_catalogo_20261106.json.
+
+## D-028 — Monografia consolidada com extensão ordinal (06/11/2026)
+
+Após a conclusão/conferência de 36/37, pesquisador autorizou gerar nova versão
+acadêmica. Entrada passa a reports/monografia_template_200k_v3/main.tex, com
+PDF de 45 páginas e ZIP completo para Overleaf/XeLaTeX/BibTeX. Objetivos integrados
+à introdução, mantendo a narrativa catálogo → amostragem → LRCLIB → domínio aceito.
+Regressão original, extensão ordinal/PCA e sensibilidade posterior são distinguidas;
+não substituir resultado principal pela alternativa de maior AB. Ganho textual
+modesto, custos de decisão, chances proporcionais, grade finita, exposição
+histórica e limites de cobertura/inferência permanecem explícitos.
+
+Catorze tabelas, sete figuras, 34 equações e 32 referências originais; cinco fontes
+acrescentadas/conferidas em editoras/periódicos/autores para ordinal/PCA/perdas.
+Nenhum TCC citado como autoridade científica. Script 38 gera quatro tabelas e
+copia duas figuras somente de agregados leves; textos TeX editáveis, sem dados
+individuais ou novos ajustes. Versões anteriores e fontes seladas conferidas por
+hash. Compilação real, ZIP extraído/recompilado, páginas revisadas, sete testes
+e lint aprovados. Evidência: reports/verificacao_monografia_template_200k_v3.json.
+Próximo trabalho é revisão acadêmica com o orientador, sem experimento automático.
+Não foi feito commit/push nesta entrega editorial.
+
+## D-027 — Produção ordinal concluída e sensibilidade da decisão (05/11/2026)
+
+34 real concluído pelo pesquisador: vinte partes ordinais/cinco referências,
+480 ajustes internos, 77.535 probabilidades por variante e zero pendências.
+Hashes das 25 partes/arquivo global e checksums internos conferidos, sem refit.
+Máximo interno 311 iterações, gradiente 9,99e-7 e zero avisos registrados.
+
+BA principal 59,19/59,69/60,45/60,58% em Baseline/Tradicional/Profundo/Combinado.
+Ganhos Combinado−Baseline +1,39 ponto e Combinado−Profundo +0,13 ponto. Sensibilidade
+elevada 40,75%, precisão 72,38%. PCA95 selecionada em 3/20, nove das onze numéricas;
+lambda mínimo da grade em 20/20. Documentar limite sem expandir a grade por
+resultados conhecidos. Sem causalidade, significância ou inferência ao catálogo.
+
+35 analisa somente agregados, reconcilia métricas com matrizes, compara com a
+regressão categorizada e inspeciona parâmetros de três PCA, sem fit/predict novo.
+Resultado ordinal Combinado tem BA apenas +0,16 ponto frente à regressão
+categorizada. Curvas mostram desvios de calibração; chances proporcionais não
+foram formalmente testadas. Resultados atuais preservados como principais.
+
+Sob autonomia D-025, preparar sensibilidade delimitada por problema demonstrado:
+59,25% das elevadas não são reconhecidas pela regra argmax. Regra alternativa
+fixa argmax p(k|x)/pi_k usa proporções do respectivo treino externo e atribui
+importância igual às classes no risco de classificação. Sem otimizar custos no
+teste, retreinar, recalibrar ou normalizar escores como novas probabilidades.
+
+Análise POSTERIOR aos resultados, condicional às probabilidades de modelos cujas
+configurações foram selecionadas para a regra original. Não é CV completa de
+nova pipeline, não substitui retrospectivamente principal nem comprova melhora
+integral do procedimento. Adoção futura como principal exigiria protocolo e
+participação do pesquisador. Mesmas observações/folds; pesos amostrais apenas
+na avaliação de sensibilidade, sem correção automática da seleção de letras.
+
+Script 36 preparado/testado; leitura integral individual é manual. 58 testes
+selecionados e lint aprovados; 35 real concluído, 36 real pendente. Protocolo:
+protocolo_sensibilidade_decisao_ordinal_v1.md; guia de mesmo sufixo execucao_.
+Relatório interpretacao_classificacao_ordinal_200k_v1.md e verificação
+reports/verificacao_producao_ordinal_20261105.json. Não repetir 34.
+
+### Conclusão da sensibilidade e consolidação — 06/11/2026
+
+Pesquisador informou conclusão real de 36; resumos, assinaturas e agregados
+conferidos. 77.535 faixas/21.893 componentes, métricas principais reproduzidas,
+sem treino, mudança de probabilidades ou substituição de resultados principais.
+37 reconciliou as 120 métricas decisórias com 1.080 células e consolidou figuras.
+Somente a cauda delimitada de 128 faixas/96 componentes foi inspecionada em nível
+individual, sem repetir a análise completa da coorte pelo agente.
+
+Combinado: BA 60,58→64,43%, acurácia 65,82→63,09%, sensibilidade elevada
+40,75→71,52%, precisão elevada 72,38→51,75%; Macro-F1 0,6251→0,6208.
+Reconhece mais 3.901 elevadas, com mais 6.485 falsas elevadas; sensibilidade
+intermediária cai de 66,07% a 49,98%. É compromisso de custo, não ganho universal.
+Incremento textual alternativo sobre Baseline +1,16 ponto e sobre Profundo +0,13.
+
+Na cauda observada ≥80, principal/alternativa atribuem nível ≥40 a 119/125 das
+128 faixas; não confundir com detector binário de hits ≥80. Manter regras lado
+a lado e caráter exploratório condicional, sem escolher principal retrospectivo
+pelo resultado externo. Não iniciar mais treinos/coletas sem nova justificativa.
+Próxima ação é consolidação acadêmica em versão nova, preservando PDFs atuais,
+e discussão da utilidade dos erros com o orientador. Nenhum novo comando pesado
+é necessário para esta consolidação. Relatório:
+interpretacao_sensibilidade_decisao_ordinal_v1.md; verificação:
+reports/verificacao_sensibilidade_ordinal_20261106.json.
+
+## D-026 — Classificação ordinal e triagem técnica preparadas (05/11/2026)
+
+Continuidade técnica sob autonomia autorizada em D-025. 31 real tem suporte
+aprovado; 32 v1.1 real concluiu 133 fichas. Triagem 33 concluída apenas nessas
+fichas, sem consultar dump/caches novamente: quarenta casos aceitos, 35 com
+metadados selecionados compatíveis e cinco sem candidato selecionado disponível.
+Não houve revisão semântica humana, estimativa de precisão ou alteração de vínculo.
+Truncamento/limites são inconclusivos, não prova de erro. Não ampliar cruzamento
+integral ou ajustar aceitações automaticamente para tentar melhorar o resultado.
+
+Preparar logística ordinal com chances proporcionais, limiares ordenados e L2,
+quatro blocos, cortes 20/40 e mesmas observações/folds/vetores. Implementação de
+verossimilhança estável e gradiente analítico com SciPy, sem pacote novo. Chances
+proporcionais é hipótese ainda não testada formalmente. Não usar coeficientes
+penalizados como evidência causal ou p-valores convencionais.
+
+Grade técnica definida antes de resultados ordinais reais: lambda 0,001/0,01/0,1/1,
+com/sem PCA95 apenas nas onze numéricas Baseline. Seleção pela acurácia balanceada
+da matriz interna somada, empate favorece penalização maior e ausência de PCA.
+Pré-processamento dentro de cada treino; pesos iguais no ajuste e pesos originais
+somente na sensibilidade da avaliação. Classificação por maior probabilidade, sem
+ajuste de corte no teste. Referência pelas proporções do treino externo.
+
+Script 34 preparado e testado com fixtures. Pesquisador executa primeiro smoke,
+sem métricas científicas globais, com recarga auditada. Depois de conferir saída,
+um bloco de produção mede custo antes de retomar os vinte. Gate/checkpoints por
+assinatura; erro de convergência interrompe, sem trocar família/grade. Sensibilidade
+40/60 continua diagnóstica nesta execução, sem novos treinos automáticos.
+
+53 testes selecionados, incluindo gradiente, verossimilhança independente,
+384 dimensões sintéticas, PCA, retomada e reprodução das métricas, passaram.
+Nenhum treino real pelo agente; 34 real ainda pendente. Fontes/modelos/PDFs da
+primeira regressão preservados. Protocolo: protocolo_classificacao_ordinal_200k_v1.md;
+guia: execucao_classificacao_ordinal_200k_v1.md; verificação em
+reports/verificacao_classificacao_ordinal_20261105.json.
+
+### Smoke ordinal real concluído — 05/11/2026
+
+Pesquisador executou 34 smoke: completed=true, 318 faixas, treino externo 251 e
+avaliação 67, 96 ajustes internos e quatro partes ordinais/uma referência. Recarga
+das quatro probabilidades reproduzida com diferença máxima 0,0; gate aprovado.
+Agente conferiu resumos/selos/hashes/metadados, sem refit ou reprocessar a coorte.
+Métricas globais indisponíveis por desenho; escolhas internas do smoke não são
+conclusões científicas ou razão para alterar grade/PCA. Próximo: lote limitado de
+produção 34 all --limit-outer-blocks 1. Conferência em
+reports/verificacao_smoke_ordinal_20261105.json. Código e protocolo permanecem.
+
+### Primeiro lote ordinal e continuidade integral — 05/11/2026
+
+Primeiro lote real concluído/conferido: Combinado externo 0, 24 ajustes internos,
+reajuste 62.028/15.507 faixas, 1/20 partes e 19 pendentes, tempo registrado 105,42 s,
+sem avisos registrados. Partes/checkpoints/fontes preservados e conferidos pelo
+agente sem refit. Pesquisador pediu poder deixar toda a execução rodando e seguir
+à análise depois; orientar 34 all sem limite, reutilizando o bloco pronto.
+Não ampliar experimentos para ocupar a noite. Métricas globais só após conclusão.
+Registro: reports/verificacao_primeiro_lote_ordinal_20261105.json.
+
+## D-025 — Nova investigação de níveis e vinculação (04/11/2026)
+
+Após reunião com o orientador, pesquisador autorizou condução autônoma do plano
+proposto, mantendo a primeira regressão e a execução manual de trabalhos pesados.
+O escopo autoriza desenvolver uma etapa exploratória nova; não autoriza apagar,
+substituir ou alterar retrospectivamente métricas, modelos, folds e códigos selados.
+
+Escolha técnica nesta delegação: começar nas mesmas 77.535 faixas, sem nova amostra
+ou cruzamento integral. Níveis principais 0–19/20–39/40–100; sensibilidade única
+0–39/40–59/60–100. Reagrupamento de bandas existentes, definido com suporte
+descritivo antes de calcular métricas categorizadas. Limites operacionais, sem
+significado oficial de hit e sem selecionar cortes por melhor desempenho.
+
+Critério primário planejado para classificação: acurácia balanceada; complementos
+por classe, macro-F1, erros extremos e probabilidades/calibração quando houver
+classificador treinado. Pesos iguais no treino; pesos originais só na sensibilidade
+de avaliação. D-017 continua regendo a regressão anterior. Manter grupos/CV 5×3
+quando a coorte não mudar. Nova coorte/vínculos exigiriam auditoria de componentes.
+
+31 agregados foi executado sobre 2.009 linhas de contagens públicas, sem dados
+individuais; confirma 34.069/30.785/12.681 nas classes principais. 31 previsoes
+foi preparado para execução manual: alinha/confere selos e categoriza as previsões
+antigas. Não representa resultado de logística, não produz IC nem teste independente.
+
+32 prepara piloto de até vinte consultas por célula status×cauda ≥80, unidade de
+revisão sendo consulta única. Evidências existentes por chave, sem buscar letras.
+Ficha parcialmente mascarada, sem status/popularidade e sem texto de letra, com
+campos de revisão vazios. Preparação não estima precisão/recall de matching.
+Manter incompatíveis/ausências/limites como inconclusivos; não relaxar regras para
+atingir cobertura. Novo cruzamento integral depende de necessidade demonstrada.
+
+Depois dos diagnósticos, preparar logística ordinal regularizada; PCA das numéricas
+padronizadas com 95% de variância como alternativa dentro dos treinos. Log1p,
+pesos por custo, correção massiva do encoder e amostra menor não são executados
+por esta abertura. A classificação permanece preditiva/associativa, sem causalidade
+ou generalização automática. Revisão dos objetivos como introdução será incorporada
+na próxima versão acadêmica, preservando a monografia anterior.
+
+Protocolos: protocolo_niveis_popularidade_200k_v1.md e
+protocolo_piloto_vinculacao_200k_v1.md. Evidência de preparo/testes e o que foi
+realmente executado em reports/verificacao_nova_etapa_20261104.json.
+
+### Adendo de execução e correção — 05/11/2026
+
+31 previsoes executado pelo pesquisador, completed=true; 77.535 faixas e 21.893
+componentes. Suporte aprovado em todas as partições, mínimos 2.381 faixas/1.322
+componentes por classe. Acurácia balanceada categorizada Baseline 0,583175 e
+Combinado 0,604247, sem refit nem inferência de significância.
+
+32 interrompido antes de selecionar/exportar fichas: popularity é large_string
+no Parquet bruto. Corrigir somente o módulo novo do piloto: coluna derivada
+review_popularity_numeric Float64, validação de finitude/inteiro/0..100 e ordenação
+numérica, preservando popularity original. Fixtures passam a reproduzir tipos
+textuais de popularidade e duração; teste específico 9 versus 100 impede seleção
+lexicográfica errada do representante. Valores inválidos bloqueiam, sem exclusão.
+
+Código e selo mudaram; não reutilizar owner da tentativa falha. v1.1 grava em
+private_linkage_review_200k_v1_1 e reports/piloto_vinculacao_200k_v1_1, mantendo
+pastas v1 intactas. Mesmo comando 32; não repetir 31. Critérios científicos,
+população, cortes, seed e pesos não mudaram. Testes/correção não executam o piloto
+real pelo agente. Detalhes em reports/verificacao_correcao_piloto_20261105.json.
+
 ## D-024 — Organização e publicação do repositório (02/11/2026)
 
 Pesquisador autorizou revisar a trajetória, retirar materiais não usados da

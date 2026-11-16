@@ -1,0 +1,20 @@
+{
+  "completed": true,
+  "seal": {
+    "source": "ac98728520970d5e45907fcfefe567e856a174dda0e368f4ce3ed6f60d3e2347",
+    "code": "cf8a71e61e6ce0d4d1529ca6ff811e675401b2c1f20db19cb45704d87d74201e",
+    "rules": "c035f40c8fe6bedec1d34733bdaf3f4211ef2e9f8004fffe6297064e14ac0e38",
+    "pilot": "ad8c898b779020f76a0191c29f5ae9bc34b62ccbbd784807c48600ec0264d7c8"
+  },
+  "queries": 133,
+  "accepted_cases": 40,
+  "technical_counts": {
+    "selected_metadata_consistent_under_v3_rules": 35,
+    "selected_candidate_not_available_in_sheet": 5,
+    "not_an_accepted_case": 93
+  },
+  "human_review_completed": false,
+  "precision_estimated": false,
+  "existing_decisions_changed": false,
+  "source_unchanged": true
+}

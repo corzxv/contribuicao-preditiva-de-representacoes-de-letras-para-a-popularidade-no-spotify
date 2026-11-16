@@ -1,0 +1,101 @@
+{
+  "completed": true,
+  "mode": "all",
+  "signature": "681ce2037856f2fa17843dde0e0cb032aaf8e0dfa40cf373aa8a03de98fb01f3",
+  "seal": {
+    "version": "ordinal-observed-v1",
+    "inputs": {
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\base_modelagem_200k_v1\\resumo_base_modelagem.json": "98824bdb94375545640e058ee2d497250b0695926f54f1fd7d4cc3ebdcf0f5b7",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\coorte_modelagem.parquet": "d14c77002f42d0c59ca1af0e734bec5075190e197479f55e6ea3c23f033d4efe",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\folds_5x3.parquet": "4ceff167a8c2a17e315c1c7a3226051bd769e173c0eebc07e27976df69903d5b",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\blocos.json": "35a5f803853ae9a27bb69deba8a8d0e933b26875c01c6dcc795dbc80dc9e0ba8",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_modeling_200k_v1\\metadados_invalidos.parquet": "05ba653af881d4c5a43434af89c00373dffcfef4b3943973a3d97387882b8474",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_embeddings_200k_v1\\embeddings.parquet": "7c379cabb065764f24a8c6a54895a318513ce89e737ce366ecb5a67147519ab8",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\configs\\classificacao_ordinal_200k_v1.json": "ebbb8f0cda8c78e66524de8bdfa7667965a91a9b953adf821a56331db80ffca3",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\niveis_popularidade_200k_v1\\previsoes\\resumo_niveis.json": "19cb6ab7878f15d2bb82a5639b5e6904981b69785bce8ec10d57c30de7633917",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\piloto_vinculacao_200k_v1_1\\resumo_piloto.json": "dffe46e8807c5b765ba3a064713d15fb8ec9037a55460c7efd5cab0e643893fb",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\reports\\triagem_piloto_vinculacao_200k_v1\\resumo_triagem.json": "fa4970094871fdfc1a6126c964f5f2896565f2da74927809ac93a2434f9fa072",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\docs\\protocolo_classificacao_ordinal_200k_v1.md": "4575f25ca4ed23b946954532e40f602b5a9d8c7389bba1cb176788ff65bf8304",
+      "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\configs\\niveis_popularidade_200k_v1.json": "499f000542abe2c436a808d2b07b315f7a11edf61000b4eaf7e4145528f0dff2"
+    },
+    "code": {
+      "observed_classification.py": "09d52dc4e321c2757b6297229a15dc9dad419e07e7f1acb21381776ed2dcdabb",
+      "ordinal_classifier.py": "12ce75abf3ebf78eb6ecc69f50cbf19340c42c0cba382359bb8a3f1d811b176f",
+      "popularity_levels.py": "a31d4498050e278c389a32706876ca3c3e0bbfa950fad2cc77f87bd4b98c54ac",
+      "observed_regression.py": "594e6dc727ba62b787be7b00e446e89e4811ccdccd88488b7af79edae9596ee4"
+    },
+    "settings": {
+      "version": "ordinal-observed-v1",
+      "cutpoints": [
+        20,
+        40
+      ],
+      "alphas": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "preprocessing": [
+        "none",
+        "pca95"
+      ],
+      "max_iter": 1000,
+      "gradient_tolerance": 1e-06,
+      "selection": "pooled_inner_balanced_accuracy",
+      "tie_tolerance": 1e-12,
+      "tie_break": "stronger_penalty_then_no_pca",
+      "threads": 2,
+      "decision_rule": "argmax_probability_lowest_class_on_tie",
+      "training_weights": "equal_tracks",
+      "expected_tracks": 77535,
+      "expected_components": 21893,
+      "proportional_odds_assumed": true,
+      "automatic_multinomial_fallback": false,
+      "automatic_cutpoint_sensitivity_training": false
+    },
+    "preserved": {
+      "src/tcc_music_popularity/text_descriptors.py": "44179dd3292e5c9a0ca26bea8ca34c1d2eb722494ccbcd318eb6b0c0245aafe3",
+      "docs/contrato_representacoes_200k_v1.md": "a6a791b8c0eafdfcd340c9eef79fdf53a9442321c097416a5d89f1523f86d3bb",
+      "src/tcc_music_popularity/lyrics_embeddings_v020.py": "d9a43824ac89ac66c1f07ce99e3fb1bba7a20820aacbeb84a39a796a33549e7f",
+      "src/tcc_music_popularity/normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+      "src/tcc_music_popularity/multilingual_embeddings.py": "bab3ad9ffab1b0c2c3c57fa771a58e2cadccecca08b317a7b80aac661f41537f",
+      "docs/protocolo_embeddings_multilingues_200k_v1.md": "34b59bfa9f753212505ce53727c90a2f25d04f5133d5c501d462057fcd9d2910",
+      "src/tcc_music_popularity/manual_embeddings.py": "c26417d3cc37fbbf79b4f5e6556000ca1e8731ae65dafa1f40b6ddf4a9f6740c",
+      "src/tcc_music_popularity/observed_modeling_data.py": "e67a6ae849fcd5fac170c9b42976e2aab0313cd57b0dc2204012dc2b9f3e73a0",
+      "docs/protocolo_base_modelagem_200k_v1.md": "e774567149e19fa7c120a7747efeba3ced2a63505d9243f81836ef8240c88177",
+      "docs/protocolo_regressao_200k_v1.md": "302eef7bd27c1c28e2206782e212181a56fe697e54b9764a2618e5a295729069",
+      "src/tcc_music_popularity/observed_regression.py": "594e6dc727ba62b787be7b00e446e89e4811ccdccd88488b7af79edae9596ee4",
+      "src/tcc_music_popularity/cohort_regression.py": "467f09028e13666737d1204e2f3433a5a0b14138891976189cc9b256ef7e27ab",
+      "src/tcc_music_popularity/manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f",
+      "src/tcc_music_popularity/observed_results.py": "0d9802cfa8e69808c2341ea7d5540b6419abc8c1a80b27e3f708011d2e5ade6d",
+      "docs/protocolo_diagnosticos_modelagem_200k_v1.md": "5d0dec30e4e5de818d1bf52a50977bc1f6124ba0ffcf8c0bc25a925c8031effd",
+      "reports/modelagem_200k_v1/integral/resumo_modelagem.json": "f5cbfeac97ae7f9a66fd70e229cc827ab8c49c7b5bade92530fd0c374503b02b",
+      "reports/monografia_template_200k_v2/main.tex": "22480b190d0befe452f784f5610fef15c990ca8bc28597402a1c7c0cb9d95356",
+      "reports/monografia_template_200k_v2.zip": "2bc88e3b3511ad751eddcbd0c69cff6cf97f16c8179c5ac16acf058d95c0a118",
+      "output/pdf/monografia_template_200k_v2.pdf": "c345aaeef77f27ff3baa8b2201209f05ad48d8eab6c22004c4ca06b8a6335230",
+      "output/pdf/monografia_consolidada_200k_v1.pdf": "f71696b22a6968cc7a7fbe09c201ef87c20e5decc900323c79eb518f6bc0bd21"
+    },
+    "versions": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "polars": "1.43.2",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  },
+  "source_rows": 77535,
+  "used_rows": 77535,
+  "expected_outer_blocks": 20,
+  "new_outer_blocks": 19,
+  "reused_outer_blocks": 1,
+  "global_metrics_available": true,
+  "semantic_linkage_review_completed": false,
+  "catalog_inference_claimed": false,
+  "completed_outer_blocks": 20,
+  "pending_outer_blocks": 0,
+  "prediction_rows": 77535,
+  "models_evaluated": 5,
+  "prediction_sha256": "ffb8ef5d7cbef0b999fc210df9345d40ba4430dabffda8a18472e6f8847588cf",
+  "seconds_this_invocation": 1115.4527040999383
+}

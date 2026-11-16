@@ -1,0 +1,19 @@
+{
+  "version": "ordinal-observed-v1",
+  "cutpoints": [20, 40],
+  "alphas": [0.001, 0.01, 0.1, 1.0],
+  "preprocessing": ["none", "pca95"],
+  "max_iter": 1000,
+  "gradient_tolerance": 0.000001,
+  "selection": "pooled_inner_balanced_accuracy",
+  "tie_tolerance": 1e-12,
+  "tie_break": "stronger_penalty_then_no_pca",
+  "threads": 2,
+  "decision_rule": "argmax_probability_lowest_class_on_tie",
+  "training_weights": "equal_tracks",
+  "expected_tracks": 77535,
+  "expected_components": 21893,
+  "proportional_odds_assumed": true,
+  "automatic_multinomial_fallback": false,
+  "automatic_cutpoint_sensitivity_training": false
+}

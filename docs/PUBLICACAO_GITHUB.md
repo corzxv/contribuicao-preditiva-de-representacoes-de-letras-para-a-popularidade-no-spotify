@@ -1,17 +1,19 @@
 # Publicação e conservação do repositório
 
-A publicação foi autorizada explicitamente pelo pesquisador. O remoto é
-`corzxv/tcc-popularidade-musical`, ramo `master`, com visibilidade privada mantida.
-Não se solicitou ou realizou mudança de visibilidade. A comunicação do projeto e
-os novos commits/comentários usam português.
+A publicação e a renomeação foram autorizadas pelo pesquisador. O endereço
+da edição atual é `corzxv/contribuicao-preditiva-de-representacoes-de-letras-para-a-popularidade-no-spotify`, ramo `master`.
+O repositório é privado. Novos commits e comentários usam português.
 
 ## Conteúdo versionado
 
 Código Python, entradas CLI, testes sintéticos, configurações de exemplo,
 protocolos, dicionário, decisões, proveniência, agregados e materiais acadêmicos.
-O PDF/ZIP da versão atual no template são distribuídos para leitura e Overleaf.
-Versões de fontes editoriais anteriores permanecem quando documentam a trajetória
-ou são consumidas pelos geradores de figuras/tabelas.
+O PDF, o ZIP para Overleaf e as fontes da edição em
+`reports/monografia_template_overleaf` são os pontos de entrada. As versões
+anteriores já publicadas documentam a trajetória no Git. Cópias editoriais
+intermediárias e o pacote local de preservação permanecem no computador.
+Os scripts antigos usados para formar os insumos atuais preservam a
+proveniência e as dependências da análise final.
 
 Os dados brutos/individuais, letras, respostas integrais de APIs, SQLite, vetores,
 modelos e credenciais são locais. Também são locais planilhas de revisão com

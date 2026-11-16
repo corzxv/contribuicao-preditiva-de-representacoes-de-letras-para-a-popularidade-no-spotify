@@ -1,0 +1,15 @@
+scheme,model,n_tail,predicted_class_0,predicted_class_1,predicted_class_2
+principal_20_40,baseline,128,0,23,105
+principal_20_40,traditional,128,0,17,111
+principal_20_40,deep,128,0,18,110
+principal_20_40,combined,128,0,14,114
+principal_20_40,mean,128,0,128,0
+principal_20_40,median,128,0,128,0
+principal_20_40,majority_outer_train,128,128,0,0
+sensibilidade_40_60,baseline,128,23,77,28
+sensibilidade_40_60,traditional,128,17,82,29
+sensibilidade_40_60,deep,128,18,78,32
+sensibilidade_40_60,combined,128,14,83,31
+sensibilidade_40_60,mean,128,128,0,0
+sensibilidade_40_60,median,128,128,0,0
+sensibilidade_40_60,majority_outer_train,128,128,0,0

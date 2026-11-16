@@ -1,0 +1,83 @@
+{
+  "completed": true,
+  "sample_rows": 9526,
+  "counts": {
+    "accepted": 3777,
+    "ambiguous": 1168,
+    "instrumental": 416,
+    "no_text": 1,
+    "not_found": 4164
+  },
+  "new_accepted_tracks": 130,
+  "targets": 831,
+  "outcomes": {
+    "different_after_case_normalization": 701,
+    "accepted_case_equivalent": 130
+  },
+  "seconds_stage46": 39.6003822000057,
+  "coverage_pct_before": 38.28469452026034,
+  "coverage_pct_after": 39.649380642452236,
+  "weighted_coverage_pct_before": 38.29862070434828,
+  "weighted_coverage_pct_after": 39.66413289927447,
+  "genres_without_accepted": 2,
+  "popularity_coverage": [
+    {
+      "limites": [
+        0,
+        19
+      ],
+      "n": 5548,
+      "antes": 1565,
+      "depois": 1627
+    },
+    {
+      "limites": [
+        20,
+        39
+      ],
+      "n": 2919,
+      "antes": 1471,
+      "depois": 1523
+    },
+    {
+      "limites": [
+        40,
+        59
+      ],
+      "n": 935,
+      "antes": 544,
+      "depois": 557
+    },
+    {
+      "limites": [
+        60,
+        79
+      ],
+      "n": 119,
+      "antes": 66,
+      "depois": 69
+    },
+    {
+      "limites": [
+        80,
+        100
+      ],
+      "n": 5,
+      "antes": 1,
+      "depois": 1
+    }
+  ],
+  "new_accepted_disjoint_from_previous": true,
+  "sample_and_weights_unchanged": true,
+  "source43_summary_sha256": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+  "source46_summary_sha256": "c978dfe10641bdfdc8d739c3a456e2a226a9651f0e0b17313ff03ded59f12bf2",
+  "source46_state_sha256": "0e749dbd6e366f56ce50eb468b853ec70fad161f5c1aaad0ad6f119cacb592c5",
+  "private_sha256_verified": {
+    "novas_letras_aceitas.parquet": "25ea157abfbb266939034856a85e77c6c6a6501515aeaf290eb07fe88be4fc19",
+    "novos_vinculos.parquet": "9c4fbebd25be808c85f838e2309168b57f6e83a61072fd9e2c82dfdca8a889af"
+  },
+  "public_sha256": {
+    "comparacao_metadados.csv": "b625e35b743558ea42b89511e188d95497b31117bb68c7dc27c5a660d1d02ad6",
+    "cobertura_generos.csv": "8a010e249f37d9994a15da79a7d73eb50ecc140cb616ca39d3a53f86a75a39a5"
+  }
+}

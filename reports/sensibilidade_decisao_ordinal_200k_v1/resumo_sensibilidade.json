@@ -1,0 +1,26 @@
+{
+  "completed": true,
+  "seal": {
+    "code": "1783e73d4ed29701b532d6d980588ac9a8cddd107837f72f82e12359307dcb61",
+    "classification_code": "09d52dc4e321c2757b6297229a15dc9dad419e07e7f1acb21381776ed2dcdabb",
+    "inputs": {
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\probabilidades_externas.parquet": "ffb8ef5d7cbef0b999fc210df9345d40ba4430dabffda8a18472e6f8847588cf",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\resumo_classificacao.json": "97f69200d067fe62b9c4b0b9318c7bedde63ab122260110f8c7d7c514b0c7115",
+      "reports\\classificacao_ordinal_200k_v1\\integral\\metricas_externas.csv": "c3e341f922f96f3d41f45649d77678cb1905bed51535b66d907d5a28d5c36f08",
+      "docs\\protocolo_sensibilidade_decisao_ordinal_v1.md": "246ed21289fd9ebdf2b17445c4f62f61def9ee0c9f028f43c99ab7c714bde7e3"
+    },
+    "rules": [
+      "argmax_original",
+      "inverse_training_prior"
+    ]
+  },
+  "models_trained": false,
+  "probabilities_changed": false,
+  "main_results_replaced": false,
+  "hypothesis_tests_computed": false,
+  "scope": "exploratory_conditional_on_existing_probabilities",
+  "external_labels_used_to_tune_rule": false,
+  "observed_tracks": 77535,
+  "components": 21893,
+  "original_metrics_reproduced": true
+}

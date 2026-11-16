@@ -1,0 +1,21 @@
+{
+  "completed": true,
+  "seal": {
+    "code": "0202817530f225894621a8ec28d69eaefefde9e91434de1d591860a72d833523",
+    "inputs": {
+      "reports\\sensibilidade_decisao_ordinal_200k_v1\\resumo_sensibilidade.json": "ff2dd261574dd5be7325541749432339762d6124764894703e915f52db8b27a1",
+      "reports\\sensibilidade_decisao_ordinal_200k_v1\\metricas_regras.csv": "e64fc64e7d8514e64a0bafbf72c1c51b72d79867c063ac33ab966a72016aa8c1",
+      "reports\\sensibilidade_decisao_ordinal_200k_v1\\matrizes_confusao.csv": "e0259fc4d581e41a9247f3f947f94f9fe054722b8eb9de458fdb0a8065ce1d5b",
+      "reports\\sensibilidade_decisao_ordinal_200k_v1\\metricas_por_classe.csv": "51f46810bb22f0cf96e1df3d1d526b5fdb089716bc3b86fb848c78c4adb8cda2",
+      "data\\derived\\private_ordinal_classification_200k_v1\\integral\\probabilidades_externas.parquet": "ffb8ef5d7cbef0b999fc210df9345d40ba4430dabffda8a18472e6f8847588cf"
+    }
+  },
+  "aggregate_metric_records_checked": 120,
+  "confusion_cells_checked": 1080,
+  "individual_rows_inspected": 128,
+  "tail_components": 96,
+  "whole_cohort_individual_rows_reprocessed_by_agent": false,
+  "models_trained": false,
+  "main_results_replaced": false,
+  "hypothesis_tests_computed": false
+}

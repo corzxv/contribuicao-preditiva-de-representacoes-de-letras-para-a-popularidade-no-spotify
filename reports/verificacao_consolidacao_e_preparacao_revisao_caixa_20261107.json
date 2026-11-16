@@ -1,0 +1,47 @@
+{
+  "decision": "D-035",
+  "verified_at": "2026-11-07T15:26:33.832809+00:00",
+  "researcher_choice": "continuar recuperação antes de modelar",
+  "stage44_real_completed": true,
+  "stage44_categories": {
+    "same_artist_other_title": 2059,
+    "no_candidates_under_these_methods": 1676,
+    "artist_key_variant": 13,
+    "same_title_other_artist": 410,
+    "other_metadata_candidates": 6
+  },
+  "stage44_truncated_queries": 332,
+  "stage45_real_completed": true,
+  "stage45_metadata_rows": 9526,
+  "stage45_seconds": 0.5766450000010082,
+  "stage45_figure_visually_checked": true,
+  "accepted_before_revision": 3647,
+  "artist_variant_queries": 13,
+  "artist_variant_pairs": 16,
+  "variant_queries_with_nonempty_text_fields_checked": 13,
+  "text_cases_inspected": 12,
+  "matching_after_case_whitespace_typography": 5,
+  "private_case_refs_sha256": "235525b805d932cb384db0c7d51473a5cd5cb3360c04fe3a4b0ee8ec86cbb0ad",
+  "stage46_targets": 831,
+  "stage46_real_run": false,
+  "tests_stage45": {
+    "passed": 2,
+    "seconds": 14.47
+  },
+  "tests_stage46": {
+    "passed": 7,
+    "seconds": 3.68
+  },
+  "ruff": "passed",
+  "source_hashes_verified": true,
+  "prepared_sha256": {
+    "src/tcc_music_popularity/lyrics_case_revision.py": "7f17e6caa49a3916b03e3a3179478ebb54712f168782ecdbd7aeedf24f9e56ed",
+    "scripts/46_revisar_caixa_textos_concorrentes.py": "3f1d3b5fd44164675c1c5bc71b11423f327e4d1c733c838d414f55dc1830a756",
+    "tests/test_lyrics_case_revision.py": "c882de0b43c7d16573c77bec2af51e8368351ea57a31228d4a6aa3d1b0ef37c7",
+    "docs/execucao_revisao_caixa_nova_amostra_v1.md": "c42c07a94c299efe415b9cbe647fe8c9d2c28800629fdf40f38b431c07f40e13",
+    "reports/interpretacao_diagnostico_chaves_e_consolidacao_v1.md": "868991c1565904ccb33d5f4477f89d73c42853f5cfd4243b2fc9b0837b448be8",
+    "src/tcc_music_popularity/observed_sample_summary.py": "f8b674d9389c2830dff85410e5b3548239ec7b2b434b60db4173c506dcc53be7",
+    "scripts/45_consolidar_dados_observados.py": "174e2f86a0ff5c8c14520c1df75af659580a373983bd08b6547d3fc130f0061f",
+    "tests/test_observed_sample_summary.py": "21b22383ee7a2210da696d0a02b14c9ef1251512e60f6a86189d9489003aad16"
+  }
+}

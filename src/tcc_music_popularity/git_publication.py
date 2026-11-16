@@ -13,6 +13,14 @@ from pathlib import Path, PurePosixPath
 ROOT = Path(__file__).resolve().parents[2]
 MAX_BYTES = 8 * 1024 * 1024
 MAX_TOTAL = 64 * 1024 * 1024
+MONOGRAPH_PACKAGES = {
+    "reports/monografia_template_200k_v2.zip",
+    "reports/monografia_template_overleaf.zip",
+}
+MONOGRAPH_PDFS = {
+    "output/pdf/monografia_template_200k_v2.pdf",
+    "output/pdf/monografia_template_overleaf.pdf",
+}
 EXCLUDED = {
     "docs/next_steps_lyrics.md",
     "docs/demonstrador_local.md",
@@ -80,10 +88,9 @@ def allowed_path(name):
         return False
     if name in ROOT_FILES:
         return True
-    if name in {
-        "output/pdf/monografia_template_200k_v2.pdf",
-        "reports/monografia_template_200k_v2.zip",
-    }:
+    if name in MONOGRAPH_PDFS or name in MONOGRAPH_PACKAGES:
+        return True
+    if name == "reports/monografia_template_overleaf/LEIA_PRIMEIRO.txt":
         return True
     if name.startswith(".github/workflows/"):
         return p.suffix in {".yml", ".yaml"}
@@ -142,7 +149,7 @@ def inspect_bytes(name, content):
     if len(content) > MAX_BYTES:
         return issues + ["arquivo_excede_8_mib"]
     suffix = PurePosixPath(name).suffix
-    if suffix == ".zip":
+    if name in MONOGRAPH_PACKAGES:
         try:
             with zipfile.ZipFile(io.BytesIO(content)) as archive:
                 if sum(i.file_size for i in archive.infolist()) > MAX_TOTAL:
@@ -150,7 +157,7 @@ def inspect_bytes(name, content):
                 for item in archive.infolist():
                     if item.is_dir():
                         continue
-                    nested = "reports/monografia_template_200k_v2/" + item.filename
+                    nested = str(PurePosixPath(name).with_suffix("")) + "/" + item.filename
                     issues.extend(inspect_bytes(nested, archive.read(item)))
         except zipfile.BadZipFile:
             issues.append("pacote_zip_invalido")

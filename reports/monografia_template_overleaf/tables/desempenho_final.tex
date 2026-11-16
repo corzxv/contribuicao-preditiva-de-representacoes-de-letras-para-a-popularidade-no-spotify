@@ -1,0 +1,14 @@
+\begin{table}[H]\centering\footnotesize
+\caption{Desempenho a partir das previsões externas reunidas ($n=9.526$).}\label{tab:desempenho_final}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+Modelo & AB (\%) & Ac. (\%) & Macro-F1 & Extremos (\%) & LogLoss & Brier \\\midrule
+Baseline & 56,14 & 71,37 & 0,5883 & 1,95 & 0,6914 & 0,4100 \\
+Tradicional & 56,24 & 71,12 & 0,5892 & 1,75 & 0,6901 & 0,4094 \\
+Profundo & 55,91 & 69,27 & 0,5853 & 1,85 & 0,7037 & 0,4197 \\
+Combinado & 55,96 & 69,40 & 0,5854 & 1,86 & 0,7055 & 0,4208 \\
+Freq. do treino & 33,33 & 58,24 & 0,2454 & 11,12 & 0,9218 & 0,5547 \\\bottomrule
+\end{tabular}
+\nota{AB é acurácia balanceada. Ac. é acurácia comum. Extremos mede trocas entre as classes baixa e alta. Pesos iguais por faixa.}
+\end{table}
+

@@ -1,0 +1,20 @@
+{
+  "n_casos_completos": 1158565,
+  "n_excluidos": 1199,
+  "variaveis": [
+    "popularity",
+    "year",
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "duration_ms"
+  ],
+  "constantes_fora_da_matriz": [],
+  "observacao": "Mesmos casos completos válidos em todas as correlações; Spearman usa postos médios nos empates."
+}

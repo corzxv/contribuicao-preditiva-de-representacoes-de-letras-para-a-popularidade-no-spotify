@@ -1,5 +1,178 @@
 # Dicionário de dados — Base v0.1
 
+## Classificação da amostra de 9.526 faixas D-044
+
+57 acrescenta os metadados de identidade do catálogo pelo `track_id` e
+calcula `spotify_popularity` para derivar `observed_class` com cortes 20 e
+40. As previsões externas guardam uma probabilidade por classe e bloco.
+`sampling_weight` nessa saída corresponde a `linked_weight` da candidata v2.
+
+## Candidata ampliada D-043
+
+56 segue o esquema da candidata 52. `source_stage` inclui 53 para as letras
+revalidadas do histórico e 55 para a busca dirigida. `linked_N_h` e `linked_n_h`
+informam capacidade e alocação por gênero e banda, com a cauda 80–100 agrupada.
+`linked_pi` e `linked_weight` são calculados no quadro de 80.943 faixas aceitas.
+
+## Recuperação nos gêneros deficitários D-042
+
+53 escreve `decisoes.json` com a chave histórica, o cache, seu hash e o
+desfecho. Os Parquet privados ligam faixa e consulta ao texto revalidado.
+54 grava `consultas_indexadas.parquet` com os metadados originais e acrescenta
+`query_id`, `query_json` e `index_kind`. 55 escreve o resultado por consulta
+no SQLite e exporta os vínculos e letras aceitos ao final da execução.
+
+## Adendo vigente — amostra candidata com letras D-041
+
+52 gera `amostra_candidata_9526.parquet` com 9.526 IDs e referências às
+letras originais. `band` e `stratum_genre` definem o estrato do quadro com
+letras. `linked_N_h`, `linked_n_h`, `linked_pi` e `linked_weight` são
+capacidade, alocação, probabilidade de inclusão e peso condicional. A
+trinca `source_text_parquet`, `query_id` e `text_sha256` identifica o texto
+verificado. `source_stage=14` identifica a recuperação histórica dos 200 mil.
+
+## Adendo vigente — manifesto de recuperação D-040
+
+O Parquet privado `vinculos_e_status.parquet` de 51 tem uma linha por faixa
+sorteada. `status_stage43` e `reason_stage43` vêm do resultado de origem.
+`lyrics_status` aplica os complementos de aceitação de 46, 47, 48 e 50. A
+trinca `source_stage`, `source_text_parquet` e `query_id` identifica o texto
+no arquivo de origem, com `text_sha256` para conferência. As referências e
+o hash textual são nulos para as faixas sem letra aceita. Os desfechos das
+consultas não aceitas na etapa 50 ficam no relatório e checkpoint de 50.
+
+## Adendo vigente — piloto online D-038
+
+49 usa `manifesto.json` com consultas seladas e faixas sorteadas, e guarda as
+respostas em `state.sqlite`. `result` registra desfecho, data, metadados dos
+candidatos elegíveis e hash da resposta válida. `text` guarda somente a letra
+provisória escolhida, quando há consistência textual. `lrclib_id` é o ID da
+API e `lrclib_lyrics_id` fica nulo. O resumo agrega por faixa. A contagem de
+`provisional_tracks` fica separada de `new_confirmed_tracks`.
+
+## Adendo vigente — complementos de revisão de caixa D-035 e D-036
+
+46 registrou `novos_vinculos.parquet` por track_id e query_id e
+`novas_letras_aceitas.parquet` por query_id. O segundo guarda accepted_text,
+plain_text_source e synced_text_source originais, identificadores do LRCLIB,
+hashes do texto escolhido e rules_version. A comparação usa minúsculas, espaços
+uniformizados e tipografia vigente. Essa transformação serve para comparar
+candidatos. Os textos exportados conservam a forma original.
+
+47 usa o mesmo schema em pasta própria. O arquivo privado `decisoes.json`
+registra `query_id`, `outcome`, IDs de pares plain/LRC equivalentes e, para
+aceitos, o hash de comparação e os IDs do conjunto elegível com texto.
+`accepted_tracks_with_overlays` é a contagem após combinar os complementos
+de 46 e 47 aos vínculos de 43.
+
+48 reaproveita o mesmo schema. `revisao_documental.json` é a entrada privada
+com URLs de catálogo, justificativa e `approved_candidate_ids` específicos
+da consulta. O `desfechos.json` registra o resultado da checagem textual ou a
+pendência documental. A contagem de 48 combina os complementos de 46, 47 e 48
+aos vínculos de 43.
+
+## Adendo: diagnóstico nativo — D-034
+
+43 REAL concluído/conferido. 44 não cria novos status/letras: checkpoint privado
+diagnostics contém query_id, data (consulta original) e result (metadados,
+indicadores, método, limites). new_acceptances=0 e lyrics_read=false por desenho.
+diagnostic_label é indício priorizado, não ground truth; indicadores privados
+podem sobrepor-se. same_artist_other_title não significa mesma composição;
+artist_key_variant não valida identidade universal; has_lyrics_reference não
+comprova letra disponível. incomplete_methods registra timeout/truncamento.
+Nenhum dado individual/candidato do diagnóstico deve ser versionado.
+
+## Adendo: revisão dirigida preparada — D-033
+
+42 REAL concluído/conferido; 43 ainda não executado no conjunto real. Schema
+privado mantém campos do sorteio e letras; local42_lyrics_status registra a
+classificação de origem. VERSION nova-amostra-matching-v2 apenas para os casos
+reavaliados. Não traduzir retroativamente versões das decisões preservadas.
+layout_equivalent_ids registra candidatos com igualdade exata plain/LRC após
+whitespace/tipografia; incompatible_candidates_excluded conta os inelegíveis
+retirados da visão de classificação. Plain/synced originais são mantidos, e
+accepted_text é o texto principal inalterado. Nenhum texto é reordenado.
+Status permanecem os de 42. Indicação instrumental é do LRCLIB, não uma
+derivação do atributo instrumentalness do Spotify. Sem revisão humana implícita.
+
+## Adendo: busca local preparada — D-032
+
+41 REAL concluído/conferido; 42 ainda preparado, sem resultado individual real.
+42 mantém os campos do cadastro 40 e acrescenta os campos lyrics_ do exportador
+existente, mais lyrics_new_sample_origin e cache41_lyrics_status. Origem:
+protected_cache_41, reused_controlled_negative, existing_v2_index,
+new_artist_supplement ou technical_error/pending. Não usar origem como alvo.
+
+Status local: accepted, instrumental, ambiguous, not_found, no_text,
+insufficient_metadata, technical_error e pending. not_found refere-se ao
+snapshot e às chaves controladas. Final completed exige ausência de pending e
+technical_error; não exige aceitação de todas as faixas. O cadastro é mantido.
+letras_aceitas.parquet contém accepted_text separado de plain_text_source e
+synced_text_source, identificadores/hashes/provenance_json. Evidências de
+candidatos não aceitos: metadados/IDs/hashes, corpos disponíveis no dump selado.
+Nenhuma busca/aceitação usa popularidade ou pesos; nenhum idioma excluído.
+
+## Adendo: reaproveitamento de letras — D-031
+
+Schema 41 REAL concluído/conferido. resultados_faixas.parquet conserva
+as 9.526 faixas/campos/pesos originais e acrescenta lyrics_query_id/status/reason,
+source_state/previous_status/rules_version, selected_lrclib_id, text_sha256,
+strict_text_sha256 e text_ref (prefixo lyrics_ em todos). Status: accepted,
+instrumental, pending_search, insufficient_metadata e cache_error. Text_ref só
+é preenchido para aceitas; as demais permanecem explícitas no cadastro.
+
+letras_aceitas.parquet é privado e tem uma linha por consulta, não necessariamente
+por faixa: query_id, accepted_text, plain_text_source, synced_text_source,
+lrclib_id/lrclib_lyrics_id, hashes do texto efetivo, source_state e provenance_json.
+accepted_text conserva o texto efetivamente aceito; plain/synced preservam as
+representações originais do cache, inclusive plain ausente em extração de LRC.
+pendencias_busca.parquet mantém as faixas que ainda precisam de busca/revisão.
+Cache_error não significa ausência de letra. Nenhum idioma é recalculado/excluído.
+
+## Adendo: nova amostra — D-030
+
+Schema executado/conferido em 40 REAL, 9.526 linhas e 27 campos. Fonte mantém
+os vinte campos originais do CSV, como texto/ausente, incluindo o índice exportado.
+Novos campos privados em amostra_spotify.parquet:
+
+| Campo | Definição |
+|---|---|
+| _nova_linha_fonte | Posição 0-based da linha no cadastro selado |
+| _nova_N_h, _nova_n_h | Tamanhos populacional/amostral do gênero |
+| _nova_pi | Probabilidade de inclusão n_h/N_h |
+| _nova_peso | Peso de desenho N_h/n_h |
+| _nova_seed | 20261106, semente pré-fixada |
+| _nova_desenho | catalogo_v1, identifica o novo desenho |
+
+Não transportar automaticamente esses pesos a análises de letras aceitas sem
+tratar seleção/perdas. Nenhuma coluna antiga foi normalizada ou sobrescrita.
+Alocação pública: genero/N_h/n_h/pi_h/peso_h/fracao_catalogo/fracao_amostra.
+precisao_metadados.csv tem médias/DP/variância da média estratificada e margens
+normal individual/família de doze; duração em segundos, BPM incluindo zeros.
+Comparativos futuros rotulam quantis/DP não ponderados e médias/proporções
+ponderadas explicitamente. Protocolo: plano_nova_amostra_catalogo_v1.md.
+
+## Adendo: descrição completa do catálogo — D-029
+
+39/catalog_description.py real concluído pelo pesquisador e conferido. Não altera schemas
+ou valores originais. Dicionário específico dos vinte campos disponível em
+reports/descritiva_catalogo_completo_v1/dicionario_variaveis.csv.
+
+Derivações temporárias: _desc_<campo> contém valor válido pela regra local;
+_desc_duration_s converte duration_ms para segundos. _finite_<campo> preserva
+valores numéricos finitos antes da regra local (duração também em segundos).
+Os resumos informam unidade e escopo todos_finitos/regra_local; denominadores
+próprios, sem excluir faixas da população. _grupo_* identifica categorias
+descritivas; não é grupo de artista/composição ou split.
+
+Correlações: metodo, variavel_1/2, correlacao, n_casos_completos.
+PCA: componente, variavel, coeficiente_eixo (autovetor) e
+correlacao_variavel_componente (autovetor × raiz do autovalor).
+Padronização com DP n−1; escores individuais não são exportados. perfis_grupos
+contém médias/quantis por gênero/ano/período; eta_quadrado_descritivo é fração
+da variação entre médias das categorias, não teste ou efeito causal.
+Nenhum novo estrato, peso amostral ou modelo preditivo é criado pelo script 39.
+
 ## Adendo: fechamento auxiliar 25–27 (02/11/2026)
 
 Nenhum schema de coorte/folds/embeddings/previsões foi alterado. Somente novos
@@ -658,3 +831,77 @@ O catálogo completo, gerado do schema real, está em `reports/feature_manifest_
 `artist_group_id` é derivado da normalização operacional do artista. `composition_group_id` identifica a chave operacional de composição, com substituto determinístico quando ela está ausente. `split_group_id` é o componente conexo usado para impedir que ligações por artista ou composição atravessem desenvolvimento e holdout. Nenhuma dessas chaves é um identificador universal.
 
 As 12 colunas constantes removidas e todas as variáveis proibidas por leakage permanecem registradas no manifesto, com justificativa. O manifesto também registra tipo, família, ausências na base completa e no desenvolvimento, cardinalidade e decisão de inclusão.
+# Adendo de schema — níveis e revisão de vínculos (04/11/2026, D-025)
+
+As colunas individuais anteriores não mudam. Agregados novos em
+reports/niveis_popularidade_200k_v1/ usam `scheme` para identificar os limites e
+`class_index` 0/1/2 para baixo/intermediário/elevado operacional. No principal,
+limites 20/40; na sensibilidade, 40/60. `count_or_weight` é contagem na avaliação
+com pesos iguais e soma de pesos na sensibilidade; sempre acompanhar `scope` ou
+`weighting`. `fraction` é proporção descritiva no respectivo domínio.
+
+`outer_fold=-1` denota agregação global nas tabelas de métricas; em suporte,
+`inner_fold=-1` denota partição externa. `n` é número de faixas, `components` é
+número de componentes presentes na célula, sem aditividade entre classes.
+`operational_support` compara limiares prévios de 100 faixas/20 componentes;
+não é poder estatístico. Métrica de classe ausente é nula, não zero.
+
+Piloto 32, armazenamento privado: `case_id` identifica apenas a ficha; não é
+identidade universal de faixa/composição. `review_inclusion_probability=n/N`
+refere-se a consultas no estrato de revisão, distinta de `inclusion_probability`
+da amostra Spotify. `extreme_tail` identifica consulta com alguma faixa ≥80.
+Desde v1.1, `review_popularity_numeric` é Float64 derivada de `popularity`,
+validada como inteiro finito 0..100. Ordenação do representante e cauda usam
+essa coluna; `popularity` original permanece textual no manifesto privado.
+`cache_status`, `candidate_count`, `candidate_list_truncated` e
+`source_incomplete_reason` registram limites da evidência. Ausência de cache não
+é ausência no LRCLIB. `review_identity`, `review_version`, `review_decision` e
+`review_notes` são campos inicialmente vazios, preservados na retomada.
+
+Ficha omite popularidade/status anterior; manifesto privado conserva a linhagem.
+Nenhum corpo de letra é exportado. Não misturar a população de consultas de
+revisão com faixas ou usar seus pesos como correção de disponibilidade textual.
+
+## Classificação ordinal e triagem — 05/11/2026 (D-026)
+
+Triagem privada 33 acrescenta technical_status, selected_candidate_checks e
+human_semantic_review=pending, sem alterar as fichas de revisão ou status v2.
+Consistência técnica de metadados não é rótulo humano de identidade. Candidatos
+ausentes da ficha e limites de exportação permanecem inconclusivos.
+
+34 preparado, saídas reais pendentes: observed_class é inteiro 0/1/2 derivado
+de spotify_popularity pelos cortes 20/40, preservando resposta original. Arquivo
+privado probabilidades_externas.parquet inclui IDs/componentes/fold/peso e três
+colunas por variante, <bloco>_probability_0/1/2; previsão é argmax. Essas colunas
+não são popularidade em 0..100 nem probabilidade de êxito futuro.
+
+Agregados: model, weighting e outer_fold (-1 global); balanced_accuracy, macro_f1,
+accuracy, extreme_error_rate, log_loss e brier_multiclass. Brier é soma dos três
+erros quadráticos de probabilidade por observação, depois média. Referência
+class_prior usa proporções do treino externo. option identifica none/pca95 nas
+seleções internas; alpha é lambda da penalização sobre a perda média, distinto
+do alpha Ridge anterior. Tabelas de calibração têm classes/intervalos fixos e
+contagens visíveis, sem calibrador ajustado. Folds não são réplicas independentes.
+
+## Diagnósticos e sensibilidade de decisão — D-027
+
+35 agrega weighted_absolute_bin_deviation: soma(n_bin × |média prevista − fração
+observada|)/soma(n_bin), separado por classe/modelo; depende dos dez intervalos,
+sem IC. standardized_component_coefficient é coeficiente de componente aplicado
+à variável padronizada, com sinal orientado só para apresentação; não é efeito
+causal ou correlação com popularidade. PCA não altera os arquivos dos modelos.
+
+36 preparado: decision_rule distingue argmax_original e inverse_training_prior.
+pi_k vem exclusivamente da proporção no treino externo, registrada pela referência
+class_prior; não são pesos amostrais. Escores p/pi decidem a classe, não substituem
+probabilidades. log_loss_original_probabilities e brier_original_probabilities
+continuam os valores originais por observação/ponderação. Mesmos IDs, classes,
+folds e pesos; sem nova tabela individual ou alteração das fontes. Saídas reais
+de sensibilidade reais concluídas em 36 e consolidadas em 37.
+
+37 agrega comparações com prefixos original_/alternative_ e diferenças delta_*_pp
+em pontos percentuais. Na inspeção delimitada, n_observed_ge80 é o número de
+faixas observadas ≥80, components conta seus componentes e
+predicted_operational_class_0/1/2 conta o destino pelas regras de nível 20/40.
+fraction_predicted_ge40 é a fração dessa cauda chamada de elevada (≥40);
+is_binary_hit_detection=false impede interpretar como detecção de hits ≥80.

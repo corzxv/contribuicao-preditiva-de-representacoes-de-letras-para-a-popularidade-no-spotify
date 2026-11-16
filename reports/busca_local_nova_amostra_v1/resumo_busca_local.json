@@ -1,0 +1,107 @@
+{
+  "completed": true,
+  "version": "nova-amostra-local-v1",
+  "stage": "local_snapshot_search",
+  "sample_rows": 9526,
+  "accepted_queries": 1425,
+  "status_counts": {
+    "accepted": 1425,
+    "ambiguous": 3574,
+    "not_found": 4164,
+    "no_text": 1,
+    "instrumental": 362,
+    "insufficient_metadata": 0,
+    "technical_error": 0,
+    "pending": 0
+  },
+  "new_queries_this_invocation": 7977,
+  "origins_query_counts": {
+    "existing_v2_index": 5174,
+    "new_artist_supplement": 2803,
+    "protected_cache_41": 769,
+    "reused_controlled_negative": 780
+  },
+  "supplement_artists": 2367,
+  "protected_41_counts": {
+    "accepted": 682,
+    "instrumental": 87,
+    "pending_search": 8757,
+    "insufficient_metadata": 0,
+    "cache_error": 0
+  },
+  "seconds": 1422.8986124000003,
+  "seal": {
+    "version": "nova-amostra-local-v1",
+    "sample_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+    "summary41_sha256": "e430fb2886cf25a5903518c2cc0af28a47729384be9cf35f82cc7e123b9dbcca",
+    "previous_report_sha256": "45dcc2c3d9273dd989233b02807c8138a31fc98115adacd3b6beefe0742a8a4a",
+    "state41_sha256": "a11bb3d070bb94d75e204605a65dc10f86e4d86db4b423da689990d4e081b99e",
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    },
+    "primary": {
+      "seal": {
+        "dump": {
+          "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+          "size": 261755867136,
+          "mtime_ns": 1793112801795482900,
+          "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+          "source": {
+            "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+            "compressed_bytes": 47837763733,
+            "database_bytes": 261755867136,
+            "etag": "9595e9d143bf175845a9e41acd298884-2852"
+          }
+        },
+        "artists": "086a59969ebb21218205ad0e836d0a52796a12fc5e5f8ee185a76e6fff82b0f2",
+        "rules": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+      },
+      "progress": {
+        "last_id": 39053376,
+        "scanned": 33714178,
+        "indexed": 5726985,
+        "complete": true,
+        "updated_at": "2026-11-01T02:49:13.569468+00:00"
+      },
+      "stamp": {
+        "path": "D:\\TCC_LRCLIB\\tcc_lookup_sample_200k_v2\\lookup.sqlite",
+        "bytes": 1254682624,
+        "mtime_ns": 1793501353594451100
+      }
+    },
+    "previous_state": {
+      "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\state.sqlite",
+      "bytes": 1041354752,
+      "mtime_ns": 1793501571205309600
+    },
+    "supplement_path": "D:\\TCC_LRCLIB\\tcc_lookup_nova_amostra_v1",
+    "code_sha256": "d8548448d0721c0bfa74e7f571b6055a6dca2f04875019615f1affaae157e19e",
+    "rules_sha256": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78"
+  },
+  "http_requests": 0,
+  "new_embeddings": false,
+  "models_trained": false,
+  "sample_replaced": false,
+  "scope": "Resultados sob chaves controladas e regras v2 no snapshot local; não ausência universal de letras ou validação humana.",
+  "private_sha256": {
+    "resultados_faixas.parquet": "7d6946372b82b35a6171f31cf9401ba7a5daf4cb4a9a826c5b9fbc5d7be3a565",
+    "letras_aceitas.parquet": "9ff64124ddb7fb6fc2d82b764a90fd39df51ecec0c0379f59df689c4accea12c",
+    "pendencias_revisao.parquet": "cc5bae73300d1eaa33fad45bf4c5808a067319ee437acb6ae6c94a63588dd7a1"
+  },
+  "public_sha256": {
+    "status_busca.csv": "4672b3ebd45804aed2f594b4f3595a81c17100ec121173b7a0daddcd32789466",
+    "cobertura_busca.csv": "aaab959ad435056915abfb4c62c914d0b44324b2381bfc3ffbfa66aea671be53",
+    "transicoes_status.csv": "50fb1ac370e23546edf799cf2ff158bc4d6f9980704bce9212ab57577ad42e26"
+  }
+}

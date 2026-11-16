@@ -1,0 +1,60 @@
+{
+  "completed": true,
+  "reviewed_queries": 43,
+  "revalidated_tracks": 42,
+  "by_outcome": {
+    "revalidada": 42,
+    "vinculo_historico_incompativel": 1
+  },
+  "reviewed_by_genre": {
+    "minimal-techno": 28,
+    "guitar": 14,
+    "chicago-house": 1
+  },
+  "revalidated_by_genre": {
+    "minimal-techno": 28,
+    "guitar": 13,
+    "chicago-house": 1
+  },
+  "capacity_after": 80764,
+  "remaining_genre_deficits": [
+    {
+      "genre": "detroit-techno",
+      "target": 32,
+      "capacity_before": 11,
+      "added": 0,
+      "capacity_after": 11,
+      "deficit_after": 21
+    },
+    {
+      "genre": "romance",
+      "target": 54,
+      "capacity_before": 12,
+      "added": 0,
+      "capacity_after": 12,
+      "deficit_after": 42
+    },
+    {
+      "genre": "sleep",
+      "target": 147,
+      "capacity_before": 5,
+      "added": 0,
+      "capacity_after": 5,
+      "deficit_after": 142
+    }
+  ],
+  "source_hashes": {
+    "mapping": "a1076ecc665a995ff3b565e0fff6c8692bc0865dd240769a7153ced503bf0dd5",
+    "historical_tracks": 77535,
+    "accepted_in_original_draw": 3869,
+    "overlap_same_text": 682,
+    "historical_metadata_sha256": "d14c77002f42d0c59ca1af0e734bec5075190e197479f55e6ea3c23f033d4efe",
+    "original_sample_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+    "original_lyrics_manifest_sha256": "6e5b544de3a325b9918938d9839dde2689006d19d35e3ae2aab3251efcfb32f2"
+  },
+  "private_sha256": {
+    "letras_revalidadas.parquet": "ca922ea8e19ed73295d822e95eb4104c428dabe3ab69b5768050b75820bb0008",
+    "vinculos_revalidados.parquet": "20ece640f47f8e93913f2fe45b91f678d719dfc419d34cdc66752d4078ac293e",
+    "decisoes.json": "ad18dcd50478e67e70098ec7dcffbd2d7766fb1b0ded0768951da0c062bc05e8"
+  }
+}

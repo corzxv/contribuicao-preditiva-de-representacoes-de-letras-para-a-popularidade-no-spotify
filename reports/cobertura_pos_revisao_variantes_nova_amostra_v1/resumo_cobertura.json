@@ -1,0 +1,99 @@
+{
+  "completed": true,
+  "sample_rows": 9526,
+  "counts": {
+    "accepted": 3844,
+    "ambiguous": 1110,
+    "instrumental": 416,
+    "no_text": 1,
+    "not_found": 4155
+  },
+  "targets_47": 108,
+  "new_accepted_47": 58,
+  "outcomes_47": {
+    "different_after_case_normalization": 21,
+    "accepted_plain_lrc_case_equivalent": 58,
+    "plain_synced_conflict": 29
+  },
+  "targets_48": 13,
+  "new_accepted_48": 9,
+  "outcomes_48": {
+    "accepted_after_catalog_review": 9,
+    "catalog_review_inconclusive": 4
+  },
+  "source48_summary_sha256": "9307f9a83fdfe8a08a01ec734a89e1efaf3faccc6e64ece88262f4e710373eb2",
+  "coverage_pct": 40.35271887465883,
+  "weighted_coverage_pct": 40.36793286983439,
+  "genres_without_accepted": 2,
+  "popularity_coverage": [
+    {
+      "limites": [
+        0,
+        19
+      ],
+      "n": 5548,
+      "aceitas_pos47": 1643,
+      "novas_48": 8,
+      "aceitas_pos48": 1651,
+      "cobertura_percentual": 29.758471521268927
+    },
+    {
+      "limites": [
+        20,
+        39
+      ],
+      "n": 2919,
+      "aceitas_pos47": 1554,
+      "novas_48": 1,
+      "aceitas_pos48": 1555,
+      "cobertura_percentual": 53.271668379582046
+    },
+    {
+      "limites": [
+        40,
+        59
+      ],
+      "n": 935,
+      "aceitas_pos47": 566,
+      "novas_48": 0,
+      "aceitas_pos48": 566,
+      "cobertura_percentual": 60.53475935828877
+    },
+    {
+      "limites": [
+        60,
+        79
+      ],
+      "n": 119,
+      "aceitas_pos47": 71,
+      "novas_48": 0,
+      "aceitas_pos48": 71,
+      "cobertura_percentual": 59.66386554621849
+    },
+    {
+      "limites": [
+        80,
+        100
+      ],
+      "n": 5,
+      "aceitas_pos47": 1,
+      "novas_48": 0,
+      "aceitas_pos48": 1,
+      "cobertura_percentual": 20.0
+    }
+  ],
+  "new_links_disjoint": true,
+  "original_sample_and_weights_verified": true,
+  "source43_summary_sha256": "28be60c5b3f561c3bf7943bb857764cc5d7c733ce878986b330638fcb0d6726a",
+  "source46_summary_sha256": "c978dfe10641bdfdc8d739c3a456e2a226a9651f0e0b17313ff03ded59f12bf2",
+  "source47_summary_sha256": "ca247666069ddfb725f3f6c02c983fe71c8f31c014849857014a1a128251bec3",
+  "stage47_private_sha256_verified": {
+    "decisoes.json": "a2658b2d239edccb2a539946a72e31955724793f9b777d2fda87dd0167c6063d",
+    "novas_letras_aceitas.parquet": "e13f16fb704a77ce89dadf0df574857ba70473316dc370f05dbc9e7f63bda1b6",
+    "novos_vinculos.parquet": "55f3a16ece157774ea261c63d29f3141d94ee3666983f4948eb7ef8b53c18efe"
+  },
+  "public_sha256": {
+    "comparacao_metadados.csv": "fe34dbdcc3f77f778fe0d46e2ccd2eb9cd93ff1cac2f776e83289598d92536d8",
+    "cobertura_generos.csv": "7ca3c16b7e8c529d78dd95ff88c8217b957e804efbd9b5f68093c1eef10f9af2"
+  }
+}

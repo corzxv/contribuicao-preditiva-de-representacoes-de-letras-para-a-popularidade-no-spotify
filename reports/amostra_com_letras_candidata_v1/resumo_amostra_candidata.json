@@ -1,0 +1,66 @@
+{
+  "status": "candidata_a_validacao_metodologica",
+  "seed": 20261108,
+  "frame_tracks": 80722,
+  "sample_tracks": 9526,
+  "verified_text_links": 9526,
+  "origins": {
+    "historical_tracks": 77535,
+    "accepted_in_original_draw": 3869,
+    "overlap_same_text": 682,
+    "historical_metadata_sha256": "d14c77002f42d0c59ca1af0e734bec5075190e197479f55e6ea3c23f033d4efe",
+    "original_sample_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+    "original_lyrics_manifest_sha256": "6e5b544de3a325b9918938d9839dde2689006d19d35e3ae2aab3251efcfb32f2"
+  },
+  "frame_genres": 82,
+  "sample_genres": 82,
+  "genres_with_capacity_deficit": [
+    {
+      "genre": "detroit-techno",
+      "target": 32,
+      "capacity": 11,
+      "selected": 11,
+      "capacity_deficit": 21
+    },
+    {
+      "genre": "minimal-techno",
+      "target": 125,
+      "capacity": 123,
+      "selected": 101,
+      "capacity_deficit": 2
+    },
+    {
+      "genre": "romance",
+      "target": 54,
+      "capacity": 12,
+      "selected": 8,
+      "capacity_deficit": 42
+    },
+    {
+      "genre": "sleep",
+      "target": 147,
+      "capacity": 5,
+      "selected": 5,
+      "capacity_deficit": 142
+    }
+  ],
+  "global_popularity_bands_match_original": true,
+  "original_draw_overlap": 424,
+  "selected_from_historical": 9186,
+  "weights_scope": "Probabilidades condicionadas ao quadro observado de faixas com vínculos aceitos.",
+  "text_source_sha256": {
+    "data/derived/private_sample_lyrics_200k_v2/letras_aceitas_200k.parquet": "dcd589bd75dceb6ac7f2917c3a08fccebded832e299bc0d27c04ebe834f4437a",
+    "data/derived/private_nova_amostra_matching_v2/letras_aceitas.parquet": "c3707e41bafdc30f399fbad90a4eba222098fa1418d30fc5ee68a9fa661cccff",
+    "data/derived/private_revisao_caixa_nova_amostra_v1/novas_letras_aceitas.parquet": "25ea157abfbb266939034856a85e77c6c6a6501515aeaf290eb07fe88be4fc19",
+    "data/derived/private_revisao_caixa_plain_lrc_nova_amostra_v1/novas_letras_aceitas.parquet": "e13f16fb704a77ce89dadf0df574857ba70473316dc370f05dbc9e7f63bda1b6",
+    "data/derived/private_revisao_limites_nova_amostra_v1/novas_letras_aceitas.parquet": "31f4e344413e7d51be9553acae4d0ff662eb75ddf1d94fff8524322d6b2e1ef0",
+    "data/derived/private_revisao_variantes_artista_nova_amostra_v1/novas_letras_aceitas.parquet": "bcb6b375afcc500d10e65f360362b043e7e02f7b96b59de16a0a842b55cb8dce"
+  },
+  "private_sample_sha256": "4ee19fcac4033368d5227a9eedf0f049bdcf182b1858bc36dfee202ca0c7efb5",
+  "code_sha256": "531e78adb1185fa78f1cba07d07d476e64dd66fc5d5662a89db519dd5dd525ee",
+  "public_sha256": {
+    "cotas_genero.csv": "d8887bf827c3d06aefba9f4a9fecbd1bcdc3281a01d98266b7b5ca6fbca2699f",
+    "alocacao_candidata.csv": "e31bdb59c9870cfcc6e1062815f882392eba3bf1587d58583e0bf130cc375cb7",
+    "comparacao_metadados.csv": "322f73336a9acc63c47921bd303f309224446f0ca7874a04a56e1d4e60f9af27"
+  }
+}

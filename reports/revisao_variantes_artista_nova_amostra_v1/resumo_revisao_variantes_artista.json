@@ -1,0 +1,37 @@
+{
+  "completed": true,
+  "targets": 13,
+  "outcomes": {
+    "accepted_after_catalog_review": 9,
+    "catalog_review_inconclusive": 4
+  },
+  "new_accepted_tracks": 9,
+  "new_accepted_queries": 9,
+  "accepted_tracks_with_overlays": 3844,
+  "seal": {
+    "version": "nova-amostra-grafia-artista-revisada-v1",
+    "code_sha256": "c1d22a74f8733cdd967f85b27a92e610f2f60bb827e150ddaf044271a2a55373",
+    "source44_summary_sha256": "34ff7b291fa00fa3ba9b3c348e5e324058971aceb52ae85187bf617c52cbe5e4",
+    "source47_summary_sha256": "ca247666069ddfb725f3f6c02c983fe71c8f31c014849857014a1a128251bec3",
+    "source43_state_sha256": "4310d8687ae35dd4ed0bc8514b7fc714878c523a9cca64bcdad4282026929cb4",
+    "dump": {
+      "path": "D:\\TCC_LRCLIB\\lrclib-db-dump-20261012T090639Z.sqlite3",
+      "size": 261755867136,
+      "mtime_ns": 1793112801795482900,
+      "verified_sha256": "e8682b6f1807ca0671e6ae8206dd60f0363f70ca67d352a4ddecbe896500c0d3",
+      "source": {
+        "filename": "lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "url": "https://db-dumps.lrclib.net/lrclib-db-dump-20261012T090639Z.sqlite3.gz",
+        "compressed_bytes": 47837763733,
+        "database_bytes": 261755867136,
+        "etag": "9595e9d143bf175845a9e41acd298884-2852"
+      }
+    }
+  },
+  "private_sha256": {
+    "revisao_documental.json": "9259ce7547a27ad06aa78d8bc8c8bffafc3a3e7368c2d366ae44558c4db11358",
+    "desfechos.json": "97ce32ad3d1e93fdd4a39e44b04ae5cfef6c941be717f3572b016ccc1d8cac18",
+    "novas_letras_aceitas.parquet": "bcb6b375afcc500d10e65f360362b043e7e02f7b96b59de16a0a842b55cb8dce",
+    "novos_vinculos.parquet": "0b54ddb4753772f45bb166bb060e8fc751003e542fe9df52050e1076ca90c6f4"
+  }
+}

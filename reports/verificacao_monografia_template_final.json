@@ -1,0 +1,37 @@
+{
+  "decisao": "D-046",
+  "data": "2026-11-13",
+  "entrada": "reports/monografia_template_final/main.tex",
+  "pdf": "output/pdf/monografia_template_final.pdf",
+  "pdf_sha256": "64a73d2bdd6ee089fa1b7c1afa2448fec5bee200c71b4fe6b5c94d6fd51bba47",
+  "zip": "reports/monografia_template_final.zip",
+  "zip_sha256": "2f8976ac0e92c040ff451ffe89968e463c402079e632596abb4b2ad2cbae5555",
+  "zip_crc_verificado": true,
+  "zip_arquivos": 176,
+  "zip_png": 93,
+  "zip_bytes": 9000776,
+  "zip_bytes_editaveis": 713702,
+  "compilador": "Tectonic 0.17.0+20260731 / XeTeX / BibTeX",
+  "compilado_do_zip_extraido": true,
+  "avisos_fontconfig": "Aviso de configuração padrão do host. O PDF compilado foi renderizado e inspecionado.",
+  "avisos_latex_bibtex": 0,
+  "paginas": 39,
+  "figuras_pdf": 27,
+  "tabelas_pdf": 13,
+  "referencias_pdf": 28,
+  "pgs_revisadas_visualmente": 39,
+  "bootstrap": {
+    "script": "scripts/58_diagnosticar_previsoes_monografia_final.py",
+    "replicas": 8000,
+    "componentes": 6271,
+    "semente": 20261113,
+    "prediction_sha256": "f78c632c3a472b7dbbebc34123381aaed3d6cdecf84ec2629340baf266270d2f",
+    "limites_condicionados_as_previsoes": true
+  },
+  "testes_amostragem_e_modelagem_passaram": 14,
+  "ruff_verificado": true,
+  "v3_preservada": {
+    "output/pdf/monografia_template_200k_v3.pdf": "6edceb642303698b0a309a1cbc13a0c904ddb75d8a52588bbab404cc8fcf36a5",
+    "reports/monografia_template_200k_v3.zip": "90af6c7c17959bfb1254bc351110c5fcb1ebb9051b40d6ac81e3f67a27e19080"
+  }
+}

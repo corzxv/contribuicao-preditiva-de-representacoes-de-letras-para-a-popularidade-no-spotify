@@ -1,0 +1,34 @@
+{
+  "decisao": "D-047",
+  "fonte": "reports/monografia_template_revisada/main.tex",
+  "pdf": "output/pdf/monografia_template_revisada.pdf",
+  "pdf_sha256": "eb35ca1899a739c4aaa8c01318d29ff5b8f45c2925b50effe91d00d6c7da9bd4",
+  "zip": "reports/monografia_template_revisada.zip",
+  "zip_sha256": "aa75a71560536823335ded0ab07c163097d29f73dc426b85663a60edf8c83141",
+  "zip_conteudo_verificado": true,
+  "zip_arquivos": 75,
+  "paginas": 39,
+  "paginas_corpo_da_introducao_as_consideracoes_finais": 31,
+  "figuras": 21,
+  "tabelas": 14,
+  "referencias": 25,
+  "apendices": 0,
+  "compilado_do_zip_extraido": "Tectonic 0.17.0+20260731 / XeTeX / BibTeX",
+  "avisos_latex_bibtex": 0,
+  "avisos_fontconfig": "Aviso de configuração padrão do host. As páginas foram renderizadas e inspecionadas.",
+  "paginas_revisadas_visualmente": 39,
+  "testes_projeto_passaram": 14,
+  "lint_script_59": "aprovado",
+  "diagnostico_leve": {
+    "script": "scripts/59_consolidar_descritivas_monografia.py",
+    "faixas_do_sorteio_inicial_na_coorte": 461,
+    "somente_letra_simples": 3726,
+    "letra_simples_e_sincronizada": 5800,
+    "denominador_formatos": 9526
+  },
+  "treinamento_e_busca_novos": false,
+  "versao_D046_preservada": {
+    "output/pdf/monografia_template_final.pdf": "64a73d2bdd6ee089fa1b7c1afa2448fec5bee200c71b4fe6b5c94d6fd51bba47",
+    "reports/monografia_template_final.zip": "2f8976ac0e92c040ff451ffe89968e463c402079e632596abb4b2ad2cbae5555"
+  }
+}

@@ -1,0 +1,31 @@
+\begingroup\footnotesize\singlespacing
+\begin{longtable}{@{}P{.26\linewidth}P{.20\linewidth}P{.48\linewidth}@{}}
+\caption{Dicionário dos campos do arquivo Spotify.}\label{tab:dicionario}\\
+\toprule Campo & Tipo ou unidade & Definição operacional \\\midrule\endfirsthead
+\toprule Campo & Tipo ou unidade & Definição operacional \\\midrule\endhead
+\bottomrule\endfoot
+\bottomrule\endlastfoot
+Sem nome & Índice & Índice exportado no CSV. \\
+\texttt{track\_id} & Texto & Identificador da faixa Spotify. \\
+\texttt{track\_name} & Texto & Título informado. \\
+\texttt{artist\_name} & Texto & Crédito de artista informado. \\
+\texttt{popularity} & Inteiro 0--100 & Escore observado de popularidade. \\
+\texttt{year} & Ano inteiro & Ano informado na fonte. \\
+\texttt{genre} & Categoria & Rótulo de gênero fornecido. \\
+\texttt{danceability} & Escore 0--1 & Adequação estimada à dança. \\
+\texttt{energy} & Escore 0--1 & Intensidade e atividade percebidas. \\
+\texttt{key} & Classe 0--11 & Classe de altura musical, com $-1$ se não identificada. \\
+\texttt{loudness} & Decibéis (dB) & Intensidade sonora média informada. \\
+\texttt{mode} & Categoria 0/1 & Modo menor ou maior. \\
+\texttt{speechiness} & Escore 0--1 & Presença estimada de fala. \\
+\texttt{acousticness} & Escore 0--1 & Grau estimado de caráter acústico. \\
+\texttt{instrumentalness} & Escore 0--1 & Estimativa de ausência de voz. \\
+\texttt{liveness} & Escore 0--1 & Indícios de execução ao vivo. \\
+\texttt{valence} & Escore 0--1 & Positividade musical estimada. \\
+\texttt{tempo} & BPM & Andamento global estimado. \\
+\texttt{duration\_ms} & Milissegundos & Duração da faixa. \\
+\texttt{time\_signature} & Categoria & Assinatura de tempo estimada. \\
+\end{longtable}
+\fonte{Arquivo Spotify\_1Million\_Tracks \cite{spotifydataset} e documentação do Spotify \cite{spotifyaudio,spotifydocs}.}
+\endgroup
+

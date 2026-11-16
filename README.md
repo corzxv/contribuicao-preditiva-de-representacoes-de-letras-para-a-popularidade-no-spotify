@@ -1,104 +1,48 @@
-# TCC — popularidade musical e representações de letras
+# Contribuição preditiva de representações de letras para a popularidade no Spotify
 
-Código e materiais de reprodução do TCC de **Felipe Macedo Cordeiro**, Bacharelado
-em Estatística da Universidade de Brasília. Orientador: **Leandro Tavares Correia**.
+Trabalho de Conclusão de Curso de **Felipe Macedo Cordeiro**, Bacharelado em Estatística da Universidade de Brasília. Orientador **Leandro Tavares Correia**.
 
-O estudo avalia a contribuição preditiva incremental de letras para estimar a
-popularidade Spotify observada, em conjunto com atributos acústicos e metadados.
-A análise principal está encerrada e congelada; a monografia permanece em revisão.
+- [Monografia em PDF](output/pdf/monografia_template_overleaf.pdf)
+- [ZIP editável para o Overleaf](reports/monografia_template_overleaf.zip)
+- [Fontes LaTeX e tabelas](reports/monografia_template_overleaf/main.tex)
+- [Resultados da avaliação](reports/classificacao_9526_v1/interpretacao_resultados.md)
 
-## Monografia e resultados atuais
+Para compilar, importe o ZIP como novo projeto no Overleaf e selecione `main.tex` e **XeLaTeX**. O BibTeX é executado automaticamente.
 
-- [PDF do relatório no template](output/pdf/monografia_template_200k_v2.pdf).
-- [Projeto LaTeX](reports/monografia_template_200k_v2/main.tex) e
-  [ZIP para Overleaf](reports/monografia_template_200k_v2.zip).
-- [Resultados e interpretação](reports/interpretacao_modelagem_200k_v1.md).
-- [Parecer de fechamento](reports/parecer_fechamento_metodologico_200k_v1.md).
+## Dados e resultado
 
-A versão no template tem 34 páginas, cinco seções principais, dez tabelas,
-cinco figuras e 27 referências originais. No Overleaf, importar o ZIP, usar
-`main.tex` e selecionar XeLaTeX; as referências são processadas por BibTeX.
+O estudo avalia quanto as letras acrescentam à classificação do nível de popularidade observado quando já se conhecem os atributos acústicos e os metadados. O catálogo acessível tem **1.159.764 faixas**. Um primeiro sorteio probabilístico estratificado de **9.526 faixas** permitiu medir a recuperação de letras no LRCLIB, com **3.869 vínculos aceitos**. Uma segunda seleção, a partir de **80.943 vínculos consolidados**, reuniu as **9.526 faixas com letra** usadas na modelagem.
 
-O percurso principal foi: catálogo acessível de 1.159.764 faixas → amostra
-probabilística estratificada de 200.000 → recuperação local no LRCLIB → domínio
-observado de 77.535 faixas com letras aceitas. Os quatro conjuntos de variáveis
-foram avaliados com Ridge nos mesmos componentes e folds agrupados aninhados 5×3.
+| Modelo | Informação adicional à do Baseline | Acurácia balanceada |
+| --- | --- | ---: |
+| Baseline | Atributos acústicos e metadados | 56,14% |
+| Tradicional | 21 descritores lexicais e estruturais | 56,24% |
+| Profundo | Embedding multilíngue de 384 dimensões | 55,91% |
+| Combinado | Descritores e embedding | 55,96% |
 
-| Configuração | MAE externo | RMSE externo |
-| --- | ---: | ---: |
-| Baseline | 8,3525 | 10,8255 |
-| Tradicional | 8,2957 | 10,7538 |
-| Profundo | 8,1285 | 10,5540 |
-| Combinado | 8,1151 | 10,5381 |
+A classe alta teve maior sensibilidade no modelo Profundo, de 31,07%, ante 26,25% no Baseline. As diferenças de desempenho balanceado foram pequenas na coorte avaliada. O [protocolo](docs/protocolo_classificacao_9526_v1.md) e os [agregados de classificação](reports/classificacao_9526_v1/metricas_externas.csv) documentam a validação e o alcance dos resultados.
 
-O ganho conjunto de MAE foi de 2,84%. São resultados do domínio observado,
-sem causalidade ou generalização automática ao catálogo. A variante E5 efetivamente
-utilizada, a seleção de letras, a exposição histórica e os limites condicionais
-são descritos na monografia e no parecer. Pesos amostrais são preservados; a
-modelagem principal atribui peso igual a cada faixa.
+## Reprodução
 
-## Por onde começar
-
-1. [Guia de reprodução](docs/REPRODUCAO.md): ambiente, entradas, etapas e execução manual.
-2. [Histórico metodológico](docs/HISTORICO_METODOLOGICO.md): trajetória e dependências.
-3. [Dicionário de dados](docs/data_dictionary.md) e [decisões](docs/decisions.md).
-4. [Política de publicação](docs/PUBLICACAO_GITHUB.md): conteúdo versionado e preservação.
-
-## Organização dos códigos
-
-| Etapa | Entrada de execução | Papel |
+| Etapa | Entradas CLI | Resultados e documentação |
 | --- | --- | --- |
-| Preparação local do LRCLIB | scripts 05–08 | Dump, índices e controles de busca |
-| Catálogo e amostra | scripts 11–12 | Auditoria e sorteio de 200 mil faixas |
-| Letras e cobertura | scripts 13–17 | Busca, recuperação, diagnóstico e prontidão |
-| Representações e grupos | scripts 19–20 | 21 descritores e embeddings E5 de 384 dimensões |
-| Base e validação | script 21 | Base comum e componentes/folds 5×3 |
-| Comparação Ridge | script 22 | Quatro configurações, checkpoints e previsões externas |
-| Diagnósticos | scripts 23 e 25–27 | Métricas, incerteza condicional e auditorias |
-| Escrita e figuras | scripts 24, 28–29 | Agregados e materiais da monografia |
-| Publicação do repositório | script 30 | Seleção de arquivos e auditoria do índice Git |
+| Descrição do catálogo e dimensionamento | `39` e `40` | [Diagnóstico descritivo](reports/interpretacao_descritiva_catalogo_completo_v1.md) e [plano amostral](docs/plano_nova_amostra_catalogo_v1.md) |
+| Busca local, revisões e cobertura textual | `41` a `51` | [Cobertura do sorteio](reports/recuperacao_consolidada_nova_amostra_v1/resumo_cobertura.json) |
+| Quadro com letras e seleção para modelagem | `52` a `56` | [Recuperação dirigida](docs/recuperacao_generos_deficitarios_v1.md) e [seleção final](reports/amostra_com_letras_candidata_v2/resumo_amostra_candidata.json) |
+| Classificação ordinal | `57` | [Protocolo e execução](docs/protocolo_classificacao_9526_v1.md) |
+| Incerteza condicional e figuras editoriais | `58` e `59` | [Contrastes pareados](reports/monografia_template_overleaf/material_complementar/contrastes_condicionais.csv) e [trajetória das amostras](reports/monografia_template_overleaf/material_complementar/trajetoria_amostras.json) |
 
-A lógica está em `src/tcc_music_popularity/`; os scripts são entradas CLI.
-Códigos históricos utilizados no desenvolvimento ou importados pela linha atual
-continuam identificados no histórico. Mantêm-se os caminhos dos arquivos selados
-para não romper imports, checkpoints e proveniência.
+O [guia de reprodução](docs/REPRODUCAO.md) explica dependências, dados de entrada e execução manual das etapas pesadas. O [dicionário](docs/data_dictionary.md), a [proveniência](docs/provenance.md) e o [registro de decisões](docs/decisions.md) documentam as variáveis e o desenho. A [classificação da etapa anterior](reports/interpretacao_classificacao_ordinal_200k_v1.md) é uma avaliação de outra coorte, usada no desenvolvimento e na composição do quadro atual.
 
-## Ambiente e verificações
+Novas execuções estocásticas usam **semente 42**. A reprodução das etapas seladas usa as sementes das respectivas execuções. As fontes da monografia e as figuras necessárias à compilação acompanham o ZIP. Dados brutos, letras, previsões individuais, modelos, vetores, caches e credenciais ficam no ambiente local, conforme a [política de publicação](docs/PUBLICACAO_GITHUB.md).
 
-O ambiente científico registrado usa Python 3.13. Instalação completa, quando
-necessária, é manual:
+## Verificações leves
+
+O projeto usa Python 3.13. Após instalar as dependências do [guia de reprodução](docs/REPRODUCAO.md), execute:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-cientificos.txt
-.\.venv\Scripts\python.exe -m pip install -e . --no-deps
-```
-
-`requirements-lock.txt` registra o ambiente básico; `requirements-cientificos.txt`
-acrescenta as versões observadas de modelagem e embeddings. O guia distingue a
-reprodução científica da compilação do documento, que usa TeX.
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest --ignore=tests/test_local_demo_ui.py
 .\.venv\Scripts\python.exe scripts\30_auditar_publicacao_git.py
+.\.venv\Scripts\python.exe -m pytest tests/test_git_publication.py tests/test_normalization.py
 ```
 
-Os testes usam fixtures pequenas; não reproduzem o treinamento integral. A
-verificação automática no GitHub usa somente a auditoria de publicação e testes
-leves de publicação/normalização, sem baixar encoder, letras ou bases reais.
-
-## Dados e preservação
-
-As fontes são [Spotify no Kaggle](https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks),
-[LRCLIB](https://lrclib.net/docs) e, na trajetória histórica,
-[LFM2b Lyrics Descriptor Analyses](https://zenodo.org/records/10938615).
-Letras, bases individuais, dump SQLite, modelos, embeddings, credenciais e caches
-permanecem fora do Git. O repositório contém código, testes, configurações de
-exemplo, protocolos, agregados e materiais acadêmicos. A licença MIT se aplica
-ao código do projeto; não substitui as condições das fontes e dos textos musicais.
-
-Novos commits, comentários e documentação do projeto são escritos em português.
-Os commits anteriores e os bytes dos códigos científicos selados são preservados.
-Atributos Git impedem conversão automática de quebras de linha, necessária à
-conservação dos hashes de proveniência. Não há comando automático que reinicie
-buscas, geração de representações ou treinamento.
+As verificações do GitHub Actions usam dados sintéticos. A licença MIT cobre o código do projeto. As condições das fontes valem para seus respectivos dados.

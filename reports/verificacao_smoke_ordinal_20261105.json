@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-05",
+  "status": "smoke_real_concluido_e_conferido",
+  "signature": "681ce2037856f2fa17843dde0e0cb032aaf8e0dfa40cf373aa8a03de98fb01f3",
+  "used_rows": 318,
+  "outer_train_rows": 251,
+  "outer_valid_rows": 67,
+  "inner_fits": 96,
+  "ordinal_outer_parts": 4,
+  "reference_outer_parts": 1,
+  "max_inner_iterations": 175,
+  "max_inner_abs_gradient": 9.981259374524081e-07,
+  "inner_warnings_recorded": 0,
+  "reload_max_abs_difference": 0.0,
+  "gate_verified": true,
+  "global_metrics_available": false,
+  "parts_checked": [
+    {
+      "block": "baseline",
+      "model_sha256": "9dcbb181147e6da1ba276e15598510ab961ba2b91d58000bc677d44fefac83d5",
+      "prediction_sha256": "0a6d4deac916a80be44e833308ac4b9e3e43b623978cb32056a7f02815765aec",
+      "iterations": 124,
+      "max_abs_gradient": 9.256314689567503e-07,
+      "warnings": 0
+    },
+    {
+      "block": "traditional",
+      "model_sha256": "2f0ecf0326bcc64c1c6d1217c02ae438b1cbf7f216f560944ab3beae905277fe",
+      "prediction_sha256": "56a07137d3fb502a2cd14d48e3692937e76f43491efb142b5626096177d926b6",
+      "iterations": 163,
+      "max_abs_gradient": 9.747261311763957e-07,
+      "warnings": 0
+    },
+    {
+      "block": "deep",
+      "model_sha256": "87be80873261d988c35578d8addee43bcd3bcbad46fcc123e43319d1e6b255db",
+      "prediction_sha256": "c0cf8e3b22b318fcaa5b754c0bb53229574abf77012b37dae7671b5f55662edd",
+      "iterations": 39,
+      "max_abs_gradient": 8.532432236637438e-07,
+      "warnings": 0
+    },
+    {
+      "block": "combined",
+      "model_sha256": "76e8fd1f648b9eb2c53666d92ecbdb6808e9bde9278decfae84e28fedbe89553",
+      "prediction_sha256": "1990cd2b1de91687c6d2f456a9f2f300baf6157d72f0d919019b795407bf1e42",
+      "iterations": 21,
+      "max_abs_gradient": 5.460719973631243e-07,
+      "warnings": 0
+    },
+    {
+      "block": "class_prior",
+      "model_sha256": "678aa7f93060d1d45c426381018d0994d0063936dfd8fcce616fc5b427566a25",
+      "prediction_sha256": "bcb5badced1ca7c27866b63cb722b80ec0b0c8bb5dba3d74cb0faf9ab2e72bda",
+      "iterations": null,
+      "max_abs_gradient": null,
+      "warnings": null
+    }
+  ],
+  "previous_artifacts_preserved": true,
+  "code_protocol_configuration_unchanged": true,
+  "agent_refit_executed": false,
+  "agent_individual_cohort_reprocessed": false,
+  "large_input_hashing_repeated_by_agent": false,
+  "prior_tests_unchanged_code": 53,
+  "production_next": "34_classificar_niveis_popularidade.py all --limit-outer-blocks 1",
+  "production_executed_by_agent": false
+}

@@ -1,0 +1,10 @@
+status,extreme_tail,population_queries,selected_queries,review_inclusion_probability
+accepted,False,77407,20,0.0002583745656077616
+accepted,True,128,20,0.15625
+ambiguous,False,26718,20,0.0007485590238790329
+ambiguous,True,367,20,0.05449591280653951
+not_found,False,86608,20,0.00023092554960280805
+not_found,True,2,2,1.0
+instrumental,False,8757,20,0.002283887175973507
+instrumental,True,2,2,1.0
+no_text,False,9,9,1.0

@@ -1,0 +1,149 @@
+{
+  "verified_at": "2026-11-07T01:42:21.703047+00:00",
+  "local_date": "2026-11-06",
+  "decision": "D-034",
+  "stage43_real_complete": true,
+  "status_counts": {
+    "accepted": 3647,
+    "ambiguous": 1298,
+    "not_found": 4164,
+    "no_text": 1,
+    "instrumental": 416,
+    "insufficient_metadata": 0,
+    "technical_error": 0,
+    "pending": 0
+  },
+  "new_accepted": 2222,
+  "seconds": 41.79257299999881,
+  "accepted_percent_unweighted": 38.28469452026034,
+  "accepted_percent_design_weighted": 38.29862070434828,
+  "source43_private_hashes_verified": {
+    "resultados_faixas.parquet": "adf21687afcef2ec3a8694c3f347951f232cc5ad58cd8c6572ba9b4d9116e76d",
+    "letras_aceitas.parquet": "c3707e41bafdc30f399fbad90a4eba222098fa1418d30fc5ee68a9fa661cccff",
+    "pendencias_revisao.parquet": "b0b6b21b69077899c8d353ae043d74455982ccbce8cb59169036110fb75f40a6"
+  },
+  "source43_public_hashes_verified": {
+    "status_revisao.csv": "9817affe52dc5bd0e7e61d37d3c0e102856d1ec2ba4b44148e35295cb3a9ca95",
+    "cobertura_revisao.csv": "bb5a48f24be072d64664fda7a514c131629aae8d59334e44d0d75269f22de8b4",
+    "transicoes_status.csv": "17e8d77ca481a328dba5faae7326c4e07b97e7e0b44c5eec0861caae51a07dca"
+  },
+  "remaining_reason_counts": [
+    {
+      "status": "accepted",
+      "reason": "all_eligible_strict_equivalent",
+      "n": 467
+    },
+    {
+      "status": "accepted",
+      "reason": "compatible_equivalent_texts",
+      "n": 2969
+    },
+    {
+      "status": "accepted",
+      "reason": "unique_compatible_plain",
+      "n": 211
+    },
+    {
+      "status": "ambiguous",
+      "reason": "instrumental_text_conflict",
+      "n": 8
+    },
+    {
+      "status": "ambiguous",
+      "reason": "invalid_or_extended_synced_format",
+      "n": 3
+    },
+    {
+      "status": "ambiguous",
+      "reason": "metadata_conflict",
+      "n": 152
+    },
+    {
+      "status": "ambiguous",
+      "reason": "operational_limit:candidate_limit",
+      "n": 40
+    },
+    {
+      "status": "ambiguous",
+      "reason": "plain_synced_conflict",
+      "n": 108
+    },
+    {
+      "status": "ambiguous",
+      "reason": "positive_version_conflict",
+      "n": 153
+    },
+    {
+      "status": "ambiguous",
+      "reason": "substantively_distinct_texts",
+      "n": 831
+    },
+    {
+      "status": "ambiguous",
+      "reason": "unordered_synced_timestamps",
+      "n": 2
+    },
+    {
+      "status": "ambiguous",
+      "reason": "unsupported_multi_timestamp_synced",
+      "n": 1
+    },
+    {
+      "status": "instrumental",
+      "reason": "compatible_source_instrumental_no_text",
+      "n": 416
+    },
+    {
+      "status": "no_text",
+      "reason": "compatible_without_text",
+      "n": 1
+    },
+    {
+      "status": "not_found",
+      "reason": "no_candidate_controlled_keys",
+      "n": 4164
+    }
+  ],
+  "source42_state_preserved_verified": true,
+  "sample_preserved_verified": true,
+  "source43_code_preserved_verified": true,
+  "limited_inspections": {
+    "not_found_metadata_queries": 12,
+    "cross_candidate_text_queries": 8,
+    "native_methods_metadata_queries": 12,
+    "distinct_text_samples_still_differ_after_whitespace": 8,
+    "raw_texts_exposed_or_saved": false,
+    "probability_audit": false,
+    "case_refs_sha256": "863d55ded1e9aa27643f375a776cb98fa2b012608afef211e913a2ac55972944"
+  },
+  "native_access_plans_verified": {
+    "exact_title": "(5, 0, 58, 'SEARCH tracks USING INDEX idx_tracks_name_lower (name_lower=?)')",
+    "exact_artist": "(5, 0, 70, 'SEARCH tracks USING INDEX idx_tracks_artist_name_lower (artist_name_lower=?)')",
+    "fts": "(5, 0, 132, 'SCAN tracks_fts VIRTUAL TABLE INDEX 64:M3') (10, 0, 48, 'SEARCH t USING INTEGER PRIMARY KEY (rowid=?)')"
+  },
+  "native_indices_created": false,
+  "full_catalogue_or_dump_scan": false,
+  "stage44_prepared": true,
+  "stage44_real_executed": false,
+  "stage44_automatic_acceptances": 0,
+  "tests": {
+    "command": "python -m pytest tests/test_native_lookup_audit.py -p no:cacheprovider --basetemp .tmp_native_audit_20261106_final --tb=short",
+    "passed": 3,
+    "seconds": 1.27,
+    "synthetic_data_only": true
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "git_diff_check": "passed",
+  "prepared_sha256": {
+    "src/tcc_music_popularity/native_lookup_audit.py": "88a53bb908ce137567c799c46b963e534eb0456a46b99904f755f55e628d43c4",
+    "scripts/44_diagnosticar_consultas_sem_candidato.py": "96326e3c0e9ae3d5a3bcbad897b879cc3387a36d2ca4761307f260d7449517e6",
+    "tests/test_native_lookup_audit.py": "db5ab89ec390ef281c0cfb19e2df16e23e4b8a1838ee70e6eb922ed04ba74de9",
+    "docs/execucao_diagnostico_chaves_nova_amostra_v1.md": "803becdcf27c61ad6360856f28201506d0fbcc9f0f675896e367abf6693dbfd7",
+    "reports/interpretacao_revisao_matching_nova_amostra_v2.md": "21b170b6610ede7d3a277088106976f8d9701f59e2b1419a72bbd2976409642a"
+  },
+  "models_trained": false,
+  "new_embeddings": false,
+  "new_pdf": false,
+  "commit_push": false
+}

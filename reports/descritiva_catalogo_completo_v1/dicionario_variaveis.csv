@@ -1,0 +1,21 @@
+variavel_original,tipo_e_unidade_original,definicao,papel_descritivo,coluna_nova,unidade_nova
+[coluna sem nome],índice da fonte,Índice exportado no CSV; não é atributo musical.,não analítico,"",índice da fonte
+artist_name,texto,Crédito de artista da fonte; não é uma identidade pessoal desambiguada.,identificação,"",texto
+track_name,texto,Título informado; títulos iguais podem corresponder a gravações diferentes.,identificação,"",texto
+track_id,texto,Identificador de faixa Spotify; não é identificador universal de composição.,identificação,"",texto
+popularity,escore inteiro,Popularidade observada de 0 a 100; data de medição não confirmada.,resposta descritiva,_desc_popularity,escore inteiro
+year,ano inteiro,Ano informado no CSV; não se presume primeiro lançamento da composição.,tempo,_desc_year,ano inteiro
+genre,categoria nominal,"Rótulo de gênero fornecido, mantido inteiro e sem recodificação musical.",perfil,"",categoria nominal
+danceability,escore 0–1,Adequação estimada à dança.,PCA,_desc_danceability,escore 0–1
+energy,escore 0–1,Intensidade e atividade percebidas estimadas pelo provedor.,PCA,_desc_energy,escore 0–1
+key,categoria musical,Classe de altura de 0 a 11; -1 indica não identificação.,perfil,_desc_key,categoria musical
+loudness,decibéis,Intensidade sonora média informada; sem limite rígido adicional.,PCA,_desc_loudness,decibéis
+mode,categoria binária,Codificação de modo menor (0) ou maior (1).,perfil,_desc_mode,categoria binária
+speechiness,escore 0–1,Presença estimada de fala.,PCA,_desc_speechiness,escore 0–1
+acousticness,escore 0–1,Confiança estimada de caráter acústico.,PCA,_desc_acousticness,escore 0–1
+instrumentalness,escore 0–1,Estimativa de ausência de voz; não comprova ausência de letra.,PCA,_desc_instrumentalness,escore 0–1
+liveness,escore 0–1,Indícios acústicos estimados de execução ao vivo.,PCA,_desc_liveness,escore 0–1
+valence,escore 0–1,Positividade musical estimada; não é sentimento validado da letra.,PCA,_desc_valence,escore 0–1
+tempo,batidas/minuto,Andamento global estimado; zero é sinalizado pela regra local.,PCA,_desc_tempo,batidas/minuto
+duration_ms,milissegundos,Duração original; coluna descritiva nova é expressa em segundos.,PCA,_desc_duration_s,segundos
+time_signature,categoria musical,Assinatura de tempo estimada; números são tratados como categorias.,perfil,_desc_time_signature,categoria musical

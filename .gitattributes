@@ -5,3 +5,7 @@
 *.svg -diff
 # Conservar inclusive a linha final da fonte acadêmica anterior, já identificada por hash.
 reports/monografia_consolidada_200k_v1/chapters/11_conclusoes.tex whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+# As fontes desta edição correspondem byte a byte ao ZIP compilado.
+reports/monografia_template_overleaf/**/*.tex whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+reports/monografia_template_overleaf/ref.bib whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+reports/monografia_template_overleaf/LEIA_PRIMEIRO.txt whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,39 @@
+{
+  "plano_concluido": true,
+  "sorteio_executado": false,
+  "criado_em": "2026-11-06T23:41:25.775508+00:00",
+  "decisao": "D-030",
+  "N": 1159764,
+  "n": 9526,
+  "generos": 82,
+  "seed": 20261106,
+  "desenho": "AAS sem reposição independente nos 82 gêneros; alocação proporcional por maiores restos",
+  "meta_proporcao_margem": 0.01,
+  "confianca_individual_proporcao_aproximada": 0.95,
+  "meta_medias_margem_em_dp": 0.05,
+  "confianca_familia_medias_aproximada": 0.95,
+  "ajuste_familia_medias": "Bonferroni para 12 médias, aproximação normal",
+  "limite_margem_proporcao": 0.009999741551575885,
+  "maior_margem_media_em_dp": 0.028873725541631277,
+  "z_individual": 1.9599639845400536,
+  "z_familia": 2.8652602385321333,
+  "source_sha256": "42fff9e85d1b26c3653b4668959d1be395fab8956848f0478bf28f726b3d5897",
+  "source_bytes": 175822041,
+  "description_sha256": "20e82d24e1eb70a1fcf72b9d23248188333a336c05189b99fada3fbf035cc8b3",
+  "code_sha256": "fdd8d83ee51a6ee6c65ee6b6f6a4c9f6bc24c69bb71faacbc90a8bca17dca10d",
+  "arquivos": {
+    "alocacao_generos.csv": "c4edcea49a4e85ea1f6ce0df1d401a3ed67b28c2c96c2b87f2c60bbd7070b40a",
+    "precisao_metadados.csv": "3b383cadb0df8fe7f96340d47604a33366d687e1053414bb6d2a6b3f916e4a9a",
+    "cenarios_tamanho.csv": "8098d0f8d418370447ebf72a4fa02d3c2136b9b7bdd76b79c3ed2d1397091fee"
+  },
+  "csv_individual_lido_pelo_agente": false,
+  "letras_buscadas": false,
+  "treino": false,
+  "limites": [
+    "Metas referem-se ao sorteio completo antes da recuperação de letras.",
+    "A margem de proporção é individual; não simultânea para todas as categorias.",
+    "Não há precisão assegurada para gêneros raros ou popularidade extrema.",
+    "Igualdade de distribuições, precisão preditiva e sucesso de recuperação não são garantidos.",
+    "BPM zero permanece no universo; reconstrução dos momentos incluiu os 1.199 zeros documentados."
+  ]
+}

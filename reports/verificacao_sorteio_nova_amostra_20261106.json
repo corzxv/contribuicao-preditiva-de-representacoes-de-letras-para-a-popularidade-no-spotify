@@ -1,0 +1,99 @@
+{
+  "verificado_em": "2026-11-07T00:16:08.269512+00:00",
+  "data_local": "2026-11-06",
+  "decisao": "D-031",
+  "sorteio_real_concluido_pelo_pesquisador": true,
+  "n": 9526,
+  "N": 1159764,
+  "sample_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+  "sample_bytes": 687337,
+  "n_linhas_rodape_parquet": 9526,
+  "n_colunas_rodape_parquet": 27,
+  "linhas_individuais_analisadas_pelo_agente": 0,
+  "csv_catalogo_reprocessado_pelo_agente": false,
+  "n_medias_comparadas": 12,
+  "n_celulas_categoricas_reconciliadas": 128,
+  "maior_diferenca_absoluta_media_dp": 0.019009851894192874,
+  "maximos_categorias": {
+    "genre": {
+      "categoria": "minimal-techno",
+      "diferenca_pp": 8.673617379884035e-16
+    },
+    "key": {
+      "categoria": "4",
+      "diferenca_pp": -0.6158003933264627
+    },
+    "mode": {
+      "categoria": "1",
+      "diferenca_pp": -0.15010996111893826
+    },
+    "periodo": {
+      "categoria": "2000–2009",
+      "diferenca_pp": 0.4050440642983155
+    },
+    "time_signature": {
+      "categoria": "1",
+      "diferenca_pp": -0.16830408896547963
+    },
+    "year": {
+      "categoria": "2006",
+      "diferenca_pp": 0.4252428710189646
+    }
+  },
+  "doze_diferencas_dentro_margens_planejamento": true,
+  "limite_interpretacao": "Diferenças pequenas nas características avaliadas; sem alegar equivalência de distribuições ou representatividade após recuperação de letras.",
+  "soma_pesos": 1159764.0000000002,
+  "fontes_conferidas": {
+    "comparacao_metadados.csv": "0ab71fe5a756ee90d9ecde7f4e628571d13a00862ddc5f4317c19454dd0df4d9",
+    "comparacao_categorias.csv": "4e6a2abbcdece6b5a2210fc1567565b2b68635ce630d973273bb62d921b82487"
+  },
+  "figuras_reais_revisadas_visualmente": 2,
+  "reaproveitamento_cache_preparado": true,
+  "reaproveitamento_cache_real_executado": false,
+  "inspecao_cache": {
+    "apenas_schema_explain_e_stat": true,
+    "textos_reais_lidos": 0,
+    "consultas_de_faixas_reais": 0,
+    "hash_integral_bancos_recalculado": false,
+    "caches": [
+      {
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\state.sqlite",
+        "bytes": 1041354752,
+        "mtime_ns": 1793501571205309600
+      },
+      {
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v1\\state.sqlite",
+        "bytes": 6203969536,
+        "mtime_ns": 1793479197225256500
+      }
+    ]
+  },
+  "testes_41": {
+    "comando": "python -m pytest tests/test_sample_cache_reuse.py -p no:cacheprovider --basetemp .tmp_cache_nova_amostra_20261106_final --tb=short",
+    "aprovados": 6,
+    "segundos": 1.57,
+    "dados_sinteticos": true
+  },
+  "ruff_check": "aprovado",
+  "ruff_format_check": "aprovado",
+  "git_diff_check": "aprovado",
+  "fontes_anteriores_preservadas_conferidas": 113,
+  "fontes_monografia_historica_preservadas_conferidas": 154,
+  "arquivos_novos_sha256": {
+    "scripts/41_reaproveitar_letras_nova_amostra.py": "177353f6ee8aaaf3745f878d6c30cb156c0a46c43e2aff0d8c51ebd4480ed53c",
+    "scripts/analisar_comparativo_nova_amostra.py": "3bd21195dc43f1f36b3228cbf7b6f5e2d4eaea4baf055436214f25877c650fca",
+    "src/tcc_music_popularity/sample_cache_reuse.py": "954cce0b11b724c768de47ebb56ec833c6b962086d486a0e5f6bc863cd78ce37",
+    "tests/test_sample_cache_reuse.py": "bf2635606141d079f669ac6cddc66b8a5123f67e21dfc931a8f854f29af6af6f",
+    "docs/execucao_reaproveitamento_nova_amostra_v1.md": "6438f86d8e0153b9933f01843522f42026ddd8325555fdf19c7e6d8af6f132e9",
+    "reports/interpretacao_nova_amostra_catalogo_v1.md": "9c61749d731931b7c0878f30c8ffd4b081b8c8b7bc89456058939890134bde05",
+    "reports/nova_amostra_catalogo_v1/comparacao_medias_dispersoes.png": "30ca13ce82c40fe224cb19d61213f46463e16e0e2ea8b5330dfe83c0058ec267",
+    "reports/nova_amostra_catalogo_v1/comparacao_medias_dispersoes.svg": "d9be3b2563949d6b2e6538165ad6eb7c4e0c280c72568a4bc318451a4280e236",
+    "reports/nova_amostra_catalogo_v1/comparacao_periodos.png": "39b5c6c9107918506c0573665bd8158db86cc6109a35bd8b6377ef2b68e0174d",
+    "reports/nova_amostra_catalogo_v1/comparacao_periodos.svg": "e501a8c495346ad21a1ab0539bd7d3517d6c7c72aa1469ff569b87897d37e994"
+  },
+  "dump_acessado": false,
+  "novas_letras_reais_buscadas": false,
+  "treino": false,
+  "novo_pdf": false,
+  "commit_push": false
+}

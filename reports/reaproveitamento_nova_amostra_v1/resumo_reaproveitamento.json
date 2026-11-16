@@ -1,0 +1,59 @@
+{
+  "concluido": true,
+  "etapa": "reaproveitamento_cache",
+  "version": "nova-amostra-cache-v1",
+  "recuperacao_integral_concluida": false,
+  "n_faixas": 9526,
+  "n_consultas": 9526,
+  "n_textos_reutilizados": 682,
+  "status_por_faixa": {
+    "accepted": 682,
+    "instrumental": 87,
+    "pending_search": 8757,
+    "insufficient_metadata": 0,
+    "cache_error": 0
+  },
+  "fontes": {
+    "version": "nova-amostra-cache-v1",
+    "sample_sha256": "c89a77793f278a023601e58af7479ce58067c1aef194f5030463dc8a66976f20",
+    "summary_sha256": "60f6afa98e44673dce33747fd2081d47d514fffbad5664b373714557ce1b1515",
+    "caches": [
+      {
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v2\\state.sqlite",
+        "bytes": 1041354752,
+        "mtime_ns": 1793501571205309600
+      },
+      {
+        "path": "C:\\Users\\Concursos Felipe\\Documents\\UnB\\TCC\\data\\derived\\private_sample_lyrics_200k_v1\\state.sqlite",
+        "bytes": 6203969536,
+        "mtime_ns": 1793479197225256500
+      }
+    ],
+    "code_hashes": {
+      "src\\tcc_music_popularity\\sample_cache_reuse.py": "954cce0b11b724c768de47ebb56ec833c6b962086d486a0e5f6bc863cd78ce37",
+      "src\\tcc_music_popularity\\lyrics_recovery.py": "5c91bd9a6de7160f895bdfa28c05c4d2e042cded52642346011c74ad9d7b9c78",
+      "src\\tcc_music_popularity\\sample_lyrics.py": "5cb01afec12530fcb3dab012e068465407ca6737523a5208435b196bbe1b1072",
+      "src\\tcc_music_popularity\\normalization.py": "2f335bd5d33cf41b6949b41a86a85a7b9243e92cc34be08115d8f6cf2bf69df0",
+      "src\\tcc_music_popularity\\lyrics_ambiguity_v011.py": "9160a72007d06c721e4e9a9fe7827474ac3bdeb0909f250be237691414f7df73",
+      "src\\tcc_music_popularity\\manual_lyrics.py": "f091d9dbcfdf26e8831950d1b5de654352564f533f3bf974bed9bd17c6f1c37f",
+      "src\\tcc_music_popularity\\lyrics_pilot.py": "7e8e36dbd48dbdcaf9b20d470bfc44d0baaa1961f9bf05b7a20cdb1f60c0ca8a",
+      "src\\tcc_music_popularity\\lyrics_pilot_v012.py": "0bb1319fe837e9699f5bf6ccd1241b3d744ff8bc007744ff7ad900de93a7b5de"
+    }
+  },
+  "segundos": 30.324733699999342,
+  "dump_acessado": false,
+  "indices_criados": 0,
+  "rede": false,
+  "treino": false,
+  "textos_ou_metadados_no_relatorio_publico": false,
+  "arquivos_privados_sha256": {
+    "resultados_faixas.parquet": "815b6722a21a011e003faa98e3b0f7ee4c6837042ae1918ada198557b1629453",
+    "pendencias_busca.parquet": "3cfbf37ac8a28b82118f00dd27fc879a05805f02379cb0d52dca87f39a092183",
+    "letras_aceitas.parquet": "d5a3bece516e99b4a4ed2876db330ed8075a6b029954619d8a1222bb580bfad9"
+  },
+  "agregados_sha256": {
+    "status_cache.csv": "aa436fa9e55fb53235db19f783bb4a837ee919b2c3960060f6a4a17df7640037",
+    "cobertura_cache.csv": "f498481485176e081b5c1ef1ea347e8d5f1d832bfa3cfea1faefce8e7274dfaf"
+  },
+  "limite": "Ausência/rejeição no cache permanece pendência de busca; aceitações anteriores não são revisão humana."
+}

@@ -1,0 +1,19 @@
+Monografia de Felipe Macedo Cordeiro, Universidade de Brasília
+Orientador: Leandro Tavares Correia
+
+No Overleaf, crie um projeto com New Project → Upload Project e envie o ZIP.
+Em Settings → Compiler, selecione XeLaTeX e confirme main.tex na raiz.
+Use o modo Normal para visualizar todas as figuras. A bibliografia usa
+BibTeX, executado automaticamente.
+
+O corpo contém a descrição das fontes, o dimensionamento, a vinculação,
+a definição dos 21 descritores, o modelo ordinal e seus resultados.
+images/ contém os PNGs otimizados. tables/ contém as tabelas LaTeX.
+material_complementar/ reúne CSVs e o resumo agregado do percurso das amostras.
+As grades volumosas dos gráficos permanecem no projeto local junto aos
+resultados históricos. O ZIP inclui apenas arquivos editoriais e agregados.
+
+As fontes compilam sem consulta ao Spotify, LRCLIB ou aos dados privados.
+O bootstrap desta edição usa semente 42 nas previsões externas existentes.
+Os dois sorteios mantêm as sementes com que foram efetivamente executados.
+

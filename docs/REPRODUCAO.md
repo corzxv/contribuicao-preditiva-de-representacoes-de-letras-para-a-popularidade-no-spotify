@@ -7,6 +7,35 @@ protocolos e relatórios de cada etapa. Os resultados principais estão congelad
 
 ## Ambiente e fontes
 
+Prioridade atual D-048. Para compilar a monografia, abrir
+reports/monografia_template_overleaf/main.tex com XeLaTeX e BibTeX.
+O ZIP de mesmo nome contém os CSVs e as figuras otimizadas para o Overleaf.
+Para reproduzir os contrastes editoriais com semente 42, execute 58 com
+`--somente-contrastes`. Use `--destino` para escrever em uma pasta separada.
+O script 59 escreve agregados na pasta editorial e também gera os painéis
+compactos com `--paineis-compactos PASTA`. Novas execuções estocásticas
+adotam 42. A reprodução de resultados selados usa os parâmetros registrados.
+
+`57_classificar_amostra_9526.py` foi concluído e
+verificado. O protocolo está em protocolo_classificacao_9526_v1.md e a
+interpretação em reports/classificacao_9526_v1/interpretacao_resultados.md.
+55 foi concluído manualmente e verificado. 56 reuniu
+os vínculos em uma candidata v2 com 9.526 faixas. O método e os resultados
+estão em recuperacao_generos_deficitarios_v1.md.
+A candidata de 9.526 faixas com letra foi gerada
+e conferida pelo script 52_preparar_amostra_com_letras.py. Ver
+amostra_com_letras_candidata_v1.md. 50 real concluído com 25 novas letras. 51 consolida
+os vínculos por referência aos Parquet selados, com o script
+51_consolidar_vinculos_nova_amostra.py. As tabelas públicas estão em
+reports/recuperacao_consolidada_nova_amostra_v1.
+47 real concluído pelo pesquisador, 58 novas aceitas.
+48 real leve concluído, nove novas aceitas com revisão de catálogo. O script
+48_registrar_variantes_artista_revisadas.py reproduz a exportação a partir das
+decisões documentais privadas e do dump selado. Cobertura combinada em
+reports/cobertura_pos_revisao_variantes_nova_amostra_v1.
+Preservação acadêmica local em reports/preservacao_monografia_20261106 contém
+430 arquivos, PDFs/fontes/agregados e hashes verificados. Não é backup externo.
+
 O ambiente observado é Python 3.13 em Windows, com PowerShell. As versões estão
 em `requirements-lock.txt` e `requirements-cientificos.txt`; o segundo acrescenta
 NumPy/scikit-learn/SciPy, langid e bibliotecas do encoder. O encoder congelado é
@@ -85,10 +114,16 @@ esse renderizador. Sua dependência opcional pode ser instalada manualmente com
 histórico dependem do Windows. `resumir_cauda_auxiliar.py` produziu agregados complementares
 da cauda sem ajustar modelos.
 
-A versão atual é `reports/monografia_template_200k_v2/main.tex`. O pacote ZIP
+A versão atual é `reports/monografia_template_200k_v3/main.tex` (D-028, 45 páginas);
+a versão 2 permanece intacta. O pacote ZIP
 inclui os recursos e compila no Overleaf com XeLaTeX/BibTeX, sem precisar de
 letras, bases, encoder ou modelos. Os exemplos de Ana e outros TCCs consultados
 não são redistribuídos como se fossem trabalho deste autor.
+
+O script 38 usa somente agregados públicos para quatro tabelas e duas figuras.
+Não precisa ser executado para compilar o ZIP. Guia:
+docs/execucao_monografia_template_200k_v3.md. Nenhum script científico ou
+processamento pesado deve ser repetido para esta revisão acadêmica.
 
 ## Testes e bytes dos arquivos
 
@@ -106,3 +141,25 @@ análise principal. Helpers ainda importados permanecem disponíveis.
 bytes em clones. Verificações de integridade da execução original devem ser
 interpretadas junto ao ambiente e aos arquivos privados correspondentes; hashes
 evidenciam identidade técnica, não qualidade semântica de correspondências.
+# Nova etapa de níveis — 04/11/2026
+
+Atualização D-027: 34 integral concluído/conferido, 35 agregados/PCA/figuras concluído.
+Não repetir treino. 36 sensibilidade de decisão real concluído e 37 consolidado
+em 06/11; guia execucao_sensibilidade_decisao_ordinal_v1.md. Relatórios atuais em
+reports/interpretacao_classificacao_ordinal_200k_v1.md. Primeiros modelos/PDFs preservados.
+Sensibilidade interpretada em reports/interpretacao_sensibilidade_decisao_ordinal_v1.md.
+
+Atualização de 05/11/D-026: 31/32 reais concluídos, triagem técnica 33 feita apenas
+em 133 fichas. 34 smoke e primeiro lote real concluídos/conferidos; próximo é
+34 all sem limite para concluir as dezenove partes restantes. Código/protocolo de classificação ordinal
+preparados e testados; nenhum novo ajuste real foi feito pelo agente. Guia atual:
+docs/execucao_classificacao_ordinal_200k_v1.md. A primeira regressão permanece.
+
+O guia docs/execucao_nova_etapa_niveis_v1.md reúne os comandos 31/32. A primeira
+regressão permanece selada. Apenas `31 ... agregados` foi executado pelo agente
+sobre tabelas públicas; os modos com tabelas individuais ficam para execução
+manual. Não executar scripts antigos de busca/treino para continuar esta etapa.
+
+Testes de preparação: test_popularity_levels.py e test_linkage_review_plan.py,
+somente fixtures; lint/formatação e verificação em
+reports/verificacao_nova_etapa_20261104.json. Referência metodológica em D-025.
